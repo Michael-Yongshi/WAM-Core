@@ -1,5 +1,7 @@
+from references.json import *
+from stats import *
 from warband import *
-from references import *
+from inventory import *
 
 
 def print_newline():
@@ -7,16 +9,28 @@ def print_newline():
 
 
 def test_makeWarband():
-    WarbandA = Warband("Mike's Mercenaries", race="High Elves")
-    WarbandA.treasury = Treasury(gold=456)
-    WarbandA.herolist = [Character(name="Hero1", type="Loremaster"), Character(name="Hero2", type="Swordwarden")]
-    WarbandA.squadlist = [Squad(name="Spearguard", type="Seaguard", experience=1), Squad(name="Bladeguard", type="Seaguard", experience=2), Squad(name="Cadet Archers", type="Cadet", experience=0)]
+    # Create data
+    WarbandA = Warband(name="Uthluan Raiders", race="High Elves")
+    WarbandA.treasury = Treasury(gold=100)
+    WarbandA.inventory = Inventory(itemlist=[
+        "Mordheim Map", 
+        "Elven Wine"
+        ])
+    WarbandA.herolist = [
+        Character(name="Hero1", race="High Elves", type="Loremaster", skill=[5,4,4,3,3,1,6,1,9,0], abilitylist=[Ability("Excellent Sight"), Ability("Dispel")], inventory=Inventory(itemlist=["Mage staff", "Dagger"])), 
+        Character(name="Hero2", race="High Elves", type="Swordwarden", skill=[5,4,4,3,3,1,6,1,9,0])
+        ]
+    WarbandA.squadlist = [Squad(name="Spearguard", type="Seaguard"), Squad(name="Bladeguard", type="Seaguard"), Squad(name="Cadet Archers", type="Cadet")]
     
+    # show data
     print(f"Warband testing")
     print(f"Name: {WarbandA.name}")
     print(f"Race: {WarbandA.race}")
-    print(f"Treasury: {WarbandA.treasury}")
     print(f"Gold: {WarbandA.treasury.gold}")
+    print(f"Inventory:")
+    for item in WarbandA.inventory.itemlist:
+        print(f"- {item}")
+
     print_newline()
     print("Heroes:")
     i = 1
@@ -24,6 +38,9 @@ def test_makeWarband():
         print(f"{i}.")
         print(f"Name: {hero.name}")
         print(f"Type: {hero.type}")
+        print(f"Inventory:")
+        for item in hero.inventory.itemlist:
+            print(f"- {item}")
         i += 1
     print_newline()
     print("Squads:")
@@ -32,17 +49,11 @@ def test_makeWarband():
         print(f"{i}.")
         print(f"Name: {squad.name}")
         print(f"Type: {squad.type}")
-        print(f"(total: {squad.get_totalhenchman()}, exp: {squad.experience})")
+        print(f"(total: {squad.get_totalhenchman()})")
         i += 1
+
+    # Save data (WIP)
     
-def test_makeEquipment():
-    equipmentlist = []
-    equipmententry1 = Equipment(name="Dagger", type="Weapon", desc="Free default weapon for most units, but giving disadvantage in penetrating armour")
-    print(f"References testing")
-    print(f"Name: {equipmententry1.name}")
-    print(f"Type: {equipmententry1.type}")
-    print(f"Description: {equipmententry1.desc}")
 
 if __name__ == "__main__":
     test_makeWarband()
-    test_makeEquipment()

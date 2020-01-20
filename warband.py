@@ -20,6 +20,7 @@ class Character(object):
         self.inventory = inventory if inventory else Inventory()
         self.experience = experience
 
+
 class Hero(Character):
     def __init__(self):
         super().__init__()
@@ -51,8 +52,8 @@ class Hero(Character):
 class Henchman(Character):
     """Henchman is a class with no methods as these are 
     invoked using the Squad class to prevent henchmen 
-    to deviate from squad members"""
-    def __init__(self, replacecost):
+    to deviate from their peers"""
+    def __init__(self):
         super().__init__()
 
 class Squad(object):
@@ -66,7 +67,8 @@ class Squad(object):
         return len(henchmanlist)
 
     def add_henchman(self):
-        """adds another henchman character to the squad"""
+        """adds another henchman character to the squad
+        for a new squad checks if character is a henchman sub-class"""
         NotImplemented
 
     def remove_henchman(self):

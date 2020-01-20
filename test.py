@@ -11,8 +11,7 @@ def print_newline():
 def test_makeWarband():
     # Create data
     WarbandA = Warband(name="Uthluan Raiders", race="High Elves")
-    WarbandA.treasury = Treasury(gold=100)
-    WarbandA.inventory = Inventory(itemlist=[
+    WarbandA.inventory = Inventory(gold=500, itemlist=[
         "Mordheim Map", 
         "Elven Wine"
         ])
@@ -26,7 +25,8 @@ def test_makeWarband():
     print(f"Warband testing")
     print(f"Name: {WarbandA.name}")
     print(f"Race: {WarbandA.race}")
-    print(f"Gold: {WarbandA.treasury.gold}")
+    print(f"Gold: {WarbandA.inventory.gold}")
+    print(f"Wyrdstones: {WarbandA.inventory.wyrd}")
     print(f"Inventory:")
     for item in WarbandA.inventory.itemlist:
         print(f"- {item}")

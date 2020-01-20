@@ -1,11 +1,7 @@
-class Treasury(object):
-    def __init__(self, gold=500, wyrd=0):
+class Inventory(object):
+    def __init__(self, gold=500, wyrd=0, itemlist=None):
         self.gold = gold
         self.wyrd = wyrd
-
-
-class Inventory(object):
-    def __init__(self, itemlist=None):
         self.itemlist = itemlist if itemlist else []
 
     def add_item(self, itemname):

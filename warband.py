@@ -2,10 +2,9 @@ from inventory import *
 from stats import *
 
 class Warband(object):
-    def __init__(self, name, race, treasury=None, inventory=None, herolist=None, squadlist=None):
+    def __init__(self, name, race, inventory=None, herolist=None, squadlist=None):
         self.name = name
         self.race = race
-        self.treasury = treasury if treasury else Treasury()
         self.inventory = inventory if inventory else Inventory()
         self.herolist = herolist if herolist else None
         self.squadlist = squadlist if squadlist else None

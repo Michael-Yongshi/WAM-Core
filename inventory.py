@@ -13,7 +13,8 @@ class Inventory(object):
 
 
 class Item(object):
-    def __init__(self, name, type, desc=None):
+    def __init__(self, name, type, desc=None, price=0):
         self.name = name
         self.type = type
         self.desc = desc
+        self.price = price

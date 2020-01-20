@@ -1,5 +1,5 @@
 class Inventory(object):
-    def __init__(self, gold=500, wyrd=0, itemlist=None):
+    def __init__(self, gold=0, wyrd=0, itemlist=None):
         self.gold = gold
         self.wyrd = wyrd
         self.itemlist = itemlist if itemlist else []

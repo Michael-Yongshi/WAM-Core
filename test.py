@@ -19,7 +19,13 @@ def test_makeWarband():
         Character(name="Hero1", race="High Elves", type="Loremaster", skill=[5,4,4,3,3,1,6,1,9,0], abilitylist=[Ability("Excellent Sight"), Ability("Dispel")], inventory=Inventory(itemlist=["Mage staff", "Dagger"])), 
         Character(name="Hero2", race="High Elves", type="Swordwarden", skill=[5,4,4,3,3,1,6,1,9,0])
         ]
-    WarbandA.squadlist = [Squad(name="Spearguard", type="Seaguard"), Squad(name="Bladeguard", type="Seaguard"), Squad(name="Cadet Archers", type="Cadet")]
+    WarbandA.squadlist = [
+        Squad(name="Spearguard", type="Seaguard", henchmanlist=[
+            Character(name="Spearguard1", race="High Elves", type="Seaguard", skill=[5,4,4,3,3,1,6,1,8,0], inventory=Inventory(itemlist=["Spear"])),
+            Character("Spearguard2", "High Elves", "Seaguard", [5,4,4,3,3,1,6,1,8,0], Inventory(itemlist=["Spear"]))
+        ]), 
+        Squad(name="Bladeguard", type="Seaguard"), Squad(name="Cadet Archers", type="Cadet")
+        ]
     
     # show data
     print(f"Warband testing")

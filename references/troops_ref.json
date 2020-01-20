@@ -1,8 +1,9 @@
 {
     "troops_ref": [
         {
-            "race": "High Elves",
-            "type": "Loremaster",
+            "race": "High Elf",
+            "warband": "High Elves",
+            "name": "Loremaster",
             "hero": "True",
             "profile": "5,4,4,3,3,1,6,1,9",
             "equipment": "High Elves",
@@ -12,7 +13,8 @@
         },
         {
             "race": "High Elves",
-            "type": "Ranger",
+            "warband": "High Elves",
+            "name": "Ranger",
             "hero": "True",
             "profile": "5,4,4,3,3,1,6,1,8",
             "equipment": "Cadet",
@@ -22,7 +24,8 @@
         },
         {
             "race": "High Elves",
-            "type": "Sword Warden",
+            "warband": "High Elves",
+            "name": "Sword Warden",
             "hero": "True",
             "profile": "5,5,4,3,3,1,6,1,8",
             "equipment": "High Elves",
@@ -32,7 +35,8 @@
         },
         {
             "race": "High Elves",
-            "type": "Seaguard",
+            "warband": "High Elves",
+            "name": "Seaguard",
             "hero": "False",
             "profile": "5,4,4,3,3,1,6,1,8",
             "equipment": "High Elves",
@@ -42,7 +46,8 @@
         },
         {
             "race": "High Elves",
-            "type": "Cadet",
+            "warband": "High Elves",
+            "name": "Cadet",
             "hero": "False",
             "profile": "5,3,3,3,3,1,5,1,8",
             "equipment": "Cadet",

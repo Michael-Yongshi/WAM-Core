@@ -1,11 +1,32 @@
 import json
 
+
+# (re-)creating a warbands json file
+data = {}
+data['warbands_ref'] = []
+data['warbands_ref'].append({
+    'race': 'High Elf',
+    'name': 'High Elves',
+    'source': 'http://broheim.net/warbands.html',
+})
+data['warbands_ref'].append({
+    'race': 'High Elf',
+    'name': 'Lothern Sea Patrol',
+    'source': 'http://broheim.net/warbands.html'
+})
+
+with open('references/warbands_ref.json', 'w') as outfile:
+    json.dump(data, outfile, indent=4)
+
+
+
 # (re-)creating a troops json file
 data = {}
 data['troops_ref'] = []
 data['troops_ref'].append({
-    'race': 'High Elves',
-    'type': 'Loremaster',
+    'race': 'High Elf',
+    'warband': 'High Elves',
+    'name': 'Loremaster',
     'hero': 'True',
     'profile': '5,4,4,3,3,1,6,1,9',
     'equipment': 'High Elves',
@@ -15,7 +36,8 @@ data['troops_ref'].append({
 })
 data['troops_ref'].append({
     'race': 'High Elves',
-    'type': 'Ranger',
+    'warband': 'High Elves',
+    'name': 'Ranger',
     'hero': 'True',
     'profile': '5,4,4,3,3,1,6,1,8',
     'equipment': 'Cadet',
@@ -25,7 +47,8 @@ data['troops_ref'].append({
 })
 data['troops_ref'].append({
     'race': 'High Elves',
-    'type': 'Sword Warden',
+    'warband': 'High Elves',
+    'name': 'Sword Warden',
     'hero': 'True',
     'profile': '5,5,4,3,3,1,6,1,8',
     'equipment': 'High Elves',
@@ -35,7 +58,8 @@ data['troops_ref'].append({
 })
 data['troops_ref'].append({
     'race': 'High Elves',
-    'type': 'Seaguard',
+    'warband': 'High Elves',
+    'name': 'Seaguard',
     'hero': 'False',
     'profile': '5,4,4,3,3,1,6,1,8',
     'equipment': 'High Elves',
@@ -45,7 +69,8 @@ data['troops_ref'].append({
 })
 data['troops_ref'].append({
     'race': 'High Elves',
-    'type': 'Cadet',
+    'warband': 'High Elves',
+    'name': 'Cadet',
     'hero': 'False',
     'profile': '5,3,3,3,3,1,5,1,8',
     'equipment': 'Cadet',

@@ -1,1 +1,29 @@
-// List of all different possible abilities with respective stats
+{
+    "abilities_ref": [
+        {
+            "name": "High Sorcery",
+            "restriction": "High Elves, Loremaster",
+            "desc": "A Loremaster\u2019s knowledge of magic goes far beyond that of any other race. When an enemy spellcaster successfully casts a spell the Loremaster may attempt to dispel it. If the Loremaster rolls greater then his opponent\u2019s casting roll for the spell then it is dispelled. Only the Loremaster may have this skill."
+        },
+        {
+            "name": "Stand and Fire",
+            "restriction": "High Elves",
+            "desc": "If the Elf passes a leadership test he may choose to stand and fire at a charging opponent. The Elf suffers a \u20131 penalty to hit and may only fire once, at a single opponent. If his opponent is knocked down or stunned, place him halfway between the Elf and where he started from (or in view if he was out of sight)."
+        },
+        {
+            "name": "Miniath",
+            "restriction": "High Elves",
+            "desc": "The Elf has been trained in the martial art of the White Tower known as Miniath, allowing him to parry with any weapon. If he has a weapon that he can parry with he gains an additional parry attempt."
+        },
+        {
+            "name": "Unerring Strike",
+            "restriction": "High Elves",
+            "desc": "The Elf is an expert at delivering deadly accurate blows. He may re-roll any failed to wound rolls."
+        },
+        {
+            "name": "Fey Quickness",
+            "restriction": "High Elves",
+            "desc": "Few can ever hope to match an Elf\u2019s inhuman quickness and agility. An Elf with Fey Quickness can avoid melee or missile attacks on a roll of 6. If the Elf also has Step Aside or Dodge this will increase to a 4+ in the relevant area. For example, an Elf with Fey Quickness and Step Aside avoids melee attacks on a 4+ and missile attacks on a 6."
+        }
+    ]
+}

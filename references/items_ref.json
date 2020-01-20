@@ -17,6 +17,12 @@
             "type": "Armour",
             "price": "20",
             "desc": "Lightweight armour that provides a single armour save"
+        },
+        {
+            "name": "Elven Cloak",
+            "type": "Miscellaneous",
+            "price": "75",
+            "desc": "An elven cloak"
         }
     ]
 }

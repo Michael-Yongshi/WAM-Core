@@ -1,0 +1,14 @@
+{
+    "warbands_ref": [
+        {
+            "race": "High Elf",
+            "name": "High Elves",
+            "source": "http://broheim.net/warbands.html"
+        },
+        {
+            "race": "High Elf",
+            "name": "Lothern Sea Patrol",
+            "source": "http://broheim.net/warbands.html"
+        }
+    ]
+}

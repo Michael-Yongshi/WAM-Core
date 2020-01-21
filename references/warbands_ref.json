@@ -9,6 +9,16 @@
             "race": "High Elf",
             "name": "Lothern Sea Patrol",
             "source": "http://broheim.net/warbands.html"
+        },
+        {
+            "race": "Human",
+            "name": "Humantest",
+            "source": "test"
+        },
+        {
+            "race": "Human",
+            "name": "Humantest",
+            "source": "test"
         }
     ]
 }

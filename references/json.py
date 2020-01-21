@@ -1,25 +1,6 @@
 import json
 
 
-# (re-)creating a warbands json file
-data = {}
-data['warbands_ref'] = []
-data['warbands_ref'].append({
-    'race': 'High Elf',
-    'name': 'High Elves',
-    'source': 'http://broheim.net/warbands.html',
-})
-data['warbands_ref'].append({
-    'race': 'High Elf',
-    'name': 'Lothern Sea Patrol',
-    'source': 'http://broheim.net/warbands.html'
-})
-
-with open('references/warbands_ref.json', 'w') as outfile:
-    json.dump(data, outfile, indent=4)
-
-
-
 # (re-)creating a troops json file
 data = {}
 data['troops_ref'] = []

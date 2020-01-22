@@ -9,7 +9,7 @@ class Warband(object):
         self.herolist = herolist if herolist else None
         self.squadlist = squadlist if squadlist else None
 
-    def save_warband(self)
+    def save_warband(self):
         NotImplemented
 
 class Character(object):

@@ -27,6 +27,8 @@ def test_makeWarband():
         Squad(name="Bladeguard", type="Seaguard"), Squad(name="Cadet Archers", type="Cadet")
         ]
     
+    # Load warband data
+    
     # show data
     print(f"Warband testing")
     print(f"Name: {WarbandA.name}")
@@ -58,8 +60,9 @@ def test_makeWarband():
         print(f"(total: {squad.get_totalhenchman()})")
         i += 1
 
-    # Save data (WIP)
+    # Save data
+    # save_json(data=WarbandA.__dict__, jsonfile='savedwarbands.json')
+    # werkt niet
     
-
 if __name__ == "__main__":
     test_makeWarband()

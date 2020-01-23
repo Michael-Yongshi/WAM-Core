@@ -5,7 +5,7 @@ from inventory import *
 
 
 def print_newline():
-    print("\n")
+    print(" ")
 
 
 # test json calls
@@ -53,15 +53,18 @@ def test_makeWarband():
     for s in WarbandA.squadlist:
         totalhenchman = totalhenchman + s.get_totalhenchman()
     totalchars = totalheroes+totalhenchman
-    print("Number of units: ")
-    print(totalchars)
+    printtotal = "Number of units: " + str(totalchars)
+    print(printtotal)
+    print_newline()
+
     for hero in WarbandA.herolist:
         print(f"Name: {hero.name}")
         print(f" category: {hero.category}")
         print(f" skill: m:{hero.skill.movement}, w:{hero.skill.weapon}, b:{hero.skill.ballistic}, s:{hero.skill.strength}, t:{hero.skill.toughness}, a:{hero.skill.actions}, i:{hero.skill.initiative}, w:{hero.skill.wounds}, ld:{hero.skill.leadership}, as:{hero.skill.armoursave}")
         print(f" Items: {hero.inventory.itemlist}")
-
     print("Squads:")
+    print_newline
+
     for squad in WarbandA.squadlist:
         print(f"Name: {squad.name}")
         print(f" category: {squad.category}")

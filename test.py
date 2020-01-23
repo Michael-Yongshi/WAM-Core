@@ -48,7 +48,13 @@ def test_makeWarband():
     print(f"Gold: {WarbandA.inventory.gold}")
     print(f"Wyrdstones: {WarbandA.inventory.wyrd}")
     print(f"Inventory:{WarbandA.inventory.itemlist}")
-    print("Heroes:")
+    totalheroes = len(WarbandA.herolist)
+    totalhenchman = 0
+    for s in WarbandA.squadlist:
+        totalhenchman = totalhenchman + s.get_totalhenchman()
+    totalchars = totalheroes+totalhenchman
+    print("Number of units: ")
+    print(totalchars)
     for hero in WarbandA.herolist:
         print(f"Name: {hero.name}")
         print(f" category: {hero.category}")

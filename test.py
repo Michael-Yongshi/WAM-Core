@@ -7,10 +7,12 @@ from inventory import *
 def print_newline():
     print("\n")
 
+
 # test json calls
 def test_json():
     data = {'key1': ['1','2'], 'key2': ['3', '4']}
     save_json(data, jsonfile='test.json')
+
 
 # test warband classes
 def test_makeWarband():
@@ -29,7 +31,12 @@ def test_makeWarband():
             Character(name="Spearguard1", race="High Elves", category="Seaguard", skill=[5,4,4,3,3,1,6,1,8,0], inventory=Inventory(itemlist=["Spear"])),
             Character("Spearguard2", "High Elves", "Seaguard", [5,4,4,3,3,1,6,1,8,0], Inventory(itemlist=["Spear"]))
         ]), 
-        Squad(name="Bladeguard", category="Seaguard"), Squad(name="Cadet Archers", category="Cadet")
+        Squad(name="Bladeguard", category="Seaguard", henchmanlist=[
+            Character(name="Bladeguard1", race="High Elves", category="Seaguard", skill=[5,4,4,3,3,1,6,1,8,0], inventory=Inventory(itemlist=["Sword"]))
+        ]), 
+        Squad(name="Cadet Archers", category="Cadet", henchmanlist=[
+            Character(name="Cadet1", race="High Elves", category="Cadet", skill=[5,3,3,3,3,1,6,1,7,0], inventory=Inventory(itemlist=["Longbow"]))
+        ])
         ]
     
     # Load warband data
@@ -44,34 +51,34 @@ def test_makeWarband():
     for item in WarbandA.inventory.itemlist:
         print(f"- {item}")
 
-    print_newline()
     print("Heroes:")
     i = 1
     for hero in WarbandA.herolist:
         print(f"{i}.")
         print(f"Name: {hero.name}")
         print(f"category: {hero.category}")
-        print(f"Inventory:")
-        for item in hero.inventory.itemlist:
-            print(f"- {item}")
+        print(f"skill: {hero.skill}")
+        print(f"Items: {hero.inventory.itemlist}")
         i += 1
-    print_newline()
+
     print("Squads:")
     i = 1
     for squad in WarbandA.squadlist:
         print(f"{i}.")
         print(f"Name: {squad.name}")
         print(f"category: {squad.category}")
+        print(f"items: {squad.henchmanlist[0].inventory.itemlist}")
         print(f"(total: {squad.get_totalhenchman()})")
         i += 1
 
-    print(str(WarbandA))
+    
 
     # Save data
-    save_json(dict(data=WarbandA.herolist), jsonfile='savedwarbands.json')
-    
+    # save_json(dict(data=WarbandA.inventory), jsonfile='savedwarbands.json')
+    # save_json(dict(data=WarbandA.herolist), jsonfile='savedwarbands.json')
+    # save_json(dict(data=WarbandA.squadlist), jsonfile='savedwarbands.json')
     # save_json(data=WarbandA.__dict__, jsonfile='savedwarbands.json')
-    # werkt niet
+    # werkt niet , Object of type Squad is not JSON serializable
     
 if __name__ == "__main__":
     test_json()

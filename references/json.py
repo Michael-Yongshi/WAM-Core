@@ -9,7 +9,8 @@ import json
 
 #  Open Json file/ 
 def open_json(jsonfile):
-    data = json.load(open(jsonfile, 'r'))
+    with open(jsonfile, 'r') as infile:
+        data = json.load(infile)
     
     return data
     print(data)
@@ -34,5 +35,6 @@ def add_record(data ,datatype, record):
 
 # dumping data to json
 def save_json(data ,jsonfile):
-    json.dump(data, open(jsonfile, 'w'), indent=4)
+    with open(jsonfile, 'w') as outfile:
+        json.dump(data, outfile, indent=4)
     print(data)

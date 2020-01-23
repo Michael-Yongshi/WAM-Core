@@ -13,9 +13,9 @@ class Inventory(object):
 
 
 class Item(object):
-    def __init__(self, name, type, skill, abilitylist=None, desc=None, price=0):
+    def __init__(self, name, category, skill, abilitylist=None, desc=None, price=0):
         self.name = name
-        self.type = type
+        self.category = category
         self.desc = desc
         self.skill = skill if skill else Skill()
         self.abilitylist = abilitylist if abilitylist else None

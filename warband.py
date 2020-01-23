@@ -13,10 +13,10 @@ class Warband(object):
         NotImplemented
 
 class Character(object):
-    def __init__(self, name, race, type, skill, abilitylist=None, inventory=None, experience=0):
+    def __init__(self, name, race, category, skill, abilitylist=None, inventory=None, experience=0):
         self.name = name
         self.race = race
-        self.type = type
+        self.category = category
         self.skill = skill if skill else Skill()
         self.abilitylist = abilitylist if abilitylist else None
         self.inventory = inventory if inventory else Inventory()
@@ -59,9 +59,9 @@ class Henchman(Character):
         super().__init__()
 
 class Squad(object):
-    def __init__(self, name, type, experience=0, henchmanlist=None):
+    def __init__(self, name, category, experience=0, henchmanlist=None):
         self.name = name
-        self.type = type
+        self.category = category
         self.henchmanlist = henchmanlist if henchmanlist else None
 
     def get_totalhenchman(ditobject):

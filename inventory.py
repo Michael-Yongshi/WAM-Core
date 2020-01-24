@@ -11,30 +11,34 @@ class Inventory(object):
         itemlist = self.itemlist if self.itemlist else None
         return itemlist
 
-    def create_dict_inventory(self):  
+    def get_dict(self):  
         dictinv = {}
         dictinv['Inventory'] = {
             'gold': self.gold,
             'wyrd': self.wyrd,
-            'itemlist': self.itemlist
-            # for item in self.itemlist
-            #     dictitemlist = {}
-            #     dictitemlist['itemlist'] = []
-            #     dictitemlist['itemlist'].append({
-            #         'name': item.name,
-            #         'category': item.category,
-            #         'price': item.price,
-            #         'desc': item.desc'
-            #     })        
+            'itemlist': self.itemlist     
         }
 
-        return dictinv 
+        return dictinv
 
 class Item(object):
-    def __init__(self, name, category, skill, abilitylist=[], desc=None, price=0):
+    def __init__(self, name, category, skill=None, abilitylist=[], desc=None, price=0):
         self.name = name
         self.category = category
         self.desc = desc
-        self.skill = skill if skill else Skill()
+        self.skill = skill
         self.abilitylist = abilitylist
         self.price = price
+
+    def get_dict(self):  
+        dictitem = {}
+        dictitem['Item'] = {
+            'name': self.name,
+            'category': self.category,
+            'desc': self.desc,
+            'skill': self.skill,
+            'abilitylist': self.abilitylist,
+            'price': self.price     
+        }
+
+        return dictitem

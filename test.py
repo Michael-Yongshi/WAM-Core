@@ -19,17 +19,17 @@ def test_makeWarband():
     # Create data
     WarbandA = Warband(name="Uthluan Raiders", race="High Elves")
     WarbandA.inventory = Inventory(gold=500, itemlist=[
-        "Mordheim Map", 
-        "Elven Wine"
+        Item(name="Mordheim Map", category="Miscellaneous"),
+        Item(name="Elven Wine", category="Miscellaneous")
         ])
     WarbandA.herolist = [
-        Character(name="Hero1", race="High Elves", category="Loremaster", skill=Skill(5,4,4,3,3,1,6,1,9,0), abilitylist=[Ability("Excellent Sight"), Ability("Dispel")], inventory=Inventory(itemlist=["Mage staff", "Dagger"])), 
-        Character(name="Hero2", race="High Elves", category="Swordwarden", skill=Skill(5,4,4,3,3,1,6,1,9,0), abilitylist=[Ability("Excellent Sight")], inventory=Inventory(itemlist=["Sword", "Dagger", "Shield", "Light Armour"]))
+        Hero(name="Hero1", race="High Elves", category="Loremaster", skill=Skill(5,4,4,3,3,1,6,1,9,0), abilitylist=[Ability("Excellent Sight"), Ability("Dispel")], inventory=Inventory(itemlist=["Mage staff", "Dagger"])), 
+        Hero(name="Hero2", race="High Elves", category="Swordwarden", skill=Skill(5,4,4,3,3,1,6,1,9,0), inventory=Inventory(itemlist=["Sword", "Dagger", "Shield", "Light Armour"]))
         ]
     WarbandA.squadlist = [
         Squad(name="Spearguard", category="Seaguard", henchmanlist=[
-            Character(name="Spearguard1", race="High Elves", category="Seaguard", skill=Skill(5,4,4,3,3,1,6,1,8,0), inventory=Inventory(itemlist=["Spear"])),
-            Character("Spearguard2", "High Elves", "Seaguard", Skill(5,4,4,3,3,1,6,1,8,0), Inventory(itemlist=["Spear"]))
+            Henchman(name="Spearguard1", race="High Elves", category="Seaguard", skill=Skill(5,4,4,3,3,1,6,1,8,0), inventory=Inventory(itemlist=["Spear"])),
+            Henchman("Spearguard2", "High Elves", "Seaguard", Skill(5,4,4,3,3,1,6,1,8,0), Inventory(itemlist=["Spear"]))
         ]), 
         Squad(name="Bladeguard", category="Seaguard", henchmanlist=[
             Character(name="Bladeguard1", race="High Elves", category="Seaguard", skill=Skill(5,4,4,3,3,1,6,1,8,0), inventory=Inventory(itemlist=["Sword"]))
@@ -74,12 +74,10 @@ def test_makeWarband():
 
     
     # Save data
-    # save_json(dict(data=WarbandA.inventory), jsonfile='savedwarbands.json')
-    dictinventory = WarbandA.inventory.create_dict_inventory()
-    save_json(data=dictinventory, jsonfile='savedwarbands.json')
-    # save_json(dict(data=WarbandA.squadlist), jsonfile='savedwarbands.json')
-    # save_json(data=WarbandA.__dict__, jsonfile='savedwarbands.json')
-    # werkt niet , Object of type Squad is not JSON serializable
+    # Just the inventory of the warband
+    print(WarbandA.inventory.get_dict())
+    # save_json(objectref=WarbandA.inventory, jsonfile='savedwarbands.json')
+    
     
 if __name__ == "__main__":
     test_json()

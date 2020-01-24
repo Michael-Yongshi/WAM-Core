@@ -17,17 +17,17 @@ class Character(object):
         self.name = name
         self.race = race
         self.category = category
-        self.skill = skill if skill else Skill()
+        self.skill = skill
         self.abilitylist = abilitylist if abilitylist else None
-        self.inventory = inventory if inventory else Inventory()
+        self.inventory = inventory if inventory else None
         self.experience = experience
 
     def get_dict_char(self):
         NotImplemented 
 
 class Hero(Character):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, name, race, category, skill, abilitylist=None, inventory=None, experience=0):
+        super().__init__(name, race, category, skill, abilitylist, inventory, experience)
 
     def add_experience(self):
         """adds experience to this hero character"""
@@ -57,8 +57,8 @@ class Henchman(Character):
     """Henchman is a class with no methods as these are 
     invoked using the Squad class to prevent henchmen 
     to deviate from their peers"""
-    def __init__(self):
-        super().__init__()
+    def __init__(self, name, race, category, skill, abilitylist=None, inventory=None, experience=0):
+        super().__init__(name, race, category, skill, abilitylist, inventory, experience)
 
 class Squad(object):
     def __init__(self, name, category, experience=0, henchmanlist=None):

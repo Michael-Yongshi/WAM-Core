@@ -1,4 +1,10 @@
 {
-    "name": "Uthluan Raiders",
-    "race": "High Elves",
-    "inventory": 
+    "Inventory": {
+        "gold": 500,
+        "wyrd": 0,
+        "itemlist": [
+            "Mordheim Map",
+            "Elven Wine"
+        ]
+    }
+}

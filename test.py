@@ -73,10 +73,10 @@ def test_makeWarband():
         print(f" (total: {squad.get_totalhenchman()})")
 
     
-
     # Save data
     # save_json(dict(data=WarbandA.inventory), jsonfile='savedwarbands.json')
-    # save_json(dict(data=WarbandA.herolist), jsonfile='savedwarbands.json')
+    dictinventory = WarbandA.inventory.create_dict_inventory()
+    save_json(data=dictinventory, jsonfile='savedwarbands.json')
     # save_json(dict(data=WarbandA.squadlist), jsonfile='savedwarbands.json')
     # save_json(data=WarbandA.__dict__, jsonfile='savedwarbands.json')
     # werkt niet , Object of type Squad is not JSON serializable

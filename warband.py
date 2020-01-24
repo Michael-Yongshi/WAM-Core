@@ -22,6 +22,8 @@ class Character(object):
         self.inventory = inventory if inventory else Inventory()
         self.experience = experience
 
+    def get_dict_char(self):
+        NotImplemented 
 
 class Hero(Character):
     def __init__(self):

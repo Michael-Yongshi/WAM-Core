@@ -36,6 +36,7 @@ def add_record(data ,datatype, record):
 # dumping data to json
 def save_json(data ,jsonfile):
     print(data)
+    print(jsonfile)
 
     # newpath = r(jsonfile) 
     # if not os.path.exists(newpath):

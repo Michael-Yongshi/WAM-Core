@@ -12,14 +12,13 @@ class Inventory(object):
         return itemlist
 
     def get_dict(self):  
-        dictinv = {}
-        dictinv['Inventory'] = {
+        data = {}
+        data[self] = {
             'gold': self.gold,
             'wyrd': self.wyrd,
-            'itemlist': self.itemlist     
+            'itemlist': self.itemlist 
         }
-
-        return dictinv
+        return data
 
 class Item(object):
     def __init__(self, name, category, skill=None, abilitylist=[], desc=None, price=0):
@@ -31,8 +30,8 @@ class Item(object):
         self.price = price
 
     def get_dict(self):  
-        dictitem = {}
-        dictitem['Item'] = {
+        data = {}
+        data[self] = {
             'name': self.name,
             'category': self.category,
             'desc': self.desc,
@@ -40,5 +39,4 @@ class Item(object):
             'abilitylist': self.abilitylist,
             'price': self.price     
         }
-
-        return dictitem
+        return data

@@ -9,6 +9,17 @@ class Warband(object):
         self.herolist = herolist if herolist else None
         self.squadlist = squadlist if squadlist else None
 
+    def get_dict(self):  
+        data = {}
+        data[self] = {
+            'name': self.name,
+            'race': self.race,
+            'inventory': self.inventory,
+            'herolist': self.herolist, 
+            'squadlist': self.squadlist
+        }
+        return data
+
     def save_warband(self):
         NotImplemented
 
@@ -22,8 +33,20 @@ class Character(object):
         self.inventory = inventory if inventory else None
         self.experience = experience
 
-    def get_dict_char(self):
-        NotImplemented 
+# Although __dict__ of the object could be used, it doesnt automatically give the object id from self, I would like to 
+# use the key of the subobjects to link them to the result of the arrays in their superobjects.
+    def get_dict(self):  
+        data = {}
+        data[self] = {
+            'name': self.name,
+            'race': self.race,
+            'category': self.category,
+            'skill': self.skill,
+            'abilitylist': self.abilitylist,
+            'inventory': self.inventory
+        }
+        return data
+
 
 class Hero(Character):
     def __init__(self, name, race, category, skill, abilitylist=None, inventory=None, experience=0):
@@ -53,6 +76,7 @@ class Hero(Character):
         """removes a skill from this hero"""
         NotImplemented
 
+
 class Henchman(Character):
     """Henchman is a class with no methods as these are 
     invoked using the Squad class to prevent henchmen 
@@ -60,11 +84,21 @@ class Henchman(Character):
     def __init__(self, name, race, category, skill, abilitylist=None, inventory=None, experience=0):
         super().__init__(name, race, category, skill, abilitylist, inventory, experience)
 
+
 class Squad(object):
     def __init__(self, name, category, experience=0, henchmanlist=None):
         self.name = name
         self.category = category
         self.henchmanlist = henchmanlist if henchmanlist else None
+
+    def get_dict(self):  
+        data = {}
+        data[self] = {
+            'name': self.name,
+            'category': self.category,
+            'henchmanlist': self.henchmanlist
+        }
+        return data
 
     def get_totalhenchman(ditobject):
         henchmanlist = ditobject.henchmanlist if ditobject.henchmanlist else []

@@ -11,12 +11,13 @@ class Warband(object):
 
     def get_dict(self):  
         data = {}
-        data[self] = {
+        data['Warband'] = {
+            'key': str(self),
             'name': self.name,
             'race': self.race,
-            'inventory': self.inventory,
-            'herolist': self.herolist, 
-            'squadlist': self.squadlist
+            'inventory': str(self.inventory),
+            'herolist': str(self.herolist), 
+            'squadlist': str(self.squadlist)
         }
         return data
 
@@ -33,24 +34,23 @@ class Character(object):
         self.inventory = inventory if inventory else None
         self.experience = experience
 
-# Although __dict__ of the object could be used, it doesnt automatically give the object id from self, I would like to 
-# use the key of the subobjects to link them to the result of the arrays in their superobjects.
-    def get_dict(self):  
-        data = {}
-        data[self] = {
-            'name': self.name,
-            'race': self.race,
-            'category': self.category,
-            'skill': self.skill,
-            'abilitylist': self.abilitylist,
-            'inventory': self.inventory
-        }
-        return data
-
 
 class Hero(Character):
     def __init__(self, name, race, category, skill, abilitylist=None, inventory=None, experience=0):
         super().__init__(name, race, category, skill, abilitylist, inventory, experience)
+
+    def get_dict(self):  
+        data = {}
+        data[("Hero")] = {
+            'key': str(self),
+            'name': self.name,
+            'race': self.race,
+            'category': self.category,
+            'skill': str(self.skill),
+            'abilitylist': str(self.abilitylist),
+            'inventory': str(self.inventory)
+        }
+        return data
 
     def add_experience(self):
         """adds experience to this hero character"""

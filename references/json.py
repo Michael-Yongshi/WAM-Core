@@ -29,10 +29,6 @@ def find_record(data, key):
             print(record[data])
             break
 
-# adding a record 
-def add_record(data ,datatype, record):
-    data[datatype].append({record})
-
 # dumping data to json
 def save_json(data ,jsonfile):
     print(data)
@@ -45,3 +41,14 @@ def save_json(data ,jsonfile):
     with open(jsonfile, 'w') as outfile:
         json.dump(data, outfile, indent=4)
 
+# adding a record 
+
+def append_json(data, jsonfile):
+    with open(jsonfile, 'r') as infile:
+        loaddata = json.load(infile)
+        dumpsdata = json.dumps(loaddata)
+    dumpsdata.append(data)
+    save_json(dumpsdata, jsonfile)
+
+def update_json(data ,datatype, record):
+    data[datatype].append({record})

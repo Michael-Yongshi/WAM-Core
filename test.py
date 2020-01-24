@@ -75,7 +75,7 @@ def test_makeWarband():
     
     # Save data
     # Just the inventory of the warband
-    print(WarbandA.inventory.get_dict())
+    print(vars(WarbandA.inventory))
     # save_json(objectref=WarbandA.inventory, jsonfile='savedwarbands.json')
     
     

@@ -11,9 +11,9 @@ class Inventory(object):
         itemlist = self.itemlist if self.itemlist else None
         return itemlist
 
-    def get_dict(self):  
+    def get_dict(self, ref):  
         data = {}
-        data['Inventory'] = {
+        data[str(ref)] = {
             'key': str(self),
             'gold': self.gold,
             'wyrd': self.wyrd,
@@ -30,9 +30,9 @@ class Item(object):
         self.abilitylist = abilitylist
         self.price = price
 
-    def get_dict(self):  
+    def get_dict(self, ref):  
         data = {}
-        data['Item'] = {
+        data[str(ref)] = {
             'key': str(self),
             'name': self.name,
             'category': self.category,

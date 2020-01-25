@@ -71,30 +71,44 @@ def test_makeWarband():
     filepath = "saves/" + wbid.name + ".json"
 
     # Save warband data
-    datadict = wbid.get_dict()
+    datadict = {}
+    wbdict = wbid.get_dict()
+    datadict.update(wbdict)
+    print(f"wbdict= {wbdict}")
+    print(f"datadict = {datadict}")
     save_json(data=datadict, jsonfile=filepath)
+    print_newline()
 
     # Save wb inventory data
-    wbid.inventory
-    datadict = wbid.inventory.get_dict()
-    append_json(data=datadict, datatype="Warband Inventory", jsonfile=filepath)
+    invdict = wbid.inventory.get_dict(ref="Warband Inventory")
+    datadict.update(invdict)
+    print(f"invdict= {invdict}")
+    print(f"datadict = {datadict}")
+    print_newline()
+
+    # add items to inventory in wb inv data
+    # for item in wbid.inventory.itemlist:
+    #     datadict = item.get_dict()
+    #     print(datadict)
+    #     print_newline
 
     # Save hero data
+    herolistdict = {}
+    i = 1
     for hero in wbid.herolist:
-        datadict = hero.get_dict()
-        append_json(data=datadict, datatype=hero.name, jsonfile=filepath)
+        heroref = "Hero" + str(i)
+        herodict = hero.get_dict(ref=heroref)
+        i += 1
+        print(f"herodict= {herodict}")
+        herolistdict.update(herodict)
+        print_newline()
     
-    datadict = wbid.inventory.get_dict()
-    print(datadict)
-    print_newline
+    datadict.update(herolistdict)
+    print(f"herolistdict= {herolistdict}")
+    print(f"datadict = {datadict}")
 
-    for item in wbid.inventory.itemlist:
-        datadict = item.get_dict()
-        print(datadict)
-        print_newline
+    # save to file
+    save_json(data=datadict, jsonfile=filepath)
 
-
-    
-    
 if __name__ == "__main__":
     test_makeWarband()

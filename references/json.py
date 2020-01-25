@@ -15,12 +15,6 @@ def open_json(jsonfile):
     return data
     print(data)
 
-# show all records of a json dataset
-def show_records(data):
-    
-    return data
-    print(data)
-
 # finding a specific record
 def find_record(data, key):
     for record in data:
@@ -31,8 +25,6 @@ def find_record(data, key):
 
 # dumping data to json
 def save_json(data ,jsonfile):
-    print(data)
-    print(jsonfile)
 
     with open(jsonfile, 'w') as outfile:
         json.dump(data, outfile, indent=4)
@@ -48,6 +40,3 @@ def append_json(data, datatype, jsonfile):
     loaddata[datatype]=data
     save_json(loaddata, jsonfile)
 
-# Update records
-def update_json(data ,datatype, record):
-    data[datatype][variable] = record

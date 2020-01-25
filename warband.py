@@ -9,9 +9,9 @@ class Warband(object):
         self.herolist = herolist if herolist else None
         self.squadlist = squadlist if squadlist else None
 
-    def get_dict(self):  
+    def get_dict(self, ref="Warband"):  
         data = {}
-        data['Warband'] = {
+        data[str(ref)] = {
             'key': str(self),
             'name': self.name,
             'race': self.race,
@@ -39,9 +39,9 @@ class Hero(Character):
     def __init__(self, name, race, category, skill, abilitylist=None, inventory=None, experience=0):
         super().__init__(name, race, category, skill, abilitylist, inventory, experience)
 
-    def get_dict(self):  
+    def get_dict(self, ref):  
         data = {}
-        data[("Hero")] = {
+        data[str(ref)] = {
             'key': str(self),
             'name': self.name,
             'race': self.race,

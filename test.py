@@ -70,9 +70,16 @@ def test_makeWarband():
     # Save data
     filepath = "saves/" + wbid.name + ".json"
 
+    # Save warband data
     datadict = wbid.get_dict()
     save_json(data=datadict, jsonfile=filepath)
 
+    # Save wb inventory data
+    wbid.inventory
+    datadict = wbid.inventory.get_dict()
+    append_json(data=datadict, datatype="Warband Inventory", jsonfile=filepath)
+
+    # Save hero data
     for hero in wbid.herolist:
         datadict = hero.get_dict()
         append_json(data=datadict, datatype=hero.name, jsonfile=filepath)

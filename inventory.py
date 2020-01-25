@@ -13,10 +13,11 @@ class Inventory(object):
 
     def get_dict(self):  
         data = {}
-        data[self] = {
+        data['Inventory'] = {
+            'key': str(self),
             'gold': self.gold,
             'wyrd': self.wyrd,
-            'itemlist': self.itemlist 
+            'itemlist': str(self.itemlist)
         }
         return data
 
@@ -31,7 +32,8 @@ class Item(object):
 
     def get_dict(self):  
         data = {}
-        data[self] = {
+        data['Item'] = {
+            'key': str(self),
             'name': self.name,
             'category': self.category,
             'desc': self.desc,

@@ -75,7 +75,7 @@ def test_makeWarband():
 
     for hero in wbid.herolist:
         datadict = hero.get_dict()
-        append_json(data=datadict, jsonfile=filepath)
+        append_json(data=datadict, datatype=hero.name, jsonfile=filepath)
     
     datadict = wbid.inventory.get_dict()
     print(datadict)

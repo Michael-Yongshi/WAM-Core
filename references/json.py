@@ -34,20 +34,20 @@ def save_json(data ,jsonfile):
     print(data)
     print(jsonfile)
 
+    with open(jsonfile, 'w') as outfile:
+        json.dump(data, outfile, indent=4)
+
     # newpath = r(jsonfile) 
     # if not os.path.exists(newpath):
     #     os.makedirs(newpath)
 
-    with open(jsonfile, 'w') as outfile:
-        json.dump(data, outfile, indent=4)
-
 # adding a record 
-
-def append_json(data, jsonfile):
+def append_json(data, datatype, jsonfile):
     with open(jsonfile, 'r') as infile:
         loaddata = json.load(infile)
     loaddata[datatype]=data
     save_json(loaddata, jsonfile)
 
+# Update records
 def update_json(data ,datatype, record):
     data[datatype][variable] = record

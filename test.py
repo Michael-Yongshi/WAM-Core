@@ -80,11 +80,10 @@ def test_makeWarband():
     print_newline()
 
     # Save wb inventory data
-    invdict = wbid.inventory.get_dict(ref="Warband Inventory")
-    datadict.update(invdict)
-    print(f"invdict= {invdict}")
-    print(f"datadict = {datadict}")
-    print_newline()
+    invdict = wbid.inventory.get_dict(ref="inventory")
+    print(invdict)
+    datadict["Warband"].update(invdict)
+    save_json(data=datadict, jsonfile=filepath)
 
     # add items to inventory in wb inv data
     # for item in wbid.inventory.itemlist:
@@ -93,19 +92,18 @@ def test_makeWarband():
     #     print_newline
 
     # Save hero data
-    herolistdict = {}
+    # change herolist in a dict
+    datadict["Warband"]["herolist"]={}
     i = 1
     for hero in wbid.herolist:
         heroref = "Hero" + str(i)
         herodict = hero.get_dict(ref=heroref)
+        print(herodict)
+        datadict["Warband"]["herolist"].update(herodict)
         i += 1
-        print(f"herodict= {herodict}")
-        herolistdict.update(herodict)
-        print_newline()
     
-    datadict.update(herolistdict)
-    print(f"herolistdict= {herolistdict}")
-    print(f"datadict = {datadict}")
+    # datadict["Warband"][herolist].update(herolistdict)
+    # print(f"datadict = {datadict}")
 
     # save to file
     save_json(data=datadict, jsonfile=filepath)

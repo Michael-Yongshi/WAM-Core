@@ -1,34 +1,34 @@
 {
     "Warband": {
-        "key": "<warband.Warband object at 0x000001E08C637940>",
+        "key": "<warband.Warband object at 0x000002255BC57940>",
         "name": "Uthluan Raiders",
         "race": "High Elves",
-        "inventory": "<inventory.Inventory object at 0x000001E08E46D160>",
-        "herolist": "[<warband.Hero object at 0x000001E08E58DC40>, <warband.Hero object at 0x000001E08E58DE50>]",
-        "squadlist": "[<warband.Squad object at 0x000001E08E58DFD0>, <warband.Squad object at 0x000001E08E586760>, <warband.Squad object at 0x000001E08E586910>]"
-    },
-    "Warband Inventory": {
-        "key": "<inventory.Inventory object at 0x000001E08E46D160>",
-        "gold": 500,
-        "wyrd": 0,
-        "itemlist": "[<inventory.Item object at 0x000001E08E2E0220>, <inventory.Item object at 0x000001E08E57F850>]"
-    },
-    "Hero1": {
-        "key": "<warband.Hero object at 0x000001E08E58DC40>",
-        "name": "Hero1",
-        "race": "High Elves",
-        "category": "Loremaster",
-        "skill": "<stats.Skill object at 0x000001E08C6378E0>",
-        "abilitylist": "[<stats.Ability object at 0x000001E08E2CEA00>, <stats.Ability object at 0x000001E08E58D7F0>]",
-        "inventory": "<inventory.Inventory object at 0x000001E08E58D790>"
-    },
-    "Hero2": {
-        "key": "<warband.Hero object at 0x000001E08E58DE50>",
-        "name": "Hero2",
-        "race": "High Elves",
-        "category": "Swordwarden",
-        "skill": "<stats.Skill object at 0x000001E08E58DCA0>",
-        "abilitylist": "None",
-        "inventory": "<inventory.Inventory object at 0x000001E08E58DCD0>"
+        "inventory": {
+            "key": "<inventory.Inventory object at 0x000002255BE2D070>",
+            "gold": 500,
+            "wyrd": 0,
+            "itemlist": "[<inventory.Item object at 0x000002255BCA0220>, <inventory.Item object at 0x000002255BDB15E0>]"
+        },
+        "herolist": {
+            "Hero1": {
+                "key": "<warband.Hero object at 0x000002255BF4CC10>",
+                "name": "Hero1",
+                "race": "High Elves",
+                "category": "Loremaster",
+                "skill": "<stats.Skill object at 0x000002255BC578E0>",
+                "abilitylist": "[<stats.Ability object at 0x000002255BC8EA00>, <stats.Ability object at 0x000002255BF4C7F0>]",
+                "inventory": "<inventory.Inventory object at 0x000002255BF4C790>"
+            },
+            "Hero2": {
+                "key": "<warband.Hero object at 0x000002255BF4CE20>",
+                "name": "Hero2",
+                "race": "High Elves",
+                "category": "Swordwarden",
+                "skill": "<stats.Skill object at 0x000002255BF4CC40>",
+                "abilitylist": "None",
+                "inventory": "<inventory.Inventory object at 0x000002255BF4CDC0>"
+            }
+        },
+        "squadlist": "[<warband.Squad object at 0x000002255BF4CFA0>, <warband.Squad object at 0x000002255BF46550>, <warband.Squad object at 0x000002255BF46700>]"
     }
 }

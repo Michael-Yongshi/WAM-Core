@@ -46,9 +46,8 @@ def save_json(data ,jsonfile):
 def append_json(data, jsonfile):
     with open(jsonfile, 'r') as infile:
         loaddata = json.load(infile)
-        dumpsdata = json.dumps(loaddata)
-    dumpsdata.append(data)
-    save_json(dumpsdata, jsonfile)
+    loaddata[datatype]=data
+    save_json(loaddata, jsonfile)
 
 def update_json(data ,datatype, record):
-    data[datatype].append({record})
+    data[datatype][variable] = record

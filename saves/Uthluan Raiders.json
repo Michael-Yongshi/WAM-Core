@@ -1,34 +1,135 @@
 {
     "Warband": {
-        "key": "<warband.Warband object at 0x000002255BC57940>",
+        "key": "<warband.Warband object at 0x00000240541E7940>",
         "name": "Uthluan Raiders",
         "race": "High Elves",
         "inventory": {
-            "key": "<inventory.Inventory object at 0x000002255BE2D070>",
+            "key": "<inventory.Inventory object at 0x00000240543BA070>",
             "gold": 500,
             "wyrd": 0,
-            "itemlist": "[<inventory.Item object at 0x000002255BCA0220>, <inventory.Item object at 0x000002255BDB15E0>]"
+            "itemlist": {
+                "Item1": {
+                    "key": "<inventory.Item object at 0x0000024054230220>",
+                    "name": "Mordheim Map",
+                    "category": "Miscellaneous",
+                    "desc": null,
+                    "skill": null,
+                    "abilitylist": [],
+                    "price": 0
+                },
+                "Item2": {
+                    "key": "<inventory.Item object at 0x00000240543415E0>",
+                    "name": "Elven Wine",
+                    "category": "Miscellaneous",
+                    "desc": null,
+                    "skill": null,
+                    "abilitylist": [],
+                    "price": 0
+                }
+            }
         },
         "herolist": {
             "Hero1": {
-                "key": "<warband.Hero object at 0x000002255BF4CC10>",
+                "key": "<warband.Hero object at 0x00000240543DCDC0>",
                 "name": "Hero1",
                 "race": "High Elves",
                 "category": "Loremaster",
-                "skill": "<stats.Skill object at 0x000002255BC578E0>",
-                "abilitylist": "[<stats.Ability object at 0x000002255BC8EA00>, <stats.Ability object at 0x000002255BF4C7F0>]",
-                "inventory": "<inventory.Inventory object at 0x000002255BF4C790>"
+                "skill": "<stats.Skill object at 0x00000240541E78E0>",
+                "abilitylist": "[<stats.Ability object at 0x000002405421EA00>, <stats.Ability object at 0x00000240543DC7F0>]",
+                "inventory": {
+                    "key": "<inventory.Inventory object at 0x00000240543DCC10>",
+                    "gold": 0,
+                    "wyrd": 0,
+                    "itemlist": {
+                        "Item1": {
+                            "key": "<inventory.Item object at 0x00000240543DC790>",
+                            "name": "Mage staff",
+                            "category": "Melee Weapon",
+                            "desc": null,
+                            "skill": null,
+                            "abilitylist": [],
+                            "price": 0
+                        },
+                        "Item2": {
+                            "key": "<inventory.Item object at 0x00000240543DCD90>",
+                            "name": "Dagger",
+                            "category": "Melee Weapon",
+                            "desc": null,
+                            "skill": null,
+                            "abilitylist": [],
+                            "price": 0
+                        }
+                    }
+                }
             },
             "Hero2": {
-                "key": "<warband.Hero object at 0x000002255BF4CE20>",
+                "key": "<warband.Hero object at 0x00000240543DCF10>",
                 "name": "Hero2",
                 "race": "High Elves",
                 "category": "Swordwarden",
-                "skill": "<stats.Skill object at 0x000002255BF4CC40>",
+                "skill": "<stats.Skill object at 0x00000240543DCDF0>",
                 "abilitylist": "None",
-                "inventory": "<inventory.Inventory object at 0x000002255BF4CDC0>"
+                "inventory": {
+                    "key": "<inventory.Inventory object at 0x00000240543DCEB0>",
+                    "gold": 0,
+                    "wyrd": 0,
+                    "itemlist": {
+                        "Item1": {
+                            "key": "<inventory.Item object at 0x00000240543DCE20>",
+                            "name": "Sword",
+                            "category": "Melee Weapon",
+                            "desc": null,
+                            "skill": null,
+                            "abilitylist": [],
+                            "price": 0
+                        },
+                        "Item2": {
+                            "key": "<inventory.Item object at 0x00000240543DCE50>",
+                            "name": "Dagger",
+                            "category": "Melee Weapon",
+                            "desc": null,
+                            "skill": null,
+                            "abilitylist": [],
+                            "price": 0
+                        },
+                        "Item3": {
+                            "key": "<inventory.Item object at 0x00000240543DC820>",
+                            "name": "Shield",
+                            "category": "Armour",
+                            "desc": null,
+                            "skill": null,
+                            "abilitylist": [],
+                            "price": 0
+                        },
+                        "Item4": {
+                            "key": "<inventory.Item object at 0x00000240543DCE80>",
+                            "name": "Light Armour",
+                            "category": "Armour",
+                            "desc": null,
+                            "skill": null,
+                            "abilitylist": [],
+                            "price": 0
+                        }
+                    }
+                }
             }
         },
-        "squadlist": "[<warband.Squad object at 0x000002255BF4CFA0>, <warband.Squad object at 0x000002255BF46550>, <warband.Squad object at 0x000002255BF46700>]"
+        "squadlist": {
+            "squad1": {
+                "name": "Spearguard",
+                "category": "Seaguard",
+                "henchmanlist": "[<warband.Henchman object at 0x00000240543DCFD0>, <warband.Henchman object at 0x00000240543D75B0>]"
+            },
+            "squad2": {
+                "name": "Bladeguard",
+                "category": "Seaguard",
+                "henchmanlist": "[<warband.Character object at 0x00000240543D7760>]"
+            },
+            "squad3": {
+                "name": "Cadet Archers",
+                "category": "Cadet",
+                "henchmanlist": "[<warband.Character object at 0x00000240543D78B0>]"
+            }
+        }
     }
 }

@@ -17,8 +17,8 @@ def test_makeWarband():
         Item(name="Elven Wine", category="Miscellaneous")
         ])
     wbid.herolist = [
-        Hero(name="Hero1", race="High Elves", category="Loremaster", skill=Skill(5,4,4,3,3,1,6,1,9,0), abilitylist=[Ability("Excellent Sight"), Ability("Dispel")], inventory=Inventory(itemlist=["Mage staff", "Dagger"])), 
-        Hero(name="Hero2", race="High Elves", category="Swordwarden", skill=Skill(5,4,4,3,3,1,6,1,9,0), inventory=Inventory(itemlist=["Sword", "Dagger", "Shield", "Light Armour"]))
+        Hero(name="Hero1", race="High Elves", category="Loremaster", skill=Skill(5,4,4,3,3,1,6,1,9,0), abilitylist=[Ability("Excellent Sight"), Ability("Dispel")], inventory=Inventory(itemlist=[Item(name="Mage staff", category="Melee Weapon"), Item(name="Dagger", category="Melee Weapon")])), 
+        Hero(name="Hero2", race="High Elves", category="Swordwarden", skill=Skill(5,4,4,3,3,1,6,1,9,0), inventory=Inventory(itemlist=[Item(name="Sword", category="Melee Weapon"), Item(name="Dagger", category="Melee Weapon"), Item(name="Shield", category="Armour"), Item(name="Light Armour", category="Armour")]))
         ]
     wbid.squadlist = [
         Squad(name="Spearguard", category="Seaguard", henchmanlist=[
@@ -70,40 +70,51 @@ def test_makeWarband():
     # Save data
     filepath = "saves/" + wbid.name + ".json"
 
-    # Save warband data
     datadict = {}
     wbdict = wbid.get_dict()
     datadict.update(wbdict)
-    print(f"wbdict= {wbdict}")
-    print(f"datadict = {datadict}")
-    save_json(data=datadict, jsonfile=filepath)
-    print_newline()
+    # save_json(data=datadict, jsonfile=filepath)
 
-    # Save wb inventory data
     invdict = wbid.inventory.get_dict(ref="inventory")
-    print(invdict)
-    datadict["Warband"].update(invdict)
-    save_json(data=datadict, jsonfile=filepath)
+    datadict["Warband"].update(invdict) # add new inventory dict to warband, practically replacing original value of inventory
+    # save_json(data=datadict, jsonfile=filepath)
 
-    # add items to inventory in wb inv data
-    # for item in wbid.inventory.itemlist:
-    #     datadict = item.get_dict()
-    #     print(datadict)
-    #     print_newline
+    datadict["Warband"]["inventory"]["itemlist"]={} # change in a dict before setting dict values
+    i = 1
+    for item in wbid.inventory.itemlist:
+        itemref = "Item" + str(i) # to make sure it has a unique key
+        itemdict = item.get_dict(ref=itemref)
+        datadict["Warband"]["inventory"]["itemlist"].update(itemdict)
+        i += 1
 
-    # Save hero data
-    # change herolist in a dict
-    datadict["Warband"]["herolist"]={}
+    datadict["Warband"]["herolist"]={} # change in a dict before setting dict values
     i = 1
     for hero in wbid.herolist:
-        heroref = "Hero" + str(i)
+        heroref = "Hero" + str(i) # to make sure it has a unique key
         herodict = hero.get_dict(ref=heroref)
-        print(herodict)
         datadict["Warband"]["herolist"].update(herodict)
         i += 1
+        
+        invdict = hero.inventory.get_dict(ref="inventory")
+        datadict["Warband"]["herolist"][heroref].update(invdict) # add new inventory dict to warband, practically replacing original value of inventory
     
-    # datadict["Warband"][herolist].update(herolistdict)
-    # print(f"datadict = {datadict}")
+        datadict["Warband"]["herolist"][heroref]["inventory"]["itemlist"]={} # change in a dict before setting dict values
+        j = 1
+        for item in hero.inventory.itemlist:
+            itemref = "Item" + str(j) # to make sure it has a unique key
+            itemdict = item.get_dict(ref=itemref)
+            datadict["Warband"]["herolist"][heroref]["inventory"]["itemlist"].update(itemdict)
+            j += 1
+    
+    # save_json(data=datadict, jsonfile=filepath)
+    
+    datadict["Warband"]["squadlist"]={} # change in a dict before setting dict values
+    i = 1
+    for squad in wbid.squadlist:
+        squadref = "squad" + str(i) # to make sure it has a unique key
+        squaddict = squad.get_dict(ref=squadref)
+        datadict["Warband"]["squadlist"].update(squaddict)
+        i += 1
 
     # save to file
     save_json(data=datadict, jsonfile=filepath)

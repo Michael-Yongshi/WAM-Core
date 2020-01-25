@@ -91,12 +91,12 @@ class Squad(object):
         self.category = category
         self.henchmanlist = henchmanlist if henchmanlist else None
 
-    def get_dict(self):  
+    def get_dict(self, ref):  
         data = {}
-        data[self] = {
+        data[str(ref)] = {
             'name': self.name,
             'category': self.category,
-            'henchmanlist': self.henchmanlist
+            'henchmanlist': str(self.henchmanlist)
         }
         return data
 

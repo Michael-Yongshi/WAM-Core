@@ -22,14 +22,14 @@ def test_makeWarband():
         ]
     wbid.squadlist = [
         Squad(name="Spearguard", category="Seaguard", henchmanlist=[
-            Henchman(name="Spearguard1", race="High Elves", category="Seaguard", skill=Skill(5,4,4,3,3,1,6,1,8,0), inventory=Inventory(itemlist=["Spear"])),
-            Henchman("Spearguard2", "High Elves", "Seaguard", Skill(5,4,4,3,3,1,6,1,8,0), Inventory(itemlist=["Spear"]))
+            Henchman(name="Spearguard1", race="High Elves", category="Seaguard", skill=Skill(5,4,4,3,3,1,6,1,8,0), inventory=Inventory(itemlist=[Item(name="Spear", category="Melee Weapon")])),
+            Henchman(name="Spearguard2", race="High Elves", category="Seaguard", skill=Skill(5,4,4,3,3,1,6,1,8,0), inventory=Inventory(itemlist=[Item(name="Spear", category="Melee Weapon")]))
         ]), 
         Squad(name="Bladeguard", category="Seaguard", henchmanlist=[
-            Character(name="Bladeguard1", race="High Elves", category="Seaguard", skill=Skill(5,4,4,3,3,1,6,1,8,0), inventory=Inventory(itemlist=["Sword"]))
+            Henchman(name="Bladeguard1", race="High Elves", category="Seaguard", skill=Skill(5,4,4,3,3,1,6,1,8,0), inventory=Inventory(itemlist=[Item(name="Sword", category="Melee Weapon")]))
         ]), 
         Squad(name="Cadet Archers", category="Cadet", henchmanlist=[
-            Character(name="Cadet1", race="High Elves", category="Cadet", skill=Skill(5,3,3,3,3,1,6,1,7,0), inventory=Inventory(itemlist=["Longbow"]))
+            Henchman(name="Cadet1", race="High Elves", category="Cadet", skill=Skill(5,3,3,3,3,1,6,1,7,0), inventory=Inventory(itemlist=[Item(name="Longbow", category="Missile Weapon")]))
         ])
         ]
     
@@ -66,7 +66,9 @@ def test_makeWarband():
         print(f" items: {squad.henchmanlist[0].inventory.itemlist}")
         print(f" (total: {squad.get_totalhenchman()})")
 
-    
+    # generic get_dict function? get an object and create a dict from it
+
+
     # Save data
     filepath = "saves/" + wbid.name + ".json"
 
@@ -112,9 +114,32 @@ def test_makeWarband():
     i = 1
     for squad in wbid.squadlist:
         squadref = "squad" + str(i) # to make sure it has a unique key
+        print(squadref)
         squaddict = squad.get_dict(ref=squadref)
         datadict["Warband"]["squadlist"].update(squaddict)
         i += 1
+
+        datadict["Warband"]["squadlist"][squadref]["henchmanlist"]={} # change in a dict before setting dict values
+        j = 1
+        for henchman in squad.henchmanlist:
+            henchmanref = "Henchman" + str(j) # to make sure it has a unique key
+            print(henchmanref)
+            henchmandict = henchman.get_dict(ref=henchmanref)
+            datadict["Warband"]["squadlist"][squadref]["henchmanlist"].update(henchmandict)
+            j += 1
+            
+            invdict = henchman.inventory.get_dict(ref="inventory")
+            datadict["Warband"]["squadlist"][squadref]["henchmanlist"][henchmanref].update(invdict) # add new inventory dict to warband, practically replacing original value of inventory
+        
+            datadict["Warband"]["squadlist"][squadref]["henchmanlist"][henchmanref]["inventory"]["itemlist"]={} # change in a dict before setting dict values
+            k = 1
+            for item in henchman.inventory.itemlist:
+                itemref = "Item" + str(k) # to make sure it has a unique key
+                print(itemref)
+                itemdict = item.get_dict(ref=itemref)
+                datadict["Warband"]["squadlist"][squadref]["henchmanlist"][henchmanref]["inventory"]["itemlist"].update(itemdict)
+                k += 1
+            
 
     # save to file
     save_json(data=datadict, jsonfile=filepath)

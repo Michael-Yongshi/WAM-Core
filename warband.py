@@ -78,12 +78,24 @@ class Hero(Character):
 
 
 class Henchman(Character):
-    """Henchman is a class with no methods as these are 
+    """Henchman is a class with no mutation methods as these are 
     invoked using the Squad class to prevent henchmen 
     to deviate from their peers"""
     def __init__(self, name, race, category, skill, abilitylist=None, inventory=None, experience=0):
         super().__init__(name, race, category, skill, abilitylist, inventory, experience)
 
+    def get_dict(self, ref):  
+        data = {}
+        data[str(ref)] = {
+            'key': str(self),
+            'name': self.name,
+            'race': self.race,
+            'category': self.category,
+            'skill': str(self.skill),
+            'abilitylist': str(self.abilitylist),
+            'inventory': str(self.inventory)
+        }
+        return data
 
 class Squad(object):
     def __init__(self, name, category, experience=0, henchmanlist=None):

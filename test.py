@@ -13,24 +13,119 @@ def test_makeWarband():
     # Create data
     wbid = Warband(name="Uthluan Raiders", race="High Elves")
     wbid.inventory = Inventory(gold=500, itemlist=[
-        Item(name="Mordheim Map", category="Miscellaneous"),
+        Item(name="Mordheim Map", category="Miscellaneous", abilitylist=[Ability(name="Search Environment")]),
         Item(name="Elven Wine", category="Miscellaneous")
         ])
     wbid.herolist = [
-        Hero(name="Hero1", race="High Elves", category="Loremaster", skill=Skill(5,4,4,3,3,1,6,1,9,0), abilitylist=[Ability("Excellent Sight"), Ability("Dispel")], inventory=Inventory(itemlist=[Item(name="Mage staff", category="Melee Weapon"), Item(name="Dagger", category="Melee Weapon")])), 
-        Hero(name="Hero2", race="High Elves", category="Swordwarden", skill=Skill(5,4,4,3,3,1,6,1,9,0), inventory=Inventory(itemlist=[Item(name="Sword", category="Melee Weapon"), Item(name="Dagger", category="Melee Weapon"), Item(name="Shield", category="Armour"), Item(name="Light Armour", category="Armour")]))
+        Hero(
+            name="Hero1", 
+            race="High Elves", 
+            category="Loremaster", 
+            skill=Skill(5,4,4,3,3,1,6,1,9,0), 
+            abilitylist=[
+                Ability("Excellent Sight"), 
+                ], 
+            inventory=Inventory(itemlist=[
+                Item(
+                    name="Mage staff", 
+                    category="Melee Weapon"), 
+                Item(
+                    name="Dagger", 
+                    category="Melee Weapon")
+                ])
+            ), 
+        Hero(
+            name="Hero2", 
+            race="High Elves", 
+            category="Swordwarden", 
+            skill=Skill(5,4,4,3,3,1,6,1,9,0), 
+            inventory=Inventory(itemlist=[
+                Item(
+                    name="Sword", 
+                    category="Melee Weapon"
+                    ), 
+                Item(
+                    name="Dagger", 
+                    category="Melee Weapon"
+                    ), 
+                Item(
+                    name="Shield", 
+                    category="Armour"
+                    ), 
+                Item(
+                    name="Light Armour", 
+                    category="Armour"
+                    )
+                ])
+            )
         ]
     wbid.squadlist = [
-        Squad(name="Spearguard", category="Seaguard", henchmanlist=[
-            Henchman(name="Spearguard1", race="High Elves", category="Seaguard", skill=Skill(5,4,4,3,3,1,6,1,8,0), inventory=Inventory(itemlist=[Item(name="Spear", category="Melee Weapon")])),
-            Henchman(name="Spearguard2", race="High Elves", category="Seaguard", skill=Skill(5,4,4,3,3,1,6,1,8,0), inventory=Inventory(itemlist=[Item(name="Spear", category="Melee Weapon")]))
-        ]), 
-        Squad(name="Bladeguard", category="Seaguard", henchmanlist=[
-            Henchman(name="Bladeguard1", race="High Elves", category="Seaguard", skill=Skill(5,4,4,3,3,1,6,1,8,0), inventory=Inventory(itemlist=[Item(name="Sword", category="Melee Weapon")]))
-        ]), 
-        Squad(name="Cadet Archers", category="Cadet", henchmanlist=[
-            Henchman(name="Cadet1", race="High Elves", category="Cadet", skill=Skill(5,3,3,3,3,1,6,1,7,0), inventory=Inventory(itemlist=[Item(name="Longbow", category="Missile Weapon")]))
-        ])
+        Squad(
+            name="Spearguard", 
+            category="Seaguard", 
+            henchmanlist=[
+                Henchman(
+                    name="Spearguard1", 
+                    race="High Elves", 
+                    category="Seaguard", 
+                    skill=Skill(5,4,4,3,3,1,6,1,8,0), 
+                    inventory=Inventory(itemlist=[
+                        Item(
+                            name="Spear", 
+                            category="Melee Weapon"
+                            )
+                        ])
+                    ),
+                Henchman(
+                    name="Spearguard2", 
+                    race="High Elves", 
+                    category="Seaguard", 
+                    skill=Skill(5,4,4,3,3,1,6,1,8,0), 
+                    inventory=Inventory(itemlist=[
+                        Item(
+                            name="Spear", 
+                            category="Melee Weapon"
+                            )
+                        ])
+                    )
+                ]
+            ), 
+        Squad(
+            name="Bladeguard", 
+            category="Seaguard", 
+            henchmanlist=[
+                Henchman(
+                    name="Bladeguard1", 
+                    race="High Elves", 
+                    category="Seaguard", 
+                    skill=Skill(5,4,4,3,3,1,6,1,8,0), 
+                    inventory=Inventory(itemlist=[
+                        Item(
+                            name="Sword", 
+                            category="Melee Weapon"
+                            )
+                        ])
+                    )
+                ]
+            ), 
+        Squad(
+            name="Cadet Archers", 
+            category="Cadet", 
+            henchmanlist=[
+                Henchman(
+                    name="Cadet1", 
+                    race="High Elves", 
+                    category="Cadet", 
+                    skill=Skill(5,3,3,3,3,1,6,1,7,0), 
+                    inventory=Inventory(itemlist=[
+                        Item(
+                            name="Longbow", 
+                            category="Missile Weapon"
+                            )
+                        ])
+                    )
+                ]
+            )
         ]
     
     # Load warband data
@@ -85,9 +180,21 @@ def test_makeWarband():
     i = 1
     for item in wbid.inventory.itemlist:
         itemref = "Item" + str(i) # to make sure it has a unique key
+        print(itemref)
         itemdict = item.get_dict(ref=itemref)
         datadict["Warband"]["inventory"]["itemlist"].update(itemdict)
         i += 1
+
+        datadict["Warband"]["inventory"]["itemlist"][itemref]["abilitylist"]={} # change in a dict before setting dict values
+        a = 1
+        print(str(item.abilitylist))
+        for ability in item.abilitylist:
+            abilityref = "Ability" + str(a) # to make sure it has a unique key
+            print(abilityref)
+            abilitydict = ability.get_dict(ref=abilityref)
+            print(abilitydict)
+            datadict["Warband"]["inventory"]["itemlist"][itemref]["abilitylist"].update(abilitydict)
+            a += 1
 
     datadict["Warband"]["herolist"]={} # change in a dict before setting dict values
     h = 1
@@ -114,7 +221,6 @@ def test_makeWarband():
     s = 1
     for squad in wbid.squadlist:
         squadref = "squad" + str(s) # to make sure it has a unique key
-        print(squadref)
         squaddict = squad.get_dict(ref=squadref)
         datadict["Warband"]["squadlist"].update(squaddict)
         s += 1
@@ -123,7 +229,6 @@ def test_makeWarband():
         h = 1
         for henchman in squad.henchmanlist:
             henchmanref = "Henchman" + str(h) # to make sure it has a unique key
-            print(henchmanref)
             henchmandict = henchman.get_dict(ref=henchmanref)
             datadict["Warband"]["squadlist"][squadref]["henchmanlist"].update(henchmandict)
             h += 1
@@ -135,7 +240,6 @@ def test_makeWarband():
             i = 1
             for item in henchman.inventory.itemlist:
                 itemref = "Item" + str(i) # to make sure it has a unique key
-                print(itemref)
                 itemdict = item.get_dict(ref=itemref)
                 datadict["Warband"]["squadlist"][squadref]["henchmanlist"][henchmanref]["inventory"]["itemlist"].update(itemdict)
                 i += 1

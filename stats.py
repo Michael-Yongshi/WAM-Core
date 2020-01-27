@@ -12,8 +12,34 @@ class Skill(object):
         self.leadership = leadership
         self.armoursave = armoursave
     
+    def get_dict(self, ref):  
+        data = {}
+        data[str(ref)] = {
+            'key': str(self),
+            'movement': self.movement,
+            'weapon': self.weapon,
+            'ballistic': self.ballistic,
+            'strength': self.strength,
+            'toughness': self.toughness,
+            'wounds': self.wounds,
+            'initiative': self.initiative,
+            'actions': self.actions,
+            'leadership': self.leadership,
+            'armoursave': self.armoursave
+        }
+        return data
+
 class Ability(object):
     """Default object to assign ablities as a basis for character and item abilities"""
     def __init__(self, name, description=None):
         self.name = name
         self.description = description
+
+    def get_dict(self, ref):  
+        data = {}
+        data[str(ref)] = {
+            'key': str(self),
+            'name': self.name,
+            'description': self.description
+        }
+        return data

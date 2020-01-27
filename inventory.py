@@ -2,7 +2,7 @@ class Inventory(object):
     def __init__(self, gold=0, wyrd=0, itemlist=[]):
         self.gold = gold
         self.wyrd = wyrd
-        self.itemlist = itemlist
+        self.itemlist = itemlist if itemlist else []
 
     def add_item(self, itemname):
         itemlis.append(itemname)
@@ -22,12 +22,12 @@ class Inventory(object):
         return data
 
 class Item(object):
-    def __init__(self, name, category, skill=None, abilitylist=None, desc=None, price=0):
+    def __init__(self, name, category, skill=None, abilitylist=[], desc=None, price=0):
         self.name = name
         self.category = category
         self.desc = desc
         self.skill = skill
-        self.abilitylist = abilitylist
+        self.abilitylist = abilitylist if abilitylist else []
         self.price = price
 
     def get_dict(self, ref):  
@@ -38,7 +38,7 @@ class Item(object):
             'category': self.category,
             'desc': self.desc,
             'skill': self.skill,
-            'abilitylist': self.abilitylist,
+            'abilitylist': str(self.abilitylist),
             'price': self.price     
         }
         return data

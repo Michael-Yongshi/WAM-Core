@@ -90,55 +90,55 @@ def test_makeWarband():
         i += 1
 
     datadict["Warband"]["herolist"]={} # change in a dict before setting dict values
-    i = 1
+    h = 1
     for hero in wbid.herolist:
-        heroref = "Hero" + str(i) # to make sure it has a unique key
+        heroref = "Hero" + str(h) # to make sure it has a unique key
         herodict = hero.get_dict(ref=heroref)
         datadict["Warband"]["herolist"].update(herodict)
-        i += 1
+        h += 1
         
         invdict = hero.inventory.get_dict(ref="inventory")
         datadict["Warband"]["herolist"][heroref].update(invdict) # add new inventory dict to warband, practically replacing original value of inventory
     
         datadict["Warband"]["herolist"][heroref]["inventory"]["itemlist"]={} # change in a dict before setting dict values
-        j = 1
+        i = 1
         for item in hero.inventory.itemlist:
-            itemref = "Item" + str(j) # to make sure it has a unique key
+            itemref = "Item" + str(i) # to make sure it has a unique key
             itemdict = item.get_dict(ref=itemref)
             datadict["Warband"]["herolist"][heroref]["inventory"]["itemlist"].update(itemdict)
-            j += 1
+            i += 1
     
     # save_json(data=datadict, jsonfile=filepath)
     
     datadict["Warband"]["squadlist"]={} # change in a dict before setting dict values
-    i = 1
+    s = 1
     for squad in wbid.squadlist:
-        squadref = "squad" + str(i) # to make sure it has a unique key
+        squadref = "squad" + str(s) # to make sure it has a unique key
         print(squadref)
         squaddict = squad.get_dict(ref=squadref)
         datadict["Warband"]["squadlist"].update(squaddict)
-        i += 1
+        s += 1
 
         datadict["Warband"]["squadlist"][squadref]["henchmanlist"]={} # change in a dict before setting dict values
-        j = 1
+        h = 1
         for henchman in squad.henchmanlist:
-            henchmanref = "Henchman" + str(j) # to make sure it has a unique key
+            henchmanref = "Henchman" + str(h) # to make sure it has a unique key
             print(henchmanref)
             henchmandict = henchman.get_dict(ref=henchmanref)
             datadict["Warband"]["squadlist"][squadref]["henchmanlist"].update(henchmandict)
-            j += 1
+            h += 1
             
             invdict = henchman.inventory.get_dict(ref="inventory")
             datadict["Warband"]["squadlist"][squadref]["henchmanlist"][henchmanref].update(invdict) # add new inventory dict to warband, practically replacing original value of inventory
         
             datadict["Warband"]["squadlist"][squadref]["henchmanlist"][henchmanref]["inventory"]["itemlist"]={} # change in a dict before setting dict values
-            k = 1
+            i = 1
             for item in henchman.inventory.itemlist:
-                itemref = "Item" + str(k) # to make sure it has a unique key
+                itemref = "Item" + str(i) # to make sure it has a unique key
                 print(itemref)
                 itemdict = item.get_dict(ref=itemref)
                 datadict["Warband"]["squadlist"][squadref]["henchmanlist"][henchmanref]["inventory"]["itemlist"].update(itemdict)
-                k += 1
+                i += 1
             
 
     # save to file

@@ -22,7 +22,7 @@ class Inventory(object):
         return data
 
 class Item(object):
-    def __init__(self, name, category, skill=None, abilitylist=[], desc=None, price=0):
+    def __init__(self, name, category, skill=None, abilitylist=None, desc=None, price=0):
         self.name = name
         self.category = category
         self.desc = desc

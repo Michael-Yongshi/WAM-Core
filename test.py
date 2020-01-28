@@ -1,7 +1,6 @@
 from references.json import *
-from stats import *
-from warband import *
-from inventory import *
+from hierarchy import * # reference to the hierarchic classes that are used, 
+# like warband that consists of heroes and squads, that in turn reference to henchman
 
 
 def print_newline():

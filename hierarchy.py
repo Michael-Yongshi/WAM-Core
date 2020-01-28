@@ -1,5 +1,5 @@
-from inventory import *
-from stats import *
+from components import * # reference to the script with all non character components
+
 
 class Warband(object):
     def __init__(self, name, race, rules=[], inventory=None, herolist=[], squadlist=[]):

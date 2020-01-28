@@ -1,6 +1,6 @@
 {
     "Warband": {
-        "key": "<warband.Warband object at 0x000001823D217400>",
+        "key": "<hierarchy.Warband object at 0x000001BC5DDA7400>",
         "name": "Uthluan Wyrdbreakers",
         "race": "High Elves",
         "specialrules": [
@@ -11,19 +11,19 @@
             "Resolve"
         ],
         "inventory": {
-            "key": "<inventory.Inventory object at 0x000001823D3CC760>",
+            "key": "<components.Inventory object at 0x000001BC5E0D68E0>",
             "gold": 500,
             "wyrd": 0,
             "itemlist": {
                 "Item1": {
-                    "key": "<inventory.Item object at 0x000001823D25F220>",
+                    "key": "<components.Item object at 0x000001BC5DDDEBE0>",
                     "name": "Mordheim Map",
                     "category": "Miscellaneous",
                     "desc": null,
-                    "skill": "<stats.Skill object at 0x000001823D41DFD0>",
+                    "skill": "<components.Skill object at 0x000001BC5E0D67C0>",
                     "abilitylist": {
                         "Ability1": {
-                            "key": "<stats.Ability object at 0x000001823D2178E0>",
+                            "key": "<components.Ability object at 0x000001BC5DDA78E0>",
                             "name": "Search Environment",
                             "description": null
                         }
@@ -31,11 +31,11 @@
                     "price": 0
                 },
                 "Item2": {
-                    "key": "<inventory.Item object at 0x000001823D371700>",
+                    "key": "<components.Item object at 0x000001BC5E0D68B0>",
                     "name": "Elven Wine",
                     "category": "Miscellaneous",
                     "desc": null,
-                    "skill": "<stats.Skill object at 0x000001823D3A0250>",
+                    "skill": "<components.Skill object at 0x000001BC5E0D6820>",
                     "abilitylist": {},
                     "price": 0
                 }
@@ -43,83 +43,83 @@
         },
         "herolist": {
             "Hero1": {
-                "key": "<warband.Hero object at 0x000001823D54C910>",
+                "key": "<hierarchy.Hero object at 0x000001BC5E0E48B0>",
                 "name": "Hero1",
                 "race": "High Elves",
                 "category": "Loremaster",
-                "skill": "<stats.Skill object at 0x000001823D3CCBE0>",
-                "abilitylist": "[<stats.Ability object at 0x000001823D54C4F0>]",
+                "skill": "<components.Skill object at 0x000001BC5E0E4520>",
+                "abilitylist": "[<components.Ability object at 0x000001BC5E0E45B0>]",
                 "inventory": {
-                    "key": "<inventory.Inventory object at 0x000001823D54C850>",
+                    "key": "<components.Inventory object at 0x000001BC5E0E47F0>",
                     "gold": 0,
                     "wyrd": 0,
                     "itemlist": {
                         "Item1": {
-                            "key": "<inventory.Item object at 0x000001823D54C790>",
+                            "key": "<components.Item object at 0x000001BC5E0E4730>",
                             "name": "Mage staff",
                             "category": "Melee Weapon",
                             "desc": "Mage Staves of Hoeth are forged from the finest Ithilmar, and are works of art that are truly beautiful to behold. They are usually decorated with gems and other precious materials. Only a Loremaster may use a Mage Staff.",
-                            "skill": "<stats.Skill object at 0x000001823D54C460>",
-                            "abilitylist": "[<stats.Ability object at 0x000001823D54C3D0>, <stats.Ability object at 0x000001823D54C580>]",
+                            "skill": "<components.Skill object at 0x000001BC5E0E4640>",
+                            "abilitylist": "[<components.Ability object at 0x000001BC5E0E4670>, <components.Ability object at 0x000001BC5E0E46D0>]",
                             "price": 20
                         },
                         "Item2": {
-                            "key": "<inventory.Item object at 0x000001823D54C820>",
+                            "key": "<components.Item object at 0x000001BC5E0E47C0>",
                             "name": "Dagger",
                             "category": "Melee Weapon",
                             "desc": null,
-                            "skill": "<stats.Skill object at 0x000001823D54C8E0>",
-                            "abilitylist": "[<stats.Ability object at 0x000001823D54C7C0>]",
+                            "skill": "<components.Skill object at 0x000001BC5E0E4820>",
+                            "abilitylist": "[<components.Ability object at 0x000001BC5E0E4760>]",
                             "price": 0
                         }
                     }
                 }
             },
             "Hero2": {
-                "key": "<warband.Hero object at 0x000001823D54CBB0>",
+                "key": "<hierarchy.Hero object at 0x000001BC5E0E4B20>",
                 "name": "Hero2",
                 "race": "High Elves",
                 "category": "Swordwarden",
-                "skill": "<stats.Skill object at 0x000001823D54C940>",
-                "abilitylist": "[<stats.Ability object at 0x000001823D54C970>]",
+                "skill": "<components.Skill object at 0x000001BC5E0E4880>",
+                "abilitylist": "[<components.Ability object at 0x000001BC5E0E48E0>]",
                 "inventory": {
-                    "key": "<inventory.Inventory object at 0x000001823D54CB50>",
+                    "key": "<components.Inventory object at 0x000001BC5E0E4AC0>",
                     "gold": 0,
                     "wyrd": 0,
                     "itemlist": {
                         "Item1": {
-                            "key": "<inventory.Item object at 0x000001823D54C9D0>",
+                            "key": "<components.Item object at 0x000001BC5E0E4940>",
                             "name": "Sword",
                             "category": "Melee Weapon",
                             "desc": null,
-                            "skill": "<stats.Skill object at 0x000001823D54CA00>",
+                            "skill": "<components.Skill object at 0x000001BC5E0E4970>",
                             "abilitylist": "[]",
                             "price": 0
                         },
                         "Item2": {
-                            "key": "<inventory.Item object at 0x000001823D54CA30>",
+                            "key": "<components.Item object at 0x000001BC5E0E49A0>",
                             "name": "Dagger",
                             "category": "Melee Weapon",
                             "desc": null,
-                            "skill": "<stats.Skill object at 0x000001823D54CA60>",
+                            "skill": "<components.Skill object at 0x000001BC5E0E49D0>",
                             "abilitylist": "[]",
                             "price": 0
                         },
                         "Item3": {
-                            "key": "<inventory.Item object at 0x000001823D54CA90>",
+                            "key": "<components.Item object at 0x000001BC5E0E4A00>",
                             "name": "Shield",
                             "category": "Armour",
                             "desc": null,
-                            "skill": "<stats.Skill object at 0x000001823D54CAC0>",
+                            "skill": "<components.Skill object at 0x000001BC5E0E4A30>",
                             "abilitylist": "[]",
                             "price": 0
                         },
                         "Item4": {
-                            "key": "<inventory.Item object at 0x000001823D54CAF0>",
+                            "key": "<components.Item object at 0x000001BC5E0E4A60>",
                             "name": "Light Armour",
                             "category": "Armour",
                             "desc": null,
-                            "skill": "<stats.Skill object at 0x000001823D54CB20>",
+                            "skill": "<components.Skill object at 0x000001BC5E0E4A90>",
                             "abilitylist": "[]",
                             "price": 0
                         }
@@ -133,23 +133,23 @@
                 "category": "Seaguard",
                 "henchmanlist": {
                     "Henchman1": {
-                        "key": "<warband.Henchman object at 0x000001823D54CD30>",
+                        "key": "<hierarchy.Henchman object at 0x000001BC5E0E4CA0>",
                         "name": "Spearguard1",
                         "race": "High Elves",
                         "category": "Seaguard",
-                        "skill": "<stats.Skill object at 0x000001823D54CBE0>",
-                        "abilitylist": "[<stats.Ability object at 0x000001823D54CC10>]",
+                        "skill": "<components.Skill object at 0x000001BC5E0E4B50>",
+                        "abilitylist": "[<components.Ability object at 0x000001BC5E0E4B80>]",
                         "inventory": {
-                            "key": "<inventory.Inventory object at 0x000001823D54CCD0>",
+                            "key": "<components.Inventory object at 0x000001BC5E0E4C40>",
                             "gold": 0,
                             "wyrd": 0,
                             "itemlist": {
                                 "Item1": {
-                                    "key": "<inventory.Item object at 0x000001823D54CC70>",
+                                    "key": "<components.Item object at 0x000001BC5E0E4BE0>",
                                     "name": "Spear",
                                     "category": "Melee Weapon",
                                     "desc": null,
-                                    "skill": "<stats.Skill object at 0x000001823D54CCA0>",
+                                    "skill": "<components.Skill object at 0x000001BC5E0E4C10>",
                                     "abilitylist": "[]",
                                     "price": 0
                                 }
@@ -157,23 +157,23 @@
                         }
                     },
                     "Henchman2": {
-                        "key": "<warband.Henchman object at 0x000001823D54CEB0>",
+                        "key": "<hierarchy.Henchman object at 0x000001BC5E0E4DF0>",
                         "name": "Spearguard2",
                         "race": "High Elves",
                         "category": "Seaguard",
-                        "skill": "<stats.Skill object at 0x000001823D54CD60>",
-                        "abilitylist": "[<stats.Ability object at 0x000001823D54CD90>]",
+                        "skill": "<components.Skill object at 0x000001BC5E0E4CD0>",
+                        "abilitylist": "[<components.Ability object at 0x000001BC5E0E4D00>]",
                         "inventory": {
-                            "key": "<inventory.Inventory object at 0x000001823D54CE50>",
+                            "key": "<components.Inventory object at 0x000001BC5E0E4DC0>",
                             "gold": 0,
                             "wyrd": 0,
                             "itemlist": {
                                 "Item1": {
-                                    "key": "<inventory.Item object at 0x000001823D54CDF0>",
+                                    "key": "<components.Item object at 0x000001BC5E0E4D60>",
                                     "name": "Spear",
                                     "category": "Melee Weapon",
                                     "desc": null,
-                                    "skill": "<stats.Skill object at 0x000001823D54CE20>",
+                                    "skill": "<components.Skill object at 0x000001BC5E0E4D90>",
                                     "abilitylist": "[]",
                                     "price": 0
                                 }
@@ -187,23 +187,23 @@
                 "category": "Seaguard",
                 "henchmanlist": {
                     "Henchman1": {
-                        "key": "<warband.Henchman object at 0x000001823D5550D0>",
+                        "key": "<hierarchy.Henchman object at 0x000001BC5E0E7040>",
                         "name": "Bladeguard1",
                         "race": "High Elves",
                         "category": "Seaguard",
-                        "skill": "<stats.Skill object at 0x000001823D54CF40>",
-                        "abilitylist": "[<stats.Ability object at 0x000001823D54CF70>]",
+                        "skill": "<components.Skill object at 0x000001BC5E0E4EB0>",
+                        "abilitylist": "[<components.Ability object at 0x000001BC5E0E4EE0>]",
                         "inventory": {
-                            "key": "<inventory.Inventory object at 0x000001823D555070>",
+                            "key": "<components.Inventory object at 0x000001BC5E0E4FA0>",
                             "gold": 0,
                             "wyrd": 0,
                             "itemlist": {
                                 "Item1": {
-                                    "key": "<inventory.Item object at 0x000001823D54CFD0>",
+                                    "key": "<components.Item object at 0x000001BC5E0E4F40>",
                                     "name": "Sword",
                                     "category": "Melee Weapon",
                                     "desc": null,
-                                    "skill": "<stats.Skill object at 0x000001823D555040>",
+                                    "skill": "<components.Skill object at 0x000001BC5E0E4F70>",
                                     "abilitylist": "[]",
                                     "price": 0
                                 }
@@ -217,23 +217,23 @@
                 "category": "Cadet",
                 "henchmanlist": {
                     "Henchman1": {
-                        "key": "<warband.Henchman object at 0x000001823D555310>",
+                        "key": "<hierarchy.Henchman object at 0x000001BC5E0E7220>",
                         "name": "Cadet1",
                         "race": "High Elves",
                         "category": "Cadet",
-                        "skill": "<stats.Skill object at 0x000001823D555160>",
-                        "abilitylist": "[<stats.Ability object at 0x000001823D555190>]",
+                        "skill": "<components.Skill object at 0x000001BC5E0E70D0>",
+                        "abilitylist": "[<components.Ability object at 0x000001BC5E0E7100>]",
                         "inventory": {
-                            "key": "<inventory.Inventory object at 0x000001823D555280>",
+                            "key": "<components.Inventory object at 0x000001BC5E0E71C0>",
                             "gold": 0,
                             "wyrd": 0,
                             "itemlist": {
                                 "Item1": {
-                                    "key": "<inventory.Item object at 0x000001823D5551F0>",
+                                    "key": "<components.Item object at 0x000001BC5E0E7160>",
                                     "name": "Longbow",
                                     "category": "Missile Weapon",
                                     "desc": null,
-                                    "skill": "<stats.Skill object at 0x000001823D555220>",
+                                    "skill": "<components.Skill object at 0x000001BC5E0E7190>",
                                     "abilitylist": "[]",
                                     "price": 0
                                 }

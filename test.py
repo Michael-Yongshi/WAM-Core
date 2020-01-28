@@ -55,7 +55,8 @@ def test_makeWarband():
                     price=0
                     )
                 ]),
-            experience=20
+            experience=20,
+            price=80
             ), 
         Hero(
             name="Hero2", 
@@ -91,7 +92,8 @@ def test_makeWarband():
                     price=20
                     )
                 ]),
-            experience=11
+            experience=11,
+            price=50
             )
         ]
     wbid.squadlist = [
@@ -121,7 +123,8 @@ def test_makeWarband():
                             price=0
                             )
                         ]),
-                    experience=0
+                    experience=0,
+                    price=35
                     ),
                 Henchman(
                     name="Spearguard2", 
@@ -145,7 +148,8 @@ def test_makeWarband():
                             price=0
                             )
                         ]),
-                    experience=0
+                    experience=0,
+                    price=35
                     )
                 ]
             ), 
@@ -175,7 +179,8 @@ def test_makeWarband():
                             price=0
                             )
                         ]),
-                    experience=0
+                    experience=0,
+                    price=35
                     )
                 ]
             ), 
@@ -205,7 +210,8 @@ def test_makeWarband():
                             price=0
                             )
                         ]),
-                    experience=0
+                    experience=0,
+                    price=30
                     )
                 ]
             )

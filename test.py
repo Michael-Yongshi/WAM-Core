@@ -11,7 +11,7 @@ def print_newline():
 # test warband classes
 def test_makeWarband():
     # Create data
-    wbid = Warband(name="Uthluan Raiders", race="High Elves")
+    wbid = Warband(name="Uthluan Wyrdbreakers", race="High Elves", rules=["Excellent Sight", "Haughty", "Honourable", "The Old Ways", "Resolve"])
     wbid.inventory = Inventory(gold=500, itemlist=[
         Item(name="Mordheim Map", category="Miscellaneous", abilitylist=[Ability(name="Search Environment")]),
         Item(name="Elven Wine", category="Miscellaneous")
@@ -28,10 +28,23 @@ def test_makeWarband():
             inventory=Inventory(itemlist=[
                 Item(
                     name="Mage staff", 
-                    category="Melee Weapon"), 
+                    category="Melee Weapon",
+                    skill=Skill(0,0,0,2,0,0,0,0,0,0),
+                    abilitylist=[
+                        Ability(name="Concussion", description="Stunned also happens on a roll of 2 on the injury roll."),
+                        Ability(name="One or Two handed", description="Strength bonus is 1 if used onehanded, 2 if used two handed. Declare clearly.")
+                        ],
+                    desc="Mage Staves of Hoeth are forged from the finest Ithilmar, and are works of art that are truly beautiful to behold. They are usually decorated with gems and other precious materials. Only a Loremaster may use a Mage Staff.",
+                    price=20
+                    ), 
                 Item(
                     name="Dagger", 
-                    category="Melee Weapon")
+                    category="Melee Weapon",
+                    abilitylist=[
+                        Ability(name="Cloth Is Armour", description="For daggers even normal clothing is regarded as armour. Add +1 to the enemy`s armour save.")
+                        ],
+                    price=0
+                    )
                 ])
             ), 
         Hero(
@@ -39,6 +52,9 @@ def test_makeWarband():
             race="High Elves", 
             category="Swordwarden", 
             skill=Skill(5,4,4,3,3,1,6,1,9,0), 
+            abilitylist=[
+                Ability("Excellent Sight"), 
+                ], 
             inventory=Inventory(itemlist=[
                 Item(
                     name="Sword", 
@@ -69,6 +85,9 @@ def test_makeWarband():
                     race="High Elves", 
                     category="Seaguard", 
                     skill=Skill(5,4,4,3,3,1,6,1,8,0), 
+                    abilitylist=[
+                        Ability("Excellent Sight"), 
+                    ],
                     inventory=Inventory(itemlist=[
                         Item(
                             name="Spear", 
@@ -81,6 +100,9 @@ def test_makeWarband():
                     race="High Elves", 
                     category="Seaguard", 
                     skill=Skill(5,4,4,3,3,1,6,1,8,0), 
+                    abilitylist=[
+                        Ability("Excellent Sight"), 
+                    ],
                     inventory=Inventory(itemlist=[
                         Item(
                             name="Spear", 
@@ -99,6 +121,9 @@ def test_makeWarband():
                     race="High Elves", 
                     category="Seaguard", 
                     skill=Skill(5,4,4,3,3,1,6,1,8,0), 
+                    abilitylist=[
+                        Ability("Excellent Sight"), 
+                    ],
                     inventory=Inventory(itemlist=[
                         Item(
                             name="Sword", 
@@ -117,6 +142,9 @@ def test_makeWarband():
                     race="High Elves", 
                     category="Cadet", 
                     skill=Skill(5,3,3,3,3,1,6,1,7,0), 
+                    abilitylist=[
+                        Ability("Excellent Sight"), 
+                    ],
                     inventory=Inventory(itemlist=[
                         Item(
                             name="Longbow", 
@@ -172,10 +200,12 @@ def test_makeWarband():
     datadict.update(wbdict)
     # save_json(data=datadict, jsonfile=filepath)
 
+    print("save warband info")
     invdict = wbid.inventory.get_dict(ref="inventory")
     datadict["Warband"].update(invdict) # add new inventory dict to warband, practically replacing original value of inventory
     # save_json(data=datadict, jsonfile=filepath)
 
+    print("save warband itemlist")
     datadict["Warband"]["inventory"]["itemlist"]={} # change in a dict before setting dict values
     i = 1
     for item in wbid.inventory.itemlist:
@@ -185,21 +215,22 @@ def test_makeWarband():
         datadict["Warband"]["inventory"]["itemlist"].update(itemdict)
         i += 1
 
+        print("save warband item abilities")
         datadict["Warband"]["inventory"]["itemlist"][itemref]["abilitylist"]={} # change in a dict before setting dict values
         a = 1
-        print(str(item.abilitylist))
         for ability in item.abilitylist:
             abilityref = "Ability" + str(a) # to make sure it has a unique key
             print(abilityref)
             abilitydict = ability.get_dict(ref=abilityref)
-            print(abilitydict)
             datadict["Warband"]["inventory"]["itemlist"][itemref]["abilitylist"].update(abilitydict)
             a += 1
 
+    print("save herolist")
     datadict["Warband"]["herolist"]={} # change in a dict before setting dict values
     h = 1
     for hero in wbid.herolist:
         heroref = "Hero" + str(h) # to make sure it has a unique key
+        print(heroref)
         herodict = hero.get_dict(ref=heroref)
         datadict["Warband"]["herolist"].update(herodict)
         h += 1
@@ -211,6 +242,7 @@ def test_makeWarband():
         i = 1
         for item in hero.inventory.itemlist:
             itemref = "Item" + str(i) # to make sure it has a unique key
+            print(itemref)
             itemdict = item.get_dict(ref=itemref)
             datadict["Warband"]["herolist"][heroref]["inventory"]["itemlist"].update(itemdict)
             i += 1
@@ -221,6 +253,7 @@ def test_makeWarband():
     s = 1
     for squad in wbid.squadlist:
         squadref = "squad" + str(s) # to make sure it has a unique key
+        print(squadref)
         squaddict = squad.get_dict(ref=squadref)
         datadict["Warband"]["squadlist"].update(squaddict)
         s += 1
@@ -229,6 +262,7 @@ def test_makeWarband():
         h = 1
         for henchman in squad.henchmanlist:
             henchmanref = "Henchman" + str(h) # to make sure it has a unique key
+            print(henchmanref)
             henchmandict = henchman.get_dict(ref=henchmanref)
             datadict["Warband"]["squadlist"][squadref]["henchmanlist"].update(henchmandict)
             h += 1
@@ -240,6 +274,7 @@ def test_makeWarband():
             i = 1
             for item in henchman.inventory.itemlist:
                 itemref = "Item" + str(i) # to make sure it has a unique key
+                print(itemref)
                 itemdict = item.get_dict(ref=itemref)
                 datadict["Warband"]["squadlist"][squadref]["henchmanlist"][henchmanref]["inventory"]["itemlist"].update(itemdict)
                 i += 1

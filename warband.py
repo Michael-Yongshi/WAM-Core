@@ -2,9 +2,10 @@ from inventory import *
 from stats import *
 
 class Warband(object):
-    def __init__(self, name, race, inventory=None, herolist=[], squadlist=[]):
+    def __init__(self, name, race, rules=[], inventory=None, herolist=[], squadlist=[]):
         self.name = name
         self.race = race
+        self.rules = rules
         self.inventory = inventory
         self.herolist = herolist
         self.squadlist = squadlist
@@ -15,6 +16,7 @@ class Warband(object):
             'key': str(self),
             'name': self.name,
             'race': self.race,
+            'specialrules': self.rules,
             'inventory': str(self.inventory),
             'herolist': str(self.herolist), 
             'squadlist': str(self.squadlist)

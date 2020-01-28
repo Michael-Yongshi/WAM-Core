@@ -1,3 +1,5 @@
+from stats import *
+
 class Inventory(object):
     def __init__(self, gold=0, wyrd=0, itemlist=[]):
         self.gold = gold
@@ -26,7 +28,7 @@ class Item(object):
         self.name = name
         self.category = category
         self.desc = desc
-        self.skill = skill
+        self.skill = skill if skill else Skill(0,0,0,0,0,0,0,0,0,0)
         self.abilitylist = abilitylist if abilitylist else []
         self.price = price
 
@@ -37,7 +39,7 @@ class Item(object):
             'name': self.name,
             'category': self.category,
             'desc': self.desc,
-            'skill': self.skill,
+            'skill': str(self.skill),
             'abilitylist': str(self.abilitylist),
             'price': self.price     
         }

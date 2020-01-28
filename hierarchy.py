@@ -1,4 +1,4 @@
-from components import * # reference to the script with all non character components
+from components import * # reference to the script with all component classes
 
 
 class Warband(object):
@@ -25,6 +25,64 @@ class Warband(object):
 
     def save_warband(self):
         NotImplemented
+
+
+class Squad(object):
+    def __init__(self, name, category, experience=0, henchmanlist=[]):
+        self.name = name
+        self.category = category
+        self.henchmanlist = henchmanlist
+
+    def get_dict(self, ref):  
+        data = {}
+        data[str(ref)] = {
+            'name': self.name,
+            'category': self.category,
+            'henchmanlist': str(self.henchmanlist)
+        }
+        return data
+
+    def get_totalhenchman(ditobject):
+        henchmanlist = ditobject.henchmanlist if ditobject.henchmanlist else []
+        return len(henchmanlist)
+
+    def add_henchman(self):
+        """adds another henchman character to the squad
+        for a new squad checks if character is a henchman sub-class"""
+        NotImplemented
+
+    def remove_henchman(self):
+        """removes a specific henchman character in this squad, by default this is on FIFO basis"""
+        NotImplemented
+
+# The following functions are changes to the henchman character, but invoked from the squad in order to maintain sync between the members of a squad
+
+    def add_experience(self):
+        """adds experience to every henchman in the squad"""
+        NotImplemented
+
+    def remove_experience(self):
+        """removes experience from every henchmen in the squad"""
+        NotImplemented
+
+    def add_item(self):
+        """adds an item to every henchman in the squad
+        increases replacecost for the squad by the cost of the item added"""
+        NotImplemented
+
+    def remove_item(self):
+        """removes an item from all henchmen in this squad
+        decreases replacecost for the squad by the cost of the item removed"""
+        NotImplemented
+
+    def add_skill(self):
+        """adds a skill to every henchman in the squad"""
+        NotImplemented
+
+    def remove_skill(self):
+        """removes a skill from every henchmen in the squad"""
+        NotImplemented
+        
 
 class Character(object):
     def __init__(self, name, race, category, skill, abilitylist=[], inventory=None, experience=0):
@@ -99,58 +157,4 @@ class Henchman(Character):
         }
         return data
 
-class Squad(object):
-    def __init__(self, name, category, experience=0, henchmanlist=[]):
-        self.name = name
-        self.category = category
-        self.henchmanlist = henchmanlist
 
-    def get_dict(self, ref):  
-        data = {}
-        data[str(ref)] = {
-            'name': self.name,
-            'category': self.category,
-            'henchmanlist': str(self.henchmanlist)
-        }
-        return data
-
-    def get_totalhenchman(ditobject):
-        henchmanlist = ditobject.henchmanlist if ditobject.henchmanlist else []
-        return len(henchmanlist)
-
-    def add_henchman(self):
-        """adds another henchman character to the squad
-        for a new squad checks if character is a henchman sub-class"""
-        NotImplemented
-
-    def remove_henchman(self):
-        """removes a specific henchman character in this squad, by default this is on FIFO basis"""
-        NotImplemented
-
-# The following functions are changes to the henchman character, but invoked from the squad in order to maintain sync between the members of a squad
-
-    def add_experience(self):
-        """adds experience to every henchman in the squad"""
-        NotImplemented
-
-    def remove_experience(self):
-        """removes experience from every henchmen in the squad"""
-        NotImplemented
-
-    def add_item(self):
-        """adds an item to every henchman in the squad
-        increases replacecost for the squad by the cost of the item added"""
-        NotImplemented
-
-    def remove_item(self):
-        """removes an item from all henchmen in this squad
-        decreases replacecost for the squad by the cost of the item removed"""
-        NotImplemented
-
-    def add_skill(self):
-        """adds a skill to every henchman in the squad"""
-        NotImplemented
-
-    def remove_skill(self):
-        """removes a skill from every henchmen in the squad"""
-        NotImplemented

@@ -1,49 +1,49 @@
 {
     "Warband": {
-        "key": "<hierarchy.Warband object at 0x000002ABC922F6D0>",
+        "key": "<hierarchy.Warband object at 0x00000181F98D5610>",
         "name": "Uthluan Wyrdbreakers",
         "race": "High Elves",
         "rulelist": {
             "Rule1": {
-                "key": "<components.Rule object at 0x000002ABC9077940>",
+                "key": "<components.Rule object at 0x00000181F96D7940>",
                 "name": "Excellent Sight",
                 "description": "Elves have eyesight unmatched by mere humans. Elves spot Hidden enemies from two times as far away as other warriors (ie, twice their Initiative value in inches)."
             },
             "Rule2": {
-                "key": "<components.Rule object at 0x000002ABC90778E0>",
+                "key": "<components.Rule object at 0x00000181F96D78E0>",
                 "name": "Haughty",
                 "description": "The High Elves are a very proud and noble race. A High Elf Warband may never include hired swords that are not of High Elven blood, nor can they use any equipment of Dwarf origin. This includes Gromril weapons and armour."
             },
             "Rule3": {
-                "key": "<components.Rule object at 0x000002ABC90AEB20>",
+                "key": "<components.Rule object at 0x00000181F970EB20>",
                 "name": "Honourable",
                 "description": "High Elves can never use poison or drugs of any kind no matter what the circumstance."
             },
             "Rule4": {
-                "key": "<components.Rule object at 0x000002ABC9305DC0>",
+                "key": "<components.Rule object at 0x00000181F98C7790>",
                 "name": "The Old Ways",
                 "description": "The High Elves may never use black powder weapons of any sort. This goes against their ancestors and the traditions of the Old Ways."
             },
             "Rule5": {
-                "key": "<components.Rule object at 0x000002ABC922F5B0>",
+                "key": "<components.Rule object at 0x00000181F98C78B0>",
                 "name": "Resolve",
                 "description": "The High Elves have been fighting the Dark Elves for countless centuries. When fighting their dark kin the High Elves are driven by unwavering determination. They are considered to have a Leadership of 10 when taking Rout Tests against the Dark Elves. In addition, High Elves can never choose to voluntarily Rout as they must stop their evil kin at any cost."
             }
         },
         "inventory": {
-            "key": "<components.Inventory object at 0x000002ABC922FE20>",
+            "key": "<components.Inventory object at 0x00000181F98D5670>",
             "gold": 500,
             "wyrd": 0,
             "itemlist": {}
         },
         "herolist": {
             "Hero1": {
-                "key": "<hierarchy.Hero object at 0x000002ABC922BC40>",
+                "key": "<hierarchy.Hero object at 0x00000181F98D59D0>",
                 "name": "Hero1",
                 "race": "High Elves",
                 "category": "Loremaster",
                 "skill": {
-                    "key": "<components.Skill object at 0x000002ABC922FBE0>",
+                    "key": "<components.Skill object at 0x00000181F98D5700>",
                     "movement": 5,
                     "weapon": 4,
                     "ballistic": 4,
@@ -57,30 +57,30 @@
                 },
                 "abilitylist": {
                     "Ability1": {
-                        "key": "<components.Ability object at 0x000002ABC922FC70>",
+                        "key": "<components.Ability object at 0x00000181F98D5730>",
                         "name": "High Elven Magic",
                         "description": null
                     }
                 },
                 "inventory": {
-                    "key": "<components.Inventory object at 0x000002ABC922FFA0>",
+                    "key": "<components.Inventory object at 0x00000181F98D5940>",
                     "gold": 0,
                     "wyrd": 0,
                     "itemlist": {
                         "Item1": {
-                            "key": "<components.Item object at 0x000002ABC922FEE0>",
+                            "key": "<components.Item object at 0x00000181F98D5880>",
                             "name": "Mage staff",
                             "category": "Melee Weapon",
                             "desc": "Mage Staves of Hoeth are forged from the finest Ithilmar, and are works of art that are truly beautiful to behold. They are usually decorated with gems and other precious materials. Only a Loremaster may use a Mage Staff.",
-                            "skill": "<components.Skill object at 0x000002ABC922FDF0>",
+                            "skill": "<components.Skill object at 0x00000181F98D5790>",
                             "abilitylist": {
                                 "Ability1": {
-                                    "key": "<components.Ability object at 0x000002ABC922FE50>",
+                                    "key": "<components.Ability object at 0x00000181F98D57C0>",
                                     "name": "Concussion",
                                     "description": "Stunned also happens on a roll of 2 on the injury roll."
                                 },
                                 "Ability2": {
-                                    "key": "<components.Ability object at 0x000002ABC922FE80>",
+                                    "key": "<components.Ability object at 0x00000181F98D5820>",
                                     "name": "One or Two handed",
                                     "description": "Strength bonus is 1 if used twohanded, no bonus if used one handed."
                                 }
@@ -88,14 +88,14 @@
                             "price": 20
                         },
                         "Item2": {
-                            "key": "<components.Item object at 0x000002ABC922FF70>",
+                            "key": "<components.Item object at 0x00000181F98D5910>",
                             "name": "Dagger",
                             "category": "Melee Weapon",
                             "desc": null,
-                            "skill": "<components.Skill object at 0x000002ABC922FFD0>",
+                            "skill": "<components.Skill object at 0x00000181F98D59A0>",
                             "abilitylist": {
                                 "Ability1": {
-                                    "key": "<components.Ability object at 0x000002ABC922FF10>",
+                                    "key": "<components.Ability object at 0x00000181F98D58B0>",
                                     "name": "Trouble With Normal Clothing",
                                     "description": "For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save."
                                 }
@@ -108,12 +108,12 @@
                 "price": 80
             },
             "Hero2": {
-                "key": "<hierarchy.Hero object at 0x000002ABC922BA00>",
+                "key": "<hierarchy.Hero object at 0x00000181F98D5D30>",
                 "name": "Hero2",
                 "race": "High Elves",
                 "category": "Swordwarden",
                 "skill": {
-                    "key": "<components.Skill object at 0x000002ABC922BD60>",
+                    "key": "<components.Skill object at 0x00000181F98D5A00>",
                     "movement": 5,
                     "weapon": 5,
                     "ballistic": 4,
@@ -127,25 +127,25 @@
                 },
                 "abilitylist": {
                     "Ability1": {
-                        "key": "<components.Ability object at 0x000002ABC922B5B0>",
+                        "key": "<components.Ability object at 0x00000181F98D5A30>",
                         "name": "Excellent Sight",
                         "description": null
                     }
                 },
                 "inventory": {
-                    "key": "<components.Inventory object at 0x000002ABC922B9D0>",
+                    "key": "<components.Inventory object at 0x00000181F98D5CD0>",
                     "gold": 0,
                     "wyrd": 0,
                     "itemlist": {
                         "Item1": {
-                            "key": "<components.Item object at 0x000002ABC922B670>",
+                            "key": "<components.Item object at 0x00000181F98D5AF0>",
                             "name": "Sword",
                             "category": "Melee Weapon",
                             "desc": null,
-                            "skill": "<components.Skill object at 0x000002ABC922B760>",
+                            "skill": "<components.Skill object at 0x00000181F98D5B50>",
                             "abilitylist": {
                                 "Ability1": {
-                                    "key": "<components.Ability object at 0x000002ABC922B640>",
+                                    "key": "<components.Ability object at 0x00000181F98D5A90>",
                                     "name": "Parry",
                                     "description": "A sword can parry a single attack."
                                 }
@@ -153,14 +153,14 @@
                             "price": 10
                         },
                         "Item2": {
-                            "key": "<components.Item object at 0x000002ABC922B7F0>",
+                            "key": "<components.Item object at 0x00000181F98D5BB0>",
                             "name": "Dagger",
                             "category": "Melee Weapon",
                             "desc": null,
-                            "skill": "<components.Skill object at 0x000002ABC922B820>",
+                            "skill": "<components.Skill object at 0x00000181F98D5C10>",
                             "abilitylist": {
                                 "Ability1": {
-                                    "key": "<components.Ability object at 0x000002ABC922B6D0>",
+                                    "key": "<components.Ability object at 0x00000181F98D5B20>",
                                     "name": "Trouble With Normal Clothing",
                                     "description": "For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save."
                                 }
@@ -168,20 +168,20 @@
                             "price": 0
                         },
                         "Item3": {
-                            "key": "<components.Item object at 0x000002ABC922B910>",
+                            "key": "<components.Item object at 0x00000181F98D5C40>",
                             "name": "Shield",
                             "category": "Armour",
                             "desc": null,
-                            "skill": "<components.Skill object at 0x000002ABC922B790>",
+                            "skill": "<components.Skill object at 0x00000181F98D5BE0>",
                             "abilitylist": {},
                             "price": 5
                         },
                         "Item4": {
-                            "key": "<components.Item object at 0x000002ABC922B940>",
+                            "key": "<components.Item object at 0x00000181F98D5CA0>",
                             "name": "Light Armour",
                             "category": "Armour",
                             "desc": null,
-                            "skill": "<components.Skill object at 0x000002ABC922B8B0>",
+                            "skill": "<components.Skill object at 0x00000181F98D5C70>",
                             "abilitylist": {},
                             "price": 20
                         }
@@ -197,12 +197,12 @@
                 "category": "Seaguard",
                 "henchmanlist": {
                     "Henchman1": {
-                        "key": "<hierarchy.Henchman object at 0x000002ABC925F160>",
+                        "key": "<hierarchy.Henchman object at 0x00000181F98DC070>",
                         "name": "Spearguard1",
                         "race": "High Elves",
                         "category": "Seaguard",
                         "skill": {
-                            "key": "<components.Skill object at 0x000002ABC922BA60>",
+                            "key": "<components.Skill object at 0x00000181F98D5D60>",
                             "movement": 5,
                             "weapon": 4,
                             "ballistic": 4,
@@ -216,19 +216,19 @@
                         },
                         "abilitylist": {},
                         "inventory": {
-                            "key": "<components.Inventory object at 0x000002ABC925F0D0>",
+                            "key": "<components.Inventory object at 0x00000181F98D5FA0>",
                             "gold": 0,
                             "wyrd": 0,
                             "itemlist": {
                                 "Item1": {
-                                    "key": "<components.Item object at 0x000002ABC922BA90>",
+                                    "key": "<components.Item object at 0x00000181F98D5DF0>",
                                     "name": "Spear",
                                     "category": "Melee Weapon",
                                     "desc": null,
-                                    "skill": "<components.Skill object at 0x000002ABC922BB80>",
+                                    "skill": "<components.Skill object at 0x00000181F98D5E50>",
                                     "abilitylist": {
                                         "Ability1": {
-                                            "key": "<components.Ability object at 0x000002ABC922BA30>",
+                                            "key": "<components.Ability object at 0x00000181F98D5D90>",
                                             "name": "First Strike",
                                             "description": "A spear allows to strike first even when charged, or evens the odds against other First Strike enabled characters."
                                         }
@@ -236,14 +236,14 @@
                                     "price": 10
                                 },
                                 "Item2": {
-                                    "key": "<components.Item object at 0x000002ABC922BEB0>",
+                                    "key": "<components.Item object at 0x00000181F98D5EB0>",
                                     "name": "Longbow",
                                     "category": "Missile Weapon",
                                     "desc": null,
-                                    "skill": "<components.Skill object at 0x000002ABC925F040>",
+                                    "skill": "<components.Skill object at 0x00000181F98D5EE0>",
                                     "abilitylist": {
                                         "Ability1": {
-                                            "key": "<components.Ability object at 0x000002ABC922BB20>",
+                                            "key": "<components.Ability object at 0x00000181F98D5E20>",
                                             "name": "Range",
                                             "description": "A bow with a range of 30 inch."
                                         }
@@ -251,14 +251,14 @@
                                     "price": 15
                                 },
                                 "Item3": {
-                                    "key": "<components.Item object at 0x000002ABC925F0A0>",
+                                    "key": "<components.Item object at 0x00000181F98D5F70>",
                                     "name": "Dagger",
                                     "category": "Melee Weapon",
                                     "desc": null,
-                                    "skill": "<components.Skill object at 0x000002ABC925F100>",
+                                    "skill": "<components.Skill object at 0x00000181F98D5FD0>",
                                     "abilitylist": {
                                         "Ability1": {
-                                            "key": "<components.Ability object at 0x000002ABC922B880>",
+                                            "key": "<components.Ability object at 0x00000181F98D5F10>",
                                             "name": "Trouble With Normal Clothing",
                                             "description": "For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save."
                                         }
@@ -271,12 +271,12 @@
                         "price": 35
                     },
                     "Henchman2": {
-                        "key": "<hierarchy.Henchman object at 0x000002ABC925F460>",
+                        "key": "<hierarchy.Henchman object at 0x00000181F98DC3A0>",
                         "name": "Spearguard2",
                         "race": "High Elves",
                         "category": "Seaguard",
                         "skill": {
-                            "key": "<components.Skill object at 0x000002ABC925F190>",
+                            "key": "<components.Skill object at 0x00000181F98DC0A0>",
                             "movement": 5,
                             "weapon": 4,
                             "ballistic": 4,
@@ -290,19 +290,19 @@
                         },
                         "abilitylist": {},
                         "inventory": {
-                            "key": "<components.Inventory object at 0x000002ABC925F3D0>",
+                            "key": "<components.Inventory object at 0x00000181F98DC2E0>",
                             "gold": 0,
                             "wyrd": 0,
                             "itemlist": {
                                 "Item1": {
-                                    "key": "<components.Item object at 0x000002ABC925F220>",
+                                    "key": "<components.Item object at 0x00000181F98DC130>",
                                     "name": "Spear",
                                     "category": "Melee Weapon",
                                     "desc": null,
-                                    "skill": "<components.Skill object at 0x000002ABC925F280>",
+                                    "skill": "<components.Skill object at 0x00000181F98DC190>",
                                     "abilitylist": {
                                         "Ability1": {
-                                            "key": "<components.Ability object at 0x000002ABC925F1C0>",
+                                            "key": "<components.Ability object at 0x00000181F98DC0D0>",
                                             "name": "First Strike",
                                             "description": "A spear allows to strike first even when charged, or evens the odds against other First Strike enabled characters."
                                         }
@@ -310,14 +310,14 @@
                                     "price": 10
                                 },
                                 "Item2": {
-                                    "key": "<components.Item object at 0x000002ABC925F2E0>",
+                                    "key": "<components.Item object at 0x00000181F98DC1F0>",
                                     "name": "Longbow",
                                     "category": "Missile Weapon",
                                     "desc": null,
-                                    "skill": "<components.Skill object at 0x000002ABC925F340>",
+                                    "skill": "<components.Skill object at 0x00000181F98DC250>",
                                     "abilitylist": {
                                         "Ability1": {
-                                            "key": "<components.Ability object at 0x000002ABC925F250>",
+                                            "key": "<components.Ability object at 0x00000181F98DC160>",
                                             "name": "Range",
                                             "description": "A bow with a range of 30 inch."
                                         }
@@ -325,14 +325,14 @@
                                     "price": 15
                                 },
                                 "Item3": {
-                                    "key": "<components.Item object at 0x000002ABC925F3A0>",
+                                    "key": "<components.Item object at 0x00000181F98DC2B0>",
                                     "name": "Dagger",
                                     "category": "Melee Weapon",
                                     "desc": null,
-                                    "skill": "<components.Skill object at 0x000002ABC925F400>",
+                                    "skill": "<components.Skill object at 0x00000181F98DC310>",
                                     "abilitylist": {
                                         "Ability1": {
-                                            "key": "<components.Ability object at 0x000002ABC925F310>",
+                                            "key": "<components.Ability object at 0x00000181F98DC220>",
                                             "name": "Trouble With Normal Clothing",
                                             "description": "For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save."
                                         }
@@ -351,12 +351,12 @@
                 "category": "Seaguard",
                 "henchmanlist": {
                     "Henchman1": {
-                        "key": "<hierarchy.Henchman object at 0x000002ABC925F7C0>",
+                        "key": "<hierarchy.Henchman object at 0x00000181F98DC700>",
                         "name": "Bladeguard1",
                         "race": "High Elves",
                         "category": "Seaguard",
                         "skill": {
-                            "key": "<components.Skill object at 0x000002ABC925F4F0>",
+                            "key": "<components.Skill object at 0x00000181F98DC460>",
                             "movement": 5,
                             "weapon": 4,
                             "ballistic": 4,
@@ -370,19 +370,19 @@
                         },
                         "abilitylist": {},
                         "inventory": {
-                            "key": "<components.Inventory object at 0x000002ABC925F730>",
+                            "key": "<components.Inventory object at 0x00000181F98DC6A0>",
                             "gold": 0,
                             "wyrd": 0,
                             "itemlist": {
                                 "Item1": {
-                                    "key": "<components.Item object at 0x000002ABC925F5B0>",
+                                    "key": "<components.Item object at 0x00000181F98DC520>",
                                     "name": "Greatsword",
                                     "category": "Melee Weapon",
                                     "desc": null,
-                                    "skill": "<components.Skill object at 0x000002ABC925F520>",
+                                    "skill": "<components.Skill object at 0x00000181F98DC490>",
                                     "abilitylist": {
                                         "Ability1": {
-                                            "key": "<components.Ability object at 0x000002ABC925F550>",
+                                            "key": "<components.Ability object at 0x00000181F98DC4C0>",
                                             "name": "Last Strike",
                                             "description": "A greatsword will always strike last even when charging, except against other Last Strike enabled characters."
                                         }
@@ -390,14 +390,14 @@
                                     "price": 15
                                 },
                                 "Item2": {
-                                    "key": "<components.Item object at 0x000002ABC925F640>",
+                                    "key": "<components.Item object at 0x00000181F98DC5B0>",
                                     "name": "Longbow",
                                     "category": "Missile Weapon",
                                     "desc": null,
-                                    "skill": "<components.Skill object at 0x000002ABC925F6A0>",
+                                    "skill": "<components.Skill object at 0x00000181F98DC610>",
                                     "abilitylist": {
                                         "Ability1": {
-                                            "key": "<components.Ability object at 0x000002ABC925F5E0>",
+                                            "key": "<components.Ability object at 0x00000181F98DC550>",
                                             "name": "Range",
                                             "description": "A bow with a range of 30 inch."
                                         }
@@ -405,14 +405,14 @@
                                     "price": 15
                                 },
                                 "Item3": {
-                                    "key": "<components.Item object at 0x000002ABC925F700>",
+                                    "key": "<components.Item object at 0x00000181F98DC670>",
                                     "name": "Dagger",
                                     "category": "Melee Weapon",
                                     "desc": null,
-                                    "skill": "<components.Skill object at 0x000002ABC925F760>",
+                                    "skill": "<components.Skill object at 0x00000181F98DC6D0>",
                                     "abilitylist": {
                                         "Ability1": {
-                                            "key": "<components.Ability object at 0x000002ABC925F670>",
+                                            "key": "<components.Ability object at 0x00000181F98DC5E0>",
                                             "name": "Trouble With Normal Clothing",
                                             "description": "For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save."
                                         }
@@ -431,12 +431,12 @@
                 "category": "Cadet",
                 "henchmanlist": {
                     "Henchman1": {
-                        "key": "<hierarchy.Henchman object at 0x000002ABC925FA60>",
+                        "key": "<hierarchy.Henchman object at 0x00000181F98DC9A0>",
                         "name": "Cadet1",
                         "race": "High Elves",
                         "category": "Cadet",
                         "skill": {
-                            "key": "<components.Skill object at 0x000002ABC925F850>",
+                            "key": "<components.Skill object at 0x00000181F98DC790>",
                             "movement": 5,
                             "weapon": 3,
                             "ballistic": 3,
@@ -450,19 +450,19 @@
                         },
                         "abilitylist": {},
                         "inventory": {
-                            "key": "<components.Inventory object at 0x000002ABC925F9D0>",
+                            "key": "<components.Inventory object at 0x00000181F98DC910>",
                             "gold": 0,
                             "wyrd": 0,
                             "itemlist": {
                                 "Item1": {
-                                    "key": "<components.Item object at 0x000002ABC925F8E0>",
+                                    "key": "<components.Item object at 0x00000181F98DC820>",
                                     "name": "Longbow",
                                     "category": "Missile Weapon",
                                     "desc": null,
-                                    "skill": "<components.Skill object at 0x000002ABC925F940>",
+                                    "skill": "<components.Skill object at 0x00000181F98DC880>",
                                     "abilitylist": {
                                         "Ability1": {
-                                            "key": "<components.Ability object at 0x000002ABC925F880>",
+                                            "key": "<components.Ability object at 0x00000181F98DC7C0>",
                                             "name": "Range",
                                             "description": "A bow with a range of 30 inch."
                                         }
@@ -470,14 +470,14 @@
                                     "price": 15
                                 },
                                 "Item2": {
-                                    "key": "<components.Item object at 0x000002ABC925F9A0>",
+                                    "key": "<components.Item object at 0x00000181F98DC8E0>",
                                     "name": "Dagger",
                                     "category": "Melee Weapon",
                                     "desc": null,
-                                    "skill": "<components.Skill object at 0x000002ABC925FA00>",
+                                    "skill": "<components.Skill object at 0x00000181F98DC940>",
                                     "abilitylist": {
                                         "Ability1": {
-                                            "key": "<components.Ability object at 0x000002ABC925F910>",
+                                            "key": "<components.Ability object at 0x00000181F98DC850>",
                                             "name": "Trouble With Normal Clothing",
                                             "description": "For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save."
                                         }

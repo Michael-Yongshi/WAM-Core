@@ -409,40 +409,13 @@ def test_makeWarband():
                     datadict["Warband"]["squadlist"][squadref]["henchmanlist"][henchmanref]["inventory"]["itemlist"][itemref]["abilitylist"].update(abilitydict)
                     ia += 1
 
-    print("save completed")
-
-    # Get warband total price / cost / replacement costs
-    wbinvprice = wbid.inventory.get_price()
-    print(wbinvprice)
-
-    herolistprice = 0
-    for hero in wbid.herolist:
-        heroprice = hero.price
-        for item in hero.inventory.itemlist:
-            heroprice += item.price
-        herolistprice += heroprice
-    print(herolistprice)
-
-    # get squad prices
-    squadlistprice = 0
-    for squad in wbid.squadlist:
-        squadsize = squad.get_totalhenchman()
-        
-        henchmanprice = squad.henchmanlist[0].price # get price of a single henchman type
-        for item in squad.henchmanlist[0].inventory.itemlist:
-            henchmanprice += item.price # get price of a single item of a henchman in this squad
-
-        squadprice = henchmanprice * squadsize # multiply the price for a henchman and items with the number of henchman in the squad
-
-        squadlistprice += squadprice # increment total squad cost with this squads prices
-
-    price = wbinvprice + herolistprice + squadlistprice
-    print(price)
-
-    # print(wbid.get_warbandprice())
 
     # save to file
     save_json(data=datadict, jsonfile=filepath)
+    print("save completed")
+    
+    # Get warband total price / cost / replacement costs
+    print(wbid.get_warbandprice())
 
 if __name__ == "__main__":
     test_makeWarband()

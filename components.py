@@ -5,6 +5,22 @@
 # Abilities
 
 
+class Rule(object):
+    """Default object to assign special rules to a warband. Although should be race specific, for now it is saved in the warband for quick reference only"""
+    def __init__(self, name, description=None):
+        self.name = name
+        self.description = description
+
+    def get_dict(self, ref):  
+        data = {}
+        data[str(ref)] = {
+            'key': str(self),
+            'name': self.name,
+            'description': self.description
+        }
+        return data
+
+
 class Inventory(object):
     def __init__(self, gold=0, wyrd=0, itemlist=[]):
         self.gold = gold

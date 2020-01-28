@@ -13,10 +13,19 @@ def print_newline():
 # test warband classes
 def test_makeWarband():
     # Create data
-    wbid = Warband(name="Uthluan Wyrdbreakers", race="High Elves", rules=["Excellent Sight", "Haughty", "Honourable", "The Old Ways", "Resolve"])
+    wbid = Warband(
+        name="Uthluan Wyrdbreakers", 
+        race="High Elves", 
+        rulelist=[
+            Rule(name="Excellent Sight", description="Elves have eyesight unmatched by mere humans. Elves spot Hidden enemies from two times as far away as other warriors (ie, twice their Initiative value in inches)."), 
+            Rule(name="Haughty", description="The High Elves are a very proud and noble race. A High Elf Warband may never include hired swords that are not of High Elven blood, nor can they use any equipment of Dwarf origin. This includes Gromril weapons and armour."),
+            Rule(name="Honourable", description="High Elves can never use poison or drugs of any kind no matter what the circumstance."),
+            Rule(name="The Old Ways", description="The High Elves may never use black powder weapons of any sort. This goes against their ancestors and the traditions of the Old Ways."),
+            Rule(name="Resolve", description="The High Elves have been fighting the Dark Elves for countless centuries. When fighting their dark kin the High Elves are driven by unwavering determination. They are considered to have a Leadership of 10 when taking Rout Tests against the Dark Elves. In addition, High Elves can never choose to voluntarily Rout as they must stop their evil kin at any cost.")
+            ])
     wbid.inventory = Inventory(gold=500, itemlist=[
-        Item(name="Mordheim Map", category="Miscellaneous", abilitylist=[Ability(name="Search Environment")]),
-        Item(name="Elven Wine", category="Miscellaneous")
+        # Item(name="Mordheim Map", category="Miscellaneous", abilitylist=[Ability(name="Search Environment")]),
+        # Item(name="Elven Wine", category="Miscellaneous")
         ])
     wbid.herolist = [
         Hero(
@@ -25,8 +34,7 @@ def test_makeWarband():
             category="Loremaster", 
             skill=Skill(5,4,4,3,3,1,6,1,9,0), 
             abilitylist=[
-                Ability("Excellent Sight"),
-                Ability("High Elven Magic") 
+                Ability(name="High Elven Magic") 
                 ], 
             inventory=Inventory(itemlist=[
                 Item(
@@ -48,7 +56,8 @@ def test_makeWarband():
                         ],
                     price=0
                     )
-                ])
+                ]),
+            experience=20
             ), 
         Hero(
             name="Hero2", 
@@ -75,7 +84,8 @@ def test_makeWarband():
                     name="Light Armour", 
                     category="Armour"
                     )
-                ])
+                ]),
+            experience=11
             )
         ]
     wbid.squadlist = [
@@ -96,7 +106,8 @@ def test_makeWarband():
                             name="Spear", 
                             category="Melee Weapon"
                             )
-                        ])
+                        ]),
+                    experience=0
                     ),
                 Henchman(
                     name="Spearguard2", 
@@ -111,7 +122,8 @@ def test_makeWarband():
                             name="Spear", 
                             category="Melee Weapon"
                             )
-                        ])
+                        ]),
+                    experience=0
                     )
                 ]
             ), 
@@ -132,7 +144,8 @@ def test_makeWarband():
                             name="Sword", 
                             category="Melee Weapon"
                             )
-                        ])
+                        ]),
+                    experience=0
                     )
                 ]
             ), 
@@ -153,7 +166,8 @@ def test_makeWarband():
                             name="Longbow", 
                             category="Missile Weapon"
                             )
-                        ])
+                        ]),
+                    experience=0
                     )
                 ]
             )
@@ -203,8 +217,18 @@ def test_makeWarband():
     datadict = {}
     wbdict = wbid.get_dict()
     datadict.update(wbdict)
-
     print("save warband info")
+
+    print("save warband rulelist")
+    datadict["Warband"]["rulelist"]={} # change in a dict before setting dict values
+    r = 1
+    for rule in wbid.rulelist:
+        ruleref = "Rule" + str(r) # to make sure it has a unique key
+        print(ruleref)
+        ruledict = rule.get_dict(ref=ruleref)
+        datadict["Warband"]["rulelist"].update(ruledict)
+        r += 1
+
     invdict = wbid.inventory.get_dict(ref="inventory")
     datadict["Warband"].update(invdict) # add new inventory dict to warband, practically replacing original value of inventory
 

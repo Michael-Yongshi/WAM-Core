@@ -1,54 +1,49 @@
 {
     "Warband": {
-        "key": "<hierarchy.Warband object at 0x000001AC978D7400>",
+        "key": "<hierarchy.Warband object at 0x000001B2044A2640>",
         "name": "Uthluan Wyrdbreakers",
         "race": "High Elves",
-        "specialrules": [
-            "Excellent Sight",
-            "Haughty",
-            "Honourable",
-            "The Old Ways",
-            "Resolve"
-        ],
+        "rulelist": {
+            "Rule1": {
+                "key": "<components.Rule object at 0x000001B2042A7940>",
+                "name": "Excellent Sight",
+                "description": "Elves have eyesight unmatched by mere humans. Elves spot Hidden enemies from two times as far away as other warriors (ie, twice their Initiative value in inches)."
+            },
+            "Rule2": {
+                "key": "<components.Rule object at 0x000001B2042A78E0>",
+                "name": "Haughty",
+                "description": "The High Elves are a very proud and noble race. A High Elf Warband may never include hired swords that are not of High Elven blood, nor can they use any equipment of Dwarf origin. This includes Gromril weapons and armour."
+            },
+            "Rule3": {
+                "key": "<components.Rule object at 0x000001B2042DEE20>",
+                "name": "Honourable",
+                "description": "High Elves can never use poison or drugs of any kind no matter what the circumstance."
+            },
+            "Rule4": {
+                "key": "<components.Rule object at 0x000001B2044967C0>",
+                "name": "The Old Ways",
+                "description": "The High Elves may never use black powder weapons of any sort. This goes against their ancestors and the traditions of the Old Ways."
+            },
+            "Rule5": {
+                "key": "<components.Rule object at 0x000001B2044968E0>",
+                "name": "Resolve",
+                "description": "The High Elves have been fighting the Dark Elves for countless centuries. When fighting their dark kin the High Elves are driven by unwavering determination. They are considered to have a Leadership of 10 when taking Rout Tests against the Dark Elves. In addition, High Elves can never choose to voluntarily Rout as they must stop their evil kin at any cost."
+            }
+        },
         "inventory": {
-            "key": "<components.Inventory object at 0x000001AC97A8C550>",
+            "key": "<components.Inventory object at 0x000001B2044A26D0>",
             "gold": 500,
             "wyrd": 0,
-            "itemlist": {
-                "Item1": {
-                    "key": "<components.Item object at 0x000001AC9790EE20>",
-                    "name": "Mordheim Map",
-                    "category": "Miscellaneous",
-                    "desc": null,
-                    "skill": "<components.Skill object at 0x000001AC97B22100>",
-                    "abilitylist": {
-                        "Ability1": {
-                            "key": "<components.Ability object at 0x000001AC978D78E0>",
-                            "name": "Search Environment",
-                            "description": null
-                        }
-                    },
-                    "price": 0
-                },
-                "Item2": {
-                    "key": "<components.Item object at 0x000001AC97A316A0>",
-                    "name": "Elven Wine",
-                    "category": "Miscellaneous",
-                    "desc": null,
-                    "skill": "<components.Skill object at 0x000001AC97A8C5E0>",
-                    "abilitylist": {},
-                    "price": 0
-                }
-            }
+            "itemlist": {}
         },
         "herolist": {
             "Hero1": {
-                "key": "<hierarchy.Hero object at 0x000001AC97A8CF70>",
+                "key": "<hierarchy.Hero object at 0x000001B2044A2A00>",
                 "name": "Hero1",
                 "race": "High Elves",
                 "category": "Loremaster",
                 "skill": {
-                    "key": "<components.Skill object at 0x000001AC97A8C6A0>",
+                    "key": "<components.Skill object at 0x000001B2044A2730>",
                     "movement": 5,
                     "weapon": 4,
                     "ballistic": 4,
@@ -62,35 +57,30 @@
                 },
                 "abilitylist": {
                     "Ability1": {
-                        "key": "<components.Ability object at 0x000001AC97A8C700>",
-                        "name": "Excellent Sight",
-                        "description": null
-                    },
-                    "Ability2": {
-                        "key": "<components.Ability object at 0x000001AC97A8C970>",
+                        "key": "<components.Ability object at 0x000001B2044A2760>",
                         "name": "High Elven Magic",
                         "description": null
                     }
                 },
                 "inventory": {
-                    "key": "<components.Inventory object at 0x000001AC97A8CEE0>",
+                    "key": "<components.Inventory object at 0x000001B2044A2970>",
                     "gold": 0,
                     "wyrd": 0,
                     "itemlist": {
                         "Item1": {
-                            "key": "<components.Item object at 0x000001AC97A8CE50>",
+                            "key": "<components.Item object at 0x000001B2044A28B0>",
                             "name": "Mage staff",
                             "category": "Melee Weapon",
                             "desc": "Mage Staves of Hoeth are forged from the finest Ithilmar, and are works of art that are truly beautiful to behold. They are usually decorated with gems and other precious materials. Only a Loremaster may use a Mage Staff.",
-                            "skill": "<components.Skill object at 0x000001AC97A8CBE0>",
+                            "skill": "<components.Skill object at 0x000001B2044A27C0>",
                             "abilitylist": {
                                 "Ability1": {
-                                    "key": "<components.Ability object at 0x000001AC97A8CCA0>",
+                                    "key": "<components.Ability object at 0x000001B2044A27F0>",
                                     "name": "Concussion",
                                     "description": "Stunned also happens on a roll of 2 on the injury roll."
                                 },
                                 "Ability2": {
-                                    "key": "<components.Ability object at 0x000001AC97A8CDF0>",
+                                    "key": "<components.Ability object at 0x000001B2044A2850>",
                                     "name": "One or Two handed",
                                     "description": "Strength bonus is 1 if used onehanded, 2 if used two handed."
                                 }
@@ -98,14 +88,14 @@
                             "price": 20
                         },
                         "Item2": {
-                            "key": "<components.Item object at 0x000001AC97A8CEB0>",
+                            "key": "<components.Item object at 0x000001B2044A2940>",
                             "name": "Dagger",
                             "category": "Melee Weapon",
                             "desc": null,
-                            "skill": "<components.Skill object at 0x000001AC97A8CF10>",
+                            "skill": "<components.Skill object at 0x000001B2044A29A0>",
                             "abilitylist": {
                                 "Ability1": {
-                                    "key": "<components.Ability object at 0x000001AC97A8CE80>",
+                                    "key": "<components.Ability object at 0x000001B2044A28E0>",
                                     "name": "Trouble With Normal Clothing",
                                     "description": "For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save."
                                 }
@@ -113,15 +103,16 @@
                             "price": 0
                         }
                     }
-                }
+                },
+                "experience": "20"
             },
             "Hero2": {
-                "key": "<hierarchy.Hero object at 0x000001AC97A867C0>",
+                "key": "<hierarchy.Hero object at 0x000001B2044A2CA0>",
                 "name": "Hero2",
                 "race": "High Elves",
                 "category": "Swordwarden",
                 "skill": {
-                    "key": "<components.Skill object at 0x000001AC97A8CFA0>",
+                    "key": "<components.Skill object at 0x000001B2044A2A30>",
                     "movement": 5,
                     "weapon": 4,
                     "ballistic": 4,
@@ -135,54 +126,55 @@
                 },
                 "abilitylist": {
                     "Ability1": {
-                        "key": "<components.Ability object at 0x000001AC97A8CFD0>",
+                        "key": "<components.Ability object at 0x000001B2044A2A60>",
                         "name": "Excellent Sight",
                         "description": null
                     }
                 },
                 "inventory": {
-                    "key": "<components.Inventory object at 0x000001AC97A86730>",
+                    "key": "<components.Inventory object at 0x000001B2044A2C40>",
                     "gold": 0,
                     "wyrd": 0,
                     "itemlist": {
                         "Item1": {
-                            "key": "<components.Item object at 0x000001AC97A86CD0>",
+                            "key": "<components.Item object at 0x000001B2044A2AC0>",
                             "name": "Sword",
                             "category": "Melee Weapon",
                             "desc": null,
-                            "skill": "<components.Skill object at 0x000001AC97A86D60>",
+                            "skill": "<components.Skill object at 0x000001B2044A2AF0>",
                             "abilitylist": {},
                             "price": 0
                         },
                         "Item2": {
-                            "key": "<components.Item object at 0x000001AC97A86580>",
+                            "key": "<components.Item object at 0x000001B2044A2B20>",
                             "name": "Dagger",
                             "category": "Melee Weapon",
                             "desc": null,
-                            "skill": "<components.Skill object at 0x000001AC97A86670>",
+                            "skill": "<components.Skill object at 0x000001B2044A2B50>",
                             "abilitylist": {},
                             "price": 0
                         },
                         "Item3": {
-                            "key": "<components.Item object at 0x000001AC97A86610>",
+                            "key": "<components.Item object at 0x000001B2044A2B80>",
                             "name": "Shield",
                             "category": "Armour",
                             "desc": null,
-                            "skill": "<components.Skill object at 0x000001AC97A86700>",
+                            "skill": "<components.Skill object at 0x000001B2044A2BB0>",
                             "abilitylist": {},
                             "price": 0
                         },
                         "Item4": {
-                            "key": "<components.Item object at 0x000001AC97A86790>",
+                            "key": "<components.Item object at 0x000001B2044A2BE0>",
                             "name": "Light Armour",
                             "category": "Armour",
                             "desc": null,
-                            "skill": "<components.Skill object at 0x000001AC97A866A0>",
+                            "skill": "<components.Skill object at 0x000001B2044A2C10>",
                             "abilitylist": {},
                             "price": 0
                         }
                     }
-                }
+                },
+                "experience": "20"
             }
         },
         "squadlist": {
@@ -191,12 +183,12 @@
                 "category": "Seaguard",
                 "henchmanlist": {
                     "Henchman1": {
-                        "key": "<hierarchy.Henchman object at 0x000001AC97A86A90>",
+                        "key": "<hierarchy.Henchman object at 0x000001B2044A2E20>",
                         "name": "Spearguard1",
                         "race": "High Elves",
                         "category": "Seaguard",
                         "skill": {
-                            "key": "<components.Skill object at 0x000001AC97A868B0>",
+                            "key": "<components.Skill object at 0x000001B2044A2CD0>",
                             "movement": 5,
                             "weapon": 4,
                             "ballistic": 4,
@@ -210,35 +202,36 @@
                         },
                         "abilitylist": {
                             "Ability1": {
-                                "key": "<components.Ability object at 0x000001AC97A86940>",
+                                "key": "<components.Ability object at 0x000001B2044A2D00>",
                                 "name": "Excellent Sight",
                                 "description": null
                             }
                         },
                         "inventory": {
-                            "key": "<components.Inventory object at 0x000001AC97A869A0>",
+                            "key": "<components.Inventory object at 0x000001B2044A2DC0>",
                             "gold": 0,
                             "wyrd": 0,
                             "itemlist": {
                                 "Item1": {
-                                    "key": "<components.Item object at 0x000001AC97A86970>",
+                                    "key": "<components.Item object at 0x000001B2044A2D60>",
                                     "name": "Spear",
                                     "category": "Melee Weapon",
                                     "desc": null,
-                                    "skill": "<components.Skill object at 0x000001AC97A86A00>",
+                                    "skill": "<components.Skill object at 0x000001B2044A2D90>",
                                     "abilitylist": {},
                                     "price": 0
                                 }
                             }
-                        }
+                        },
+                        "experience": "0"
                     },
                     "Henchman2": {
-                        "key": "<hierarchy.Henchman object at 0x000001AC97A86850>",
+                        "key": "<hierarchy.Henchman object at 0x000001B2044A2FA0>",
                         "name": "Spearguard2",
                         "race": "High Elves",
                         "category": "Seaguard",
                         "skill": {
-                            "key": "<components.Skill object at 0x000001AC97A86A60>",
+                            "key": "<components.Skill object at 0x000001B2044A2E50>",
                             "movement": 5,
                             "weapon": 4,
                             "ballistic": 4,
@@ -252,27 +245,28 @@
                         },
                         "abilitylist": {
                             "Ability1": {
-                                "key": "<components.Ability object at 0x000001AC97A86B20>",
+                                "key": "<components.Ability object at 0x000001B2044A2E80>",
                                 "name": "Excellent Sight",
                                 "description": null
                             }
                         },
                         "inventory": {
-                            "key": "<components.Inventory object at 0x000001AC97A86B80>",
+                            "key": "<components.Inventory object at 0x000001B2044A2F40>",
                             "gold": 0,
                             "wyrd": 0,
                             "itemlist": {
                                 "Item1": {
-                                    "key": "<components.Item object at 0x000001AC97A86B50>",
+                                    "key": "<components.Item object at 0x000001B2044A2EE0>",
                                     "name": "Spear",
                                     "category": "Melee Weapon",
                                     "desc": null,
-                                    "skill": "<components.Skill object at 0x000001AC97A86BB0>",
+                                    "skill": "<components.Skill object at 0x000001B2044A2F10>",
                                     "abilitylist": {},
                                     "price": 0
                                 }
                             }
-                        }
+                        },
+                        "experience": "0"
                     }
                 }
             },
@@ -281,12 +275,12 @@
                 "category": "Seaguard",
                 "henchmanlist": {
                     "Henchman1": {
-                        "key": "<hierarchy.Henchman object at 0x000001AC97ABE1F0>",
+                        "key": "<hierarchy.Henchman object at 0x000001B2044AB1C0>",
                         "name": "Bladeguard1",
                         "race": "High Elves",
                         "category": "Seaguard",
                         "skill": {
-                            "key": "<components.Skill object at 0x000001AC97ABE0A0>",
+                            "key": "<components.Skill object at 0x000001B2044AB070>",
                             "movement": 5,
                             "weapon": 4,
                             "ballistic": 4,
@@ -300,27 +294,28 @@
                         },
                         "abilitylist": {
                             "Ability1": {
-                                "key": "<components.Ability object at 0x000001AC97ABE0D0>",
+                                "key": "<components.Ability object at 0x000001B2044AB0A0>",
                                 "name": "Excellent Sight",
                                 "description": null
                             }
                         },
                         "inventory": {
-                            "key": "<components.Inventory object at 0x000001AC97ABE190>",
+                            "key": "<components.Inventory object at 0x000001B2044AB160>",
                             "gold": 0,
                             "wyrd": 0,
                             "itemlist": {
                                 "Item1": {
-                                    "key": "<components.Item object at 0x000001AC97ABE130>",
+                                    "key": "<components.Item object at 0x000001B2044AB100>",
                                     "name": "Sword",
                                     "category": "Melee Weapon",
                                     "desc": null,
-                                    "skill": "<components.Skill object at 0x000001AC97ABE160>",
+                                    "skill": "<components.Skill object at 0x000001B2044AB130>",
                                     "abilitylist": {},
                                     "price": 0
                                 }
                             }
-                        }
+                        },
+                        "experience": "0"
                     }
                 }
             },
@@ -329,12 +324,12 @@
                 "category": "Cadet",
                 "henchmanlist": {
                     "Henchman1": {
-                        "key": "<hierarchy.Henchman object at 0x000001AC97ABE3D0>",
+                        "key": "<hierarchy.Henchman object at 0x000001B2044AB3A0>",
                         "name": "Cadet1",
                         "race": "High Elves",
                         "category": "Cadet",
                         "skill": {
-                            "key": "<components.Skill object at 0x000001AC97ABE280>",
+                            "key": "<components.Skill object at 0x000001B2044AB250>",
                             "movement": 5,
                             "weapon": 3,
                             "ballistic": 3,
@@ -348,27 +343,28 @@
                         },
                         "abilitylist": {
                             "Ability1": {
-                                "key": "<components.Ability object at 0x000001AC97ABE2B0>",
+                                "key": "<components.Ability object at 0x000001B2044AB280>",
                                 "name": "Excellent Sight",
                                 "description": null
                             }
                         },
                         "inventory": {
-                            "key": "<components.Inventory object at 0x000001AC97ABE370>",
+                            "key": "<components.Inventory object at 0x000001B2044AB340>",
                             "gold": 0,
                             "wyrd": 0,
                             "itemlist": {
                                 "Item1": {
-                                    "key": "<components.Item object at 0x000001AC97ABE310>",
+                                    "key": "<components.Item object at 0x000001B2044AB2E0>",
                                     "name": "Longbow",
                                     "category": "Missile Weapon",
                                     "desc": null,
-                                    "skill": "<components.Skill object at 0x000001AC97ABE340>",
+                                    "skill": "<components.Skill object at 0x000001B2044AB310>",
                                     "abilitylist": {},
                                     "price": 0
                                 }
                             }
-                        }
+                        },
+                        "experience": "0"
                     }
                 }
             }

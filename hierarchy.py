@@ -2,10 +2,10 @@ from components import * # reference to the script with all component classes
 
 
 class Warband(object):
-    def __init__(self, name, race, rules=[], inventory=None, herolist=[], squadlist=[]):
+    def __init__(self, name, race, rulelist=[], inventory=None, herolist=[], squadlist=[]):
         self.name = name
         self.race = race
-        self.rules = rules
+        self.rulelist = rulelist
         self.inventory = inventory
         self.herolist = herolist
         self.squadlist = squadlist
@@ -16,7 +16,7 @@ class Warband(object):
             'key': str(self),
             'name': self.name,
             'race': self.race,
-            'specialrules': self.rules,
+            'rulelist': str(self.rulelist),
             'inventory': str(self.inventory),
             'herolist': str(self.herolist), 
             'squadlist': str(self.squadlist)
@@ -108,7 +108,8 @@ class Hero(Character):
             'category': self.category,
             'skill': str(self.skill),
             'abilitylist': str(self.abilitylist),
-            'inventory': str(self.inventory)
+            'inventory': str(self.inventory),
+            'experience': str(self.experience)
         }
         return data
 
@@ -153,7 +154,8 @@ class Henchman(Character):
             'category': self.category,
             'skill': str(self.skill),
             'abilitylist': str(self.abilitylist),
-            'inventory': str(self.inventory)
+            'inventory': str(self.inventory),
+            'experience': str(self.experience)
         }
         return data
 

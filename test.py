@@ -117,6 +117,12 @@ def test_makeWarband():
                             price=10
                             ),
                         Item(
+                            name="Longbow", 
+                            category="Missile Weapon",
+                            abilitylist=[Ability(name="Range", description="A bow with a range of 30 inch.")],
+                            price=15
+                            ),
+                        Item(
                             name="Dagger", 
                             category="Melee Weapon",
                             abilitylist=[Ability(name="Trouble With Normal Clothing", description="For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save.")],
@@ -140,6 +146,12 @@ def test_makeWarband():
                             category="Melee Weapon",
                             abilitylist=[Ability(name="First Strike", description="A spear allows to strike first even when charged, or evens the odds against other First Strike enabled characters.")],
                             price=10
+                            ),                        
+                        Item(
+                            name="Longbow", 
+                            category="Missile Weapon",
+                            abilitylist=[Ability(name="Range", description="A bow with a range of 30 inch.")],
+                            price=15
                             ),
                         Item(
                             name="Dagger", 
@@ -167,10 +179,17 @@ def test_makeWarband():
                     ],
                     inventory=Inventory(itemlist=[
                         Item(
-                            name="Sword", 
+                            name="Greatsword", 
                             category="Melee Weapon",
-                            abilitylist=[Ability(name="Parry", description="A sword can parry a single attack.")],
-                            price=10
+                            skill=Skill(0,0,0,2,0,0,0,0,0,0),
+                            abilitylist=[Ability(name="Last Strike", description="A greatsword will always strike last even when charging, except against other Last Strike enabled characters.")],
+                            price=15
+                            ),                        
+                        Item(
+                            name="Longbow", 
+                            category="Missile Weapon",
+                            abilitylist=[Ability(name="Range", description="A bow with a range of 30 inch.")],
+                            price=15
                             ),
                         Item(
                             name="Dagger", 
@@ -393,7 +412,34 @@ def test_makeWarband():
     print("save completed")
 
     # Get warband total price / cost / replacement costs
-    print(wbid.get_warbandprice())
+    wbinvprice = wbid.inventory.get_price()
+    print(wbinvprice)
+
+    herolistprice = 0
+    for hero in wbid.herolist:
+        heroprice = hero.price
+        for item in hero.inventory.itemlist:
+            heroprice += item.price
+        herolistprice += heroprice
+    print(herolistprice)
+
+    # get squad prices
+    squadlistprice = 0
+    for squad in wbid.squadlist:
+        squadsize = squad.get_totalhenchman()
+        
+        henchmanprice = squad.henchmanlist[0].price # get price of a single henchman type
+        for item in squad.henchmanlist[0].inventory.itemlist:
+            henchmanprice += item.price # get price of a single item of a henchman in this squad
+
+        squadprice = henchmanprice * squadsize # multiply the price for a henchman and items with the number of henchman in the squad
+
+        squadlistprice += squadprice # increment total squad cost with this squads prices
+
+    price = wbinvprice + herolistprice + squadlistprice
+    print(price)
+
+    # print(wbid.get_warbandprice())
 
     # save to file
     save_json(data=datadict, jsonfile=filepath)

@@ -37,10 +37,15 @@ class Warband(object):
         # get squad prices
         squadlistprice = 0
         for squad in self.squadlist:
-            squadprice = squad.get_totalhenchman() * squad.henchmanlist[0].price
+            squadsize = len(squad.henchmanlist)
+            print(len(squad.henchmanlist))
+            henchmanprice = squad.henchmanlist[0].price # get price of a single henchman type
             for item in squad.henchmanlist[0].inventory.itemlist:
-                squadprice += item.price
-            squadlistprice += squadprice
+                henchmanprice += item.price # get price of a single item of a henchman in this squad
+
+            squadprice = int(squadprice) * int(squadsize) # multiply the price for a henchman and items with the number of henchman in the squad
+
+            squadlistprice += squadprice # increment total squad cost with this squads prices
 
         price = wbinvprice + herolistprice + squadlistprice
         return price

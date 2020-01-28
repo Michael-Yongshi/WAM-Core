@@ -392,6 +392,9 @@ def test_makeWarband():
 
     print("save completed")
 
+    # Get warband total price / cost / replacement costs
+    print(wbid.get_warbandprice())
+
     # save to file
     save_json(data=datadict, jsonfile=filepath)
 

@@ -27,13 +27,6 @@ class Inventory(object):
         self.wyrd = wyrd
         self.itemlist = itemlist if itemlist else []
 
-    def add_item(self, itemname):
-        itemlis.append(itemname)
-
-    def get_totalitems(self):
-        itemlist = self.itemlist if self.itemlist else None
-        return itemlist
-
     def get_dict(self, ref):  
         data = {}
         data[str(ref)] = {
@@ -43,6 +36,20 @@ class Inventory(object):
             'itemlist': str(self.itemlist)
         }
         return data
+
+    def get_price(self):
+        invprice = 0
+        for item in self.itemlist:
+            itemprice = item.price
+            invprice += itemprice
+        return invprice
+        
+    def add_item(self, itemname):
+        itemlist.append(itemname)
+
+    def get_totalitems(self):
+        itemlist = self.itemlist if self.itemlist else None
+        return itemlist
 
 
 class Item(object):

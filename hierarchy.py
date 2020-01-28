@@ -23,6 +23,28 @@ class Warband(object):
         }
         return data
 
+    def get_warbandprice(self):
+        # get wb item prices
+        wbinvprice = self.inventory.get_price()
+
+        herolistprice = 0
+        for hero in self.herolist:
+            heroprice = hero.price
+            for item in hero.inventory.itemlist:
+                heroprice += item.price
+            herolistprice += heroprice
+
+        # get squad prices
+        squadlistprice = 0
+        for squad in self.squadlist:
+            squadprice = squad.get_totalhenchman() * squad.henchmanlist[0].price
+            for item in squad.henchmanlist[0].inventory.itemlist:
+                squadprice += item.price
+            squadlistprice += squadprice
+
+        price = wbinvprice + herolistprice + squadlistprice
+        return price
+
     def save_warband(self):
         NotImplemented
 
@@ -85,7 +107,7 @@ class Squad(object):
         
 
 class Character(object):
-    def __init__(self, name, race, category, skill, abilitylist=[], inventory=None, experience=0):
+    def __init__(self, name, race, category, skill, abilitylist=[], inventory=None, experience=0, price=0):
         self.name = name
         self.race = race
         self.category = category
@@ -93,11 +115,12 @@ class Character(object):
         self.abilitylist = abilitylist
         self.inventory = inventory
         self.experience = experience
+        self.price = price
 
 
 class Hero(Character):
-    def __init__(self, name, race, category, skill, abilitylist=[], inventory=None, experience=0):
-        super().__init__(name, race, category, skill, abilitylist, inventory, experience)
+    def __init__(self, name, race, category, skill, abilitylist=[], inventory=None, experience=0, price=0):
+        super().__init__(name, race, category, skill, abilitylist, inventory, experience, price)
 
     def get_dict(self, ref):  
         data = {}
@@ -109,7 +132,8 @@ class Hero(Character):
             'skill': str(self.skill),
             'abilitylist': str(self.abilitylist),
             'inventory': str(self.inventory),
-            'experience': str(self.experience)
+            'experience': self.experience,
+            'price': self.price
         }
         return data
 
@@ -142,8 +166,8 @@ class Henchman(Character):
     """Henchman is a class with no mutation methods as these are 
     invoked using the Squad class to prevent henchmen 
     to deviate from their peers"""
-    def __init__(self, name, race, category, skill, abilitylist=[], inventory=None, experience=0):
-        super().__init__(name, race, category, skill, abilitylist, inventory, experience)
+    def __init__(self, name, race, category, skill, abilitylist=[], inventory=None, experience=0, price=0):
+        super().__init__(name, race, category, skill, abilitylist, inventory, experience, price)
 
     def get_dict(self, ref):  
         data = {}
@@ -155,7 +179,8 @@ class Henchman(Character):
             'skill': str(self.skill),
             'abilitylist': str(self.abilitylist),
             'inventory': str(self.inventory),
-            'experience': str(self.experience)
+            'experience': str(self.experience),
+            'price': self.price
         }
         return data
 

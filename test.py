@@ -40,10 +40,10 @@ def test_makeWarband():
                 Item(
                     name="Mage staff", 
                     category="Melee Weapon",
-                    skill=Skill(0,0,0,2,0,0,0,0,0,0),
+                    skill=Skill(0,0,0,1,0,0,0,0,0,0),
                     abilitylist=[
                         Ability(name="Concussion", description="Stunned also happens on a roll of 2 on the injury roll."),
-                        Ability(name="One or Two handed", description="Strength bonus is 1 if used onehanded, 2 if used two handed.")
+                        Ability(name="One or Two handed", description="Strength bonus is 1 if used twohanded, no bonus if used one handed.")
                         ],
                     desc="Mage Staves of Hoeth are forged from the finest Ithilmar, and are works of art that are truly beautiful to behold. They are usually decorated with gems and other precious materials. Only a Loremaster may use a Mage Staff.",
                     price=20
@@ -51,9 +51,7 @@ def test_makeWarband():
                 Item(
                     name="Dagger", 
                     category="Melee Weapon",
-                    abilitylist=[
-                        Ability(name="Trouble With Normal Clothing", description="For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save.")
-                        ],
+                    abilitylist=[Ability(name="Trouble With Normal Clothing", description="For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save.")],
                     price=0
                     )
                 ]),
@@ -63,26 +61,34 @@ def test_makeWarband():
             name="Hero2", 
             race="High Elves", 
             category="Swordwarden", 
-            skill=Skill(5,4,4,3,3,1,6,1,9,0), 
+            skill=Skill(5,5,4,3,3,1,6,1,8,0), 
             abilitylist=[
                 Ability("Excellent Sight"), 
                 ], 
             inventory=Inventory(itemlist=[
                 Item(
                     name="Sword", 
-                    category="Melee Weapon"
+                    category="Melee Weapon",
+                    abilitylist=[Ability(name="Parry", description="A sword can parry a single attack.")],
+                    price=10
                     ), 
                 Item(
                     name="Dagger", 
-                    category="Melee Weapon"
-                    ), 
+                    category="Melee Weapon",
+                    abilitylist=[Ability(name="Trouble With Normal Clothing", description="For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save.")],
+                    price=0
+                    ),
                 Item(
                     name="Shield", 
-                    category="Armour"
+                    category="Armour",
+                    skill=Skill(0,0,0,0,0,0,0,0,0,1),
+                    price=5
                     ), 
                 Item(
                     name="Light Armour", 
-                    category="Armour"
+                    category="Armour",
+                    skill=Skill(0,0,0,0,0,0,0,0,0,1),
+                    price=20
                     )
                 ]),
             experience=11
@@ -99,12 +105,20 @@ def test_makeWarband():
                     category="Seaguard", 
                     skill=Skill(5,4,4,3,3,1,6,1,8,0), 
                     abilitylist=[
-                        Ability("Excellent Sight"), 
+                        # Ability("Excellent Sight"), 
                     ],
                     inventory=Inventory(itemlist=[
                         Item(
                             name="Spear", 
-                            category="Melee Weapon"
+                            category="Melee Weapon",
+                            abilitylist=[Ability(name="First Strike", description="A spear allows to strike first even when charged, or evens the odds against other First Strike enabled characters.")],
+                            price=10
+                            ),
+                        Item(
+                            name="Dagger", 
+                            category="Melee Weapon",
+                            abilitylist=[Ability(name="Trouble With Normal Clothing", description="For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save.")],
+                            price=0
                             )
                         ]),
                     experience=0
@@ -115,12 +129,20 @@ def test_makeWarband():
                     category="Seaguard", 
                     skill=Skill(5,4,4,3,3,1,6,1,8,0), 
                     abilitylist=[
-                        Ability("Excellent Sight"), 
+                        # Ability("Excellent Sight"), 
                     ],
                     inventory=Inventory(itemlist=[
                         Item(
                             name="Spear", 
-                            category="Melee Weapon"
+                            category="Melee Weapon",
+                            abilitylist=[Ability(name="First Strike", description="A spear allows to strike first even when charged, or evens the odds against other First Strike enabled characters.")],
+                            price=10
+                            ),
+                        Item(
+                            name="Dagger", 
+                            category="Melee Weapon",
+                            abilitylist=[Ability(name="Trouble With Normal Clothing", description="For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save.")],
+                            price=0
                             )
                         ]),
                     experience=0
@@ -137,12 +159,20 @@ def test_makeWarband():
                     category="Seaguard", 
                     skill=Skill(5,4,4,3,3,1,6,1,8,0), 
                     abilitylist=[
-                        Ability("Excellent Sight"), 
+                        # Ability("Excellent Sight"), 
                     ],
                     inventory=Inventory(itemlist=[
                         Item(
                             name="Sword", 
-                            category="Melee Weapon"
+                            category="Melee Weapon",
+                            abilitylist=[Ability(name="Parry", description="A sword can parry a single attack.")],
+                            price=10
+                            ),
+                        Item(
+                            name="Dagger", 
+                            category="Melee Weapon",
+                            abilitylist=[Ability(name="Trouble With Normal Clothing", description="For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save.")],
+                            price=0
                             )
                         ]),
                     experience=0
@@ -157,14 +187,22 @@ def test_makeWarband():
                     name="Cadet1", 
                     race="High Elves", 
                     category="Cadet", 
-                    skill=Skill(5,3,3,3,3,1,6,1,7,0), 
+                    skill=Skill(5,3,3,3,3,1,5,1,8,0), 
                     abilitylist=[
-                        Ability("Excellent Sight"), 
+                        # Ability("Excellent Sight"), 
                     ],
                     inventory=Inventory(itemlist=[
                         Item(
                             name="Longbow", 
-                            category="Missile Weapon"
+                            category="Missile Weapon",
+                            abilitylist=[Ability(name="Range", description="A bow with a range of 30 inch.")],
+                            price=15
+                            ),
+                        Item(
+                            name="Dagger", 
+                            category="Melee Weapon",
+                            abilitylist=[Ability(name="Trouble With Normal Clothing", description="For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save.")],
+                            price=0
                             )
                         ]),
                     experience=0

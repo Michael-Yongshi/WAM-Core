@@ -10,7 +10,7 @@ class Warband(object):
         self.herolist = herolist
         self.squadlist = squadlist
 
-    def get_dict(self, ref="Warband"):  
+    def to_dict(self, ref="Warband"):  
         data = {}
         data[str(ref)] = {
             'key': str(self),
@@ -60,7 +60,7 @@ class Squad(object):
         self.category = category
         self.henchmanlist = henchmanlist
 
-    def get_dict(self, ref):  
+    def to_dict(self, ref):  
         data = {}
         data[str(ref)] = {
             'name': self.name,
@@ -127,7 +127,7 @@ class Hero(Character):
     def __init__(self, name, race, category, skill, abilitylist=[], inventory=None, experience=0, price=0):
         super().__init__(name, race, category, skill, abilitylist, inventory, experience, price)
 
-    def get_dict(self, ref):  
+    def to_dict(self, ref):  
         data = {}
         data[str(ref)] = {
             'key': str(self),
@@ -174,7 +174,7 @@ class Henchman(Character):
     def __init__(self, name, race, category, skill, abilitylist=[], inventory=None, experience=0, price=0):
         super().__init__(name, race, category, skill, abilitylist, inventory, experience, price)
 
-    def get_dict(self, ref):  
+    def to_dict(self, ref):  
         data = {}
         data[str(ref)] = {
             'key': str(self),

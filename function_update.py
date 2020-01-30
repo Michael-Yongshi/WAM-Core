@@ -3,14 +3,16 @@ from hierarchy import * # reference to the hierarchic classes that are used,
 # like warband that consists of heroes and squads, that in turn reference to henchman
 
 
-def test_createWarband(wbname, wbrace):
-   
-    # create_warband
-    wbid = Warband(
-        name=wbname,
-        race=wbrace
-        )
-    # print(wbid)
+def test_updateWarband():
+    # Open cached warband
+    filepath = "database/saves/cache.json"
+    datadict = open_json(filepath)
+
+    wbname = datadict["Warband"]["name"]
+    wbrace = datadict["Warband"]["race"]
+    wbid = Warband(name=wbname, race=wbrace)
+    # wbdatadict = datadict["Warband"]
+    # wbid = Warband(**wbdatadict)
 
     # insert details of warband
     wbid.rulelist=[
@@ -21,6 +23,10 @@ def test_createWarband(wbname, wbrace):
             Rule(name="Resolve", description="The High Elves have been fighting the Dark Elves for countless centuries. When fighting their dark kin the High Elves are driven by unwavering determination. They are considered to have a Leadership of 10 when taking Rout Tests against the Dark Elves. In addition, High Elves can never choose to voluntarily Rout as they must stop their evil kin at any cost.")
             ]
 
+    # Get default starting gold
+    wbid.inventory.gold = 500
+
+    # Buying of heroes
     wbid.herolist = [
         Hero(
             name="Hero1", 
@@ -90,6 +96,8 @@ def test_createWarband(wbname, wbrace):
             price=50
             )
         ]
+        
+     # Buying of henchman (groups)
     wbid.squadlist = [
         Squad(
             name="Spearguard", 
@@ -230,9 +238,9 @@ def test_createWarband(wbname, wbrace):
             )
         ]
     
-    # Current gold minus cost of the warband
-    startgold = 500
-    wbid.inventory.gold = startgold - wbid.get_warbandprice()
+    # Resulting gold after update
+    currentgold = wbid.inventory.gold
+    wbid.inventory.gold = currentgold - wbid.get_warbandprice()
     # print(wbid.inventory.gold)
     
     # create warband dictionary
@@ -371,16 +379,13 @@ def test_createWarband(wbname, wbrace):
                     # print(abilityref)
                     abilitydict = ability.to_dict(ref=abilityref)
                     datadict["Warband"]["squadlist"][squadref]["henchmanlist"][henchmanref]["inventory"]["itemlist"][itemref]["abilitylist"].update(abilitydict)
-                    ia += 1
-
-    # Determine filepath of new save
-    filepath = "database/saves/" + wbid.name + ".json"     
-    # Save new warband to JSON file
-    save_json(data=datadict, jsonfile=filepath)
-    print("save completed")
+                    ia += 1 
+    
+    # Push save to JSON cache
+    # To do: write to global variable
+    save_json(data=datadict, jsonfile="database/saves/cache.json")
+    print("Update completed")
 
 
 if __name__ == "__main__":
-    wbname = "Uthluan Wyrdbreakers"
-    wbrace = "High Elves"
-    test_createWarband(wbname, wbrace)
+    test_updateWarband()

@@ -11,7 +11,7 @@ class Rule(object):
         self.name = name
         self.description = description
 
-    def get_dict(self, ref):  
+    def to_dict(self, ref):  
         data = {}
         data[str(ref)] = {
             'key': str(self),
@@ -27,7 +27,7 @@ class Inventory(object):
         self.wyrd = wyrd
         self.itemlist = itemlist if itemlist else []
 
-    def get_dict(self, ref):  
+    def to_dict(self, ref):  
         data = {}
         data[str(ref)] = {
             'key': str(self),
@@ -61,7 +61,7 @@ class Item(object):
         self.abilitylist = abilitylist if abilitylist else []
         self.price = price
 
-    def get_dict(self, ref):  
+    def to_dict(self, ref):  
         data = {}
         data[str(ref)] = {
             'key': str(self),
@@ -89,7 +89,7 @@ class Skill(object):
         self.leadership = leadership
         self.armoursave = armoursave
     
-    def get_dict(self, ref):  
+    def to_dict(self, ref):  
         data = {}
         data[str(ref)] = {
             'key': str(self),
@@ -113,7 +113,7 @@ class Ability(object):
         self.name = name
         self.description = description
 
-    def get_dict(self, ref):  
+    def to_dict(self, ref):  
         data = {}
         data[str(ref)] = {
             'key': str(self),

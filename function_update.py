@@ -238,10 +238,9 @@ def test_updateWarband():
             )
         ]
     
-    # Resulting gold after update
+    # Resolving gold expenses
     currentgold = wbid.inventory.gold
     wbid.inventory.gold = currentgold - wbid.get_warbandprice()
-    # print(wbid.inventory.gold)
 
     datadict = wbid.to_dict()
 

@@ -1,5 +1,5 @@
 from database.json import *
-from hierarchy import * # reference to the hierarchic classes that are used, 
+from class_hierarchy import * # reference to the hierarchic classes that are used, 
 # like warband that consists of heroes and squads, that in turn reference to henchman
 
 

@@ -48,7 +48,7 @@ class Warband(object):
         }
 
         return data
-
+    
     def get_warbandprice(self):
         wbinvprice = self.inventory.get_price()
 

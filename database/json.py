@@ -39,4 +39,3 @@ def append_json(data, datatype, jsonfile):
         loaddata = json.load(infile)
     loaddata[datatype]=data
     save_json(loaddata, jsonfile)
-

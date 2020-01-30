@@ -27,13 +27,20 @@ class Inventory(object):
         self.wyrd = wyrd
         self.itemlist = itemlist if itemlist else []
 
-    def to_dict(self, ref):  
+    def to_dict(self):  
+        itemlist = {}        
+        i = 1
+        for item in self.itemlist:
+            itemref = "Item" + str(i) # to make sure it has a unique key
+            itemlist.update(item.to_dict(ref=itemref))
+            i += 1
+
         data = {}
-        data[str(ref)] = {
+        data["Inventory"] = {
             'key': str(self),
             'gold': self.gold,
             'wyrd': self.wyrd,
-            'itemlist': str(self.itemlist)
+            'itemlist': itemlist
         }
         return data
 
@@ -62,6 +69,13 @@ class Item(object):
         self.price = price
 
     def to_dict(self, ref):  
+        abilitylist={}
+        a = 1
+        for ability in self.abilitylist:
+            abilityref = "Ability" + str(a) # to make sure it has a unique key
+            abilitylist.update(ability.to_dict(ref=abilityref))
+            a += 1        
+        
         data = {}
         data[str(ref)] = {
             'key': str(self),
@@ -69,7 +83,7 @@ class Item(object):
             'category': self.category,
             'desc': self.desc,
             'skill': str(self.skill),
-            'abilitylist': str(self.abilitylist),
+            'abilitylist': abilitylist,
             'price': self.price     
         }
         return data
@@ -89,9 +103,9 @@ class Skill(object):
         self.leadership = leadership
         self.armoursave = armoursave
     
-    def to_dict(self, ref):  
+    def to_dict(self):  
         data = {}
-        data[str(ref)] = {
+        data["Skill"] = {
             'key': str(self),
             'movement': self.movement,
             'weapon': self.weapon,

@@ -10,17 +10,43 @@ class Warband(object):
         self.herolist = herolist
         self.squadlist = squadlist
 
-    def to_dict(self, ref="Warband"):  
+    def to_dict(self):
+        # herolist = [hero.to_dict() for hero in self.herolist]
+
+        rulelist = {} # change in a dict before setting dict values
+        r = 1
+        for rule in self.rulelist:
+            ruleref = "Rule" + str(r) # to make sure it has a unique key
+            rulelist.update(rule.to_dict(ref=ruleref)) # adding this one to the list
+            r += 1 # iterate
+
+        inventory = self.inventory.to_dict()
+
+        herolist={} 
+        h = 1
+        for hero in self.herolist:
+            heroref = "Hero" + str(h)
+            herolist.update(hero.to_dict(ref=heroref))
+            h += 1
+
+        squadlist={} 
+        s = 1
+        for squad in self.squadlist:
+            squadref = "squad" + str(s) 
+            squadlist.update(squad.to_dict(ref=squadref))
+            s += 1
+
         data = {}
-        data[str(ref)] = {
+        data["Warband"] = {
             'key': str(self),
             'name': self.name,
             'race': self.race,
-            'rulelist': str(self.rulelist),
-            'inventory': str(self.inventory),
-            'herolist': str(self.herolist), 
-            'squadlist': str(self.squadlist)
+            'rulelist': rulelist,
+            'inventory': inventory,
+            'herolist': herolist, 
+            'squadlist': squadlist
         }
+
         return data
 
     def get_warbandprice(self):
@@ -50,9 +76,6 @@ class Warband(object):
         price = wbinvprice + herolistprice + squadlistprice
         return price
 
-    def save_warband(self):
-        NotImplemented
-
 
 class Squad(object):
     def __init__(self, name, category, experience=0, henchmanlist=[]):
@@ -61,11 +84,18 @@ class Squad(object):
         self.henchmanlist = henchmanlist
 
     def to_dict(self, ref):  
+        henchmanlist={} 
+        h = 1
+        for henchman in self.henchmanlist:
+            henchmanref = "Henchman" + str(h) 
+            henchmanlist.update(henchman.to_dict(ref=henchmanref))
+            h += 1
+        
         data = {}
         data[str(ref)] = {
             'name': self.name,
             'category': self.category,
-            'henchmanlist': str(self.henchmanlist)
+            'henchmanlist': henchmanlist
         }
         return data
 
@@ -128,15 +158,26 @@ class Hero(Character):
         super().__init__(name, race, category, skill, abilitylist, inventory, experience, price)
 
     def to_dict(self, ref):  
+        skill = self.skill.to_dict()
+        
+        abilitylist={} 
+        a = 1
+        for ability in self.abilitylist:
+            abilityref = "Ability" + str(a) 
+            abilitylist.update(ability.to_dict(ref=abilityref))
+            a += 1
+
+        inventory = self.inventory.to_dict()
+
         data = {}
         data[str(ref)] = {
             'key': str(self),
             'name': self.name,
             'race': self.race,
             'category': self.category,
-            'skill': str(self.skill),
-            'abilitylist': str(self.abilitylist),
-            'inventory': str(self.inventory),
+            'skill': skill,
+            'abilitylist': abilitylist,
+            'inventory': inventory,
             'experience': self.experience,
             'price': self.price
         }
@@ -175,15 +216,26 @@ class Henchman(Character):
         super().__init__(name, race, category, skill, abilitylist, inventory, experience, price)
 
     def to_dict(self, ref):  
+        skill = self.skill.to_dict()
+        
+        abilitylist={} 
+        a = 1
+        for ability in self.abilitylist:
+            abilityref = "Ability" + str(a) 
+            abilitylist.update(ability.to_dict(ref=abilityref))
+            a += 1
+
+        inventory = self.inventory.to_dict()
+        
         data = {}
         data[str(ref)] = {
             'key': str(self),
             'name': self.name,
             'race': self.race,
             'category': self.category,
-            'skill': str(self.skill),
-            'abilitylist': str(self.abilitylist),
-            'inventory': str(self.inventory),
+            'skill': skill,
+            'abilitylist': abilitylist,
+            'inventory': inventory,
             'experience': str(self.experience),
             'price': self.price
         }

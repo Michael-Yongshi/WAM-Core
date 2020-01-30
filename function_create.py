@@ -233,7 +233,7 @@ def test_createWarband(wbname, wbrace):
     # Current gold minus cost of the warband
     startgold = 500
     wbid.inventory.gold = startgold - wbid.get_warbandprice()
-    print(wbid.inventory.gold)
+    # print(wbid.inventory.gold)
     
     # create warband dictionary
     datadict = wbid.get_dict()
@@ -244,14 +244,14 @@ def test_createWarband(wbname, wbrace):
     datadict = {}
     wbdict = wbid.get_dict()
     datadict.update(wbdict)
-    print("save warband info")
+    # print("save warband info")
 
-    print("save warband rulelist")
+    # print("save warband rulelist")
     datadict["Warband"]["rulelist"]={} # change in a dict before setting dict values
     r = 1
     for rule in wbid.rulelist:
         ruleref = "Rule" + str(r) # to make sure it has a unique key
-        print(ruleref)
+        # print(ruleref)
         ruledict = rule.get_dict(ref=ruleref)
         datadict["Warband"]["rulelist"].update(ruledict)
         r += 1
@@ -259,32 +259,32 @@ def test_createWarband(wbname, wbrace):
     invdict = wbid.inventory.get_dict(ref="inventory")
     datadict["Warband"].update(invdict) # add new inventory dict to warband, practically replacing original value of inventory
 
-    print("save warband itemlist")
+    # print("save warband itemlist")
     datadict["Warband"]["inventory"]["itemlist"]={} # change in a dict before setting dict values
     i = 1
     for item in wbid.inventory.itemlist:
         itemref = "Item" + str(i) # to make sure it has a unique key
-        print(itemref)
+        # print(itemref)
         itemdict = item.get_dict(ref=itemref)
         datadict["Warband"]["inventory"]["itemlist"].update(itemdict)
         i += 1
 
-        print("save warband item abilities")
+        # print("save warband item abilities")
         datadict["Warband"]["inventory"]["itemlist"][itemref]["abilitylist"]={} # change in a dict before setting dict values
         ia = 1
         for ability in item.abilitylist:
             abilityref = "Ability" + str(ia) # to make sure it has a unique key
-            print(abilityref)
+            # print(abilityref)
             abilitydict = ability.get_dict(ref=abilityref)
             datadict["Warband"]["inventory"]["itemlist"][itemref]["abilitylist"].update(abilitydict)
             ia += 1
 
-    print("save herolist")
+    # print("save herolist")
     datadict["Warband"]["herolist"]={} # change in a dict before setting dict values
     h = 1
     for hero in wbid.herolist:
         heroref = "Hero" + str(h) # to make sure it has a unique key
-        print(heroref)
+        # print(heroref)
         herodict = hero.get_dict(ref=heroref)
         datadict["Warband"]["herolist"].update(herodict)
         h += 1
@@ -296,7 +296,7 @@ def test_createWarband(wbname, wbrace):
         a = 1
         for ability in hero.abilitylist:
             abilityref = "Ability" + str(a) # to make sure it has a unique key
-            print(abilityref)
+            # print(abilityref)
             abilitydict = ability.get_dict(ref=abilityref)
             datadict["Warband"]["herolist"][heroref]["abilitylist"].update(abilitydict)
             a += 1
@@ -308,7 +308,7 @@ def test_createWarband(wbname, wbrace):
         i = 1
         for item in hero.inventory.itemlist:
             itemref = "Item" + str(i) # to make sure it has a unique key
-            print(itemref)
+            # print(itemref)
             itemdict = item.get_dict(ref=itemref)
             datadict["Warband"]["herolist"][heroref]["inventory"]["itemlist"].update(itemdict)
             i += 1
@@ -317,7 +317,7 @@ def test_createWarband(wbname, wbrace):
             ia = 1
             for ability in item.abilitylist:
                 abilityref = "Ability" + str(ia) # to make sure it has a unique key
-                print(abilityref)
+                # print(abilityref)
                 abilitydict = ability.get_dict(ref=abilityref)
                 datadict["Warband"]["herolist"][heroref]["inventory"]["itemlist"][itemref]["abilitylist"].update(abilitydict)
                 ia += 1
@@ -326,7 +326,7 @@ def test_createWarband(wbname, wbrace):
     sq = 1
     for squad in wbid.squadlist:
         squadref = "squad" + str(sq) # to make sure it has a unique key
-        print(squadref)
+        # print(squadref)
         squaddict = squad.get_dict(ref=squadref)
         datadict["Warband"]["squadlist"].update(squaddict)
         sq += 1
@@ -335,7 +335,7 @@ def test_createWarband(wbname, wbrace):
         h = 1
         for henchman in squad.henchmanlist:
             henchmanref = "Henchman" + str(h) # to make sure it has a unique key
-            print(henchmanref)
+            # print(henchmanref)
             henchmandict = henchman.get_dict(ref=henchmanref)
             datadict["Warband"]["squadlist"][squadref]["henchmanlist"].update(henchmandict)
             h += 1
@@ -347,7 +347,7 @@ def test_createWarband(wbname, wbrace):
             a = 1
             for ability in henchman.abilitylist:
                 abilityref = "Ability" + str(a) # to make sure it has a unique key
-                print(abilityref)
+                # print(abilityref)
                 abilitydict = ability.get_dict(ref=abilityref)
                 datadict["Warband"]["squadlist"][squadref]["henchmanlist"][henchmanref]["abilitylist"].update(abilitydict)
                 a += 1
@@ -359,7 +359,7 @@ def test_createWarband(wbname, wbrace):
             i = 1
             for item in henchman.inventory.itemlist:
                 itemref = "Item" + str(i) # to make sure it has a unique key
-                print(itemref)
+                # print(itemref)
                 itemdict = item.get_dict(ref=itemref)
                 datadict["Warband"]["squadlist"][squadref]["henchmanlist"][henchmanref]["inventory"]["itemlist"].update(itemdict)
                 i += 1
@@ -368,7 +368,7 @@ def test_createWarband(wbname, wbrace):
                 ia = 1
                 for ability in item.abilitylist:
                     abilityref = "Ability" + str(ia) # to make sure it has a unique key
-                    print(abilityref)
+                    # print(abilityref)
                     abilitydict = ability.get_dict(ref=abilityref)
                     datadict["Warband"]["squadlist"][squadref]["henchmanlist"][henchmanref]["inventory"]["itemlist"][itemref]["abilitylist"].update(abilitydict)
                     ia += 1

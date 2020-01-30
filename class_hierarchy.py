@@ -38,7 +38,7 @@ class Warband(object):
 
         data = {}
         data["Warband"] = {
-            'key': str(self),
+            # 'key': str(self),
             'name': self.name,
             'race': self.race,
             'rulelist': rulelist,
@@ -93,6 +93,7 @@ class Squad(object):
         
         data = {}
         data[str(ref)] = {
+            # 'key': str(self),
             'name': self.name,
             'category': self.category,
             'henchmanlist': henchmanlist
@@ -171,7 +172,7 @@ class Hero(Character):
 
         data = {}
         data[str(ref)] = {
-            'key': str(self),
+            # 'key': str(self),
             'name': self.name,
             'race': self.race,
             'category': self.category,
@@ -229,7 +230,7 @@ class Henchman(Character):
         
         data = {}
         data[str(ref)] = {
-            'key': str(self),
+            # 'key': str(self),
             'name': self.name,
             'race': self.race,
             'category': self.category,

@@ -14,7 +14,7 @@ class Rule(object):
     def to_dict(self, ref):  
         data = {}
         data[str(ref)] = {
-            'key': str(self),
+            # 'key': str(self),
             'name': self.name,
             'description': self.description
         }
@@ -37,7 +37,7 @@ class Inventory(object):
 
         data = {}
         data["Inventory"] = {
-            'key': str(self),
+            # 'key': str(self),
             'gold': self.gold,
             'wyrd': self.wyrd,
             'itemlist': itemlist
@@ -78,7 +78,7 @@ class Item(object):
         
         data = {}
         data[str(ref)] = {
-            'key': str(self),
+            # 'key': str(self),
             'name': self.name,
             'category': self.category,
             'desc': self.desc,
@@ -106,7 +106,7 @@ class Skill(object):
     def to_dict(self):  
         data = {}
         data["Skill"] = {
-            'key': str(self),
+            # 'key': str(self),
             'movement': self.movement,
             'weapon': self.weapon,
             'ballistic': self.ballistic,
@@ -130,7 +130,7 @@ class Ability(object):
     def to_dict(self, ref):  
         data = {}
         data[str(ref)] = {
-            'key': str(self),
+            # 'key': str(self),
             'name': self.name,
             'description': self.description
         }

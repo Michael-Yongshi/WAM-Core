@@ -1,4 +1,4 @@
-from references.json import *
+from database.json import *
 from hierarchy import * # reference to the hierarchic classes that are used, 
 # like warband that consists of heroes and squads, that in turn reference to henchman
 
@@ -237,45 +237,12 @@ def test_makeWarband():
         ]
     
     # Load warband data
-    
-
-    
-    # show data
-    # print(f"Warband testing")
-    # print(f"Name: {wbid.name}")
-    # print(f"Race: {wbid.race}")
-    # print(f"Gold: {wbid.inventory.gold}")
-    # print(f"Wyrdstones: {wbid.inventory.wyrd}")
-    # print(f"Inventory:{wbid.inventory.itemlist}")
-    # totalheroes = len(wbid.herolist)
-    # totalhenchman = 0
-    # for s in wbid.squadlist:
-    #     totalhenchman = totalhenchman + s.get_totalhenchman()
-    # totalchars = totalheroes+totalhenchman
-    # printtotal = "Number of units: " + str(totalchars)
-    # print(printtotal)
-    # print_newline()
-
-    # for hero in wbid.herolist:
-    #     print(f"Name: {hero.name}")
-    #     print(f" category: {hero.category}")
-    #     print(f" skill: m:{hero.skill.movement}, w:{hero.skill.weapon}, b:{hero.skill.ballistic}, s:{hero.skill.strength}, t:{hero.skill.toughness}, a:{hero.skill.actions}, i:{hero.skill.initiative}, w:{hero.skill.wounds}, ld:{hero.skill.leadership}, as:{hero.skill.armoursave}")
-    #     print(f" Items: {hero.inventory.itemlist}")
-    # print("Squads:")
-    # print_newline
-
-    # for squad in wbid.squadlist:
-    #     print(f"Name: {squad.name}")
-    #     print(f" category: {squad.category}")
-    #     print(f" skill: m:{squad.henchmanlist[0].skill.movement}, w:{squad.henchmanlist[0].skill.weapon}, b:{squad.henchmanlist[0].skill.ballistic}, s:{squad.henchmanlist[0].skill.strength}, t:{squad.henchmanlist[0].skill.toughness}, a:{squad.henchmanlist[0].skill.actions}, i:{squad.henchmanlist[0].skill.initiative}, w:{squad.henchmanlist[0].skill.wounds}, ld:{squad.henchmanlist[0].skill.leadership}, as:{squad.henchmanlist[0].skill.armoursave}")
-    #     print(f" items: {squad.henchmanlist[0].inventory.itemlist}")
-    #     print(f" (total: {squad.get_totalhenchman()})")
 
 
     # Save warband to JSON file
         # Todo: generic get_dict function? get an object and create a dict from it
         # Todo: for saving get rid of the hechman and save their (redundant) info in the squad dict
-    filepath = "saves/" + wbid.name + ".json"
+    filepath = "database/saves/" + wbid.name + ".json"
 
     datadict = {}
     wbdict = wbid.get_dict()

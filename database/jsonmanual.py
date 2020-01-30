@@ -62,7 +62,7 @@ data['troops_ref'].append({
     'desc': 'Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships.'
 })
 
-with open('references/troops_ref.json', 'w') as outfile:
+with open('database/references/troops_ref.json', 'w') as outfile:
     json.dump(data, outfile, indent=4)
 
 
@@ -96,7 +96,7 @@ data['items_ref'].append({
     'desc': 'An elven cloak'
 })
 
-with open('references/items_ref.json', 'w') as outfile:
+with open('database/references/items_ref.json', 'w') as outfile:
     json.dump(data, outfile, indent=4)
 
 
@@ -129,7 +129,7 @@ data['abilities_ref'].append({
     'desc': 'Few can ever hope to match an Elf’s inhuman quickness and agility. An Elf with Fey Quickness can avoid melee or missile attacks on a roll of 6. If the Elf also has Step Aside or Dodge this will increase to a 4+ in the relevant area. For example, an Elf with Fey Quickness and Step Aside avoids melee attacks on a 4+ and missile attacks on a 6.'
 })
 
-with open('references/abilities_ref.json', 'w') as outfile:
+with open('database/references/abilities_ref.json', 'w') as outfile:
     json.dump(data, outfile, indent=4)
 
 
@@ -174,5 +174,5 @@ data['magic_ref'].append({
     'desc': 'A radiant white light emerges from the mage`s hand, banishing all fear and doubt in his comrades. Any friendly models within 8 inch of the Elven mage are immune to psychology and will never break from combat. This spell lasts until the mage suffers a wound. If the mage suffers a wound then the enchanted Elves become startled and uneasy. All models with 8 inch must take a Leadership test. If any fail, they are treated as if they had failed an All Alone test.'
 })
 
-with open('references/magic_ref.json', 'w') as outfile:
+with open('database/references/magic_ref.json', 'w') as outfile:
     json.dump(data, outfile, indent=4)

@@ -409,13 +409,15 @@ def test_makeWarband():
                     datadict["Warband"]["squadlist"][squadref]["henchmanlist"][henchmanref]["inventory"]["itemlist"][itemref]["abilitylist"].update(abilitydict)
                     ia += 1
 
+    # Get warband total price / cost / replacement costs
+    print(wbid.get_warbandprice())
+    currentgold = wbid.inventory.gold
+    datadict["Warband"]["inventory"]["gold"] = currentgold - wbid.get_warbandprice()
 
     # save to file
     save_json(data=datadict, jsonfile=filepath)
     print("save completed")
-    
-    # Get warband total price / cost / replacement costs
-    print(wbid.get_warbandprice())
+
 
 if __name__ == "__main__":
     test_makeWarband()

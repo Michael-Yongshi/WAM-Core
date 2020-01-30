@@ -12,6 +12,7 @@ def test_loadWarband(savename):
     datadict = open_json(filepath)
 
     # Push save to JSON cache
+    # To do: write to global variable
     save_json(data=datadict, jsonfile="database/saves/cache.json")
     print("Loading completed")
 

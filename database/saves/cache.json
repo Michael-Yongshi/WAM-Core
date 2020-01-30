@@ -1,0 +1,11 @@
+{
+    "Warband": {
+        "key": "<hierarchy.Warband object at 0x0000019BB2A97940>",
+        "name": "Uthluan Wyrdbreakers",
+        "race": "High Elves",
+        "rulelist": "[<components.Rule object at 0x0000019BB2A97400>, <components.Rule object at 0x0000019BB2AF1700>, <components.Rule object at 0x0000019BB488C550>, <components.Rule object at 0x0000019BB488C670>, <components.Rule object at 0x0000019BB488C610>]",
+        "inventory": "<components.Inventory object at 0x0000019BB2AB4E80>",
+        "herolist": "[<hierarchy.Hero object at 0x0000019BB4888CD0>, <hierarchy.Hero object at 0x0000019BB4888A90>]",
+        "squadlist": "[<hierarchy.Squad object at 0x0000019BB49FD4C0>, <hierarchy.Squad object at 0x0000019BB49FD820>, <hierarchy.Squad object at 0x0000019BB49FDAC0>]"
+    }
+}

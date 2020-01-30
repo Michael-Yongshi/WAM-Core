@@ -6,7 +6,7 @@ class Warband(object):
         self.name = name
         self.race = race
         self.rulelist = rulelist
-        self.inventory = inventory
+        self.inventory = inventory if inventory else Inventory()
         self.herolist = herolist
         self.squadlist = squadlist
 
@@ -24,28 +24,28 @@ class Warband(object):
         return data
 
     def get_warbandprice(self):
-        # get wb item prices
         wbinvprice = self.inventory.get_price()
 
         herolistprice = 0
-        for hero in self.herolist:
-            heroprice = hero.price
-            for item in hero.inventory.itemlist:
-                heroprice += item.price
-            herolistprice += heroprice
+        if self.herolist:
+            for hero in self.herolist:
+                heroprice = hero.price
+                for item in hero.inventory.itemlist:
+                    heroprice += item.price
+                herolistprice += heroprice
 
-        # get squad prices
         squadlistprice = 0
-        for squad in self.squadlist:
-            squadsize = squad.get_totalhenchman()
-            
-            henchmanprice = squad.henchmanlist[0].price # get price of a single henchman type
-            for item in squad.henchmanlist[0].inventory.itemlist:
-                henchmanprice += item.price # get price of a single item of a henchman in this squad
+        if self.squadlist:
+            for squad in self.squadlist:
+                squadsize = squad.get_totalhenchman()
+                
+                henchmanprice = squad.henchmanlist[0].price # get price of a single henchman type
+                for item in squad.henchmanlist[0].inventory.itemlist:
+                    henchmanprice += item.price # get price of a single item of a henchman in this squad
 
-            squadprice = henchmanprice * squadsize # multiply the price for a henchman and items with the number of henchman in the squad
+                squadprice = henchmanprice * squadsize # multiply the price for a henchman and items with the number of henchman in the squad
 
-            squadlistprice += squadprice # increment total squad cost with this squads prices
+                squadlistprice += squadprice # increment total squad cost with this squads prices
 
         price = wbinvprice + herolistprice + squadlistprice
         return price

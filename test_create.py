@@ -3,30 +3,24 @@ from hierarchy import * # reference to the hierarchic classes that are used,
 # like warband that consists of heroes and squads, that in turn reference to henchman
 
 
-def print_newline():
-    print(" ")
-
-
-# Test references
-
-
-# test warband classes
-def test_makeWarband():
-    # Create data
+def test_createWarband(wbname, wbrace):
+   
+    # create_warband
     wbid = Warband(
-        name="Uthluan Wyrdbreakers", 
-        race="High Elves", 
-        rulelist=[
+        name=wbname,
+        race=wbrace
+        )
+    # print(wbid)
+
+    # insert details of warband
+    wbid.rulelist=[
             Rule(name="Excellent Sight", description="Elves have eyesight unmatched by mere humans. Elves spot Hidden enemies from two times as far away as other warriors (ie, twice their Initiative value in inches)."), 
             Rule(name="Haughty", description="The High Elves are a very proud and noble race. A High Elf Warband may never include hired swords that are not of High Elven blood, nor can they use any equipment of Dwarf origin. This includes Gromril weapons and armour."),
             Rule(name="Honourable", description="High Elves can never use poison or drugs of any kind no matter what the circumstance."),
             Rule(name="The Old Ways", description="The High Elves may never use black powder weapons of any sort. This goes against their ancestors and the traditions of the Old Ways."),
             Rule(name="Resolve", description="The High Elves have been fighting the Dark Elves for countless centuries. When fighting their dark kin the High Elves are driven by unwavering determination. They are considered to have a Leadership of 10 when taking Rout Tests against the Dark Elves. In addition, High Elves can never choose to voluntarily Rout as they must stop their evil kin at any cost.")
-            ])
-    wbid.inventory = Inventory(gold=500, itemlist=[
-        # Item(name="Mordheim Map", category="Miscellaneous", abilitylist=[Ability(name="Search Environment")]),
-        # Item(name="Elven Wine", category="Miscellaneous")
-        ])
+            ]
+
     wbid.herolist = [
         Hero(
             name="Hero1", 
@@ -236,14 +230,17 @@ def test_makeWarband():
             )
         ]
     
-    # Load warband data
+    # Current gold minus cost of the warband
+    startgold = 500
+    wbid.inventory.gold = startgold - wbid.get_warbandprice()
+    print(wbid.inventory.gold)
+    
+    # create warband dictionary
+    datadict = wbid.get_dict()
 
-
-    # Save warband to JSON file
         # Todo: generic get_dict function? get an object and create a dict from it
         # Todo: for saving get rid of the hechman and save their (redundant) info in the squad dict
-    filepath = "database/saves/" + wbid.name + ".json"
-
+        # Todo: These elements should become methods of their resepctive class
     datadict = {}
     wbdict = wbid.get_dict()
     datadict.update(wbdict)
@@ -376,15 +373,14 @@ def test_makeWarband():
                     datadict["Warband"]["squadlist"][squadref]["henchmanlist"][henchmanref]["inventory"]["itemlist"][itemref]["abilitylist"].update(abilitydict)
                     ia += 1
 
-    # Get warband total price / cost / replacement costs
-    print(wbid.get_warbandprice())
-    currentgold = wbid.inventory.gold
-    datadict["Warband"]["inventory"]["gold"] = currentgold - wbid.get_warbandprice()
-
-    # save to file
+    # Determine filepath of new save
+    filepath = "database/saves/" + wbid.name + ".json"     
+    # Save new warband to JSON file
     save_json(data=datadict, jsonfile=filepath)
     print("save completed")
 
 
 if __name__ == "__main__":
-    test_makeWarband()
+    wbname = "Uthluan Wyrdbreakers"
+    wbrace = "High Elves"
+    test_createWarband(wbname, wbrace)

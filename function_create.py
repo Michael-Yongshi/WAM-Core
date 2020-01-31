@@ -21,6 +21,10 @@ def test_createWarband(wbname, wbrace):
             Rule(name="Resolve", description="The High Elves have been fighting the Dark Elves for countless centuries. When fighting their dark kin the High Elves are driven by unwavering determination. They are considered to have a Leadership of 10 when taking Rout Tests against the Dark Elves. In addition, High Elves can never choose to voluntarily Rout as they must stop their evil kin at any cost.")
             ]
 
+    wbid.inventory.itemlist=[
+        Item(name="Test item")
+        ]
+        
     wbid.herolist = [
         Hero(
             name="Hero1", 

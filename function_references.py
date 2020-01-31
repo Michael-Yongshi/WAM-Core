@@ -48,30 +48,31 @@ def create_troopref():
         'desc': 'Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships.'
     }
 
+    print(f"Created troopfile")
     save_json(data, filepath)
 
 
-def add_troopref(race, warband, troop, ishero, skill, price, maxcount, description):
+def add_troopref(race, warband, name, ishero, skill, price, maxcount, description):
     # Paths
     folderpath = "database/references/"
     filepath = folderpath + "troops_ref.json"
 
-    # open troop ref json
+    # open ref json
     data = open_json(filepath)
 
     # First check if race already exists
     if race in data:
-        print(f"{race} already exists")
+        pass
     else:
         data[race] = {}
 
     # Second check if warband already exists
     if warband in data[race]:
-        print(f"{warband} already exists")
+        pass
     else:
         data[race][warband] = {}
 
-    data[race][warband][troop]={
+    data[race][warband][name]={
         'ishero': ishero,
         "skill": skill,
         'price': price,
@@ -79,32 +80,35 @@ def add_troopref(race, warband, troop, ishero, skill, price, maxcount, descripti
         'description': description
     }
 
+    print(f"Added troop: {name}")
     save_json(data, filepath)
 
 
-    def get_troopref(race, warband, troop):
-        # Paths
-        folderpath = "database/references/"
-        filepath = folderpath + "troops_ref.json"
+def get_troopref(race, warband, name):
+    # Paths
+    folderpath = "database/references/"
+    filepath = folderpath + "troops_ref.json"
 
-        # open troop ref json
-        data = open_json(filepath)
+    # open ref json
+    data = open_json(filepath)
 
-        # First check if race exists
-        if race in data:
-            # Second check if warband exists
-            if warband in data[race]:
-                # Third check if troop exists
-                if troop in data[race][warband]: 
-                    troopdict = data[race][warband][troop]
-                else:
-                    print(f"Type:{troop} does not exist")
+    # First check if race exists
+    if race in data:
+        # Second check if warband exists
+        if warband in data[race]:
+            # Third check if troop exists
+            if name in data[race][warband]: 
+                troopdict = data[race][warband][name]
             else:
-                print(f"Warband {warband} does not exist")
+                print(f"Type:{name} does not exist")
         else:
-            print(f"Race {race} does not exist")
+            print(f"Warband {warband} does not exist")
+    else:
+        print(f"Race {race} does not exist")
 
-        Squad.from_dict(troopdict)
+    print(f"Here is data for {name}")
+    print(troopdict)
+    return troopdict
 
 def create_itemref():
     # Paths
@@ -141,6 +145,7 @@ def create_itemref():
         'description': 'Lightweight armour that provides a single armour save'
     }
 
+    print(f"Created itemfile")
     save_json(data, filepath)
 
 
@@ -154,7 +159,7 @@ def add_itemref(category, name, distance, skill, abilitylist, price, description
 
     # First check if source already exists
     if source in data:
-        print(f"{source} already exists")
+        pass
     else:
         data[source] = {}
 
@@ -168,8 +173,31 @@ def add_itemref(category, name, distance, skill, abilitylist, price, description
         'description': description
     }
    
+    print(f"Added item: {name}")
     save_json(data, filepath)
 
+
+def get_itemref(source, item):
+    # Paths
+    folderpath = "database/references/"
+    filepath = folderpath + "items_ref.json"
+
+    # open ref json
+    data = open_json(filepath)
+
+    # First check if source exists
+    if source in data:
+        # Second check if item exists
+        if item in data[source]: 
+            itemdict = data[source][item]
+        else:
+            print(f"Item:{item} does not exist")
+    else:
+        print(f"Source {source} does not exist")
+
+    print(f"Here is data for {item}")
+    print(itemdict)
+    return itemdict
 
 
 
@@ -178,18 +206,17 @@ if __name__ == "__main__":
     add_troopref(
         race = "High Elf",
         warband = "High Elves",
-        troop = "Khaine",
+        name = "Khaine",
         ishero = True,
         skill = [9, 8, 8, 6, 6, 4, 9, 4, 12, 6],
         price = 999,
         maxcount = 1,
         description = "Test"
     )
-
     get_troopref(
-        race,
-        warband,
-        troop
+        race = "High Elf", 
+        warband = "High Elves", 
+        name = "Khaine"
     )
 
     create_itemref()
@@ -203,7 +230,10 @@ if __name__ == "__main__":
         price = 999,
         description = "The sword of Khaine, when used at a range of maximum 5 inch use missile combat stats and process."
      )
-
+    get_itemref(
+        source = "Core Rules", 
+        item = "Sword of Khaine"
+    )
 
 
 

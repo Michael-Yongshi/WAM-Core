@@ -1,65 +1,29 @@
 {
     "Core Rules": {
         "Dagger": {
+            "name": "Dagger",
             "category": "Melee Weapon",
             "distance": 0,
-            "skill": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            "abilitylist": [
-                "Everything Is Armour"
-            ],
+            "skill": {
+                "movement": 0,
+                "weapon": 0,
+                "ballistic": 0,
+                "strength": 0,
+                "toughness": 0,
+                "wounds": 0,
+                "initiative": 0,
+                "actions": 0,
+                "leadership": 0,
+                "armoursave": 0
+            },
+            "abilitylist": {
+                "Ability1": {
+                    "name": "Everything is Armour",
+                    "description": null
+                }
+            },
             "price": 2,
-            "description": "A basic dagger where any character starts with"
-        },
-        "Bow": {
-            "category": "Missile weapon",
-            "distance": 16,
-            "skill": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            "abilitylist": [
-                "Everything Is Armour"
-            ],
-            "price": 10,
-            "description": "A simple bow with a range of 16 inch"
-        },
-        "Light Armour": {
-            "category": "Armour",
-            "distance": 0,
-            "skill": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                1
-            ],
-            "abilitylist": [],
-            "price": 20,
-            "description": "Lightweight armour that provides a single armour save"
+            "desc": "A basic dagger. Everyone character starts with one, unless unable to."
         },
         "Sword of Khaine": {
             "category": "Melee Weapon",

@@ -1,5 +1,5 @@
 from database.json import *
-
+from class_hierarchy import *
 
 def create_troopref():
     # Paths
@@ -119,31 +119,44 @@ def create_itemref():
     data = {}
     data["Core Rules"] = {}
 
-    # Add data
-    data["Core Rules"]['Dagger'] = {
-        'category': 'Melee Weapon',
-        'distance': 0,
-        'skill': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        'abilitylist': ["Everything Is Armour"],
-        'price': 2,
-        'description': "A basic dagger where any character starts with"
-    }
-    data["Core Rules"]['Bow'] = {
-        'category': 'Missile weapon',
-        'distance': 16,
-        'skill': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        'abilitylist': ["Everything Is Armour"],
-        'price': 10,
-        'description': 'A simple bow with a range of 16 inch'
-    }
-    data["Core Rules"]['Light Armour'] = {
-        'category': 'Armour',
-        'distance': 0,
-        'skill': [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-        'abilitylist': [],
-        'price': 20,
-        'description': 'Lightweight armour that provides a single armour save'
-    }
+    # Create data objects
+    itemobject = Item(
+        name = "Dagger",
+        category = "Melee Weapon",
+        distance = 0,
+        skill = Skill(0,0,0,0,0,0,0,0,0),
+        abilitylist = [Ability(name="Everything is Armour")],
+        price = 2,
+        desc = "A basic dagger. Everyone character starts with one, unless unable to." 
+    )
+    itemdict = itemobject.to_dict(itemobject.name)
+    data["Core Rules"].update(itemdict)
+    
+    # data["Core Rules"]['Dagger'] = {
+    #     'name': "Dagger",
+    #     'category': 'Melee Weapon',
+    #     'distance': 0,
+    #     'skill': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    #     'abilitylist': ["Everything Is Armour"],
+    #     'price': 2,
+    #     'description': "A basic dagger where any character starts with"
+    # }
+    # data["Core Rules"]['Bow'] = {
+    #     'category': 'Missile weapon',
+    #     'distance': 16,
+    #     'skill': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    #     'abilitylist': ["Everything Is Armour"],
+    #     'price': 10,
+    #     'description': 'A simple bow with a range of 16 inch'
+    # }
+    # data["Core Rules"]['Light Armour'] = {
+    #     'category': 'Armour',
+    #     'distance': 0,
+    #     'skill': [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    #     'abilitylist': [],
+    #     'price': 20,
+    #     'description': 'Lightweight armour that provides a single armour save'
+    # }
 
     print(f"Created itemfile")
     save_json(data, filepath)

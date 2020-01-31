@@ -83,13 +83,14 @@ class Inventory(object):
 
 
 class Item(object):
-    def __init__(self, name, category, skill=None, abilitylist=[], desc=None, price=0):
+    def __init__(self, name, category, distance=0, skill=None, abilitylist=[], price=0, desc=None):
         self.name = name
         self.category = category
-        self.desc = desc
+        self.distance = distance
         self.skill = skill if skill else Skill()
         self.abilitylist = abilitylist
         self.price = price
+        self.desc = desc
 
     def to_dict(self, ref):  
         skill = self.skill.to_dict()
@@ -106,10 +107,11 @@ class Item(object):
             # 'key': str(self),
             'name': self.name,
             'category': self.category,
-            'desc': self.desc,
+            'distance': self.distance,
             'skill': skill,
             'abilitylist': abilitylist,
-            'price': self.price     
+            'price': self.price,
+            'desc': self.desc
         }
         return data
 

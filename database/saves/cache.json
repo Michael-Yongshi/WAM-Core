@@ -24,9 +24,30 @@
         }
     },
     "inventory": {
-        "gold": 0,
+        "gold": 85,
         "wyrd": 0,
-        "itemlist": {}
+        "itemlist": {
+            "Item1": {
+                "name": "Test item",
+                "category": "Other",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
+                "abilitylist": {},
+                "price": 0,
+                "desc": null
+            }
+        }
     },
     "herolist": {
         "Hero1": {
@@ -58,7 +79,7 @@
                     "Item1": {
                         "name": "Mage staff",
                         "category": "Melee Weapon",
-                        "desc": "Mage Staves of Hoeth are forged from the finest Ithilmar, and are works of art that are truly beautiful to behold. They are usually decorated with gems and other precious materials. Only a Loremaster may use a Mage Staff.",
+                        "distance": 0,
                         "skill": {
                             "movement": 0,
                             "weapon": 0,
@@ -81,12 +102,13 @@
                                 "description": "Strength bonus is 1 if used twohanded, no bonus if used one handed."
                             }
                         },
-                        "price": 20
+                        "price": 20,
+                        "desc": "Mage Staves of Hoeth are forged from the finest Ithilmar, and are works of art that are truly beautiful to behold. They are usually decorated with gems and other precious materials. Only a Loremaster may use a Mage Staff."
                     },
                     "Item2": {
                         "name": "Dagger",
                         "category": "Melee Weapon",
-                        "desc": null,
+                        "distance": 0,
                         "skill": {
                             "movement": 0,
                             "weapon": 0,
@@ -105,7 +127,8 @@
                                 "description": "For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save."
                             }
                         },
-                        "price": 0
+                        "price": 0,
+                        "desc": null
                     }
                 }
             },
@@ -141,7 +164,7 @@
                     "Item1": {
                         "name": "Sword",
                         "category": "Melee Weapon",
-                        "desc": null,
+                        "distance": 0,
                         "skill": {
                             "movement": 0,
                             "weapon": 0,
@@ -160,12 +183,13 @@
                                 "description": "A sword can parry a single attack."
                             }
                         },
-                        "price": 10
+                        "price": 10,
+                        "desc": null
                     },
                     "Item2": {
                         "name": "Dagger",
                         "category": "Melee Weapon",
-                        "desc": null,
+                        "distance": 0,
                         "skill": {
                             "movement": 0,
                             "weapon": 0,
@@ -184,12 +208,13 @@
                                 "description": "For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save."
                             }
                         },
-                        "price": 0
+                        "price": 0,
+                        "desc": null
                     },
                     "Item3": {
                         "name": "Shield",
                         "category": "Armour",
-                        "desc": null,
+                        "distance": 0,
                         "skill": {
                             "movement": 0,
                             "weapon": 0,
@@ -203,12 +228,13 @@
                             "armoursave": 1
                         },
                         "abilitylist": {},
-                        "price": 5
+                        "price": 5,
+                        "desc": null
                     },
                     "Item4": {
                         "name": "Light Armour",
                         "category": "Armour",
-                        "desc": null,
+                        "distance": 0,
                         "skill": {
                             "movement": 0,
                             "weapon": 0,
@@ -222,7 +248,8 @@
                             "armoursave": 1
                         },
                         "abilitylist": {},
-                        "price": 20
+                        "price": 20,
+                        "desc": null
                     }
                 }
             },
@@ -259,7 +286,7 @@
                             "Item1": {
                                 "name": "Spear",
                                 "category": "Melee Weapon",
-                                "desc": null,
+                                "distance": 0,
                                 "skill": {
                                     "movement": 0,
                                     "weapon": 0,
@@ -278,12 +305,13 @@
                                         "description": "A spear allows to strike first even when charged, or evens the odds against other First Strike enabled characters."
                                     }
                                 },
-                                "price": 10
+                                "price": 10,
+                                "desc": null
                             },
                             "Item2": {
                                 "name": "Longbow",
                                 "category": "Missile Weapon",
-                                "desc": null,
+                                "distance": 30,
                                 "skill": {
                                     "movement": 0,
                                     "weapon": 0,
@@ -302,12 +330,13 @@
                                         "description": "A bow with a range of 30 inch."
                                     }
                                 },
-                                "price": 15
+                                "price": 15,
+                                "desc": null
                             },
                             "Item3": {
                                 "name": "Dagger",
                                 "category": "Melee Weapon",
-                                "desc": null,
+                                "distance": 0,
                                 "skill": {
                                     "movement": 0,
                                     "weapon": 0,
@@ -326,7 +355,8 @@
                                         "description": "For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save."
                                     }
                                 },
-                                "price": 0
+                                "price": 0,
+                                "desc": null
                             }
                         }
                     },
@@ -357,7 +387,7 @@
                             "Item1": {
                                 "name": "Spear",
                                 "category": "Melee Weapon",
-                                "desc": null,
+                                "distance": 0,
                                 "skill": {
                                     "movement": 0,
                                     "weapon": 0,
@@ -376,12 +406,13 @@
                                         "description": "A spear allows to strike first even when charged, or evens the odds against other First Strike enabled characters."
                                     }
                                 },
-                                "price": 10
+                                "price": 10,
+                                "desc": null
                             },
                             "Item2": {
                                 "name": "Longbow",
                                 "category": "Missile Weapon",
-                                "desc": null,
+                                "distance": 30,
                                 "skill": {
                                     "movement": 0,
                                     "weapon": 0,
@@ -400,12 +431,13 @@
                                         "description": "A bow with a range of 30 inch."
                                     }
                                 },
-                                "price": 15
+                                "price": 15,
+                                "desc": null
                             },
                             "Item3": {
                                 "name": "Dagger",
                                 "category": "Melee Weapon",
-                                "desc": null,
+                                "distance": 0,
                                 "skill": {
                                     "movement": 0,
                                     "weapon": 0,
@@ -424,7 +456,8 @@
                                         "description": "For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save."
                                     }
                                 },
-                                "price": 0
+                                "price": 0,
+                                "desc": null
                             }
                         }
                     },
@@ -461,7 +494,7 @@
                             "Item1": {
                                 "name": "Greatsword",
                                 "category": "Melee Weapon",
-                                "desc": null,
+                                "distance": 0,
                                 "skill": {
                                     "movement": 0,
                                     "weapon": 0,
@@ -480,12 +513,13 @@
                                         "description": "A greatsword will always strike last even when charging, except against other Last Strike enabled characters."
                                     }
                                 },
-                                "price": 15
+                                "price": 15,
+                                "desc": null
                             },
                             "Item2": {
                                 "name": "Longbow",
                                 "category": "Missile Weapon",
-                                "desc": null,
+                                "distance": 30,
                                 "skill": {
                                     "movement": 0,
                                     "weapon": 0,
@@ -504,12 +538,13 @@
                                         "description": "A bow with a range of 30 inch."
                                     }
                                 },
-                                "price": 15
+                                "price": 15,
+                                "desc": null
                             },
                             "Item3": {
                                 "name": "Dagger",
                                 "category": "Melee Weapon",
-                                "desc": null,
+                                "distance": 0,
                                 "skill": {
                                     "movement": 0,
                                     "weapon": 0,
@@ -528,7 +563,8 @@
                                         "description": "For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save."
                                     }
                                 },
-                                "price": 0
+                                "price": 0,
+                                "desc": null
                             }
                         }
                     },
@@ -565,7 +601,7 @@
                             "Item1": {
                                 "name": "Longbow",
                                 "category": "Missile Weapon",
-                                "desc": null,
+                                "distance": 30,
                                 "skill": {
                                     "movement": 0,
                                     "weapon": 0,
@@ -584,12 +620,13 @@
                                         "description": "A bow with a range of 30 inch."
                                     }
                                 },
-                                "price": 15
+                                "price": 15,
+                                "desc": null
                             },
                             "Item2": {
                                 "name": "Dagger",
                                 "category": "Melee Weapon",
-                                "desc": null,
+                                "distance": 0,
                                 "skill": {
                                     "movement": 0,
                                     "weapon": 0,
@@ -608,7 +645,8 @@
                                         "description": "For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save."
                                     }
                                 },
-                                "price": 0
+                                "price": 0,
+                                "desc": null
                             }
                         }
                     },
@@ -616,11 +654,6 @@
                     "price": 30
                 }
             }
-        },
-        "squad4": {
-            "name": "Bowguard",
-            "category": "Seaguard",
-            "henchmanlist": {}
         }
     }
 }

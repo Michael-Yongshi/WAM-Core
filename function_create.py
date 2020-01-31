@@ -117,6 +117,7 @@ def test_createWarband(wbname, wbrace):
                         Item(
                             name="Longbow", 
                             category="Missile Weapon",
+                            distance=30,
                             abilitylist=[Ability(name="Range", description="A bow with a range of 30 inch.")],
                             price=15
                             ),
@@ -148,6 +149,7 @@ def test_createWarband(wbname, wbrace):
                         Item(
                             name="Longbow", 
                             category="Missile Weapon",
+                            distance=30,
                             abilitylist=[Ability(name="Range", description="A bow with a range of 30 inch.")],
                             price=15
                             ),
@@ -186,6 +188,7 @@ def test_createWarband(wbname, wbrace):
                         Item(
                             name="Longbow", 
                             category="Missile Weapon",
+                            distance=30,
                             abilitylist=[Ability(name="Range", description="A bow with a range of 30 inch.")],
                             price=15
                             ),
@@ -217,6 +220,7 @@ def test_createWarband(wbname, wbrace):
                         Item(
                             name="Longbow", 
                             category="Missile Weapon",
+                            distance=30,
                             abilitylist=[Ability(name="Range", description="A bow with a range of 30 inch.")],
                             price=15
                             ),

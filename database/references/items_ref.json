@@ -1,28 +1,86 @@
 {
-    "items_ref": [
-        {
-            "name": "Dagger",
-            "type": "Melee Weapon",
-            "price": "2",
-            "desc": "A basic dagger where any character starts with"
+    "Core Rules": {
+        "Dagger": {
+            "category": "Melee Weapon",
+            "distance": 0,
+            "skill": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "abilitylist": [
+                "Everything Is Armour"
+            ],
+            "price": 2,
+            "description": "A basic dagger where any character starts with"
         },
-        {
-            "name": "Bow",
-            "type": "Missile weapon",
-            "price": "10",
-            "desc": "A simple bow with a range of 16 inch"
+        "Bow": {
+            "category": "Missile weapon",
+            "distance": 16,
+            "skill": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "abilitylist": [
+                "Everything Is Armour"
+            ],
+            "price": 10,
+            "description": "A simple bow with a range of 16 inch"
         },
-        {
-            "name": "Light Armour",
-            "type": "Armour",
-            "price": "20",
-            "desc": "Lightweight armour that provides a single armour save"
+        "Light Armour": {
+            "category": "Armour",
+            "distance": 0,
+            "skill": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+            ],
+            "abilitylist": [],
+            "price": 20,
+            "description": "Lightweight armour that provides a single armour save"
         },
-        {
-            "name": "Elven Cloak",
-            "type": "Miscellaneous",
-            "price": "75",
-            "desc": "An elven cloak"
+        "Sword of Khaine": {
+            "category": "Melee Weapon",
+            "distance": 5,
+            "skill": [
+                0,
+                2,
+                0,
+                2,
+                0,
+                2,
+                0,
+                2,
+                2,
+                0
+            ],
+            "abilitylist": [
+                "Dispel"
+            ],
+            "price": 999,
+            "description": "The sword of Khaine, when used at a range of maximum 5 inch use missile combat stats and process."
         }
-    ]
+    }
 }

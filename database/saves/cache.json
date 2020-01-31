@@ -616,6 +616,11 @@
                     "price": 30
                 }
             }
+        },
+        "squad4": {
+            "name": "Bowguard",
+            "category": "Seaguard",
+            "henchmanlist": {}
         }
     }
 }

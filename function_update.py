@@ -11,7 +11,14 @@ def test_updateWarband():
     # from dictionary to objects for manipulation
     wbid = Warband.from_dict(datadict)
 
-    # from objects to dictionary for saving
+
+
+    # add new henchman group of 'test' henchmen
+    wbid.add_squad(name="Bowguard", category="Seaguard")
+
+
+
+    # from objects to dictionary for placing back in cache
     datadict = wbid.to_dict()
 
     # Push save to JSON cache

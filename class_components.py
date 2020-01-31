@@ -1,3 +1,5 @@
+from database.json import *
+
 # Contains several component classes that are used in different places:
 # Inventory
 # Items

@@ -1,3 +1,4 @@
+from database.json import *
 from class_components import * # reference to the script with all component classes
 
 
@@ -77,7 +78,39 @@ class Warband(object):
 
         return wbid
 
+    def add_squad(self, category, name, number=1):
+        """Creates a new squad and creates at least 1 henchman character within this squad"""
+        # optional: check if squad already exists for input name
+        # for squad in self.squadlist
+        #     if "squad4" in squad.name:
+
+        # create squad object
+        newsquad = Squad(
+            name=name, 
+            category=category
+            )
+        
+        # find reference of the squad category in the troops_ref.json
+        datadict = open_json("database/references/troops_ref.json")
+        
+        
+        race = troop[race]
+
+
+        # fill squad object with the number of henchman desired (default = 1)
+        for _ in range(number):
+            henchmanref = category + str(number)
+            newhenchman = Henchman(name=henchmanref, category=category, race=race, skill=skill)
+            newsquad.henchmanlist += [newhenchman]
+        
+        # add created squad to the warbands squad list
+        self.squadlist += [newsquad]
+        
+        return self
+
+    
     def get_warbandprice(self):
+        """ Temporary function, should be split in seperate functions to adjust gold baded on single events of buying equipment or getting loot"""
         wbinvprice = self.inventory.get_price()
 
         herolistprice = 0

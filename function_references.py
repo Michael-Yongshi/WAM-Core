@@ -82,6 +82,30 @@ def add_troopref(race, warband, troop, ishero, skill, price, maxcount, descripti
     save_json(data, filepath)
 
 
+    def get_troopref(race, warband, troop):
+        # Paths
+        folderpath = "database/references/"
+        filepath = folderpath + "troops_ref.json"
+
+        # open troop ref json
+        data = open_json(filepath)
+
+        # First check if race exists
+        if race in data:
+            # Second check if warband exists
+            if warband in data[race]:
+                # Third check if troop exists
+                if troop in data[race][warband]: 
+                    troopdict = data[race][warband][troop]
+                else:
+                    print(f"Type:{troop} does not exist")
+            else:
+                print(f"Warband {warband} does not exist")
+        else:
+            print(f"Race {race} does not exist")
+
+        Squad.from_dict(troopdict)
+
 def create_itemref():
     # Paths
     folderpath = "database/references/"
@@ -160,6 +184,12 @@ if __name__ == "__main__":
         price = 999,
         maxcount = 1,
         description = "Test"
+    )
+
+    get_troopref(
+        race,
+        warband,
+        troop
     )
 
     create_itemref()

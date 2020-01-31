@@ -19,7 +19,15 @@ class Rule(object):
             'description': self.description
         }
         return data
+    
+    @staticmethod
+    def from_dict(datadict):
+        rule = Rule(
+            name=datadict["name"],
+            description=datadict["description"]
+            )
 
+        return rule
 
 class Inventory(object):
     def __init__(self, gold=0, wyrd=0, itemlist=[]):
@@ -35,14 +43,27 @@ class Inventory(object):
             itemlist.update(item.to_dict(ref=itemref))
             i += 1
 
-        data = {}
-        data["Inventory"] = {
+        data = {
             # 'key': str(self),
             'gold': self.gold,
             'wyrd': self.wyrd,
             'itemlist': itemlist
         }
         return data
+
+    @staticmethod
+    def from_dict(datadict):
+        itemlist = []
+        for item in datadict["itemlist"].values():
+            itemlist += [Item.from_dict(item)]
+
+        inventory = Inventory(
+            gold=datadict["gold"],
+            wyrd=datadict["wyrd"],
+            itemlist=itemlist
+            )
+        
+        return inventory
 
     def get_price(self):
         invprice = 0
@@ -64,11 +85,13 @@ class Item(object):
         self.name = name
         self.category = category
         self.desc = desc
-        self.skill = skill if skill else Skill(0,0,0,0,0,0,0,0,0,0)
-        self.abilitylist = abilitylist if abilitylist else []
+        self.skill = skill if skill else Skill()
+        self.abilitylist = abilitylist
         self.price = price
 
     def to_dict(self, ref):  
+        skill = self.skill.to_dict()
+        
         abilitylist={}
         a = 1
         for ability in self.abilitylist:
@@ -82,12 +105,30 @@ class Item(object):
             'name': self.name,
             'category': self.category,
             'desc': self.desc,
-            'skill': str(self.skill),
+            'skill': skill,
             'abilitylist': abilitylist,
             'price': self.price     
         }
         return data
 
+    @staticmethod
+    def from_dict(datadict):
+        skill = Skill.from_dict(datadict["skill"])
+        
+        abilitylist = []
+        for ability in datadict["abilitylist"].values():
+            abilitylist += [Ability.from_dict(ability)]
+
+        item = Item(
+            name=datadict["name"],
+            category=datadict["category"],
+            desc=datadict["desc"],
+            skill=skill,
+            abilitylist=abilitylist,
+            price=datadict["price"] 
+            )
+        
+        return item
 
 class Skill(object):
     """Default object to assign skill values as a basis for character and item skill values"""
@@ -104,8 +145,7 @@ class Skill(object):
         self.armoursave = armoursave
     
     def to_dict(self):  
-        data = {}
-        data["Skill"] = {
+        data = {
             # 'key': str(self),
             'movement': self.movement,
             'weapon': self.weapon,
@@ -120,6 +160,22 @@ class Skill(object):
         }
         return data
 
+    @staticmethod
+    def from_dict(datadict):
+        skill = Skill(
+            movement=datadict["movement"],
+            weapon=datadict["weapon"],
+            ballistic=datadict["ballistic"],
+            strength=datadict["strength"],
+            toughness=datadict["toughness"],
+            wounds=datadict["wounds"],
+            initiative=datadict["initiative"],
+            actions=datadict["actions"],
+            leadership=datadict["leadership"],
+            armoursave=datadict["armoursave"]
+            )
+
+        return skill
 
 class Ability(object):
     """Default object to assign ablities as a basis for character and item abilities"""
@@ -135,3 +191,12 @@ class Ability(object):
             'description': self.description
         }
         return data
+
+    @staticmethod
+    def from_dict(datadict):
+        ability = Ability(
+            name=datadict["name"],
+            description=datadict["description"]
+            )
+
+        return ability

@@ -11,7 +11,6 @@ def test_updateWarband():
     # from dictionary to objects for manipulation
     wbid = Warband.from_dict(datadict)
 
-
     # from objects to dictionary for saving
     datadict = wbid.to_dict()
 

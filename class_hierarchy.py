@@ -1,4 +1,4 @@
-from components import * # reference to the script with all component classes
+from class_components import * # reference to the script with all component classes
 
 
 class Warband(object):
@@ -11,7 +11,8 @@ class Warband(object):
         self.squadlist = squadlist
 
     def to_dict(self):
-        # herolist = [hero.to_dict() for hero in self.herolist]
+        """ Create a dictionary string of a Warband object, including all nested objects, that can be saved to a JSON file for storage."""
+        # herolist = [hero.to_dict() for hero in self.herolist]      --- optional way of doing a simpler for loop
 
         rulelist = {} # change in a dict before setting dict values
         r = 1
@@ -36,8 +37,7 @@ class Warband(object):
             squadlist.update(squad.to_dict(ref=squadref))
             s += 1
 
-        data = {}
-        data["Warband"] = {
+        data = {
             # 'key': str(self),
             'name': self.name,
             'race': self.race,
@@ -49,6 +49,34 @@ class Warband(object):
 
         return data
     
+    @staticmethod
+    def from_dict(datadict):
+        """ Create an object, and all nested objects, out of a warband dictionary in order to enable updates to that data."""
+        rulelist = []
+        for rule in datadict["rulelist"].values():
+            rulelist += [Rule.from_dict(rule)]
+
+        inventory = Inventory.from_dict(datadict["inventory"])
+
+        herolist = []
+        for hero in datadict["herolist"].values():
+            herolist += [Hero.from_dict(hero)]
+
+        squadlist = []
+        for squad in datadict["squadlist"].values():
+            squadlist += [Squad.from_dict(squad)]
+
+        wbid = Warband(
+            name=datadict["name"],
+            race=datadict["race"],
+            rulelist=rulelist,
+            inventory=inventory,
+            herolist=herolist,
+            squadlist=squadlist
+            )
+
+        return wbid
+
     def get_warbandprice(self):
         wbinvprice = self.inventory.get_price()
 
@@ -99,6 +127,21 @@ class Squad(object):
             'henchmanlist': henchmanlist
         }
         return data
+
+    @staticmethod
+    def from_dict(datadict):
+        henchmanlist = []
+        for henchman in datadict["henchmanlist"].values():
+            henchmanlist += [Henchman.from_dict(henchman)]
+
+        squad = Squad(
+            name=datadict["name"],
+            category=datadict["category"],
+            henchmanlist=henchmanlist,
+            )
+
+        return squad
+
 
     def get_totalhenchman(ditobject):
         henchmanlist = ditobject.henchmanlist if ditobject.henchmanlist else []
@@ -184,6 +227,29 @@ class Hero(Character):
         }
         return data
 
+    @staticmethod
+    def from_dict(datadict):
+        skill = Skill.from_dict(datadict["skill"])
+        
+        abilitylist = []
+        for ability in datadict["abilitylist"].values():
+            abilitylist += [Ability.from_dict(ability)]
+
+        inventory = Inventory.from_dict(datadict["inventory"])
+
+        hero = Hero(
+            name=datadict["name"],
+            race=datadict["race"],
+            category=datadict["category"],
+            skill=skill,
+            abilitylist=abilitylist,
+            inventory=inventory,
+            experience=datadict["experience"],
+            price=datadict["price"] 
+            )
+        
+        return hero
+
     def add_experience(self):
         """adds experience to this hero character"""
         NotImplemented
@@ -242,4 +308,26 @@ class Henchman(Character):
         }
         return data
 
+    @staticmethod
+    def from_dict(datadict):
+        skill = Skill.from_dict(datadict["skill"])
+        
+        abilitylist = []
+        for ability in datadict["abilitylist"].values():
+            abilitylist += [Ability.from_dict(ability)]
+
+        inventory = Inventory.from_dict(datadict["inventory"])
+
+        henchman = Henchman(
+            name=datadict["name"],
+            race=datadict["race"],
+            category=datadict["category"],
+            skill=skill,
+            abilitylist=abilitylist,
+            inventory=inventory,
+            experience=datadict["experience"],
+            price=datadict["price"] 
+            )
+        
+        return henchman
 

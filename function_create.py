@@ -245,7 +245,7 @@ def test_createWarband(wbname, wbrace):
     # Push new warband to JSON cache
     # To do: write to global variable
     save_json(data=datadict, jsonfile="database/saves/cache.json")
-    print("New Warband created")
+    print("New Warband placed in cache")
 
 
 if __name__ == "__main__":

@@ -22,7 +22,7 @@ def test_createWarband(wbname, wbrace):
             ]
 
     wbid.inventory.itemlist=[
-        Item(name="Test item")
+        Item(name="Test item", category="Other")
         ]
         
     wbid.herolist = [

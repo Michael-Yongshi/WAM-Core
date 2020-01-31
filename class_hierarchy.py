@@ -92,11 +92,9 @@ class Warband(object):
         
         # find reference of the squad category in the troops_ref.json
         datadict = open_json("database/references/troops_ref.json")
+        Henchman.from_dict(datadict)
         
-        
-        race = troop[race]
-
-
+   
         # fill squad object with the number of henchman desired (default = 1)
         for _ in range(number):
             henchmanref = category + str(number)

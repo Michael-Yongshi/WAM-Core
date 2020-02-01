@@ -28,7 +28,8 @@ def test_createWarband(wbname, wbrace):
     wbid.herolist = [
         Hero(
             name="Hero1", 
-            race="High Elves", 
+            race="High Elf", 
+            warband="High Elves",
             category="Loremaster", 
             skill=Skill(5,4,4,3,3,1,6,1,9,0), 
             abilitylist=[
@@ -58,7 +59,8 @@ def test_createWarband(wbname, wbrace):
             ), 
         Hero(
             name="Hero2", 
-            race="High Elves", 
+            race="High Elf", 
+            warband="High Elves",
             category="Swordwarden", 
             skill=Skill(5,5,4,3,3,1,6,1,8,0), 
             abilitylist=[
@@ -101,7 +103,8 @@ def test_createWarband(wbname, wbrace):
             henchmanlist=[
                 Henchman(
                     name="Spearguard1", 
-                    race="High Elves", 
+                    race="High Elf", 
+                    warband="High Elves", 
                     category="Seaguard", 
                     skill=Skill(5,4,4,3,3,1,6,1,8,0), 
                     abilitylist=[
@@ -133,7 +136,8 @@ def test_createWarband(wbname, wbrace):
                     ),
                 Henchman(
                     name="Spearguard2", 
-                    race="High Elves", 
+                    race="High Elf", 
+                    warband="High Elves",
                     category="Seaguard", 
                     skill=Skill(5,4,4,3,3,1,6,1,8,0), 
                     abilitylist=[
@@ -171,7 +175,8 @@ def test_createWarband(wbname, wbrace):
             henchmanlist=[
                 Henchman(
                     name="Bladeguard1", 
-                    race="High Elves", 
+                    race="High Elf", 
+                    warband="High Elves",
                     category="Seaguard", 
                     skill=Skill(5,4,4,3,3,1,6,1,8,0), 
                     abilitylist=[
@@ -210,7 +215,8 @@ def test_createWarband(wbname, wbrace):
             henchmanlist=[
                 Henchman(
                     name="Cadet1", 
-                    race="High Elves", 
+                    race="High Elf", 
+                    warband="High Elves",
                     category="Cadet", 
                     skill=Skill(5,3,3,3,3,1,5,1,8,0), 
                     abilitylist=[

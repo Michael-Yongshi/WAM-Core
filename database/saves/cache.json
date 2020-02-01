@@ -52,7 +52,8 @@
     "herolist": {
         "Hero1": {
             "name": "Hero1",
-            "race": "High Elves",
+            "race": "High Elf",
+            "warband": "High Elves",
             "category": "Loremaster",
             "skill": {
                 "movement": 5,
@@ -137,7 +138,8 @@
         },
         "Hero2": {
             "name": "Hero2",
-            "race": "High Elves",
+            "race": "High Elf",
+            "warband": "High Elves",
             "category": "Swordwarden",
             "skill": {
                 "movement": 5,
@@ -264,7 +266,8 @@
             "henchmanlist": {
                 "Henchman1": {
                     "name": "Spearguard1",
-                    "race": "High Elves",
+                    "race": "High Elf",
+                    "warband": "High Elves",
                     "category": "Seaguard",
                     "skill": {
                         "movement": 5,
@@ -365,7 +368,8 @@
                 },
                 "Henchman2": {
                     "name": "Spearguard2",
-                    "race": "High Elves",
+                    "race": "High Elf",
+                    "warband": "High Elves",
                     "category": "Seaguard",
                     "skill": {
                         "movement": 5,
@@ -472,7 +476,8 @@
             "henchmanlist": {
                 "Henchman1": {
                     "name": "Bladeguard1",
-                    "race": "High Elves",
+                    "race": "High Elf",
+                    "warband": "High Elves",
                     "category": "Seaguard",
                     "skill": {
                         "movement": 5,
@@ -579,7 +584,8 @@
             "henchmanlist": {
                 "Henchman1": {
                     "name": "Cadet1",
-                    "race": "High Elves",
+                    "race": "High Elf",
+                    "warband": "High Elves",
                     "category": "Cadet",
                     "skill": {
                         "movement": 5,

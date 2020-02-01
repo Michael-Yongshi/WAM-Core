@@ -13,6 +13,9 @@ def create_troopref():
 
     # Add data
     data["High Elf"]["High Elves"]["Loremaster"]={
+        'race': 'High Elf',
+        'warband': 'High Elves',
+        'category': 'Loremaster',
         'ishero': 'True',
         "skill": [5, 4, 4, 3, 3, 1, 6, 1, 9, 0],
         'price': '80',
@@ -20,6 +23,9 @@ def create_troopref():
         'description': 'Loremasters are the most powerful mages in the entire Warhammer world. Their knowledge of the arcane arts and their intensive training at the Tower of Hoeth makes them perfect for leading expeditions into Lustria. They are capable and efficient with years of extensive training and skill at their disposal. Loremasters alone command magic powerful enough to match the might of the mysterious Slann. They delve into the temple cities of the Lizardmen in search of any remaining artifacts of the Old Ones power.'
     }
     data["High Elf"]["High Elves"]["Ranger"]={
+        'race': 'High Elf',
+        'warband': 'High Elves',
+        'category': 'Ranger',
         'ishero': 'True',
         "skill": [5, 4, 4, 3, 3, 1, 6, 1, 8, 0],
         'price': '45',
@@ -27,6 +33,9 @@ def create_troopref():
         'desc': 'Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again.'
     }
     data["High Elf"]["High Elves"]["Sword Warden"]={
+        'race': 'High Elf',
+        'warband': 'High Elves',
+        'category': 'Sword Warden',
         'ishero': 'True',
         "skill": [5, 5, 4, 3, 3, 1, 6, 1, 8, 0],
         'price': '50',
@@ -34,6 +43,9 @@ def create_troopref():
         'desc': 'Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster’s personal attendants and protectors.'
     }
     data["High Elf"]["High Elves"]["Seaguard"]={
+        'race': 'High Elf',
+        'warband': 'High Elves',
+        'category': 'Seaguard',
         'ishero': 'False',
         "skill": [5, 4, 4, 3, 3, 1, 6, 1, 8, 0],
         'price': '35',
@@ -41,6 +53,9 @@ def create_troopref():
         'desc': 'Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops.'
     }
     data["High Elf"]["High Elves"]["Cadet"]={
+        'race': 'High Elf',
+        'warband': 'High Elves',
+        'category': 'Cadet',
         'ishero': 'False',
         "skill": [5, 3, 3, 3, 3, 1, 6, 1, 8, 0],
         'price': '30',
@@ -52,7 +67,7 @@ def create_troopref():
     save_json(data, filepath)
 
 
-def add_troopref(race, warband, name, ishero, skill, price, maxcount, description):
+def add_troopref(race, warband, category, ishero, skill, price, maxcount, description):
     # Paths
     folderpath = "database/references/"
     filepath = folderpath + "troops_ref.json"
@@ -72,7 +87,10 @@ def add_troopref(race, warband, name, ishero, skill, price, maxcount, descriptio
     else:
         data[race][warband] = {}
 
-    data[race][warband][name]={
+    data[race][warband][category]={
+        'race': race,
+        'warband': warband,
+        'category': category,
         'ishero': ishero,
         "skill": skill,
         'price': price,
@@ -80,11 +98,11 @@ def add_troopref(race, warband, name, ishero, skill, price, maxcount, descriptio
         'description': description
     }
 
-    print(f"Added troop: {name}")
+    print(f"Added troop: {category}")
     save_json(data, filepath)
 
 
-def get_troopref(race, warband, name):
+def get_troopref(race, warband, category):
     # Paths
     folderpath = "database/references/"
     filepath = folderpath + "troops_ref.json"
@@ -97,8 +115,8 @@ def get_troopref(race, warband, name):
         # Second check if warband exists
         if warband in data[race]:
             # Third check if troop exists
-            if name in data[race][warband]: 
-                troopdict = data[race][warband][name]
+            if category in data[race][warband]: 
+                troopdict = data[race][warband][category]
             else:
                 print(f"Type:{name} does not exist")
         else:
@@ -106,7 +124,7 @@ def get_troopref(race, warband, name):
     else:
         print(f"Race {race} does not exist")
 
-    print(f"Here is data for {name}")
+    print(f"Here is data for {category}")
     print(troopdict)
     return troopdict
 
@@ -219,7 +237,7 @@ if __name__ == "__main__":
     add_troopref(
         race = "High Elf",
         warband = "High Elves",
-        name = "Khaine",
+        category = "Khaine",
         ishero = True,
         skill = [9, 8, 8, 6, 6, 4, 9, 4, 12, 6],
         price = 999,
@@ -229,7 +247,7 @@ if __name__ == "__main__":
     get_troopref(
         race = "High Elf", 
         warband = "High Elves", 
-        name = "Khaine"
+        category = "Khaine",
     )
 
     create_itemref()

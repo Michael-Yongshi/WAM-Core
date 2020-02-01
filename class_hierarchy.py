@@ -217,9 +217,10 @@ class Squad(object):
         
 
 class Character(object):
-    def __init__(self, name, race, category, skill, abilitylist=[], inventory=None, experience=0, price=0):
+    def __init__(self, name, race, warband, category, skill, abilitylist=[], inventory=None, experience=0, price=0):
         self.name = name
         self.race = race
+        self.warband = warband
         self.category = category
         self.skill = skill
         self.abilitylist = abilitylist
@@ -229,8 +230,8 @@ class Character(object):
 
 
 class Hero(Character):
-    def __init__(self, name, race, category, skill, abilitylist=[], inventory=None, experience=0, price=0):
-        super().__init__(name, race, category, skill, abilitylist, inventory, experience, price)
+    def __init__(self, name, race, warband, category, skill, abilitylist=[], inventory=None, experience=0, price=0):
+        super().__init__(name, race, warband, category, skill, abilitylist, inventory, experience, price)
 
     def to_dict(self, ref):  
         skill = self.skill.to_dict()
@@ -249,6 +250,7 @@ class Hero(Character):
             # 'key': str(self),
             'name': self.name,
             'race': self.race,
+            'warband': self.warband,
             'category': self.category,
             'skill': skill,
             'abilitylist': abilitylist,
@@ -271,6 +273,7 @@ class Hero(Character):
         hero = Hero(
             name=datadict["name"],
             race=datadict["race"],
+            warband=datadict["warband"],
             category=datadict["category"],
             skill=skill,
             abilitylist=abilitylist,
@@ -310,8 +313,8 @@ class Henchman(Character):
     """Henchman is a class with no mutation methods as these are 
     invoked using the Squad class to prevent henchmen 
     to deviate from their peers"""
-    def __init__(self, name, race, category, skill, abilitylist=[], inventory=None, experience=0, price=0):
-        super().__init__(name, race, category, skill, abilitylist, inventory, experience, price)
+    def __init__(self, name, race, warband, category, skill, abilitylist=[], inventory=None, experience=0, price=0):
+        super().__init__(name, race, warband, category, skill, abilitylist, inventory, experience, price)
 
     def to_dict(self, ref):  
         skill = self.skill.to_dict()
@@ -330,6 +333,7 @@ class Henchman(Character):
             # 'key': str(self),
             'name': self.name,
             'race': self.race,
+            'warband': self.warband,
             'category': self.category,
             'skill': skill,
             'abilitylist': abilitylist,
@@ -352,6 +356,7 @@ class Henchman(Character):
         henchman = Henchman(
             name=datadict["name"],
             race=datadict["race"],
+            warband=datadict["warband"],
             category=datadict["category"],
             skill=skill,
             abilitylist=abilitylist,

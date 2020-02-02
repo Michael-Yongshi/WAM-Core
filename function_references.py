@@ -8,68 +8,12 @@ def create_characterref():
 
     # Create data file
     data = {}
-    data["High Elf"] = {}
-    data["High Elf"]["High Elves"] = {}
-
-    # Add data
-    data["High Elf"]["High Elves"]["Loremaster"]={
-        'race': 'High Elf',
-        'warband': 'High Elves',
-        'category': 'Loremaster',
-        'ishero': 'True',
-        "skill": [5, 4, 4, 3, 3, 1, 6, 1, 9, 0],
-        'abilitylist': ["Excellent Sight"],
-        'Inventory': [],
-        'price': '80',
-        'maxcount': '1',
-        'description': 'Loremasters are the most powerful mages in the entire Warhammer world. Their knowledge of the arcane arts and their intensive training at the Tower of Hoeth makes them perfect for leading expeditions into Lustria. They are capable and efficient with years of extensive training and skill at their disposal. Loremasters alone command magic powerful enough to match the might of the mysterious Slann. They delve into the temple cities of the Lizardmen in search of any remaining artifacts of the Old Ones power.'
-    }
-    # data["High Elf"]["High Elves"]["Ranger"]={
-    #     'race': 'High Elf',
-    #     'warband': 'High Elves',
-    #     'category': 'Ranger',
-    #     'ishero': 'True',
-    #     "skill": [5, 4, 4, 3, 3, 1, 6, 1, 8, 0],
-    #     'price': '45',
-    #     'maxcount': '2',
-    #     'desc': 'Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again.'
-    # }
-    # data["High Elf"]["High Elves"]["Sword Warden"]={
-    #     'race': 'High Elf',
-    #     'warband': 'High Elves',
-    #     'category': 'Sword Warden',
-    #     'ishero': 'True',
-    #     "skill": [5, 5, 4, 3, 3, 1, 6, 1, 8, 0],
-    #     'price': '50',
-    #     'maxcount': '2',
-    #     'desc': 'Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster’s personal attendants and protectors.'
-    # }
-    # data["High Elf"]["High Elves"]["Seaguard"]={
-    #     'race': 'High Elf',
-    #     'warband': 'High Elves',
-    #     'category': 'Seaguard',
-    #     'ishero': 'False',
-    #     "skill": [5, 4, 4, 3, 3, 1, 6, 1, 8, 0],
-    #     'price': '35',
-    #     'maxcount': '0',
-    #     'desc': 'Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops.'
-    # }
-    # data["High Elf"]["High Elves"]["Cadet"]={
-    #     'race': 'High Elf',
-    #     'warband': 'High Elves',
-    #     'category': 'Cadet',
-    #     'ishero': 'False',
-    #     "skill": [5, 3, 3, 3, 3, 1, 6, 1, 8, 0],
-    #     'price': '30',
-    #     'maxcount': '5',
-    #     'desc': 'Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships.'
-    # }
 
     print(f"Created characterfile")
     save_json(data, filepath)
 
 
-def add_characterref(race, warband, category, ishero, skill, price, maxcount, description):
+def add_characterref(race, source, category, ishero, skill, abilitylist, inventory, price, maxcount, description):
     # Paths
     folderpath = "database/references/"
     filepath = folderpath + "characters_ref.json"
@@ -83,18 +27,20 @@ def add_characterref(race, warband, category, ishero, skill, price, maxcount, de
     else:
         data[race] = {}
 
-    # Second check if warband already exists
-    if warband in data[race]:
+    # Second check if source already exists
+    if source in data[race]:
         pass
     else:
-        data[race][warband] = {}
+        data[race][source] = {}
 
-    data[race][warband][category]={
+    data[race][source][category]={
         'race': race,
-        'warband': warband,
+        'source': source,
         'category': category,
         'ishero': ishero,
         "skill": skill,
+        'abilitylist': abilitylist,
+        'inventory': inventory,
         'price': price,
         'maxcount': maxcount,
         'description': description
@@ -104,7 +50,7 @@ def add_characterref(race, warband, category, ishero, skill, price, maxcount, de
     save_json(data, filepath)
 
 
-def get_characterref(race, warband, category):
+def get_characterref(race, source, category):
     # Paths
     folderpath = "database/references/"
     filepath = folderpath + "characters_ref.json"
@@ -114,21 +60,24 @@ def get_characterref(race, warband, category):
 
     # First check if race exists
     if race in data:
-        # Second check if warband exists
-        if warband in data[race]:
+        # Second check if source exists
+        if source in data[race]:
             # Third check if character exists
-            if category in data[race][warband]: 
-                characterdict = data[race][warband][category]
+            if category in data[race][source]: 
+                characterdict = data[race][source][category]
             else:
                 print(f"Type:{name} does not exist")
         else:
-            print(f"Warband {warband} does not exist")
+            print(f"source {source} does not exist")
     else:
         print(f"Race {race} does not exist")
 
     print(f"Here is data for {category}")
     print(characterdict)
     return characterdict
+
+
+
 
 def create_itemref():
     # Paths
@@ -233,23 +182,72 @@ def get_itemref(source, item):
     return itemdict
 
 
-
 if __name__ == "__main__":
     create_characterref()
     add_characterref(
         race = "High Elf",
-        warband = "High Elves",
-        category = "Khaine",
+        source = "High Elves",
+        category = "Loremaster",
         ishero = True,
-        skill = [9, 8, 8, 6, 6, 4, 9, 4, 12, 6],
-        price = 999,
+        skill = [5, 4, 4, 3, 3, 1, 6, 1, 9, 0],
+        abilitylist = ["Excellent Sight"],
+        inventory = [],
+        price = 80,
         maxcount = 1,
-        description = "Test"
+        description = "Loremasters are the most powerful mages in the entire Warhammer world. Their knowledge of the arcane arts and their intensive training at the Tower of Hoeth makes them perfect for leading expeditions into Lustria. They are capable and efficient with years of extensive training and skill at their disposal. Loremasters alone command magic powerful enough to match the might of the mysterious Slann. They delve into the temple cities of the Lizardmen in search of any remaining artifacts of the Old Ones power."
+    )
+    add_characterref(
+        race = "High Elf",
+        source = "High Elves",
+        category = "Ranger",
+        ishero = True,
+        skill = [5, 4, 4, 3, 3, 1, 6, 1, 8, 0],
+        abilitylist = ["Excellent Sight"],
+        inventory = [],
+        price = 45,
+        maxcount = 2,
+        description = "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again."
+    )
+    add_characterref(
+        race = "High Elf",
+        source = "High Elves",
+        category = "Sword Warden",
+        ishero = True,
+        skill = [5, 5, 4, 3, 3, 1, 6, 1, 8, 0],
+        abilitylist = ["Excellent Sight"],
+        inventory = [],
+        price = 50,
+        maxcount = 2,
+        description = "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster’s personal attendants and protectors."
+    )
+    add_characterref(
+        race = "High Elf",
+        source = "High Elves",
+        category = "Seaguard",
+        ishero = False,
+        skill = [5, 4, 4, 3, 3, 1, 6, 1, 8, 0],
+        abilitylist = ["Excellent Sight"],
+        inventory = [],
+        price = 35,
+        maxcount = 0,
+        description = "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops."
+    )
+    add_characterref(
+        race = "High Elf",
+        source = "High Elves",
+        category = "Cadet",
+        ishero = False,
+        skill = [5, 3, 3, 3, 3, 1, 5, 1, 8, 0],
+        abilitylist = ["Excellent Sight"],
+        inventory = [],
+        price = 30,
+        maxcount = 5,
+        description = "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
     )
     get_characterref(
-        race = "High Elf", 
-        warband = "High Elves", 
-        category = "Khaine",
+        race = "High Elf",
+        source = "High Elves",
+        category = "Loremaster"
     )
 
     create_itemref()

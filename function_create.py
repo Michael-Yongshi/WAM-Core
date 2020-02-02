@@ -31,214 +31,56 @@ def test_createWarband(wbname, wbrace):
             race="High Elf", 
             source="High Elves",
             category="Loremaster", 
-            # skill=Skill(5,4,4,3,3,1,6,1,9,0), 
-            # abilitylist=[
-            #     Ability(name="High Elven Magic") 
-            #     ], 
-            # inventory=Inventory(itemlist=[
-            #     Item(
-            #         name="Mage staff", 
-            #         category="Melee Weapon",
-            #         skill=Skill(0,0,0,1,0,0,0,0,0,0),
-            #         abilitylist=[
-            #             Ability(name="Concussion", description="Stunned also happens on a roll of 2 on the injury roll."),
-            #             Ability(name="One or Two handed", description="Strength bonus is 1 if used twohanded, no bonus if used one handed.")
-            #             ],
-            #         desc="Mage Staves of Hoeth are forged from the finest Ithilmar, and are works of art that are truly beautiful to behold. They are usually decorated with gems and other precious materials. Only a Loremaster may use a Mage Staff.",
-            #         price=20
-            #         ), 
-            #     Item(
-            #         name="Dagger", 
-            #         category="Melee Weapon",
-            #         abilitylist=[Ability(name="Trouble With Normal Clothing", description="For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save.")],
-            #         price=0
-            #         )
-            #     ]),
-            # experience=20,
-            # price=80
-        ), 
-        Character(
-            name="Hero2", 
+            ), 
+        Character.create_character(
+            name="Hero1", 
             race="High Elf", 
             source="High Elves",
-            category="Swordwarden", 
-            skill=Skill(5,5,4,3,3,1,6,1,8,0), 
-            abilitylist=[
-                Ability("Excellent Sight"), 
-                ], 
-            inventory=Inventory(itemlist=[
-                Item(
-                    name="Sword", 
-                    category="Melee Weapon",
-                    abilitylist=[Ability(name="Parry", description="A sword can parry a single attack.")],
-                    price=10
-                    ), 
-                Item(
-                    name="Dagger", 
-                    category="Melee Weapon",
-                    abilitylist=[Ability(name="Trouble With Normal Clothing", description="For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save.")],
-                    price=0
-                    ),
-                Item(
-                    name="Shield", 
-                    category="Armour",
-                    skill=Skill(0,0,0,0,0,0,0,0,0,1),
-                    price=5
-                    ), 
-                Item(
-                    name="Light Armour", 
-                    category="Armour",
-                    skill=Skill(0,0,0,0,0,0,0,0,0,1),
-                    price=20
-                    )
-                ]),
-            experience=11,
-            price=50
+            category="Sword Warden"
             )
         ]
+        # adding items to heroes
     wbid.squadlist = [
         Squad(
             name="Spearguard", 
             category="Seaguard", 
             henchmanlist=[
-                Character(
+                Character.create_character(
                     name="Spearguard1", 
                     race="High Elf", 
-                    source="High Elves", 
-                    category="Seaguard", 
-                    skill=Skill(5,4,4,3,3,1,6,1,8,0), 
-                    abilitylist=[
-                        # Ability("Excellent Sight"), 
-                    ],
-                    inventory=Inventory(itemlist=[
-                        Item(
-                            name="Spear", 
-                            category="Melee Weapon",
-                            abilitylist=[Ability(name="First Strike", description="A spear allows to strike first even when charged, or evens the odds against other First Strike enabled characters.")],
-                            price=10
-                            ),
-                        Item(
-                            name="Longbow", 
-                            category="Missile Weapon",
-                            distance=30,
-                            abilitylist=[Ability(name="Range", description="A bow with a range of 30 inch.")],
-                            price=15
-                            ),
-                        Item(
-                            name="Dagger", 
-                            category="Melee Weapon",
-                            abilitylist=[Ability(name="Trouble With Normal Clothing", description="For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save.")],
-                            price=0
-                            )
-                        ]),
-                    experience=0,
-                    price=35
+                    source="High Elves",
+                    category="Seaguard"
                     ),
-                Character(
+                Character.create_character(
                     name="Spearguard2", 
                     race="High Elf", 
                     source="High Elves",
-                    category="Seaguard", 
-                    skill=Skill(5,4,4,3,3,1,6,1,8,0), 
-                    abilitylist=[
-                        # Ability("Excellent Sight"), 
-                    ],
-                    inventory=Inventory(itemlist=[
-                        Item(
-                            name="Spear", 
-                            category="Melee Weapon",
-                            abilitylist=[Ability(name="First Strike", description="A spear allows to strike first even when charged, or evens the odds against other First Strike enabled characters.")],
-                            price=10
-                            ),                        
-                        Item(
-                            name="Longbow", 
-                            category="Missile Weapon",
-                            distance=30,
-                            abilitylist=[Ability(name="Range", description="A bow with a range of 30 inch.")],
-                            price=15
-                            ),
-                        Item(
-                            name="Dagger", 
-                            category="Melee Weapon",
-                            abilitylist=[Ability(name="Trouble With Normal Clothing", description="For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save.")],
-                            price=0
-                            )
-                        ]),
-                    experience=0,
-                    price=35
+                    category="Seaguard"
                     )
                 ]
+            # adding items to squad
             ), 
         Squad(
             name="Bladeguard", 
             category="Seaguard", 
             henchmanlist=[
-                Character(
+                Character.create_character(
                     name="Bladeguard1", 
                     race="High Elf", 
                     source="High Elves",
-                    category="Seaguard", 
-                    skill=Skill(5,4,4,3,3,1,6,1,8,0), 
-                    abilitylist=[
-                        # Ability("Excellent Sight"), 
-                    ],
-                    inventory=Inventory(itemlist=[
-                        Item(
-                            name="Greatsword", 
-                            category="Melee Weapon",
-                            skill=Skill(0,0,0,2,0,0,0,0,0,0),
-                            abilitylist=[Ability(name="Last Strike", description="A greatsword will always strike last even when charging, except against other Last Strike enabled characters.")],
-                            price=15
-                            ),                        
-                        Item(
-                            name="Longbow", 
-                            category="Missile Weapon",
-                            distance=30,
-                            abilitylist=[Ability(name="Range", description="A bow with a range of 30 inch.")],
-                            price=15
-                            ),
-                        Item(
-                            name="Dagger", 
-                            category="Melee Weapon",
-                            abilitylist=[Ability(name="Trouble With Normal Clothing", description="For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save.")],
-                            price=0
-                            )
-                        ]),
-                    experience=0,
-                    price=35
+                    category="Seaguard"
                     )
                 ]
-            ), 
+            ),
         Squad(
             name="Cadet Archers", 
             category="Cadet", 
             henchmanlist=[
-                Character(
+                Character.create_character(
                     name="Cadet1", 
                     race="High Elf", 
                     source="High Elves",
                     category="Cadet", 
-                    skill=Skill(5,3,3,3,3,1,5,1,8,0), 
-                    abilitylist=[
-                        # Ability("Excellent Sight"), 
-                    ],
-                    inventory=Inventory(itemlist=[
-                        Item(
-                            name="Longbow", 
-                            category="Missile Weapon",
-                            distance=30,
-                            abilitylist=[Ability(name="Range", description="A bow with a range of 30 inch.")],
-                            price=15
-                            ),
-                        Item(
-                            name="Dagger", 
-                            category="Melee Weapon",
-                            abilitylist=[Ability(name="Trouble With Normal Clothing", description="For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save.")],
-                            price=0
-                            )
-                        ]),
-                    experience=0,
-                    price=30
                     )
                 ]
             )
@@ -246,7 +88,7 @@ def test_createWarband(wbname, wbrace):
     
     # Current gold minus cost of the warband
     startgold = 500
-    wbid.inventory.gold = startgold - wbid.get_warbandprice()
+    # wbid.inventory.gold = startgold - wbid.get_warbandprice()
     # print(wbid.inventory.gold)
     
     # create warband dictionary

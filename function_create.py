@@ -22,16 +22,23 @@ def test_createWarband(wbname, wbrace):
             ]
 
     wbid.inventory.itemlist=[
-        Item(name="Test item", category="Other")
+        Item(name="Test item", source = "manual", category="Other")
         ]
-        
+    
+    hero1 = Character.create_character(
+        name="Hero1", 
+        race="High Elf", 
+        source="High Elves",
+        category="Loremaster", 
+        )
+    hero1.inventory.itemlist = [
+        Item.create_item(
+            name = "Dagger",
+            source = "Core Rules"
+        )
+    ]
     wbid.herolist = [
-        Character.create_character(
-            name="Hero1", 
-            race="High Elf", 
-            source="High Elves",
-            category="Loremaster", 
-            ), 
+        hero1, 
         Character.create_character(
             name="Hero1", 
             race="High Elf", 

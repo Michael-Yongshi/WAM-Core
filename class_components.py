@@ -83,14 +83,15 @@ class Inventory(object):
 
 
 class Item(object):
-    def __init__(self, name, category, distance=0, skill=None, abilitylist=[], price=0, desc=None):
+    def __init__(self, name, source, category, distance=0, skill=None, abilitylist=[], price=0, description=None):
         self.name = name
+        self.source = source
         self.category = category
         self.distance = distance
         self.skill = skill if skill else Skill()
         self.abilitylist = abilitylist
         self.price = price
-        self.desc = desc
+        self.description = description
 
     def to_dict(self, ref):  
         skill = self.skill.to_dict()
@@ -106,12 +107,13 @@ class Item(object):
         data[str(ref)] = {
             # 'key': str(self),
             'name': self.name,
+            'source': self.source,
             'category': self.category,
             'distance': self.distance,
             'skill': skill,
             'abilitylist': abilitylist,
             'price': self.price,
-            'desc': self.desc
+            'description': self.description
         }
         return data
 
@@ -125,14 +127,33 @@ class Item(object):
 
         item = Item(
             name=datadict["name"],
+            source=datadict["source"],
             category=datadict["category"],
-            desc=datadict["desc"],
             skill=skill,
             abilitylist=abilitylist,
-            price=datadict["price"] 
+            price=datadict["price"],
+            description=datadict["description"]
             )
         
         return item
+    @staticmethod
+    def create_item(name, source):
+        # open reference data json file
+        data = open_json("database/references/items_ref.json")
+
+        newitem = Item(
+            name = name,
+            source = source,
+            category = data[source][name].get("category"),
+            distance = data[source][name].get("distance"),
+            skill = data[source][name].get("skill"),
+            abilitylist = data[source][name].get("abilitylist"),
+            price = data[source][name].get("price"),
+            description = data[source][name].get("description")        
+        )
+        
+        return newitem
+
 
 class Skill(object):
     """Default object to assign skill values as a basis for character and item skill values"""

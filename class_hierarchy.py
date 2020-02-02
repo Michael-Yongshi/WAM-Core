@@ -206,7 +206,7 @@ class Character(object):
         self.ishero = ishero
         self.skill = skill
         self.abilitylist = abilitylist
-        self.inventory = inventory
+        self.inventory = inventory if inventory else Inventory()
         self.experience = experience
         self.price = price
         self.maxcount = maxcount

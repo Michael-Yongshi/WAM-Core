@@ -187,9 +187,13 @@ class Squad(object):
         henchmanlist = ditobject.henchmanlist if ditobject.henchmanlist else []
         return len(henchmanlist)
 
+
     def add_henchman(self):
         """adds another henchman character to the squad
         for a new squad checks if character is a henchman sub-class"""
+        # Create a character with the create character method based on the squads characteristics. 
+        # Create a duplicate character if the squad is len(1>)
+
         NotImplemented
 
     def remove_henchman(self):

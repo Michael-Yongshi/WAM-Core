@@ -25,6 +25,7 @@ def test_createWarband(wbname, wbrace):
         Item(name="Test item", source = "manual", category="Other")
         ]
     
+    # Creating heroes and their items from reference templates
     hero1 = Character.create_character(
         name="Hero1", 
         race="High Elf", 
@@ -35,18 +36,27 @@ def test_createWarband(wbname, wbrace):
         Item.create_item(
             name = "Dagger",
             source = "Core Rules"
-        )
-    ]
-    wbid.herolist = [
-        hero1, 
-        Character.create_character(
-            name="Hero1", 
+            )
+        ]
+    hero2 = Character.create_character(
+            name="Hero2", 
             race="High Elf", 
             source="High Elves",
             category="Sword Warden"
             )
+    hero2.inventory.itemlist = [
+        Item.create_item(
+            name = "Dagger",
+            source = "Core Rules"
+            )
         ]
-        # adding items to heroes
+    # adding the heroes to the warband hero list
+    wbid.herolist = [
+        hero1, 
+        hero2,
+        ]
+    
+    
     wbid.squadlist = [
         Squad(
             name="Spearguard", 

@@ -26,41 +26,41 @@ def test_createWarband(wbname, wbrace):
         ]
         
     wbid.herolist = [
-        Hero(
+        Character.create_character(
             name="Hero1", 
             race="High Elf", 
-            warband="High Elves",
+            source="High Elves",
             category="Loremaster", 
-            skill=Skill(5,4,4,3,3,1,6,1,9,0), 
-            abilitylist=[
-                Ability(name="High Elven Magic") 
-                ], 
-            inventory=Inventory(itemlist=[
-                Item(
-                    name="Mage staff", 
-                    category="Melee Weapon",
-                    skill=Skill(0,0,0,1,0,0,0,0,0,0),
-                    abilitylist=[
-                        Ability(name="Concussion", description="Stunned also happens on a roll of 2 on the injury roll."),
-                        Ability(name="One or Two handed", description="Strength bonus is 1 if used twohanded, no bonus if used one handed.")
-                        ],
-                    desc="Mage Staves of Hoeth are forged from the finest Ithilmar, and are works of art that are truly beautiful to behold. They are usually decorated with gems and other precious materials. Only a Loremaster may use a Mage Staff.",
-                    price=20
-                    ), 
-                Item(
-                    name="Dagger", 
-                    category="Melee Weapon",
-                    abilitylist=[Ability(name="Trouble With Normal Clothing", description="For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save.")],
-                    price=0
-                    )
-                ]),
-            experience=20,
-            price=80
-            ), 
-        Hero(
+            # skill=Skill(5,4,4,3,3,1,6,1,9,0), 
+            # abilitylist=[
+            #     Ability(name="High Elven Magic") 
+            #     ], 
+            # inventory=Inventory(itemlist=[
+            #     Item(
+            #         name="Mage staff", 
+            #         category="Melee Weapon",
+            #         skill=Skill(0,0,0,1,0,0,0,0,0,0),
+            #         abilitylist=[
+            #             Ability(name="Concussion", description="Stunned also happens on a roll of 2 on the injury roll."),
+            #             Ability(name="One or Two handed", description="Strength bonus is 1 if used twohanded, no bonus if used one handed.")
+            #             ],
+            #         desc="Mage Staves of Hoeth are forged from the finest Ithilmar, and are works of art that are truly beautiful to behold. They are usually decorated with gems and other precious materials. Only a Loremaster may use a Mage Staff.",
+            #         price=20
+            #         ), 
+            #     Item(
+            #         name="Dagger", 
+            #         category="Melee Weapon",
+            #         abilitylist=[Ability(name="Trouble With Normal Clothing", description="For daggers even default clothing is regarded as armour. Add +1 to the enemy`s armour save.")],
+            #         price=0
+            #         )
+            #     ]),
+            # experience=20,
+            # price=80
+        ), 
+        Character(
             name="Hero2", 
             race="High Elf", 
-            warband="High Elves",
+            source="High Elves",
             category="Swordwarden", 
             skill=Skill(5,5,4,3,3,1,6,1,8,0), 
             abilitylist=[
@@ -101,10 +101,10 @@ def test_createWarband(wbname, wbrace):
             name="Spearguard", 
             category="Seaguard", 
             henchmanlist=[
-                Henchman(
+                Character(
                     name="Spearguard1", 
                     race="High Elf", 
-                    warband="High Elves", 
+                    source="High Elves", 
                     category="Seaguard", 
                     skill=Skill(5,4,4,3,3,1,6,1,8,0), 
                     abilitylist=[
@@ -134,10 +134,10 @@ def test_createWarband(wbname, wbrace):
                     experience=0,
                     price=35
                     ),
-                Henchman(
+                Character(
                     name="Spearguard2", 
                     race="High Elf", 
-                    warband="High Elves",
+                    source="High Elves",
                     category="Seaguard", 
                     skill=Skill(5,4,4,3,3,1,6,1,8,0), 
                     abilitylist=[
@@ -173,10 +173,10 @@ def test_createWarband(wbname, wbrace):
             name="Bladeguard", 
             category="Seaguard", 
             henchmanlist=[
-                Henchman(
+                Character(
                     name="Bladeguard1", 
                     race="High Elf", 
-                    warband="High Elves",
+                    source="High Elves",
                     category="Seaguard", 
                     skill=Skill(5,4,4,3,3,1,6,1,8,0), 
                     abilitylist=[
@@ -213,10 +213,10 @@ def test_createWarband(wbname, wbrace):
             name="Cadet Archers", 
             category="Cadet", 
             henchmanlist=[
-                Henchman(
+                Character(
                     name="Cadet1", 
                     race="High Elf", 
-                    warband="High Elves",
+                    source="High Elves",
                     category="Cadet", 
                     skill=Skill(5,3,3,3,3,1,5,1,8,0), 
                     abilitylist=[

@@ -1,0 +1,52 @@
+{
+    "High Elf": {
+        "High Elves": {
+            "Loremaster": {
+                "race": "High Elf",
+                "warband": "High Elves",
+                "category": "Loremaster",
+                "ishero": "True",
+                "skill": [
+                    5,
+                    4,
+                    4,
+                    3,
+                    3,
+                    1,
+                    6,
+                    1,
+                    9,
+                    0
+                ],
+                "abilitylist": [
+                    "Excellent Sight"
+                ],
+                "Inventory": [],
+                "price": "80",
+                "maxcount": "1",
+                "description": "Loremasters are the most powerful mages in the entire Warhammer world. Their knowledge of the arcane arts and their intensive training at the Tower of Hoeth makes them perfect for leading expeditions into Lustria. They are capable and efficient with years of extensive training and skill at their disposal. Loremasters alone command magic powerful enough to match the might of the mysterious Slann. They delve into the temple cities of the Lizardmen in search of any remaining artifacts of the Old Ones power."
+            },
+            "Khaine": {
+                "race": "High Elf",
+                "warband": "High Elves",
+                "category": "Khaine",
+                "ishero": true,
+                "skill": [
+                    9,
+                    8,
+                    8,
+                    6,
+                    6,
+                    4,
+                    9,
+                    4,
+                    12,
+                    6
+                ],
+                "price": 999,
+                "maxcount": 1,
+                "description": "Test"
+            }
+        }
+    }
+}

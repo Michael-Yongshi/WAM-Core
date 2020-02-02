@@ -196,52 +196,22 @@ class Squad(object):
         """removes a specific henchman character in this squad, by default this is on FIFO basis"""
         NotImplemented
 
-# The following functions are changes to the henchman character, but invoked from the squad in order to maintain sync between the members of a squad
-
-    def add_experience(self):
-        """adds experience to every henchman in the squad"""
-        NotImplemented
-
-    def remove_experience(self):
-        """removes experience from every henchmen in the squad"""
-        NotImplemented
-
-    def add_item(self):
-        """adds an item to every henchman in the squad
-        increases replacecost for the squad by the cost of the item added"""
-        NotImplemented
-
-    def remove_item(self):
-        """removes an item from all henchmen in this squad
-        decreases replacecost for the squad by the cost of the item removed"""
-        NotImplemented
-
-    def add_skill(self):
-        """adds a skill to every henchman in the squad"""
-        NotImplemented
-
-    def remove_skill(self):
-        """removes a skill from every henchmen in the squad"""
-        NotImplemented
-        
-
+       
 class Character(object):
-    def __init__(self, name, race, warband, category, skill, abilitylist=[], inventory=None, experience=0, price=0):
+    def __init__(self, name, race, source, category, ishero, skill, abilitylist=[], inventory=None, experience=0, price=0, maxcount=0, description=None):
         self.name = name
         self.race = race
-        self.warband = warband
+        self.source = source
         self.category = category
+        self.ishero = ishero
         self.skill = skill
         self.abilitylist = abilitylist
         self.inventory = inventory
         self.experience = experience
         self.price = price
-
-
-class Hero(Character):
-    def __init__(self, name, race, warband, category, skill, abilitylist=[], inventory=None, experience=0, price=0):
-        super().__init__(name, race, warband, category, skill, abilitylist, inventory, experience, price)
-
+        self.maxcount = maxcount
+        self.description = description
+    
     def to_dict(self, ref):  
         skill = self.skill.to_dict()
         
@@ -259,13 +229,16 @@ class Hero(Character):
             # 'key': str(self),
             'name': self.name,
             'race': self.race,
-            'warband': self.warband,
+            'source': self.source,
             'category': self.category,
+            'ishero': self.ishero,
             'skill': skill,
             'abilitylist': abilitylist,
             'inventory': inventory,
             'experience': self.experience,
-            'price': self.price
+            'price': self.price,
+            'maxcount': self.maxcount,
+            'description': self.description
         }
         return data
 
@@ -279,100 +252,41 @@ class Hero(Character):
 
         inventory = Inventory.from_dict(datadict["inventory"])
 
-        hero = Hero(
+        data = Character(
             name=datadict["name"],
             race=datadict["race"],
-            warband=datadict["warband"],
+            source=datadict["source"],
             category=datadict["category"],
+            ishero=datadict["ishero"],
             skill=skill,
             abilitylist=abilitylist,
             inventory=inventory,
             experience=datadict["experience"],
-            price=datadict["price"] 
+            price=datadict["price"],
+            maxcount=datadict["maxcount"],
+            description=datadict["description"]
             )
-        
-        return hero
 
-    def add_experience(self):
-        """adds experience to this hero character"""
-        NotImplemented
-
-    def remove_experience(self):
-        """removes experience from this hero"""
-        NotImplemented
-
-    def add_item(self):
-        """adds an item to this hero character"""
-        NotImplemented
-
-    def remove_item(self):
-        """removes an item from this hero"""
-        NotImplemented
-
-    def add_skill(self):
-        """adds a skill to this hero character"""
-        NotImplemented
-
-    def remove_skill(self):
-        """removes a skill from this hero"""
-        NotImplemented
-
-
-class Henchman(Character):
-    """Henchman is a class with no mutation methods as these are 
-    invoked using the Squad class to prevent henchmen 
-    to deviate from their peers"""
-    def __init__(self, name, race, warband, category, skill, abilitylist=[], inventory=None, experience=0, price=0):
-        super().__init__(name, race, warband, category, skill, abilitylist, inventory, experience, price)
-
-    def to_dict(self, ref):  
-        skill = self.skill.to_dict()
-        
-        abilitylist={} 
-        a = 1
-        for ability in self.abilitylist:
-            abilityref = "Ability" + str(a) 
-            abilitylist.update(ability.to_dict(ref=abilityref))
-            a += 1
-
-        inventory = self.inventory.to_dict()
-        
-        data = {}
-        data[str(ref)] = {
-            # 'key': str(self),
-            'name': self.name,
-            'race': self.race,
-            'warband': self.warband,
-            'category': self.category,
-            'skill': skill,
-            'abilitylist': abilitylist,
-            'inventory': inventory,
-            'experience': str(self.experience),
-            'price': self.price
-        }
         return data
-
+    
     @staticmethod
-    def from_dict(datadict):
-        skill = Skill.from_dict(datadict["skill"])
+    def create_character(name, race, source, category):
+        # open reference data json file
+        data = open_json("database/references/characters_ref.json")
+
+        newcharacter = Character(
+            name = name,
+            race = race,
+            source = source,
+            category = category,
+            ishero = data[race][source][category].get("ishero"),
+            inventory = data[race][source][category].get("inventory"),
+            skill = data[race][source][category].get("skill"),
+            abilitylist = data[race][source][category].get("abilitylist"),
+            experience = data[race][source][category].get("experience"),
+            price = data[race][source][category].get("price"),
+            maxcount = data[race][source][category].get("maxcount"),
+            description = data[race][source][category].get("description")        
+        )
         
-        abilitylist = []
-        for ability in datadict["abilitylist"].values():
-            abilitylist += [Ability.from_dict(ability)]
-
-        inventory = Inventory.from_dict(datadict["inventory"])
-
-        henchman = Henchman(
-            name=datadict["name"],
-            race=datadict["race"],
-            warband=datadict["warband"],
-            category=datadict["category"],
-            skill=skill,
-            abilitylist=abilitylist,
-            inventory=inventory,
-            experience=datadict["experience"],
-            price=datadict["price"] 
-            )
-        
-        return henchman
-
+        return newcharacter

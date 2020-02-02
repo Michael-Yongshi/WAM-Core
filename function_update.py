@@ -14,7 +14,7 @@ def test_updateWarband():
 
 
     # add new henchman group of 'test' henchmen
-    wbid.add_squad(name="Bowguard", category="Seaguard")
+    wbid.add_squad(name="Bowguard", race="High Elf", warband="High Elves", category="Seaguard")
 
 
 

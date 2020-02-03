@@ -218,12 +218,12 @@ class Character(object):
     
     def to_dict(self, ref):  
         skill = self.skill.to_dict()
-        
-        abilitylist={} 
+    
+        abilitylist = []
         a = 1
         for ability in self.abilitylist:
             abilityref = "Ability" + str(a) 
-            abilitylist.update(ability.to_dict(ref=abilityref))
+            abilitylist.append(ability.to_dict(ref=abilityref))
             a += 1
 
         inventory = self.inventory.to_dict()
@@ -278,6 +278,26 @@ class Character(object):
         # open reference data json file
         data = open_json("database/references/characters_ref.json")
 
+        skilllist = data[race][source][category].get("skill")
+        skilldict = skilllist[0]
+        newskill = Skill(
+            movement = skilldict["movement"],
+            weapon = skilldict["weapon"],
+            ballistic = skilldict["ballistic"],
+            strength=skilldict["strength"],
+            toughness=skilldict["toughness"],
+            wounds=skilldict["wounds"],
+            initiative=skilldict["initiative"],
+            actions=skilldict["actions"],
+            leadership=skilldict["leadership"],
+            armoursave=skilldict["armoursave"]
+            )
+
+        abilitylist = []
+        for abilitydict in data[race][source][category].get("abilitylist"):
+            abilityobject = Ability(name=abilitydict["name"], description=abilitydict["description"])
+            abilitylist.append(abilityobject)
+
         newcharacter = Character(
             name = name,
             race = race,
@@ -285,12 +305,12 @@ class Character(object):
             category = category,
             ishero = data[race][source][category].get("ishero"),
             inventory = data[race][source][category].get("inventory"),
-            skill = data[race][source][category].get("skill"),
-            abilitylist = data[race][source][category].get("abilitylist"),
+            skill = newskill,
+            abilitylist = abilitylist,
             experience = data[race][source][category].get("experience"),
             price = data[race][source][category].get("price"),
             maxcount = data[race][source][category].get("maxcount"),
             description = data[race][source][category].get("description")        
-        )
+            )
         
         return newcharacter

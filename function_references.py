@@ -33,12 +33,25 @@ def add_characterref(race, source, category, ishero, skill, abilitylist, invento
     else:
         data[race][source] = {}
 
+    skilldict = {
+        "movement": skill[0],
+        "weapon": skill[1],
+        "ballistic": skill[2],
+        "strength": skill[3],
+        "toughness": skill[4],
+        "wounds": skill[5],
+        "initiative": skill[6],
+        "actions": skill[7],
+        "leadership": skill[8],
+        "armoursave": skill[9]
+        },
+
     data[race][source][category]={
         'race': race,
         'source': source,
         'category': category,
         'ishero': ishero,
-        "skill": skill,
+        "skill": skilldict,
         'abilitylist': abilitylist,
         'inventory': inventory,
         'price': price,
@@ -106,11 +119,24 @@ def add_itemref(category, name, distance, skill, abilitylist, price, description
     else:
         data[source] = {}
 
+    skilldict = {
+        "movement": skill[0],
+        "weapon": skill[1],
+        "ballistic": skill[2],
+        "strength": skill[3],
+        "toughness": skill[4],
+        "wounds": skill[5],
+        "initiative": skill[6],
+        "actions": skill[7],
+        "leadership": skill[8],
+        "armoursave": skill[9]
+        },
+
     # Add data
     data[source][name]={
         'category': category,
         'distance': distance,
-        'skill': skill,
+        'skill': skilldict,
         'abilitylist': abilitylist,
         'price': price,
         'description': description
@@ -151,7 +177,7 @@ if __name__ == "__main__":
         category = "Loremaster",
         ishero = True,
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 9, 0],
-        abilitylist = ["Excellent Sight"],
+        abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range."}],
         inventory = [],
         price = 80,
         maxcount = 1,
@@ -163,7 +189,7 @@ if __name__ == "__main__":
         category = "Ranger",
         ishero = True,
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 8, 0],
-        abilitylist = ["Excellent Sight"],
+        abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range."}],
         inventory = [],
         price = 45,
         maxcount = 2,
@@ -175,7 +201,7 @@ if __name__ == "__main__":
         category = "Sword Warden",
         ishero = True,
         skill = [5, 5, 4, 3, 3, 1, 6, 1, 8, 0],
-        abilitylist = ["Excellent Sight"],
+        abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range."}],
         inventory = [],
         price = 50,
         maxcount = 2,
@@ -187,7 +213,7 @@ if __name__ == "__main__":
         category = "Seaguard",
         ishero = False,
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 8, 0],
-        abilitylist = ["Excellent Sight"],
+        abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range."}],
         inventory = [],
         price = 35,
         maxcount = 0,
@@ -199,7 +225,7 @@ if __name__ == "__main__":
         category = "Cadet",
         ishero = False,
         skill = [5, 3, 3, 3, 3, 1, 5, 1, 8, 0],
-        abilitylist = ["Excellent Sight"],
+        abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range."}],
         inventory = [],
         price = 30,
         maxcount = 5,
@@ -228,7 +254,7 @@ if __name__ == "__main__":
         name = "Sword",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        abilitylist = [{"name": "Parry"}],
+        abilitylist = [{"name": "Parry", "description": "Enables a single parry of an attackers hit. Parries when dicethrow is greater than attackers throw."}],
         price = 10,
         description = "A basic Sword."
         )
@@ -248,7 +274,7 @@ if __name__ == "__main__":
         name = "Greatsword",
         distance = 0,
         skill = [0, 0, 0, 2, 0, 0, 0, 0, 0, 0],
-        abilitylist = [{"name": "Last Strike"}],
+        abilitylist = [{"name": "Last Strike", "description": "Disables the wielder to attack first, even when charging."}],
         price = 15,
         description = "A very large sword that strikes slow but powerfull."
         )

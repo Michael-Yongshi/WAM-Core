@@ -141,13 +141,33 @@ class Item(object):
         # open reference data json file
         data = open_json("database/references/items_ref.json")
 
+        skilllist = data[source][name].get("skill")
+        skilldict = skilllist[0]
+        newskill = Skill(
+            movement = skilldict["movement"],
+            weapon = skilldict["weapon"],
+            ballistic = skilldict["ballistic"],
+            strength=skilldict["strength"],
+            toughness=skilldict["toughness"],
+            wounds=skilldict["wounds"],
+            initiative=skilldict["initiative"],
+            actions=skilldict["actions"],
+            leadership=skilldict["leadership"],
+            armoursave=skilldict["armoursave"]
+            )
+
+        abilitylist = []
+        for abilitydict in data[source][name].get("abilitylist"):
+            abilityobject = Ability(name=abilitydict["name"], description=abilitydict["description"])
+            abilitylist.append(abilityobject)
+
         newitem = Item(
             name = name,
             source = source,
             category = data[source][name].get("category"),
             distance = data[source][name].get("distance"),
-            skill = data[source][name].get("skill"),
-            abilitylist = data[source][name].get("abilitylist"),
+            skill = newskill,
+            abilitylist = abilitylist,
             price = data[source][name].get("price"),
             description = data[source][name].get("description")        
         )

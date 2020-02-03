@@ -7,19 +7,24 @@
                 "category": "Loremaster",
                 "ishero": true,
                 "skill": [
-                    5,
-                    4,
-                    4,
-                    3,
-                    3,
-                    1,
-                    6,
-                    1,
-                    9,
-                    0
+                    {
+                        "movement": 5,
+                        "weapon": 4,
+                        "ballistic": 4,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 6,
+                        "actions": 1,
+                        "leadership": 9,
+                        "armoursave": 0
+                    }
                 ],
                 "abilitylist": [
-                    "Excellent Sight"
+                    {
+                        "name": "Excellent Sight",
+                        "description": "Spot hidden objects at double the range."
+                    }
                 ],
                 "inventory": [],
                 "price": 80,
@@ -32,19 +37,24 @@
                 "category": "Ranger",
                 "ishero": true,
                 "skill": [
-                    5,
-                    4,
-                    4,
-                    3,
-                    3,
-                    1,
-                    6,
-                    1,
-                    8,
-                    0
+                    {
+                        "movement": 5,
+                        "weapon": 4,
+                        "ballistic": 4,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 6,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    }
                 ],
                 "abilitylist": [
-                    "Excellent Sight"
+                    {
+                        "name": "Excellent Sight",
+                        "description": "Spot hidden objects at double the range."
+                    }
                 ],
                 "inventory": [],
                 "price": 45,
@@ -57,19 +67,24 @@
                 "category": "Sword Warden",
                 "ishero": true,
                 "skill": [
-                    5,
-                    5,
-                    4,
-                    3,
-                    3,
-                    1,
-                    6,
-                    1,
-                    8,
-                    0
+                    {
+                        "movement": 5,
+                        "weapon": 5,
+                        "ballistic": 4,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 6,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    }
                 ],
                 "abilitylist": [
-                    "Excellent Sight"
+                    {
+                        "name": "Excellent Sight",
+                        "description": "Spot hidden objects at double the range."
+                    }
                 ],
                 "inventory": [],
                 "price": 50,
@@ -82,19 +97,24 @@
                 "category": "Seaguard",
                 "ishero": false,
                 "skill": [
-                    5,
-                    4,
-                    4,
-                    3,
-                    3,
-                    1,
-                    6,
-                    1,
-                    8,
-                    0
+                    {
+                        "movement": 5,
+                        "weapon": 4,
+                        "ballistic": 4,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 6,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    }
                 ],
                 "abilitylist": [
-                    "Excellent Sight"
+                    {
+                        "name": "Excellent Sight",
+                        "description": "Spot hidden objects at double the range."
+                    }
                 ],
                 "inventory": [],
                 "price": 35,
@@ -107,19 +127,24 @@
                 "category": "Cadet",
                 "ishero": false,
                 "skill": [
-                    5,
-                    3,
-                    3,
-                    3,
-                    3,
-                    1,
-                    5,
-                    1,
-                    8,
-                    0
+                    {
+                        "movement": 5,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 5,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    }
                 ],
                 "abilitylist": [
-                    "Excellent Sight"
+                    {
+                        "name": "Excellent Sight",
+                        "description": "Spot hidden objects at double the range."
+                    }
                 ],
                 "inventory": [],
                 "price": 30,

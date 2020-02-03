@@ -4,16 +4,18 @@
             "category": "Melee Weapon",
             "distance": 0,
             "skill": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+                {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                }
             ],
             "abilitylist": [],
             "price": 2,
@@ -23,20 +25,23 @@
             "category": "Melee Weapon",
             "distance": 0,
             "skill": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+                {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                }
             ],
             "abilitylist": [
                 {
-                    "name": "Parry"
+                    "name": "Parry",
+                    "description": "Enables a single parry of an attackers hit. Parries when dicethrow is greater than attackers throw."
                 }
             ],
             "price": 10,
@@ -46,16 +51,18 @@
             "category": "Melee Weapon",
             "distance": 0,
             "skill": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+                {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                }
             ],
             "abilitylist": [
                 {
@@ -70,20 +77,23 @@
             "category": "Melee Weapon",
             "distance": 0,
             "skill": [
-                0,
-                0,
-                0,
-                2,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+                {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 2,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                }
             ],
             "abilitylist": [
                 {
-                    "name": "Last Strike"
+                    "name": "Last Strike",
+                    "description": "Disables the wielder to attack first, even when charging."
                 }
             ],
             "price": 15,
@@ -93,16 +103,18 @@
             "category": "Melee Weapon",
             "distance": 0,
             "skill": [
-                0,
-                0,
-                0,
-                1,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+                {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 1,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                }
             ],
             "abilitylist": [
                 {
@@ -121,16 +133,18 @@
             "category": "Missile Weapon",
             "distance": 16,
             "skill": [
-                0,
-                0,
-                0,
-                3,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+                {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 3,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                }
             ],
             "abilitylist": [],
             "price": 10,
@@ -140,16 +154,18 @@
             "category": "Missile Weapon",
             "distance": 30,
             "skill": [
-                0,
-                0,
-                0,
-                3,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+                {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 3,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                }
             ],
             "abilitylist": [],
             "price": 15,
@@ -159,16 +175,18 @@
             "category": "Armour & Protection",
             "distance": 0,
             "skill": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                1
+                {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 1
+                }
             ],
             "abilitylist": [],
             "price": 20,
@@ -178,16 +196,18 @@
             "category": "Armour & Protection",
             "distance": 0,
             "skill": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                1
+                {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 1
+                }
             ],
             "abilitylist": [],
             "price": 20,

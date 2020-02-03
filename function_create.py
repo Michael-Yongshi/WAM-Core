@@ -12,7 +12,7 @@ def test_createWarband(wbname, wbrace):
         )
     # print(wbid)
 
-    # insert details of warband
+    # insert rules of warband
     wbid.rulelist=[
             Rule(name="Excellent Sight", description="Elves have eyesight unmatched by mere humans. Elves spot Hidden enemies from two times as far away as other warriors (ie, twice their Initiative value in inches)."), 
             Rule(name="Haughty", description="The High Elves are a very proud and noble race. A High Elf Warband may never include hired swords that are not of High Elven blood, nor can they use any equipment of Dwarf origin. This includes Gromril weapons and armour."),
@@ -21,6 +21,7 @@ def test_createWarband(wbname, wbrace):
             Rule(name="Resolve", description="The High Elves have been fighting the Dark Elves for countless centuries. When fighting their dark kin the High Elves are driven by unwavering determination. They are considered to have a Leadership of 10 when taking Rout Tests against the Dark Elves. In addition, High Elves can never choose to voluntarily Rout as they must stop their evil kin at any cost.")
             ]
 
+    # Manually adding an item
     wbid.inventory.itemlist=[
         Item(name="Test item", source = "manual", category="Other")
         ]

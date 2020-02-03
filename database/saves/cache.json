@@ -44,7 +44,7 @@
                     "leadership": 0,
                     "armoursave": 0
                 },
-                "abilitylist": {},
+                "abilitylist": [],
                 "price": 0,
                 "description": null
             }
@@ -71,10 +71,8 @@
             },
             "abilitylist": [
                 {
-                    "Ability1": {
-                        "name": "Excellent Sight",
-                        "description": "Spot hidden objects at double the range."
-                    }
+                    "name": "Excellent Sight",
+                    "description": "Spot hidden objects at double the range."
                 }
             ],
             "inventory": {
@@ -98,7 +96,7 @@
                             "leadership": 0,
                             "armoursave": 0
                         },
-                        "abilitylist": {},
+                        "abilitylist": [],
                         "price": 2,
                         "description": "A basic dagger."
                     },
@@ -119,16 +117,16 @@
                             "leadership": 0,
                             "armoursave": 0
                         },
-                        "abilitylist": {
-                            "Ability1": {
+                        "abilitylist": [
+                            {
                                 "name": "Handiness",
                                 "description": "Weapon can be wielded in one hand or in both. Strength modifier only counts if wielded twohanded."
                             },
-                            "Ability2": {
+                            {
                                 "name": "Concussion",
                                 "description": "Stunned happens also on a trow of 2 at the injury roll."
                             }
-                        },
+                        ],
                         "price": 20,
                         "description": "A staff used by mages."
                     }
@@ -159,10 +157,8 @@
             },
             "abilitylist": [
                 {
-                    "Ability1": {
-                        "name": "Excellent Sight",
-                        "description": "Spot hidden objects at double the range."
-                    }
+                    "name": "Excellent Sight",
+                    "description": "Spot hidden objects at double the range."
                 }
             ],
             "inventory": {
@@ -186,7 +182,7 @@
                             "leadership": 0,
                             "armoursave": 0
                         },
-                        "abilitylist": {},
+                        "abilitylist": [],
                         "price": 2,
                         "description": "A basic dagger."
                     },
@@ -207,12 +203,12 @@
                             "leadership": 0,
                             "armoursave": 0
                         },
-                        "abilitylist": {
-                            "Ability1": {
+                        "abilitylist": [
+                            {
                                 "name": "Parry",
                                 "description": "Enables a single parry of an attackers hit. Parries when dicethrow is greater than attackers throw."
                             }
-                        },
+                        ],
                         "price": 10,
                         "description": "A basic Sword."
                     },
@@ -233,7 +229,7 @@
                             "leadership": 0,
                             "armoursave": 1
                         },
-                        "abilitylist": {},
+                        "abilitylist": [],
                         "price": 20,
                         "description": "Some lightweighted armour."
                     },
@@ -254,7 +250,7 @@
                             "leadership": 0,
                             "armoursave": 1
                         },
-                        "abilitylist": {},
+                        "abilitylist": [],
                         "price": 20,
                         "description": "A basic shield."
                     }
@@ -264,6 +260,44 @@
             "price": 50,
             "maxcount": 2,
             "description": "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster\u2019s personal attendants and protectors."
+        },
+        "Hero3": {
+            "name": "Hero3",
+            "race": "High Elf",
+            "source": "High Elves",
+            "category": "Khaine",
+            "ishero": true,
+            "skill": {
+                "movement": 6,
+                "weapon": 6,
+                "ballistic": 6,
+                "strength": 6,
+                "toughness": 6,
+                "wounds": 6,
+                "initiative": 6,
+                "actions": 6,
+                "leadership": 6,
+                "armoursave": 6
+            },
+            "abilitylist": [
+                {
+                    "name": "Excellent Sight",
+                    "description": "Spot hidden objects at double the range."
+                },
+                {
+                    "name": "Fear",
+                    "description": "Spreads fear in nearby enemies."
+                }
+            ],
+            "inventory": {
+                "gold": 0,
+                "wyrd": 0,
+                "itemlist": {}
+            },
+            "experience": null,
+            "price": 30,
+            "maxcount": 5,
+            "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
         }
     },
     "squadlist": {
@@ -272,7 +306,7 @@
             "category": "Seaguard",
             "henchmanlist": {
                 "Henchman1": {
-                    "name": "Spearguard1",
+                    "name": "Spearguard",
                     "race": "High Elf",
                     "source": "High Elves",
                     "category": "Seaguard",
@@ -291,16 +325,62 @@
                     },
                     "abilitylist": [
                         {
-                            "Ability1": {
-                                "name": "Excellent Sight",
-                                "description": "Spot hidden objects at double the range."
-                            }
+                            "name": "Excellent Sight",
+                            "description": "Spot hidden objects at double the range."
                         }
                     ],
                     "inventory": {
                         "gold": 0,
                         "wyrd": 0,
-                        "itemlist": {}
+                        "itemlist": {
+                            "Item1": {
+                                "name": "Dagger",
+                                "source": "Core Rules",
+                                "category": "Melee Weapon",
+                                "distance": 0,
+                                "skill": {
+                                    "movement": 0,
+                                    "weapon": 0,
+                                    "ballistic": 0,
+                                    "strength": 0,
+                                    "toughness": 0,
+                                    "wounds": 0,
+                                    "initiative": 0,
+                                    "actions": 0,
+                                    "leadership": 0,
+                                    "armoursave": 0
+                                },
+                                "abilitylist": [],
+                                "price": 2,
+                                "description": "A basic dagger."
+                            },
+                            "Item2": {
+                                "name": "Spear",
+                                "source": "Core Rules",
+                                "category": "Melee Weapon",
+                                "distance": 0,
+                                "skill": {
+                                    "movement": 0,
+                                    "weapon": 0,
+                                    "ballistic": 0,
+                                    "strength": 0,
+                                    "toughness": 0,
+                                    "wounds": 0,
+                                    "initiative": 0,
+                                    "actions": 0,
+                                    "leadership": 0,
+                                    "armoursave": 0
+                                },
+                                "abilitylist": [
+                                    {
+                                        "name": "First Strike",
+                                        "description": "Enables the wielder to always attack first, even when charged."
+                                    }
+                                ],
+                                "price": 10,
+                                "description": "A basic Spear."
+                            }
+                        }
                     },
                     "experience": null,
                     "price": 35,
@@ -308,7 +388,7 @@
                     "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops."
                 },
                 "Henchman2": {
-                    "name": "Spearguard2",
+                    "name": "Spearguard",
                     "race": "High Elf",
                     "source": "High Elves",
                     "category": "Seaguard",
@@ -327,16 +407,62 @@
                     },
                     "abilitylist": [
                         {
-                            "Ability1": {
-                                "name": "Excellent Sight",
-                                "description": "Spot hidden objects at double the range."
-                            }
+                            "name": "Excellent Sight",
+                            "description": "Spot hidden objects at double the range."
                         }
                     ],
                     "inventory": {
                         "gold": 0,
                         "wyrd": 0,
-                        "itemlist": {}
+                        "itemlist": {
+                            "Item1": {
+                                "name": "Dagger",
+                                "source": "Core Rules",
+                                "category": "Melee Weapon",
+                                "distance": 0,
+                                "skill": {
+                                    "movement": 0,
+                                    "weapon": 0,
+                                    "ballistic": 0,
+                                    "strength": 0,
+                                    "toughness": 0,
+                                    "wounds": 0,
+                                    "initiative": 0,
+                                    "actions": 0,
+                                    "leadership": 0,
+                                    "armoursave": 0
+                                },
+                                "abilitylist": [],
+                                "price": 2,
+                                "description": "A basic dagger."
+                            },
+                            "Item2": {
+                                "name": "Spear",
+                                "source": "Core Rules",
+                                "category": "Melee Weapon",
+                                "distance": 0,
+                                "skill": {
+                                    "movement": 0,
+                                    "weapon": 0,
+                                    "ballistic": 0,
+                                    "strength": 0,
+                                    "toughness": 0,
+                                    "wounds": 0,
+                                    "initiative": 0,
+                                    "actions": 0,
+                                    "leadership": 0,
+                                    "armoursave": 0
+                                },
+                                "abilitylist": [
+                                    {
+                                        "name": "First Strike",
+                                        "description": "Enables the wielder to always attack first, even when charged."
+                                    }
+                                ],
+                                "price": 10,
+                                "description": "A basic Spear."
+                            }
+                        }
                     },
                     "experience": null,
                     "price": 35,
@@ -350,7 +476,7 @@
             "category": "Seaguard",
             "henchmanlist": {
                 "Henchman1": {
-                    "name": "Bladeguard1",
+                    "name": "Bladeguard",
                     "race": "High Elf",
                     "source": "High Elves",
                     "category": "Seaguard",
@@ -369,16 +495,62 @@
                     },
                     "abilitylist": [
                         {
-                            "Ability1": {
-                                "name": "Excellent Sight",
-                                "description": "Spot hidden objects at double the range."
-                            }
+                            "name": "Excellent Sight",
+                            "description": "Spot hidden objects at double the range."
                         }
                     ],
                     "inventory": {
                         "gold": 0,
                         "wyrd": 0,
-                        "itemlist": {}
+                        "itemlist": {
+                            "Item1": {
+                                "name": "Dagger",
+                                "source": "Core Rules",
+                                "category": "Melee Weapon",
+                                "distance": 0,
+                                "skill": {
+                                    "movement": 0,
+                                    "weapon": 0,
+                                    "ballistic": 0,
+                                    "strength": 0,
+                                    "toughness": 0,
+                                    "wounds": 0,
+                                    "initiative": 0,
+                                    "actions": 0,
+                                    "leadership": 0,
+                                    "armoursave": 0
+                                },
+                                "abilitylist": [],
+                                "price": 2,
+                                "description": "A basic dagger."
+                            },
+                            "Item2": {
+                                "name": "Greatsword",
+                                "source": "Core Rules",
+                                "category": "Melee Weapon",
+                                "distance": 0,
+                                "skill": {
+                                    "movement": 0,
+                                    "weapon": 0,
+                                    "ballistic": 0,
+                                    "strength": 2,
+                                    "toughness": 0,
+                                    "wounds": 0,
+                                    "initiative": 0,
+                                    "actions": 0,
+                                    "leadership": 0,
+                                    "armoursave": 0
+                                },
+                                "abilitylist": [
+                                    {
+                                        "name": "Last Strike",
+                                        "description": "Disables the wielder to attack first, even when charging."
+                                    }
+                                ],
+                                "price": 15,
+                                "description": "A very large sword that strikes slow but powerfull."
+                            }
+                        }
                     },
                     "experience": null,
                     "price": 35,
@@ -388,11 +560,11 @@
             }
         },
         "squad3": {
-            "name": "Cadet Archers",
+            "name": "Cadet",
             "category": "Cadet",
             "henchmanlist": {
                 "Henchman1": {
-                    "name": "Cadet1",
+                    "name": "Cadet",
                     "race": "High Elf",
                     "source": "High Elves",
                     "category": "Cadet",
@@ -411,16 +583,57 @@
                     },
                     "abilitylist": [
                         {
-                            "Ability1": {
-                                "name": "Excellent Sight",
-                                "description": "Spot hidden objects at double the range."
-                            }
+                            "name": "Excellent Sight",
+                            "description": "Spot hidden objects at double the range."
                         }
                     ],
                     "inventory": {
                         "gold": 0,
                         "wyrd": 0,
-                        "itemlist": {}
+                        "itemlist": {
+                            "Item1": {
+                                "name": "Dagger",
+                                "source": "Core Rules",
+                                "category": "Melee Weapon",
+                                "distance": 0,
+                                "skill": {
+                                    "movement": 0,
+                                    "weapon": 0,
+                                    "ballistic": 0,
+                                    "strength": 0,
+                                    "toughness": 0,
+                                    "wounds": 0,
+                                    "initiative": 0,
+                                    "actions": 0,
+                                    "leadership": 0,
+                                    "armoursave": 0
+                                },
+                                "abilitylist": [],
+                                "price": 2,
+                                "description": "A basic dagger."
+                            },
+                            "Item2": {
+                                "name": "Long Bow",
+                                "source": "Core Rules",
+                                "category": "Missile Weapon",
+                                "distance": 30,
+                                "skill": {
+                                    "movement": 0,
+                                    "weapon": 0,
+                                    "ballistic": 0,
+                                    "strength": 3,
+                                    "toughness": 0,
+                                    "wounds": 0,
+                                    "initiative": 0,
+                                    "actions": 0,
+                                    "leadership": 0,
+                                    "armoursave": 0
+                                },
+                                "abilitylist": [],
+                                "price": 15,
+                                "description": "A Long bow."
+                            }
+                        }
                     },
                     "experience": null,
                     "price": 30,

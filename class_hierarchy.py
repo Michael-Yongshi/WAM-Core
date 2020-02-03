@@ -61,7 +61,7 @@ class Warband(object):
 
         herolist = []
         for hero in datadict["herolist"].values():
-            herolist += [Hero.from_dict(hero)]
+            herolist += [Character.from_dict(hero)]
 
         squadlist = []
         for squad in datadict["squadlist"].values():
@@ -172,7 +172,7 @@ class Squad(object):
     def from_dict(datadict):
         henchmanlist = []
         for henchman in datadict["henchmanlist"].values():
-            henchmanlist += [Henchman.from_dict(henchman)]
+            henchmanlist += [Character.from_dict(henchman)]
 
         squad = Squad(
             name=datadict["name"],
@@ -181,6 +181,38 @@ class Squad(object):
             )
 
         return squad
+
+    @staticmethod
+    def create_squad(name, race, source, category, number):
+        """Create a new squad with the given parameters and creates the amount of henchman determined by the number parameter"""
+        
+        newsquad = Squad(
+            name = name,
+            category = category,
+            henchmanlist = []
+            )
+
+        for henchman in range(0, number):
+            newhenchman = Character.create_character(
+                name = name,
+                race = race,
+                source = source,
+                category = category      
+                )
+            newsquad.henchmanlist.append(newhenchman)
+        
+        return newsquad
+
+    def equip_squad(self, name, source):
+        """Basically runs a create item method for every henchman in this squad"""
+
+        newitem = Item.create_item(
+            name = name,  
+            source = source
+        )
+
+        for henchman in self.henchmanlist:
+            henchman.inventory.itemlist.append(newitem)
 
 
     def get_totalhenchman(ditobject):
@@ -222,8 +254,7 @@ class Character(object):
         abilitylist = []
         a = 1
         for ability in self.abilitylist:
-            abilityref = "Ability" + str(a) 
-            abilitylist.append(ability.to_dict(ref=abilityref))
+            abilitylist.append(ability.to_dict())
             a += 1
 
         inventory = self.inventory.to_dict()
@@ -251,7 +282,7 @@ class Character(object):
         skill = Skill.from_dict(datadict["skill"])
         
         abilitylist = []
-        for ability in datadict["abilitylist"].values():
+        for ability in datadict["abilitylist"]:
             abilitylist += [Ability.from_dict(ability)]
 
         inventory = Inventory.from_dict(datadict["inventory"])

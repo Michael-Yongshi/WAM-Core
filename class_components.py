@@ -96,11 +96,10 @@ class Item(object):
     def to_dict(self, ref):  
         skill = self.skill.to_dict()
         
-        abilitylist={}
+        abilitylist=[]
         a = 1
         for ability in self.abilitylist:
-            abilityref = "Ability" + str(a) # to make sure it has a unique key
-            abilitylist.update(ability.to_dict(ref=abilityref))
+            abilitylist.append(ability.to_dict())
             a += 1        
         
         data = {}
@@ -122,7 +121,7 @@ class Item(object):
         skill = Skill.from_dict(datadict["skill"])
         
         abilitylist = []
-        for ability in datadict["abilitylist"].values():
+        for ability in datadict["abilitylist"]:
             abilitylist += [Ability.from_dict(ability)]
 
         item = Item(
@@ -228,9 +227,8 @@ class Ability(object):
         self.name = name
         self.description = description
 
-    def to_dict(self, ref):  
-        data = {}
-        data[str(ref)] = {
+    def to_dict(self):  
+        data = {
             # 'key': str(self),
             'name': self.name,
             'description': self.description

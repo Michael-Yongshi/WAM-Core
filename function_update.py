@@ -13,8 +13,21 @@ def test_updateWarband():
 
 
 
-    # add new henchman group of 'test' henchmen
-    wbid.add_squad(name="Bowguard", race="High Elf", warband="High Elves", category="Seaguard")
+    # Create Squads and the henchmen within
+    squad1 = Squad.create_squad(
+        name = "Cadet",
+        race = "High Elf",
+        source = 'High Elves',
+        category = "Cadet",
+        number = 1
+        )
+    
+    # Adding items to the squads
+    squad1.equip_squad(name = "Dagger", source = "Core Rules")
+    squad1.equip_squad(name = "Long Bow", source = "Core Rules")
+
+    # adding the squads to the squadlist
+    wbid.squadlist.append(squad1)
 
 
 

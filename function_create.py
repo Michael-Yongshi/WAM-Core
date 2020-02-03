@@ -12,7 +12,7 @@ def test_createWarband(wbname, wbrace):
         )
     # print(wbid)
 
-    # insert rules of warband
+    # Manually adding rules of warband
     wbid.rulelist=[
             Rule(name="Excellent Sight", description="Elves have eyesight unmatched by mere humans. Elves spot Hidden enemies from two times as far away as other warriors (ie, twice their Initiative value in inches)."), 
             Rule(name="Haughty", description="The High Elves are a very proud and noble race. A High Elf Warband may never include hired swords that are not of High Elven blood, nor can they use any equipment of Dwarf origin. This includes Gromril weapons and armour."),
@@ -26,100 +26,78 @@ def test_createWarband(wbname, wbrace):
         Item(name="Test item", source = "manual", category="Other")
         ]
     
-    # Creating heroes and their items from reference templates
+    # Creating heroes
     hero1 = Character.create_character(
         name="Hero1", 
         race="High Elf", 
         source="High Elves",
         category="Loremaster", 
         )
-    hero1.inventory.itemlist = [
-        Item.create_item(
-            name = "Dagger",
-            source = "Core Rules"
-            ),
-        Item.create_item(
-            name = "Mage Staff",
-            source = "Core Rules"
-            )
-        ]
+
     hero2 = Character.create_character(
             name="Hero2", 
             race="High Elf", 
             source="High Elves",
             category="Sword Warden"
             )
-    hero2.inventory.itemlist = [
-        Item.create_item(
-            name = "Dagger",
-            source = "Core Rules"
-            ),
-        Item.create_item(
-            name = "Sword",
-            source = "Core Rules"
-            ),
-        Item.create_item(
-            name = "Light Armour",
-            source = "Core Rules"
-            ),
-        Item.create_item(
-            name = "Shield",
-            source = "Core Rules"
+    
+    hero3 = Character.create_character(
+            name="Hero3", 
+            race="High Elf", 
+            source="High Elves",
+            category="Khaine"
             )
+
+    # Adding items to heroes
+    hero1.inventory.itemlist = [
+        Item.create_item(name = "Dagger", source = "Core Rules"),
+        Item.create_item(name = "Mage Staff", source = "Core Rules")
         ]
+
+    hero2.inventory.itemlist = [
+        Item.create_item(name = "Dagger", source = "Core Rules"),
+        Item.create_item(name = "Sword", source = "Core Rules"),
+        Item.create_item(name = "Light Armour", source = "Core Rules"),
+        Item.create_item(name = "Shield", source = "Core Rules")
+        ]
+
     # adding the heroes to the warband hero list
     wbid.herolist = [
         hero1, 
         hero2,
+        hero3
         ]
     
+    # Create Squads and the henchmen within
+    squad1 = Squad.create_squad(
+        name = "Spearguard",
+        race = "High Elf",
+        source = 'High Elves',
+        category = "Seaguard",
+        number = 2
+        )
     
+    squad2 = Squad.create_squad(
+        name = "Bladeguard",
+        race = "High Elf",
+        source = 'High Elves',
+        category = "Seaguard",
+        number = 1
+        )
+
+    # Adding items to the squads
+    squad1.equip_squad(name = "Dagger", source = "Core Rules")
+    squad1.equip_squad(name = "Spear", source = "Core Rules")
+
+    squad2.equip_squad(name = "Dagger", source = "Core Rules")
+    squad2.equip_squad(name = "Greatsword", source = "Core Rules")
+
+    # adding the squads to the squadlist
     wbid.squadlist = [
-        Squad(
-            name="Spearguard", 
-            category="Seaguard", 
-            henchmanlist=[
-                Character.create_character(
-                    name="Spearguard1", 
-                    race="High Elf", 
-                    source="High Elves",
-                    category="Seaguard"
-                    ),
-                Character.create_character(
-                    name="Spearguard2", 
-                    race="High Elf", 
-                    source="High Elves",
-                    category="Seaguard"
-                    )
-                ]
-            # adding items to squad
-            ), 
-        Squad(
-            name="Bladeguard", 
-            category="Seaguard", 
-            henchmanlist=[
-                Character.create_character(
-                    name="Bladeguard1", 
-                    race="High Elf", 
-                    source="High Elves",
-                    category="Seaguard"
-                    )
-                ]
-            ),
-        Squad(
-            name="Cadet Archers", 
-            category="Cadet", 
-            henchmanlist=[
-                Character.create_character(
-                    name="Cadet1", 
-                    race="High Elf", 
-                    source="High Elves",
-                    category="Cadet", 
-                    )
-                ]
-            )
+        squad1,
+        squad2
         ]
-    
+
     # Current gold minus cost of the warband
     startgold = 500
     # wbid.inventory.gold = startgold - wbid.get_warbandprice()

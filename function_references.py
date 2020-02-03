@@ -231,6 +231,18 @@ if __name__ == "__main__":
         maxcount = 5,
         description = "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
     )
+    add_characterref(
+        race = "High Elf",
+        source = "High Elves",
+        category = "Khaine",
+        ishero = True,
+        skill = [6, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range."}, {"name": "Fear", "description": "Spreads fear in nearby enemies."}],
+        inventory = [],
+        price = 30,
+        maxcount = 5,
+        description = "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+    )
     get_characterref(
         race = "High Elf",
         source = "High Elves",

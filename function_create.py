@@ -36,6 +36,10 @@ def test_createWarband(wbname, wbrace):
         Item.create_item(
             name = "Dagger",
             source = "Core Rules"
+            ),
+        Item.create_item(
+            name = "Mage Staff",
+            source = "Core Rules"
             )
         ]
     hero2 = Character.create_character(
@@ -47,6 +51,18 @@ def test_createWarband(wbname, wbrace):
     hero2.inventory.itemlist = [
         Item.create_item(
             name = "Dagger",
+            source = "Core Rules"
+            ),
+        Item.create_item(
+            name = "Sword",
+            source = "Core Rules"
+            ),
+        Item.create_item(
+            name = "Light Armour",
+            source = "Core Rules"
+            ),
+        Item.create_item(
+            name = "Shield",
             source = "Core Rules"
             )
         ]

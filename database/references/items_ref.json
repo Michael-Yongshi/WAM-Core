@@ -1,50 +1,197 @@
 {
     "Core Rules": {
         "Dagger": {
-            "name": "Dagger",
             "category": "Melee Weapon",
             "distance": 0,
-            "skill": {
-                "movement": 0,
-                "weapon": 0,
-                "ballistic": 0,
-                "strength": 0,
-                "toughness": 0,
-                "wounds": 0,
-                "initiative": 0,
-                "actions": 0,
-                "leadership": 0,
-                "armoursave": 0
-            },
-            "abilitylist": {
-                "Ability1": {
-                    "name": "Everything is Armour",
-                    "description": null
-                }
-            },
-            "price": 2,
-            "desc": "A basic dagger. Everyone character starts with one, unless unable to."
-        },
-        "Sword of Khaine": {
-            "category": "Melee Weapon",
-            "distance": 5,
             "skill": [
                 0,
-                2,
                 0,
-                2,
                 0,
-                2,
                 0,
-                2,
-                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "abilitylist": [],
+            "price": 2,
+            "description": "A basic dagger."
+        },
+        "Sword": {
+            "category": "Melee Weapon",
+            "distance": 0,
+            "skill": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 0
             ],
             "abilitylist": [
-                "Dispel"
+                {
+                    "name": "Parry"
+                }
             ],
-            "price": 999,
-            "description": "The sword of Khaine, when used at a range of maximum 5 inch use missile combat stats and process."
+            "price": 10,
+            "description": "A basic Sword."
+        },
+        "Spear": {
+            "category": "Melee Weapon",
+            "distance": 0,
+            "skill": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "abilitylist": [
+                {
+                    "name": "First Strike",
+                    "description": "Enables the wielder to always attack first, even when charged."
+                }
+            ],
+            "price": 10,
+            "description": "A basic Spear."
+        },
+        "Greatsword": {
+            "category": "Melee Weapon",
+            "distance": 0,
+            "skill": [
+                0,
+                0,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "abilitylist": [
+                {
+                    "name": "Last Strike"
+                }
+            ],
+            "price": 15,
+            "description": "A very large sword that strikes slow but powerfull."
+        },
+        "Mage Staff": {
+            "category": "Melee Weapon",
+            "distance": 0,
+            "skill": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "abilitylist": [
+                {
+                    "name": "Handiness",
+                    "description": "Weapon can be wielded in one hand or in both. Strength modifier only counts if wielded twohanded."
+                },
+                {
+                    "name": "Concussion",
+                    "description": "Stunned happens also on a trow of 2 at the injury roll."
+                }
+            ],
+            "price": 20,
+            "description": "A staff used by mages."
+        },
+        "Bow": {
+            "category": "Missile Weapon",
+            "distance": 16,
+            "skill": [
+                0,
+                0,
+                0,
+                3,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "abilitylist": [],
+            "price": 10,
+            "description": "A basic bow."
+        },
+        "Long Bow": {
+            "category": "Missile Weapon",
+            "distance": 30,
+            "skill": [
+                0,
+                0,
+                0,
+                3,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "abilitylist": [],
+            "price": 15,
+            "description": "A Long bow."
+        },
+        "Light Armour": {
+            "category": "Armour & Protection",
+            "distance": 0,
+            "skill": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+            ],
+            "abilitylist": [],
+            "price": 20,
+            "description": "Some lightweighted armour."
+        },
+        "Shield": {
+            "category": "Armour & Protection",
+            "distance": 0,
+            "skill": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+            ],
+            "abilitylist": [],
+            "price": 20,
+            "description": "A basic shield."
         }
     }
 }

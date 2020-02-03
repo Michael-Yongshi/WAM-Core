@@ -88,45 +88,6 @@ def create_itemref():
     data = {}
     data["Core Rules"] = {}
 
-    # Create data objects
-    itemobject = Item(
-        name = "Dagger",
-        category = "Melee Weapon",
-        distance = 0,
-        skill = Skill(0,0,0,0,0,0,0,0,0),
-        abilitylist = [Ability(name="Everything is Armour")],
-        price = 2,
-        desc = "A basic dagger. Everyone character starts with one, unless unable to." 
-    )
-    itemdict = itemobject.to_dict(itemobject.name)
-    data["Core Rules"].update(itemdict)
-    
-    # data["Core Rules"]['Dagger'] = {
-    #     'name': "Dagger",
-    #     'category': 'Melee Weapon',
-    #     'distance': 0,
-    #     'skill': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    #     'abilitylist': ["Everything Is Armour"],
-    #     'price': 2,
-    #     'description': "A basic dagger where any character starts with"
-    # }
-    # data["Core Rules"]['Bow'] = {
-    #     'category': 'Missile weapon',
-    #     'distance': 16,
-    #     'skill': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    #     'abilitylist': ["Everything Is Armour"],
-    #     'price': 10,
-    #     'description': 'A simple bow with a range of 16 inch'
-    # }
-    # data["Core Rules"]['Light Armour'] = {
-    #     'category': 'Armour',
-    #     'distance': 0,
-    #     'skill': [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-    #     'abilitylist': [],
-    #     'price': 20,
-    #     'description': 'Lightweight armour that provides a single armour save'
-    # }
-
     print(f"Created itemfile")
     save_json(data, filepath)
 
@@ -254,16 +215,100 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
-        name = "Sword of Khaine",
-        distance = 5,
-        skill = [0, 2, 0, 2, 0, 2, 0, 2, 2, 0],
-        abilitylist = ["Dispel"],
-        price = 999,
-        description = "The sword of Khaine, when used at a range of maximum 5 inch use missile combat stats and process."
-     )
+        name = "Dagger",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [],
+        price = 2,
+        description = "A basic dagger."
+        )
+    add_itemref(
+        source = "Core Rules",
+        category = "Melee Weapon",
+        name = "Sword",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [{"name": "Parry"}],
+        price = 10,
+        description = "A basic Sword."
+        )
+    add_itemref(
+        source = "Core Rules",
+        category = "Melee Weapon",
+        name = "Spear",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [{"name": "First Strike", "description":"Enables the wielder to always attack first, even when charged."}],
+        price = 10,
+        description = "A basic Spear."
+        )
+    add_itemref(
+        source = "Core Rules",
+        category = "Melee Weapon",
+        name = "Greatsword",
+        distance = 0,
+        skill = [0, 0, 0, 2, 0, 0, 0, 0, 0, 0],
+        abilitylist = [{"name": "Last Strike"}],
+        price = 15,
+        description = "A very large sword that strikes slow but powerfull."
+        )
+    add_itemref(
+        source = "Core Rules",
+        category = "Melee Weapon",
+        name = "Mage Staff",
+        distance = 0,
+        skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Handiness", "description": "Weapon can be wielded in one hand or in both. Strength modifier only counts if wielded twohanded."},
+            {"name": "Concussion", "description": "Stunned happens also on a trow of 2 at the injury roll."}
+            ],
+        price = 20,
+        description = "A staff used by mages."
+        )
+    add_itemref(
+        source = "Core Rules",
+        category = "Missile Weapon",
+        name = "Bow",
+        distance = 16,
+        skill = [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
+        abilitylist = [],
+        price = 10,
+        description = "A basic bow."
+    )  
+    add_itemref(
+        source = "Core Rules",
+        category = "Missile Weapon",
+        name = "Long Bow",
+        distance = 30,
+        skill = [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
+        abilitylist = [],
+        price = 15,
+        description = "A Long bow."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Armour & Protection",
+        name = "Light Armour",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        abilitylist = [],
+        price = 20,
+        description = "Some lightweighted armour."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Armour & Protection",
+        name = "Shield",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        abilitylist = [],
+        price = 20,
+        description = "A basic shield."
+    )
+     
     get_itemref(
         source = "Core Rules", 
-        item = "Sword of Khaine"
+        item = "Mage Staff"
     )
 
 

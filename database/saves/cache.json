@@ -79,6 +79,15 @@
                     "description": "Character is able to use High Elven magic."
                 }
             ],
+            "magiclist": [
+                {
+                    "source": "High Elves",
+                    "category": "High Elven Magic",
+                    "name": "Fiery Wrath",
+                    "difficulty": 8,
+                    "description": "With one delicate movement the Elven Mage traces an intricate Sigil of Flame in the air. Range 12 inch. May be cast on any model within range. The target is hit with Strength 4. Any models within 3 inch of the target model suffer a Strength 3 hit on a D6 roll of 4+. Take armour saves as normal."
+                }
+            ],
             "inventory": {
                 "gold": 0,
                 "wyrd": 0,
@@ -165,6 +174,7 @@
                     "description": "Spot hidden objects at double the range."
                 }
             ],
+            "magiclist": [],
             "inventory": {
                 "gold": 0,
                 "wyrd": 0,
@@ -295,6 +305,7 @@
                             "description": "Spot hidden objects at double the range."
                         }
                     ],
+                    "magiclist": [],
                     "inventory": {
                         "gold": 0,
                         "wyrd": 0,
@@ -377,6 +388,7 @@
                             "description": "Spot hidden objects at double the range."
                         }
                     ],
+                    "magiclist": [],
                     "inventory": {
                         "gold": 0,
                         "wyrd": 0,
@@ -465,6 +477,7 @@
                             "description": "Spot hidden objects at double the range."
                         }
                     ],
+                    "magiclist": [],
                     "inventory": {
                         "gold": 0,
                         "wyrd": 0,
@@ -553,6 +566,7 @@
                             "description": "Spot hidden objects at double the range."
                         }
                     ],
+                    "magiclist": [],
                     "inventory": {
                         "gold": 0,
                         "wyrd": 0,

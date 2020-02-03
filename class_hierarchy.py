@@ -234,7 +234,7 @@ class Squad(object):
 
        
 class Character(object):
-    def __init__(self, name, race, source, category, ishero, skill, abilitylist=[], inventory=None, experience=0, price=0, maxcount=0, description=None):
+    def __init__(self, name, race, source, category, ishero, skill, abilitylist=[], magiclist=[], inventory=None, experience=0, price=0, maxcount=0, description=None):
         self.name = name
         self.race = race
         self.source = source
@@ -242,6 +242,7 @@ class Character(object):
         self.ishero = ishero
         self.skill = skill
         self.abilitylist = abilitylist
+        self.magiclist = magiclist
         self.inventory = inventory if inventory else Inventory()
         self.experience = experience
         self.price = price
@@ -257,6 +258,12 @@ class Character(object):
             abilitylist.append(ability.to_dict())
             a += 1
 
+        magiclist = []
+        m = 1
+        for magic in self.magiclist:
+            magiclist.append(magic.to_dict())
+            m += 1
+
         inventory = self.inventory.to_dict()
 
         data = {}
@@ -269,6 +276,7 @@ class Character(object):
             'ishero': self.ishero,
             'skill': skill,
             'abilitylist': abilitylist,
+            'magiclist': magiclist,
             'inventory': inventory,
             'experience': self.experience,
             'price': self.price,
@@ -285,6 +293,10 @@ class Character(object):
         for ability in datadict["abilitylist"]:
             abilitylist += [Ability.from_dict(ability)]
 
+        magiclist = []
+        for magic in datadict["magiclist"]:
+            magiclist += [Magic.from_dict(magic)]
+
         inventory = Inventory.from_dict(datadict["inventory"])
 
         data = Character(
@@ -295,6 +307,7 @@ class Character(object):
             ishero=datadict["ishero"],
             skill=skill,
             abilitylist=abilitylist,
+            magiclist=magiclist,
             inventory=inventory,
             experience=datadict["experience"],
             price=datadict["price"],
@@ -329,6 +342,11 @@ class Character(object):
             abilityobject = Ability(name=abilitydict["name"], description=abilitydict["description"])
             abilitylist.append(abilityobject)
 
+        magiclist = []
+        for magicdict in data[race][source][category].get("magiclist"):
+            magicobject = Magic(source=magicdict["source"], category=magicdict["category"], name=magicdict["name"], difficulty=magicdict["difficulty"], description=magicdict["description"])
+            magiclist.append(magicobject)
+
         newcharacter = Character(
             name = name,
             race = race,
@@ -338,6 +356,7 @@ class Character(object):
             inventory = data[race][source][category].get("inventory"),
             skill = newskill,
             abilitylist = abilitylist,
+            magiclist = magiclist,
             experience = data[race][source][category].get("experience"),
             price = data[race][source][category].get("price"),
             maxcount = data[race][source][category].get("maxcount"),

@@ -160,6 +160,11 @@ class Item(object):
             abilityobject = Ability(name=abilitydict["name"], description=abilitydict["description"])
             abilitylist.append(abilityobject)
 
+        magiclist = []
+        for magicdict in data[source][name].get("magiclist"):
+            magicobject = Magic(source=magicdict["source"], category=magicdict["category"], name=magicdict["name"], difficulty=magicdict["difficulty"], description=magicdict["description"])
+            magiclist.append(magicobject)
+
         newitem = Item(
             name = name,
             source = source,
@@ -237,9 +242,41 @@ class Ability(object):
 
     @staticmethod
     def from_dict(datadict):
-        ability = Ability(
+        data = Ability(
             name=datadict["name"],
             description=datadict["description"]
             )
 
-        return ability
+        return data
+
+class Magic(object):
+    """Default object to assign ablities as a basis for character and item abilities"""
+    def __init__(self, source, category, name, difficulty, description=None):
+        self.source = source
+        self.category = category
+        self.name = name
+        self.difficulty = difficulty
+        self.description = description
+
+    def to_dict(self):  
+        data = {
+            # 'key': str(self),
+            'source': self.source,
+            'category': self.category,
+            'name': self.name,
+            'difficulty': self.difficulty,
+            'description': self.description
+        }
+        return data
+
+    @staticmethod
+    def from_dict(datadict):
+        data = Magic(
+            source = datadict["source"],
+            category=datadict["category"],
+            name=datadict["name"],
+            difficulty=datadict["difficulty"],
+            description=datadict["description"]
+            )
+
+        return data

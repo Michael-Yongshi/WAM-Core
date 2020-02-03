@@ -18,6 +18,7 @@
                 }
             ],
             "abilitylist": [],
+            "magiclist": [],
             "price": 2,
             "description": "A basic dagger."
         },
@@ -44,6 +45,7 @@
                     "description": "Enables a single parry of an attackers hit. Parries when dicethrow is greater than attackers throw."
                 }
             ],
+            "magiclist": [],
             "price": 10,
             "description": "A basic Sword."
         },
@@ -70,6 +72,7 @@
                     "description": "Enables the wielder to always attack first, even when charged."
                 }
             ],
+            "magiclist": [],
             "price": 10,
             "description": "A basic Spear."
         },
@@ -96,6 +99,7 @@
                     "description": "Disables the wielder to attack first, even when charging."
                 }
             ],
+            "magiclist": [],
             "price": 15,
             "description": "A very large sword that strikes slow but powerfull."
         },
@@ -126,6 +130,7 @@
                     "description": "Stunned happens also on a trow of 2 at the injury roll."
                 }
             ],
+            "magiclist": [],
             "price": 20,
             "description": "A staff used by mages."
         },
@@ -147,6 +152,7 @@
                 }
             ],
             "abilitylist": [],
+            "magiclist": [],
             "price": 10,
             "description": "A basic bow."
         },
@@ -168,6 +174,7 @@
                 }
             ],
             "abilitylist": [],
+            "magiclist": [],
             "price": 15,
             "description": "A Long bow."
         },
@@ -189,6 +196,7 @@
                 }
             ],
             "abilitylist": [],
+            "magiclist": [],
             "price": 20,
             "description": "Some lightweighted armour."
         },
@@ -210,6 +218,7 @@
                 }
             ],
             "abilitylist": [],
+            "magiclist": [],
             "price": 20,
             "description": "A basic shield."
         }

@@ -13,7 +13,7 @@ def create_characterref():
     save_json(data, filepath)
 
 
-def add_characterref(race, source, category, ishero, skill, abilitylist, inventory, price, maxcount, description):
+def add_characterref(race, source, category, ishero, skill, abilitylist, magiclist, inventory, price, maxcount, description):
     # Paths
     folderpath = "database/references/"
     filepath = folderpath + "characters_ref.json"
@@ -53,6 +53,7 @@ def add_characterref(race, source, category, ishero, skill, abilitylist, invento
         'ishero': ishero,
         "skill": skilldict,
         'abilitylist': abilitylist,
+        'magiclist': magiclist,
         'inventory': inventory,
         'price': price,
         'maxcount': maxcount,
@@ -105,7 +106,7 @@ def create_itemref():
     save_json(data, filepath)
 
 
-def add_itemref(category, name, distance, skill, abilitylist, price, description, source="Manual"):
+def add_itemref(category, name, distance, skill, abilitylist, magiclist, price, description, source="Manual"):
     # Paths
     folderpath = "database/references/"
     filepath = folderpath + "items_ref.json"
@@ -138,6 +139,7 @@ def add_itemref(category, name, distance, skill, abilitylist, price, description
         'distance': distance,
         'skill': skilldict,
         'abilitylist': abilitylist,
+        'magiclist': magiclist,
         'price': price,
         'description': description
     }
@@ -253,6 +255,9 @@ if __name__ == "__main__":
             {"name": "Excellent Sight", "description":"Spot hidden objects at double the range."},
             {"name": "High Elven Magic", "description":"Character is able to use High Elven magic."}
             ],
+        magiclist = [
+            {"source": "High Elves", "category": "High Elven Magic", "name": "Fiery Wrath", "difficulty": 8, "description": "With one delicate movement the Elven Mage traces an intricate Sigil of Flame in the air. Range 12 inch. May be cast on any model within range. The target is hit with Strength 4. Any models within 3 inch of the target model suffer a Strength 3 hit on a D6 roll of 4+. Take armour saves as normal."}
+        ],
         inventory = [],
         price = 80,
         maxcount = 1,
@@ -265,6 +270,7 @@ if __name__ == "__main__":
         ishero = True,
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 8, 0],
         abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range."}],
+        magiclist = [],
         inventory = [],
         price = 45,
         maxcount = 2,
@@ -277,6 +283,7 @@ if __name__ == "__main__":
         ishero = True,
         skill = [5, 5, 4, 3, 3, 1, 6, 1, 8, 0],
         abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range."}],
+        magiclist = [],
         inventory = [],
         price = 50,
         maxcount = 2,
@@ -289,6 +296,7 @@ if __name__ == "__main__":
         ishero = False,
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 8, 0],
         abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range."}],
+        magiclist = [],
         inventory = [],
         price = 35,
         maxcount = 0,
@@ -301,6 +309,7 @@ if __name__ == "__main__":
         ishero = False,
         skill = [5, 3, 3, 3, 3, 1, 5, 1, 8, 0],
         abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range."}],
+        magiclist = [],
         inventory = [],
         price = 30,
         maxcount = 5,
@@ -313,6 +322,7 @@ if __name__ == "__main__":
         ishero = True,
         skill = [6, 6, 6, 6, 6, 6, 6, 6, 6, 6],
         abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range."}, {"name": "Fear", "description": "Spreads fear in nearby enemies."}],
+        magiclist = [],
         inventory = [],
         price = 30,
         maxcount = 5,
@@ -332,6 +342,7 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [],
+        magiclist = [],
         price = 2,
         description = "A basic dagger."
         )
@@ -342,6 +353,7 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [{"name": "Parry", "description": "Enables a single parry of an attackers hit. Parries when dicethrow is greater than attackers throw."}],
+        magiclist = [],
         price = 10,
         description = "A basic Sword."
         )
@@ -352,6 +364,7 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [{"name": "First Strike", "description":"Enables the wielder to always attack first, even when charged."}],
+        magiclist = [],
         price = 10,
         description = "A basic Spear."
         )
@@ -362,6 +375,7 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 2, 0, 0, 0, 0, 0, 0],
         abilitylist = [{"name": "Last Strike", "description": "Disables the wielder to attack first, even when charging."}],
+        magiclist = [],
         price = 15,
         description = "A very large sword that strikes slow but powerfull."
         )
@@ -375,6 +389,7 @@ if __name__ == "__main__":
             {"name": "Bastard", "description": "Weapon can be wielded one handed or twohanded. Strength modifier only counts if wielded twohanded."},
             {"name": "Concussion", "description": "Stunned happens also on a trow of 2 at the injury roll."}
             ],
+        magiclist = [],
         price = 20,
         description = "A staff used by mages."
         )
@@ -385,6 +400,7 @@ if __name__ == "__main__":
         distance = 16,
         skill = [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
         abilitylist = [],
+        magiclist = [],
         price = 10,
         description = "A basic bow."
     )  
@@ -395,6 +411,7 @@ if __name__ == "__main__":
         distance = 30,
         skill = [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
         abilitylist = [],
+        magiclist = [],
         price = 15,
         description = "A Long bow."
     )
@@ -405,6 +422,7 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
         abilitylist = [],
+        magiclist = [],
         price = 20,
         description = "Some lightweighted armour."
     )
@@ -415,6 +433,7 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
         abilitylist = [],
+        magiclist = [],
         price = 20,
         description = "A basic shield."
     )
@@ -499,51 +518,6 @@ if __name__ == "__main__":
 # })
 
 # with open('database/references/abilities_ref.json', 'w') as outfile:
-#     json.dump(data, outfile, indent=4)
-
-
-
-# # (re-)creating a magic-ref json file
-# data = {}
-# data['magic_ref'] = []
-# data['magic_ref'].append({
-#     'name': 'Word of Power',
-#     'restriction': 'High Elves',
-#     'difficulty': '8',
-#     'desc': 'The Elven Mage utters the True Name of Asuryan, the lord of the Elf gods. Shaken by his awesome power, the enemies of the Elves become weak and ineffective. Any enemies within 8 inch of the Mage suffer a -3 Weaponskill penalty, down to a minimum of one. Lasts until the beginning of the next High Elf turn.'
-# })
-# data['magic_ref'].append({
-#     'name': 'Fiery Wrath',
-#     'restriction': 'High Elves',
-#     'difficulty': '8',
-#     'desc': 'With one delicate movement the Elven Mage traces an intricate Sigil of Flame in the air. Range 12 inch. May be cast on any model within range. The target is hit with Strength 4. Any models within 3 inch of the target model suffer a Strength 3 hit on a D6 roll of 4+. Take armour saves as normal.'
-# })
-# data['magic_ref'].append({
-#     'name': 'The Phoenix Crown',
-#     'restriction': 'High Elves',
-#     'difficulty': '9',
-#     'desc': 'A crown of white flames appears above the head of the Elf Mage, enveloping him within a glorious array of flames. The Elf Mage has an armour save of 2+ that replaces his normal armour save. In addition, he gains a +2 to his Weaponskill and a +1 to his Strength. Roll at the beginning of each turn in the recovery phase. On a D6 roll of 1 or 2 the Phoenix Crown disappears.'
-# })
-# data['magic_ref'].append({
-#     'name': 'Roar of the Dragon',
-#     'restriction': 'High Elves',
-#     'difficulty': '8',
-#     'desc': 'A shadow of a wrathful Dragon strikes out from the outstretched hand of the mage, and speeds forward roaring its anger. The roar of the Dragon has a range of 12 inch and it is absolutely straight. Any model in its path must roll equal or under its Strength or be Knocked Down. If the spell hits a building it stops.'
-# })
-# data['magic_ref'].append({
-#     'name': 'The Anger of the Earth',
-#     'restriction': 'High Elves',
-#     'difficulty': '10',
-#     'desc': 'At the command of the Elven Mage, the very earth raises up against the enemies of the Elves. Draw a 12 inch direct line from the mage in any direction. The line is 1 inch wide and absolutely straight. Any model in its path suffers a single S5 hit.'
-# })
-# data['magic_ref'].append({
-#     'name': 'The Light of Glory',
-#     'restriction': 'High Elves',
-#     'difficulty': '8',
-#     'desc': 'A radiant white light emerges from the mage`s hand, banishing all fear and doubt in his comrades. Any friendly models within 8 inch of the Elven mage are immune to psychology and will never break from combat. This spell lasts until the mage suffers a wound. If the mage suffers a wound then the enchanted Elves become startled and uneasy. All models with 8 inch must take a Leadership test. If any fail, they are treated as if they had failed an All Alone test.'
-# })
-
-# with open('database/references/magic_ref.json', 'w') as outfile:
 #     json.dump(data, outfile, indent=4)
 
 

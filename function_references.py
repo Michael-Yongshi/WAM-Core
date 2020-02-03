@@ -177,7 +177,10 @@ if __name__ == "__main__":
         category = "Loremaster",
         ishero = True,
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 9, 0],
-        abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range."}],
+        abilitylist = [
+            {"name": "Excellent Sight", "description":"Spot hidden objects at double the range."},
+            {"name": "High Elven Magic", "description":"Character is able to use High Elven magic."}
+            ],
         inventory = [],
         price = 80,
         maxcount = 1,
@@ -297,7 +300,7 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Handiness", "description": "Weapon can be wielded in one hand or in both. Strength modifier only counts if wielded twohanded."},
+            {"name": "Bastard", "description": "Weapon can be wielded one handed or twohanded. Strength modifier only counts if wielded twohanded."},
             {"name": "Concussion", "description": "Stunned happens also on a trow of 2 at the injury roll."}
             ],
         price = 20,

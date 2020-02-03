@@ -28,25 +28,11 @@ def test_createWarband(wbname, wbrace):
     
     # Creating heroes
     hero1 = Character.create_character(
-        name="Hero1", 
+        name="Avareac", 
         race="High Elf", 
         source="High Elves",
         category="Loremaster", 
         )
-
-    hero2 = Character.create_character(
-            name="Hero2", 
-            race="High Elf", 
-            source="High Elves",
-            category="Sword Warden"
-            )
-    
-    hero3 = Character.create_character(
-            name="Hero3", 
-            race="High Elf", 
-            source="High Elves",
-            category="Khaine"
-            )
 
     # Adding items to heroes
     hero1.inventory.itemlist = [
@@ -54,18 +40,9 @@ def test_createWarband(wbname, wbrace):
         Item.create_item(name = "Mage Staff", source = "Core Rules")
         ]
 
-    hero2.inventory.itemlist = [
-        Item.create_item(name = "Dagger", source = "Core Rules"),
-        Item.create_item(name = "Sword", source = "Core Rules"),
-        Item.create_item(name = "Light Armour", source = "Core Rules"),
-        Item.create_item(name = "Shield", source = "Core Rules")
-        ]
-
     # adding the heroes to the warband hero list
     wbid.herolist = [
-        hero1, 
-        hero2,
-        hero3
+        hero1
         ]
     
     # Create Squads and the henchmen within

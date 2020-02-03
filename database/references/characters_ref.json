@@ -24,6 +24,10 @@
                     {
                         "name": "Excellent Sight",
                         "description": "Spot hidden objects at double the range."
+                    },
+                    {
+                        "name": "High Elven Magic",
+                        "description": "Character is able to use High Elven magic."
                     }
                 ],
                 "inventory": [],

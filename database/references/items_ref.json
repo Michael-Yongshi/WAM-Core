@@ -118,8 +118,8 @@
             ],
             "abilitylist": [
                 {
-                    "name": "Handiness",
-                    "description": "Weapon can be wielded in one hand or in both. Strength modifier only counts if wielded twohanded."
+                    "name": "Bastard",
+                    "description": "Weapon can be wielded one handed or twohanded. Strength modifier only counts if wielded twohanded."
                 },
                 {
                     "name": "Concussion",

@@ -13,8 +13,29 @@ def test_updateWarband():
 
 
 
+    # Add another hero
+    newhero = Character.create_character(
+            name="Bearand", 
+            race="High Elf", 
+            source="High Elves",
+            category="Sword Warden"
+            )
+    
+    # Add items for new hero
+    newhero.inventory.itemlist = [
+        Item.create_item(name = "Dagger", source = "Core Rules"),
+        Item.create_item(name = "Sword", source = "Core Rules"),
+        Item.create_item(name = "Light Armour", source = "Core Rules"),
+        Item.create_item(name = "Shield", source = "Core Rules")
+        ]
+
+    # adding the heroes to the warband hero list
+    wbid.herolist.append(
+        newhero
+        )
+
     # Create Squads and the henchmen within
-    squad1 = Squad.create_squad(
+    newsquad = Squad.create_squad(
         name = "Cadet",
         race = "High Elf",
         source = 'High Elves',
@@ -23,11 +44,13 @@ def test_updateWarband():
         )
     
     # Adding items to the squads
-    squad1.equip_squad(name = "Dagger", source = "Core Rules")
-    squad1.equip_squad(name = "Long Bow", source = "Core Rules")
+    newsquad.equip_squad(name = "Dagger", source = "Core Rules")
+    newsquad.equip_squad(name = "Long Bow", source = "Core Rules")
 
     # adding the squads to the squadlist
-    wbid.squadlist.append(squad1)
+    wbid.squadlist.append(
+        newsquad
+        )
 
 
 

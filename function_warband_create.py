@@ -1,6 +1,6 @@
-from database.json import *
-from class_hierarchy import * # reference to the hierarchic classes that are used, 
-# like warband that consists of heroes and squads, that in turn reference to henchman
+from database.json import * # Refer to JSON methods
+from class_hierarchy import * # Refer to class methods 
+from generic_methods import * # Refer to generic methods
 
 
 def test_createWarband(wbname, wbrace):
@@ -33,7 +33,7 @@ def test_createWarband(wbname, wbrace):
         source="High Elves",
         category="Loremaster", 
         )
-
+    
     # Adding items to heroes
     hero1.inventory.itemlist = [
         Item.create_item(name = "Dagger", source = "Core Rules"),
@@ -77,17 +77,16 @@ def test_createWarband(wbname, wbrace):
 
     # Current gold minus cost of the warband
     startgold = 500
-    # wbid.inventory.gold = startgold - wbid.get_warbandprice()
-    # print(wbid.inventory.gold)
+    wbid.inventory.gold = startgold - wbid.get_warbandprice()
+    print(wbid.inventory.gold)
     
     # create warband dictionary
     datadict = wbid.to_dict()
 
     # Push new warband to JSON cache
     # To do: write to global variable
-    save_json(data=datadict, jsonfile="database/saves/cache.json")
-    print("New Warband placed in cache")
-
+    cache_warband(datadict)
+    
 
 if __name__ == "__main__":
     wbname = "Uthluan Wyrdbreakers"

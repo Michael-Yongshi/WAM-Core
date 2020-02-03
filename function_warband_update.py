@@ -1,6 +1,6 @@
-from database.json import *
-from class_hierarchy import * # reference to the hierarchic classes that are used, 
-# like warband that consists of heroes and squads, that in turn reference to henchman
+from database.json import * # Refer to JSON methods
+from class_hierarchy import * # Refer to class methods 
+from generic_methods import * # Refer to generic methods
 
 
 def test_updateWarband():

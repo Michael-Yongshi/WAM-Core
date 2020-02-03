@@ -9,6 +9,9 @@ In addition you can add your own warbands, items, rules, etc. for use in more cu
 Inventory and items
 - Split inventory again in Treasury object and in an itemlist seperately, as only the warband itself can have gold and wyrd, it makes for more elegancy to split these, although should have no practical implications
 
+Magic
+- Add dedicated Magic class and add a magic attribute to character and item (potentially also an item could enable a character to use a spell). Magic is very different from abilities and therefore warrant a special class
+
 Generate overviews of warband, herolists, squads, etc. easily.
 
 Add events

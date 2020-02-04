@@ -31,13 +31,13 @@ wbid.inventory.itemlist=[
 
 # Creating heroes
 
-hero1 = Character.create_character(
+hero1 = Hero.create_character(
     name="Viriadon", 
     race="High Elf", 
     source="High Elves",
     category="Loremaster", 
     )
-hero2 = Character.create_character(
+hero2 = Hero.create_character(
     name="Olri`in", 
     race="High Elf", 
     source="High Elves",

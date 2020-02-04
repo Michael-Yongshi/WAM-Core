@@ -188,13 +188,12 @@ class Squad(object):
             henchmanlist = []
             )
 
-        for henchman in range(0, number):
-            newhenchman = Character.create_character(
+        for h in range(0, number):
+            newhenchman = Henchman.create_character(
                 name = name,
                 race = race,
                 source = source,
-                category = category,
-                callsquad = True    
+                category = category,  
                 )
             newsquad.henchmanlist.append(newhenchman)
         
@@ -317,48 +316,69 @@ class Character(object):
         # open reference data json file
         data = open_json("database/references/characters_ref.json")
 
-        if callsquad == data[race][source][category].get("ishero") == True:
+        skilllist = data[race][source][category].get("skill")
+        skilldict = skilllist[0]
+        newskill = Skill(
+            movement = skilldict["movement"],
+            weapon = skilldict["weapon"],
+            ballistic = skilldict["ballistic"],
+            strength=skilldict["strength"],
+            toughness=skilldict["toughness"],
+            wounds=skilldict["wounds"],
+            initiative=skilldict["initiative"],
+            actions=skilldict["actions"],
+            leadership=skilldict["leadership"],
+            armoursave=skilldict["armoursave"]
+            )
+
+        abilitylist = []
+        for abilitydict in data[race][source][category].get("abilitylist"):
+            abilityobject = Ability(name=abilitydict["name"], description=abilitydict["description"])
+            abilitylist.append(abilityobject)
+
+        magiclist = []
+        for magicdict in data[race][source][category].get("magiclist"):
+            magicobject = Magic(source=magicdict["source"], category=magicdict["category"], name=magicdict["name"], difficulty=magicdict["difficulty"], description=magicdict["description"])
+            magiclist.append(magicobject)
+
+        newcharacter = Character(
+            name = name,
+            race = race,
+            source = source,
+            category = category,
+            ishero = data[race][source][category].get("ishero"),
+            inventory = data[race][source][category].get("inventory"),
+            skill = newskill,
+            abilitylist = abilitylist,
+            magiclist = magiclist,
+            experience = data[race][source][category].get("experience"),
+            price = data[race][source][category].get("price"),
+            maxcount = data[race][source][category].get("maxcount"),
+            description = data[race][source][category].get("description")        
+            )
+        
+        return newcharacter
+
+class Hero(Character):
+    
+    def create_character(name, race, source, category):
+        # open reference data json file
+        data = open_json("database/references/characters_ref.json")
+
+        if data[race][source][category].get("ishero") == False:
+            print("Henchmen can't be added outside a squad")
+        else:
+            newhero = Character.create_character(name, race, source, category)
+            return newhero
+
+class Henchman(Character):
+    
+    def create_character(name, race, source, category):
+        # open reference data json file
+        data = open_json("database/references/characters_ref.json")
+
+        if data[race][source][category].get("ishero") == True:
             print("Heroes can't be added to a squad")
         else:
-            skilllist = data[race][source][category].get("skill")
-            skilldict = skilllist[0]
-            newskill = Skill(
-                movement = skilldict["movement"],
-                weapon = skilldict["weapon"],
-                ballistic = skilldict["ballistic"],
-                strength=skilldict["strength"],
-                toughness=skilldict["toughness"],
-                wounds=skilldict["wounds"],
-                initiative=skilldict["initiative"],
-                actions=skilldict["actions"],
-                leadership=skilldict["leadership"],
-                armoursave=skilldict["armoursave"]
-                )
-
-            abilitylist = []
-            for abilitydict in data[race][source][category].get("abilitylist"):
-                abilityobject = Ability(name=abilitydict["name"], description=abilitydict["description"])
-                abilitylist.append(abilityobject)
-
-            magiclist = []
-            for magicdict in data[race][source][category].get("magiclist"):
-                magicobject = Magic(source=magicdict["source"], category=magicdict["category"], name=magicdict["name"], difficulty=magicdict["difficulty"], description=magicdict["description"])
-                magiclist.append(magicobject)
-
-            newcharacter = Character(
-                name = name,
-                race = race,
-                source = source,
-                category = category,
-                ishero = data[race][source][category].get("ishero"),
-                inventory = data[race][source][category].get("inventory"),
-                skill = newskill,
-                abilitylist = abilitylist,
-                magiclist = magiclist,
-                experience = data[race][source][category].get("experience"),
-                price = data[race][source][category].get("price"),
-                maxcount = data[race][source][category].get("maxcount"),
-                description = data[race][source][category].get("description")        
-                )
-            
-            return newcharacter
+            newhenchman = Character.create_character(name, race, source, category)
+            return newhenchman

@@ -14,7 +14,7 @@ def test_updateWarband():
 
 
     # Add another hero
-    newhero = Character.create_character(
+    newhero = Hero.create_character(
             name="Bearand", 
             race="High Elf", 
             source="High Elves",

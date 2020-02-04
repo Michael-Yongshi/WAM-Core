@@ -27,11 +27,11 @@ def test_createWarband(wbname, wbrace):
         ]
     
     # Creating heroes
-    hero1 = Character.create_character(
+    hero1 = Hero.create_character(
         name="Avareac", 
         race="High Elf", 
         source="High Elves",
-        category="Loremaster", 
+        category="Loremaster"
         )
     
     # Adding items to heroes

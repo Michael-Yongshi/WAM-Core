@@ -6,6 +6,9 @@ In addition you can add your own warbands, items, rules, etc. for use in more cu
 
 ## Roadmap
 
+Import wildcards
+- Remove the wildcards from the import statements
+
 Inventory and items
 - Split inventory again in Treasury object and in an itemlist seperately, as only the warband itself can have gold and wyrd, it makes for more elegancy to split these, although should have no practical implications
 

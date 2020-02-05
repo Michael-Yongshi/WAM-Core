@@ -6,6 +6,9 @@ In addition you can add your own warbands, items, rules, etc. for use in more cu
 
 ## Roadmap
 
+GUI
+- QT with own IDE
+
 Import wildcards
 - Remove the wildcards from the import statements
 

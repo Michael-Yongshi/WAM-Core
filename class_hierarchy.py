@@ -1,5 +1,11 @@
-from database.json import *
-from class_components import * # reference to the script with all component classes
+from database.json import open_json
+
+from class_components import Rule
+from class_components import Treasury
+from class_components import Item
+from class_components import Skill
+from class_components import Ability
+from class_components import Magic
 
 
 class Warband(object):
@@ -358,7 +364,7 @@ class Character(object):
         return newcharacter
 
 class Hero(Character):
-    
+    @staticmethod
     def create_character(name, race, source, category):
         # open reference data json file
         data = open_json("database/references/characters_ref.json")
@@ -370,7 +376,7 @@ class Hero(Character):
             return newhero
 
 class Henchman(Character):
-    
+    @staticmethod
     def create_character(name, race, source, category):
         # open reference data json file
         data = open_json("database/references/characters_ref.json")

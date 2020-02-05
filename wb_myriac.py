@@ -1,7 +1,21 @@
-from database.json import * # Refer to JSON methods
-from class_hierarchy import * # Refer to class methods 
-from generic_methods import * # Refer to generic methods
+from database.json import open_json
 
+from generic_methods import save_warband
+from generic_methods import load_warband
+from generic_methods import cache_warband
+
+from class_hierarchy import Warband
+from class_hierarchy import Squad
+from class_hierarchy import Character
+from class_hierarchy import Hero
+from class_hierarchy import Henchman
+
+from class_components import Rule
+from class_components import Treasury
+from class_components import Item
+from class_components import Skill
+from class_components import Ability
+from class_components import Magic
 
 # create_warband
 wbid = Warband(

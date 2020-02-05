@@ -1,7 +1,5 @@
-from database.json import *
-from class_hierarchy import * # reference to the hierarchic classes that are used, 
-# like warband that consists of heroes and squads, that in turn reference to henchman
-
+from database.json import open_json
+from database.json import save_json
 
 def cache_warband(datadict):
     save_json(data=datadict, jsonfile="database/saves/cache.json")
@@ -26,8 +24,7 @@ def load_warband(savename):
     filepath = "database/saves/" + savename + ".json"
     datadict = open_json(filepath)
 
-    # Push save to JSON cache
-    # To do: write to global variable
+    # Push to JSON cache
     save_json(data=datadict, jsonfile="database/saves/cache.json")
     print("Loading completed")
 

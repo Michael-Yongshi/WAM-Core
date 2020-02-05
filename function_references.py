@@ -1,5 +1,18 @@
-from database.json import *
-from class_hierarchy import *
+from database.json import open_json
+from database.json import save_json
+
+from class_hierarchy import Warband
+from class_hierarchy import Squad
+from class_hierarchy import Character
+from class_hierarchy import Hero
+from class_hierarchy import Henchman
+
+from class_components import Rule
+from class_components import Treasury
+from class_components import Item
+from class_components import Skill
+from class_components import Ability
+from class_components import Magic
 
 def create_characterref():
     # Paths
@@ -216,7 +229,7 @@ def add_magicref(source, category, name, difficulty, description):
     save_json(data, filepath)
 
 
-def get_magicref(source, magic):
+def get_magicref(source, category, name):
     # Paths
     folderpath = "database/references/"
     filepath = folderpath + "magic_ref.json"
@@ -494,6 +507,11 @@ if __name__ == "__main__":
         name = "The Light of Glory",
         difficulty = 8,
         description = "A radiant white light emerges from the mage`s hand, banishing all fear and doubt in his comrades. Any friendly models within 8 inch of the Elven mage are immune to psychology and will never break from combat. This spell lasts until the mage suffers a wound. If the mage suffers a wound then the enchanted Elves become startled and uneasy. All models with 8 inch must take a Leadership test. If any fail, they are treated as if they had failed an All Alone test."
+    )
+    get_magicref(
+        source="High Elves",
+        category = "High Elven Magic",
+        name= "The Anger of the Earth"
     )
 
 

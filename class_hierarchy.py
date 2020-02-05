@@ -3,9 +3,10 @@ from class_components import * # reference to the script with all component clas
 
 
 class Warband(object):
-    def __init__(self, name, race, rulelist=[], inventory=None, herolist=[], squadlist=[]):
+    def __init__(self, name, race, description=None, rulelist=[], inventory=None, herolist=[], squadlist=[]):
         self.name = name
         self.race = race
+        self.description = description
         self.rulelist = rulelist
         self.inventory = inventory if inventory else Inventory()
         self.herolist = herolist
@@ -42,6 +43,7 @@ class Warband(object):
             # 'key': str(self),
             'name': self.name,
             'race': self.race,
+            'description': self.description,
             'rulelist': rulelist,
             'inventory': inventory,
             'herolist': herolist, 
@@ -70,6 +72,7 @@ class Warband(object):
         wbid = Warband(
             name=datadict["name"],
             race=datadict["race"],
+            description=datadict["description"],
             rulelist=rulelist,
             inventory=inventory,
             herolist=herolist,
@@ -77,44 +80,6 @@ class Warband(object):
             )
 
         return wbid
-
-    def add_squad(self, race, warband, category, name, number=1):
-        """Creates a new squad and creates at least 1 henchman character within this squad"""
-        # optional: check if squad already exists for input name
-        # for squad in self.squadlist
-        #     if "squad4" in squad.name:
-
-        # create squad object
-        newsquad = Squad(
-            name=name, 
-            category=category
-            )
-        
-        # find reference of the squad category in the troops_ref.json
-        datadict = open_json("database/references/troops_ref.json")
-
-        if race in datadict:
-            if warband in datadict[race]:
-                if category in datadict[race][warband]:
-                    troopdict = datadict[race][warband][category]
-                else:
-                    print(f" Category {category} not found")
-            else:
-                print(f"Warband {warband} not found")
-        else:
-            print(f"Race {race} not found")
-   
-        # fill squad object with the number of henchman desired (default = 1)
-        for _ in range(number):
-            henchmanref = category + str(number)
-            newhenchman = Henchman(name=henchmanref, category=category, race=race, skill=skill)
-            newsquad.henchmanlist += [newhenchman]
-        
-        # add created squad to the warbands squad list
-        self.squadlist += [newsquad]
-        
-        return self
-
     
     def get_warbandprice(self):
         """ Temporary function, should be split in seperate functions to adjust gold baded on single events of buying equipment or getting loot"""

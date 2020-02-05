@@ -8,9 +8,9 @@ def test_createWarband(wbname, wbrace):
     # create_warband
     wbid = Warband(
         name=wbname,
-        race=wbrace
+        race=wbrace,
+        description="No description"
         )
-    # print(wbid)
 
     # Manually adding rules of warband
     wbid.rulelist=[

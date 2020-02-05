@@ -26,7 +26,7 @@ wbid.rulelist=[
     ]
 
 # Manually adding an item
-wbid.inventory.itemlist=[
+wbid.itemlist=[
     Item(name="Wyrd Breaker", source = "High Elves", category="Other")
     ]
 
@@ -46,11 +46,11 @@ hero2 = Hero.create_character(
     )
 
 # Adding items to heroes
-hero1.inventory.itemlist = [
+hero1.itemlist = [
     Item.create_item(name = "Dagger", source = "Core Rules"),
     Item.create_item(name = "Mage Staff", source = "Core Rules")
     ]
-hero2.inventory.itemlist = [
+hero2.itemlist = [
     Item.create_item(name = "Dagger", source = "Core Rules"),
     Item.create_item(name = "Sword", source = "Core Rules"),
     Item.create_item(name = "Light Armour", source = "Core Rules"),
@@ -107,8 +107,8 @@ wbid.squadlist = [
 
 # Current gold minus cost of the warband
 startgold = 500
-wbid.inventory.gold = startgold - wbid.get_warbandprice()
-print(wbid.inventory.gold)
+wbid.treasury.gold = startgold - wbid.get_warbandprice()
+print(wbid.treasury.gold)
 
 # create warband dictionary
 datadict = wbid.to_dict()

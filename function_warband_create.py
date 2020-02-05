@@ -22,7 +22,7 @@ def test_createWarband(wbname, wbrace):
             ]
 
     # Manually adding an item
-    wbid.inventory.itemlist=[
+    wbid.itemlist=[
         Item(name="Test item", source = "manual", category="Other")
         ]
     
@@ -35,7 +35,7 @@ def test_createWarband(wbname, wbrace):
         )
     
     # Adding items to heroes
-    hero1.inventory.itemlist = [
+    hero1.itemlist = [
         Item.create_item(name = "Dagger", source = "Core Rules"),
         Item.create_item(name = "Mage Staff", source = "Core Rules")
         ]
@@ -77,8 +77,8 @@ def test_createWarband(wbname, wbrace):
 
     # Current gold minus cost of the warband
     startgold = 500
-    wbid.inventory.gold = startgold - wbid.get_warbandprice()
-    print(wbid.inventory.gold)
+    wbid.treasury.gold = startgold - wbid.get_warbandprice()
+    print(wbid.treasury.gold)
     
     # create warband dictionary
     datadict = wbid.to_dict()

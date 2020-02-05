@@ -13,7 +13,7 @@ def create_characterref():
     save_json(data, filepath)
 
 
-def add_characterref(race, source, category, ishero, skill, abilitylist, magiclist, inventory, price, maxcount, description):
+def add_characterref(race, source, category, ishero, skill, abilitylist, magiclist, itemlist, experience, price, maxcount, description):
     # Paths
     folderpath = "database/references/"
     filepath = folderpath + "characters_ref.json"
@@ -54,7 +54,8 @@ def add_characterref(race, source, category, ishero, skill, abilitylist, magicli
         "skill": skilldict,
         'abilitylist': abilitylist,
         'magiclist': magiclist,
-        'inventory': inventory,
+        'itemlist': itemlist,
+        'experience': experience,
         'price': price,
         'maxcount': maxcount,
         'description': description
@@ -258,7 +259,10 @@ if __name__ == "__main__":
         magiclist = [
             {"source": "High Elves", "category": "High Elven Magic", "name": "Fiery Wrath", "difficulty": 8, "description": "With one delicate movement the Elven Mage traces an intricate Sigil of Flame in the air. Range 12 inch. May be cast on any model within range. The target is hit with Strength 4. Any models within 3 inch of the target model suffer a Strength 3 hit on a D6 roll of 4+. Take armour saves as normal."}
         ],
-        inventory = [],
+        itemlist = [
+            {"name": "Wyrdbreaker", "category": "Other", "source": "Core Rules", "distance": 0, "description": "test"}
+        ],
+        experience = 20,
         price = 80,
         maxcount = 1,
         description = "Loremasters are the most powerful mages in the entire Warhammer world. Their knowledge of the arcane arts and their intensive training at the Tower of Hoeth makes them perfect for leading expeditions into Lustria. They are capable and efficient with years of extensive training and skill at their disposal. Loremasters alone command magic powerful enough to match the might of the mysterious Slann. They delve into the temple cities of the Lizardmen in search of any remaining artifacts of the Old Ones power."
@@ -271,7 +275,8 @@ if __name__ == "__main__":
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 8, 0],
         abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range."}],
         magiclist = [],
-        inventory = [],
+        itemlist = [],
+        experience = 8,
         price = 45,
         maxcount = 2,
         description = "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again."
@@ -284,7 +289,8 @@ if __name__ == "__main__":
         skill = [5, 5, 4, 3, 3, 1, 6, 1, 8, 0],
         abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range."}],
         magiclist = [],
-        inventory = [],
+        itemlist = [],
+        experience = 11,
         price = 50,
         maxcount = 2,
         description = "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster’s personal attendants and protectors."
@@ -297,7 +303,8 @@ if __name__ == "__main__":
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 8, 0],
         abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range."}],
         magiclist = [],
-        inventory = [],
+        itemlist = [],
+        experience = 0,
         price = 35,
         maxcount = 0,
         description = "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops."
@@ -310,7 +317,8 @@ if __name__ == "__main__":
         skill = [5, 3, 3, 3, 3, 1, 5, 1, 8, 0],
         abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range."}],
         magiclist = [],
-        inventory = [],
+        itemlist = [],
+        experience = 0,
         price = 30,
         maxcount = 5,
         description = "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
@@ -323,7 +331,8 @@ if __name__ == "__main__":
         skill = [6, 6, 6, 6, 6, 6, 6, 6, 6, 6],
         abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range."}, {"name": "Fear", "description": "Spreads fear in nearby enemies."}],
         magiclist = [],
-        inventory = [],
+        itemlist = [],
+        experience = 100,
         price = 30,
         maxcount = 5,
         description = "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."

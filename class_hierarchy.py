@@ -3,18 +3,20 @@ from class_components import * # reference to the script with all component clas
 
 
 class Warband(object):
-    def __init__(self, name, race, description=None, rulelist=[], inventory=None, herolist=[], squadlist=[]):
+    def __init__(self, name, race, description=None, treasury=None, rulelist=[], itemlist=[], herolist=[], squadlist=[]):
         self.name = name
         self.race = race
         self.description = description
+        self.treasury = treasury if treasury else Treasury()
         self.rulelist = rulelist
-        self.inventory = inventory if inventory else Inventory()
+        self.itemlist = itemlist
         self.herolist = herolist
         self.squadlist = squadlist
 
     def to_dict(self):
         """ Create a dictionary string of a Warband object, including all nested objects, that can be saved to a JSON file for storage."""
-        # herolist = [hero.to_dict() for hero in self.herolist]      --- optional way of doing a simpler for loop
+
+        treasury = self.treasury.to_dict()
 
         rulelist = {} # change in a dict before setting dict values
         r = 1
@@ -23,7 +25,12 @@ class Warband(object):
             rulelist.update(rule.to_dict(ref=ruleref)) # adding this one to the list
             r += 1 # iterate
 
-        inventory = self.inventory.to_dict()
+        itemlist = {}
+        i = 1
+        for item in self.itemlist:
+            itemref = "Item" + str(i)
+            itemlist.update(item.to_dict(ref=itemref))
+            i += 1
 
         herolist={} 
         h = 1
@@ -44,8 +51,9 @@ class Warband(object):
             'name': self.name,
             'race': self.race,
             'description': self.description,
+            'treasury': treasury,
             'rulelist': rulelist,
-            'inventory': inventory,
+            'itemlist': itemlist,
             'herolist': herolist, 
             'squadlist': squadlist
         }
@@ -55,11 +63,16 @@ class Warband(object):
     @staticmethod
     def from_dict(datadict):
         """ Create an object, and all nested objects, out of a warband dictionary in order to enable updates to that data."""
+        
+        treasury = Treasury.from_dict(datadict["treasury"])
+
         rulelist = []
         for rule in datadict["rulelist"].values():
             rulelist += [Rule.from_dict(rule)]
 
-        inventory = Inventory.from_dict(datadict["inventory"])
+        itemlist = []
+        for item in datadict["itemlist"].values():
+            itemlist += [Item.from_dict(item)]
 
         herolist = []
         for hero in datadict["herolist"].values():
@@ -73,8 +86,9 @@ class Warband(object):
             name=datadict["name"],
             race=datadict["race"],
             description=datadict["description"],
+            treasury=treasury,
             rulelist=rulelist,
-            inventory=inventory,
+            itemlist=itemlist,
             herolist=herolist,
             squadlist=squadlist
             )
@@ -83,13 +97,18 @@ class Warband(object):
     
     def get_warbandprice(self):
         """ Temporary function, should be split in seperate functions to adjust gold baded on single events of buying equipment or getting loot"""
-        wbinvprice = self.inventory.get_price()
+        
+        wblistprice = 0
+        if self.itemlist:
+            for item in self.itemlist:
+                itemprice = item.price
+                wblistprice += itemprice
 
         herolistprice = 0
         if self.herolist:
             for hero in self.herolist:
                 heroprice = hero.price
-                for item in hero.inventory.itemlist:
+                for item in hero.itemlist:
                     heroprice += item.price
                 herolistprice += heroprice
 
@@ -99,14 +118,14 @@ class Warband(object):
                 squadsize = squad.get_totalhenchman()
                 
                 henchmanprice = squad.henchmanlist[0].price # get price of a single henchman type
-                for item in squad.henchmanlist[0].inventory.itemlist:
+                for item in squad.henchmanlist[0].itemlist:
                     henchmanprice += item.price # get price of a single item of a henchman in this squad
 
                 squadprice = henchmanprice * squadsize # multiply the price for a henchman and items with the number of henchman in the squad
 
                 squadlistprice += squadprice # increment total squad cost with this squads prices
 
-        price = wbinvprice + herolistprice + squadlistprice
+        price = wblistprice + herolistprice + squadlistprice
         return price
 
 
@@ -153,7 +172,7 @@ class Squad(object):
             henchmanlist = []
             )
 
-        for h in range(0, number):
+        for _ in range(0, number):
             newhenchman = Henchman.create_character(
                 name = name,
                 race = race,
@@ -172,10 +191,10 @@ class Squad(object):
                 name = name,  
                 source = source
                 )
-            henchman.inventory.itemlist.append(newitem)
+            henchman.itemlist.append(newitem)
 
-    def get_totalhenchman(ditobject):
-        henchmanlist = ditobject.henchmanlist if ditobject.henchmanlist else []
+    def get_totalhenchman(self):
+        henchmanlist = self.henchmanlist if self.henchmanlist else []
         return len(henchmanlist)
 
 
@@ -193,7 +212,7 @@ class Squad(object):
 
        
 class Character(object):
-    def __init__(self, name, race, source, category, ishero, skill, abilitylist=[], magiclist=[], inventory=None, experience=0, price=0, maxcount=0, description=None):
+    def __init__(self, name, race, source, category, ishero, skill, abilitylist=[], magiclist=[], itemlist=[], experience=0, price=0, maxcount=0, description=None):
         self.name = name
         self.race = race
         self.source = source
@@ -202,7 +221,7 @@ class Character(object):
         self.skill = skill
         self.abilitylist = abilitylist
         self.magiclist = magiclist
-        self.inventory = inventory if inventory else Inventory()
+        self.itemlist = itemlist
         self.experience = experience
         self.price = price
         self.maxcount = maxcount
@@ -211,20 +230,27 @@ class Character(object):
     def to_dict(self, ref):  
         skill = self.skill.to_dict()
     
-        abilitylist = []
+        abilitylist = {}
         a = 1
         for ability in self.abilitylist:
-            abilitylist.append(ability.to_dict())
+            abilityref = "Ability" + str(a)
+            abilitylist.update(ability.to_dict(ref=abilityref))
             a += 1
 
-        magiclist = []
+        magiclist = {}
         m = 1
         for magic in self.magiclist:
-            magiclist.append(magic.to_dict())
+            magicref = "Magic" + str(m)
+            magiclist.update(magic.to_dict(ref=magicref))
             m += 1
 
-        inventory = self.inventory.to_dict()
-
+        itemlist = {}
+        i = 1
+        for item in self.itemlist:
+            itemref = "Item" + str(i)
+            itemlist.update(item.to_dict(ref=itemref))
+            i += 1
+        
         data = {}
         data[str(ref)] = {
             # 'key': str(self),
@@ -236,7 +262,7 @@ class Character(object):
             'skill': skill,
             'abilitylist': abilitylist,
             'magiclist': magiclist,
-            'inventory': inventory,
+            'itemlist': itemlist,
             'experience': self.experience,
             'price': self.price,
             'maxcount': self.maxcount,
@@ -249,14 +275,16 @@ class Character(object):
         skill = Skill.from_dict(datadict["skill"])
         
         abilitylist = []
-        for ability in datadict["abilitylist"]:
+        for ability in datadict["abilitylist"].values():
             abilitylist += [Ability.from_dict(ability)]
 
         magiclist = []
-        for magic in datadict["magiclist"]:
+        for magic in datadict["magiclist"].values():
             magiclist += [Magic.from_dict(magic)]
 
-        inventory = Inventory.from_dict(datadict["inventory"])
+        itemlist = []
+        for item in datadict["itemlist"].values():
+            itemlist += [Item.from_dict(item)]
 
         data = Character(
             name=datadict["name"],
@@ -267,7 +295,7 @@ class Character(object):
             skill=skill,
             abilitylist=abilitylist,
             magiclist=magiclist,
-            inventory=inventory,
+            itemlist=itemlist,
             experience=datadict["experience"],
             price=datadict["price"],
             maxcount=datadict["maxcount"],
@@ -277,7 +305,7 @@ class Character(object):
         return data
     
     @staticmethod
-    def create_character(name, race, source, category, callsquad=False):
+    def create_character(name, race, source, category):
         # open reference data json file
         data = open_json("database/references/characters_ref.json")
 
@@ -306,16 +334,21 @@ class Character(object):
             magicobject = Magic(source=magicdict["source"], category=magicdict["category"], name=magicdict["name"], difficulty=magicdict["difficulty"], description=magicdict["description"])
             magiclist.append(magicobject)
 
+        itemlist = []
+        for itemdict in data[race][source][category].get("itemlist"):
+            itemobject = Item(source=itemdict["source"], category=itemdict["category"], name=itemdict["name"], distance=itemdict["distance"], description=itemdict["description"])
+            itemlist.append(itemobject)
+
         newcharacter = Character(
             name = name,
             race = race,
             source = source,
             category = category,
             ishero = data[race][source][category].get("ishero"),
-            inventory = data[race][source][category].get("inventory"),
             skill = newskill,
             abilitylist = abilitylist,
             magiclist = magiclist,
+            itemlist = itemlist,
             experience = data[race][source][category].get("experience"),
             price = data[race][source][category].get("price"),
             maxcount = data[race][source][category].get("maxcount"),

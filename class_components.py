@@ -24,84 +24,64 @@ class Rule(object):
     
     @staticmethod
     def from_dict(datadict):
-        rule = Rule(
+        data = Rule(
             name=datadict["name"],
             description=datadict["description"]
             )
 
-        return rule
+        return data
 
-class Inventory(object):
-    def __init__(self, gold=0, wyrd=0, itemlist=[]):
+class Treasury(object):
+    def __init__(self, gold=0, wyrd=0):
         self.gold = gold
         self.wyrd = wyrd
-        self.itemlist = itemlist if itemlist else []
 
     def to_dict(self):  
-        itemlist = {}        
-        i = 1
-        for item in self.itemlist:
-            itemref = "Item" + str(i) # to make sure it has a unique key
-            itemlist.update(item.to_dict(ref=itemref))
-            i += 1
-
         data = {
             # 'key': str(self),
             'gold': self.gold,
-            'wyrd': self.wyrd,
-            'itemlist': itemlist
+            'wyrd': self.wyrd
         }
         return data
 
     @staticmethod
     def from_dict(datadict):
-        itemlist = []
-        for item in datadict["itemlist"].values():
-            itemlist += [Item.from_dict(item)]
-
-        inventory = Inventory(
+        data = Treasury(
             gold=datadict["gold"],
-            wyrd=datadict["wyrd"],
-            itemlist=itemlist
+            wyrd=datadict["wyrd"]
             )
         
-        return inventory
-
-    def get_price(self):
-        invprice = 0
-        for item in self.itemlist:
-            itemprice = item.price
-            invprice += itemprice
-        return invprice
-        
-    def add_item(self, itemname):
-        itemlist.append(itemname)
-
-    def get_totalitems(self):
-        itemlist = self.itemlist if self.itemlist else None
-        return itemlist
-
+        return data
 
 class Item(object):
-    def __init__(self, name, source, category, distance=0, skill=None, abilitylist=[], price=0, description=None):
+    def __init__(self, name, source, category, distance=0, skill=None, abilitylist=[], magiclist=[], price=0, description=None):
         self.name = name
         self.source = source
         self.category = category
         self.distance = distance
         self.skill = skill if skill else Skill()
         self.abilitylist = abilitylist
+        self.magiclist = magiclist
         self.price = price
         self.description = description
 
     def to_dict(self, ref):  
         skill = self.skill.to_dict()
         
-        abilitylist=[]
+        abilitylist={}
         a = 1
         for ability in self.abilitylist:
-            abilitylist.append(ability.to_dict())
+            abilityref = "Ability" + str(a)
+            abilitylist.update(ability.to_dict(ref=abilityref))
             a += 1        
         
+        magiclist={}
+        m = 1
+        for magic in self.magiclist:
+            magicref = "Magic" + str(m)
+            magiclist.update(magic.to_dict(ref=magicref))
+            m += 1
+
         data = {}
         data[str(ref)] = {
             # 'key': str(self),
@@ -111,6 +91,7 @@ class Item(object):
             'distance': self.distance,
             'skill': skill,
             'abilitylist': abilitylist,
+            'magiclist': magiclist,
             'price': self.price,
             'description': self.description
         }
@@ -121,8 +102,12 @@ class Item(object):
         skill = Skill.from_dict(datadict["skill"])
         
         abilitylist = []
-        for ability in datadict["abilitylist"]:
+        for ability in datadict["abilitylist"].values():
             abilitylist += [Ability.from_dict(ability)]
+            
+        magiclist = []
+        for magic in datadict["magiclist"].values():
+            magiclist += [Magic.from_dict(magic)]
 
         item = Item(
             name=datadict["name"],
@@ -130,6 +115,7 @@ class Item(object):
             category=datadict["category"],
             skill=skill,
             abilitylist=abilitylist,
+            magiclist=magiclist,
             price=datadict["price"],
             description=datadict["description"]
             )
@@ -172,6 +158,7 @@ class Item(object):
             distance = data[source][name].get("distance"),
             skill = newskill,
             abilitylist = abilitylist,
+            magiclist = magiclist,
             price = data[source][name].get("price"),
             description = data[source][name].get("description")        
         )
@@ -232,14 +219,15 @@ class Ability(object):
         self.name = name
         self.description = description
 
-    def to_dict(self):  
-        data = {
+    def to_dict(self, ref):  
+        data = {}
+        data[str(ref)] = {
             # 'key': str(self),
             'name': self.name,
             'description': self.description
         }
         return data
-
+    
     @staticmethod
     def from_dict(datadict):
         data = Ability(
@@ -258,8 +246,9 @@ class Magic(object):
         self.difficulty = difficulty
         self.description = description
 
-    def to_dict(self):  
-        data = {
+    def to_dict(self, ref):  
+        data = {}
+        data[str(ref)] = {
             # 'key': str(self),
             'source': self.source,
             'category': self.category,

@@ -11,8 +11,6 @@ def test_updateWarband():
     # from dictionary to objects for manipulation
     wbid = Warband.from_dict(datadict)
 
-
-
     # Add another hero
     newhero = Hero.create_character(
             name="Bearand", 
@@ -22,7 +20,7 @@ def test_updateWarband():
             )
     
     # Add items for new hero
-    newhero.inventory.itemlist = [
+    newhero.itemlist = [
         Item.create_item(name = "Dagger", source = "Core Rules"),
         Item.create_item(name = "Sword", source = "Core Rules"),
         Item.create_item(name = "Light Armour", source = "Core Rules"),

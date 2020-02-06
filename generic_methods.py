@@ -1,3 +1,5 @@
+import os
+
 from database.json import open_json
 from database.json import save_json
 
@@ -28,9 +30,26 @@ def load_warband(savename):
     save_json(data=datadict, jsonfile="database/saves/cache.json")
     print("Loading completed")
 
+def show_saved_warbands():
+    # Folderpath
+    folderpath = "database/saves/"
 
+    # Iterate over jsons in database/saves/
+    savelist = {}
+    i = 1
+    for filename in os.listdir(folderpath):
+        if filename.endswith(".json") and not filename == "cache.json": 
+            # print(os.path.join(folderpath, filename))
+            savedict = {'number': i, 'savefile': filename}
+            savelist.update(savedict)
+            i += 1
     
+    print(savelist)
+    return savelist
+
+
 if __name__ == "__main__":
     wbname = "Uthluan Wyrdbreakers"
     save_warband(wbname)
     load_warband(wbname)
+    show_saved_warbands()

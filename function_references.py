@@ -1,18 +1,22 @@
 from database.json import open_json
 from database.json import save_json
 
-from class_hierarchy import Warband
-from class_hierarchy import Squad
-from class_hierarchy import Character
-from class_hierarchy import Hero
-from class_hierarchy import Henchman
+from class_hierarchy import (
+    Warband,
+    Squad,
+    Character,
+    Hero,
+    Henchman,
+    )
 
-from class_components import Rule
-from class_components import Treasury
-from class_components import Item
-from class_components import Skill
-from class_components import Ability
-from class_components import Magic
+from class_components import (
+    Rule,
+    Treasury,
+    Item,
+    Skill,
+    Ability,
+    Magic,
+    )
 
 def create_characterref():
     # Paths
@@ -94,7 +98,7 @@ def get_characterref(race, source, category):
             if category in data[race][source]: 
                 characterdict = data[race][source][category]
             else:
-                print(f"Type:{name} does not exist")
+                print(f"Type:{category} does not exist")
         else:
             print(f"source {source} does not exist")
     else:

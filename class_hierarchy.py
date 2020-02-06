@@ -1,11 +1,13 @@
 from database.json import open_json
 
-from class_components import Rule
-from class_components import Treasury
-from class_components import Item
-from class_components import Skill
-from class_components import Ability
-from class_components import Magic
+from class_components import (
+    Rule,
+    Treasury,
+    Item,
+    Skill,
+    Ability,
+    Magic,
+    )
 
 
 class Warband(object):

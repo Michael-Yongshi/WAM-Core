@@ -1,21 +1,27 @@
 from database.json import open_json
 
-from generic_methods import save_warband
-from generic_methods import load_warband
-from generic_methods import cache_warband
+from generic_methods import (
+    save_warband,
+    load_warband,
+    cache_warband,
+    )
 
-from class_hierarchy import Warband
-from class_hierarchy import Squad
-from class_hierarchy import Character
-from class_hierarchy import Hero
-from class_hierarchy import Henchman
+from class_hierarchy import (
+    Warband,
+    Squad,
+    Character,
+    Hero,
+    Henchman,
+    )
 
-from class_components import Rule
-from class_components import Treasury
-from class_components import Item
-from class_components import Skill
-from class_components import Ability
-from class_components import Magic
+from class_components import (
+    Rule,
+    Treasury,
+    Item,
+    Skill,
+    Ability,
+    Magic,
+    )
 
 def test_createWarband(wbname, wbrace):
    

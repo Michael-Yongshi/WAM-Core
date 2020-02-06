@@ -1,3 +1,5 @@
+#pip3 install --user requests
+
 import requests # api library
 import json # json library
 

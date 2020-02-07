@@ -12,7 +12,9 @@ from PyQt5.QtWidgets import (
     QDesktopWidget,
     QInputDialog,
     QLabel,
+    QGridLayout,
     QVBoxLayout,
+    QHBoxLayout,
     QLineEdit,
     QListWidget,
     QListWidgetItem,
@@ -142,6 +144,7 @@ class WarbandOverview(QMainWindow):
         btn.clicked.connect(self.create_warband)
         
 
+
         self.show()
     
     def create_warband(self):
@@ -159,11 +162,48 @@ class WarbandOverview(QMainWindow):
             self.show_warband_in_memory()
 
     def show_warband_in_memory(self):
-        label1 = QLabel()
         wbid = get_current_warband()
-        label1.setText("Your warband " + wbid.name)
-        label1.setAlignment(Qt.AlignCenter)
-        self.setCentralWidget(label1)
+        
+        # warband info in a grid box
+        warbandwidget = QLabel()
+        warbandwidget.setText("Your warband " + wbid.name)
+        # warbox = QGridLayout(label1)
+
+        # Vertical layout for heroes
+        herobox = QVBoxLayout()
+        for hero in wbid.herolist:
+            label = QLabel()
+            label.setText(hero.name)
+            herobox.addWidget(label)
+        herowidget = QWidget()
+        herowidget.setLayout(herobox)
+
+        # Vertical layout for squads
+        squadbox = QVBoxLayout()
+        for squad in wbid.squadlist:
+            label = QLabel()
+            label.setText(squad.name)
+            squadbox.addWidget(label)
+        squadwidget = QWidget()
+        squadwidget.setLayout(squadbox)
+
+        # wrapping heroes and squads in a horizontal layout
+        charbox = QHBoxLayout()
+        charbox.addWidget(herowidget)
+        charbox.addWidget(squadwidget)
+        charwidget = QWidget()
+        charwidget.setLayout(charbox)
+
+        # vertical layout for top warband info and bottom hero / squad
+        overviewbox = QVBoxLayout()
+        overviewbox.addWidget(warbandwidget)
+        overviewbox.addWidget(charwidget)
+        widget = QWidget()
+        widget.setLayout(overviewbox)
+        self.setCentralWidget(widget)
+
+
+
 
     # def closeEvent(self, event):
     #     reply = QMessageBox.question(

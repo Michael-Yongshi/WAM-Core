@@ -115,11 +115,7 @@ class WarbandOverview(QMainWindow):
         self.setWindowIcon(QIcon('icon.png'))        
 
         # Create some text in middle of the window
-        wbid = get_current_warband()
-        wbname = wbid.name
-        label = QLabel("Your warband " + wbname)
-        label.setAlignment(Qt.AlignCenter)
-        self.setCentralWidget(label)
+        self.show_warband_in_memory()
 
         # creates a button for quitting the app
         btn = QPushButton('Quit', self)
@@ -156,10 +152,18 @@ class WarbandOverview(QMainWindow):
     def choose_warband(self):
         warbands = show_saved_warbands()
         print(show_saved_warbands)
-        warband, okPressed = QInputDialog.getItem(self, "Choose", "Choose your warband", warbands, 0, False)
-        if okPressed and warband:
-            print(warband)
-            load_warband(warband)
+        wbname, okPressed = QInputDialog.getItem(self, "Choose", "Choose your warband", warbands, 0, False)
+        if okPressed and wbname:
+            print(wbname)
+            load_warband(wbname)
+            self.show_warband_in_memory()
+
+    def show_warband_in_memory(self):
+        label1 = QLabel()
+        wbid = get_current_warband()
+        label1.setText("Your warband " + wbid.name)
+        label1.setAlignment(Qt.AlignCenter)
+        self.setCentralWidget(label1)
 
     # def closeEvent(self, event):
     #     reply = QMessageBox.question(

@@ -1,9 +1,9 @@
 {
-    "name": "Myriac",
-    "race": "High Elf",
-    "description": "High Elves originate from the island kingdom of Ulthuan far to the west of the Empire, which is belaugered continuously by raids from their hated Dark Elven brethren, the fearless Norscans, and the incursions of Chaos which rack all civilized lands.The fair elven folk learn how to fight from childhood, and thanks to their extremely long lifespans they often grow in skill to become unrivaled in their prowess by other mortals. Despite their individual ability, their numbers are few compared to their co-inhabitants of the Old World and they are always in search of some edge with which to gain an advantage over their foes.Thus the High Elves are unrivaled practitioners of the arcane arts and their specialized school of Spell craft is so highly regarded it is referred to simply as the High Magic by other Wizards. The Elven Mages are very proficient at many aspects of Magic, including astrology and the prediction of what is to come. So it was that the coming of the comet known in the Empire as the Hammer of Sigmar was not a suprise to the inhabitants of Ulthuan.The Loremasters foretold the great power it would bring in the form of wyrdstone, but also the danger as they knew the substance was riddled with the Chaos taint and would spread the evils of corruption to all new levels. Therefore the Pheonix King, advised by the Loremasters, issued a decree: Wyrdstone must be destroyed whenever possible, and any brave enough to undertake the hardships of travel across the lands of the Humans and to bear the dangers of the Damned city to seek out and destroy the Chaos-tainted stones would be forever honored in the lands of the Elves.From across the provinces bands of young would-be heroes volunteered to pledge their blades to the Kings edict, and the Loremasters dispatched many apprentices to accompany them in their journey and lead them to the fell substance. Furthermore the Loremasters crafted magical devices called Wyrd-breakers to counter the Chaos taint of the wyrdstone and render the substance into more mundane gemstones thereby effectively destroying the wyrdstone but still allowing the Elves a source of revenue. Each of the young mages was given one and sent forth to rid the world of the taint of wyrdstone.",
+    "name": "Uthluan Wyrdbreakers",
+    "race": "High Elves",
+    "description": "No description",
     "treasury": {
-        "gold": 58,
+        "gold": 252,
         "wyrd": 0
     },
     "rulelist": {
@@ -30,8 +30,8 @@
     },
     "itemlist": {
         "Item1": {
-            "name": "Wyrd Breaker",
-            "source": "High Elves",
+            "name": "Test item",
+            "source": "manual",
             "category": "Other",
             "distance": 0,
             "skill": {
@@ -54,7 +54,7 @@
     },
     "herolist": {
         "Hero1": {
-            "name": "Viriadon",
+            "name": "Avareac",
             "race": "High Elf",
             "source": "High Elves",
             "category": "Loremaster",
@@ -151,7 +151,7 @@
             "description": "Loremasters are the most powerful mages in the entire Warhammer world. Their knowledge of the arcane arts and their intensive training at the Tower of Hoeth makes them perfect for leading expeditions into Lustria. They are capable and efficient with years of extensive training and skill at their disposal. Loremasters alone command magic powerful enough to match the might of the mysterious Slann. They delve into the temple cities of the Lizardmen in search of any remaining artifacts of the Old Ones power."
         },
         "Hero2": {
-            "name": "Olri`in",
+            "name": "Bearand",
             "race": "High Elf",
             "source": "High Elves",
             "category": "Sword Warden",
@@ -354,28 +354,6 @@
                             "magiclist": {},
                             "price": 10,
                             "description": "A basic Spear."
-                        },
-                        "Item3": {
-                            "name": "Long Bow",
-                            "source": "Core Rules",
-                            "category": "Missile Weapon",
-                            "distance": 30,
-                            "skill": {
-                                "movement": 0,
-                                "weapon": 0,
-                                "ballistic": 0,
-                                "strength": 3,
-                                "toughness": 0,
-                                "wounds": 0,
-                                "initiative": 0,
-                                "actions": 0,
-                                "leadership": 0,
-                                "armoursave": 0
-                            },
-                            "abilitylist": {},
-                            "magiclist": {},
-                            "price": 15,
-                            "description": "A Long bow."
                         }
                     },
                     "experience": 0,
@@ -457,28 +435,6 @@
                             "magiclist": {},
                             "price": 10,
                             "description": "A basic Spear."
-                        },
-                        "Item3": {
-                            "name": "Long Bow",
-                            "source": "Core Rules",
-                            "category": "Missile Weapon",
-                            "distance": 30,
-                            "skill": {
-                                "movement": 0,
-                                "weapon": 0,
-                                "ballistic": 0,
-                                "strength": 3,
-                                "toughness": 0,
-                                "wounds": 0,
-                                "initiative": 0,
-                                "actions": 0,
-                                "leadership": 0,
-                                "armoursave": 0
-                            },
-                            "abilitylist": {},
-                            "magiclist": {},
-                            "price": 15,
-                            "description": "A Long bow."
                         }
                     },
                     "experience": 0,
@@ -565,28 +521,6 @@
                             "magiclist": {},
                             "price": 15,
                             "description": "A very large sword that strikes slow but powerfull."
-                        },
-                        "Item3": {
-                            "name": "Long Bow",
-                            "source": "Core Rules",
-                            "category": "Missile Weapon",
-                            "distance": 30,
-                            "skill": {
-                                "movement": 0,
-                                "weapon": 0,
-                                "ballistic": 0,
-                                "strength": 3,
-                                "toughness": 0,
-                                "wounds": 0,
-                                "initiative": 0,
-                                "actions": 0,
-                                "leadership": 0,
-                                "armoursave": 0
-                            },
-                            "abilitylist": {},
-                            "magiclist": {},
-                            "price": 15,
-                            "description": "A Long bow."
                         }
                     },
                     "experience": 0,
@@ -597,10 +531,10 @@
             }
         },
         "squad3": {
-            "name": "Cadets",
+            "name": "Cadet",
             "henchmanlist": {
                 "Henchman1": {
-                    "name": "Cadets",
+                    "name": "Cadet",
                     "race": "High Elf",
                     "source": "High Elves",
                     "category": "Cadet",

@@ -19,8 +19,10 @@ from PyQt5.QtWidgets import (
     )
 
 from PyQt5.QtGui import (
-    QIcon,
+    QColor,
     QFont,
+    QIcon,
+    QPalette,
     )
 
 from generic_methods import (
@@ -29,18 +31,59 @@ from generic_methods import (
     show_saved_warbands,
 )
 
+from PyQt5.QtGui import QPalette, QColor
+
+
+# class App(QApplication):
+#     def __init__(self, *args):
+#         super().__init__(self, *args)
+#         self.setStyle("Fusion")
+#         self.setPalette(QDarkPalette())
+#         self.setStyleSheet("QToolTip { color: #ffffff; background-color: grey; border: 1px solid white; }")
+#         self.main = MainWindow()
+
+#     @staticmethod
+#     def start():
+#         global app 
+#         app = App(sys.argv)
+#         app.exec_()
+
+
+class QDarkPalette(QPalette):
+    """Dark palette for a Qt application meant to be used with the Fusion theme."""
+    def __init__(self, *__args):
+        super().__init__(*__args)
+
+        # Set all the colors for a dark theme
+        # red, green, blue
+        # QColor(255, 255, 255))  Qt.White
+        # QColor(255, 0, 0)) Qt.Red
+        # QColor(0, 0, 0)) Qt.Black
+        self.setColor(QPalette.Window, QColor(53, 53, 53))
+        self.setColor(QPalette.WindowText, QColor(255, 255, 255))
+        self.setColor(QPalette.Base, QColor(25, 25, 25))
+        self.setColor(QPalette.AlternateBase, QColor(53, 53, 53))
+        self.setColor(QPalette.ToolTipBase, QColor(255, 255, 255))
+        self.setColor(QPalette.ToolTipText, QColor(255, 255, 255))
+        self.setColor(QPalette.Text, QColor(255, 255, 255))
+        self.setColor(QPalette.Button, QColor(53, 53, 53))
+        self.setColor(QPalette.ButtonText, QColor(255, 255, 255))
+        self.setColor(QPalette.BrightText, QColor(255, 0, 0))
+        self.setColor(QPalette.Link, QColor(42, 130, 218))
+        self.setColor(QPalette.Highlight, QColor(42, 130, 218))
+        self.setColor(QPalette.HighlightedText, QColor(0, 0, 0))
+
+    @staticmethod
+    def set_stylesheet(app):
+        app.setstylesheet("QToolTip { color: #ffffff; background-color: grey; border: 1px solid white; }")
+
+       
 class MainWindow(QWidget):
     
     def __init__(self):
         super().__init__()
         
-        self.format()
         self.initUI()
-
-
-    def format(self):
-        QToolTip.setFont(QFont('SansSerif', 10))
-        self.setStyleSheet("color: black; background-color:grey")
 
     def initUI(self):
        
@@ -66,7 +109,7 @@ class MainWindow(QWidget):
         # btn.setStyleSheet("color: white; background-color:black")
         btn.resize(btn.sizeHint())
         btn.move(50, 50) 
-        btn.clicked.connect(SubWindow())
+        btn.clicked.connect(self.ow_choose_warband)
 
         # creates a button for creating a new warband
         btn = QPushButton('Create Warband', self)
@@ -77,6 +120,9 @@ class MainWindow(QWidget):
 
         self.show()
         
+    def ow_choose_warband():
+        pass
+
     def center(self):
         # Get a rectangle specifying the geometry of the main window
         windowrectangle = self.frameGeometry()
@@ -87,19 +133,19 @@ class MainWindow(QWidget):
         # set the application window to the rectangle
         self.move(windowrectangle.topLeft())
 
-    def closeEvent(self, event):
-        reply = QMessageBox.question(
-            self, 
-            'Message',
-            "Are you sure to quit?", 
-            QMessageBox.Yes | QMessageBox.No, 
-            QMessageBox.No,
-            )
+    # def closeEvent(self, event):
+    #     reply = QMessageBox.question(
+    #         self, 
+    #         'Message',
+    #         "Are you sure to quit?", 
+    #         QMessageBox.Yes | QMessageBox.No, 
+    #         QMessageBox.No,
+    #         )
 
-        if reply == QMessageBox.Yes:
-            event.accept()
-        else:
-            event.ignore()  
+    #     if reply == QMessageBox.Yes:
+    #         event.accept()
+    #     else:
+    #         event.ignore()  
         
 class SubWindow(MainWindow):
     
@@ -154,11 +200,15 @@ class TableView(QTableWidget):
         self.setHorizontalHeaderLabels(horHeaders)
 
 if __name__ == '__main__':
-    # Create an application in the OS
-    app = QApplication(sys.argv)
+    # Create an application in the OS with the class
+    # App().start()
 
-    # Use the class to create a window object
-    wbo = MainWindow()
+    # Create an application manually
+    app = QApplication(sys.argv)
+    app.setStyle("Fusion")
+    app.setPalette(QDarkPalette())
+    app.setStyleSheet("QToolTip { color: #ffffff; background-color: grey; border: 1px solid white; }")
+    main = MainWindow()
 
     # Make sure we can exit the application object normally
     sys.exit(app.exec_())

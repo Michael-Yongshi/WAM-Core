@@ -9,6 +9,8 @@ from PyQt5.QtWidgets import (
     QAction,
     QApplication,
     QDesktopWidget,
+    QListWidget,
+    QListWidgetItem,
     QMessageBox,
     QPushButton, 
     QTableWidget,
@@ -90,7 +92,17 @@ class MainWindow(QWidget):
         # Creates the main window
         # self.setGeometry(0, 0, 1800, 1000)
         self.resize(1800, 1120)
-        self.center()
+
+        # centering the window
+        # Get a rectangle specifying the geometry of the main window
+        windowrectangle = self.frameGeometry()
+        # gett desktop resolution and specifically the center point of it
+        screencenter = QDesktopWidget().availableGeometry().center()
+        # set the rectangle to the center point of the monitor
+        windowrectangle.moveCenter(screencenter)
+        # set the application window to the rectangle
+
+        self.move(windowrectangle.topLeft())
         self.setWindowTitle('Warband Manager')
         self.setToolTip('This is your <b>Warband</b> overview')
         self.setWindowIcon(QIcon('icon.png'))        
@@ -109,29 +121,21 @@ class MainWindow(QWidget):
         # btn.setStyleSheet("color: white; background-color:black")
         btn.resize(btn.sizeHint())
         btn.move(50, 50) 
-        btn.clicked.connect(self.ow_choose_warband)
+        btn.clicked.connect(SubWindow.buildsubwindow)
 
         # creates a button for creating a new warband
         btn = QPushButton('Create Warband', self)
         btn.setToolTip('Create a new <b>Warband</b>')
         # btn.setStyleSheet("color: white; background-color:black")
         btn.resize(btn.sizeHint())
-        btn.move(300, 50) 
+        btn.move(300, 50)
+        btn.clicked.connect(self.button_clicked)
+        
 
         self.show()
-        
-    def ow_choose_warband():
-        pass
-
-    def center(self):
-        # Get a rectangle specifying the geometry of the main window
-        windowrectangle = self.frameGeometry()
-        # gett desktop resolution and specifically the center point of it
-        screencenter = QDesktopWidget().availableGeometry().center()
-        # set the rectangle to the center point of the monitor
-        windowrectangle.moveCenter(screencenter)
-        # set the application window to the rectangle
-        self.move(windowrectangle.topLeft())
+    
+    def button_clicked(self):
+        print("click")
 
     # def closeEvent(self, event):
     #     reply = QMessageBox.question(
@@ -147,35 +151,39 @@ class MainWindow(QWidget):
     #     else:
     #         event.ignore()  
         
-class SubWindow(MainWindow):
+
+class SubWindow(QWidget):
     
     def __init__(self):
         super().__init__()
         
-        self.format()
         self.initUI()
     
     def initUI(self):
         savelist = show_saved_warbands()
-        TableView(data = savelist)
+        print(savelist)
 
-        # self.setGeometry(0, 0, 1800, 1000)
-        self.resize(900, 500)
-        self.center()
-        self.setWindowTitle('Choose Warband')
-        self.setToolTip('Choose here the <b>Warband</b> you want to open')
-        self.setWindowIcon(QIcon('icon.png'))        
+        # listWidget = QListWidget(self)
+        # # listWidget.itemDoubleClicked.connect(MainWindow)
 
-        # creates a button for quitting the app
-        btn = QPushButton('Quit', self)
-        btn.setToolTip('Quit the program')
-        # btn.setStyleSheet("color: white; background-color:black")
-        btn.resize(btn.sizeHint())
-        btn.move(700, 400) 
-        btn.clicked.connect(QApplication.instance().quit)
+        # for save in savelist:
+        #     QListWidgetItem(save, listWidget)
 
-        self.show()
-    
+        # self.setGeometry(100, 100, 100, 100)
+        # self.show()
+
+    @staticmethod
+    def buildsubwindow(self):
+        SubWindow()
+
+        # # self.setGeometry(0, 0, 1800, 1000)
+        # self.resize(900, 500)
+        # self.center()
+        # self.setWindowTitle('Choose Warband')
+        # self.setToolTip('Choose here the <b>Warband</b> you want to open')
+        # self.setWindowIcon(QIcon('icon.png'))        
+
+   
 class TableView(QTableWidget):
 
     def __init__(self, data, *args):

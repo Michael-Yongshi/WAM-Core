@@ -35,16 +35,12 @@ def show_saved_warbands():
     folderpath = "database/saves/"
 
     # Iterate over jsons in database/saves/
-    savelist = {}
-    i = 1
+    savelist = []
     for filename in os.listdir(folderpath):
         if filename.endswith(".json") and not filename == "cache.json": 
             # print(os.path.join(folderpath, filename))
-            savedict = {'number': i, 'savefile': filename}
-            savelist.update(savedict)
-            i += 1
-    
-    print(savelist)
+            savelist.append(filename)
+
     return savelist
 
 

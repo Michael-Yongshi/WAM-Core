@@ -4,15 +4,19 @@ import sys
 
 from PyQt5.QtCore import (
     QRect,
+    Qt,
     )
 from PyQt5.QtWidgets import (
     QAction,
     QApplication,
     QDesktopWidget,
     QInputDialog,
+    QLabel,
+    QVBoxLayout,
     QLineEdit,
     QListWidget,
     QListWidgetItem,
+    QMainWindow,
     QMessageBox,
     QPushButton, 
     QTableWidget,
@@ -33,6 +37,7 @@ from generic_methods import (
     save_warband,
     load_warband,
     show_saved_warbands,
+    get_current_warband,
 )
 
 from PyQt5.QtGui import QPalette, QColor
@@ -82,7 +87,7 @@ class QDarkPalette(QPalette):
         app.setstylesheet("QToolTip { color: #ffffff; background-color: grey; border: 1px solid white; }")
 
        
-class MainWindow(QWidget):
+class WarbandOverview(QMainWindow):
     
     def __init__(self):
         super().__init__()
@@ -108,6 +113,13 @@ class MainWindow(QWidget):
         self.setWindowTitle('Warband Manager')
         self.setToolTip('This is your <b>Warband</b> overview')
         self.setWindowIcon(QIcon('icon.png'))        
+
+        # Create some text in middle of the window
+        wbid = get_current_warband()
+        wbname = wbid.name
+        label = QLabel("Your warband " + wbname)
+        label.setAlignment(Qt.AlignCenter)
+        self.setCentralWidget(label)
 
         # creates a button for quitting the app
         btn = QPushButton('Quit', self)
@@ -140,7 +152,6 @@ class MainWindow(QWidget):
         warband, okPressed = QInputDialog.getText(self, "Create", "Name your warband:")
         if okPressed and warband:
             print(warband)
-            return warband
 
     def choose_warband(self):
         warbands = show_saved_warbands()
@@ -148,7 +159,7 @@ class MainWindow(QWidget):
         warband, okPressed = QInputDialog.getItem(self, "Choose", "Choose your warband", warbands, 0, False)
         if okPressed and warband:
             print(warband)
-            return warband
+            load_warband(warband)
 
     # def closeEvent(self, event):
     #     reply = QMessageBox.question(
@@ -227,7 +238,7 @@ if __name__ == '__main__':
     app.setStyle("Fusion")
     app.setPalette(QDarkPalette())
     app.setStyleSheet("QToolTip { color: #ffffff; background-color: grey; border: 1px solid white; }")
-    main = MainWindow()
+    main = WarbandOverview()
 
     # Make sure we can exit the application object normally
     sys.exit(app.exec_())

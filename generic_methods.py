@@ -3,6 +3,23 @@ import os
 from database.json import open_json
 from database.json import save_json
 
+from class_hierarchy import (
+    Warband,
+    Squad,
+    Character,
+    Hero,
+    Henchman,
+    )
+
+from class_components import (
+    Rule,
+    Treasury,
+    Item,
+    Skill,
+    Ability,
+    Magic,
+    )
+
 def cache_warband(datadict):
     save_json(data=datadict, jsonfile="database/saves/cache.json")
     print("Cache completed")
@@ -44,6 +61,14 @@ def show_saved_warbands():
 
     return savelist
 
+def get_current_warband():
+    # Open data in cache
+    datadict = open_json(jsonfile="database/saves/cache.json")
+
+    # from dictionary to objects for manipulation
+    wbid = Warband.from_dict(datadict)
+
+    return wbid
 
 if __name__ == "__main__":
     wbname = "Uthluan Wyrdbreakers"

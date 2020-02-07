@@ -9,6 +9,8 @@ from PyQt5.QtWidgets import (
     QAction,
     QApplication,
     QDesktopWidget,
+    QInputDialog,
+    QLineEdit,
     QListWidget,
     QListWidgetItem,
     QMessageBox,
@@ -121,7 +123,7 @@ class MainWindow(QWidget):
         # btn.setStyleSheet("color: white; background-color:black")
         btn.resize(btn.sizeHint())
         btn.move(50, 50) 
-        btn.clicked.connect(SubWindow.buildsubwindow)
+        btn.clicked.connect(self.choose_warband)
 
         # creates a button for creating a new warband
         btn = QPushButton('Create Warband', self)
@@ -129,13 +131,24 @@ class MainWindow(QWidget):
         # btn.setStyleSheet("color: white; background-color:black")
         btn.resize(btn.sizeHint())
         btn.move(300, 50)
-        btn.clicked.connect(self.button_clicked)
+        btn.clicked.connect(self.create_warband)
         
 
         self.show()
     
-    def button_clicked(self):
-        print("click")
+    def create_warband(self):
+        warband, okPressed = QInputDialog.getText(self, "Create", "Name your warband:")
+        if okPressed and warband:
+            print(warband)
+            return warband
+
+    def choose_warband(self):
+        warbands = show_saved_warbands()
+        print(show_saved_warbands)
+        warband, okPressed = QInputDialog.getItem(self, "Choose", "Choose your warband", warbands, 0, False)
+        if okPressed and warband:
+            print(warband)
+            return warband
 
     # def closeEvent(self, event):
     #     reply = QMessageBox.question(
@@ -160,9 +173,7 @@ class SubWindow(QWidget):
         self.initUI()
     
     def initUI(self):
-        savelist = show_saved_warbands()
-        print(savelist)
-
+        pass
         # listWidget = QListWidget(self)
         # # listWidget.itemDoubleClicked.connect(MainWindow)
 

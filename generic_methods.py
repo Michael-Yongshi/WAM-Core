@@ -38,8 +38,9 @@ def show_saved_warbands():
     savelist = []
     for filename in os.listdir(folderpath):
         if filename.endswith(".json") and not filename == "cache.json": 
+            warbandname = os.path.splitext(filename)[0]
             # print(os.path.join(folderpath, filename))
-            savelist.append(filename)
+            savelist.append(warbandname)
 
     return savelist
 

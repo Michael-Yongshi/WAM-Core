@@ -42,8 +42,6 @@ from generic_methods import (
     get_current_warband,
 )
 
-from PyQt5.QtGui import QPalette, QColor
-
 
 # class App(QApplication):
 #     def __init__(self, *args):
@@ -59,7 +57,7 @@ from PyQt5.QtGui import QPalette, QColor
 #         app = App(sys.argv)
 #         app.exec_()
 
-class QWidgetBorder(QWidget):
+class QBorderedWidget(QWidget):
     def __init__(self, *args):
         super().__init__(*args)
 
@@ -121,9 +119,9 @@ class WarbandOverview(QMainWindow):
         self.setToolTip('This is your <b>Warband</b> overview')
         self.setWindowIcon(QIcon('icon.png'))        
 
-        # Create some text in middle of the window
-        self.show_warband_in_memory()
+        # Create layouts
 
+        
         # creates a button for quitting the app
         btn = QPushButton('Quit', self)
         btn.setToolTip('Quit the program')
@@ -148,8 +146,6 @@ class WarbandOverview(QMainWindow):
         btn.move(300, 50)
         btn.clicked.connect(self.create_warband)
         
-
-
         self.show()
     
     def create_warband(self):
@@ -171,11 +167,13 @@ class WarbandOverview(QMainWindow):
         
         # warband info in a grid box
         warbandbox = QVBoxLayout()
-        warbandwidget = QLabel()
-        warbandwidget.setText("Your warband " + wbid.name)
-        warbandbox.addWidget(warbandwidget)
+
+        wbnamewidget = QLabel()
+        wbnamewidget.setText("Your warband " + wbid.name)
+        warbandbox.addWidget(wbnamewidget)
+
+        warbandwidget = QBorderedWidget()
         warbandwidget.setLayout(warbandbox)
-        # warbox = QGridLayout(label1)
 
         # Vertical layout for heroes
         herobox = QVBoxLayout()
@@ -183,7 +181,7 @@ class WarbandOverview(QMainWindow):
             label = QLabel()
             label.setText(hero.name)
             herobox.addWidget(label)
-        herowidget = QWidgetBorder()
+        herowidget = QBorderedWidget()
         herowidget.setLayout(herobox)
 
         # Vertical layout for squads
@@ -192,21 +190,21 @@ class WarbandOverview(QMainWindow):
             label = QLabel()
             label.setText(squad.name)
             squadbox.addWidget(label)
-        squadwidget = QWidgetBorder()
+        squadwidget = QBorderedWidget()
         squadwidget.setLayout(squadbox)
 
         # wrapping heroes and squads in a horizontal layout
         charbox = QHBoxLayout()
         charbox.addWidget(herowidget)
         charbox.addWidget(squadwidget)
-        charwidget = QWidgetBorder()
+        charwidget = QBorderedWidget()
         charwidget.setLayout(charbox)
 
         # vertical layout for top warband info and bottom hero / squad
         overviewbox = QVBoxLayout()
         overviewbox.addWidget(warbandwidget)
         overviewbox.addWidget(charwidget)
-        widget = QWidgetBorder()
+        widget = QBorderedWidget()
         widget.setLayout(overviewbox)
         self.setCentralWidget(widget)
 
@@ -228,7 +226,7 @@ class WarbandOverview(QMainWindow):
     #         event.ignore()  
         
 
-# class SubWindow(QWidgetBorder):
+# class SubWindow(QBorderedWidget):
     
 #     def __init__(self):
 #         super().__init__()

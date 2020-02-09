@@ -94,13 +94,15 @@ class QDarkPalette(QPalette):
        
 class WarbandOverview(QMainWindow):
     
-    def __init__(self):
+    def __init__(self, wbid=None):
         super().__init__()
         
         self.initUI()
 
     def initUI(self):
-       
+        
+        wbid = get_current_warband()
+
         # Creates the main window
         # self.setGeometry(0, 0, 1800, 1000)
         self.resize(1800, 1120)
@@ -147,6 +149,9 @@ class WarbandOverview(QMainWindow):
         wbboxwidget = QBorderedWidget()
         wbboxwidget.setLayout(wbbox)
 
+        # update wb info
+        wbnamelabel.setText("Your warband " + self.wbid.name)
+
         # top wrapping warband and system in the top horizontal layout
         topbox = QHBoxLayout()
         topbox.addWidget(wbboxwidget)
@@ -156,11 +161,19 @@ class WarbandOverview(QMainWindow):
 
         # left bottom heroes
         herobox = QVBoxLayout()
+        for hero in self.wbid.herolist:
+            label = QLabel()
+            label.setText(hero.name)
+            self.herobox.addWidget(label)
         heroboxwidget = QBorderedWidget()
         heroboxwidget.setLayout(herobox)
 
         # right bottom squads
         squadbox = QVBoxLayout()
+        for squad in self.wbid.squadlist:
+            label = QLabel()
+            label.setText(squad.name)
+            self.squadbox.addWidget(label)
         squadboxwidget = QBorderedWidget()
         squadboxwidget.setLayout(squadbox)
 
@@ -179,7 +192,6 @@ class WarbandOverview(QMainWindow):
         overviewboxwidget.setLayout(overviewbox)
 
         self.setCentralWidget(overviewboxwidget)
-        self.show_warband_in_memory
         self.show()
     
     def create_warband(self):
@@ -192,25 +204,9 @@ class WarbandOverview(QMainWindow):
         wbname, okPressed = QInputDialog.getItem(self, "Choose", "Choose your warband", warbands, 0, False)
         if okPressed and wbname:
             load_warband(wbname)
-            self.show_warband_in_memory()
+            self.wbid = get_current_warband()
+      
 
-    def show_warband_in_memory(self):
-        wbid = get_current_warband()
-        
-        # update wb info
-        self.wbnamelabel.setText("Your warband " + wbid.name)
-        
-        # update Heroes
-        for hero in wbid.herolist:
-            label = QLabel()
-            label.setText(hero.name)
-            self.herobox.addWidget(label)
-
-        # update squads
-        for squad in wbid.squadlist:
-            label = QLabel()
-            label.setText(squad.name)
-            self.squadbox.addWidget(label)
 
     # def closeEvent(self, event):
     #     reply = QMessageBox.question(

@@ -59,6 +59,11 @@ from PyQt5.QtGui import QPalette, QColor
 #         app = App(sys.argv)
 #         app.exec_()
 
+class QWidgetBorder(QWidget):
+    def __init__(self, *args):
+        super().__init__(*args)
+
+        self.setStyleSheet("border: 1px solid rgb(10, 10, 10)")
 
 class QDarkPalette(QPalette):
     """Dark palette for a Qt application meant to be used with the Fusion theme."""
@@ -165,8 +170,11 @@ class WarbandOverview(QMainWindow):
         wbid = get_current_warband()
         
         # warband info in a grid box
+        warbandbox = QVBoxLayout()
         warbandwidget = QLabel()
         warbandwidget.setText("Your warband " + wbid.name)
+        warbandbox.addWidget(warbandwidget)
+        warbandwidget.setLayout(warbandbox)
         # warbox = QGridLayout(label1)
 
         # Vertical layout for heroes
@@ -175,7 +183,7 @@ class WarbandOverview(QMainWindow):
             label = QLabel()
             label.setText(hero.name)
             herobox.addWidget(label)
-        herowidget = QWidget()
+        herowidget = QWidgetBorder()
         herowidget.setLayout(herobox)
 
         # Vertical layout for squads
@@ -184,21 +192,21 @@ class WarbandOverview(QMainWindow):
             label = QLabel()
             label.setText(squad.name)
             squadbox.addWidget(label)
-        squadwidget = QWidget()
+        squadwidget = QWidgetBorder()
         squadwidget.setLayout(squadbox)
 
         # wrapping heroes and squads in a horizontal layout
         charbox = QHBoxLayout()
         charbox.addWidget(herowidget)
         charbox.addWidget(squadwidget)
-        charwidget = QWidget()
+        charwidget = QWidgetBorder()
         charwidget.setLayout(charbox)
 
         # vertical layout for top warband info and bottom hero / squad
         overviewbox = QVBoxLayout()
         overviewbox.addWidget(warbandwidget)
         overviewbox.addWidget(charwidget)
-        widget = QWidget()
+        widget = QWidgetBorder()
         widget.setLayout(overviewbox)
         self.setCentralWidget(widget)
 
@@ -220,15 +228,15 @@ class WarbandOverview(QMainWindow):
     #         event.ignore()  
         
 
-class SubWindow(QWidget):
+# class SubWindow(QWidgetBorder):
     
-    def __init__(self):
-        super().__init__()
+#     def __init__(self):
+#         super().__init__()
         
-        self.initUI()
+#         self.initUI()
     
-    def initUI(self):
-        pass
+#     def initUI(self):
+#         pass
         # listWidget = QListWidget(self)
         # # listWidget.itemDoubleClicked.connect(MainWindow)
 
@@ -238,9 +246,9 @@ class SubWindow(QWidget):
         # self.setGeometry(100, 100, 100, 100)
         # self.show()
 
-    @staticmethod
-    def buildsubwindow(self):
-        SubWindow()
+    # @staticmethod
+    # def buildsubwindow(self):
+    #     SubWindow()
 
         # # self.setGeometry(0, 0, 1800, 1000)
         # self.resize(900, 500)
@@ -250,28 +258,28 @@ class SubWindow(QWidget):
         # self.setWindowIcon(QIcon('icon.png'))        
 
    
-class TableView(QTableWidget):
+# class TableView(QTableWidget):
 
-    def __init__(self, data, *args):
-        QTableWidget.__init__(self, *args)
+#     def __init__(self, data, *args):
+#         QTableWidget.__init__(self, *args)
 
-        data = {'col1':['1','2','3','4'],
-                'col2':['1','2','1','3'],
-                'col3':['1','1','2','1']}
+#         data = {'col1':['1','2','3','4'],
+#                 'col2':['1','2','1','3'],
+#                 'col3':['1','1','2','1']}
 
-        self.data = data
-        self.setData()
-        self.resizeColumnsToContents()
-        self.resizeRowsToContents()
+#         self.data = data
+#         self.setData()
+#         self.resizeColumnsToContents()
+#         self.resizeRowsToContents()
 
-    def setData(self):
-        horHeaders = []
-        for n, key in enumerate(sorted(self.data.keys())):
-            horHeaders.append(key)
-            for m, item in enumerate(self.data[key]):
-                newitem = QTableWidgetItem(item)
-                self.setItem(m, n, newitem)
-        self.setHorizontalHeaderLabels(horHeaders)
+#     def setData(self):
+#         horHeaders = []
+#         for n, key in enumerate(sorted(self.data.keys())):
+#             horHeaders.append(key)
+#             for m, item in enumerate(self.data[key]):
+#                 newitem = QTableWidgetItem(item)
+#                 self.setItem(m, n, newitem)
+#         self.setHorizontalHeaderLabels(horHeaders)
 
 if __name__ == '__main__':
     # Create an application in the OS with the class

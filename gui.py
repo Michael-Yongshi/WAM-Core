@@ -119,33 +119,67 @@ class WarbandOverview(QMainWindow):
         self.setToolTip('This is your <b>Warband</b> overview')
         self.setWindowIcon(QIcon('icon.png'))        
 
-        # Create layouts
+        # buttons for interaction     
+        btnchoose = QPushButton('Choose Warband', self)
+        btnchoose.setToolTip('Choose an existing <b>Warband</b>')
+        btnchoose.clicked.connect(self.choose_warband)
 
+        btncreate = QPushButton('Create Warband', self)
+        btncreate.setToolTip('Create a new <b>Warband</b>')
+        btncreate.clicked.connect(self.create_warband)
         
-        # creates a button for quitting the app
-        btn = QPushButton('Quit', self)
-        btn.setToolTip('Quit the program')
-        # btn.setStyleSheet("color: white; background-color:black")
-        btn.resize(btn.sizeHint())
-        btn.move(1600, 900) 
-        btn.clicked.connect(QApplication.instance().quit)
+        btnquit = QPushButton('Quit', self)
+        btnquit.setToolTip('Quit the program')
+        btnquit.clicked.connect(QApplication.instance().quit)
 
-        # creates a button for choosing an existing warband
-        btn = QPushButton('Choose Warband', self)
-        btn.setToolTip('Choose an existing <b>Warband</b>')
-        # btn.setStyleSheet("color: white; background-color:black")
-        btn.resize(btn.sizeHint())
-        btn.move(50, 50) 
-        btn.clicked.connect(self.choose_warband)
+        # top right
+        sysbox = QVBoxLayout()
+        sysbox.addWidget(btnquit)
+        sysbox.addWidget(btnchoose)
+        sysbox.addWidget(btncreate)
+        sysboxwidget = QBorderedWidget()
+        sysboxwidget.setLayout(sysbox)
 
-        # creates a button for creating a new warband
-        btn = QPushButton('Create Warband', self)
-        btn.setToolTip('Create a new <b>Warband</b>')
-        # btn.setStyleSheet("color: white; background-color:black")
-        btn.resize(btn.sizeHint())
-        btn.move(300, 50)
-        btn.clicked.connect(self.create_warband)
-        
+        # top left warband info
+        wbnamelabel = QLabel()
+        wbbox = QVBoxLayout()
+        wbbox.addWidget(wbnamelabel)
+        wbboxwidget = QBorderedWidget()
+        wbboxwidget.setLayout(wbbox)
+
+        # top wrapping warband and system in the top horizontal layout
+        topbox = QHBoxLayout()
+        topbox.addWidget(wbboxwidget)
+        topbox.addWidget(sysboxwidget)
+        topboxwidget = QBorderedWidget()
+        topboxwidget.setLayout(topbox)
+
+        # left bottom heroes
+        herobox = QVBoxLayout()
+        heroboxwidget = QBorderedWidget()
+        heroboxwidget.setLayout(herobox)
+
+        # right bottom squads
+        squadbox = QVBoxLayout()
+        squadboxwidget = QBorderedWidget()
+        squadboxwidget.setLayout(squadbox)
+
+        # wrapping heroes and squads in the bottom horizontal layout
+        botbox = QHBoxLayout()
+        botbox.addWidget(heroboxwidget)
+        botbox.addWidget(squadboxwidget)
+        botboxwidget = QBorderedWidget()
+        botboxwidget.setLayout(botbox)
+
+        # vertical layout for top and char part
+        overviewbox = QVBoxLayout()
+        overviewbox.addWidget(topboxwidget)
+        overviewbox.addWidget(botboxwidget)
+        overviewboxwidget = QBorderedWidget()
+        overviewboxwidget.setLayout(overviewbox)
+
+        self.setCentralWidget(overviewboxwidget)
+        self.show_warband_in_memory
         self.show()
     
     def create_warband(self):
@@ -155,61 +189,28 @@ class WarbandOverview(QMainWindow):
 
     def choose_warband(self):
         warbands = show_saved_warbands()
-        print(show_saved_warbands)
         wbname, okPressed = QInputDialog.getItem(self, "Choose", "Choose your warband", warbands, 0, False)
         if okPressed and wbname:
-            print(wbname)
             load_warband(wbname)
             self.show_warband_in_memory()
 
     def show_warband_in_memory(self):
         wbid = get_current_warband()
         
-        # warband info in a grid box
-        warbandbox = QVBoxLayout()
-
-        wbnamewidget = QLabel()
-        wbnamewidget.setText("Your warband " + wbid.name)
-        warbandbox.addWidget(wbnamewidget)
-
-        warbandwidget = QBorderedWidget()
-        warbandwidget.setLayout(warbandbox)
-
-        # Vertical layout for heroes
-        herobox = QVBoxLayout()
+        # update wb info
+        self.wbnamelabel.setText("Your warband " + wbid.name)
+        
+        # update Heroes
         for hero in wbid.herolist:
             label = QLabel()
             label.setText(hero.name)
-            herobox.addWidget(label)
-        herowidget = QBorderedWidget()
-        herowidget.setLayout(herobox)
+            self.herobox.addWidget(label)
 
-        # Vertical layout for squads
-        squadbox = QVBoxLayout()
+        # update squads
         for squad in wbid.squadlist:
             label = QLabel()
             label.setText(squad.name)
-            squadbox.addWidget(label)
-        squadwidget = QBorderedWidget()
-        squadwidget.setLayout(squadbox)
-
-        # wrapping heroes and squads in a horizontal layout
-        charbox = QHBoxLayout()
-        charbox.addWidget(herowidget)
-        charbox.addWidget(squadwidget)
-        charwidget = QBorderedWidget()
-        charwidget.setLayout(charbox)
-
-        # vertical layout for top warband info and bottom hero / squad
-        overviewbox = QVBoxLayout()
-        overviewbox.addWidget(warbandwidget)
-        overviewbox.addWidget(charwidget)
-        widget = QBorderedWidget()
-        widget.setLayout(overviewbox)
-        self.setCentralWidget(widget)
-
-
-
+            self.squadbox.addWidget(label)
 
     # def closeEvent(self, event):
     #     reply = QMessageBox.question(

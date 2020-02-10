@@ -43,36 +43,18 @@ from generic_methods import (
 )
 
 
-# class App(QApplication):
-#     def __init__(self, *args):
-#         super().__init__(self, *args)
-#         self.setStyle("Fusion")
-#         self.setPalette(QDarkPalette())
-#         self.setStyleSheet("QToolTip { color: #ffffff; background-color: grey; border: 1px solid white; }")
-#         self.main = MainWindow()
-
-#     @staticmethod
-#     def start():
-#         global app 
-#         app = App(sys.argv)
-#         app.exec_()
-
 class QBorderedWidget(QWidget):
+    """A widget which is the default, but with some different stylesheet details (borders)"""
     def __init__(self, *args):
         super().__init__(*args)
 
         self.setStyleSheet("border: 1px solid rgb(100, 100, 100)")
 
 class QDarkPalette(QPalette):
-    """Dark palette for a Qt application meant to be used with the Fusion theme."""
+    """A Dark palette meant to be used with the Fusion theme."""
     def __init__(self, *__args):
         super().__init__(*__args)
 
-        # Set all the colors for a dark theme
-        # red, green, blue
-        # QColor(255, 255, 255))  Qt.White
-        # QColor(255, 0, 0)) Qt.Red
-        # QColor(0, 0, 0)) Qt.Black
         self.setColor(QPalette.Window, QColor(53, 53, 53))          #dark grey
         self.setColor(QPalette.WindowText, QColor(255, 255, 255))   #white
         self.setColor(QPalette.Base, QColor(25, 25, 25))            #darker grey
@@ -89,7 +71,7 @@ class QDarkPalette(QPalette):
 
        
 class WarbandOverview(QMainWindow):
-    
+    """The main window that everything runs in"""
     def __init__(self):
         super().__init__()
 
@@ -201,90 +183,20 @@ class WarbandOverview(QMainWindow):
         self.showMaximized()
 
     def create_warband(self):
+        """Create a new warband and store it in cache"""
         warband, okPressed = QInputDialog.getText(self, "Create", "Name your warband:")
         if okPressed and warband:
             print(warband)
 
     def choose_warband(self):
+        """Choose a warband to be loaded into cache and then shown on screen"""
         warbands = show_saved_warbands()
         wbname, okPressed = QInputDialog.getItem(self, "Choose", "Choose your warband", warbands, 0, False)
         if okPressed and wbname:
-            load_warband(wbname)
-            self.wbid = get_current_warband()
-            self.initUI()
-      
-    def update_overview(self):
-        # update wb info
-        self.wbnamelabel.setText("Your warband " + self.wbid.name)
-
-
-    # def closeEvent(self, event):
-    #     reply = QMessageBox.question(
-    #         self, 
-    #         'Message',
-    #         "Are you sure to quit?", 
-    #         QMessageBox.Yes | QMessageBox.No, 
-    #         QMessageBox.No,
-    #         )
-
-    #     if reply == QMessageBox.Yes:
-    #         event.accept()
-    #     else:
-    #         event.ignore()  
-        
-
-# class SubWindow(QBorderedWidget):
-    
-#     def __init__(self):
-#         super().__init__()
-        
-#         self.initUI()
-    
-#     def initUI(self):
-#         pass
-        # listWidget = QListWidget(self)
-        # # listWidget.itemDoubleClicked.connect(MainWindow)
-
-        # for save in savelist:
-        #     QListWidgetItem(save, listWidget)
-
-        # self.setGeometry(100, 100, 100, 100)
-        # self.show()
-
-    # @staticmethod
-    # def buildsubwindow(self):
-    #     SubWindow()
-
-        # # self.setGeometry(0, 0, 1800, 1000)
-        # self.resize(900, 500)
-        # self.center()
-        # self.setWindowTitle('Choose Warband')
-        # self.setToolTip('Choose here the <b>Warband</b> you want to open')
-        # self.setWindowIcon(QIcon('icon.png'))        
-
-   
-# class TableView(QTableWidget):
-
-#     def __init__(self, data, *args):
-#         QTableWidget.__init__(self, *args)
-
-#         data = {'col1':['1','2','3','4'],
-#                 'col2':['1','2','1','3'],
-#                 'col3':['1','1','2','1']}
-
-#         self.data = data
-#         self.setData()
-#         self.resizeColumnsToContents()
-#         self.resizeRowsToContents()
-
-#     def setData(self):
-#         horHeaders = []
-#         for n, key in enumerate(sorted(self.data.keys())):
-#             horHeaders.append(key)
-#             for m, item in enumerate(self.data[key]):
-#                 newitem = QTableWidgetItem(item)
-#                 self.setItem(m, n, newitem)
-#         self.setHorizontalHeaderLabels(horHeaders)
+            load_warband(wbname)                # Load from save json into cache json
+            self.wbid = get_current_warband()   # bring cache json to python obj (warband class .from_dict method)
+            self.initUI()                       # Restart the window to force changes
+            
 
 if __name__ == '__main__':
     # Create an application in the OS with the class

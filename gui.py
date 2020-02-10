@@ -94,15 +94,14 @@ class QDarkPalette(QPalette):
        
 class WarbandOverview(QMainWindow):
     
-    def __init__(self, wbid=None):
+    def __init__(self):
         super().__init__()
-        
+
+        self.wbid = get_current_warband()
         self.initUI()
 
     def initUI(self):
         
-        wbid = get_current_warband()
-
         # Creates the main window
         # self.setGeometry(0, 0, 1800, 1000)
         self.resize(1800, 1120)
@@ -164,7 +163,7 @@ class WarbandOverview(QMainWindow):
         for hero in self.wbid.herolist:
             label = QLabel()
             label.setText(hero.name)
-            self.herobox.addWidget(label)
+            herobox.addWidget(label)
         heroboxwidget = QBorderedWidget()
         heroboxwidget.setLayout(herobox)
 
@@ -173,7 +172,7 @@ class WarbandOverview(QMainWindow):
         for squad in self.wbid.squadlist:
             label = QLabel()
             label.setText(squad.name)
-            self.squadbox.addWidget(label)
+            squadbox.addWidget(label)
         squadboxwidget = QBorderedWidget()
         squadboxwidget.setLayout(squadbox)
 

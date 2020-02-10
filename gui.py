@@ -199,7 +199,7 @@ class WarbandOverview(QMainWindow):
 
         self.setCentralWidget(overviewboxwidget)
         self.showMaximized()
-    
+
     def create_warband(self):
         warband, okPressed = QInputDialog.getText(self, "Create", "Name your warband:")
         if okPressed and warband:
@@ -211,7 +211,11 @@ class WarbandOverview(QMainWindow):
         if okPressed and wbname:
             load_warband(wbname)
             self.wbid = get_current_warband()
+            self.initUI()
       
+    def update_overview(self):
+        # update wb info
+        self.wbnamelabel.setText("Your warband " + self.wbid.name)
 
 
     # def closeEvent(self, event):

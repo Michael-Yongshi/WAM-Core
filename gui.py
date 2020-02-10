@@ -265,7 +265,7 @@ class WarbandOverview(QMainWindow):
             # sets the complete hero grid layout to a herowidget in order to add to the vertical list of heroes
             herowidget = QInteractiveWidget()
             herowidget.setLayout(herogrid)
-            herowidget.clicked.connect(self.focus_hero)
+            # herowidget.clicked.connect(self.create_focus) #OMSCHRIJVEN NAAR FUNCTIE DIE DE ECHTE FUNCTIE return focus_hero_#() RETURNED (die de argumenten er in heeft zitten).
             herobox.addWidget(herowidget)
 
         heroboxwidget = QBorderedWidget()
@@ -326,8 +326,8 @@ class WarbandOverview(QMainWindow):
         self.setCentralWidget(overviewboxwidget)
         self.showMaximized()
 
-    def focus_hero(self):
-        print(f"clicked hero {str(self)}")
+    def focus_hero(self, n):
+        print(f"clicked hero {str(self)} {n}")
             # change background of widget to light grey and text to black and borders to white
             # fill current widget with the hero or squad information
 

@@ -106,6 +106,16 @@ class WarbandOverview(QMainWindow):
         sysboxwidget = QBorderedWidget()
         sysboxwidget.setLayout(sysbox)
 
+        # Top middle
+        topmidbox = QHBoxLayout()
+        wbdesclabel = QLabel()
+        wbdesclabel.setText(self.wbid.description)
+        wbdesclabel.setWordWrap(True)
+        wbdesclabel.setToolTip("this is your warbands description")
+        topmidbox.addWidget(wbdesclabel)
+        topmidboxwidget = QBorderedWidget()
+        topmidboxwidget.setLayout(topmidbox)
+
         # top left warband info
         wbnamelabel = QLabel()
         wbnamelabel.setToolTip('This is your <b>Warband`s</b> name')
@@ -120,6 +130,7 @@ class WarbandOverview(QMainWindow):
         # top wrapping warband and system in the top horizontal layout
         topbox = QHBoxLayout()
         topbox.addWidget(wbboxwidget)
+        topbox.addWidget(topmidboxwidget)
         topbox.addWidget(sysboxwidget)
         topboxwidget = QBorderedWidget()
         topboxwidget.setLayout(topbox)
@@ -200,55 +211,42 @@ class WarbandOverview(QMainWindow):
             skillwidget.setLayout(skillbox)
             herogrid.addWidget(skillwidget, 2, 0) # adds the skill layout to the bottom left of the grid
             
-            rightbox = QHBoxLayout()
-            abilitylabel = QLabel()
-            abilitylabel.setText("Abilities:")
-            rightbox.addWidget(abilitylabel)
-            magiclabel = QLabel()
-            magiclabel.setText("Magic:")
-            rightbox.addWidget(magiclabel)
-            itemlabel = QLabel()
-            itemlabel.setText("Items:")
-            rightbox.addWidget(itemlabel)
-            rightwidget = QBorderedWidget()
-            rightwidget.setLayout(rightbox)
-            herogrid.addWidget(rightwidget, 0, 1, 1, 3)
 
-            #show abilities top 0 left -1
-            abilitybox = QVBoxLayout() # create a vertical layout to show them in a neat line
+            # #show abilities top 0 left -1
+            # abilitybox = QVBoxLayout() # create a vertical layout to show them in a neat line
 
-            for ability in hero.abilitylist:
-                label = QLabel()
-                label.setText(str(ability.name))
-                abilitybox.addWidget(label) #adds the ability to a label and at it to the vertical ability layout
+            # for ability in hero.abilitylist:
+            #     label = QLabel()
+            #     label.setText(str(ability.name))
+            #     abilitybox.addWidget(label) #adds the ability to a label and at it to the vertical ability layout
             
-            abilitywidget = QBorderedWidget()
-            abilitywidget.setLayout(abilitybox)
-            herogrid.addWidget(abilitywidget, 1, 1) # adds the ability layout to the grid
+            # abilitywidget = QBorderedWidget()
+            # abilitywidget.setLayout(abilitybox)
+            # herogrid.addWidget(abilitywidget, 0, 1) # adds the ability layout to the grid
 
-            #show magic top 0 left -1
-            magicbox = QVBoxLayout() # create a vertical layout to show them in a neat line
+            # #show magic top 0 left -1
+            # magicbox = QVBoxLayout() # create a vertical layout to show them in a neat line
 
-            for magic in hero.magiclist:
-                label = QLabel()
-                label.setText(str(magic.name))
-                magicbox.addWidget(label) #adds the magic to a label and at it to the vertical magic layout
+            # for magic in hero.magiclist:
+            #     label = QLabel()
+            #     label.setText(str(magic.name))
+            #     magicbox.addWidget(label) #adds the magic to a label and at it to the vertical magic layout
             
-            magicwidget = QBorderedWidget()
-            magicwidget.setLayout(magicbox)
-            herogrid.addWidget(magicwidget, 1, 2) # adds the magic layout to the grid
+            # magicwidget = QBorderedWidget()
+            # magicwidget.setLayout(magicbox)
+            # herogrid.addWidget(magicwidget, 1, 1) # adds the magic layout to the grid
 
-            #show items top -1 left -1
-            itembox = QVBoxLayout() # create a vertical layout to show them in a neat line
+            # #show items top -1 left -1
+            # itembox = QVBoxLayout() # create a vertical layout to show them in a neat line
 
-            for item in hero.itemlist:
-                label = QLabel()
-                label.setText(str(item.name))
-                itembox.addWidget(label) #adds the item to a label and at it to the vertical item layout
+            # for item in hero.itemlist:
+            #     label = QLabel()
+            #     label.setText(str(item.name))
+            #     itembox.addWidget(label) #adds the item to a label and at it to the vertical item layout
             
-            itemwidget = QBorderedWidget()
-            itemwidget.setLayout(itembox)
-            herogrid.addWidget(itemwidget, 1, 3) # adds the item layout to the grid
+            # itemwidget = QBorderedWidget()
+            # itemwidget.setLayout(itembox)
+            # herogrid.addWidget(itemwidget, 2, 1) # adds the item layout to the grid
 
             # sets the complete hero grid layout to a herowidget in order to add to the vertical list of heroes
             herowidget = QBorderedWidget()
@@ -272,113 +270,6 @@ class WarbandOverview(QMainWindow):
             numberlabel.setText(str(squad.get_totalhenchman()))
             squadgrid.addWidget(numberlabel, 1, 0)
 
-            
-            # #show name and experience at top left corner of the grid
-            # namebox = QHBoxLayout() # combine name and category to place on single row beside each other
-
-            # namelabel = QLabel()
-            # namelabel.setText(hero.name)
-            # namelabel.setToolTip(f"This is your hero`s name")
-            # namebox.addWidget(namelabel) #create name label and set it to the namebox layout
-            # explabel = QLabel()
-            # explabel.setText(f"Experience: {hero.experience}")
-            # explabel.setToolTip(f"This is your hero`s experience. Next level up at 30 experience.")
-            # namebox.addWidget(explabel) # #create experience label and set it to the namebox layout
-
-            # namewidget = QBorderedWidget()
-            # namewidget.setLayout(namebox)
-            # herogrid.addWidget(namewidget, 0, 0) # add the name and category box to the herogrid
-            
-            # #show race and category at top left corner of the grid
-            # catbox = QHBoxLayout() # combine cat and category to place on single row beside each other
-
-            # catlabel = QLabel()
-            # catlabel.setText(hero.category)
-            # catlabel.setToolTip(f"This is your hero`s unit type. The unit type determines what the heroes abilities are, what kind of items it can carry and how expensive it is to replace.")
-            # catbox.addWidget(catlabel) #create category label and set it to the catbox layout
-            # racelabel = QLabel()
-            # racelabel.setText(f"{hero.race}")
-            # racelabel.setToolTip(f"This is your hero`s race. Usually your warband consists of mostly the same race, although hired swords and other characters can deviate from this")
-            # catbox.addWidget(racelabel) # #create race label and set it to the catbox layout
-
-            # catwidget = QBorderedWidget()
-            # catwidget.setLayout(catbox)
-            # herogrid.addWidget(catwidget, 1, 0) # add the cat and category box to the herogrid
-
-            # #show skills at bottom left
-            # skillbox = QHBoxLayout() # create a horizontal layout to show the skills in a neat line
-
-            # mlabel = QLabel()
-            # mlabel.setText("Mov\n" + str(hero.skill.movement))
-            # skillbox.addWidget(mlabel) #adds the movement skill to a label and at it to the horizontal skill layout
-            # wslabel = QLabel()
-            # wslabel.setText("Ws\n" + str(hero.skill.weapon))
-            # skillbox.addWidget(wslabel)
-            # bslabel = QLabel()
-            # bslabel.setText("Bs\n" + str(hero.skill.ballistic))
-            # skillbox.addWidget(bslabel)
-            # slabel = QLabel()
-            # slabel.setText("Str\n" + str(hero.skill.strength))
-            # skillbox.addWidget(slabel)
-            # tlabel = QLabel()
-            # tlabel.setText("Tou\n" + str(hero.skill.toughness))
-            # skillbox.addWidget(tlabel)
-            # wlabel = QLabel()
-            # wlabel.setText("Wou\n" + str(hero.skill.wounds))
-            # skillbox.addWidget(wlabel)
-            # ilabel = QLabel()
-            # ilabel.setText("Ini\n" + str(hero.skill.initiative))
-            # skillbox.addWidget(ilabel)
-            # aclabel = QLabel()
-            # aclabel.setText("Act\n" + str(hero.skill.actions))
-            # skillbox.addWidget(aclabel)
-            # ldlabel = QLabel()
-            # ldlabel.setText("Ld\n" + str(hero.skill.leadership))
-            # skillbox.addWidget(ldlabel)
-            # aslabel = QLabel()
-            # aslabel.setText("As\n" + str(hero.skill.armoursave))
-            # skillbox.addWidget(aslabel)
-            
-            # skillwidget = QBorderedWidget()
-            # skillwidget.setLayout(skillbox)
-            # herogrid.addWidget(skillwidget, 2, 0) # adds the skill layout to the bottom left of the grid
-            
-            # #show abilities top 0 left -1
-            # abilitybox = QHBoxLayout() # create a horizontal layout to show them in a neat line
-
-            # for ability in hero.abilitylist:
-            #     label = QLabel()
-            #     label.setText(str(ability.name))
-            #     abilitybox.addWidget(label) #adds the ability to a label and at it to the horizontal ability layout
-            
-            # abilitywidget = QBorderedWidget()
-            # abilitywidget.setLayout(abilitybox)
-            # herogrid.addWidget(abilitywidget, 0, 1) # adds the ability layout to the grid
-
-            # #show magic top 0 left -1
-            # magicbox = QHBoxLayout() # create a horizontal layout to show them in a neat line
-
-            # for magic in hero.magiclist:
-            #     label = QLabel()
-            #     label.setText(str(magic.name))
-            #     magicbox.addWidget(label) #adds the magic to a label and at it to the horizontal magic layout
-            
-            # magicwidget = QBorderedWidget()
-            # magicwidget.setLayout(magicbox)
-            # herogrid.addWidget(magicwidget, 1, 1) # adds the magic layout to the grid
-
-            # #show items top -1 left -1
-            # itembox = QHBoxLayout() # create a horizontal layout to show them in a neat line
-
-            # for item in hero.itemlist:
-            #     label = QLabel()
-            #     label.setText(str(item.name))
-            #     itembox.addWidget(label) #adds the item to a label and at it to the horizontal item layout
-            
-            # itemwidget = QBorderedWidget()
-            # itemwidget.setLayout(itembox)
-            # herogrid.addWidget(itemwidget, 2, 1) # adds the item layout to the grid
-
             # sets the complete squad grid layout to a squadwidget in order to add to the vertical list
             squadwidget = QBorderedWidget()
             squadwidget.setLayout(squadgrid)
@@ -388,11 +279,22 @@ class WarbandOverview(QMainWindow):
         squadboxwidget.setLayout(squadbox)
         squadboxwidget.setToolTip('These are your <b>squads</b>')
 
+        currentbox = QGridLayout()
 
-        # wrapping heroes and squads in the bottom horizontal layout
+        currentname = QLabel()
+        currentname.setText("Name of the selected unit")
+        currentbox.addWidget(currentname)
+
+        currentboxwidget = QBorderedWidget()
+        currentboxwidget.setLayout(currentbox)
+        currentboxwidget.setToolTip("Current unit details")
+        
+
+        # wrapping heroes, squads and extra details in the bottom horizontal layout
         botbox = QHBoxLayout()
         botbox.addWidget(heroboxwidget)
         botbox.addWidget(squadboxwidget)
+        botbox.addWidget(currentboxwidget)
         botboxwidget = QBorderedWidget()
         botboxwidget.setLayout(botbox)
 
@@ -421,6 +323,12 @@ class WarbandOverview(QMainWindow):
             self.wbid = get_current_warband()   # bring cache json to python obj (warband class .from_dict method)
             self.initUI()                       # Restart the window to force changes
             
+    def mousePressEvent(self, event):
+        click, okPressed = QMessageBox.Information(self, 'Click', 'Click message', QMessageBox.Ok)
+        if okPressed:
+            print("click")
+            # change background of widget to light grey and text to black and borders to white
+            # fill current widget with the hero or squad information
 
 if __name__ == '__main__':
     # Create an application in the OS with the class

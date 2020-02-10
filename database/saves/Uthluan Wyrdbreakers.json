@@ -274,6 +274,425 @@
             "price": 50,
             "maxcount": 2,
             "description": "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster\u2019s personal attendants and protectors."
+        },
+        "Hero3": {
+            "name": "Crypton",
+            "race": "High Elf",
+            "source": "High Elves",
+            "category": "Sword Warden",
+            "ishero": true,
+            "skill": {
+                "movement": 5,
+                "weapon": 5,
+                "ballistic": 4,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 6,
+                "actions": 1,
+                "leadership": 8,
+                "armoursave": 0
+            },
+            "abilitylist": {
+                "Ability1": {
+                    "name": "Excellent Sight",
+                    "description": "Spot hidden objects at double the range."
+                }
+            },
+            "magiclist": {},
+            "itemlist": {
+                "Item1": {
+                    "name": "Dagger",
+                    "source": "Core Rules",
+                    "category": "Melee Weapon",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": {},
+                    "magiclist": {},
+                    "price": 2,
+                    "description": "A basic dagger."
+                },
+                "Item2": {
+                    "name": "Sword",
+                    "source": "Core Rules",
+                    "category": "Melee Weapon",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": {
+                        "Ability1": {
+                            "name": "Parry",
+                            "description": "Enables a single parry of an attackers hit. Parries when dicethrow is greater than attackers throw."
+                        }
+                    },
+                    "magiclist": {},
+                    "price": 10,
+                    "description": "A basic Sword."
+                },
+                "Item3": {
+                    "name": "Light Armour",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": {},
+                    "magiclist": {},
+                    "price": 20,
+                    "description": "Some lightweighted armour."
+                },
+                "Item4": {
+                    "name": "Shield",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": {},
+                    "magiclist": {},
+                    "price": 20,
+                    "description": "A basic shield."
+                }
+            },
+            "experience": 11,
+            "price": 50,
+            "maxcount": 2,
+            "description": "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster\u2019s personal attendants and protectors."
+        },
+        "Hero4": {
+            "name": "Danan",
+            "race": "High Elf",
+            "source": "High Elves",
+            "category": "Ranger",
+            "ishero": true,
+            "skill": {
+                "movement": 5,
+                "weapon": 4,
+                "ballistic": 4,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 6,
+                "actions": 1,
+                "leadership": 8,
+                "armoursave": 0
+            },
+            "abilitylist": {
+                "Ability1": {
+                    "name": "Excellent Sight",
+                    "description": "Spot hidden objects at double the range."
+                }
+            },
+            "magiclist": {},
+            "itemlist": {
+                "Item1": {
+                    "name": "Dagger",
+                    "source": "Core Rules",
+                    "category": "Melee Weapon",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": {},
+                    "magiclist": {},
+                    "price": 2,
+                    "description": "A basic dagger."
+                },
+                "Item2": {
+                    "name": "Long Bow",
+                    "source": "Core Rules",
+                    "category": "Missile Weapon",
+                    "distance": 30,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 3,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": {},
+                    "magiclist": {},
+                    "price": 15,
+                    "description": "A Long bow."
+                },
+                "Item3": {
+                    "name": "Light Armour",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": {},
+                    "magiclist": {},
+                    "price": 20,
+                    "description": "Some lightweighted armour."
+                }
+            },
+            "experience": 8,
+            "price": 45,
+            "maxcount": 2,
+            "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again."
+        },
+        "Hero5": {
+            "name": "Everia",
+            "race": "High Elf",
+            "source": "High Elves",
+            "category": "Ranger",
+            "ishero": true,
+            "skill": {
+                "movement": 5,
+                "weapon": 4,
+                "ballistic": 4,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 6,
+                "actions": 1,
+                "leadership": 8,
+                "armoursave": 0
+            },
+            "abilitylist": {
+                "Ability1": {
+                    "name": "Excellent Sight",
+                    "description": "Spot hidden objects at double the range."
+                }
+            },
+            "magiclist": {},
+            "itemlist": {
+                "Item1": {
+                    "name": "Dagger",
+                    "source": "Core Rules",
+                    "category": "Melee Weapon",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": {},
+                    "magiclist": {},
+                    "price": 2,
+                    "description": "A basic dagger."
+                },
+                "Item2": {
+                    "name": "Long Bow",
+                    "source": "Core Rules",
+                    "category": "Missile Weapon",
+                    "distance": 30,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 3,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": {},
+                    "magiclist": {},
+                    "price": 15,
+                    "description": "A Long bow."
+                },
+                "Item3": {
+                    "name": "Light Armour",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": {},
+                    "magiclist": {},
+                    "price": 20,
+                    "description": "Some lightweighted armour."
+                }
+            },
+            "experience": 8,
+            "price": 45,
+            "maxcount": 2,
+            "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again."
+        },
+        "Hero6": {
+            "name": "Crytonia",
+            "race": "High Elf",
+            "source": "High Elves",
+            "category": "Ranger",
+            "ishero": true,
+            "skill": {
+                "movement": 5,
+                "weapon": 4,
+                "ballistic": 4,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 6,
+                "actions": 1,
+                "leadership": 8,
+                "armoursave": 0
+            },
+            "abilitylist": {
+                "Ability1": {
+                    "name": "Excellent Sight",
+                    "description": "Spot hidden objects at double the range."
+                }
+            },
+            "magiclist": {},
+            "itemlist": {
+                "Item1": {
+                    "name": "Dagger",
+                    "source": "Core Rules",
+                    "category": "Melee Weapon",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": {},
+                    "magiclist": {},
+                    "price": 2,
+                    "description": "A basic dagger."
+                },
+                "Item2": {
+                    "name": "Long Bow",
+                    "source": "Core Rules",
+                    "category": "Missile Weapon",
+                    "distance": 30,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 3,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": {},
+                    "magiclist": {},
+                    "price": 15,
+                    "description": "A Long bow."
+                },
+                "Item3": {
+                    "name": "Light Armour",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": {},
+                    "magiclist": {},
+                    "price": 20,
+                    "description": "Some lightweighted armour."
+                }
+            },
+            "experience": 8,
+            "price": 45,
+            "maxcount": 2,
+            "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again."
         }
     },
     "squadlist": {
@@ -535,6 +954,249 @@
             "henchmanlist": {
                 "Henchman1": {
                     "name": "Cadet",
+                    "race": "High Elf",
+                    "source": "High Elves",
+                    "category": "Cadet",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 5,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
+                    "abilitylist": {
+                        "Ability1": {
+                            "name": "Excellent Sight",
+                            "description": "Spot hidden objects at double the range."
+                        }
+                    },
+                    "magiclist": {},
+                    "itemlist": {
+                        "Item1": {
+                            "name": "Dagger",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": {},
+                            "magiclist": {},
+                            "price": 2,
+                            "description": "A basic dagger."
+                        },
+                        "Item2": {
+                            "name": "Long Bow",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": {},
+                            "magiclist": {},
+                            "price": 15,
+                            "description": "A Long bow."
+                        }
+                    },
+                    "experience": 0,
+                    "price": 30,
+                    "maxcount": 5,
+                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                }
+            }
+        },
+        "squad4": {
+            "name": "Cadet2",
+            "henchmanlist": {
+                "Henchman1": {
+                    "name": "Cadet2",
+                    "race": "High Elf",
+                    "source": "High Elves",
+                    "category": "Cadet",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 5,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
+                    "abilitylist": {
+                        "Ability1": {
+                            "name": "Excellent Sight",
+                            "description": "Spot hidden objects at double the range."
+                        }
+                    },
+                    "magiclist": {},
+                    "itemlist": {
+                        "Item1": {
+                            "name": "Dagger",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": {},
+                            "magiclist": {},
+                            "price": 2,
+                            "description": "A basic dagger."
+                        },
+                        "Item2": {
+                            "name": "Long Bow",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": {},
+                            "magiclist": {},
+                            "price": 15,
+                            "description": "A Long bow."
+                        }
+                    },
+                    "experience": 0,
+                    "price": 30,
+                    "maxcount": 5,
+                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                }
+            }
+        },
+        "squad5": {
+            "name": "Cadet3",
+            "henchmanlist": {
+                "Henchman1": {
+                    "name": "Cadet3",
+                    "race": "High Elf",
+                    "source": "High Elves",
+                    "category": "Cadet",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 5,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
+                    "abilitylist": {
+                        "Ability1": {
+                            "name": "Excellent Sight",
+                            "description": "Spot hidden objects at double the range."
+                        }
+                    },
+                    "magiclist": {},
+                    "itemlist": {
+                        "Item1": {
+                            "name": "Dagger",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": {},
+                            "magiclist": {},
+                            "price": 2,
+                            "description": "A basic dagger."
+                        },
+                        "Item2": {
+                            "name": "Long Bow",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": {},
+                            "magiclist": {},
+                            "price": 15,
+                            "description": "A Long bow."
+                        }
+                    },
+                    "experience": 0,
+                    "price": 30,
+                    "maxcount": 5,
+                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                }
+            }
+        },
+        "squad6": {
+            "name": "Cadet4",
+            "henchmanlist": {
+                "Henchman1": {
+                    "name": "Cadet4",
                     "race": "High Elf",
                     "source": "High Elves",
                     "category": "Cadet",

@@ -5,6 +5,7 @@ import sys
 from PyQt5.QtCore import (
     QRect,
     Qt,
+    pyqtSignal,
     )
 from PyQt5.QtWidgets import (
     QAction,
@@ -50,6 +51,18 @@ class QBorderedWidget(QWidget):
 
         self.setStyleSheet("border: 1px solid rgb(100, 100, 100)")
 
+
+class QInteractiveWidget(QBorderedWidget):
+    """A bordered widget, but which is clickable"""
+    def __init__(self, *args):
+        super().__init__(*args)
+
+    clicked = pyqtSignal()
+
+    def mousePressEvent(self, ev):
+        if app.mouseButtons() & Qt.LeftButton:
+            self.clicked.emit()
+
 class QDarkPalette(QPalette):
     """A Dark palette meant to be used with the Fusion theme."""
     def __init__(self, *__args):
@@ -69,7 +82,7 @@ class QDarkPalette(QPalette):
         self.setColor(QPalette.Highlight, QColor(42, 130, 218))     #blue
         self.setColor(QPalette.HighlightedText, QColor(0, 0, 0))    #black
 
-       
+        
 class WarbandOverview(QMainWindow):
     """The main window that everything runs in"""
     def __init__(self):
@@ -249,8 +262,9 @@ class WarbandOverview(QMainWindow):
             # herogrid.addWidget(itemwidget, 2, 1) # adds the item layout to the grid
 
             # sets the complete hero grid layout to a herowidget in order to add to the vertical list of heroes
-            herowidget = QBorderedWidget()
+            herowidget = QInteractiveWidget()
             herowidget.setLayout(herogrid)
+            herowidget.clicked.connect(self.focus_hero)
             herobox.addWidget(herowidget)
 
         heroboxwidget = QBorderedWidget()
@@ -271,8 +285,9 @@ class WarbandOverview(QMainWindow):
             squadgrid.addWidget(numberlabel, 1, 0)
 
             # sets the complete squad grid layout to a squadwidget in order to add to the vertical list
-            squadwidget = QBorderedWidget()
+            squadwidget = QInteractiveWidget()
             squadwidget.setLayout(squadgrid)
+            squadwidget.clicked.connect(self.focus_squad)
             squadbox.addWidget(squadwidget)
 
         squadboxwidget = QBorderedWidget()
@@ -308,6 +323,14 @@ class WarbandOverview(QMainWindow):
         self.setCentralWidget(overviewboxwidget)
         self.showMaximized()
 
+    def focus_hero(self):
+        print("something")
+            # change background of widget to light grey and text to black and borders to white
+            # fill current widget with the hero or squad information
+
+    def focus_squad(self):
+        print("something")
+        
     def create_warband(self):
         """Create a new warband and store it in cache"""
         warband, okPressed = QInputDialog.getText(self, "Create", "Name your warband:")
@@ -322,13 +345,6 @@ class WarbandOverview(QMainWindow):
             load_warband(wbname)                # Load from save json into cache json
             self.wbid = get_current_warband()   # bring cache json to python obj (warband class .from_dict method)
             self.initUI()                       # Restart the window to force changes
-            
-    def mousePressEvent(self, event):
-        click, okPressed = QMessageBox.Information(self, 'Click', 'Click message', QMessageBox.Ok)
-        if okPressed:
-            print("click")
-            # change background of widget to light grey and text to black and borders to white
-            # fill current widget with the hero or squad information
 
 if __name__ == '__main__':
     # Create an application in the OS with the class

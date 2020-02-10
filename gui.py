@@ -150,8 +150,9 @@ class WarbandOverview(QMainWindow):
 
         # left bottom heroes
         herobox = QVBoxLayout() # To show all heroes below each other dynamically (based on actual number of heroes)
-        
+        h = 0
         for hero in self.wbid.herolist:
+            h += 1
             herogrid = QGridLayout() # create a grid layout to position all information more accurately
             
             #show name and experience at top left corner of the grid
@@ -274,7 +275,9 @@ class WarbandOverview(QMainWindow):
         # right bottom squads
         squadbox = QVBoxLayout()
 
+        s = 0
         for squad in self.wbid.squadlist:
+            s += 1
             squadgrid = QGridLayout()
             
             namelabel = QLabel()
@@ -324,12 +327,12 @@ class WarbandOverview(QMainWindow):
         self.showMaximized()
 
     def focus_hero(self):
-        print("something")
+        print(f"clicked hero {str(self)}")
             # change background of widget to light grey and text to black and borders to white
             # fill current widget with the hero or squad information
 
     def focus_squad(self):
-        print("something")
+        print(f"clicked squad")
         
     def create_warband(self):
         """Create a new warband and store it in cache"""

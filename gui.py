@@ -24,6 +24,7 @@ from PyQt5.QtWidgets import (
     QPushButton, 
     QTableWidget,
     QTableWidgetItem,
+    QTextEdit,
     QToolTip, 
     QVBoxLayout,
     QWidget, 
@@ -135,16 +136,14 @@ class WarbandOverview(QMainWindow):
     def set_nested_widget(self):
         # build top part
         topboxwidget = self.set_topbox()
-
+        topboxwidget.setSizePolicy
         # build bot part
         botboxwidget = self.set_botbox()
 
         # vertical layout for top and char part
         overviewbox = QGridLayout()
-        overviewbox.addWidget(topboxwidget,0, 0, 1, 3)
-        overviewbox.setRowStretch(0, 1)
-        overviewbox.addWidget(botboxwidget,1, 0, 3, 3)
-        overviewbox.setRowStretch(1, 3)
+        overviewbox.addWidget(topboxwidget, 0, 0, 1, 3)
+        overviewbox.addWidget(botboxwidget, 1, 0, 3, 3)
         overviewboxwidget = QBorderedWidget()
         overviewboxwidget.setLayout(overviewbox)
 

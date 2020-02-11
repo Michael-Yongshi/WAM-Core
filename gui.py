@@ -251,7 +251,10 @@ class WarbandOverview(QMainWindow):
             herogrid = QGridLayout() # create a grid layout to position all information more accurately
             
             namelabel = QLabel()
-            namelabel.setText(hero.name)
+            if hero == self.currentunit:
+                namelabel.setText(hero.name + " (selected)")
+            else:
+                namelabel.setText(hero.name)
             namelabel.setToolTip(f"This is your hero`s name")
             herogrid.addWidget(namelabel, 0, 0) # add the name and category box to the herogrid
             
@@ -261,18 +264,14 @@ class WarbandOverview(QMainWindow):
             herogrid.addWidget(catlabel, 0, 1) # add the cat and category box to the herogrid
 
             # sets the complete hero grid layout to a herowidget in order to add to the vertical list of heroes
-            if hero.name == self.currentunit.name:
-                herowidget = QHighlightedWidget()
-
-            else:
-                herowidget = QInteractiveWidget()
+            herowidget = QInteractiveWidget()
             herowidget.setLayout(herogrid)
 
             # bound a click on the widget to showing details in character view
             herowidget.clicked.connect(self.create_method_focus(unit=hero))
             herobox.addWidget(herowidget)
 
-        while h <= 6:
+        while h <= 5:
             h += 1
             herogrid = QGridLayout()
             namelabel = QLabel()
@@ -303,7 +302,10 @@ class WarbandOverview(QMainWindow):
             squadgrid.addWidget(numlabel, 0, 0, 1, 1)
 
             namelabel = QLabel()
-            namelabel.setText(squad.name)
+            if squad.henchmanlist[0] == self.currentunit:
+                namelabel.setText(squad.name + " (selected)")
+            else:
+                namelabel.setText(squad.name)
             squadgrid.addWidget(namelabel, 0, 1, 1, 3)
             
             catlabel = QLabel()
@@ -318,7 +320,7 @@ class WarbandOverview(QMainWindow):
             squadwidget.clicked.connect(self.create_method_focus(unit=squad.henchmanlist[0]))
             squadbox.addWidget(squadwidget)
 
-        while s <= 6:
+        while s <= 5:
             s += 1
             squadgrid = QGridLayout()
             namelabel = QLabel()
@@ -353,37 +355,44 @@ class WarbandOverview(QMainWindow):
 
         #show skills at bottom left
         skillbox = QHBoxLayout() # create a horizontal layout to show the skills in a neat line
+        
+        skilldict = self.currentunit.skill.to_dict()
+        # print(skilldict)
+        for key in skilldict:
+            label = QLabel()
+            if skilldict['wounds'] >= 1:
+                label.setText(key[:2] + "\n" + str(skilldict[key]))  
+            else: 
+                label.setText("")
+            skillbox.addWidget(label)
 
-        mlabel = QLabel()
-        mlabel.setText("Mov\n" + str(self.currentunit.skill.movement))
-        skillbox.addWidget(mlabel) #adds the movement skill to a label and at it to the horizontal skill layout
-        wslabel = QLabel()
-        wslabel.setText("Ws\n" + str(self.currentunit.skill.weapon))
-        skillbox.addWidget(wslabel)
-        bslabel = QLabel()
-        bslabel.setText("Bs\n" + str(self.currentunit.skill.ballistic))
-        skillbox.addWidget(bslabel)
-        slabel = QLabel()
-        slabel.setText("Str\n" + str(self.currentunit.skill.strength))
-        skillbox.addWidget(slabel)
-        tlabel = QLabel()
-        tlabel.setText("Tou\n" + str(self.currentunit.skill.toughness))
-        skillbox.addWidget(tlabel)
-        wlabel = QLabel()
-        wlabel.setText("Wou\n" + str(self.currentunit.skill.wounds))
-        skillbox.addWidget(wlabel)
-        ilabel = QLabel()
-        ilabel.setText("Ini\n" + str(self.currentunit.skill.initiative))
-        skillbox.addWidget(ilabel)
-        aclabel = QLabel()
-        aclabel.setText("Act\n" + str(self.currentunit.skill.actions))
-        skillbox.addWidget(aclabel)
-        ldlabel = QLabel()
-        ldlabel.setText("Ld\n" + str(self.currentunit.skill.leadership))
-        skillbox.addWidget(ldlabel)
-        aslabel = QLabel()
-        aslabel.setText("As\n" + str(self.currentunit.skill.armoursave))
-        skillbox.addWidget(aslabel)
+        # wslabel = QLabel()
+        # wslabel.setText("Ws\n" + str(self.currentunit.skill.weapon))
+        # skillbox.addWidget(wslabel)
+        # bslabel = QLabel()
+        # bslabel.setText("Bs\n" + str(self.currentunit.skill.ballistic))
+        # skillbox.addWidget(bslabel)
+        # slabel = QLabel()
+        # slabel.setText("Str\n" + str(self.currentunit.skill.strength))
+        # skillbox.addWidget(slabel)
+        # tlabel = QLabel()
+        # tlabel.setText("Tou\n" + str(self.currentunit.skill.toughness))
+        # skillbox.addWidget(tlabel)
+        # wlabel = QLabel()
+        # wlabel.setText("Wou\n" + str(self.currentunit.skill.wounds))
+        # skillbox.addWidget(wlabel)
+        # ilabel = QLabel()
+        # ilabel.setText("Ini\n" + str(self.currentunit.skill.initiative))
+        # skillbox.addWidget(ilabel)
+        # aclabel = QLabel()
+        # aclabel.setText("Act\n" + str(self.currentunit.skill.actions))
+        # skillbox.addWidget(aclabel)
+        # ldlabel = QLabel()
+        # ldlabel.setText("Ld\n" + str(self.currentunit.skill.leadership))
+        # skillbox.addWidget(ldlabel)
+        # aslabel = QLabel()
+        # aslabel.setText("As\n" + str(self.currentunit.skill.armoursave))
+        # skillbox.addWidget(aslabel)
         
         skillwidget = QBorderedWidget()
         skillwidget.setLayout(skillbox)

@@ -43,6 +43,10 @@ from generic_methods import (
     get_current_warband,
     )
 
+from class_hierarchy import (
+    Character,
+)
+
 
 class QBorderedWidget(QWidget):
     """A widget which is the default, but with some different stylesheet details (borders)"""
@@ -89,7 +93,7 @@ class WarbandOverview(QMainWindow):
         super().__init__()
 
         self.wbid = get_current_warband()
-        self.currentunit = get_current_warband().herolist[0]
+        self.currentunit = Character(name="", race="", source="", skill=None, category="", ishero="")
         self.initUI()
 
     def initUI(self):

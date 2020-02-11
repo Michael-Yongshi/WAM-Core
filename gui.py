@@ -58,6 +58,12 @@ class QBorderedWidget(QWidget):
 
         self.setStyleSheet("border: 1px solid rgb(100, 100, 100)")
 
+class QUnBorderedWidget(QWidget):
+    """A widget which is the default, but with some different stylesheet details (borders)"""
+    def __init__(self, *args):
+        super().__init__(*args)
+
+        self.setStyleSheet("border: 0px")
 
 class QInteractiveWidget(QBorderedWidget):
     """A bordered widget, but which is clickable"""
@@ -69,6 +75,13 @@ class QInteractiveWidget(QBorderedWidget):
     def mousePressEvent(self, ev):
         if app.mouseButtons() & Qt.LeftButton:
             self.clicked.emit()
+
+class QHighlightedWidget(QInteractiveWidget):
+    """A widget which is the default, but with some different stylesheet details (highlights)"""
+    def __init__(self, *args):
+        super().__init__(*args)
+
+        self.setPalette(QPalette())
 
 class QDarkPalette(QPalette):
     """A Dark palette meant to be used with the Fusion theme."""
@@ -89,6 +102,13 @@ class QDarkPalette(QPalette):
         self.setColor(QPalette.Highlight, QColor(42, 130, 218))     #blue
         self.setColor(QPalette.HighlightedText, QColor(0, 0, 0))    #black
 
+class QMainApplication(QApplication):
+    """A Dark styled application."""
+    def __init__(self, *__args):
+        super().__init__(*__args)
+        self.setStyle("Fusion")
+        self.setPalette(QDarkPalette())
+        self.setStyleSheet("QToolTip { color: #ffffff; background-color: grey; border: 1px solid white; }")
         
 class WarbandOverview(QMainWindow):
     """The main window that everything runs in"""
@@ -106,6 +126,53 @@ class WarbandOverview(QMainWindow):
         self.setToolTip('This is your <b>Warband</b> overview')
         self.setWindowIcon(QIcon('icon.png'))     
 
+        # build overview
+        nested_widget = self.set_nested_widget()
+
+        self.setCentralWidget(nested_widget)
+        self.showMaximized()
+
+    def set_nested_widget(self):
+        # build top part
+        topboxwidget = self.set_topbox()
+
+        # build bot part
+        botboxwidget = self.set_botbox()
+
+        # vertical layout for top and char part
+        overviewbox = QGridLayout()
+        overviewbox.addWidget(topboxwidget,0, 0, 1, 3)
+        overviewbox.setRowStretch(0, 1)
+        overviewbox.addWidget(botboxwidget,1, 0, 3, 3)
+        overviewbox.setRowStretch(1, 3)
+        overviewboxwidget = QBorderedWidget()
+        overviewboxwidget.setLayout(overviewbox)
+
+        return overviewboxwidget
+
+    def set_topbox(self):
+        # top wrapping warband and system in the top horizontal layout
+        topbox = QHBoxLayout()
+        topbox.addWidget(self.set_wbname())
+        topbox.addWidget(self.set_wbdesc())
+        topbox.addWidget(self.set_systembox())
+        topboxwidget = QBorderedWidget()
+        topboxwidget.setLayout(topbox)
+
+        return topboxwidget
+
+    def set_botbox(self):
+        # wrapping heroes, squads and extra details in the bottom horizontal layout
+        botbox = QHBoxLayout()
+        botbox.addWidget(self.set_herobox())
+        botbox.addWidget(self.set_squadbox())
+        botbox.addWidget(self.set_currentbox())
+        botboxwidget = QBorderedWidget()
+        botboxwidget.setLayout(botbox)
+
+        return botboxwidget
+
+    def set_systembox(self):
         # buttons for interaction     
         btnchoose = QPushButton('Choose Warband', self)
         btnchoose.setToolTip('Choose an existing <b>Warband</b>')
@@ -127,16 +194,22 @@ class WarbandOverview(QMainWindow):
         sysboxwidget = QBorderedWidget()
         sysboxwidget.setLayout(sysbox)
 
+        return sysboxwidget
+
+    def set_wbdesc(self):
         # Top middle
-        topmidbox = QHBoxLayout()
+        wbdescbox = QHBoxLayout()
         wbdesclabel = QLabel()
         wbdesclabel.setText(self.wbid.description)
         wbdesclabel.setWordWrap(True)
         wbdesclabel.setToolTip("this is your warbands description")
-        topmidbox.addWidget(wbdesclabel)
-        topmidboxwidget = QBorderedWidget()
-        topmidboxwidget.setLayout(topmidbox)
+        wbdescbox.addWidget(wbdesclabel)
+        wbdescboxwidget = QBorderedWidget()
+        wbdescboxwidget.setLayout(wbdescbox)
 
+        return wbdescboxwidget
+    
+    def set_wbname(self):
         # top left warband info
         wbnamelabel = QLabel()
         wbnamelabel.setToolTip('This is your <b>Warband`s</b> name')
@@ -148,14 +221,9 @@ class WarbandOverview(QMainWindow):
         # update wb info
         wbnamelabel.setText("Your warband " + self.wbid.name)
 
-        # top wrapping warband and system in the top horizontal layout
-        topbox = QHBoxLayout()
-        topbox.addWidget(wbboxwidget)
-        topbox.addWidget(topmidboxwidget)
-        topbox.addWidget(sysboxwidget)
-        topboxwidget = QBorderedWidget()
-        topboxwidget.setLayout(topbox)
+        return wbboxwidget
 
+    def set_herobox(self):
         # left bottom heroes
         herobox = QVBoxLayout() # To show all heroes below each other dynamically (based on actual number of heroes)
         h = 0
@@ -174,7 +242,11 @@ class WarbandOverview(QMainWindow):
             herogrid.addWidget(catlabel, 0, 1) # add the cat and category box to the herogrid
 
             # sets the complete hero grid layout to a herowidget in order to add to the vertical list of heroes
-            herowidget = QInteractiveWidget()
+            if hero.name == self.currentunit.name:
+                herowidget = QHighlightedWidget()
+
+            else:
+                herowidget = QInteractiveWidget()
             herowidget.setLayout(herogrid)
 
             # bound a click on the widget to showing details in character view
@@ -185,7 +257,7 @@ class WarbandOverview(QMainWindow):
             h += 1
             herogrid = QGridLayout()
             namelabel = QLabel()
-            namelabel.setText("")
+            namelabel.setText("Add New Hero")
             herogrid.addWidget(namelabel, 0, 0)
 
             herowidget = QBorderedWidget()
@@ -196,6 +268,9 @@ class WarbandOverview(QMainWindow):
         heroboxwidget.setLayout(herobox)
         heroboxwidget.setToolTip('These are your <b>heroes</b>')
 
+        return heroboxwidget
+
+    def set_squadbox(self):
         # right bottom squads
         squadbox = QVBoxLayout()
 
@@ -228,7 +303,7 @@ class WarbandOverview(QMainWindow):
             s += 1
             squadgrid = QGridLayout()
             namelabel = QLabel()
-            namelabel.setText("")
+            namelabel.setText("Add New Squad")
             squadgrid.addWidget(namelabel, 0, 0)
 
             squadwidget = QBorderedWidget()
@@ -239,6 +314,9 @@ class WarbandOverview(QMainWindow):
         squadboxwidget.setLayout(squadbox)
         squadboxwidget.setToolTip('These are your <b>squads</b>')
 
+        return squadboxwidget
+
+    def set_currentbox(self):
         # Current unit field
         currentbox = QVBoxLayout()
         
@@ -341,28 +419,7 @@ class WarbandOverview(QMainWindow):
         currentboxwidget = QBorderedWidget()
         currentboxwidget.setLayout(currentbox)
 
-        # wrapping heroes, squads and extra details in the bottom horizontal layout
-        botbox = QHBoxLayout()
-        botbox.addWidget(heroboxwidget)
-        botbox.addWidget(squadboxwidget)
-        botbox.addWidget(currentboxwidget)
-        botboxwidget = QBorderedWidget()
-        botboxwidget.setLayout(botbox)
-
-        # vertical layout for top and char part
-        overviewbox = QGridLayout()
-        overviewbox.addWidget(topboxwidget,0, 0, 1, 3)
-        overviewbox.setRowStretch(0, 1)
-        overviewbox.addWidget(botboxwidget,1, 0, 3, 3)
-        overviewbox.setRowStretch(1, 3)
-        overviewboxwidget = QBorderedWidget()
-        overviewboxwidget.setLayout(overviewbox)
-
-        self.setCentralWidget(overviewboxwidget)
-        self.showMaximized()
-
-        # change background of widget to light grey and text to black and borders to white
-        # fill current widget with the hero or squad information
+        return currentboxwidget
 
     def create_method_focus(self, unit):          
         
@@ -400,20 +457,9 @@ class WarbandOverview(QMainWindow):
             self.currentunit = self.create_template_char()
             self.initUI()                       # Restart the window to force changes
 
- 
-
-
 
 if __name__ == '__main__':
-    # Create an application in the OS with the class
-    # App().start()
-
-    # Create an application manually
-    app = QApplication(sys.argv)
-    app.setStyle("Fusion")
-    app.setPalette(QDarkPalette())
-    app.setStyleSheet("QToolTip { color: #ffffff; background-color: grey; border: 1px solid white; }")
+    app = QMainApplication(sys.argv)
     main = WarbandOverview()
 
-    # Make sure we can exit the application object normally
     sys.exit(app.exec_())

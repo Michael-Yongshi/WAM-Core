@@ -153,7 +153,7 @@ class WarbandOverview(QMainWindow):
         # top wrapping warband and system in the top horizontal layout
         topbox = QHBoxLayout()
         topbox.addWidget(self.set_wbname())
-        topbox.addWidget(self.set_wbdesc())
+        topbox.addWidget(self.set_wbinvbox())
         topbox.addWidget(self.set_systembox())
         topboxwidget = QBorderedWidget()
         topboxwidget.setLayout(topbox)
@@ -195,18 +195,38 @@ class WarbandOverview(QMainWindow):
 
         return sysboxwidget
 
-    def set_wbdesc(self):
+    def set_wbinvbox(self):
         # Top middle
-        wbdescbox = QHBoxLayout()
-        wbdesclabel = QLabel()
-        wbdesclabel.setText(self.wbid.description)
-        wbdesclabel.setWordWrap(True)
-        wbdesclabel.setToolTip("this is your warbands description")
-        wbdescbox.addWidget(wbdesclabel)
-        wbdescboxwidget = QBorderedWidget()
-        wbdescboxwidget.setLayout(wbdescbox)
+        wbinvbox = QHBoxLayout()
+        treabox = QVBoxLayout()
 
-        return wbdescboxwidget
+        goldlabel = QLabel()
+        goldlabel.setText(str(self.wbid.treasury.gold))
+        treabox.addWidget(goldlabel)
+        wyrdlabel = QLabel()
+        wyrdlabel.setText(str(self.wbid.treasury.wyrd))
+        treabox.addWidget(wyrdlabel)
+        
+        treaboxwidget = QBorderedWidget()
+        treaboxwidget.setLayout(treabox)
+        wbinvbox.addWidget(treaboxwidget)
+
+        # add items
+        itembox = QVBoxLayout() # create a vertical layout to show them in a neat line
+
+        for item in self.wbid.itemlist:
+            label = QLabel()
+            label.setText(str(item.name))
+            itembox.addWidget(label) #adds the item to a label and at it to the vertical item layout
+        
+        itemwidget = QBorderedWidget()
+        itemwidget.setLayout(itembox)
+        wbinvbox.addWidget(itemwidget) # adds the item layout to the grid
+
+        wbinvboxwidget = QBorderedWidget()
+        wbinvboxwidget.setLayout(wbinvbox)
+
+        return wbinvboxwidget
     
     def set_wbname(self):
         # top left warband info
@@ -316,9 +336,7 @@ class WarbandOverview(QMainWindow):
         return squadboxwidget
 
     def set_currentbox(self):
-        # Current unit field
-        currentbox = QVBoxLayout()
-        
+        # Current unit field        
         namebox = QGridLayout()
         namelabel = QLabel()
         namelabel.setText(self.currentunit.name)
@@ -411,9 +429,10 @@ class WarbandOverview(QMainWindow):
         listwidget = QInteractiveWidget()
         listwidget.setLayout(listbox)
 
-        currentbox.addWidget(namewidget)
-        currentbox.addWidget(skillwidget)
-        currentbox.addWidget(listwidget)
+        currentbox = QGridLayout()
+        currentbox.addWidget(namewidget, 0, 0, 1, 1)
+        currentbox.addWidget(skillwidget, 1, 0, 1, 1)
+        currentbox.addWidget(listwidget, 2, 0, 2, 1)
 
         currentboxwidget = QBorderedWidget()
         currentboxwidget.setLayout(currentbox)

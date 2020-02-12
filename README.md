@@ -7,7 +7,10 @@ In addition you can add your own warbands, items, rules, etc. for use in more cu
 ## Roadmap
 
 GUI
-- QT with own IDE
+- 
+
+References
+- some info in references can't be showed as its not part of the classes, i.e. character category, price, etc.
 
 Import wildcards
 - Remove the wildcards from the import statements

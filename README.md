@@ -9,6 +9,7 @@ In addition you can add your own warbands, items, rules, etc. for use in more cu
 GUI
 - Only change widgets directly instead of rerunning int:
 https://stackoverflow.com/questions/47062681/pyqt5-addstretch-in-between-widgets
+- converge create item boxes as we use them in both warband as current unit box.
 
 References
 - some info in references can't be showed as its not part of the classes, i.e. character category, price, etc.

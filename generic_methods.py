@@ -1,7 +1,9 @@
 import os
 
-from database.json import open_json
-from database.json import save_json
+from database.json import (
+    open_json,
+    save_json,
+    )
 
 from class_hierarchy import (
     Warband,

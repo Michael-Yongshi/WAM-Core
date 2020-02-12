@@ -213,6 +213,26 @@ class Skill(object):
 
         return skill
 
+    def to_list(self):
+        data = []
+        data.append(self.movement),
+        data.append(self.weapon),
+        data.append(self.ballistic),
+        data.append(self.strength),
+        data.append(self.toughness),
+        data.append(self.wounds),
+        data.append(self.initiative),
+        data.append(self.actions),
+        data.append(self.leadership),
+        data.append(self.armoursave),
+        
+        return data
+
+    def to_string(self):
+        data = f"mo: {self.movement}, we: {self.weapon}, ba: {self.ballistic}, st: {self.strength}, to: {self.toughness}, wo: {self.wounds}, in: {self.initiative}, ac: {self.actions}, le: {self.leadership}, as: {self.armoursave}"
+        
+        return data
+
 class Ability(object):
     """Default object to assign ablities as a basis for character and item abilities"""
     def __init__(self, name, description=None):

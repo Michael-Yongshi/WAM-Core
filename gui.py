@@ -372,19 +372,17 @@ class WarbandOverview(QMainWindow):
         skillwidget.setLayout(skillbox)
         
 
-        listbox = QHBoxLayout()
         #add items
         itembox = QVBoxLayout() # create a vertical layout to show them in a neat line
 
         for item in self.currentunit.itemlist:
             label = QLabel()
             label.setText(str(item.name))
-            label.setToolTip(f"<font><b>{item.name}</b> <br/> category: {item.category} <br/> distance: {item.distance} <br/> skill: {item.skill.to_dict} <br/> price: {item.price} <br/> {item.description}</font>")
+            label.setToolTip(f"<font><b>{item.name}</b> <br/> category: {item.category} <br/> distance: {item.distance} <br/> <nobr>{item.skill.to_string()}</nobr> <br/> price: {item.price} <br/> {item.description}</font>")
             itembox.addWidget(label) #adds the item to a label and at it to the vertical item layout
         
         itemwidget = QInteractiveWidget()
         itemwidget.setLayout(itembox)
-        listbox.addWidget(itemwidget) # adds the item layout to the grid
 
         #show abilities
         abilitybox = QVBoxLayout() # create a vertical layout to show them in a neat line
@@ -397,7 +395,6 @@ class WarbandOverview(QMainWindow):
         
         abilitywidget = QInteractiveWidget()
         abilitywidget.setLayout(abilitybox)
-        listbox.addWidget(abilitywidget) # adds the ability layout to the grid
 
         #show magic
         magicbox = QVBoxLayout() # create a vertical layout to show them in a neat line
@@ -409,7 +406,12 @@ class WarbandOverview(QMainWindow):
             magicbox.addWidget(label) #adds the magic to a label and at it to the vertical magic layout
         
         magicwidget = QInteractiveWidget()
+        
         magicwidget.setLayout(magicbox)
+        
+        listbox = QHBoxLayout()
+        listbox.addWidget(itemwidget) # adds the item layout to the grid
+        listbox.addWidget(abilitywidget) # adds the ability layout to the grid
         listbox.addWidget(magicwidget) # adds the magic layout to the grid
 
         listwidget = QInteractiveWidget()

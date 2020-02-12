@@ -5,8 +5,16 @@ An application in order to create, update, view and save your warband details fo
 In addition you can add your own warbands, items, rules, etc. for use in more custom made games.
 
 ## Roadmap
+GUI functionality
+- increasing or decreasing number of henchmen
+- fix spear price (10 -> 15)
+- give everyone by default a dagger
+- add 'add magic' functionality
+- add 'add ability' functionality
+- add basic rulebook to references
+- add status functionality
 
-GUI
+GUI performance
 - Only change widgets directly instead of rerunning int:
 https://stackoverflow.com/questions/47062681/pyqt5-addstretch-in-between-widgets
 - converge create item boxes as we use them in both warband as current unit box.

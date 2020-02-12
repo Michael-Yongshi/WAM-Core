@@ -340,15 +340,17 @@ class WarbandOverview(QMainWindow):
     def set_currentbox(self):
         # Current unit field        
         namebox = QGridLayout()
+        
         namelabel = QLabel()
-        namelabel.setText(self.currentunit.name)
-        namebox.addWidget(namelabel, 0, 0)
+    
+        namelabel.setText(self.currentunit.name)    
+        namebox.addWidget(namelabel,0,0)
         catlabel = QLabel()
         catlabel.setText(self.currentunit.category)
         namebox.addWidget(catlabel, 0, 1)
         herolabel = QLabel()
         herolabel.setText(str(self.currentunit.ishero))
-        namebox.addWidget(herolabel, 0, 2)
+        namebox.addWidget(herolabel, 1, 0)
         
         namewidget = QInteractiveWidget()
         namewidget.setLayout(namebox)
@@ -365,35 +367,7 @@ class WarbandOverview(QMainWindow):
             else: 
                 label.setText("")
             skillbox.addWidget(label)
-
-        # wslabel = QLabel()
-        # wslabel.setText("Ws\n" + str(self.currentunit.skill.weapon))
-        # skillbox.addWidget(wslabel)
-        # bslabel = QLabel()
-        # bslabel.setText("Bs\n" + str(self.currentunit.skill.ballistic))
-        # skillbox.addWidget(bslabel)
-        # slabel = QLabel()
-        # slabel.setText("Str\n" + str(self.currentunit.skill.strength))
-        # skillbox.addWidget(slabel)
-        # tlabel = QLabel()
-        # tlabel.setText("Tou\n" + str(self.currentunit.skill.toughness))
-        # skillbox.addWidget(tlabel)
-        # wlabel = QLabel()
-        # wlabel.setText("Wou\n" + str(self.currentunit.skill.wounds))
-        # skillbox.addWidget(wlabel)
-        # ilabel = QLabel()
-        # ilabel.setText("Ini\n" + str(self.currentunit.skill.initiative))
-        # skillbox.addWidget(ilabel)
-        # aclabel = QLabel()
-        # aclabel.setText("Act\n" + str(self.currentunit.skill.actions))
-        # skillbox.addWidget(aclabel)
-        # ldlabel = QLabel()
-        # ldlabel.setText("Ld\n" + str(self.currentunit.skill.leadership))
-        # skillbox.addWidget(ldlabel)
-        # aslabel = QLabel()
-        # aslabel.setText("As\n" + str(self.currentunit.skill.armoursave))
-        # skillbox.addWidget(aslabel)
-        
+  
         skillwidget = QBorderedWidget()
         skillwidget.setLayout(skillbox)
         
@@ -405,9 +379,10 @@ class WarbandOverview(QMainWindow):
         for item in self.currentunit.itemlist:
             label = QLabel()
             label.setText(str(item.name))
+            label.setToolTip(f"<font><b>{item.name}</b> <br/> category: {item.category} <br/> distance: {item.distance} <br/> skill: {item.skill.to_dict} <br/> price: {item.price} <br/> {item.description}</font>")
             itembox.addWidget(label) #adds the item to a label and at it to the vertical item layout
         
-        itemwidget = QBorderedWidget()
+        itemwidget = QInteractiveWidget()
         itemwidget.setLayout(itembox)
         listbox.addWidget(itemwidget) # adds the item layout to the grid
 
@@ -417,9 +392,10 @@ class WarbandOverview(QMainWindow):
         for ability in self.currentunit.abilitylist:
             label = QLabel()
             label.setText(str(ability.name))
+            label.setToolTip(f"<font><b>{ability.name}</b> <br/> {ability.description}</font>")
             abilitybox.addWidget(label) #adds the ability to a label and at it to the vertical ability layout
         
-        abilitywidget = QBorderedWidget()
+        abilitywidget = QInteractiveWidget()
         abilitywidget.setLayout(abilitybox)
         listbox.addWidget(abilitywidget) # adds the ability layout to the grid
 
@@ -429,9 +405,10 @@ class WarbandOverview(QMainWindow):
         for magic in self.currentunit.magiclist:
             label = QLabel()
             label.setText(str(magic.name))
+            label.setToolTip(f"<font><b>{magic.name}</b> <br/> {magic.description}</font>")
             magicbox.addWidget(label) #adds the magic to a label and at it to the vertical magic layout
         
-        magicwidget = QBorderedWidget()
+        magicwidget = QInteractiveWidget()
         magicwidget.setLayout(magicbox)
         listbox.addWidget(magicwidget) # adds the magic layout to the grid
 

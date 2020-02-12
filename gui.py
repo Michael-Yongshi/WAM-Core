@@ -7,6 +7,7 @@ from PyQt5.QtCore import (
     Qt,
     pyqtSignal,
     )
+
 from PyQt5.QtWidgets import (
     QAction,
     QApplication,
@@ -55,11 +56,12 @@ from class_hierarchy import (
     Squad,
     Character,
     Hero,
-)
+    )
 
 from class_components import (
+    Item,
     Skill,
-)
+    )
 
 class QBorderedWidget(QWidget):
     """A widget which is the default, but with some different stylesheet details (borders)"""
@@ -127,6 +129,7 @@ class WarbandOverview(QMainWindow):
 
         self.wbid = get_current_warband()
         self.currentunit = self.create_template_char()
+        self.currentthing = None
         self.initUI()
 
     def initUI(self):
@@ -230,12 +233,28 @@ class WarbandOverview(QMainWindow):
         for item in self.wbid.itemlist:
             label = QLabel()
             label.setText(str(item.name))
-            itembox.addWidget(label) #adds the item to a label and at it to the vertical item layout
+            label.setToolTip(f"<font><b>{item.name}</b> <br/> category: {item.category} <br/> distance: {item.distance} <br/> <nobr>{item.skill.to_string()}</nobr> <br/> price: {item.price} <br/> {item.description}</font>")
+            itemwrap = QVBoxLayout()
+            itemwrap.addWidget(label)
+            itemwidget = QInteractiveWidget()
+            itemwidget.setLayout(itemwrap)
+            itemwidget.clicked.connect(self.create_method_item(item=item))
+            itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
         
-        itemwidget = QBorderedWidget()
-        itemwidget.setLayout(itembox)
-        itemwidget.setToolTip("These are your warbands items.")
-        wbinvbox.addWidget(itemwidget) # adds the item layout to the grid
+        # add new item widget
+        label = QLabel()
+        label.setText("New Item")
+        itemwrap = QVBoxLayout()
+        itemwrap.addWidget(label)
+        itemwidget = QInteractiveWidget()
+        itemwidget.setLayout(itemwrap)
+        itemwidget.clicked.connect(self.create_new_wbitem)
+        itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
+
+        itemboxwidget = QBorderedWidget()
+        itemboxwidget.setLayout(itembox)
+        itemboxwidget.setToolTip("These are your warbands items.")
+        wbinvbox.addWidget(itemboxwidget) # adds the item layout to the grid
 
         wbinvboxwidget = QBorderedWidget()
         wbinvboxwidget.setLayout(wbinvbox)
@@ -406,10 +425,16 @@ class WarbandOverview(QMainWindow):
             label = QLabel()
             label.setText(str(item.name))
             label.setToolTip(f"<font><b>{item.name}</b> <br/> category: {item.category} <br/> distance: {item.distance} <br/> <nobr>{item.skill.to_string()}</nobr> <br/> price: {item.price} <br/> {item.description}</font>")
-            itembox.addWidget(label) #adds the item to a label and at it to the vertical item layout
+            itemwrap = QVBoxLayout()
+            itemwrap.addWidget(label)
+            itemwidget = QInteractiveWidget()
+            itemwidget.setLayout(itemwrap)
+            itemwidget.clicked.connect(self.create_method_item(item=item))
+            itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
         
-        itemwidget = QInteractiveWidget()
-        itemwidget.setLayout(itembox)
+        itemboxwidget = QBorderedWidget()
+        itemboxwidget.setLayout(itembox)
+        itemboxwidget.setToolTip("These are your units items.")
 
         #show abilities
         abilitybox = QVBoxLayout() # create a vertical layout to show them in a neat line
@@ -437,7 +462,7 @@ class WarbandOverview(QMainWindow):
         magicwidget.setLayout(magicbox)
         
         listbox = QHBoxLayout()
-        listbox.addWidget(itemwidget) # adds the item layout to the grid
+        listbox.addWidget(itemboxwidget) # adds the item layout to the grid
         listbox.addWidget(abilitywidget) # adds the ability layout to the grid
         listbox.addWidget(magicwidget) # adds the magic layout to the grid
 
@@ -454,6 +479,16 @@ class WarbandOverview(QMainWindow):
 
         return currentboxwidget
 
+    def choose_warband(self):
+        """Choose a warband to be loaded into cache and then shown on screen"""
+        warbands = show_saved_warbands()
+        wbname, okPressed = QInputDialog.getItem(self, "Choose", "Choose your warband", warbands, 0, False)
+        if okPressed and wbname:
+            load_warband(wbname)                # Load from save json into cache json
+            self.wbid = get_current_warband()   # bring cache json to python obj (warband class .from_dict method)
+            self.currentunit = self.create_template_char()
+            self.initUI()                       # Restart the window to force changes
+
     def create_method_focus(self, unit):          
         """This method is used in order to create a new method that holds a reference to a passed attribute,
         this is used when a widget needs to be clickable but the signal needs to carry information other than the signal itself.
@@ -469,6 +504,26 @@ class WarbandOverview(QMainWindow):
 
         return focus_unit
 
+    def create_method_item(self, item):          
+        """This method is used in order to create a new method that holds a reference to a passed attribute,
+        this is used when a widget needs to be clickable but the signal needs to carry information other than the signal itself.
+        This one specifically gets a current item and then creates a window based on the attribute"""
+        def focus_item():
+            check = isinstance(item, Item)
+            print(check)
+            if item == None:
+                self.currentthing = None
+                
+            elif item != self.currentthing:
+                self.currentthing = item
+                message = QMessageBox.information(self, 'Item details', f"Your item {item.name}", QMessageBox.Ok)
+                # Current item options to implement: 
+                # remove (if an event causes you to lose your item, ie using a consumable), 
+                # sell (removing equipment by selling it off)
+                # change (if an event causes an item to change, for example dual wield which causes you to exchange a second hand item in the first hand variant)
+        
+        return focus_item
+
     def create_template_char(self):
         template_char = Character(
             name="",
@@ -479,6 +534,23 @@ class WarbandOverview(QMainWindow):
             ishero=""
         )
         return template_char
+
+    def create_warband(self):
+        """Create a new warband and store it in cache"""
+        name, okPressed = QInputDialog.getText(self, "Create", "Name your warband:")
+        if okPressed and name:
+            
+            # get all races in references
+            racedict = open_json("database/references/characters_ref.json")
+            races = []
+            for key in racedict:
+                races.append(key)
+
+            race, okPressed = QInputDialog.getItem(self, "Create", "Choose a race", races, 0, False)
+            if okPressed and race:
+                self.wbid = Warband(name=name, race=race)
+                self.currentunit = self.create_template_char()
+                self.initUI()
 
     def create_new_hero(self):
 
@@ -548,32 +620,37 @@ class WarbandOverview(QMainWindow):
                 else:
                     print("can't add new hero, lack of funds")
 
-    def create_warband(self):
-        """Create a new warband and store it in cache"""
-        name, okPressed = QInputDialog.getText(self, "Create", "Name your warband:")
-        if okPressed and name:
-            
-            # get all races in references
-            racedict = open_json("database/references/characters_ref.json")
-            races = []
-            for key in racedict:
-                races.append(key)
+    def create_new_wbitem(self):
 
-            race, okPressed = QInputDialog.getItem(self, "Create", "Choose a race", races, 0, False)
-            if okPressed and race:
-                self.wbid = Warband(name=name, race=race)
-                self.currentunit = self.create_template_char()
-                self.initUI()
+        """Create a new item and store it in this warband or unit"""
+        itemdict = open_json("database/references/items_ref.json")
+        sources = []
+        for key in itemdict:
+            sources.append(key)
 
-    def choose_warband(self):
-        """Choose a warband to be loaded into cache and then shown on screen"""
-        warbands = show_saved_warbands()
-        wbname, okPressed = QInputDialog.getItem(self, "Choose", "Choose your warband", warbands, 0, False)
-        if okPressed and wbname:
-            load_warband(wbname)                # Load from save json into cache json
-            self.wbid = get_current_warband()   # bring cache json to python obj (warband class .from_dict method)
-            self.currentunit = self.create_template_char()
-            self.initUI()                       # Restart the window to force changes
+        source, okPressed = QInputDialog.getItem(self, "Select source", "Choose a source", sources, 0, False)
+        if okPressed and source:
+        
+            # get all available items
+            items = []
+            for key in itemdict[source]:
+                items.append(key)
+
+            item, okPressed = QInputDialog.getItem(self, "Create", "Choose an item", items, 0, False)
+            if okPressed and item:
+                new_item = Item.create_item(
+                    name = item,
+                    source = source,
+                )
+
+                wbidgold = self.wbid.treasury.gold
+                itemprice = itemdict[source][item]["price"]
+                if wbidgold >= itemprice:
+                    self.wbid.treasury.gold = wbidgold - itemprice
+                    self.wbid.itemlist.append(new_item)
+                    self.initUI()
+                else:
+                    print("can't add new item, lack of funds")
 
 
 if __name__ == '__main__':

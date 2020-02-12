@@ -1,6 +1,7 @@
 {
     "name": "Uthluan Wyrdbreakers",
-    "race": "High Elves",
+    "race": "High Elf",
+    "source": "High Elves",
     "description": "No description",
     "treasury": {
         "gold": 252,

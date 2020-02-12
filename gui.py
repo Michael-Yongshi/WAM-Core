@@ -37,6 +37,11 @@ from PyQt5.QtGui import (
     QPalette,
     )
 
+from database.json import (
+    open_json,
+    save_json,
+    )
+
 from generic_methods import (
     save_warband,
     load_warband,
@@ -45,7 +50,10 @@ from generic_methods import (
     )
 
 from class_hierarchy import (
+    Warband,
+    Squad,
     Character,
+    Hero,
 )
 
 from class_components import (
@@ -231,14 +239,25 @@ class WarbandOverview(QMainWindow):
     def set_wbname(self):
         # top left warband info
         wbnamelabel = QLabel()
+        wbnamelabel.setText("Your warband " + self.wbid.name)
         wbnamelabel.setToolTip('This is your <b>Warband`s</b> name')
+        wbracelabel = QLabel()
+        wbracelabel.setText("Race: " + self.wbid.race)
+        wbracelabel.setToolTip('This is your <b>Warband`s</b> race')
+        wbtypelabel = QLabel()
+        wbnamelabel.setText("Type: " + self.wbid.source)
+        wbtypelabel.setToolTip('This is your <b>Warband`s</b> type')
+
         wbbox = QVBoxLayout()
         wbbox.addWidget(wbnamelabel)
+        wbbox.addWidget(wbracelabel)
+        wbbox.addWidget(wbtypelabel)
+
         wbboxwidget = QBorderedWidget()
         wbboxwidget.setLayout(wbbox)
 
         # update wb info
-        wbnamelabel.setText("Your warband " + self.wbid.name)
+        
 
         return wbboxwidget
 
@@ -278,8 +297,9 @@ class WarbandOverview(QMainWindow):
             namelabel.setText("Add New Hero")
             herogrid.addWidget(namelabel, 0, 0)
 
-            herowidget = QBorderedWidget()
+            herowidget = QInteractiveWidget()
             herowidget.setLayout(herogrid)
+            herowidget.clicked.connect(self.create_new_hero)
             herobox.addWidget(herowidget)
 
         heroboxwidget = QBorderedWidget()
@@ -327,8 +347,9 @@ class WarbandOverview(QMainWindow):
             namelabel.setText("Add New Squad")
             squadgrid.addWidget(namelabel, 0, 0)
 
-            squadwidget = QBorderedWidget()
+            squadwidget = QInteractiveWidget()
             squadwidget.setLayout(squadgrid)
+            squadwidget.clicked.connect(self.create_new_squad)
             squadbox.addWidget(squadwidget)
 
         squadboxwidget = QBorderedWidget()
@@ -428,14 +449,16 @@ class WarbandOverview(QMainWindow):
         return currentboxwidget
 
     def create_method_focus(self, unit):          
-        
+        """This method is used in order to create a new method that holds a reference to a passed attribute,
+        this is used when a widget needs to be clickable but the signal needs to carry information other than the signal itself.
+        This one specifically gets a current unit and then passes it to the currentunit attribute of the main window"""
         def focus_unit():
             if self.currentunit != unit:
                 self.currentunit = unit
                 self.initUI()
 
         return focus_unit
-       
+
     def create_template_char(self):
         template_char = Character(
             name="",
@@ -447,11 +470,90 @@ class WarbandOverview(QMainWindow):
         )
         return template_char
 
+    def create_new_hero(self):
+
+        """Create a new hero and store it in this warband"""
+        name, okPressed = QInputDialog.getText(self, "Create", "Name your hero:")
+        if okPressed and name:
+            
+            # get all categories in references
+            wbrace = self.wbid.race
+            wbsource = self.wbid.source
+            catdict = open_json("database/references/characters_ref.json")
+            categories = []
+            
+            for key in catdict[wbrace][wbsource]:
+                categories.append(key)
+
+            category, okPressed = QInputDialog.getItem(self, "Create", "Choose a category", categories, 0, False)
+            if okPressed and category:
+                new_hero = Hero.create_character(
+                    name=name,
+                    race=wbrace,
+                    source=wbsource,
+                    category=category,
+                )
+
+                wbidgold = self.wbid.treasury.gold
+                heroprice = catdict[wbrace][wbsource][category]["price"]
+                if wbidgold >= heroprice:
+                    self.wbid.treasury.gold = wbidgold - heroprice
+                    self.wbid.herolist.append(new_hero)
+                    self.currentunit = new_hero
+                    self.initUI()
+                else:
+                    print("can't add new hero, lack of funds")
+
+    def create_new_squad(self):
+
+        """Create a new squad and store it in this warband"""
+        name, okPressed = QInputDialog.getText(self, "Create", "Name your squad:")
+        if okPressed and name:
+            
+            # get all categories in references
+            wbrace = self.wbid.race
+            wbsource = self.wbid.source
+            catdict = open_json("database/references/characters_ref.json")
+            categories = []
+            
+            for key in catdict[wbrace][wbsource]:
+                categories.append(key)
+
+            category, okPressed = QInputDialog.getItem(self, "Create", "Choose a category", categories, 0, False)
+            if okPressed and category:
+                new_squad = Squad.create_squad(
+                    name=name,
+                    race=wbrace,
+                    source=wbsource,
+                    category=category,
+                )
+
+                wbidgold = self.wbid.treasury.gold
+                squadprice = catdict[wbrace][wbsource][category]["price"]
+                if wbidgold >= squadprice:
+                    self.wbid.treasury.gold = wbidgold - squadprice
+                    self.wbid.squadlist.append(new_squad)
+                    self.currentunit = new_squad.henchmanlist[0]
+                    self.initUI()
+                else:
+                    print("can't add new hero, lack of funds")
+
     def create_warband(self):
         """Create a new warband and store it in cache"""
-        warband, okPressed = QInputDialog.getText(self, "Create", "Name your warband:")
-        if okPressed and warband:
-            print(warband)
+        name, okPressed = QInputDialog.getText(self, "Create", "Name your warband:")
+        if okPressed and name:
+            
+            # get all races in references
+            racedict = open_json("database/references/characters_ref.json")
+            races = []
+            for key in racedict:
+                races.append(key)
+
+            race, okPressed = QInputDialog.getItem(self, "Create", "Choose a race", races, 0, False)
+            if okPressed and race:
+                self.wbid = Warband(name=name, race=race)
+                self.currentunit = self.create_template_char()
+                self.initUI()
 
     def choose_warband(self):
         """Choose a warband to be loaded into cache and then shown on screen"""

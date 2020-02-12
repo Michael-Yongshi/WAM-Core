@@ -11,9 +11,10 @@ from class_components import (
 
 
 class Warband(object):
-    def __init__(self, name, race, description=None, treasury=None, rulelist=[], itemlist=[], herolist=[], squadlist=[]):
+    def __init__(self, name, race, source, description=None, treasury=None, rulelist=[], itemlist=[], herolist=[], squadlist=[]):
         self.name = name
         self.race = race
+        self.source = source
         self.description = description
         self.treasury = treasury if treasury else Treasury()
         self.rulelist = rulelist
@@ -58,6 +59,7 @@ class Warband(object):
             # 'key': str(self),
             'name': self.name,
             'race': self.race,
+            'source': self.source,
             'description': self.description,
             'treasury': treasury,
             'rulelist': rulelist,
@@ -93,6 +95,7 @@ class Warband(object):
         wbid = Warband(
             name=datadict["name"],
             race=datadict["race"],
+            source=datadict["source"],
             description=datadict["description"],
             treasury=treasury,
             rulelist=rulelist,
@@ -172,7 +175,7 @@ class Squad(object):
         return squad
 
     @staticmethod
-    def create_squad(name, number, race, source, category):
+    def create_squad(name, race, source, category, number=1):
         """Create a new squad with the given parameters and creates the amount of henchman determined by the number parameter"""
         
         newsquad = Squad(

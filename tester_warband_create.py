@@ -30,6 +30,7 @@ def test_createWarband(wbname, wbrace):
     wbid = Warband(
         name=wbname,
         race=wbrace,
+        source=wbsource,
         description="No description"
         )
 
@@ -111,5 +112,6 @@ def test_createWarband(wbname, wbrace):
 
 if __name__ == "__main__":
     wbname = "Uthluan Wyrdbreakers"
-    wbrace = "High Elves"
+    wbrace = "High Elf"
+    wbsource = "High Elves"
     test_createWarband(wbname, wbrace)

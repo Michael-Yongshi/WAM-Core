@@ -7,7 +7,8 @@ In addition you can add your own warbands, items, rules, etc. for use in more cu
 ## Roadmap
 
 GUI
-- 
+- Only change widgets directly instead of rerunning int:
+https://stackoverflow.com/questions/47062681/pyqt5-addstretch-in-between-widgets
 
 References
 - some info in references can't be showed as its not part of the classes, i.e. character category, price, etc.
@@ -17,9 +18,6 @@ Import wildcards
 
 Inventory and items
 - Split inventory again in Treasury object and in an itemlist seperately, as only the warband itself can have gold and wyrd, it makes for more elegancy to split these, although should have no practical implications
-
-Magic
-- Add dedicated Magic class and add a magic attribute to character and item (potentially also an item could enable a character to use a spell). Magic is very different from abilities and therefore warrant a special class
 
 Generate overviews of warband, herolists, squads, etc. easily.
 

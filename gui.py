@@ -61,6 +61,7 @@ from class_hierarchy import (
 from class_components import (
     Item,
     Skill,
+    Treasury,
     )
 
 class QBorderedWidget(QWidget):
@@ -432,6 +433,16 @@ class WarbandOverview(QMainWindow):
             itemwidget.clicked.connect(self.create_method_item(item=item))
             itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
         
+        # add new item widget
+        label = QLabel()
+        label.setText("New Item")
+        itemwrap = QVBoxLayout()
+        itemwrap.addWidget(label)
+        itemwidget = QInteractiveWidget()
+        itemwidget.setLayout(itemwrap)
+        itemwidget.clicked.connect(self.create_method_new_item(unit=self.currentunit))
+        itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
+
         itemboxwidget = QBorderedWidget()
         itemboxwidget.setLayout(itembox)
         itemboxwidget.setToolTip("These are your units items.")
@@ -512,8 +523,7 @@ class WarbandOverview(QMainWindow):
             check = isinstance(item, Item)
             print(check)
             if item == None:
-                self.currentthing = None
-                
+                self.currentthing = None               
             elif item != self.currentthing:
                 self.currentthing = item
                 message = QMessageBox.information(self, 'Item details', f"Your item {item.name}", QMessageBox.Ok)
@@ -523,6 +533,54 @@ class WarbandOverview(QMainWindow):
                 # change (if an event causes an item to change, for example dual wield which causes you to exchange a second hand item in the first hand variant)
         
         return focus_item
+
+    def create_method_new_item(self, unit):
+        """Method for creating a new item and receiving as attribute the unit it should be added to.
+                    """
+        def create_item_for_unit():
+            itemdict = open_json("database/references/items_ref.json")
+            sources = []
+            for key in itemdict:
+                sources.append(key)
+
+            source, okPressed = QInputDialog.getItem(self, "Select source", "Choose a source", sources, 0, False)
+            if okPressed and source:
+            
+                # get all available items
+                items = []
+                for key in itemdict[source]:
+                    items.append(key)
+
+                item, okPressed = QInputDialog.getItem(self, "Create", "Choose an item", items, 0, False)
+                if okPressed and item:
+                    new_item = Item.create_item(
+                        name = item,
+                        source = source,
+                    )
+
+                    wbidgold = self.wbid.treasury.gold
+                    itemprice = itemdict[source][item]["price"]
+                    if wbidgold >= itemprice:
+                        
+                        if unit.ishero == True:
+                            for hero in self.wbid.herolist:
+                                if unit.name == hero.name:
+                                    hero.itemlist.append(new_item)
+                                    self.wbid.treasury.gold = wbidgold - itemprice
+                                    self.initUI()
+                                    
+                        else:
+                            for s in self.wbid.squadlist:
+                                if unit.name == s.name:
+                                    for henchman in s.henchmanlist:
+                                        henchman.itemlist.append(new_item)
+                                    self.wbid.treasury.gold = wbidgold - itemprice
+                                    self.initUI()
+
+                    else:
+                        message = QMessageBox.information(self, 'Lack of funds!', "Can't add new item, lack of funds", QMessageBox.Ok)
+
+        return create_item_for_unit
 
     def create_template_char(self):
         template_char = Character(
@@ -541,16 +599,24 @@ class WarbandOverview(QMainWindow):
         if okPressed and name:
             
             # get all races in references
-            racedict = open_json("database/references/characters_ref.json")
+            chardict = open_json("database/references/characters_ref.json")
+
             races = []
-            for key in racedict:
+            for key in chardict:
                 races.append(key)
 
             race, okPressed = QInputDialog.getItem(self, "Create", "Choose a race", races, 0, False)
             if okPressed and race:
-                self.wbid = Warband(name=name, race=race)
-                self.currentunit = self.create_template_char()
-                self.initUI()
+
+                sources = []
+                for key in chardict[race]:
+                    sources.append(key)
+
+                source, okPressed = QInputDialog.getItem(self, "Create", "Choose a source", sources, 0, False)
+                if okPressed and source:
+                    self.wbid = Warband(name=name, race=race, source=source, treasury=Treasury(gold=500))
+                    self.currentunit = self.create_template_char()
+                    self.initUI()
 
     def create_new_hero(self):
 
@@ -622,7 +688,7 @@ class WarbandOverview(QMainWindow):
 
     def create_new_wbitem(self):
 
-        """Create a new item and store it in this warband or unit"""
+        """Create a new item and store it in this warband"""
         itemdict = open_json("database/references/items_ref.json")
         sources = []
         for key in itemdict:
@@ -651,6 +717,7 @@ class WarbandOverview(QMainWindow):
                     self.initUI()
                 else:
                     print("can't add new item, lack of funds")
+
 
 
 if __name__ == '__main__':

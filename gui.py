@@ -22,6 +22,7 @@ from PyQt5.QtWidgets import (
     QMainWindow,
     QMessageBox,
     QPushButton, 
+    QSizePolicy,
     QTableWidget,
     QTableWidgetItem,
     QTextEdit,
@@ -164,6 +165,7 @@ class WarbandOverview(QMainWindow):
         topbox.addWidget(self.set_wbinvbox())
         topbox.addWidget(self.set_systembox())
         topboxwidget = QBorderedWidget()
+        topboxwidget.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
         topboxwidget.setLayout(topbox)
 
         return topboxwidget
@@ -174,7 +176,8 @@ class WarbandOverview(QMainWindow):
         botbox.addWidget(self.set_herobox())
         botbox.addWidget(self.set_squadbox())
         botbox.addWidget(self.set_currentbox())
-        botboxwidget = QBorderedWidget()
+        botboxwidget = QInteractiveWidget()
+        botboxwidget.clicked.connect(self.create_method_focus(unit=None))
         botboxwidget.setLayout(botbox)
 
         return botboxwidget
@@ -194,7 +197,7 @@ class WarbandOverview(QMainWindow):
         btnquit.clicked.connect(QApplication.instance().quit)
 
         # top right
-        sysbox = QVBoxLayout()
+        sysbox = QHBoxLayout()
         sysbox.addWidget(btncreate)
         sysbox.addWidget(btnchoose)
         sysbox.addWidget(btnquit)
@@ -209,10 +212,12 @@ class WarbandOverview(QMainWindow):
         treabox = QVBoxLayout()
 
         goldlabel = QLabel()
-        goldlabel.setText(str(self.wbid.treasury.gold))
+        goldlabel.setText("Gold: " + str(self.wbid.treasury.gold))
+        goldlabel.setToolTip("This is the amount of gold your warband holds.")
         treabox.addWidget(goldlabel)
         wyrdlabel = QLabel()
-        wyrdlabel.setText(str(self.wbid.treasury.wyrd))
+        wyrdlabel.setText("Wyrdstones: " + str(self.wbid.treasury.wyrd))
+        wyrdlabel.setToolTip("This is the amount of wyrdstones, or their equivalent, your warband holds.")
         treabox.addWidget(wyrdlabel)
         
         treaboxwidget = QBorderedWidget()
@@ -229,6 +234,7 @@ class WarbandOverview(QMainWindow):
         
         itemwidget = QBorderedWidget()
         itemwidget.setLayout(itembox)
+        itemwidget.setToolTip("These are your warbands items.")
         wbinvbox.addWidget(itemwidget) # adds the item layout to the grid
 
         wbinvboxwidget = QBorderedWidget()
@@ -245,7 +251,7 @@ class WarbandOverview(QMainWindow):
         wbracelabel.setText("Race: " + self.wbid.race)
         wbracelabel.setToolTip('This is your <b>Warband`s</b> race')
         wbtypelabel = QLabel()
-        wbnamelabel.setText("Type: " + self.wbid.source)
+        wbtypelabel.setText("Type: " + self.wbid.source)
         wbtypelabel.setToolTip('This is your <b>Warband`s</b> type')
 
         wbbox = QVBoxLayout()
@@ -365,13 +371,13 @@ class WarbandOverview(QMainWindow):
         namelabel = QLabel()
     
         namelabel.setText(self.currentunit.name)    
-        namebox.addWidget(namelabel,0,0)
+        namebox.addWidget(namelabel, 0, 0, 1, 2)
         catlabel = QLabel()
         catlabel.setText(self.currentunit.category)
-        namebox.addWidget(catlabel, 0, 1)
+        namebox.addWidget(catlabel, 1, 0,)
         herolabel = QLabel()
         herolabel.setText(str(self.currentunit.ishero))
-        namebox.addWidget(herolabel, 1, 0)
+        namebox.addWidget(herolabel, 1, 1)
         
         namewidget = QInteractiveWidget()
         namewidget.setLayout(namebox)
@@ -453,7 +459,11 @@ class WarbandOverview(QMainWindow):
         this is used when a widget needs to be clickable but the signal needs to carry information other than the signal itself.
         This one specifically gets a current unit and then passes it to the currentunit attribute of the main window"""
         def focus_unit():
-            if self.currentunit != unit:
+
+            if unit == None:
+                self.currentunit = self.create_template_char()
+                self.initUI()
+            elif unit != self.currentunit:
                 self.currentunit = unit
                 self.initUI()
 

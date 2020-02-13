@@ -535,8 +535,17 @@ class WarbandOverview(QMainWindow):
                     if newsize != 0:
                         deltasize = newsize - currentsize
                         squad.change_henchman_count(deltasize)
-                        # ask if the decrease is due to disbanding or attrition, first returns money of unit + items, second doesnt.
-                        self.initUI()
+                        process_gold = QMessageBox.question(self, "Process gold", "Is change due to an event?", QMessageBox.Yes | QMessageBox.No)
+                        if process_gold == QMessageBox.No:
+                            deltagold = deltasize * squad.henchmanlist[0].get_price()
+                            if deltagold < self.wbid.treasury.gold:
+                                self.wbid.treasury.gold -= deltagold
+                                self.initUI()
+                            else:
+                                print("Lack of funds")
+                        else:
+                            self.initUI()
+                        
                     else:
                         print("Can't remove the last member, please disband the whole squad")
 
@@ -547,17 +556,40 @@ class WarbandOverview(QMainWindow):
         this is used when a widget needs to be clickable but the signal needs to carry information other than the signal itself.
         This one specifically gets a current item and then creates a window based on the attribute"""
         def focus_item():
-            check = isinstance(item, Item)
-            print(check)
+
             if item == None:
                 self.currentthing = None               
             elif item != self.currentthing:
                 self.currentthing = item
-                message = QMessageBox.information(self, 'Item details', f"Your item {item.name}", QMessageBox.Ok)
-                # Current item options to implement: 
-                # remove (if an event causes you to lose your item, ie using a consumable), 
-                # sell (removing equipment by selling it off)
-                # change (if an event causes an item to change, for example dual wield which causes you to exchange a second hand item in the first hand variant)
+                remove = QMessageBox.question(self, 'Remove item', f"Do you want to remove this item?", QMessageBox.Yes | QMessageBox.No)
+                if remove == QMessageBox.Yes:
+                    process_gold = QMessageBox.question(self, "Process gold", "Is change due to an event?", QMessageBox.Yes | QMessageBox.No)
+                    itemprice = 0
+
+                    if self.currentunit.ishero == True:
+                        for hero in self.wbid.herolist:
+                            if hero == self.currentunit:
+                                for i in hero.itemlist:
+                                    if i.name == item.name:
+                                        if process_gold == QMessageBox.No:
+                                            itemprice += item.price
+                                        index = hero.itemlist.index(i)
+                                        hero.itemlist.pop(index)
+                                        break
+
+                    else:
+                        for squad in self.wbid.squadlist:
+                            if squad.henchmanlist[0] == self.currentunit:
+                                for h in squad.henchmanlist:
+                                    for i in h.itemlist:
+                                        if i.name == item.name:
+                                            if process_gold == QMessageBox.No:
+                                                itemprice += item.price
+                                            index = h.itemlist.index(i)
+                                            h.itemlist.pop(index)
+                                            break
+                    self.wbid.treasury.gold += itemprice
+                    self.initUI()
         
         return focus_item
 

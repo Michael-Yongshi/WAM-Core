@@ -747,15 +747,19 @@ class WarbandOverview(QMainWindow):
                     category=category,
                 )
 
-                wbidgold = self.wbid.treasury.gold
-                squadprice = catdict[wbrace][wbsource][category]["price"]
-                if wbidgold >= squadprice:
-                    self.wbid.treasury.gold = wbidgold - squadprice
-                    self.wbid.squadlist.append(new_squad)
-                    self.currentunit = new_squad.henchmanlist[0]
-                    self.initUI()
+                if new_squad.henchmanlist[0] != None:
+
+                    wbidgold = self.wbid.treasury.gold
+                    squadprice = catdict[wbrace][wbsource][category]["price"]
+                    if wbidgold >= squadprice:
+                        self.wbid.treasury.gold = wbidgold - squadprice
+                        self.wbid.squadlist.append(new_squad)
+                        self.currentunit = new_squad.henchmanlist[0]
+                        self.initUI()
+                    else:
+                        message = QMessageBox.information(self, "Can't add squad!", "Lack of funds!", QMessageBox.Ok)
                 else:
-                    print("can't add new hero, lack of funds")
+                    message = QMessageBox.information(self, "Can't add squad!", "Heroes can't be added to a squad!", QMessageBox.Ok)
 
     def create_new_wbitem(self):
 

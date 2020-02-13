@@ -108,38 +108,27 @@ class Warband(object):
 
         return wbid
     
-    def get_warbandprice(self):
+    def get_price(self):
         """ Temporary function, should be split in seperate functions to adjust gold baded on single events of buying equipment or getting loot"""
         
-        wblistprice = 0
+        wbinvprice = 0
         if self.itemlist:
             for item in self.itemlist:
-                itemprice = item.price
-                wblistprice += itemprice
+                wbinvprice += item.price
 
         herolistprice = 0
         if self.herolist:
             for hero in self.herolist:
-                heroprice = hero.price
-                for item in hero.itemlist:
-                    heroprice += item.price
-                herolistprice += heroprice
+                herolistprice += hero.get_price()
 
         squadlistprice = 0
         if self.squadlist:
             for squad in self.squadlist:
-                squadsize = squad.get_totalhenchman()
-                
-                henchmanprice = squad.henchmanlist[0].price # get price of a single henchman type
-                for item in squad.henchmanlist[0].itemlist:
-                    henchmanprice += item.price # get price of a single item of a henchman in this squad
+                squadlistprice += squad.get_price()
 
-                squadprice = henchmanprice * squadsize # multiply the price for a henchman and items with the number of henchman in the squad
-
-                squadlistprice += squadprice # increment total squad cost with this squads prices
-
-        price = wblistprice + herolistprice + squadlistprice
-        return price
+        wbprice = wbinvprice + herolistprice + squadlistprice
+        
+        return wbprice
 
 
 class Squad(object):
@@ -222,6 +211,14 @@ class Squad(object):
         henchmanlist = self.henchmanlist if self.henchmanlist else []
         return len(henchmanlist)
 
+    def get_price(self):
+
+        squadsize = self.get_totalhenchman()
+        henchmanprice = self.henchmanlist[0].get_price() # get price of a single character, including items
+
+        squadprice = henchmanprice * squadsize # multiply the price for a henchman, with the number of henchman in the squad
+
+        return squadprice
 
     def add_henchman(self):
         """adds another henchman character to the squad
@@ -381,6 +378,13 @@ class Character(object):
             )
         
         return newcharacter
+
+    def get_price(self):
+        charprice = self.price
+        for item in self.itemlist:
+            charprice += item.price
+
+        return charprice
 
 class Hero(Character):
     @staticmethod

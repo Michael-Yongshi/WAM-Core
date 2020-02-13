@@ -71,11 +71,11 @@ hero2 = Hero.create_character(
 
 # Adding items to heroes
 hero1.itemlist = [
-    Item.create_item(name = "Dagger", source = "Core Rules"),
+    Item.create_item(name = "Starting Dagger", source = "Core Rules"),
     Item.create_item(name = "Mage Staff", source = "Core Rules")
     ]
 hero2.itemlist = [
-    Item.create_item(name = "Dagger", source = "Core Rules"),
+    Item.create_item(name = "Starting Dagger", source = "Core Rules"),
     Item.create_item(name = "Sword", source = "Core Rules"),
     Item.create_item(name = "Light Armour", source = "Core Rules"),
     Item.create_item(name = "Shield", source = "Core Rules")
@@ -111,15 +111,15 @@ squad3 = Squad.create_squad(
     )
 
 # Adding items to the squads
-squad1.equip_squad(name = "Dagger", source = "Core Rules")
+squad1.equip_squad(name = "Starting Dagger", source = "Core Rules")
 squad1.equip_squad(name = "Spear", source = "Core Rules")
 squad1.equip_squad(name = "Long Bow", source = "Core Rules")
 
-squad2.equip_squad(name = "Dagger", source = "Core Rules")
+squad2.equip_squad(name = "Starting Dagger", source = "Core Rules")
 squad2.equip_squad(name = "Greatsword", source = "Core Rules")
 squad2.equip_squad(name = "Long Bow", source = "Core Rules")
 
-squad3.equip_squad(name = "Dagger", source = "Core Rules")
+squad3.equip_squad(name = "Starting Dagger", source = "Core Rules")
 squad3.equip_squad(name = "Long Bow", source = "Core Rules")
 
 # adding the squads to the squadlist
@@ -131,7 +131,7 @@ wbid.squadlist = [
 
 # Current gold minus cost of the warband
 startgold = 500
-wbid.treasury.gold = startgold - wbid.get_warbandprice()
+wbid.treasury.gold = startgold - wbid.get_price()
 print(wbid.treasury.gold)
 
 # create warband dictionary

@@ -366,13 +366,24 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
+        name = "Starting Dagger",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [],
+        magiclist = [],
+        price = 0,
+        description = "A basic dagger. Most units already carry one."
+        )
+    add_itemref(
+        source = "Core Rules",
+        category = "Melee Weapon",
         name = "Dagger",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [],
         magiclist = [],
         price = 2,
-        description = "A basic dagger."
+        description = "A extra dagger. For units that want to dual wield daggers."
         )
     add_itemref(
         source = "Core Rules",
@@ -393,7 +404,7 @@ if __name__ == "__main__":
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [{"name": "First Strike", "description":"Enables the wielder to always attack first, even when charged."}],
         magiclist = [],
-        price = 10,
+        price = 15,
         description = "A basic Spear."
         )
     add_itemref(

@@ -1,5 +1,27 @@
 {
     "Core Rules": {
+        "Starting Dagger": {
+            "category": "Melee Weapon",
+            "distance": 0,
+            "skill": [
+                {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                }
+            ],
+            "abilitylist": [],
+            "magiclist": [],
+            "price": 0,
+            "description": "A basic dagger. Most units already carry one."
+        },
         "Dagger": {
             "category": "Melee Weapon",
             "distance": 0,
@@ -20,7 +42,7 @@
             "abilitylist": [],
             "magiclist": [],
             "price": 2,
-            "description": "A basic dagger."
+            "description": "A extra dagger. For units that want to dual wield daggers."
         },
         "Sword": {
             "category": "Melee Weapon",
@@ -73,7 +95,7 @@
                 }
             ],
             "magiclist": [],
-            "price": 10,
+            "price": 15,
             "description": "A basic Spear."
         },
         "Greatsword": {

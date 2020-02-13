@@ -23,7 +23,7 @@
                 "abilitylist": [
                     {
                         "name": "Leader",
-                        "description": "Nearby units (6 inch) can use this characters leader skill"
+                        "description": "Nearby units (12 inch) can use this characters leader skill"
                     }
                 ],
                 "magiclist": [],
@@ -115,7 +115,7 @@
                 "race": "Human",
                 "source": "Reikland",
                 "category": "Warrior",
-                "ishero": true,
+                "ishero": false,
                 "skill": [
                     {
                         "movement": 4,
@@ -150,12 +150,12 @@
                 "race": "Human",
                 "source": "Reikland",
                 "category": "Marksman",
-                "ishero": true,
+                "ishero": false,
                 "skill": [
                     {
                         "movement": 4,
-                        "weapon": 4,
-                        "ballistic": 3,
+                        "weapon": 3,
+                        "ballistic": 4,
                         "strength": 3,
                         "toughness": 3,
                         "wounds": 1,
@@ -185,7 +185,451 @@
                 "race": "Human",
                 "source": "Reikland",
                 "category": "Swordsman",
+                "ishero": false,
+                "skill": [
+                    {
+                        "movement": 4,
+                        "weapon": 4,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    }
+                ],
+                "abilitylist": [
+                    {
+                        "name": "Expert Swordsmen",
+                        "description": "Swordsmen are so skilled with their weapons that they may re-roll any failed hits when charging. Note that this only applies when they are armed with normal swords, and not with doublehanded swords or any other weapons."
+                    }
+                ],
+                "magiclist": [],
+                "itemlist": [
+                    {
+                        "name": "Starting Dagger",
+                        "category": "Melee Weapon",
+                        "source": "Core Rules",
+                        "distance": 0,
+                        "description": "A basic dagger. Most units already carry one."
+                    }
+                ],
+                "experience": 0,
+                "price": 35,
+                "maxcount": 5,
+                "description": "Swordsmen are professional warriors, experts at taking on and beating several opponents at once. They are much sought after by warband leaders, as their skills are ideally suited for fighting in Mordheim."
+            }
+        },
+        "Middenheim": {
+            "Mercenary Captain": {
+                "race": "Human",
+                "source": "Middenheim",
+                "category": "Mercenary Captain",
                 "ishero": true,
+                "skill": [
+                    {
+                        "movement": 4,
+                        "weapon": 4,
+                        "ballistic": 4,
+                        "strength": 4,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 4,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    }
+                ],
+                "abilitylist": [
+                    {
+                        "name": "Leader",
+                        "description": "Nearby units (6 inch) can use this characters leader skill"
+                    }
+                ],
+                "magiclist": [],
+                "itemlist": [
+                    {
+                        "name": "Starting Dagger",
+                        "category": "Melee Weapon",
+                        "source": "Core Rules",
+                        "distance": 0,
+                        "description": "A basic dagger. Most units already carry one."
+                    }
+                ],
+                "experience": 20,
+                "price": 60,
+                "maxcount": 1,
+                "description": "A Mercenary Captain is a tough professional warrior, a man who will fight for anyone or against anything so long as the price is right. Mordheim offers such a man the chance to become rich beyond his dreams, though at great risk. But as ruthlessness and lack of mercy and pity are the hallmarks of a successful Mercenary Captain, it is no wonder that they flock to Mordheim."
+            },
+            "Champion": {
+                "race": "Human",
+                "source": "Middenheim",
+                "category": "Champion",
+                "ishero": true,
+                "skill": [
+                    {
+                        "movement": 4,
+                        "weapon": 4,
+                        "ballistic": 3,
+                        "strength": 4,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    }
+                ],
+                "abilitylist": [],
+                "magiclist": [],
+                "itemlist": [
+                    {
+                        "name": "Starting Dagger",
+                        "category": "Melee Weapon",
+                        "source": "Core Rules",
+                        "distance": 0,
+                        "description": "A basic dagger. Most units already carry one."
+                    }
+                ],
+                "experience": 8,
+                "price": 35,
+                "maxcount": 2,
+                "description": "In any Mercenary warband there is one warrior who is bigger, stronger (and often uglier) than his comrades. These men are called Champions (or berserkers, first swordsmen and various other names). Champions are amongst the toughest and the best fighters in the warband. They often answer challenges issued to the warband and, after the Captain, they get the pick of any equipment and loot."
+            },
+            "Youngblood": {
+                "race": "Human",
+                "source": "Middenheim",
+                "category": "Youngblood",
+                "ishero": true,
+                "skill": [
+                    {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 6,
+                        "armoursave": 0
+                    }
+                ],
+                "abilitylist": [],
+                "magiclist": [],
+                "itemlist": [
+                    {
+                        "name": "Starting Dagger",
+                        "category": "Melee Weapon",
+                        "source": "Core Rules",
+                        "distance": 0,
+                        "description": "A basic dagger. Most units already carry one."
+                    }
+                ],
+                "experience": 0,
+                "price": 15,
+                "maxcount": 2,
+                "description": "These are young fighters who are still inexperienced, but eager to win their spurs in the savage fighting in and around the ruins of Mordheim."
+            },
+            "Warrior": {
+                "race": "Human",
+                "source": "Middenheim",
+                "category": "Warrior",
+                "ishero": false,
+                "skill": [
+                    {
+                        "movement": 4,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    }
+                ],
+                "abilitylist": [],
+                "magiclist": [],
+                "itemlist": [
+                    {
+                        "name": "Starting Dagger",
+                        "category": "Melee Weapon",
+                        "source": "Core Rules",
+                        "distance": 0,
+                        "description": "A basic dagger. Most units already carry one."
+                    }
+                ],
+                "experience": 0,
+                "price": 25,
+                "maxcount": 0,
+                "description": "These dogs of war are grim, seasoned fighters, fearing no man as long as they have their weapons and armour. They form the core of any Mercenary warband."
+            },
+            "Marksman": {
+                "race": "Human",
+                "source": "Middenheim",
+                "category": "Marksman",
+                "ishero": false,
+                "skill": [
+                    {
+                        "movement": 4,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    }
+                ],
+                "abilitylist": [],
+                "magiclist": [],
+                "itemlist": [
+                    {
+                        "name": "Starting Dagger",
+                        "category": "Melee Weapon",
+                        "source": "Core Rules",
+                        "distance": 0,
+                        "description": "A basic dagger. Most units already carry one."
+                    }
+                ],
+                "experience": 0,
+                "price": 25,
+                "maxcount": 7,
+                "description": "The archers and hunters of the Old World are famed for their skill, and it is said that they can hit a coin from 300 paces with a long bow. In the savage street fights of Mordheim they snipe at the enemy from the windows of ruined buildings and pick out enemy leaders with their arrows."
+            },
+            "Swordsman": {
+                "race": "Human",
+                "source": "Middenheim",
+                "category": "Swordsman",
+                "ishero": false,
+                "skill": [
+                    {
+                        "movement": 4,
+                        "weapon": 4,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    }
+                ],
+                "abilitylist": [
+                    {
+                        "name": "Expert Swordsmen",
+                        "description": "Swordsmen are so skilled with their weapons that they may re-roll any failed hits when charging. Note that this only applies when they are armed with normal swords, and not with doublehanded swords or any other weapons."
+                    }
+                ],
+                "magiclist": [],
+                "itemlist": [
+                    {
+                        "name": "Starting Dagger",
+                        "category": "Melee Weapon",
+                        "source": "Core Rules",
+                        "distance": 0,
+                        "description": "A basic dagger. Most units already carry one."
+                    }
+                ],
+                "experience": 0,
+                "price": 35,
+                "maxcount": 5,
+                "description": "Swordsmen are professional warriors, experts at taking on and beating several opponents at once. They are much sought after by warband leaders, as their skills are ideally suited for fighting in Mordheim."
+            }
+        },
+        "Marienburg": {
+            "Mercenary Captain": {
+                "race": "Human",
+                "source": "Marienburg",
+                "category": "Mercenary Captain",
+                "ishero": true,
+                "skill": [
+                    {
+                        "movement": 4,
+                        "weapon": 4,
+                        "ballistic": 4,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 4,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    }
+                ],
+                "abilitylist": [
+                    {
+                        "name": "Leader",
+                        "description": "Nearby units (6 inch) can use this characters leader skill"
+                    }
+                ],
+                "magiclist": [],
+                "itemlist": [
+                    {
+                        "name": "Starting Dagger",
+                        "category": "Melee Weapon",
+                        "source": "Core Rules",
+                        "distance": 0,
+                        "description": "A basic dagger. Most units already carry one."
+                    }
+                ],
+                "experience": 20,
+                "price": 60,
+                "maxcount": 1,
+                "description": "A Mercenary Captain is a tough professional warrior, a man who will fight for anyone or against anything so long as the price is right. Mordheim offers such a man the chance to become rich beyond his dreams, though at great risk. But as ruthlessness and lack of mercy and pity are the hallmarks of a successful Mercenary Captain, it is no wonder that they flock to Mordheim."
+            },
+            "Champion": {
+                "race": "Human",
+                "source": "Marienburg",
+                "category": "Champion",
+                "ishero": true,
+                "skill": [
+                    {
+                        "movement": 4,
+                        "weapon": 4,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    }
+                ],
+                "abilitylist": [],
+                "magiclist": [],
+                "itemlist": [
+                    {
+                        "name": "Starting Dagger",
+                        "category": "Melee Weapon",
+                        "source": "Core Rules",
+                        "distance": 0,
+                        "description": "A basic dagger. Most units already carry one."
+                    }
+                ],
+                "experience": 8,
+                "price": 35,
+                "maxcount": 2,
+                "description": "In any Mercenary warband there is one warrior who is bigger, stronger (and often uglier) than his comrades. These men are called Champions (or berserkers, first swordsmen and various other names). Champions are amongst the toughest and the best fighters in the warband. They often answer challenges issued to the warband and, after the Captain, they get the pick of any equipment and loot."
+            },
+            "Youngblood": {
+                "race": "Human",
+                "source": "Marienburg",
+                "category": "Youngblood",
+                "ishero": true,
+                "skill": [
+                    {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 6,
+                        "armoursave": 0
+                    }
+                ],
+                "abilitylist": [],
+                "magiclist": [],
+                "itemlist": [
+                    {
+                        "name": "Starting Dagger",
+                        "category": "Melee Weapon",
+                        "source": "Core Rules",
+                        "distance": 0,
+                        "description": "A basic dagger. Most units already carry one."
+                    }
+                ],
+                "experience": 0,
+                "price": 15,
+                "maxcount": 2,
+                "description": "These are young fighters who are still inexperienced, but eager to win their spurs in the savage fighting in and around the ruins of Mordheim."
+            },
+            "Warrior": {
+                "race": "Human",
+                "source": "Marienburg",
+                "category": "Warrior",
+                "ishero": false,
+                "skill": [
+                    {
+                        "movement": 4,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    }
+                ],
+                "abilitylist": [],
+                "magiclist": [],
+                "itemlist": [
+                    {
+                        "name": "Starting Dagger",
+                        "category": "Melee Weapon",
+                        "source": "Core Rules",
+                        "distance": 0,
+                        "description": "A basic dagger. Most units already carry one."
+                    }
+                ],
+                "experience": 0,
+                "price": 25,
+                "maxcount": 0,
+                "description": "These dogs of war are grim, seasoned fighters, fearing no man as long as they have their weapons and armour. They form the core of any Mercenary warband."
+            },
+            "Marksman": {
+                "race": "Human",
+                "source": "Marienburg",
+                "category": "Marksman",
+                "ishero": false,
+                "skill": [
+                    {
+                        "movement": 4,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    }
+                ],
+                "abilitylist": [],
+                "magiclist": [],
+                "itemlist": [
+                    {
+                        "name": "Starting Dagger",
+                        "category": "Melee Weapon",
+                        "source": "Core Rules",
+                        "distance": 0,
+                        "description": "A basic dagger. Most units already carry one."
+                    }
+                ],
+                "experience": 0,
+                "price": 25,
+                "maxcount": 7,
+                "description": "The archers and hunters of the Old World are famed for their skill, and it is said that they can hit a coin from 300 paces with a long bow. In the savage street fights of Mordheim they snipe at the enemy from the windows of ruined buildings and pick out enemy leaders with their arrows."
+            },
+            "Swordsman": {
+                "race": "Human",
+                "source": "Marienburg",
+                "category": "Swordsman",
+                "ishero": false,
                 "skill": [
                     {
                         "movement": 4,

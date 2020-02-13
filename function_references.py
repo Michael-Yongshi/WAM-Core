@@ -261,8 +261,6 @@ def get_magicref(source, category, name):
     return magicdict
 
 
-
-
 if __name__ == "__main__":
     create_characterref()
     # Add Reikland warband
@@ -273,7 +271,7 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 4, 4, 3, 3, 1, 4, 1, 8, 0],
         abilitylist = [
-            {"name": "Leader", "description":"Nearby units (6 inch) can use this characters leader skill"},
+            {"name": "Leader", "description":"Nearby units (12 inch) can use this characters leader skill"},
         ],
         magiclist = [],
         itemlist = [
@@ -337,7 +335,7 @@ if __name__ == "__main__":
         source = "Reikland",
         category = "Marksman",
         ishero = False,
-        skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
+        skill = [4, 3, 4, 3, 3, 1, 3, 1, 7, 0],
         abilitylist = [],
         magiclist = [],
         itemlist = [
@@ -366,6 +364,211 @@ if __name__ == "__main__":
         maxcount = 5,
         description = "Swordsmen are professional warriors, experts at taking on and beating several opponents at once. They are much sought after by warband leaders, as their skills are ideally suited for fighting in Mordheim."
         )
+
+    # Add Middenheim warband
+    add_characterref(
+        race = "Human",
+        source = "Middenheim",
+        category = "Mercenary Captain",
+        ishero = True,
+        skill = [4, 4, 4, 4, 3, 1, 4, 1, 8, 0],
+        abilitylist = [
+            {"name": "Leader", "description":"Nearby units (6 inch) can use this characters leader skill"},
+        ],
+        magiclist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
+        experience = 20,
+        price = 60,
+        maxcount = 1,
+        description = "A Mercenary Captain is a tough professional warrior, a man who will fight for anyone or against anything so long as the price is right. Mordheim offers such a man the chance to become rich beyond his dreams, though at great risk. But as ruthlessness and lack of mercy and pity are the hallmarks of a successful Mercenary Captain, it is no wonder that they flock to Mordheim."
+        )
+    add_characterref(
+        race = "Human",
+        source = "Middenheim",
+        category = "Champion",
+        ishero = True,
+        skill = [4, 4, 3, 4, 3, 1, 3, 1, 7, 0],
+        abilitylist = [],
+        magiclist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
+        experience = 8,
+        price = 35,
+        maxcount = 2,
+        description = "In any Mercenary warband there is one warrior who is bigger, stronger (and often uglier) than his comrades. These men are called Champions (or berserkers, first swordsmen and various other names). Champions are amongst the toughest and the best fighters in the warband. They often answer challenges issued to the warband and, after the Captain, they get the pick of any equipment and loot."
+        )
+    add_characterref(
+        race = "Human",
+        source = "Middenheim",
+        category = "Youngblood",
+        ishero = True,
+        skill = [4, 2, 2, 3, 3, 1, 3, 1, 6, 0],
+        abilitylist = [],
+        magiclist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
+        experience = 0,
+        price = 15,
+        maxcount = 2,
+        description = "These are young fighters who are still inexperienced, but eager to win their spurs in the savage fighting in and around the ruins of Mordheim."
+        )
+    add_characterref(
+        race = "Human",
+        source = "Middenheim",
+        category = "Warrior",
+        ishero = False,
+        skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
+        abilitylist = [],
+        magiclist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
+        experience = 0,
+        price = 25,
+        maxcount = 0,
+        description = "These dogs of war are grim, seasoned fighters, fearing no man as long as they have their weapons and armour. They form the core of any Mercenary warband."
+        )
+    add_characterref(
+        race = "Human",
+        source = "Middenheim",
+        category = "Marksman",
+        ishero = False,
+        skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
+        abilitylist = [],
+        magiclist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
+        experience = 0,
+        price = 25,
+        maxcount = 7,
+        description = "The archers and hunters of the Old World are famed for their skill, and it is said that they can hit a coin from 300 paces with a long bow. In the savage street fights of Mordheim they snipe at the enemy from the windows of ruined buildings and pick out enemy leaders with their arrows."
+        )
+    add_characterref(
+        race = "Human",
+        source = "Middenheim",
+        category = "Swordsman",
+        ishero = False,
+        skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
+        abilitylist = [
+            {"name": "Expert Swordsmen", "description":"Swordsmen are so skilled with their weapons that they may re-roll any failed hits when charging. Note that this only applies when they are armed with normal swords, and not with doublehanded swords or any other weapons."},
+            ],
+        magiclist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
+        experience = 0,
+        price = 35,
+        maxcount = 5,
+        description = "Swordsmen are professional warriors, experts at taking on and beating several opponents at once. They are much sought after by warband leaders, as their skills are ideally suited for fighting in Mordheim."
+        )
+
+    # Add Marienburg warband
+    add_characterref(
+        race = "Human",
+        source = "Marienburg",
+        category = "Mercenary Captain",
+        ishero = True,
+        skill = [4, 4, 4, 3, 3, 1, 4, 1, 8, 0],
+        abilitylist = [
+            {"name": "Leader", "description":"Nearby units (6 inch) can use this characters leader skill"},
+        ],
+        magiclist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
+        experience = 20,
+        price = 60,
+        maxcount = 1,
+        description = "A Mercenary Captain is a tough professional warrior, a man who will fight for anyone or against anything so long as the price is right. Mordheim offers such a man the chance to become rich beyond his dreams, though at great risk. But as ruthlessness and lack of mercy and pity are the hallmarks of a successful Mercenary Captain, it is no wonder that they flock to Mordheim."
+        )
+    add_characterref(
+        race = "Human",
+        source = "Marienburg",
+        category = "Champion",
+        ishero = True,
+        skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
+        abilitylist = [],
+        magiclist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
+        experience = 8,
+        price = 35,
+        maxcount = 2,
+        description = "In any Mercenary warband there is one warrior who is bigger, stronger (and often uglier) than his comrades. These men are called Champions (or berserkers, first swordsmen and various other names). Champions are amongst the toughest and the best fighters in the warband. They often answer challenges issued to the warband and, after the Captain, they get the pick of any equipment and loot."
+        )
+    add_characterref(
+        race = "Human",
+        source = "Marienburg",
+        category = "Youngblood",
+        ishero = True,
+        skill = [4, 2, 2, 3, 3, 1, 3, 1, 6, 0],
+        abilitylist = [],
+        magiclist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
+        experience = 0,
+        price = 15,
+        maxcount = 2,
+        description = "These are young fighters who are still inexperienced, but eager to win their spurs in the savage fighting in and around the ruins of Mordheim."
+        )
+    add_characterref(
+        race = "Human",
+        source = "Marienburg",
+        category = "Warrior",
+        ishero = False,
+        skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
+        abilitylist = [],
+        magiclist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
+        experience = 0,
+        price = 25,
+        maxcount = 0,
+        description = "These dogs of war are grim, seasoned fighters, fearing no man as long as they have their weapons and armour. They form the core of any Mercenary warband."
+        )
+    add_characterref(
+        race = "Human",
+        source = "Marienburg",
+        category = "Marksman",
+        ishero = False,
+        skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
+        abilitylist = [],
+        magiclist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
+        experience = 0,
+        price = 25,
+        maxcount = 7,
+        description = "The archers and hunters of the Old World are famed for their skill, and it is said that they can hit a coin from 300 paces with a long bow. In the savage street fights of Mordheim they snipe at the enemy from the windows of ruined buildings and pick out enemy leaders with their arrows."
+        )
+    add_characterref(
+        race = "Human",
+        source = "Marienburg",
+        category = "Swordsman",
+        ishero = False,
+        skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
+        abilitylist = [
+            {"name": "Expert Swordsmen", "description":"Swordsmen are so skilled with their weapons that they may re-roll any failed hits when charging. Note that this only applies when they are armed with normal swords, and not with doublehanded swords or any other weapons."},
+            ],
+        magiclist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
+        experience = 0,
+        price = 35,
+        maxcount = 5,
+        description = "Swordsmen are professional warriors, experts at taking on and beating several opponents at once. They are much sought after by warband leaders, as their skills are ideally suited for fighting in Mordheim."
+        )
+
     # High Elves warband from the other website
     add_characterref(
         race = "High Elf",
@@ -459,7 +662,9 @@ if __name__ == "__main__":
         category = "Khaine",
         ishero = True,
         skill = [6, 6, 6, 6, 6, 6, 6, 6, 6, 6],
-        abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range."}, {"name": "Fear", "description": "Spreads fear in nearby enemies."}],
+        abilitylist = [
+            {"name": "Excellent Sight", "description":"Spot hidden objects at double the range."}, {"name": "Fear", "description": "Spreads fear in nearby enemies."},
+            ],
         magiclist = [],
         itemlist = [
             {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
@@ -482,18 +687,22 @@ if __name__ == "__main__":
         name = "Starting Dagger",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        abilitylist = [],
+        abilitylist = [
+            {"name": "Enemy Armor Save", "description": "These weapons are not the best weapons to use for penetrating an enemy model’s armor. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."},
+            ],
         magiclist = [],
         price = 0,
-        description = "A basic dagger. Most units already carry one."
+        description = "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
         )
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
-        name = "Dagger",
+        name = "Extra Dagger",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        abilitylist = [],
+        abilitylist = [
+            {"name": "Enemy Armor Save", "description": "These weapons are not the best weapons to use for penetrating an enemy model’s armor. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."},
+            ],
         magiclist = [],
         price = 2,
         description = "A extra dagger. For units that want to dual wield daggers."
@@ -501,13 +710,57 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
+        name = "Club",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [{"name": "Concussion", "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model’s injuries."}],
+        magiclist = [],
+        price = 3,
+        description = "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious."
+        )
+    add_itemref(
+        source = "Core Rules",
+        category = "Melee Weapon",
+        name = "Mace",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [{"name": "Concussion", "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model’s injuries."}],
+        magiclist = [],
+        price = 3,
+        description = "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious."
+        )
+    add_itemref(
+        source = "Core Rules",
+        category = "Melee Weapon",
+        name = "Hammer",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [{"name": "Cutting Edge", "description": "An axe has an extra save modifier of -1, so a model with Strength 4 using an axe has a -2 save modifier when he hits an opponent in hand-to-hand combat."}],
+        magiclist = [],
+        price = 3,
+        description = "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious."
+        )
+    add_itemref(
+        source = "Core Rules",
+        category = "Melee Weapon",
+        name = "Axe",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [{"name": "Concussion", "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model’s injuries."}],
+        magiclist = [],
+        price = 5,
+        description = "The axe is the traditional weapon of Empire woodsmen, and is also used as a weapon in poorer rural areas. Axes have a heavy blade and, if swung by a strong man, can cause a lot of damage. The blade of an axe can easily cut through armor, though it requires considerable strength from the wielder. Of all the warriors in the Old World, Dwarfs are the most adept at making axes. Their axes are invaluable to the warriors of the Old World and are some of the most sought after weapons."
+        )
+    add_itemref(
+        source = "Core Rules",
+        category = "Melee Weapon",
         name = "Sword",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        abilitylist = [{"name": "Parry", "description": "Enables a single parry of an attackers hit. Parries when dicethrow is greater than attackers throw."}],
+        abilitylist = [{"name": "Parry", "description": "Swords offer an excellent balance of defense and offence. A model armed with a sword may parry blows. When his opponent rolls to hit, the model armed with a sword may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength – they are simply too powerful to be stopped."}],
         magiclist = [],
         price = 10,
-        description = "A basic Sword."
+        description = "The sword is often referred to as the ‘king of weapons’. The most common sword available, the broadsword of the Empire, is a masterpiece by the standards of any smith: four full feet of gleaming steel, double-edged and razor-sharp. Swords are much more effective weapons than crude clubs and axes, though learning to use a sword is a long and difficult process. It takes years to truly master this weapon – most warriors in Mordheim die long before they get this far!"
         )
     add_itemref(
         source = "Core Rules",
@@ -515,21 +768,81 @@ if __name__ == "__main__":
         name = "Spear",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        abilitylist = [{"name": "First Strike", "description":"Enables the wielder to always attack first, even when charged."}],
+        abilitylist = [
+            {"name": "First Strike", "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat."},
+            {"name": "Unwieldy", "description": "A warrior with a spear may only use a shield or a buckler in his other hand. He may not use a second weapon."},
+            {"name": "Cavalry Bonus", "description": "If using the rules for mounted models, a mounted warrior armed with a spear receives a +1 Strength bonus when he charges. This bonus only applies for that turn."},
+        ],
         magiclist = [],
-        price = 15,
-        description = "A basic Spear."
+        price = 10,
+        description = "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
         )
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
-        name = "Greatsword",
+        name = "Halberd",
+        distance = 0,
+        skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+        abilitylist = [{"name": "Two Handed", "description":"A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."}],
+        magiclist = [],
+        price = 10,
+        description = "The halberd’s heavy blade is mounted upon a sturdy shaft of oak or steel and has a point like a spear and a cutting edge like an axe. Since it can be used to chop as well as thrust, it is an adaptable weapon, but is difficult to use inside buildings."
+        )
+    add_itemref(
+        source = "Core Rules",
+        category = "Melee Weapon",
+        name = "Great Sword",
         distance = 0,
         skill = [0, 0, 0, 2, 0, 0, 0, 0, 0, 0],
-        abilitylist = [{"name": "Last Strike", "description": "Disables the wielder to attack first, even when charging."}],
+        abilitylist = [
+            {"name": "Two Handed", "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."},
+            {"name": "Last Strike", "description": "These Double-handed weapons are so heavy that the model using them always strikes last, even when charging."},
+            ],
         magiclist = [],
         price = 15,
-        description = "A very large sword that strikes slow but powerfull."
+        description = "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively."
+        )
+    add_itemref(
+        source = "Core Rules",
+        category = "Melee Weapon",
+        name = "Great Axe",
+        distance = 0,
+        skill = [0, 0, 0, 2, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Two Handed", "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."},
+            {"name": "Last Strike", "description": "These Double-handed weapons are so heavy that the model using them always strikes last, even when charging."},
+            ],
+        magiclist = [],
+        price = 15,
+        description = "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively."
+        )
+    add_itemref(
+        source = "Core Rules",
+        category = "Melee Weapon",
+        name = "Flail",
+        distance = 0,
+        skill = [0, 0, 0, 2, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Two Handed", "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."},
+            {"name": "Heavy", "description": "A flail is extremely tiring to use and thus the +2 Strength bonus applies only in the first turn of each hand-to-hand combat."},
+            ],
+        magiclist = [],
+        price = 15,
+        description = "The flail is a heavy weapon wielded with both hands. It normally consists of heavy weights, often spiked, attached to a pole or handle by means of heavy chains. Flails drain the user’s stamina quickly, but are awesomely destructive in the hands of a skilled (or unhinged) warrior."
+        )
+    add_itemref(
+        source = "Core Rules",
+        category = "Melee Weapon",
+        name = "Morning Star",
+        distance = 0,
+        skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Difficult to Use", "description": "A model with a morning star may not use a second weapon or buckler in his other hand because it requires all his skill to wield it. He may carry a shield as normal though."},
+            {"name": "Heavy", "description": "A flail is extremely tiring to use and thus the +1 Strength bonus applies only in the first turn of each hand-to-hand combat."},
+            ],
+        magiclist = [],
+        price = 15,
+        description = "The flail is a heavy weapon wielded with both hands. It normally consists of heavy weights, often spiked, attached to a pole or handle by means of heavy chains. Flails drain the user’s stamina quickly, but are awesomely destructive in the hands of a skilled (or unhinged) warrior."
         )
     add_itemref(
         source = "Core Rules",
@@ -584,7 +897,7 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Concussion", "description": "Stunned happens also on a trow of 2 at the injury roll."}
+            {"name": "Concussion", "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model’s injuries."}
             ],
         magiclist = [],
         price = 20,

@@ -198,7 +198,9 @@ class WarbandOverview(QMainWindow):
         btncreate.clicked.connect(self.create_warband)
         
         btnsave = QPushButton('Save Warband', self)
+        btnsave.setShortcut("Ctrl+S")
         btnsave.setToolTip('Save current <b>Warband</b>')
+
         btnsave.clicked.connect(self.save_warband)
 
         btnquit = QPushButton('Quit', self)

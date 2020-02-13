@@ -39,12 +39,12 @@ from PyQt5.QtGui import (
     QPalette,
     )
 
-from database.json import (
+from source.json import (
     open_json,
     save_json,
     )
 
-from generic_methods import (
+from source.generic_methods import (
     save_warband,
     load_warband,
     cache_warband,
@@ -52,17 +52,21 @@ from generic_methods import (
     get_current_warband,
     )
 
-from class_hierarchy import (
+from source.classes.class_hierarchy import (
     Warband,
     Squad,
     Character,
     Hero,
+    Henchman,
     )
 
-from class_components import (
+from source.classes.class_hierarchy import (
+    Rule,
+    Treasury,
     Item,
     Skill,
-    Treasury,
+    Ability,
+    Magic,
     )
 
 class QBorderedWidget(QWidget):

@@ -1,11 +1,11 @@
 import os
 
-from database.json import (
+from source.json import (
     open_json,
     save_json,
     )
 
-from class_hierarchy import (
+from source.classes.class_hierarchy import (
     Warband,
     Squad,
     Character,
@@ -13,7 +13,7 @@ from class_hierarchy import (
     Henchman,
     )
 
-from class_components import (
+from source.classes.class_hierarchy import (
     Rule,
     Treasury,
     Item,

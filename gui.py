@@ -345,7 +345,12 @@ class WarbandOverview(QMainWindow):
             
             numlabel = QLabel()
             numlabel.setText(str(squad.get_totalhenchman()))
-            squadgrid.addWidget(numlabel, 0, 0, 1, 1)
+            numbox = QVBoxLayout()
+            numbox.addWidget(numlabel)
+            numwidget = QInteractiveWidget()
+            numwidget.setLayout(numbox)
+            numwidget.clicked.connect(self.create_method_squad_number(squad))
+            squadgrid.addWidget(numwidget, 0, 0, 1, 1)
 
             namelabel = QLabel()
             if squad.henchmanlist[0] == self.currentunit:
@@ -514,6 +519,28 @@ class WarbandOverview(QMainWindow):
                 self.initUI()
 
         return focus_unit
+
+    def create_method_squad_number(self, squad):          
+        """This method is used in order to create a new method that holds a reference to a passed attribute,
+        this is used when a widget needs to be clickable but the signal needs to carry information other than the signal itself.
+        This one specifically gets a current item and then creates a window based on the attribute"""
+        def change_squad_number():
+         
+            if squad.henchmanlist[0] == self.currentunit:
+                self.currentunit = self.create_template_char()
+                currentsize = squad.get_totalhenchman()
+
+                newsize, okPressed = QInputDialog.getInt(self, 'Squad members', f"Change squad size to:", currentsize, 0, 6, 1)
+                if okPressed:
+                    if newsize != 0:
+                        deltasize = newsize - currentsize
+                        squad.change_henchman_count(deltasize)
+                        # ask if the decrease is due to disbanding or attrition, first returns money of unit + items, second doesnt.
+                        self.initUI()
+                    else:
+                        print("Can't remove the last member, please disband the whole squad")
+
+        return change_squad_number
 
     def create_method_item(self, item):          
         """This method is used in order to create a new method that holds a reference to a passed attribute,

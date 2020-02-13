@@ -1,3 +1,5 @@
+import copy
+
 from database.json import open_json
 
 from class_components import (
@@ -191,8 +193,20 @@ class Squad(object):
                 category = category,  
                 )
             newsquad.henchmanlist.append(newhenchman)
-        
+                
         return newsquad
+
+    def change_henchman_count(self, deltasize):
+        if deltasize > 0:
+            
+            for _ in range(0, deltasize):
+                newhenchman = copy.deepcopy(self.henchmanlist[0])
+                self.henchmanlist.append(newhenchman)
+
+        if deltasize < 0:
+
+            for _ in range(0, 0 - deltasize):
+                self.henchmanlist.pop(-1)
 
     def equip_squad(self, name, source):
         """Basically runs a create item method for every henchman in this squad"""

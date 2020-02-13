@@ -265,6 +265,96 @@ def get_magicref(source, category, name):
 
 if __name__ == "__main__":
     create_characterref()
+    # Add Reikland warband
+    add_characterref(
+        race = "Human",
+        source = "Reikland",
+        category = "Mercenary Captain",
+        ishero = True,
+        skill = [4, 4, 4, 3, 3, 1, 4, 1, 8, 0],
+        abilitylist = [
+            {"name": "Leader", "description":"Nearby units (6 inch) can use this characters leader skill"},
+        ],
+        magiclist = [],
+        itemlist = [],
+        experience = 20,
+        price = 60,
+        maxcount = 1,
+        description = "A Mercenary Captain is a tough professional warrior, a man who will fight for anyone or against anything so long as the price is right. Mordheim offers such a man the chance to become rich beyond his dreams, though at great risk. But as ruthlessness and lack of mercy and pity are the hallmarks of a successful Mercenary Captain, it is no wonder that they flock to Mordheim."
+        )
+    add_characterref(
+        race = "Human",
+        source = "Reikland",
+        category = "Champion",
+        ishero = True,
+        skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
+        abilitylist = [],
+        magiclist = [],
+        itemlist = [],
+        experience = 8,
+        price = 35,
+        maxcount = 2,
+        description = "In any Mercenary warband there is one warrior who is bigger, stronger (and often uglier) than his comrades. These men are called Champions (or berserkers, first swordsmen and various other names). Champions are amongst the toughest and the best fighters in the warband. They often answer challenges issued to the warband and, after the Captain, they get the pick of any equipment and loot."
+        )
+    add_characterref(
+        race = "Human",
+        source = "Reikland",
+        category = "Youngblood",
+        ishero = True,
+        skill = [4, 2, 2, 3, 3, 1, 3, 1, 6, 0],
+        abilitylist = [],
+        magiclist = [],
+        itemlist = [],
+        experience = 0,
+        price = 15,
+        maxcount = 2,
+        description = "These are young fighters who are still inexperienced, but eager to win their spurs in the savage fighting in and around the ruins of Mordheim."
+        )
+    add_characterref(
+        race = "Human",
+        source = "Reikland",
+        category = "Warrior",
+        ishero = True,
+        skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
+        abilitylist = [],
+        magiclist = [],
+        itemlist = [],
+        experience = 0,
+        price = 25,
+        maxcount = 0,
+        description = "These dogs of war are grim, seasoned fighters, fearing no man as long as they have their weapons and armour. They form the core of any Mercenary warband."
+        )
+    add_characterref(
+        race = "Human",
+        source = "Reikland",
+        category = "Marksman",
+        ishero = True,
+        skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
+        abilitylist = [],
+        magiclist = [],
+        itemlist = [],
+        experience = 0,
+        price = 25,
+        maxcount = 7,
+        description = "The archers and hunters of the Old World are famed for their skill, and it is said that they can hit a coin from 300 paces with a long bow. In the savage street fights of Mordheim they snipe at the enemy from the windows of ruined buildings and pick out enemy leaders with their arrows."
+        )
+    add_characterref(
+        race = "Human",
+        source = "Reikland",
+        category = "Swordsman",
+        ishero = True,
+        skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
+        abilitylist = [
+            {"name": "Expert Swordsmen", "description":"Swordsmen are so skilled with their weapons that they may re-roll any failed hits when charging. Note that this only applies when they are armed with normal swords, and not with doublehanded swords or any other weapons."},
+            ],
+        magiclist = [],
+        itemlist = [],
+        experience = 0,
+        price = 35,
+        maxcount = 5,
+        description = "Swordsmen are professional warriors, experts at taking on and beating several opponents at once. They are much sought after by warband leaders, as their skills are ideally suited for fighting in Mordheim."
+        )
+    # High Elves warband from the other website
     add_characterref(
         race = "High Elf",
         source = "High Elves",

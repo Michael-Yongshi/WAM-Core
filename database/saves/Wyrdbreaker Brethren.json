@@ -49,28 +49,6 @@
             },
             "itemlist": {
                 "Item1": {
-                    "name": "Starting Dagger",
-                    "source": "Core Rules",
-                    "category": "Melee Weapon",
-                    "distance": 0,
-                    "skill": {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    },
-                    "abilitylist": {},
-                    "magiclist": {},
-                    "price": 0,
-                    "description": "A basic dagger. Most units already carry one."
-                },
-                "Item2": {
                     "name": "Wyrdbreaker",
                     "source": "Core Rules",
                     "category": "Other",
@@ -91,6 +69,33 @@
                     "magiclist": {},
                     "price": 0,
                     "description": "test"
+                },
+                "Item2": {
+                    "name": "Starting Dagger",
+                    "source": "Core Rules",
+                    "category": "Melee Weapon",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": {
+                        "Ability1": {
+                            "name": "Enemy Armor Save",
+                            "description": "These weapons are not the best weapons to use for penetrating an enemy model\u2019s armor. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                        }
+                    },
+                    "magiclist": {},
+                    "price": 0,
+                    "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
                 },
                 "Item3": {
                     "name": "Mage Staff (Two Handed)",

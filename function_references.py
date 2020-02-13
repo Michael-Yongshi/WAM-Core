@@ -848,12 +848,12 @@ if __name__ == "__main__":
         source = "Core Rules",
         category = "Missile Weapon",
         name = "Bow",
-        distance = 16,
+        distance = 24,
         skill = [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
         abilitylist = [],
         magiclist = [],
         price = 10,
-        description = "A basic bow."
+        description = "The bow is carried by most races and used extensively in warfare. It is a compact yet powerful weapon, that is cheap to make and easy to maintain."
     )  
     add_itemref(
         source = "Core Rules",
@@ -862,6 +862,19 @@ if __name__ == "__main__":
         distance = 30,
         skill = [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
         abilitylist = [],
+        magiclist = [],
+        price = 15,
+        description = "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Missile Weapon",
+        name = "Elf Bow",
+        distance = 36,
+        skill = [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Armour Piercing", "description": "An Elf bow has a -1 save modifier on armor saves against it"},
+        ],
         magiclist = [],
         price = 15,
         description = "A Long bow."
@@ -875,7 +888,55 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         price = 20,
-        description = "Some lightweighted armour."
+        description = "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Armour & Protection",
+        name = "Heavy Armour",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 2],
+        abilitylist = [
+            {"name": "Encumbered", "description": "A warrior that is armed with both heavy armor and a shield suffers a -1 Movement penalty."},
+        ],
+        magiclist = [],
+        price = 50,
+        description = "Typical heavy armor is made from metal links and is called chain mail. Forging chain mail is a laborious and time consuming process, as the blacksmith must put together hundreds, sometimes thousands, of metal links. This makes chain mail expensive, but this type of armor provides excellent protection for anyone who can afford it. There are other types of heavy armor as well, of which the best known are the steel breastplates and greaves worn by the foot knights of the Templar orders."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Armour & Protection",
+        name = "Ithilmar Armour",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 2],
+        abilitylist = [],
+        magiclist = [],
+        price = 90,
+        description = "Ithilmar is a silvery metal which is as light as silk and stronger than steel. Elves are experts at fashioning weapons and armor from Ithilmar, and the Elven kingdom of Caledor is the only place in the world where this metal can be found. Ithilmar armor gives the wearer a 5+ basic save, and does not slow him down if he is also armed with a shield."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Armour & Protection",
+        name = "Helmet",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Hardhead", "description": "A model that is equipped with a helmet has a special 4+ save on a D6 against being stunned. If the save is made, treat the stunned result as knocked down instead. This save is not modified by the opponent’s Strength."},
+        ],
+        magiclist = [],
+        price = 10,
+        description = "From the shining steel helmets of Bretonnian knights to the leather caps of the Skaven, all sensible warriors try to protect the most vulnerable part of their body – their head. Even the most vain fighters still use a helmet, as it can be festooned with plumes, horns and other decorations. Helmets come in varying shapes and sizes, but their basic function remains the same."
+    )    
+    add_itemref(
+        source = "Core Rules",
+        category = "Armour & Protection",
+        name = "Buckler",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [{"name": "Parry", "description": "Swords offer an excellent balance of defense and offence. A model armed with a sword may parry blows. When his opponent rolls to hit, the model armed with a sword may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength – they are simply too powerful to be stopped."}],
+        magiclist = [],
+        price = 5,
+        description = "Bucklers are small, round shields designed for parrying or deflecting blows. They are usually made of steel for they need to be tremendously durable to survive the brutal blows of hand-to-hand combat. Using a buckler requires great skill, but a nimble warrior can protect himself from blows which would otherwise cripple him."
     )
     add_itemref(
         source = "Core Rules",
@@ -885,10 +946,99 @@ if __name__ == "__main__":
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
         abilitylist = [],
         magiclist = [],
-        price = 20,
-        description = "A basic shield."
+        price = 5,
+        description = "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user’s life as his enemy’s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner."
     )
-     
+    add_itemref(
+        source = "Core Rules",
+        category = "Consumables",
+        name = "Elven Wine",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Fearless", "description": "An elven warband that drinks Elven Wine before a battle will be immune to Fear for the whole of the battle."}
+        ],
+        magiclist = [],
+        price = 50,
+        description = "High Elven wines are well known to be the best in the world, and some are even rumored to have magical qualities. A fine Elven Wine can cast out doubt and fear and leave a general feeling of wellbeing in a warrior."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Other",
+        name = "Mordheim Map",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [],
+        magiclist = [],
+        price = 20,
+        description = "Temporary item, When you buy a map, roll a D6. Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Other",
+        name = "Fake Mordheim Map",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Fake Mordheim Map", "description": "The map is a fake, and is completely worthless. It leads you on a fool’s errand. Your opponent may automatically choose the next scenario you play."}
+        ],
+        magiclist = [],
+        price = 20,
+        description = "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Other",
+        name = "Vague Mordheim Map",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Vague Mordheim Map", "description": "Though crude, the map is generally accurate (well… parts of it are… perhaps!). You may re-roll any one dice during the next exploration phase if you wish but you must accept the result of the second roll."}
+        ],
+        magiclist = [],
+        price = 20,
+        description = "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Other",
+        name = "Catacomb Mordheim Map",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Catacomb Mordheim Map", "description": "The map shows a way through the catacombs into the city. You may automatically choose the scenario next time you fight a battle."}
+        ],
+        magiclist = [],
+        price = 20,
+        description = "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Other",
+        name = "Accurate Mordheim Map",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Accurate Mordheim Map", "description": "The map is recently made and very detailed. You may re-roll up to three dice during the next exploration phase if you wish. You must accept the result of the second roll."}
+        ],
+        magiclist = [],
+        price = 20,
+        description = "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Other",
+        name = "Master Mordheim Map",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Master Mordheim Map", "description": "This is one of the twelve master maps of Mordheim made for Count von Steinhardt of Ostermark. From now on you may always re-roll one dice when rolling on the Exploration chart as long as the Hero who possesses this map was not taken out of action in the battle."}
+        ],
+        magiclist = [],
+        price = 20,
+        description = "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
+    )
+
     #  Specific Broheim - High Elves warband items
     add_itemref(
         source = "Broheim - High Elves",

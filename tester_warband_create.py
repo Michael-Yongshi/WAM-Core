@@ -26,7 +26,7 @@ from class_components import (
     Magic,
     )
 
-def test_createWarband(wbname, wbrace):
+def test_createWarband(wbname, wbrace, wbsource):
    
     # create_warband
     wbid = Warband(
@@ -50,14 +50,13 @@ def test_createWarband(wbname, wbrace):
     hero1 = Hero.create_character(
         name="A", 
         race="High Elf", 
-        source="High Elves",
+        source="Broheim - High Elves",
         category="Loremaster",
         )
     
     # Adding items to heroes
     hero1.itemlist = [
-        Item.create_item(name = "Dagger", source = "Core Rules"),
-        Item.create_item(name = "Mage Staff", source = "Core Rules")
+        Item.create_item(name = "Mage Staff (Two Handed)", source = "Broheim - High Elves")
         ]
 
     # adding the heroes to the warband hero list
@@ -69,7 +68,7 @@ def test_createWarband(wbname, wbrace):
     squad1 = Squad.create_squad(
         name = "Spearguard",
         race = "High Elf",
-        source = 'High Elves',
+        source = 'Broheim - High Elves',
         category = "Seaguard",
         number = 2
         )
@@ -77,16 +76,14 @@ def test_createWarband(wbname, wbrace):
     squad2 = Squad.create_squad(
         name = "Bladeguard",
         race = "High Elf",
-        source = 'High Elves',
-        category = "Loremaster",
+        source = 'Broheim - High Elves',
+        category = "Seaguard",
         number = 1
         )
 
     # Adding items to the squads
-    squad1.equip_squad(name = "Dagger", source = "Core Rules")
     squad1.equip_squad(name = "Spear", source = "Core Rules")
 
-    squad2.equip_squad(name = "Dagger", source = "Core Rules")
     squad2.equip_squad(name = "Greatsword", source = "Core Rules")
 
     # adding the squads to the squadlist
@@ -97,19 +94,15 @@ def test_createWarband(wbname, wbrace):
 
     # Current gold minus cost of the warband
     startgold = 500
-    wbid.treasury.gold = startgold - wbid.get_warbandprice()
-    print(wbid.treasury.gold)
+    wbid.treasury.gold = startgold - wbid.get_price()
     
-    # create warband dictionary
-    datadict = wbid.to_dict()
-
     # Push new warband to JSON cache
     # To do: write to global variable
-    cache_warband(datadict)
-    
+    cache_warband(wbid)
+    print("Create Completed")
 
 if __name__ == "__main__":
     wbname = "Full WB test"
     wbrace = "High Elf"
-    wbsource = "High Elves"
-    test_createWarband(wbname, wbrace)
+    wbsource = "Broheim - High Elves"
+    test_createWarband(wbname, wbrace, wbsource)

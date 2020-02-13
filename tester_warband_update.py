@@ -38,59 +38,54 @@ def test_updateWarband():
     newhero = Hero.create_character(
         name="Bearand", 
         race="High Elf", 
-        source="High Elves",
+        source="Broheim - High Elves",
         category="Sword Warden"
         )
     newhero2 = Hero.create_character(
         name="Crypton", 
         race="High Elf", 
-        source="High Elves",
+        source="Broheim - High Elves",
         category="Sword Warden"
         )
     newhero3 = Hero.create_character(
         name="Danan", 
         race="High Elf", 
-        source="High Elves",
+        source="Broheim - High Elves",
         category="Ranger"
         )
     newhero4 = Hero.create_character(
         name="Everia", 
         race="High Elf", 
-        source="High Elves",
+        source="Broheim - High Elves",
         category="Ranger"
         )
     newhero5 = Hero.create_character(
         name="Crytonia", 
         race="High Elf", 
-        source="High Elves",
+        source="Broheim - High Elves",
         category="Ranger"
         )
     
     # Add items for new hero
     newhero.itemlist = [
-        Item.create_item(name = "Dagger", source = "Core Rules"),
         Item.create_item(name = "Sword", source = "Core Rules"),
         Item.create_item(name = "Light Armour", source = "Core Rules"),
         Item.create_item(name = "Shield", source = "Core Rules")
         ]
     newhero2.itemlist = [
-        Item.create_item(name = "Dagger", source = "Core Rules"),
         Item.create_item(name = "Sword", source = "Core Rules"),
         Item.create_item(name = "Light Armour", source = "Core Rules"),
         Item.create_item(name = "Shield", source = "Core Rules")
         ]
     newhero3.itemlist = [
-        Item.create_item(name = "Dagger", source = "Core Rules"),
         Item.create_item(name = "Long Bow", source = "Core Rules"),
         Item.create_item(name = "Light Armour", source = "Core Rules"),
         ]
     newhero4.itemlist = [
-        Item.create_item(name = "Dagger", source = "Core Rules"),
         Item.create_item(name = "Long Bow", source = "Core Rules"),
         Item.create_item(name = "Light Armour", source = "Core Rules"),
         ]
     newhero5.itemlist = [
-        Item.create_item(name = "Dagger", source = "Core Rules"),
         Item.create_item(name = "Long Bow", source = "Core Rules"),
         Item.create_item(name = "Light Armour", source = "Core Rules"),
         ]
@@ -106,41 +101,37 @@ def test_updateWarband():
     newsquad = Squad.create_squad(
         name = "Cadet",
         race = "High Elf",
-        source = 'High Elves',
+        source = "Broheim - High Elves",
         category = "Cadet",
         number = 1
         )
     newsquad2 = Squad.create_squad(
         name = "Cadet2",
         race = "High Elf",
-        source = 'High Elves',
+        source = "Broheim - High Elves",
         category = "Cadet",
         number = 1
         )
     newsquad3 = Squad.create_squad(
         name = "Cadet3",
         race = "High Elf",
-        source = 'High Elves',
+        source = "Broheim - High Elves",
         category = "Cadet",
         number = 1
         )
     newsquad4 = Squad.create_squad(
         name = "Cadet4",
         race = "High Elf",
-        source = 'High Elves',
+        source = "Broheim - High Elves",
         category = "Cadet",
         number = 1
         )
 
     
     # Adding items to the squads
-    newsquad.equip_squad(name = "Dagger", source = "Core Rules")
     newsquad.equip_squad(name = "Long Bow", source = "Core Rules")
-    newsquad2.equip_squad(name = "Dagger", source = "Core Rules")
     newsquad2.equip_squad(name = "Long Bow", source = "Core Rules")
-    newsquad3.equip_squad(name = "Dagger", source = "Core Rules")
     newsquad3.equip_squad(name = "Long Bow", source = "Core Rules")
-    newsquad4.equip_squad(name = "Dagger", source = "Core Rules")
     newsquad4.equip_squad(name = "Long Bow", source = "Core Rules")
 
     # adding the squads to the squadlist
@@ -149,13 +140,8 @@ def test_updateWarband():
     wbid.squadlist.append(newsquad3)
     wbid.squadlist.append(newsquad4)
 
-
-
-    # from objects to dictionary for placing back in cache
-    datadict = wbid.to_dict()
-
-    # Push save to JSON cache
-    save_json(data=datadict, jsonfile="database/saves/cache.json")
+    cache_warband(wbid)
+    save_warband(wbid)
     print("Update completed")
 
 

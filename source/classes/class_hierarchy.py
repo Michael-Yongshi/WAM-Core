@@ -1,8 +1,6 @@
 import copy
 
-from database.json import open_json
-
-from class_components import (
+from source.classes.class_components import (
     Rule,
     Treasury,
     Item,

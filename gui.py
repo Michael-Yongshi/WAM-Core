@@ -39,12 +39,9 @@ from PyQt5.QtGui import (
     QPalette,
     )
 
-from source.json import (
+from source.generic_methods import (
     open_json,
     save_json,
-    )
-
-from source.generic_methods import (
     save_warband,
     load_warband,
     cache_warband,

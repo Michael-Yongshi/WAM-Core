@@ -1,6 +1,10 @@
 import copy
 
-from source.classes.class_components import (
+from source.json_methods import (
+    open_json,
+)
+
+from source.class_components import (
     Rule,
     Treasury,
     Item,

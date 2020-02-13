@@ -39,9 +39,12 @@ from PyQt5.QtGui import (
     QPalette,
     )
 
-from source.generic_methods import (
+from source.json_methods import (
     open_json,
     save_json,
+    )
+
+from source.generic_methods import (
     save_warband,
     load_warband,
     cache_warband,
@@ -49,7 +52,7 @@ from source.generic_methods import (
     get_current_warband,
     )
 
-from source.classes.class_hierarchy import (
+from source.class_hierarchy import (
     Warband,
     Squad,
     Character,
@@ -57,7 +60,7 @@ from source.classes.class_hierarchy import (
     Henchman,
     )
 
-from source.classes.class_hierarchy import (
+from source.class_hierarchy import (
     Rule,
     Treasury,
     Item,

@@ -139,5 +139,5 @@ datadict = wbid.to_dict()
 
 # Cache, save and load warband
 cache_warband(datadict)
-save_warband(wbid.name)
+save_warband(wbid)
 load_warband(wbid.name)

@@ -47,6 +47,7 @@ from database.json import (
 from generic_methods import (
     save_warband,
     load_warband,
+    cache_warband,
     show_saved_warbands,
     get_current_warband,
     )
@@ -196,6 +197,10 @@ class WarbandOverview(QMainWindow):
         btncreate.setToolTip('Create a new <b>Warband</b>')
         btncreate.clicked.connect(self.create_warband)
         
+        btnsave = QPushButton('Save Warband', self)
+        btnsave.setToolTip('Save current <b>Warband</b>')
+        btnsave.clicked.connect(self.save_warband)
+
         btnquit = QPushButton('Quit', self)
         btnquit.setToolTip('Quit the program')
         btnquit.clicked.connect(QApplication.instance().quit)
@@ -203,6 +208,7 @@ class WarbandOverview(QMainWindow):
         # top right
         sysbox = QHBoxLayout()
         sysbox.addWidget(btncreate)
+        sysbox.addWidget(btnsave)
         sysbox.addWidget(btnchoose)
         sysbox.addWidget(btnquit)
         sysboxwidget = QBorderedWidget()
@@ -504,6 +510,12 @@ class WarbandOverview(QMainWindow):
             self.wbid = get_current_warband()   # bring cache json to python obj (warband class .from_dict method)
             self.currentunit = self.create_template_char()
             self.initUI()                       # Restart the window to force changes
+
+    def save_warband(self):
+        """Save warband to cache and then to saves"""
+        save_warband(self.wbid)                # save wbid to json
+        cache_warband(self.wbid)                #set to run next time at stsrtup
+        message = QMessageBox.information(self, "Saved", "Save successful!", QMessageBox.Ok)
 
     def create_method_focus(self, unit):          
         """This method is used in order to create a new method that holds a reference to a passed attribute,

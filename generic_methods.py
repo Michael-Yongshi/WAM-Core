@@ -22,12 +22,18 @@ from class_components import (
     Magic,
     )
 
-def cache_warband(datadict):
+def cache_warband(wbid):
+    
+    datadict = wbid.to_dict()
     save_json(data=datadict, jsonfile="database/saves/cache.json")
-    print("Cache completed")
 
+def save_warband(warband):
 
-def save_warband(wbname):
+    wbdict = warband.to_dict()
+    filepath = "database/saves/" + warband.name + ".json"
+    save_json(wbdict, filepath)
+
+def save_warband_from_cache(wbname):
        
     # Open data in cache
     datadict = open_json(jsonfile="database/saves/cache.json")

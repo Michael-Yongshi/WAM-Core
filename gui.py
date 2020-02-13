@@ -505,13 +505,12 @@ class WarbandOverview(QMainWindow):
 
     def choose_warband(self):
         """Choose a warband to be loaded into cache and then shown on screen"""
-        warbands = show_saved_warbands()
-        wbname, okPressed = QInputDialog.getItem(self, "Choose", "Choose your warband", warbands, 0, False)
+        warbands = show_saved_warbands()                                                                            # get list of save files
+        wbname, okPressed = QInputDialog.getItem(self, "Choose", "Choose your warband", warbands, 0, False)         # Let user choose out of save files
         if okPressed and wbname:
-            load_warband(wbname)                # Load from save json into cache json
-            self.wbid = get_current_warband()   # bring cache json to python obj (warband class .from_dict method)
-            self.currentunit = self.create_template_char()
-            self.initUI()                       # Restart the window to force changes
+            self.wbid = load_warband(wbname)                                                                        # set warband object based on save file
+            self.currentunit = self.create_template_char()                                                          # set empty current unit
+            self.initUI()                                                                                           # Restart the window to force changes
 
     def save_warband(self):
         """Save warband to cache and then to saves"""

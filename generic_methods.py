@@ -45,8 +45,13 @@ def save_warband_from_cache(wbname):
     save_json(data=datadict, jsonfile=filepath)
     print("Save completed")
 
-
 def load_warband(savename):
+    filepath = "database/saves/" + savename + ".json"
+    datadict = open_json(filepath)
+    wbid = Warband.from_dict(datadict)
+    return wbid
+
+def load_warband_to_cache(savename):
     # Determine filepath of existing save
     filepath = "database/saves/" + savename + ".json"
     datadict = open_json(filepath)

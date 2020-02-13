@@ -276,7 +276,9 @@ if __name__ == "__main__":
             {"name": "Leader", "description":"Nearby units (6 inch) can use this characters leader skill"},
         ],
         magiclist = [],
-        itemlist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
         experience = 20,
         price = 60,
         maxcount = 1,
@@ -290,7 +292,9 @@ if __name__ == "__main__":
         skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
         abilitylist = [],
         magiclist = [],
-        itemlist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
         experience = 8,
         price = 35,
         maxcount = 2,
@@ -304,7 +308,9 @@ if __name__ == "__main__":
         skill = [4, 2, 2, 3, 3, 1, 3, 1, 6, 0],
         abilitylist = [],
         magiclist = [],
-        itemlist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
         experience = 0,
         price = 15,
         maxcount = 2,
@@ -318,7 +324,9 @@ if __name__ == "__main__":
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
         abilitylist = [],
         magiclist = [],
-        itemlist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
         experience = 0,
         price = 25,
         maxcount = 0,
@@ -332,7 +340,9 @@ if __name__ == "__main__":
         skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
         abilitylist = [],
         magiclist = [],
-        itemlist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
         experience = 0,
         price = 25,
         maxcount = 7,
@@ -348,7 +358,9 @@ if __name__ == "__main__":
             {"name": "Expert Swordsmen", "description":"Swordsmen are so skilled with their weapons that they may re-roll any failed hits when charging. Note that this only applies when they are armed with normal swords, and not with doublehanded swords or any other weapons."},
             ],
         magiclist = [],
-        itemlist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
         experience = 0,
         price = 35,
         maxcount = 5,
@@ -357,7 +369,7 @@ if __name__ == "__main__":
     # High Elves warband from the other website
     add_characterref(
         race = "High Elf",
-        source = "High Elves",
+        source = "Broheim - High Elves",
         category = "Loremaster",
         ishero = True,
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 9, 0],
@@ -369,7 +381,8 @@ if __name__ == "__main__":
             {"source": "High Elves", "category": "High Elven Magic", "name": "Fiery Wrath", "difficulty": 8, "description": "With one delicate movement the Elven Mage traces an intricate Sigil of Flame in the air. Range 12 inch. May be cast on any model within range. The target is hit with Strength 4. Any models within 3 inch of the target model suffer a Strength 3 hit on a D6 roll of 4+. Take armour saves as normal."}
         ],
         itemlist = [
-            {"name": "Wyrdbreaker", "category": "Other", "source": "Core Rules", "distance": 0, "description": "test"}
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."},
+            {"name": "Wyrdbreaker", "category": "Other", "source": "Core Rules", "distance": 0, "description": "test"},
         ],
         experience = 20,
         price = 80,
@@ -378,13 +391,15 @@ if __name__ == "__main__":
     )
     add_characterref(
         race = "High Elf",
-        source = "High Elves",
+        source = "Broheim - High Elves",
         category = "Ranger",
         ishero = True,
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 8, 0],
         abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range."}],
         magiclist = [],
-        itemlist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
         experience = 8,
         price = 45,
         maxcount = 2,
@@ -392,13 +407,15 @@ if __name__ == "__main__":
     )
     add_characterref(
         race = "High Elf",
-        source = "High Elves",
+        source = "Broheim - High Elves",
         category = "Sword Warden",
         ishero = True,
         skill = [5, 5, 4, 3, 3, 1, 6, 1, 8, 0],
         abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range."}],
         magiclist = [],
-        itemlist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
         experience = 11,
         price = 50,
         maxcount = 2,
@@ -406,13 +423,15 @@ if __name__ == "__main__":
     )
     add_characterref(
         race = "High Elf",
-        source = "High Elves",
+        source = "Broheim - High Elves",
         category = "Seaguard",
         ishero = False,
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 8, 0],
         abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range."}],
         magiclist = [],
-        itemlist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
         experience = 0,
         price = 35,
         maxcount = 0,
@@ -420,13 +439,15 @@ if __name__ == "__main__":
     )
     add_characterref(
         race = "High Elf",
-        source = "High Elves",
+        source = "Broheim - High Elves",
         category = "Cadet",
         ishero = False,
         skill = [5, 3, 3, 3, 3, 1, 5, 1, 8, 0],
         abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range."}],
         magiclist = [],
-        itemlist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
         experience = 0,
         price = 30,
         maxcount = 5,
@@ -434,13 +455,15 @@ if __name__ == "__main__":
     )
     add_characterref(
         race = "High Elf",
-        source = "High Elves",
+        source = "Manual",
         category = "Khaine",
         ishero = True,
         skill = [6, 6, 6, 6, 6, 6, 6, 6, 6, 6],
         abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range."}, {"name": "Fear", "description": "Spreads fear in nearby enemies."}],
         magiclist = [],
-        itemlist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
         experience = 100,
         price = 30,
         maxcount = 5,
@@ -448,7 +471,7 @@ if __name__ == "__main__":
     )
     get_characterref(
         race = "High Elf",
-        source = "High Elves",
+        source = "Broheim - High Elves",
         category = "Loremaster"
     )
 
@@ -510,20 +533,6 @@ if __name__ == "__main__":
         )
     add_itemref(
         source = "Core Rules",
-        category = "Melee Weapon",
-        name = "Mage Staff",
-        distance = 0,
-        skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
-        abilitylist = [
-            {"name": "Bastard", "description": "Weapon can be wielded one handed or twohanded. Strength modifier only counts if wielded twohanded."},
-            {"name": "Concussion", "description": "Stunned happens also on a trow of 2 at the injury roll."}
-            ],
-        magiclist = [],
-        price = 20,
-        description = "A staff used by mages."
-        )
-    add_itemref(
-        source = "Core Rules",
         category = "Missile Weapon",
         name = "Bow",
         distance = 16,
@@ -567,56 +576,84 @@ if __name__ == "__main__":
         description = "A basic shield."
     )
      
+    #  Specific Broheim - High Elves warband items
+    add_itemref(
+        source = "Broheim - High Elves",
+        category = "Melee Weapon",
+        name = "Mage Staff (One Handed)",
+        distance = 0,
+        skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Concussion", "description": "Stunned happens also on a trow of 2 at the injury roll."}
+            ],
+        magiclist = [],
+        price = 20,
+        description = "A staff used by mages."
+        )
+    add_itemref(
+        source = "Broheim - High Elves",
+        category = "Melee Weapon",
+        name = "Mage Staff (Two Handed)",
+        distance = 0,
+        skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Concussion", "description": "Stunned happens also on a trow of 2 at the injury roll."}
+            ],
+        magiclist = [],
+        price = 20,
+        description = "A staff used by mages."
+        )
+
     get_itemref(
-        source = "Core Rules", 
-        item = "Mage Staff"
+        source = "Broheim - High Elves", 
+        item = "Mage Staff (One Handed)"
     )
 
     create_magicref()
     add_magicref(
-        source = "High Elves",
+        source = "Broheim - High Elves", 
         category = "High Elven Magic",
         name = "Word of Power",
         difficulty = 8,
         description = "The Elven Mage utters the True Name of Asuryan, the lord of the Elf gods. Shaken by his awesome power, the enemies of the Elves become weak and ineffective. Any enemies within 8 inch of the Mage suffer a -3 Weaponskill penalty, down to a minimum of one. Lasts until the beginning of the next High Elf turn."
     )
     add_magicref(
-        source = "High Elves",
+        source = "Broheim - High Elves", 
         category = "High Elven Magic",
         name = "Fiery Wrath",
         difficulty = 8,
         description = "With one delicate movement the Elven Mage traces an intricate Sigil of Flame in the air. Range 12 inch. May be cast on any model within range. The target is hit with Strength 4. Any models within 3 inch of the target model suffer a Strength 3 hit on a D6 roll of 4+. Take armour saves as normal."
     )
     add_magicref(
-        source = "High Elves",
+        source = "Broheim - High Elves", 
         category = "High Elven Magic",
         name = "The Phoenix Crown",
         difficulty = 9,
         description = "A crown of white flames appears above the head of the Elf Mage, enveloping him within a glorious array of flames. The Elf Mage has an armour save of 2+ that replaces his normal armour save. In addition, he gains a +2 to his Weaponskill and a +1 to his Strength. Roll at the beginning of each turn in the recovery phase. On a D6 roll of 1 or 2 the Phoenix Crown disappears."
     )
     add_magicref(
-        source = "High Elves",
+        source = "Broheim - High Elves", 
         category = "High Elven Magic",
         name = "Roar of the Dragon",
         difficulty = 8,
         description = "A shadow of a wrathful Dragon strikes out from the outstretched hand of the mage, and speeds forward roaring its anger. The roar of the Dragon has a range of 12 inch and it is absolutely straight. Any model in its path must roll equal or under its Strength or be Knocked Down. If the spell hits a building it stops."
     )
     add_magicref(
-        source = "High Elves",
+        source = "Broheim - High Elves", 
         category = "High Elven Magic",
         name = "The Anger of the Earth",
         difficulty = 10,
         description = "At the command of the Elven Mage, the very earth raises up against the enemies of the Elves. Draw a 12 inch direct line from the mage in any direction. The line is 1 inch wide and absolutely straight. Any model in its path suffers a single S5 hit."
     )
     add_magicref(
-        source = "High Elves",
+        source = "Broheim - High Elves", 
         category = "High Elven Magic",
         name = "The Light of Glory",
         difficulty = 8,
         description = "A radiant white light emerges from the mage`s hand, banishing all fear and doubt in his comrades. Any friendly models within 8 inch of the Elven mage are immune to psychology and will never break from combat. This spell lasts until the mage suffers a wound. If the mage suffers a wound then the enchanted Elves become startled and uneasy. All models with 8 inch must take a Leadership test. If any fail, they are treated as if they had failed an All Alone test."
     )
     get_magicref(
-        source="High Elves",
+        source = "Broheim - High Elves", 
         category = "High Elven Magic",
         name= "The Anger of the Earth"
     )

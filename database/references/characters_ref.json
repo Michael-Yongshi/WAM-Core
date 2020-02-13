@@ -27,7 +27,15 @@
                     }
                 ],
                 "magiclist": [],
-                "itemlist": [],
+                "itemlist": [
+                    {
+                        "name": "Starting Dagger",
+                        "category": "Melee Weapon",
+                        "source": "Core Rules",
+                        "distance": 0,
+                        "description": "A basic dagger. Most units already carry one."
+                    }
+                ],
                 "experience": 20,
                 "price": 60,
                 "maxcount": 1,
@@ -54,7 +62,15 @@
                 ],
                 "abilitylist": [],
                 "magiclist": [],
-                "itemlist": [],
+                "itemlist": [
+                    {
+                        "name": "Starting Dagger",
+                        "category": "Melee Weapon",
+                        "source": "Core Rules",
+                        "distance": 0,
+                        "description": "A basic dagger. Most units already carry one."
+                    }
+                ],
                 "experience": 8,
                 "price": 35,
                 "maxcount": 2,
@@ -81,7 +97,15 @@
                 ],
                 "abilitylist": [],
                 "magiclist": [],
-                "itemlist": [],
+                "itemlist": [
+                    {
+                        "name": "Starting Dagger",
+                        "category": "Melee Weapon",
+                        "source": "Core Rules",
+                        "distance": 0,
+                        "description": "A basic dagger. Most units already carry one."
+                    }
+                ],
                 "experience": 0,
                 "price": 15,
                 "maxcount": 2,
@@ -108,7 +132,15 @@
                 ],
                 "abilitylist": [],
                 "magiclist": [],
-                "itemlist": [],
+                "itemlist": [
+                    {
+                        "name": "Starting Dagger",
+                        "category": "Melee Weapon",
+                        "source": "Core Rules",
+                        "distance": 0,
+                        "description": "A basic dagger. Most units already carry one."
+                    }
+                ],
                 "experience": 0,
                 "price": 25,
                 "maxcount": 0,
@@ -135,7 +167,15 @@
                 ],
                 "abilitylist": [],
                 "magiclist": [],
-                "itemlist": [],
+                "itemlist": [
+                    {
+                        "name": "Starting Dagger",
+                        "category": "Melee Weapon",
+                        "source": "Core Rules",
+                        "distance": 0,
+                        "description": "A basic dagger. Most units already carry one."
+                    }
+                ],
                 "experience": 0,
                 "price": 25,
                 "maxcount": 7,
@@ -167,7 +207,15 @@
                     }
                 ],
                 "magiclist": [],
-                "itemlist": [],
+                "itemlist": [
+                    {
+                        "name": "Starting Dagger",
+                        "category": "Melee Weapon",
+                        "source": "Core Rules",
+                        "distance": 0,
+                        "description": "A basic dagger. Most units already carry one."
+                    }
+                ],
                 "experience": 0,
                 "price": 35,
                 "maxcount": 5,
@@ -176,10 +224,10 @@
         }
     },
     "High Elf": {
-        "High Elves": {
+        "Broheim - High Elves": {
             "Loremaster": {
                 "race": "High Elf",
-                "source": "High Elves",
+                "source": "Broheim - High Elves",
                 "category": "Loremaster",
                 "ishero": true,
                 "skill": [
@@ -217,6 +265,13 @@
                 ],
                 "itemlist": [
                     {
+                        "name": "Starting Dagger",
+                        "category": "Melee Weapon",
+                        "source": "Core Rules",
+                        "distance": 0,
+                        "description": "A basic dagger. Most units already carry one."
+                    },
+                    {
                         "name": "Wyrdbreaker",
                         "category": "Other",
                         "source": "Core Rules",
@@ -231,7 +286,7 @@
             },
             "Ranger": {
                 "race": "High Elf",
-                "source": "High Elves",
+                "source": "Broheim - High Elves",
                 "category": "Ranger",
                 "ishero": true,
                 "skill": [
@@ -255,7 +310,15 @@
                     }
                 ],
                 "magiclist": [],
-                "itemlist": [],
+                "itemlist": [
+                    {
+                        "name": "Starting Dagger",
+                        "category": "Melee Weapon",
+                        "source": "Core Rules",
+                        "distance": 0,
+                        "description": "A basic dagger. Most units already carry one."
+                    }
+                ],
                 "experience": 8,
                 "price": 45,
                 "maxcount": 2,
@@ -263,7 +326,7 @@
             },
             "Sword Warden": {
                 "race": "High Elf",
-                "source": "High Elves",
+                "source": "Broheim - High Elves",
                 "category": "Sword Warden",
                 "ishero": true,
                 "skill": [
@@ -287,7 +350,15 @@
                     }
                 ],
                 "magiclist": [],
-                "itemlist": [],
+                "itemlist": [
+                    {
+                        "name": "Starting Dagger",
+                        "category": "Melee Weapon",
+                        "source": "Core Rules",
+                        "distance": 0,
+                        "description": "A basic dagger. Most units already carry one."
+                    }
+                ],
                 "experience": 11,
                 "price": 50,
                 "maxcount": 2,
@@ -295,7 +366,7 @@
             },
             "Seaguard": {
                 "race": "High Elf",
-                "source": "High Elves",
+                "source": "Broheim - High Elves",
                 "category": "Seaguard",
                 "ishero": false,
                 "skill": [
@@ -319,7 +390,15 @@
                     }
                 ],
                 "magiclist": [],
-                "itemlist": [],
+                "itemlist": [
+                    {
+                        "name": "Starting Dagger",
+                        "category": "Melee Weapon",
+                        "source": "Core Rules",
+                        "distance": 0,
+                        "description": "A basic dagger. Most units already carry one."
+                    }
+                ],
                 "experience": 0,
                 "price": 35,
                 "maxcount": 0,
@@ -327,7 +406,7 @@
             },
             "Cadet": {
                 "race": "High Elf",
-                "source": "High Elves",
+                "source": "Broheim - High Elves",
                 "category": "Cadet",
                 "ishero": false,
                 "skill": [
@@ -351,15 +430,25 @@
                     }
                 ],
                 "magiclist": [],
-                "itemlist": [],
+                "itemlist": [
+                    {
+                        "name": "Starting Dagger",
+                        "category": "Melee Weapon",
+                        "source": "Core Rules",
+                        "distance": 0,
+                        "description": "A basic dagger. Most units already carry one."
+                    }
+                ],
                 "experience": 0,
                 "price": 30,
                 "maxcount": 5,
                 "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
-            },
+            }
+        },
+        "Manual": {
             "Khaine": {
                 "race": "High Elf",
-                "source": "High Elves",
+                "source": "Manual",
                 "category": "Khaine",
                 "ishero": true,
                 "skill": [
@@ -387,7 +476,15 @@
                     }
                 ],
                 "magiclist": [],
-                "itemlist": [],
+                "itemlist": [
+                    {
+                        "name": "Starting Dagger",
+                        "category": "Melee Weapon",
+                        "source": "Core Rules",
+                        "distance": 0,
+                        "description": "A basic dagger. Most units already carry one."
+                    }
+                ],
                 "experience": 100,
                 "price": 30,
                 "maxcount": 5,

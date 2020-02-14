@@ -212,11 +212,11 @@ class WarbandOverview(QMainWindow):
         btnquit.clicked.connect(QApplication.instance().quit)
 
         # top right
-        sysbox = QHBoxLayout()
-        sysbox.addWidget(btncreate)
-        sysbox.addWidget(btnsave)
-        sysbox.addWidget(btnchoose)
-        sysbox.addWidget(btnquit)
+        sysbox = QGridLayout()
+        sysbox.addWidget(btncreate, 0, 0)
+        sysbox.addWidget(btnsave, 0, 1)
+        sysbox.addWidget(btnchoose, 1, 0)
+        sysbox.addWidget(btnquit, 1, 1)
         sysboxwidget = QBorderedWidget()
         sysboxwidget.setLayout(sysbox)
 
@@ -277,18 +277,22 @@ class WarbandOverview(QMainWindow):
     def set_wbname(self):
         # top left warband info
         wbnamelabel = QLabel()
-        wbnamelabel.setText("Your warband " + self.wbid.name)
+        wbnamelabel.setText("Name: " + self.wbid.name)
         wbnamelabel.setToolTip('This is your <b>Warband`s</b> name')
         wbracelabel = QLabel()
         wbracelabel.setText("Race: " + self.wbid.race)
         wbracelabel.setToolTip('This is your <b>Warband`s</b> race')
+        wbsrclabel = QLabel()
+        wbsrclabel.setText("Source: " + self.wbid.source)
+        wbsrclabel.setToolTip('This is your <b>Warband`s</b> source')
         wbtypelabel = QLabel()
-        wbtypelabel.setText("Type: " + self.wbid.source)
+        wbtypelabel.setText("Type: " + self.wbid.warband)
         wbtypelabel.setToolTip('This is your <b>Warband`s</b> type')
 
         wbbox = QVBoxLayout()
         wbbox.addWidget(wbnamelabel)
         wbbox.addWidget(wbracelabel)
+        wbbox.addWidget(wbsrclabel)
         wbbox.addWidget(wbtypelabel)
 
         wbboxwidget = QBorderedWidget()
@@ -328,7 +332,7 @@ class WarbandOverview(QMainWindow):
             herowidget.clicked.connect(self.create_method_focus(unit=hero))
             herobox.addWidget(herowidget)
 
-        while h <= 5:
+        if h <= 5:
             h += 1
             herogrid = QGridLayout()
             namelabel = QLabel()
@@ -383,7 +387,7 @@ class WarbandOverview(QMainWindow):
             squadwidget.clicked.connect(self.create_method_focus(unit=squad.henchmanlist[0]))
             squadbox.addWidget(squadwidget)
 
-        while s <= 5:
+        if s <= 5:
             s += 1
             squadgrid = QGridLayout()
             namelabel = QLabel()

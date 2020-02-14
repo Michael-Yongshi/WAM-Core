@@ -5,45 +5,6 @@ An application in order to create, update, view and save your warband details fo
 In addition you can add your own warbands, items, rules, etc. for use in more custom made games.
 
 ## Roadmap
-GUI functionality
-- increasing or decreasing number of henchmen
-- fix spear price (10 -> 15)
-- give everyone by default a dagger
-- add 'add magic' functionality
-- add 'add ability' functionality
-- add basic rulebook to references
-- add status functionality
-
-GUI performance
-- Only change widgets directly instead of rerunning int:
-https://stackoverflow.com/questions/47062681/pyqt5-addstretch-in-between-widgets
-- converge create item boxes as we use them in both warband as current unit box.
-
-Class addition
-- Chaos need a way to get mutations (as abilities?)
-- wizards need a way to get magic
-
-References
-- Split source and warband (source is 'core rules', 'broheim', etc. warband is reikland, high elves, lothern sea guard, etc.)
-- divide magic in spell and prayer category
-- some info in references can't be showed as its not part of the classes, i.e. character category, price, etc.
-
-<!-- Import wildcards
-- Remove the wildcards from the import statements -->
-
-<!-- Inventory and items
-- Split inventory again in Treasury object and in an itemlist seperately, as only the warband itself can have gold and wyrd, it makes for more elegancy to split these, although should have no practical implications -->
-
-<!-- Generate overviews of warband, herolists, squads, etc. easily. -->
-
-Add events
-- Characters decorative events
-- Characters history events of changes
-- Item decorative events
-
-Unique names
-- Item name change for decorative purposes
-- Henchman, similar to item name change
 
 ## Getting Started
 

@@ -59,22 +59,14 @@
             "abilitylist": {
                 "Ability1": {
                     "name": "Excellent Sight",
-                    "description": "Spot hidden objects at double the range."
+                    "description": "Spot hidden objects at double the range. "
                 },
                 "Ability2": {
-                    "name": "High Elven Magic",
-                    "description": "Character is able to use High Elven magic."
+                    "name": "High Elven Magician",
+                    "description": "Character is able to use High Elven magic. "
                 }
             },
-            "magiclist": {
-                "Magic1": {
-                    "source": "High Elves",
-                    "category": "High Elven Magic",
-                    "name": "Fiery Wrath",
-                    "difficulty": 8,
-                    "description": "With one delicate movement the Elven Mage traces an intricate Sigil of Flame in the air. Range 12 inch. May be cast on any model within range. The target is hit with Strength 4. Any models within 3 inch of the target model suffer a Strength 3 hit on a D6 roll of 4+. Take armour saves as normal."
-                }
-            },
+            "magiclist": {},
             "itemlist": {
                 "Item1": {
                     "name": "Mage Staff (Two Handed)",
@@ -96,18 +88,18 @@
                     "abilitylist": {
                         "Ability1": {
                             "name": "Concussion",
-                            "description": "Stunned happens also on a trow of 2 at the injury roll."
+                            "description": "Stunned happens also on a trow of 2 at the injury roll. "
                         }
                     },
                     "magiclist": {},
                     "price": 20,
-                    "description": "A staff used by mages."
+                    "description": "A staff used by mages. "
                 }
             },
             "experience": 20,
             "price": 80,
             "maxcount": 1,
-            "description": "Loremasters are the most powerful mages in the entire Warhammer world. Their knowledge of the arcane arts and their intensive training at the Tower of Hoeth makes them perfect for leading expeditions into Lustria. They are capable and efficient with years of extensive training and skill at their disposal. Loremasters alone command magic powerful enough to match the might of the mysterious Slann. They delve into the temple cities of the Lizardmen in search of any remaining artifacts of the Old Ones power."
+            "description": "Loremasters are the most powerful mages in the entire Warhammer world. Their knowledge of the arcane arts and their intensive training at the Tower of Hoeth makes them perfect for leading expeditions into Lustria. They are capable and efficient with years of extensive training and skill at their disposal. Loremasters alone command magic powerful enough to match the might of the mysterious Slann. They delve into the temple cities of the Lizardmen in search of any remaining artifacts of the Old Ones power. "
         },
         "Hero2": {
             "name": "Bearand",
@@ -130,7 +122,7 @@
             "abilitylist": {
                 "Ability1": {
                     "name": "Excellent Sight",
-                    "description": "Spot hidden objects at double the range."
+                    "description": "Spot hidden objects at double the range. "
                 }
             },
             "magiclist": {},
@@ -155,7 +147,7 @@
                     "abilitylist": {
                         "Ability1": {
                             "name": "Parry",
-                            "description": "Swords offer an excellent balance of defense and offence. A model armed with a sword may parry blows. When his opponent rolls to hit, the model armed with a sword may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength \u2013 they are simply too powerful to be stopped."
+                            "description": "Swords offer an excellent balance of defense and offence. A model armed with a sword may parry blows. When his opponent rolls to hit, the model armed with a sword may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength \u2013 they are simply too powerful to be stopped. "
                         }
                     },
                     "magiclist": {},
@@ -182,7 +174,7 @@
                     "abilitylist": {},
                     "magiclist": {},
                     "price": 20,
-                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement. "
                 },
                 "Item3": {
                     "name": "Shield",
@@ -204,13 +196,13 @@
                     "abilitylist": {},
                     "magiclist": {},
                     "price": 5,
-                    "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner."
+                    "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner. "
                 }
             },
             "experience": 11,
             "price": 50,
             "maxcount": 2,
-            "description": "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster\u2019s personal attendants and protectors."
+            "description": "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster\u2019s personal attendants and protectors. "
         },
         "Hero3": {
             "name": "Crypton",
@@ -233,7 +225,7 @@
             "abilitylist": {
                 "Ability1": {
                     "name": "Excellent Sight",
-                    "description": "Spot hidden objects at double the range."
+                    "description": "Spot hidden objects at double the range. "
                 }
             },
             "magiclist": {},
@@ -258,7 +250,7 @@
                     "abilitylist": {
                         "Ability1": {
                             "name": "Parry",
-                            "description": "Swords offer an excellent balance of defense and offence. A model armed with a sword may parry blows. When his opponent rolls to hit, the model armed with a sword may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength \u2013 they are simply too powerful to be stopped."
+                            "description": "Swords offer an excellent balance of defense and offence. A model armed with a sword may parry blows. When his opponent rolls to hit, the model armed with a sword may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength \u2013 they are simply too powerful to be stopped. "
                         }
                     },
                     "magiclist": {},
@@ -285,7 +277,7 @@
                     "abilitylist": {},
                     "magiclist": {},
                     "price": 20,
-                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement. "
                 },
                 "Item3": {
                     "name": "Shield",
@@ -307,13 +299,13 @@
                     "abilitylist": {},
                     "magiclist": {},
                     "price": 5,
-                    "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner."
+                    "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner. "
                 }
             },
             "experience": 11,
             "price": 50,
             "maxcount": 2,
-            "description": "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster\u2019s personal attendants and protectors."
+            "description": "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster\u2019s personal attendants and protectors. "
         },
         "Hero4": {
             "name": "Danan",
@@ -336,7 +328,7 @@
             "abilitylist": {
                 "Ability1": {
                     "name": "Excellent Sight",
-                    "description": "Spot hidden objects at double the range."
+                    "description": "Spot hidden objects at double the range. "
                 }
             },
             "magiclist": {},
@@ -361,7 +353,7 @@
                     "abilitylist": {},
                     "magiclist": {},
                     "price": 15,
-                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy. "
                 },
                 "Item2": {
                     "name": "Light Armour",
@@ -383,13 +375,13 @@
                     "abilitylist": {},
                     "magiclist": {},
                     "price": 20,
-                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement. "
                 }
             },
             "experience": 8,
             "price": 45,
             "maxcount": 2,
-            "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again."
+            "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again. "
         },
         "Hero5": {
             "name": "Everia",
@@ -412,7 +404,7 @@
             "abilitylist": {
                 "Ability1": {
                     "name": "Excellent Sight",
-                    "description": "Spot hidden objects at double the range."
+                    "description": "Spot hidden objects at double the range. "
                 }
             },
             "magiclist": {},
@@ -437,7 +429,7 @@
                     "abilitylist": {},
                     "magiclist": {},
                     "price": 15,
-                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy. "
                 },
                 "Item2": {
                     "name": "Light Armour",
@@ -459,13 +451,13 @@
                     "abilitylist": {},
                     "magiclist": {},
                     "price": 20,
-                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement. "
                 }
             },
             "experience": 8,
             "price": 45,
             "maxcount": 2,
-            "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again."
+            "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again. "
         },
         "Hero6": {
             "name": "Crytonia",
@@ -488,7 +480,7 @@
             "abilitylist": {
                 "Ability1": {
                     "name": "Excellent Sight",
-                    "description": "Spot hidden objects at double the range."
+                    "description": "Spot hidden objects at double the range. "
                 }
             },
             "magiclist": {},
@@ -513,7 +505,7 @@
                     "abilitylist": {},
                     "magiclist": {},
                     "price": 15,
-                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy. "
                 },
                 "Item2": {
                     "name": "Light Armour",
@@ -535,13 +527,13 @@
                     "abilitylist": {},
                     "magiclist": {},
                     "price": 20,
-                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement. "
                 }
             },
             "experience": 8,
             "price": 45,
             "maxcount": 2,
-            "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again."
+            "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again. "
         }
     },
     "squadlist": {
@@ -569,7 +561,7 @@
                     "abilitylist": {
                         "Ability1": {
                             "name": "Excellent Sight",
-                            "description": "Spot hidden objects at double the range."
+                            "description": "Spot hidden objects at double the range. "
                         }
                     },
                     "magiclist": {},
@@ -594,7 +586,7 @@
                             "abilitylist": {},
                             "magiclist": {},
                             "price": 0,
-                            "description": "A basic dagger. Most units already carry one."
+                            "description": "A basic dagger. Most units already carry one. "
                         },
                         "Item2": {
                             "name": "Spear",
@@ -616,26 +608,26 @@
                             "abilitylist": {
                                 "Ability1": {
                                     "name": "First Strike",
-                                    "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat."
+                                    "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat. "
                                 },
                                 "Ability2": {
                                     "name": "Unwieldy",
-                                    "description": "A warrior with a spear may only use a shield or a buckler in his other hand. He may not use a second weapon."
+                                    "description": "A warrior with a spear may only use a shield or a buckler in his other hand. He may not use a second weapon. "
                                 },
                                 "Ability3": {
                                     "name": "Cavalry Bonus",
-                                    "description": "If using the rules for mounted models, a mounted warrior armed with a spear receives a +1 Strength bonus when he charges. This bonus only applies for that turn."
+                                    "description": "If using the rules for mounted models, a mounted warrior armed with a spear receives a +1 Strength bonus when he charges. This bonus only applies for that turn. "
                                 }
                             },
                             "magiclist": {},
                             "price": 10,
-                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
+                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves. "
                         }
                     },
                     "experience": 0,
                     "price": 35,
                     "maxcount": 0,
-                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops."
+                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops. "
                 },
                 "Henchman2": {
                     "name": "Spearguard",
@@ -658,7 +650,7 @@
                     "abilitylist": {
                         "Ability1": {
                             "name": "Excellent Sight",
-                            "description": "Spot hidden objects at double the range."
+                            "description": "Spot hidden objects at double the range. "
                         }
                     },
                     "magiclist": {},
@@ -683,7 +675,7 @@
                             "abilitylist": {},
                             "magiclist": {},
                             "price": 0,
-                            "description": "A basic dagger. Most units already carry one."
+                            "description": "A basic dagger. Most units already carry one. "
                         },
                         "Item2": {
                             "name": "Spear",
@@ -705,26 +697,26 @@
                             "abilitylist": {
                                 "Ability1": {
                                     "name": "First Strike",
-                                    "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat."
+                                    "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat. "
                                 },
                                 "Ability2": {
                                     "name": "Unwieldy",
-                                    "description": "A warrior with a spear may only use a shield or a buckler in his other hand. He may not use a second weapon."
+                                    "description": "A warrior with a spear may only use a shield or a buckler in his other hand. He may not use a second weapon. "
                                 },
                                 "Ability3": {
                                     "name": "Cavalry Bonus",
-                                    "description": "If using the rules for mounted models, a mounted warrior armed with a spear receives a +1 Strength bonus when he charges. This bonus only applies for that turn."
+                                    "description": "If using the rules for mounted models, a mounted warrior armed with a spear receives a +1 Strength bonus when he charges. This bonus only applies for that turn. "
                                 }
                             },
                             "magiclist": {},
                             "price": 10,
-                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
+                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves. "
                         }
                     },
                     "experience": 0,
                     "price": 35,
                     "maxcount": 0,
-                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops."
+                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops. "
                 }
             }
         },
@@ -752,7 +744,7 @@
                     "abilitylist": {
                         "Ability1": {
                             "name": "Excellent Sight",
-                            "description": "Spot hidden objects at double the range."
+                            "description": "Spot hidden objects at double the range. "
                         }
                     },
                     "magiclist": {},
@@ -777,7 +769,7 @@
                             "abilitylist": {},
                             "magiclist": {},
                             "price": 0,
-                            "description": "A basic dagger. Most units already carry one."
+                            "description": "A basic dagger. Most units already carry one. "
                         },
                         "Item2": {
                             "name": "Great Sword",
@@ -799,22 +791,22 @@
                             "abilitylist": {
                                 "Ability1": {
                                     "name": "Two Handed",
-                                    "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."
+                                    "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting. "
                                 },
                                 "Ability2": {
                                     "name": "Last Strike",
-                                    "description": "These Double-handed weapons are so heavy that the model using them always strikes last, even when charging."
+                                    "description": "These Double-handed weapons are so heavy that the model using them always strikes last, even when charging. "
                                 }
                             },
                             "magiclist": {},
                             "price": 15,
-                            "description": "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively."
+                            "description": "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively. "
                         }
                     },
                     "experience": 0,
                     "price": 35,
                     "maxcount": 0,
-                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops."
+                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops. "
                 }
             }
         },
@@ -842,7 +834,7 @@
                     "abilitylist": {
                         "Ability1": {
                             "name": "Excellent Sight",
-                            "description": "Spot hidden objects at double the range."
+                            "description": "Spot hidden objects at double the range. "
                         }
                     },
                     "magiclist": {},
@@ -867,7 +859,7 @@
                             "abilitylist": {},
                             "magiclist": {},
                             "price": 0,
-                            "description": "A basic dagger. Most units already carry one."
+                            "description": "A basic dagger. Most units already carry one. "
                         },
                         "Item2": {
                             "name": "Long Bow",
@@ -889,13 +881,13 @@
                             "abilitylist": {},
                             "magiclist": {},
                             "price": 15,
-                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy. "
                         }
                     },
                     "experience": 0,
                     "price": 30,
                     "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships. "
                 }
             }
         },
@@ -923,7 +915,7 @@
                     "abilitylist": {
                         "Ability1": {
                             "name": "Excellent Sight",
-                            "description": "Spot hidden objects at double the range."
+                            "description": "Spot hidden objects at double the range. "
                         }
                     },
                     "magiclist": {},
@@ -948,7 +940,7 @@
                             "abilitylist": {},
                             "magiclist": {},
                             "price": 0,
-                            "description": "A basic dagger. Most units already carry one."
+                            "description": "A basic dagger. Most units already carry one. "
                         },
                         "Item2": {
                             "name": "Long Bow",
@@ -970,13 +962,13 @@
                             "abilitylist": {},
                             "magiclist": {},
                             "price": 15,
-                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy. "
                         }
                     },
                     "experience": 0,
                     "price": 30,
                     "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships. "
                 }
             }
         },
@@ -1004,7 +996,7 @@
                     "abilitylist": {
                         "Ability1": {
                             "name": "Excellent Sight",
-                            "description": "Spot hidden objects at double the range."
+                            "description": "Spot hidden objects at double the range. "
                         }
                     },
                     "magiclist": {},
@@ -1029,7 +1021,7 @@
                             "abilitylist": {},
                             "magiclist": {},
                             "price": 0,
-                            "description": "A basic dagger. Most units already carry one."
+                            "description": "A basic dagger. Most units already carry one. "
                         },
                         "Item2": {
                             "name": "Long Bow",
@@ -1051,13 +1043,13 @@
                             "abilitylist": {},
                             "magiclist": {},
                             "price": 15,
-                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy. "
                         }
                     },
                     "experience": 0,
                     "price": 30,
                     "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships. "
                 }
             }
         },
@@ -1085,7 +1077,7 @@
                     "abilitylist": {
                         "Ability1": {
                             "name": "Excellent Sight",
-                            "description": "Spot hidden objects at double the range."
+                            "description": "Spot hidden objects at double the range. "
                         }
                     },
                     "magiclist": {},
@@ -1110,7 +1102,7 @@
                             "abilitylist": {},
                             "magiclist": {},
                             "price": 0,
-                            "description": "A basic dagger. Most units already carry one."
+                            "description": "A basic dagger. Most units already carry one. "
                         },
                         "Item2": {
                             "name": "Long Bow",
@@ -1132,13 +1124,13 @@
                             "abilitylist": {},
                             "magiclist": {},
                             "price": 15,
-                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy. "
                         }
                     },
                     "experience": 0,
                     "price": 30,
                     "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships. "
                 }
             }
         }

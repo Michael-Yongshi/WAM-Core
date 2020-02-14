@@ -83,9 +83,3 @@ def get_current_warband():
     wbid = Warband.from_dict(datadict)
 
     return wbid
-
-if __name__ == "__main__":
-    wbname = "Uthluan Wyrdbreakers"
-    save_warband(wbname)
-    load_warband(wbname)
-    show_saved_warbands()

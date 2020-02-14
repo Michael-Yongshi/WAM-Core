@@ -1,272 +1,98 @@
-from database.json import (
-    open_json,
-    save_json,
-    )
-
-from class_hierarchy import (
-    Warband,
-    Squad,
-    Character,
-    Hero,
-    Henchman,
-    )
-
-from class_components import (
-    Rule,
-    Treasury,
-    Item,
-    Skill,
-    Ability,
-    Magic,
-    )
-
-def create_characterref():
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "characters_ref.json"
-
-    # Create data file
-    data = {}
-
-    print(f"Created characterfile")
-    save_json(data, filepath)
-
-
-def add_characterref(race, source, category, ishero, skill, abilitylist, magiclist, itemlist, experience, price, maxcount, description):
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "characters_ref.json"
-
-    # open ref json
-    data = open_json(filepath)
-
-    # First check if race already exists
-    if race in data:
-        pass
-    else:
-        data[race] = {}
-
-    # Second check if source already exists
-    if source in data[race]:
-        pass
-    else:
-        data[race][source] = {}
-
-    skilldict = {
-        "movement": skill[0],
-        "weapon": skill[1],
-        "ballistic": skill[2],
-        "strength": skill[3],
-        "toughness": skill[4],
-        "wounds": skill[5],
-        "initiative": skill[6],
-        "actions": skill[7],
-        "leadership": skill[8],
-        "armoursave": skill[9]
-        },
-
-    data[race][source][category]={
-        'race': race,
-        'source': source,
-        'category': category,
-        'ishero': ishero,
-        "skill": skilldict,
-        'abilitylist': abilitylist,
-        'magiclist': magiclist,
-        'itemlist': itemlist,
-        'experience': experience,
-        'price': price,
-        'maxcount': maxcount,
-        'description': description
-    }
-
-    print(f"Added character: {category}")
-    save_json(data, filepath)
-
-
-def get_characterref(race, source, category):
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "characters_ref.json"
-
-    # open ref json
-    data = open_json(filepath)
-
-    # First check if race exists
-    if race in data:
-        # Second check if source exists
-        if source in data[race]:
-            # Third check if character exists
-            if category in data[race][source]: 
-                characterdict = data[race][source][category]
-            else:
-                print(f"Type:{category} does not exist")
-        else:
-            print(f"source {source} does not exist")
-    else:
-        print(f"Race {race} does not exist")
-
-    print(f"Here is data for {category}")
-    print(characterdict)
-    return characterdict
-
-
-
-
-def create_itemref():
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "items_ref.json"
-
-    # Create data file
-    data = {}
-    data["Core Rules"] = {}
-
-    print(f"Created itemfile")
-    save_json(data, filepath)
-
-
-def add_itemref(category, name, distance, skill, abilitylist, magiclist, price, description, source="Manual"):
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "items_ref.json"
-    
-    # open items_ref.json
-    data = open_json(filepath)
-
-    # First check if source already exists
-    if source in data:
-        pass
-    else:
-        data[source] = {}
-
-    skilldict = {
-        "movement": skill[0],
-        "weapon": skill[1],
-        "ballistic": skill[2],
-        "strength": skill[3],
-        "toughness": skill[4],
-        "wounds": skill[5],
-        "initiative": skill[6],
-        "actions": skill[7],
-        "leadership": skill[8],
-        "armoursave": skill[9]
-        },
-
-    # Add data
-    data[source][name]={
-        'category': category,
-        'distance': distance,
-        'skill': skilldict,
-        'abilitylist': abilitylist,
-        'magiclist': magiclist,
-        'price': price,
-        'description': description
-    }
-   
-    print(f"Added item: {name}")
-    save_json(data, filepath)
-
-
-def get_itemref(source, item):
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "items_ref.json"
-
-    # open ref json
-    data = open_json(filepath)
-
-    # First check if source exists
-    if source in data:
-        # Second check if item exists
-        if item in data[source]: 
-            itemdict = data[source][item]
-        else:
-            print(f"Item:{item} does not exist")
-    else:
-        print(f"Source {source} does not exist")
-
-    print(f"Here is data for {item}")
-    print(itemdict)
-    return itemdict
-
-
-
-def create_magicref():
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "magic_ref.json"
-
-    # Create data file
-    data = {}
-    data["Core Rules"] = {}
-
-    print(f"Created magicfile")
-    save_json(data, filepath)
-
-
-def add_magicref(source, category, name, difficulty, description):
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "magic_ref.json"
-    
-    # open magics_ref.json
-    data = open_json(filepath)
-
-    # First check if source already exists
-    if source in data:
-        pass
-    else:
-        data[source] = {}
-
-    # Second check if category already exists
-    if category in data[source]:
-        pass
-    else:
-        data[source][category] = {}
-
-    # Add data
-    data[source][category][name]={
-        'difficulty': difficulty,
-        'description': description
-    }
-   
-    print(f"Added magic: {name}")
-    save_json(data, filepath)
-
-
-def get_magicref(source, category, name):
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "magic_ref.json"
-
-    # open ref json
-    data = open_json(filepath)
-
-    # First check if source exists
-    if source in data:
-        if category in data[source]:
-            # Third check if magic exists
-            if name in data[source][category]: 
-                magicdict = data[source][category][name]
-            else:
-                print(f"magic:{name} does not exist")
-        else:
-            print(f"Category: {category} does not exist")
-    else:
-        print(f"Source {source} does not exist")
-
-    print(f"Here is data for {name}")
-    print(magicdict)
-    return magicdict
+from source.reference_methods import (
+    create_warbandref,
+    create_characterref,
+    create_itemref,
+    create_magicref,
+    add_warbandref,
+    add_characterref,
+    add_itemref,
+    add_magicref,
+    get_warbandref,
+    get_characterref,
+    get_itemref,
+    get_magicref,
+)
 
 
 if __name__ == "__main__":
+    create_warbandref()
+    
+    add_warbandref(
+        race = "Human",
+        source = "Core Rules",
+        name = "Reikland",
+        rulelist = [
+            {"name": "Excellent Leadership", "description": "Reikland Mercenaries are accustomed to the demands of military discipline and have a strongly developed loyalty between officers and men. To represent this, fighters may use their Captain’s Leadership if within 12 inch rather than the usual 6 inch."}, 
+            {"name": "Trained Marksmen", "description": "A strong tradition of martial training is also responsible for the high standards of archery amongst the people of Reikland. All Marksmen therefore start with 4 of Ballistic Skill instead of the normal 3, whether they are recruited when the warband is first formed or added later."}, 
+        ],
+        description = (
+            "Reikland lies at the heart of the Empire and its greatest city is Altdorf, home of the Grand Theogonist and seat of the Temple of Sigmar. Reiklanders are devout followers of Sigmar, the founder, first Emperor, and patron god of the Empire."
+            "The Grand Prince of Reikland (as Siegfried, the ruler of Reikland, styles himself) is supported in his claim to the throne by the Grand Theogonist and opposed most strongly by the Count of Middenheim and the Priests of Ulric."
+            "Throughout the Empire Reiklanders are commonly supposed to embody the discipline and loyalty of the professional warrior. Brave and well-versed in the arts of war, Reiklanders disdain fashionable clothing in favour of well-made and practical wargear." 
+            "In battle they often wear coloured ribbons as marks of identification or authority. They are justly proud of their dynamic and ambitious Grand Prince and contemptuous of other claimants to the throne, especially the Count of Middenheim, Mannfred Todbringer, whom they sneeringly call the ‘lap-dog of Ulric’."
+            "<i>-Ah, Reiklanders, the finest of men! Disciplined, magnificent archers and good, solid warriors! Reiklanders need the best leaders, so you’d better shape up boy! For these warriors are good at almost all the skills of war, and they are more likely to hold their nerve than others in Mordheim.-</i>"
+        ),
+    )
+    add_warbandref(
+        race = "Human",
+        source = "Core Rules",
+        name = "Middenheim",
+        rulelist = [
+            {"name": "Body Builders", "description": "The men of Middenheim are famous for their physical prowess. To represent their advantage in size and bulk, the Champions and Captains of a Middenheim warband start with Strength 4 instead of 3."}, 
+        ],
+        description = (
+            "Middenheim stands on a mountain pinnacle surrounded by dark forest in the centre of Middenland, and is also known as the City of the White Wolf after Ulric, the old god of wolves and winter. The Priesthood of Ulric is still strong in Middenheim where Ulric is venerated as the patron of the city."
+            "The tradition of rivalry between Middenheim and Reikland goes back hundreds of years, and the Count of Middenheim, Mannfred Todbringer, is one of the chief contenders for the Emperor’s throne. As a result there has always been a great deal of friction between Middenheimers and the Temple of Sigmar."
+            "Middenheimers are typically large, strongly built men with a well deserved reputation for ferocity. Many wear wolf pelts which custom decrees to be the mark of those who have slain a wolf with their own hands. These grim warriors are famously contemptuous of danger."
+            "They frequently go into battle bare-headed, scoffing at those who choose, for reasons of good sense, to wear helmets. As Middenheimers favour long hair and beards their lack of headgear makes them look especially fierce when they charge upon their enemies howling their brutal battle-cries."
+            "<i>-These Northerners are nutters, madmen, berserkers! They are as strong as Ogres and meaner than Orcs. Watch out for them in close quarters – the chances are they’ll crush your skull with a hammer or behead you with one of those hefty axes they carry around with them.-</i>"
+        ),
+    )
+    add_warbandref(
+        race = "Human",
+        source = "Core Rules",
+        name = "Marienburg",
+        rulelist = [
+            {"name": "Natural Traders", "description": "As natural traders with contacts in the merchant guilds Marienburg warbands receive a +1 bonus when attempting to find rare items (see the Trading section for rules). To reflect their enormous wealth Marienburgers start off with an extra 100 gold crowns (600 in total) when fighting in a campaign. In a one-off game they are permitted an extra 20 percent gold crowns when recruiting a warband. For example, in a 1,000 gold crown game a Marienburger warband will have 1,200gc."}, 
+        ],
+        description = (
+            "Marienburg is the largest and most prosperous trading city in the Old World. Many call it the City of Gold which alone conveys a good idea of the wealth of this sprawling cosmopolitan city."
+            "Nowhere else can be found the vast array of shops selling goods from as far away as the Elven kingdoms of Ulthuan in the west and distant Cathay in the east. The city’s craftsmen represent every skill known to man, and a few others beside, so that it is said in Marienburg there is no activity that cannot be quickly turned to profit."
+            "Many mercantile guilds have their headquarters in Marienburg, most important of all the secretive High Order of Honourable Freetraders which represents the elite amongst mercantile society. This large, rich, and ambitious body of men feel themselves shackled by the old order and are eager to seize power for themselves."
+            "Their champion for the Emperor’s throne is the Lady Magritta. Thanks to the unseen influence of Freetraders throughout the Empire all the minor Electors were persuaded to support the Lady Magritta’s claim. It was only the Grand Theogonist’s refusal to crown her that denied Marienburg the throne driving a wedge between the City of Gold and the Temple of Sigmar."
+            "Warbands sent to Mordheim are sumptuously dressed and armed. Though Marienburgers are often ridiculed as foppish and effete, their skill at arms and complete ruthlessness has earned them grudging respect. Their chief skills lie in duelling and in the use of poisons and other clandestine fighting methods. Richer individuals dress flamboyantly and wear jewellery."
+            "However, the bulk of most warbands are recruited from the dockland thugs, ships’ crews, and stevedores who favour a simpler appearance: leather coats, bandanas and short swords that are easy to conceal."
+            "<i>-Don’t let their fancy clothes and flash jewellery fool you, though. They’re not wearing those weapons just for show, they know how to use them as well!-</i>"
+        ),
+    )
+    add_warbandref(
+        race = "Chaos Human",
+        source = "Core Rules",
+        name = "The Cult of the Possessed",
+        rulelist = [],
+        description = (
+            "There is never any shortage of men willing to risk their lives for a chance of real power: men whose ambitions lie beyond the scope of their birthright, or whose sorcerous skills or physical deformities place them in constant danger of persecution. What do such men have to lose if they pledge their souls to the dark gods of Chaos!"
+            "In the aftermath of the destruction of Mordheim all manner of mutants have appeared whilst many hitherto unblemished folk feel the stirring of strange powers, the first awakenings of magical gifts destined to bring them to a fiery death at the hands of the Witch Hunters. Now a leader has appeared, a new Dark Emperor, who claims lordship of the City of the Damned."
+            "He is called the Shadowlord, Master of the Possessed, and followers of the cults of Chaos gather from all over the Empire to pledge their souls to him. Though none know whether he is man or Daemon all proclaim him their saviour and eagerly seek to do his bidding. As all students of the dark arts know, it is by the power of magic that creatures such as Daemons and spirits are able to stalk the mortal world."
+            "The wyrdstone that proliferates in Mordheim grants unnatural life to many vile things that by all natural rights should never exist. The Possessed were once men but by surrendering themselves wholly to the dark gods they have allowed Daemons to possess their bodies. Their appearance is horrific – corrupted from within, their flesh is twisted into a new and monstrous form."
+            "With the power of the Possessed behind them the followers of the Shadowlord have grown powerful in Mordheim. In the Massacre of Silver Street the Cult of the Possessed ambushed and destroyed a large force sent in to hunt them down. Now the streets of Mordheim belong to the Shadowlord and his servants. The contaminated air does not affect them at all or, more likely, it nourishes their inner corruption."
+            "Men who venture into Mordheim alone are hunted down and sacrificed to the dark gods. All warbands of the Possessed gather wyrdstone for the Shadowlord who remains hidden in the Pit where he is said to be guarded by titanic Possessed the size of houses. A few shards of the precious stone are kept by the warbands and used to create more of the Possessed. Cult of the possessed."
+            "The leaders of cult warbands are called Magisters and each leads a group of cultists: minions of the dark gods of Chaos. These are men whose hunger for power knows no bounds, who willingly give their bodies over to possession. All take part in the blood sacrifices, dark rituals, and worship of Daemons – nothing is too base for them!"
+            "These degenerate humans are joined by other creatures as vile as they – things half-man half-beast that call themselves Gors, and which men refer to as Beastmen. There are few sights as horrific as a cult warband. Deranged warriors smeared with blood and dirt wave jagged weapons and chant blasphemous rites as they throw themselves upon their foes."
+            "Many are hardly recognisable as human, their bodies are so scarred and disfigured. The stigmata of mutation is borne by most, but the most unsettling of all are the Possessed themselves – melded flesh made of men, beasts, and metal driven by the implacable will of a Daemon."
+            "<i>-The Possessed. The Damned. The bogeymen. These scum are the worst of the worst. They are dangerous creatures, perhaps more so than any other group in the entire city. This Chaos-worshipping scum consists of mutants, Beastmen and cultists, and even worse things called the Possessed. If you ever let them get close to you, you’ll be in big trouble – there are few who are a match for this scum in close quarters.-</i>"
+        ),
+    )
+    get_warbandref(
+        race = "Human",
+        source = "Core Rules",
+        name = "Reikland",
+    )
     create_characterref()
-    # Add Reikland warband
+    # Add Reikland characters
     add_characterref(
         race = "Human",
-        source = "Reikland",
+        source = "Core Rules - Reikland",
         category = "Mercenary Captain",
         ishero = True,
         skill = [4, 4, 4, 3, 3, 1, 4, 1, 8, 0],
@@ -284,7 +110,7 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Reikland",
+        source = "Core Rules - Reikland",
         category = "Champion",
         ishero = True,
         skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -300,7 +126,7 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Reikland",
+        source = "Core Rules - Reikland",
         category = "Youngblood",
         ishero = True,
         skill = [4, 2, 2, 3, 3, 1, 3, 1, 6, 0],
@@ -316,7 +142,7 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Reikland",
+        source = "Core Rules - Reikland",
         category = "Warrior",
         ishero = False,
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -332,7 +158,7 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Reikland",
+        source = "Core Rules - Reikland",
         category = "Marksman",
         ishero = False,
         skill = [4, 3, 4, 3, 3, 1, 3, 1, 7, 0],
@@ -348,7 +174,7 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Reikland",
+        source = "Core Rules - Reikland",
         category = "Swordsman",
         ishero = False,
         skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -365,10 +191,10 @@ if __name__ == "__main__":
         description = "Swordsmen are professional warriors, experts at taking on and beating several opponents at once. They are much sought after by warband leaders, as their skills are ideally suited for fighting in Mordheim."
         )
 
-    # Add Middenheim warband
+    # Add Middenheim characters
     add_characterref(
         race = "Human",
-        source = "Middenheim",
+        source = "Core Rules - Middenheim",
         category = "Mercenary Captain",
         ishero = True,
         skill = [4, 4, 4, 4, 3, 1, 4, 1, 8, 0],
@@ -386,7 +212,7 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Middenheim",
+        source = "Core Rules - Middenheim",
         category = "Champion",
         ishero = True,
         skill = [4, 4, 3, 4, 3, 1, 3, 1, 7, 0],
@@ -402,7 +228,7 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Middenheim",
+        source = "Core Rules - Middenheim",
         category = "Youngblood",
         ishero = True,
         skill = [4, 2, 2, 3, 3, 1, 3, 1, 6, 0],
@@ -418,7 +244,7 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Middenheim",
+        source = "Core Rules - Middenheim",
         category = "Warrior",
         ishero = False,
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -434,7 +260,7 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Middenheim",
+        source = "Core Rules - Middenheim",
         category = "Marksman",
         ishero = False,
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -450,7 +276,7 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Middenheim",
+        source = "Core Rules - Middenheim",
         category = "Swordsman",
         ishero = False,
         skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -467,10 +293,10 @@ if __name__ == "__main__":
         description = "Swordsmen are professional warriors, experts at taking on and beating several opponents at once. They are much sought after by warband leaders, as their skills are ideally suited for fighting in Mordheim."
         )
 
-    # Add Marienburg warband
+    # Add Marienburg characters
     add_characterref(
         race = "Human",
-        source = "Marienburg",
+        source = "Core Rules - Marienburg",
         category = "Mercenary Captain",
         ishero = True,
         skill = [4, 4, 4, 3, 3, 1, 4, 1, 8, 0],
@@ -488,7 +314,7 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Marienburg",
+        source = "Core Rules - Marienburg",
         category = "Champion",
         ishero = True,
         skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -504,7 +330,7 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Marienburg",
+        source = "Core Rules - Marienburg",
         category = "Youngblood",
         ishero = True,
         skill = [4, 2, 2, 3, 3, 1, 3, 1, 6, 0],
@@ -520,7 +346,7 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Marienburg",
+        source = "Core Rules - Marienburg",
         category = "Warrior",
         ishero = False,
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -536,7 +362,7 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Marienburg",
+        source = "Core Rules - Marienburg",
         category = "Marksman",
         ishero = False,
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -552,7 +378,7 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Marienburg",
+        source = "Core Rules - Marienburg",
         category = "Swordsman",
         ishero = False,
         skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -568,8 +394,116 @@ if __name__ == "__main__":
         maxcount = 5,
         description = "Swordsmen are professional warriors, experts at taking on and beating several opponents at once. They are much sought after by warband leaders, as their skills are ideally suited for fighting in Mordheim."
         )
+    
+    # Add the possessed
+    add_characterref(
+        race = "Chaos Human",
+        source = "Core Rules - The Cult of the Possessed",
+        category = "Magister",
+        ishero = True,
+        skill = [4, 4, 4, 3, 3, 1, 3, 1, 8, 0],
+        abilitylist = [
+            {"name": "Leader", "description": "Any models in the warband within 6 inch of the Magister may use his Leadership instead of their own."},
+            {"name": "Chaos Ritualist", "description": "The Magister is a wizard and uses Chaos Rituals. See the Magic section for details."},
+            ],
+        magiclist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
+        experience = 20,
+        price = 70,
+        maxcount = 1,
+        description = "Magisters lead the covens of the Possessed. They have been granted magical powers by their patron gods. They are fanatical followers of the Dark gods, utterly dedicated to bringing Chaos to the world."
+        )
+    add_characterref(
+        race = "Chaos Human",
+        source = "Core Rules - The Cult of the Possessed",
+        category = "Possessed",
+        ishero = True,
+        skill = [5, 4, 0, 4, 4, 2, 4, 2, 7, 0],
+        abilitylist = [
+            {"name": "Unarmed and Unarmoured", "description": "The Possessed never use weapons or armour."},
+            {"name": "Fear", "description":" The Possessed are terrifying, twisted creatures and therefore cause fear. See the Psychology section for details."},
+            {"name": "Mutations", "description": "Possessed may start the game with one or more mutations each. See the Mutations list over the page for costs."},        
+        ],
+        magiclist = [],
+        itemlist = [],
+        experience = 8,
+        price = 90,
+        maxcount = 2,
+        description = "The Possessed have committed the greatest of heresies: they have given their bodies to Daemons. As a result, they are nightmarish creatures, a melding of flesh, metal and black magic. Inside them lives a supernatural thing of evil, a Daemon from the dark reaches of the Realm of Chaos."
+        "The powerful spirit of a Daemon can meld several creatures together, be they men or animals, into a multi-faceted horror. These monstrous Possessed are perhaps the most dangerous of the creatures of Mordheim, and certainly the most loathsome and dreadful."
+        )
+    add_characterref(
+        race = "Chaos Human",
+        source = "Core Rules - The Cult of the Possessed",
+        category = "Mutant",
+        ishero = True,
+        skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
+        abilitylist = [
+            {"name": "Mutations", "description": "Mutants must start the game with one or more mutations each. See the Mutations list over the page for the cost."},
+            ],
+        magiclist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
+        experience = 0,
+        price = 25,
+        maxcount = 2,
+        description = "Mutants are revered as the favoured ones of the Dark gods, their physical disfigurements marking out the vileness of their soul. They come in many shapes and sizes, each more bizarre than the next."
+        )
+    add_characterref(
+        race = "Chaos Human",
+        source = "Core Rules - The Cult of the Possessed",
+        category = "Darksoul",
+        ishero = False,
+        skill = [4, 2, 2, 4, 3, 1, 3, 1, 6, 0],
+        abilitylist = [
+            {"name": "Crazed", "description":"Darksouls have been driven insane by daemonic possession and know no fear. They automatically pass any Leadership tests they are required to take."},
+        ],
+        magiclist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
+        experience = 0,
+        price = 35,
+        maxcount = 5,
+        description = "Darksouls are men who have been driven insane by the daemonic possession which became all too common after the destruction of Mordheim. The Daemons have left the bodies of these men, but their minds have been scarred by the horror of the experience. Their insane strength makes Darksouls dangerous fighters. The Cultists regard them as holy men, and let them work out their unreasoning rage in battle. In their tortured minds the Darksouls believe themselves to be Daemons. They wear leering daemonic masks and garb themselves in armour and clothing resembling the scaled skin of Daemons."
+        )
+    add_characterref(
+        race = "Chaos Human",
+        source = "Core Rules - The Cult of the Possessed",
+        category = "Brethren",
+        ishero = False,
+        skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
+        abilitylist = [],
+        magiclist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
+        experience = 0,
+        price = 25,
+        maxcount = 0,
+        description = "Brethren are the crazed human followers of the cults of the dark gods, eager to descend into damnation. Their vile deeds and unspeakable acts have driven them to the brink of insanity."
+        )
+    add_characterref(
+        race = "Chaos Human",
+        source = "Core Rules - The Cult of the Possessed",
+        category = "Beastman",
+        ishero = False,
+        skill = [4, 4, 3, 3, 4, 2, 3, 1, 7, 0],
+        abilitylist = [],
+        magiclist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."}
+        ],
+        experience = 0,
+        price = 45,
+        maxcount = 3,
+        description = "Beastmen are mutated monstrosities that infest the forests of the Empire: massive horned creatures with an inhuman resistance to pain. The destruction of Mordheim brought many Beastmen into the ruined city to prey upon the survivors. They readily ally with the Magisters of the Possessed warbands."
+        )
 
-    # High Elves warband from the other website
+    # High Elves characters from the other website
     add_characterref(
         race = "High Elf",
         source = "Broheim - High Elves",
@@ -578,11 +512,9 @@ if __name__ == "__main__":
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 9, 0],
         abilitylist = [
             {"name": "Excellent Sight", "description":"Spot hidden objects at double the range."},
-            {"name": "High Elven Magic", "description":"Character is able to use High Elven magic."}
+            {"name": "High Elven Magician", "description":"Character is able to use High Elven magic."}
             ],
-        magiclist = [
-            {"source": "High Elves", "category": "High Elven Magic", "name": "Fiery Wrath", "difficulty": 8, "description": "With one delicate movement the Elven Mage traces an intricate Sigil of Flame in the air. Range 12 inch. May be cast on any model within range. The target is hit with Strength 4. Any models within 3 inch of the target model suffer a Strength 3 hit on a D6 roll of 4+. Take armour saves as normal."}
-        ],
+        magiclist = [],
         itemlist = [
             {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one."},
             {"name": "Wyrdbreaker", "category": "Other", "source": "Core Rules", "distance": 0, "description": "test"},
@@ -1039,7 +971,7 @@ if __name__ == "__main__":
         description = "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
     )
 
-    #  Specific Broheim - High Elves warband items
+    #  Specific Broheim - High Elves items
     add_itemref(
         source = "Broheim - High Elves",
         category = "Melee Weapon",
@@ -1127,31 +1059,30 @@ if __name__ == "__main__":
 # data['abilities_ref'] = []
 # data['abilities_ref'].append({
 #     'name': 'High Sorcery',
-#     'restriction': 'High Elves, Loremaster',
+#     'restriction': 'High Elf, Loremaster',
 #     'desc': 'A Loremaster’s knowledge of magic goes far beyond that of any other race. When an enemy spellcaster successfully casts a spell the Loremaster may attempt to dispel it. If the Loremaster rolls greater then his opponent’s casting roll for the spell then it is dispelled. Only the Loremaster may have this skill.'
 # })
 # data['abilities_ref'].append({
 #     'name': 'Stand and Fire',
-#     'restriction': 'High Elves',
+#     'restriction': 'High Elf',
 #     'desc': 'If the Elf passes a leadership test he may choose to stand and fire at a charging opponent. The Elf suffers a –1 penalty to hit and may only fire once, at a single opponent. If his opponent is knocked down or stunned, place him halfway between the Elf and where he started from (or in view if he was out of sight).'
 # })
 # data['abilities_ref'].append({
 #     'name': 'Miniath',
-#     'restriction': 'High Elves',
+#     'restriction': 'High Elf',
 #     'desc': 'The Elf has been trained in the martial art of the White Tower known as Miniath, allowing him to parry with any weapon. If he has a weapon that he can parry with he gains an additional parry attempt.'
 # })
 # data['abilities_ref'].append({
 #     'name': 'Unerring Strike',
-#     'restriction': 'High Elves',
+#     'restriction': 'High Elf',
 #     'desc': 'The Elf is an expert at delivering deadly accurate blows. He may re-roll any failed to wound rolls.'
 # })
 # data['abilities_ref'].append({
 #     'name': 'Fey Quickness',
-#     'restriction': 'High Elves',
+#     'restriction': 'High Elf',
 #     'desc': 'Few can ever hope to match an Elf’s inhuman quickness and agility. An Elf with Fey Quickness can avoid melee or missile attacks on a roll of 6. If the Elf also has Step Aside or Dodge this will increase to a 4+ in the relevant area. For example, an Elf with Fey Quickness and Step Aside avoids melee attacks on a 4+ and missile attacks on a 6.'
 # })
 
 # with open('database/references/abilities_ref.json', 'w') as outfile:
 #     json.dump(data, outfile, indent=4)
-
 

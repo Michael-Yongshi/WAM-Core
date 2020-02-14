@@ -19,16 +19,20 @@ GUI performance
 https://stackoverflow.com/questions/47062681/pyqt5-addstretch-in-between-widgets
 - converge create item boxes as we use them in both warband as current unit box.
 
+Class addition
+- Chaos need a way to get mutations (as abilities?)
+- wizards need a way to get magic
+
 References
 - some info in references can't be showed as its not part of the classes, i.e. character category, price, etc.
 
-Import wildcards
-- Remove the wildcards from the import statements
+<!-- Import wildcards
+- Remove the wildcards from the import statements -->
 
-Inventory and items
-- Split inventory again in Treasury object and in an itemlist seperately, as only the warband itself can have gold and wyrd, it makes for more elegancy to split these, although should have no practical implications
+<!-- Inventory and items
+- Split inventory again in Treasury object and in an itemlist seperately, as only the warband itself can have gold and wyrd, it makes for more elegancy to split these, although should have no practical implications -->
 
-Generate overviews of warband, herolists, squads, etc. easily.
+<!-- Generate overviews of warband, herolists, squads, etc. easily. -->
 
 Add events
 - Characters decorative events
@@ -36,7 +40,7 @@ Add events
 - Item decorative events
 
 Unique names
-- Item name change, although this is kind of already possible
+- Item name change for decorative purposes
 - Henchman, similar to item name change
 
 ## Getting Started

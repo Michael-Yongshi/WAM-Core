@@ -92,14 +92,6 @@ if __name__ == "__main__":
             "<i>-The Possessed. The Damned. The bogeymen. These scum are the worst of the worst. They are dangerous creatures, perhaps more so than any other group in the entire city. This Chaos-worshipping scum consists of mutants, Beastmen and cultists, and even worse things called the Possessed. If you ever let them get close to you, you’ll be in big trouble – there are few who are a match for this scum in close quarters.-</i>"
         ),
     )
-
-# Mutations
-# Cult of the possessed
-# Mutations may be bought for a Mutant or a Possessed warrior only when they are recruited; you may not buy new mutations for a model after recruitment. Any Mutant or Possessed may have one or more mutations. The first mutation is bought at the price indicated, but second and subsequent mutations bought for the same model cost double.
-# Those who dwell in Mordheim soon develop horrible mutations, and the Cult of the Possessed seem to be especially susceptible. In addition, Mordheim attracts mutants from all over the Empire, who are always quick to join the Chaos covens. Most mutations are simply inconvenient or hideous, but some make their bearers extremely dangerous in combat.
-# daemon soul A Daemon lives within the mutant’s soul. This gives him a 4+ save against the effects of spells or prayers. Cost: 20 gold crowns. great claw One of the mutant’s arms ends in a great, crab-like claw. He may carry no weapons in this arm, but gains an extra attack in hand-to-hand combat with a +1 Strength bonus. Cost: 50 gold crowns. cloven hoofs The warrior gains +1 Movement. Cost: 40 gold crowns
-# tentacle One of the mutant’s arms ends in a tentacle. He may grapple his opponent in close combat to reduce his attacks by -1, down to a minimum of 1. The mutant may decide which attack his opponent loses. Cost: 35 gold crowns blackblood If the model loses a wound in close combat, anyone in base contact with the model suffers a Strength 3 hit (no critical hits) from the spurting corrosive blood. Cost: 30 gold crowns spines Any model in base contact with the mutant suffers an automatic Strength 1 hit at the beginning of each close combat phase. Spines will never cause critical hits. Cost: 35 gold crowns scorpion tail The mutant has a long barbed tail with a venomed tip, allowing him to make an extra Strength 5 attack in each hand-to-hand combat phase. If the model hit by the tail is immune to poison, the Strength of the hit is reduced to 2. Cost: 40 gold crowns extra arm The mutant may use any single-handed weapon in the extra arm, giving him +1 attack when fighting in hand-to-hand combat. Alternatively, he may carry a shield or a buckler in the extra arm. If a Possessed chooses to do this, he gains an extra attack but still cannot carry a weapon. Cost: 40 gold crowns hideous The mutant causes fear. See the Psychology section for details. Cost: 40 gold crowns
-    
     add_warbandref(
         race = "Human",
         source = "Core Rules",
@@ -166,6 +158,40 @@ if __name__ == "__main__":
             "Instead, he has sent small warbands of Skaven skittering through secret tunnels into the city to gather up the shining stones and bring them back to the clan nests. The Skaven of Clan Eshin are supremely adapted to their task. Masters of the art of bringing silent death to their foes, they are skilled in the use of poison and trained in the thousand secrets of the assassin. "
             "Since birth Skaven warriors practise martial crafts in the ruinous temples of the Horned Rat, their everhungering and hideous god. There are none better amongst their verminous kind to gather up the treasure of Mordheim, but they must be silent, swift and efficient. Were rival Skaven clans to discover the secret of Mordheim there would come not hundreds, not thousands, but millions upon millions to contend for the wyrdstone in the City of the Damned."
             "<i>-These are no ordinary vermin - big as a man, fast on their feet, and smart too, not like common rats. The whole city’s full of ’em and the worse of it is they’re waitin’ in the old drains and sewers, watchin’ for a chance to catch you on your own. Let ’em and you’re a dead man.-</i>"
+        ),
+    )
+    add_warbandref(
+        race = "High Elf",
+        source = "Broheim - High Elves",
+        name = "High Elves",
+        rulelist = [
+            {"name": "Excellent Sight", "description": "Elves have eyesight unmatched by mere humans. Elves spot Hidden enemies from two times as far away as other warriors (ie, twice their Initiative value in inches)."}, 
+            {"name": "Haughty", "description": "The High Elves are a very proud and noble race. A High Elf Warband may never include hired swords that are not of High Elven blood, nor can they use any equipment of Dwarf origin. This includes Gromril weapons and armour."},
+            {"name": "Honourable", "description": "High Elves can never use poison or drugs of any kind no matter what the circumstance."},
+            {"name": "The Old Ways", "description": "The High Elves may never use black powder weapons of any sort. This goes against their ancestors and the traditions of the Old Ways."},
+            {"name": "Resolve", "description": "The High Elves have been fighting the Dark Elves for countless centuries. When fighting their dark kin the High Elves are driven by unwavering determination. They are considered to have a Leadership of 10 when taking Rout Tests against the Dark Elves. In addition, High Elves can never choose to voluntarily Rout as they must stop their evil kin at any cost."},
+        ],
+        description = (
+            "The Citadel of Dusk was built for the dual purpose of guarding the seaways off the east coast of Lustria against incursions from the rest of the world, and as a staging post from which the High Elves could watch the movements of the Lizardmen and their Slann masters. Despite the High Elves’ best efforts to keep Lustria free of human adventurers, the people of the Old World have been dogged in their attempts to penetrate Ulthuan’s extensive naval web and explore the jungle continent. "
+            "So far the mighty Slann Mages have not appeared unduly concerned by the constant incursions onto their lands by the greedy peoples of the Old World and Naggaroth, and appear to have done little to prevent these predatory races from returning. Yet the High Elves know that despite the Slann`s relative calm in the face of these constant raids, the patience of ancient Mage-Priests is not limitless. "
+            "The Elves fear that the Slann might one day rouse themselves from their century-long meditations to make a concerted effort to end any and all threats to the continuation of their culture as the inheritors of the Old Ones. If the Slann were to throw all their intellect and resources into total war, they could conceivably wipe out whole nations before they could be stopped, such is their awesome power. "
+            "Fearing for their own survival as much as anything else, the High Elves have taken it upon themselves to keep Lustria secure from the predations of all other races, and protect the ancient secrets left behind by the Old Ones that the Slann safeguard. The High Elves` cause has not been helped by the many fantastic stories that persist throughout the Old World; stories of lost cities made entirely of gold lying hidden within its dense foliage, just waiting to be discovered and plundered."
+        ),
+    )
+    add_warbandref(
+        race = "High Elf",
+        source = "Broheim - High Elves",
+        name = "Wyrdbreakers",
+        rulelist = [],
+        description = (
+            "High Elves originate from the island kingdom of Ulthuan far to the west of the Empire, which is belaugered continuously by raids from their hated Dark Elven brethren, the fearless Norscans, and the incursions of Chaos which rack all civilized lands. "
+            " The fair elven folk learn how to fight from childhood, and thanks to their extremely long lifespans they often grow in skill to become unrivaled in their prowess by other mortals. Despite their individual ability, their numbers are few compared to their co-inhabitants of the Old World and they are always in search of some edge with which to gain an advantage over their foes."
+            " Thus the High Elves are unrivaled practitioners of the arcane arts and their specialized school of Spell craft is so highly regarded it is referred to simply as the High Magic by other Wizards. The Elven Mages are very proficient at many aspects of Magic, including astrology and the prediction of what is to come. So it was that the coming of the comet known in the Empire as the Hammer of Sigmar was not a suprise to the inhabitants of Ulthuan."
+            " The Loremasters foretold the great power it would bring in the form of wyrdstone, but also the danger as they knew the substance was riddled with the Chaos taint and would spread the evils of corruption to all new levels. Therefore the Pheonix King, advised by the Loremasters, issued a decree: Wyrdstone must be destroyed whenever possible, and any brave enough to undertake the hardships of travel across the lands of the Humans and to bear the dangers of the Damned city to seek out and destroy the Chaos-tainted stones would be forever honored in the lands of the Elves."
+            " From across the provinces bands of young would-be heroes volunteered to pledge their blades to the Kings edict, and the Loremasters dispatched many apprentices to accompany them in their journey and lead them to the fell substance. Furthermore the Loremasters crafted magical devices called Wyrd-breakers to counter the Chaos taint of the wyrdstone and render the substance into more mundane gemstones thereby effectively destroying the wyrdstone but still allowing the Elves a source of revenue. Each of the young mages was given one and sent forth to rid the world of the taint of wyrdstone."
+            "<i>-Based on the premise of the high elves seeing wyrdstones as chaos instruments. However as Mordheim lays in outside territory and wanting to avoid full scale war, Tyrion together with Tectic ordered their generals to organise small autonomous and selfsufficient companies. These small companies could travel on unofficial grounds, protecting elven world from warring with the Empire."
+            "These companies will act without any link to the elven homeworld and such are not able to get more support from the elven lands beside a starting supply. The companies are given a wyrdstone breaker to turn wyrdstone in mere gems to sell off. These companies are not trusting anyone except the ones from true high elf origin. "
+            "loremaster, in the noble high elves kingdom of asuryan. These warbands of high elves dress to move under cover and not get too much notice in the chaotic region of mordheim, as high elves are not generally liked and allies are slim. Although their many high elves traits like their fair skin or the light weapons and armour they carry do not make that easy.-</i>"
         ),
     )
 
@@ -1044,7 +1070,6 @@ if __name__ == "__main__":
         ishero = True,
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 9, 0],
         abilitylist = [
-            {"name": "Excellent Sight", "description":"Spot hidden objects at double the range. "},
             {"name": "High Elven Magician", "description":"Character is able to use High Elven magic. "}
             ],
         magiclist = [],
@@ -1063,7 +1088,7 @@ if __name__ == "__main__":
         category = "Ranger",
         ishero = True,
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 8, 0],
-        abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range. "}],
+        abilitylist = [],
         magiclist = [],
         itemlist = [
             {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
@@ -1079,7 +1104,7 @@ if __name__ == "__main__":
         category = "Sword Warden",
         ishero = True,
         skill = [5, 5, 4, 3, 3, 1, 6, 1, 8, 0],
-        abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range. "}],
+        abilitylist = [],
         magiclist = [],
         itemlist = [
             {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
@@ -1095,7 +1120,7 @@ if __name__ == "__main__":
         category = "Seaguard",
         ishero = False,
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 8, 0],
-        abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range. "}],
+        abilitylist = [],
         magiclist = [],
         itemlist = [
             {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
@@ -1111,7 +1136,7 @@ if __name__ == "__main__":
         category = "Cadet",
         ishero = False,
         skill = [5, 3, 3, 3, 3, 1, 5, 1, 8, 0],
-        abilitylist = [{"name": "Excellent Sight", "description":"Spot hidden objects at double the range. "}],
+        abilitylist = [],
         magiclist = [],
         itemlist = [
             {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
@@ -1628,10 +1653,10 @@ if __name__ == "__main__":
 # 30
 # Skaven Heroes may choose to use the following Skill list instead of any of the standard Skill tables available to them. black hunger The Skaven can draw upon the dreaded Black Hunger, the fighting frenzy which gives him unnatural strength and speed but can ravage him from inside. The Skaven Hero may declare at the beginning of his turn that he is using this skill. The Hero may add +1 attack and +D3" to the total move to his profile for the duration of his own turn but will suffer D3 S3 hits with no armour save possible at the end of the turn. tail fighting The Skaven may wield a shield, knife or a sword with its tail. The model gains an extra attack with the appropriate weapon or a +1 bonus to its armour save. wall runner The Skaven does not need to take an Initiative test when climbing up walls and other sheer surfaces. infiltration A Skaven with this skill is always placed on the battlefield after the opposing warband and can be placed anywhere on the table as long as it is out of sight of the opposing warband and more than 12" away from any enemy model. If both players have models which infiltrate, roll a D6 for each, and the lowest roll sets up first. art of silent death The Skaven has patiently mastered the deadly art of open-hand fighting, as taught by the mystics of Cathay in the temples of the far East. In hand-to-hand combat, the Skaven can fight with his bare paws without any penalties and counts as having two weapons (ie, +1 attack). In addition, a Skaven Hero with this skill will cause a critical hit on a To Wound roll of 5-6 instead of just 6. This skill may be used in conjunction with the Eshin Fighting Claws (+2 Attacks instead of +1).
 
-
 # Mutations
 # Cult of the possessed
 # Mutations may be bought for a Mutant or a Possessed warrior only when they are recruited; you may not buy new mutations for a model after recruitment. Any Mutant or Possessed may have one or more mutations. The first mutation is bought at the price indicated, but second and subsequent mutations bought for the same model cost double.
 # Those who dwell in Mordheim soon develop horrible mutations, and the Cult of the Possessed seem to be especially susceptible. In addition, Mordheim attracts mutants from all over the Empire, who are always quick to join the Chaos covens. Most mutations are simply inconvenient or hideous, but some make their bearers extremely dangerous in combat.
 # daemon soul A Daemon lives within the mutant’s soul. This gives him a 4+ save against the effects of spells or prayers. Cost: 20 gold crowns. great claw One of the mutant’s arms ends in a great, crab-like claw. He may carry no weapons in this arm, but gains an extra attack in hand-to-hand combat with a +1 Strength bonus. Cost: 50 gold crowns. cloven hoofs The warrior gains +1 Movement. Cost: 40 gold crowns
 # tentacle One of the mutant’s arms ends in a tentacle. He may grapple his opponent in close combat to reduce his attacks by -1, down to a minimum of 1. The mutant may decide which attack his opponent loses. Cost: 35 gold crowns blackblood If the model loses a wound in close combat, anyone in base contact with the model suffers a Strength 3 hit (no critical hits) from the spurting corrosive blood. Cost: 30 gold crowns spines Any model in base contact with the mutant suffers an automatic Strength 1 hit at the beginning of each close combat phase. Spines will never cause critical hits. Cost: 35 gold crowns scorpion tail The mutant has a long barbed tail with a venomed tip, allowing him to make an extra Strength 5 attack in each hand-to-hand combat phase. If the model hit by the tail is immune to poison, the Strength of the hit is reduced to 2. Cost: 40 gold crowns extra arm The mutant may use any single-handed weapon in the extra arm, giving him +1 attack when fighting in hand-to-hand combat. Alternatively, he may carry a shield or a buckler in the extra arm. If a Possessed chooses to do this, he gains an extra attack but still cannot carry a weapon. Cost: 40 gold crowns hideous The mutant causes fear. See the Psychology section for details. Cost: 40 gold crowns
+    

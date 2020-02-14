@@ -24,6 +24,7 @@ Class addition
 - wizards need a way to get magic
 
 References
+- Split source and warband (source is 'core rules', 'broheim', etc. warband is reikland, high elves, lothern sea guard, etc.)
 - divide magic in spell and prayer category
 - some info in references can't be showed as its not part of the classes, i.e. character category, price, etc.
 

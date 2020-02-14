@@ -1,4 +1,4 @@
-from source.reference_methods import (
+from source.methods_database import (
     create_warbandref,
     create_characterref,
     create_itemref,

@@ -1,4 +1,4 @@
-from source.json_methods import (
+from source.methods_json import (
     open_json,
     save_json,
 )

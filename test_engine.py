@@ -1,9 +1,9 @@
-from source.json_methods import (
+from source.methods_json import (
     open_json,
     save_json,
     )
     
-from source.generic_methods import (
+from source.methods_engine import (
     save_warband,
     load_warband,
     cache_warband,
@@ -19,7 +19,7 @@ from source.class_hierarchy import (
     Henchman,
     )
 
-from source.class_hierarchy import (
+from source.class_components import (
     Rule,
     Treasury,
     Item,

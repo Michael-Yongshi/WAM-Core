@@ -1,7 +1,8 @@
 {
     "name": "Full WB test",
     "race": "High Elf",
-    "source": "Broheim - High Elves",
+    "source": "Broheim",
+    "warband": "High Elves",
     "description": "No description",
     "treasury": {
         "gold": 260,
@@ -41,7 +42,8 @@
         "Hero1": {
             "name": "A",
             "race": "High Elf",
-            "source": "Broheim - High Elves",
+            "source": "Broheim",
+            "warband": "High Elves",
             "category": "Loremaster",
             "ishero": true,
             "skill": {
@@ -58,10 +60,6 @@
             },
             "abilitylist": {
                 "Ability1": {
-                    "name": "Excellent Sight",
-                    "description": "Spot hidden objects at double the range. "
-                },
-                "Ability2": {
                     "name": "High Elven Magician",
                     "description": "Character is able to use High Elven magic. "
                 }
@@ -70,7 +68,7 @@
             "itemlist": {
                 "Item1": {
                     "name": "Mage Staff (Two Handed)",
-                    "source": "Broheim - High Elves",
+                    "source": "Broheim",
                     "category": "Melee Weapon",
                     "distance": 0,
                     "skill": {
@@ -104,7 +102,8 @@
         "Hero2": {
             "name": "Bearand",
             "race": "High Elf",
-            "source": "Broheim - High Elves",
+            "source": "Broheim",
+            "warband": "High Elves",
             "category": "Sword Warden",
             "ishero": true,
             "skill": {
@@ -119,12 +118,7 @@
                 "leadership": 8,
                 "armoursave": 0
             },
-            "abilitylist": {
-                "Ability1": {
-                    "name": "Excellent Sight",
-                    "description": "Spot hidden objects at double the range. "
-                }
-            },
+            "abilitylist": {},
             "magiclist": {},
             "itemlist": {
                 "Item1": {
@@ -207,7 +201,8 @@
         "Hero3": {
             "name": "Crypton",
             "race": "High Elf",
-            "source": "Broheim - High Elves",
+            "source": "Broheim",
+            "warband": "High Elves",
             "category": "Sword Warden",
             "ishero": true,
             "skill": {
@@ -222,12 +217,7 @@
                 "leadership": 8,
                 "armoursave": 0
             },
-            "abilitylist": {
-                "Ability1": {
-                    "name": "Excellent Sight",
-                    "description": "Spot hidden objects at double the range. "
-                }
-            },
+            "abilitylist": {},
             "magiclist": {},
             "itemlist": {
                 "Item1": {
@@ -310,7 +300,8 @@
         "Hero4": {
             "name": "Danan",
             "race": "High Elf",
-            "source": "Broheim - High Elves",
+            "source": "Broheim",
+            "warband": "High Elves",
             "category": "Ranger",
             "ishero": true,
             "skill": {
@@ -325,12 +316,7 @@
                 "leadership": 8,
                 "armoursave": 0
             },
-            "abilitylist": {
-                "Ability1": {
-                    "name": "Excellent Sight",
-                    "description": "Spot hidden objects at double the range. "
-                }
-            },
+            "abilitylist": {},
             "magiclist": {},
             "itemlist": {
                 "Item1": {
@@ -386,7 +372,8 @@
         "Hero5": {
             "name": "Everia",
             "race": "High Elf",
-            "source": "Broheim - High Elves",
+            "source": "Broheim",
+            "warband": "High Elves",
             "category": "Ranger",
             "ishero": true,
             "skill": {
@@ -401,12 +388,7 @@
                 "leadership": 8,
                 "armoursave": 0
             },
-            "abilitylist": {
-                "Ability1": {
-                    "name": "Excellent Sight",
-                    "description": "Spot hidden objects at double the range. "
-                }
-            },
+            "abilitylist": {},
             "magiclist": {},
             "itemlist": {
                 "Item1": {
@@ -460,9 +442,10 @@
             "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again. "
         },
         "Hero6": {
-            "name": "Crytonia",
+            "name": "Felicia",
             "race": "High Elf",
-            "source": "Broheim - High Elves",
+            "source": "Broheim",
+            "warband": "High Elves",
             "category": "Ranger",
             "ishero": true,
             "skill": {
@@ -477,12 +460,7 @@
                 "leadership": 8,
                 "armoursave": 0
             },
-            "abilitylist": {
-                "Ability1": {
-                    "name": "Excellent Sight",
-                    "description": "Spot hidden objects at double the range. "
-                }
-            },
+            "abilitylist": {},
             "magiclist": {},
             "itemlist": {
                 "Item1": {
@@ -543,7 +521,8 @@
                 "Henchman1": {
                     "name": "Spearguard",
                     "race": "High Elf",
-                    "source": "Broheim - High Elves",
+                    "source": "Broheim",
+                    "warband": "High Elves",
                     "category": "Seaguard",
                     "ishero": false,
                     "skill": {
@@ -558,12 +537,7 @@
                         "leadership": 8,
                         "armoursave": 0
                     },
-                    "abilitylist": {
-                        "Ability1": {
-                            "name": "Excellent Sight",
-                            "description": "Spot hidden objects at double the range. "
-                        }
-                    },
+                    "abilitylist": {},
                     "magiclist": {},
                     "itemlist": {
                         "Item1": {
@@ -632,7 +606,8 @@
                 "Henchman2": {
                     "name": "Spearguard",
                     "race": "High Elf",
-                    "source": "Broheim - High Elves",
+                    "source": "Broheim",
+                    "warband": "High Elves",
                     "category": "Seaguard",
                     "ishero": false,
                     "skill": {
@@ -647,12 +622,7 @@
                         "leadership": 8,
                         "armoursave": 0
                     },
-                    "abilitylist": {
-                        "Ability1": {
-                            "name": "Excellent Sight",
-                            "description": "Spot hidden objects at double the range. "
-                        }
-                    },
+                    "abilitylist": {},
                     "magiclist": {},
                     "itemlist": {
                         "Item1": {
@@ -726,7 +696,8 @@
                 "Henchman1": {
                     "name": "Bladeguard",
                     "race": "High Elf",
-                    "source": "Broheim - High Elves",
+                    "source": "Broheim",
+                    "warband": "High Elves",
                     "category": "Seaguard",
                     "ishero": false,
                     "skill": {
@@ -741,12 +712,7 @@
                         "leadership": 8,
                         "armoursave": 0
                     },
-                    "abilitylist": {
-                        "Ability1": {
-                            "name": "Excellent Sight",
-                            "description": "Spot hidden objects at double the range. "
-                        }
-                    },
+                    "abilitylist": {},
                     "magiclist": {},
                     "itemlist": {
                         "Item1": {
@@ -816,7 +782,8 @@
                 "Henchman1": {
                     "name": "Cadet",
                     "race": "High Elf",
-                    "source": "Broheim - High Elves",
+                    "source": "Broheim",
+                    "warband": "High Elves",
                     "category": "Cadet",
                     "ishero": false,
                     "skill": {
@@ -831,12 +798,7 @@
                         "leadership": 8,
                         "armoursave": 0
                     },
-                    "abilitylist": {
-                        "Ability1": {
-                            "name": "Excellent Sight",
-                            "description": "Spot hidden objects at double the range. "
-                        }
-                    },
+                    "abilitylist": {},
                     "magiclist": {},
                     "itemlist": {
                         "Item1": {
@@ -897,7 +859,8 @@
                 "Henchman1": {
                     "name": "Cadet2",
                     "race": "High Elf",
-                    "source": "Broheim - High Elves",
+                    "source": "Broheim",
+                    "warband": "High Elves",
                     "category": "Cadet",
                     "ishero": false,
                     "skill": {
@@ -912,12 +875,7 @@
                         "leadership": 8,
                         "armoursave": 0
                     },
-                    "abilitylist": {
-                        "Ability1": {
-                            "name": "Excellent Sight",
-                            "description": "Spot hidden objects at double the range. "
-                        }
-                    },
+                    "abilitylist": {},
                     "magiclist": {},
                     "itemlist": {
                         "Item1": {
@@ -978,7 +936,8 @@
                 "Henchman1": {
                     "name": "Cadet3",
                     "race": "High Elf",
-                    "source": "Broheim - High Elves",
+                    "source": "Broheim",
+                    "warband": "High Elves",
                     "category": "Cadet",
                     "ishero": false,
                     "skill": {
@@ -993,12 +952,7 @@
                         "leadership": 8,
                         "armoursave": 0
                     },
-                    "abilitylist": {
-                        "Ability1": {
-                            "name": "Excellent Sight",
-                            "description": "Spot hidden objects at double the range. "
-                        }
-                    },
+                    "abilitylist": {},
                     "magiclist": {},
                     "itemlist": {
                         "Item1": {
@@ -1059,7 +1013,8 @@
                 "Henchman1": {
                     "name": "Cadet4",
                     "race": "High Elf",
-                    "source": "Broheim - High Elves",
+                    "source": "Broheim",
+                    "warband": "High Elves",
                     "category": "Cadet",
                     "ishero": false,
                     "skill": {
@@ -1074,12 +1029,7 @@
                         "leadership": 8,
                         "armoursave": 0
                     },
-                    "abilitylist": {
-                        "Ability1": {
-                            "name": "Excellent Sight",
-                            "description": "Spot hidden objects at double the range. "
-                        }
-                    },
+                    "abilitylist": {},
                     "magiclist": {},
                     "itemlist": {
                         "Item1": {

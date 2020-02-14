@@ -162,7 +162,7 @@ if __name__ == "__main__":
     )
     add_warbandref(
         race = "High Elf",
-        source = "Broheim - High Elves",
+        source = "Broheim",
         name = "High Elves",
         rulelist = [
             {"name": "Excellent Sight", "description": "Elves have eyesight unmatched by mere humans. Elves spot Hidden enemies from two times as far away as other warriors (ie, twice their Initiative value in inches)."}, 
@@ -180,18 +180,20 @@ if __name__ == "__main__":
     )
     add_warbandref(
         race = "High Elf",
-        source = "Broheim - High Elves",
+        source = "Broheim",
         name = "Wyrdbreakers",
         rulelist = [],
         description = (
-            "High Elves originate from the island kingdom of Ulthuan far to the west of the Empire, which is belaugered continuously by raids from their hated Dark Elven brethren, the fearless Norscans, and the incursions of Chaos which rack all civilized lands. "
-            " The fair elven folk learn how to fight from childhood, and thanks to their extremely long lifespans they often grow in skill to become unrivaled in their prowess by other mortals. Despite their individual ability, their numbers are few compared to their co-inhabitants of the Old World and they are always in search of some edge with which to gain an advantage over their foes."
-            " Thus the High Elves are unrivaled practitioners of the arcane arts and their specialized school of Spell craft is so highly regarded it is referred to simply as the High Magic by other Wizards. The Elven Mages are very proficient at many aspects of Magic, including astrology and the prediction of what is to come. So it was that the coming of the comet known in the Empire as the Hammer of Sigmar was not a suprise to the inhabitants of Ulthuan."
-            " The Loremasters foretold the great power it would bring in the form of wyrdstone, but also the danger as they knew the substance was riddled with the Chaos taint and would spread the evils of corruption to all new levels. Therefore the Pheonix King, advised by the Loremasters, issued a decree: Wyrdstone must be destroyed whenever possible, and any brave enough to undertake the hardships of travel across the lands of the Humans and to bear the dangers of the Damned city to seek out and destroy the Chaos-tainted stones would be forever honored in the lands of the Elves."
-            " From across the provinces bands of young would-be heroes volunteered to pledge their blades to the Kings edict, and the Loremasters dispatched many apprentices to accompany them in their journey and lead them to the fell substance. Furthermore the Loremasters crafted magical devices called Wyrd-breakers to counter the Chaos taint of the wyrdstone and render the substance into more mundane gemstones thereby effectively destroying the wyrdstone but still allowing the Elves a source of revenue. Each of the young mages was given one and sent forth to rid the world of the taint of wyrdstone."
-            "<i>-Based on the premise of the high elves seeing wyrdstones as chaos instruments. However as Mordheim lays in outside territory and wanting to avoid full scale war, Tyrion together with Tectic ordered their generals to organise small autonomous and selfsufficient companies. These small companies could travel on unofficial grounds, protecting elven world from warring with the Empire."
-            "These companies will act without any link to the elven homeworld and such are not able to get more support from the elven lands beside a starting supply. The companies are given a wyrdstone breaker to turn wyrdstone in mere gems to sell off. These companies are not trusting anyone except the ones from true high elf origin. "
-            "loremaster, in the noble high elves kingdom of asuryan. These warbands of high elves dress to move under cover and not get too much notice in the chaotic region of mordheim, as high elves are not generally liked and allies are slim. Although their many high elves traits like their fair skin or the light weapons and armour they carry do not make that easy.-</i>"
+"High Elves originate from the island kingdom of Ulthuan far to the west of the Empire, which is belaugered continuously by raids from their hated Dark Elven brethren, the fearless Norscans, and the incursions of Chaos which rack all civilized lands. "
+"The fair elven folk learn how to fight from childhood, and thanks to their extremely long lifespans they often grow in skill to become unrivaled in their prowess by other mortals. Despite their individual ability, their numbers are few compared to their co-inhabitants of the Old World and they are always in search of some edge with which to gain an advantage over their foes. "
+"Thus the High Elves are unrivaled practitioners of the arcane arts and their specialized school of Spell craft is so highly regarded it is referred to simply as the High Magic by other Wizards. The Elven Mages are very proficient at many aspects of Magic, including astrology and the prediction of what is to come. So it was that the coming of the comet known in the Empire as the Hammer of Sigmar was not a suprise to the inhabitants of Ulthuan. "
+"The Loremasters foretold the great power it would bring in the form of wyrdstone, but also the danger as they knew the substance was riddled with the Chaos taint and would spread the evils of corruption to all new levels. Therefore the Pheonix King, advised by the Loremasters, issued a decree: Wyrdstone must be destroyed whenever possible, and any brave enough to undertake the hardships of travel across the lands of the Humans and to bear the dangers of the Damned city to seek out and destroy the Chaos-tainted stones would be forever honored in the lands of the Elves. "
+"From across the provinces bands of young would-be heroes volunteered to pledge their blades to the Kings edict, and the Loremasters dispatched many apprentices to accompany them in their journey and lead them to the fell substance. Furthermore the Loremasters crafted magical devices called Wyrd-breakers to counter the Chaos taint of the wyrdstone and render the substance into more mundane gemstones thereby effectively destroying the wyrdstone but still allowing the Elves a source of revenue. Each of the young mages was given one and sent forth to rid the world of the taint of wyrdstone. "
+"<i>-Based on the premise of the high elves seeing wyrdstones as chaos instruments. However as Mordheim lays in outside territory and wanting to avoid full scale war, Tyrion together with Teclis ordered their generals to organise small autonomous and selfsufficient companies. These small companies could travel on unofficial grounds, protecting elven world from warring with the Empire. "
+"These companies will act without any link to the elven homeworld and such are not able to get more support from the elven lands beside a starting supply. The companies are given a wyrdstone breaker to turn wyrdstone in mere gems to sell off. These companies are not trusting anyone except the ones from true high elf origin. "
+"loremaster, in the noble high elves kingdom of asuryan. These warbands of high elves dress to move under cover and not get too much notice in the chaotic region of mordheim, as high elves are not generally liked and allies are slim. Although their many high elves traits like their fair skin or the light weapons and armour they carry do not make that easy.-</i>"
+
+
         ),
     )
 
@@ -205,7 +207,8 @@ if __name__ == "__main__":
     # Add Reikland characters
     add_characterref(
         race = "Human",
-        source = "Core Rules - Reikland",
+        source = "Core Rules",
+        warband = "Reikland",
         category = "Mercenary Captain",
         ishero = True,
         skill = [4, 4, 4, 3, 3, 1, 4, 1, 8, 0],
@@ -223,7 +226,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Core Rules - Reikland",
+        source = "Core Rules",
+        warband = "Reikland",
         category = "Champion",
         ishero = True,
         skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -239,7 +243,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Core Rules - Reikland",
+        source = "Core Rules",
+        warband = "Reikland",
         category = "Youngblood",
         ishero = True,
         skill = [4, 2, 2, 3, 3, 1, 3, 1, 6, 0],
@@ -255,7 +260,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Core Rules - Reikland",
+        source = "Core Rules",
+        warband = "Reikland",
         category = "Warrior",
         ishero = False,
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -271,7 +277,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Core Rules - Reikland",
+        source = "Core Rules",
+        warband = "Reikland",
         category = "Marksman",
         ishero = False,
         skill = [4, 3, 4, 3, 3, 1, 3, 1, 7, 0],
@@ -287,7 +294,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Core Rules - Reikland",
+        source = "Core Rules",
+        warband = "Reikland",
         category = "Swordsman",
         ishero = False,
         skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -307,7 +315,8 @@ if __name__ == "__main__":
     # Add Middenheim characters
     add_characterref(
         race = "Human",
-        source = "Core Rules - Middenheim",
+        source = "Core Rules",
+        warband = "Middenheim",
         category = "Mercenary Captain",
         ishero = True,
         skill = [4, 4, 4, 4, 3, 1, 4, 1, 8, 0],
@@ -325,7 +334,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Core Rules - Middenheim",
+        source = "Core Rules",
+        warband = "Middenheim",
         category = "Champion",
         ishero = True,
         skill = [4, 4, 3, 4, 3, 1, 3, 1, 7, 0],
@@ -341,7 +351,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Core Rules - Middenheim",
+        source = "Core Rules",
+        warband = "Middenheim",
         category = "Youngblood",
         ishero = True,
         skill = [4, 2, 2, 3, 3, 1, 3, 1, 6, 0],
@@ -357,7 +368,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Core Rules - Middenheim",
+        source = "Core Rules",
+        warband = "Middenheim",
         category = "Warrior",
         ishero = False,
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -373,7 +385,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Core Rules - Middenheim",
+        source = "Core Rules",
+        warband = "Middenheim",
         category = "Marksman",
         ishero = False,
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -389,7 +402,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Core Rules - Middenheim",
+        source = "Core Rules",
+        warband = "Middenheim",
         category = "Swordsman",
         ishero = False,
         skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -409,7 +423,8 @@ if __name__ == "__main__":
     # Add Marienburg characters
     add_characterref(
         race = "Human",
-        source = "Core Rules - Marienburg",
+        source = "Core Rules",
+        warband = "Marienburg",
         category = "Mercenary Captain",
         ishero = True,
         skill = [4, 4, 4, 3, 3, 1, 4, 1, 8, 0],
@@ -427,7 +442,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Core Rules - Marienburg",
+        source = "Core Rules",
+        warband = "Marienburg",
         category = "Champion",
         ishero = True,
         skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -443,7 +459,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Core Rules - Marienburg",
+        source = "Core Rules",
+        warband = "Marienburg",
         category = "Youngblood",
         ishero = True,
         skill = [4, 2, 2, 3, 3, 1, 3, 1, 6, 0],
@@ -459,7 +476,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Core Rules - Marienburg",
+        source = "Core Rules",
+        warband = "Marienburg",
         category = "Warrior",
         ishero = False,
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -475,7 +493,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Core Rules - Marienburg",
+        source = "Core Rules",
+        warband = "Marienburg",
         category = "Marksman",
         ishero = False,
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -491,7 +510,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Core Rules - Marienburg",
+        source = "Core Rules",
+        warband = "Marienburg",
         category = "Swordsman",
         ishero = False,
         skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -511,7 +531,8 @@ if __name__ == "__main__":
     # Add the possessed
     add_characterref(
         race = "Chaos Human",
-        source = "Core Rules - The Cult of the Possessed",
+        source = "Core Rules",
+        warband = "The Cult of the Possessed",
         category = "Magister",
         ishero = True,
         skill = [4, 4, 4, 3, 3, 1, 3, 1, 8, 0],
@@ -530,7 +551,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Chaos Human",
-        source = "Core Rules - The Cult of the Possessed",
+        source = "Core Rules",
+        warband = "The Cult of the Possessed",
         category = "Possessed",
         ishero = True,
         skill = [5, 4, 0, 4, 4, 2, 4, 2, 7, 0],
@@ -549,7 +571,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Chaos Human",
-        source = "Core Rules - The Cult of the Possessed",
+        source = "Core Rules",
+        warband = "The Cult of the Possessed",
         category = "Mutant",
         ishero = True,
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -567,7 +590,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Chaos Human",
-        source = "Core Rules - The Cult of the Possessed",
+        source = "Core Rules",
+        warband = "The Cult of the Possessed",
         category = "Darksoul",
         ishero = False,
         skill = [4, 2, 2, 4, 3, 1, 3, 1, 6, 0],
@@ -585,7 +609,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Chaos Human",
-        source = "Core Rules - The Cult of the Possessed",
+        source = "Core Rules",
+        warband = "The Cult of the Possessed",
         category = "Brethren",
         ishero = False,
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -601,7 +626,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Chaos Human",
-        source = "Core Rules - The Cult of the Possessed",
+        source = "Core Rules",
+        warband = "The Cult of the Possessed",
         category = "Beastman",
         ishero = False,
         skill = [4, 4, 3, 3, 4, 2, 3, 1, 7, 0],
@@ -619,7 +645,8 @@ if __name__ == "__main__":
     # With hunter characters
     add_characterref(
         race = "Human",
-        source = "Core Rules - Witch Hunters",
+        source = "Core Rules",
+        warband = "Witch Hunters",
         category = "Witch Hunter Captain",
         ishero = True,
         skill = [4, 4, 4, 3, 3, 1, 4, 1, 8, 0],
@@ -638,7 +665,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Core Rules - Witch Hunters",
+        source = "Core Rules",
+        warband = "Witch Hunters",
         category = "Warrior Priest",
         ishero = True,
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 8, 0],
@@ -656,7 +684,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Core Rules - Witch Hunters",
+        source = "Core Rules",
+        warband = "Witch Hunters",
         category = "Witch Hunter",
         ishero = True,
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -674,7 +703,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Core Rules - Witch Hunters",
+        source = "Core Rules",
+        warband = "Witch Hunters",
         category = "Zealot",
         ishero = False,
         skill = [4, 2, 2, 3, 3, 1, 3, 1, 7, 0],
@@ -690,7 +720,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Core Rules - Witch Hunters",
+        source = "Core Rules",
+        warband = "Witch Hunters",
         category = "Flagellant",
         ishero = False,
         skill = [4, 3, 3, 4, 4, 1, 3, 1, 10, 0],
@@ -707,7 +738,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Core Rules - Witch Hunters",
+        source = "Core Rules",
+        warband = "Witch Hunters",
         category = "Warhound",
         ishero = False,
         skill = [6, 4, 0, 4, 3, 1, 4, 1, 5, 0],
@@ -726,7 +758,8 @@ if __name__ == "__main__":
     # Sisters of sigmar characters
     add_characterref(
         race = "Human",
-        source = "Core Rules - Sisters of Sigmar",
+        source = "Core Rules",
+        warband = "Sisters of Sigmar",
         category = "Sigmarite Matriarch",
         ishero = True,
         skill = [4, 4, 4, 3, 3, 1, 4, 1, 8, 0],
@@ -745,7 +778,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Core Rules - Sisters of Sigmar",
+        source = "Core Rules",
+        warband = "Sisters of Sigmar",
         category = "Sister Superior",
         ishero = True,
         skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -761,7 +795,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Core Rules - Sisters of Sigmar",
+        source = "Core Rules",
+        warband = "Sisters of Sigmar",
         category = "Augur",
         ishero = True,
         skill = [4, 2, 2, 3, 3, 1, 3, 1, 7, 0],
@@ -780,7 +815,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Core Rules - Sisters of Sigmar",
+        source = "Core Rules",
+        warband = "Sisters of Sigmar",
         category = "Novice",
         ishero = False,
         skill = [4, 2, 2, 3, 3, 1, 3, 1, 6, 0],
@@ -796,7 +832,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Human",
-        source = "Core Rules - Sisters of Sigmar",
+        source = "Core Rules",
+        warband = "Sisters of Sigmar",
         category = "Sister",
         ishero = False,
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -814,7 +851,8 @@ if __name__ == "__main__":
     # Undead characters
     add_characterref(
         race = "Undead / Vampires",
-        source = "Core Rules - The Undead",
+        source = "Core Rules",
+        warband = "The Undead",
         category = "Vampire",
         ishero = True,
         skill = [6, 4, 4, 4, 4, 2, 5, 2, 8, 0],
@@ -836,7 +874,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Undead / Vampires",
-        source = "Core Rules - The Undead",
+        source = "Core Rules",
+        warband = "The Undead",
         category = "Necromancer",
         ishero = True,
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
@@ -854,7 +893,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Undead / Vampires",
-        source = "Core Rules - The Undead",
+        source = "Core Rules",
+        warband = "The Undead",
         category = "Dreg",
         ishero = True,
         skill = [4, 2, 2, 3, 3, 1, 3, 1, 7, 0],
@@ -872,7 +912,8 @@ if __name__ == "__main__":
     )
     add_characterref(
         race = "Undead / Vampires",
-        source = "Core Rules - The Undead",
+        source = "Core Rules",
+        warband = "The Undead",
         category = "Zombie",
         ishero = False,
         skill = [4, 2, 0, 3, 3, 1, 1, 1, 5, 0],
@@ -894,7 +935,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Undead / Vampires",
-        source = "Core Rules - The Undead",
+        source = "Core Rules",
+        warband = "The Undead",
         category = "Ghoul",
         ishero = False,
         skill = [4, 2, 2, 3, 4, 1, 3, 2, 5, 0],
@@ -915,7 +957,8 @@ if __name__ == "__main__":
     )
     add_characterref(
         race = "Undead / Vampires",
-        source = "Core Rules - The Undead",
+        source = "Core Rules",
+        warband = "The Undead",
         category = "Dire Wolf",
         ishero = False,
         skill = [9, 3, 0, 4, 3, 1, 2, 1, 4, 0],
@@ -940,7 +983,8 @@ if __name__ == "__main__":
     # Skaven characters
     add_characterref(
         race = "Skaven",
-        source = "Core Rules - Skaven",
+        source = "Core Rules",
+        warband = "The Skaven",
         category = "Assessin Adept",
         ishero = True,
         skill = [6, 4, 4, 4, 3, 1, 5, 1, 7, 0],
@@ -959,7 +1003,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Skaven",
-        source = "Core Rules - Skaven",
+        source = "Core Rules",
+        warband = "The Skaven",
         category = "Eshin Sorcerer",
         ishero = True,
         skill = [5, 3, 3, 3, 3, 1, 4, 1, 6, 0],
@@ -977,7 +1022,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Skaven",
-        source = "Core Rules - Skaven",
+        source = "Core Rules",
+        warband = "The Skaven",
         category = "Black Skaven",
         ishero = True,
         skill = [6, 4, 3, 4, 3, 1, 5, 1, 6, 0],
@@ -993,7 +1039,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Skaven",
-        source = "Core Rules - Skaven",
+        source = "Core Rules",
+        warband = "The Skaven",
         category = "Night Runner",
         ishero = True,
         skill = [6, 2, 3, 3, 3, 1, 4, 1, 4, 0],
@@ -1009,7 +1056,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Skaven",
-        source = "Core Rules - Skaven",
+        source = "Core Rules",
+        warband = "The Skaven",
         category = "Verminkin",
         ishero = False,
         skill = [5, 3, 3, 3, 3, 1, 4, 1, 5, 0],
@@ -1025,7 +1073,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Skaven",
-        source = "Core Rules - Skaven",
+        source = "Core Rules",
+        warband = "The Skaven",
         category = "Giant Rats",
         ishero = False,
         skill = [6, 4, 4, 4, 4, 2, 5, 2, 8, 0],
@@ -1043,7 +1092,8 @@ if __name__ == "__main__":
         )
     add_characterref(
         race = "Skaven",
-        source = "Core Rules - Skaven",
+        source = "Core Rules",
+        warband = "The Skaven",
         category = "Rat Ogre",
         ishero = False,
         skill = [6, 3, 3, 5, 5, 3, 4, 3, 4, 0],
@@ -1065,7 +1115,8 @@ if __name__ == "__main__":
     # High Elves characters from the Broheim website
     add_characterref(
         race = "High Elf",
-        source = "Broheim - High Elves",
+        source = "Broheim",
+        warband = "High Elves",
         category = "Loremaster",
         ishero = True,
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 9, 0],
@@ -1084,7 +1135,8 @@ if __name__ == "__main__":
     )
     add_characterref(
         race = "High Elf",
-        source = "Broheim - High Elves",
+        source = "Broheim",
+        warband = "High Elves",
         category = "Ranger",
         ishero = True,
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 8, 0],
@@ -1100,7 +1152,8 @@ if __name__ == "__main__":
     )
     add_characterref(
         race = "High Elf",
-        source = "Broheim - High Elves",
+        source = "Broheim",
+        warband = "High Elves",
         category = "Sword Warden",
         ishero = True,
         skill = [5, 5, 4, 3, 3, 1, 6, 1, 8, 0],
@@ -1116,7 +1169,8 @@ if __name__ == "__main__":
     )
     add_characterref(
         race = "High Elf",
-        source = "Broheim - High Elves",
+        source = "Broheim",
+        warband = "High Elves",
         category = "Seaguard",
         ishero = False,
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 8, 0],
@@ -1132,7 +1186,8 @@ if __name__ == "__main__":
     )
     add_characterref(
         race = "High Elf",
-        source = "Broheim - High Elves",
+        source = "Broheim",
+        warband = "High Elves",
         category = "Cadet",
         ishero = False,
         skill = [5, 3, 3, 3, 3, 1, 5, 1, 8, 0],
@@ -1146,9 +1201,102 @@ if __name__ == "__main__":
         maxcount = 5,
         description = "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships. "
     )
+    
+    # Wyrdbreakers characters from the Broheim website
+    add_characterref(
+        race = "High Elf",
+        source = "Broheim",
+        warband = "Wyrdbreakers",
+        category = "Loremaster",
+        ishero = True,
+        skill = [5, 4, 4, 3, 3, 1, 6, 1, 9, 0],
+        abilitylist = [
+            {"name": "High Elven Magician", "description":"Character is able to use High Elven magic. "}
+            ],
+        magiclist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "},
+            {"name": "Wyrdbreaker", "category": "Other", "source": "Core Rules", "distance": 0, "description": "test"},
+        ],
+        experience = 20,
+        price = 80,
+        maxcount = 1,
+        description = "Loremasters are the most powerful mages in the entire Warhammer world. Their knowledge of the arcane arts and their intensive training at the Tower of Hoeth makes them perfect for leading expeditions into Lustria. They are capable and efficient with years of extensive training and skill at their disposal. Loremasters alone command magic powerful enough to match the might of the mysterious Slann. They delve into the temple cities of the Lizardmen in search of any remaining artifacts of the Old Ones power. "
+    )
+    add_characterref(
+        race = "High Elf",
+        source = "Broheim",
+        warband = "Wyrdbreakers",
+        category = "Ranger",
+        ishero = True,
+        skill = [5, 4, 4, 3, 3, 1, 6, 1, 8, 0],
+        abilitylist = [],
+        magiclist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+        ],
+        experience = 8,
+        price = 45,
+        maxcount = 2,
+        description = "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again. "
+    )
+    add_characterref(
+        race = "High Elf",
+        source = "Broheim",
+        warband = "Wyrdbreakers",
+        category = "Sword Warden",
+        ishero = True,
+        skill = [5, 5, 4, 3, 3, 1, 6, 1, 8, 0],
+        abilitylist = [],
+        magiclist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+        ],
+        experience = 11,
+        price = 50,
+        maxcount = 2,
+        description = "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster’s personal attendants and protectors. "
+    )
+    add_characterref(
+        race = "High Elf",
+        source = "Broheim",
+        warband = "Wyrdbreakers",
+        category = "Seaguard",
+        ishero = False,
+        skill = [5, 4, 4, 3, 3, 1, 6, 1, 8, 0],
+        abilitylist = [],
+        magiclist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+        ],
+        experience = 0,
+        price = 35,
+        maxcount = 0,
+        description = "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops. "
+    )
+    add_characterref(
+        race = "High Elf",
+        source = "Broheim",
+        warband = "Wyrdbreakers",
+        category = "Cadet",
+        ishero = False,
+        skill = [5, 3, 3, 3, 3, 1, 5, 1, 8, 0],
+        abilitylist = [],
+        magiclist = [],
+        itemlist = [
+            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+        ],
+        experience = 0,
+        price = 30,
+        maxcount = 5,
+        description = "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships. "
+    )
+
+    # Manual addition
     add_characterref(
         race = "High Elf",
         source = "Manual",
+        warband = "Manual",
         category = "Khaine",
         ishero = True,
         skill = [6, 6, 6, 6, 6, 6, 6, 6, 6, 6],
@@ -1166,8 +1314,9 @@ if __name__ == "__main__":
     )
     get_characterref(
         race = "High Elf",
-        source = "Broheim - High Elves",
-        category = "Loremaster"
+        source = "Broheim",
+        warband = "High Elves",
+        category = "Loremaster",
     )
 
     create_itemref()
@@ -1529,9 +1678,9 @@ if __name__ == "__main__":
         description = "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot. "
     )
 
-    #  Specific Broheim - High Elves items
+    #  Specific Broheim items
     add_itemref(
-        source = "Broheim - High Elves",
+        source = "Broheim",
         category = "Melee Weapon",
         name = "Mage Staff (One Handed)",
         distance = 0,
@@ -1544,7 +1693,7 @@ if __name__ == "__main__":
         description = "A staff used by mages. "
         )
     add_itemref(
-        source = "Broheim - High Elves",
+        source = "Broheim",
         category = "Melee Weapon",
         name = "Mage Staff (Two Handed)",
         distance = 0,
@@ -1558,55 +1707,55 @@ if __name__ == "__main__":
         )
 
     get_itemref(
-        source = "Broheim - High Elves", 
+        source = "Broheim", 
         item = "Mage Staff (One Handed)"
     )
 
     create_magicref()
     add_magicref(
-        source = "Broheim - High Elves", 
+        source = "Broheim", 
         category = "High Elven Magic",
         name = "Word of Power",
         difficulty = 8,
         description = "The Elven Mage utters the True Name of Asuryan, the lord of the Elf gods. Shaken by his awesome power, the enemies of the Elves become weak and ineffective. Any enemies within 8 inch of the Mage suffer a -3 Weaponskill penalty, down to a minimum of one. Lasts until the beginning of the next High Elf turn. "
     )
     add_magicref(
-        source = "Broheim - High Elves", 
+        source = "Broheim", 
         category = "High Elven Magic",
         name = "Fiery Wrath",
         difficulty = 8,
         description = "With one delicate movement the Elven Mage traces an intricate Sigil of Flame in the air. Range 12 inch. May be cast on any model within range. The target is hit with Strength 4. Any models within 3 inch of the target model suffer a Strength 3 hit on a D6 roll of 4+. Take armour saves as normal. "
     )
     add_magicref(
-        source = "Broheim - High Elves", 
+        source = "Broheim", 
         category = "High Elven Magic",
         name = "The Phoenix Crown",
         difficulty = 9,
         description = "A crown of white flames appears above the head of the Elf Mage, enveloping him within a glorious array of flames. The Elf Mage has an armour save of 2+ that replaces his normal armour save. In addition, he gains a +2 to his Weaponskill and a +1 to his Strength. Roll at the beginning of each turn in the recovery phase. On a D6 roll of 1 or 2 the Phoenix Crown disappears. "
     )
     add_magicref(
-        source = "Broheim - High Elves", 
+        source = "Broheim", 
         category = "High Elven Magic",
         name = "Roar of the Dragon",
         difficulty = 8,
         description = "A shadow of a wrathful Dragon strikes out from the outstretched hand of the mage, and speeds forward roaring its anger. The roar of the Dragon has a range of 12 inch and it is absolutely straight. Any model in its path must roll equal or under its Strength or be Knocked Down. If the spell hits a building it stops. "
     )
     add_magicref(
-        source = "Broheim - High Elves", 
+        source = "Broheim", 
         category = "High Elven Magic",
         name = "The Anger of the Earth",
         difficulty = 10,
         description = "At the command of the Elven Mage, the very earth raises up against the enemies of the Elves. Draw a 12 inch direct line from the mage in any direction. The line is 1 inch wide and absolutely straight. Any model in its path suffers a single S5 hit. "
     )
     add_magicref(
-        source = "Broheim - High Elves", 
+        source = "Broheim", 
         category = "High Elven Magic",
         name = "The Light of Glory",
         difficulty = 8,
         description = "A radiant white light emerges from the mage`s hand, banishing all fear and doubt in his comrades. Any friendly models within 8 inch of the Elven mage are immune to psychology and will never break from combat. This spell lasts until the mage suffers a wound. If the mage suffers a wound then the enchanted Elves become startled and uneasy. All models with 8 inch must take a Leadership test. If any fail, they are treated as if they had failed an All Alone test. "
     )
     get_magicref(
-        source = "Broheim - High Elves", 
+        source = "Broheim", 
         category = "High Elven Magic",
         name= "The Anger of the Earth"
     )

@@ -778,7 +778,7 @@
             "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot. "
         }
     },
-    "Broheim - High Elves": {
+    "Broheim": {
         "Mage Staff (One Handed)": {
             "category": "Melee Weapon",
             "distance": 0,

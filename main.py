@@ -39,12 +39,12 @@ from PyQt5.QtGui import (
     QPalette,
     )
 
-from source.json_methods import (
+from source.methods_json import (
     open_json,
     save_json,
     )
 
-from source.generic_methods import (
+from source.methods_engine import (
     save_warband,
     load_warband,
     cache_warband,
@@ -634,15 +634,14 @@ class WarbandOverview(QMainWindow):
                         source = source,
                     )
 
-                    wbidgold = self.wbid.treasury.gold
                     itemprice = itemdict[source][item]["price"]
-                    if wbidgold >= itemprice:
+                    if self.wbid.treasury.gold >= itemprice:
                         
                         if unit.ishero == True:
                             for hero in self.wbid.herolist:
                                 if unit.name == hero.name:
                                     hero.itemlist.append(new_item)
-                                    self.wbid.treasury.gold = wbidgold - itemprice
+                                    self.wbid.treasury.gold -= itemprice
                                     self.initUI()
                                     
                         else:
@@ -650,7 +649,7 @@ class WarbandOverview(QMainWindow):
                                 if unit.name == s.name:
                                     for henchman in s.henchmanlist:
                                         henchman.itemlist.append(new_item)
-                                    self.wbid.treasury.gold = wbidgold - itemprice
+                                        self.wbid.treasury.gold -= itemprice
                                     self.initUI()
 
                     else:
@@ -663,6 +662,7 @@ class WarbandOverview(QMainWindow):
             name="",
             race="", 
             source="", 
+            warband="",
             skill=Skill(0,0,0,0,0,0,0,0,0,0), 
             category="", 
             ishero=""
@@ -675,7 +675,7 @@ class WarbandOverview(QMainWindow):
         if okPressed and name:
             
             # get all races in references
-            chardict = open_json("database/references/characters_ref.json")
+            chardict = open_json("database/references/warbands_ref.json")
 
             races = []
             for key in chardict:
@@ -690,9 +690,16 @@ class WarbandOverview(QMainWindow):
 
                 source, okPressed = QInputDialog.getItem(self, "Create", "Choose a source", sources, 0, False)
                 if okPressed and source:
-                    self.wbid = Warband(name=name, race=race, source=source, treasury=Treasury(gold=500))
-                    self.currentunit = self.create_template_char()
-                    self.initUI()
+
+                    warbands = []
+                    for key in chardict[race][source]:
+                        warbands.append(key)
+
+                    warband, okPressed = QInputDialog.getItem(self, "Create", "Choose a warband", warbands, 0, False)
+                    if okPressed and warband:
+                        self.wbid = Warband(name=name, race=race, source=source, warband=warband, treasury=Treasury(gold=500))
+                        self.currentunit = self.create_template_char()
+                        self.initUI()
 
     def create_new_hero(self):
 
@@ -703,11 +710,13 @@ class WarbandOverview(QMainWindow):
             # get all categories in references
             wbrace = self.wbid.race
             wbsource = self.wbid.source
+            wbwarband = self.wbid.warband
             catdict = open_json("database/references/characters_ref.json")
             categories = []
             
-            for key in catdict[wbrace][wbsource]:
-                categories.append(key)
+            for key in catdict[wbrace][wbsource][wbwarband]:
+                if catdict[wbrace][wbsource][wbwarband][key]["ishero"] == True:
+                    categories.append(key)
 
             category, okPressed = QInputDialog.getItem(self, "Create", "Choose a category", categories, 0, False)
             if okPressed and category:
@@ -715,11 +724,12 @@ class WarbandOverview(QMainWindow):
                     name=name,
                     race=wbrace,
                     source=wbsource,
+                    warband=wbwarband,
                     category=category,
                 )
 
                 wbidgold = self.wbid.treasury.gold
-                heroprice = catdict[wbrace][wbsource][category]["price"]
+                heroprice = catdict[wbrace][wbsource][wbwarband][category]["price"]
                 if wbidgold >= heroprice:
                     self.wbid.treasury.gold = wbidgold - heroprice
                     self.wbid.herolist.append(new_hero)
@@ -737,11 +747,13 @@ class WarbandOverview(QMainWindow):
             # get all categories in references
             wbrace = self.wbid.race
             wbsource = self.wbid.source
+            wbwarband = self.wbid.warband
             catdict = open_json("database/references/characters_ref.json")
             categories = []
             
-            for key in catdict[wbrace][wbsource]:
-                categories.append(key)
+            for key in catdict[wbrace][wbsource][wbwarband]:
+                if catdict[wbrace][wbsource][wbwarband][key]["ishero"] == False:
+                    categories.append(key)
 
             category, okPressed = QInputDialog.getItem(self, "Create", "Choose a category", categories, 0, False)
             if okPressed and category:
@@ -749,13 +761,14 @@ class WarbandOverview(QMainWindow):
                     name=name,
                     race=wbrace,
                     source=wbsource,
+                    warband=wbwarband,
                     category=category,
                 )
 
                 if new_squad.henchmanlist[0] != None:
 
                     wbidgold = self.wbid.treasury.gold
-                    squadprice = catdict[wbrace][wbsource][category]["price"]
+                    squadprice = catdict[wbrace][wbsource][wbwarband][category]["price"]
                     if wbidgold >= squadprice:
                         self.wbid.treasury.gold = wbidgold - squadprice
                         self.wbid.squadlist.append(new_squad)

@@ -28,13 +28,14 @@ from source.class_components import (
     Magic,
     )
 
-def test_createWarband(wbname, wbrace, wbsource):
+def test_createWarband(name, race, source, warband):
    
     # create_warband
     wbid = Warband(
-        name=wbname,
-        race=wbrace,
-        source=wbsource,
+        name=name,
+        race=race,
+        source=source,
+        warband=warband,
         description="No description"
         )
 
@@ -52,13 +53,14 @@ def test_createWarband(wbname, wbrace, wbsource):
     hero1 = Hero.create_character(
         name="A", 
         race="High Elf", 
-        source="Broheim - High Elves",
+        source="Broheim",
+        warband="High Elves",
         category="Loremaster",
         )
     
     # Adding items to heroes
     hero1.itemlist = [
-        Item.create_item(name = "Mage Staff (Two Handed)", source = "Broheim - High Elves")
+        Item.create_item(name = "Mage Staff (Two Handed)", source = "Broheim")
         ]
 
     # adding the heroes to the warband hero list
@@ -70,7 +72,8 @@ def test_createWarband(wbname, wbrace, wbsource):
     squad1 = Squad.create_squad(
         name = "Spearguard",
         race = "High Elf",
-        source = 'Broheim - High Elves',
+        source = "Broheim",
+        warband = "High Elves",
         category = "Seaguard",
         number = 2
         )
@@ -78,7 +81,8 @@ def test_createWarband(wbname, wbrace, wbsource):
     squad2 = Squad.create_squad(
         name = "Bladeguard",
         race = "High Elf",
-        source = 'Broheim - High Elves',
+        source = "Broheim",
+        warband = "High Elves",
         category = "Seaguard",
         number = 1
         )
@@ -115,31 +119,36 @@ def test_updateWarband():
     newhero = Hero.create_character(
         name="Bearand", 
         race="High Elf", 
-        source="Broheim - High Elves",
+        source = "Broheim",
+        warband = "High Elves",
         category="Sword Warden"
         )
     newhero2 = Hero.create_character(
         name="Crypton", 
         race="High Elf", 
-        source="Broheim - High Elves",
+        source = "Broheim",
+        warband = "High Elves",
         category="Sword Warden"
         )
     newhero3 = Hero.create_character(
         name="Danan", 
         race="High Elf", 
-        source="Broheim - High Elves",
+        source = "Broheim",
+        warband = "High Elves",
         category="Ranger"
         )
     newhero4 = Hero.create_character(
         name="Everia", 
         race="High Elf", 
-        source="Broheim - High Elves",
+        source = "Broheim",
+        warband = "High Elves",
         category="Ranger"
         )
     newhero5 = Hero.create_character(
-        name="Crytonia", 
+        name="Felicia", 
         race="High Elf", 
-        source="Broheim - High Elves",
+        source = "Broheim",
+        warband = "High Elves",
         category="Ranger"
         )
     
@@ -178,28 +187,32 @@ def test_updateWarband():
     newsquad = Squad.create_squad(
         name = "Cadet",
         race = "High Elf",
-        source = "Broheim - High Elves",
+        source = "Broheim",
+        warband = "High Elves",
         category = "Cadet",
         number = 1
         )
     newsquad2 = Squad.create_squad(
         name = "Cadet2",
         race = "High Elf",
-        source = "Broheim - High Elves",
+        source = "Broheim",
+        warband = "High Elves",
         category = "Cadet",
         number = 1
         )
     newsquad3 = Squad.create_squad(
         name = "Cadet3",
         race = "High Elf",
-        source = "Broheim - High Elves",
+        source = "Broheim",
+        warband = "High Elves",
         category = "Cadet",
         number = 1
         )
     newsquad4 = Squad.create_squad(
         name = "Cadet4",
         race = "High Elf",
-        source = "Broheim - High Elves",
+        source = "Broheim",
+        warband = "High Elves",
         category = "Cadet",
         number = 1
         )
@@ -222,9 +235,10 @@ def test_updateWarband():
     print("Update completed")
 
 if __name__ == "__main__":
-    wbname = "Full WB test"
-    wbrace = "High Elf"
-    wbsource = "Broheim - High Elves"
+    name = "Full WB test"
+    race = "High Elf"
+    source = "Broheim"
+    warband= "High Elves"
 
-    test_createWarband(wbname, wbrace, wbsource)    # Creates an object and caches it to cache.json
+    test_createWarband(name, race, source, warband)    # Creates an object and caches it to cache.json
     test_updateWarband()                            # gets object from cache.json and updates it, then saves it to a warband savefile

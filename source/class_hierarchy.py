@@ -15,10 +15,11 @@ from source.class_components import (
 
 
 class Warband(object):
-    def __init__(self, name, race, source, description=None, treasury=None, rulelist=[], itemlist=[], herolist=[], squadlist=[]):
+    def __init__(self, name, race, source, warband, description=None, treasury=None, rulelist=[], itemlist=[], herolist=[], squadlist=[]):
         self.name = name
         self.race = race
         self.source = source
+        self.warband = warband
         self.description = description
         self.treasury = treasury if treasury else Treasury()
         self.rulelist = rulelist
@@ -64,6 +65,7 @@ class Warband(object):
             'name': self.name,
             'race': self.race,
             'source': self.source,
+            'warband': self.warband,
             'description': self.description,
             'treasury': treasury,
             'rulelist': rulelist,
@@ -97,15 +99,16 @@ class Warband(object):
             squadlist += [Squad.from_dict(squad)]
 
         wbid = Warband(
-            name=datadict["name"],
-            race=datadict["race"],
-            source=datadict["source"],
-            description=datadict["description"],
-            treasury=treasury,
-            rulelist=rulelist,
-            itemlist=itemlist,
-            herolist=herolist,
-            squadlist=squadlist
+            name = datadict["name"],
+            race = datadict["race"],
+            source = datadict["source"],
+            warband = datadict["warband"],
+            description = datadict["description"],
+            treasury = treasury,
+            rulelist = rulelist,
+            itemlist = itemlist,
+            herolist = herolist,
+            squadlist = squadlist,
             )
 
         return wbid
@@ -168,7 +171,7 @@ class Squad(object):
         return squad
 
     @staticmethod
-    def create_squad(name, race, source, category, number=1):
+    def create_squad(name, race, source, warband, category, number=1):
         """Create a new squad with the given parameters and creates the amount of henchman determined by the number parameter"""
         
         newsquad = Squad(
@@ -181,6 +184,7 @@ class Squad(object):
                 name = name,
                 race = race,
                 source = source,
+                warband = warband,
                 category = category,  
                 )
             newsquad.henchmanlist.append(newhenchman)
@@ -236,10 +240,11 @@ class Squad(object):
 
        
 class Character(object):
-    def __init__(self, name, race, source, category, ishero, skill, abilitylist=[], magiclist=[], itemlist=[], experience=0, price=0, maxcount=0, description=None):
+    def __init__(self, name, race, source, warband, category, ishero, skill, abilitylist=[], magiclist=[], itemlist=[], experience=0, price=0, maxcount=0, description=None):
         self.name = name
         self.race = race
         self.source = source
+        self.warband = warband
         self.category = category
         self.ishero = ishero
         self.skill = skill
@@ -281,6 +286,7 @@ class Character(object):
             'name': self.name,
             'race': self.race,
             'source': self.source,
+            'warband': self.warband,
             'category': self.category,
             'ishero': self.ishero,
             'skill': skill,
@@ -311,55 +317,56 @@ class Character(object):
             itemlist += [Item.from_dict(item)]
 
         data = Character(
-            name=datadict["name"],
-            race=datadict["race"],
-            source=datadict["source"],
-            category=datadict["category"],
-            ishero=datadict["ishero"],
-            skill=skill,
-            abilitylist=abilitylist,
-            magiclist=magiclist,
-            itemlist=itemlist,
-            experience=datadict["experience"],
-            price=datadict["price"],
-            maxcount=datadict["maxcount"],
-            description=datadict["description"]
+            name = datadict["name"],
+            race = datadict["race"],
+            source = datadict["source"],
+            warband = datadict["warband"],
+            category = datadict["category"],
+            ishero = datadict["ishero"],
+            skill = skill,
+            abilitylist = abilitylist,
+            magiclist = magiclist,
+            itemlist = itemlist,
+            experience = datadict["experience"],
+            price = datadict["price"],
+            maxcount = datadict["maxcount"],
+            description = datadict["description"]
             )
 
         return data
     
     @staticmethod
-    def create_character(name, race, source, category):
+    def create_character(name, race, source, warband, category):
         # open reference data json file
         data = open_json("database/references/characters_ref.json")
 
-        skilllist = data[race][source][category].get("skill")
+        skilllist = data[race][source][warband][category].get("skill")
         skilldict = skilllist[0]
         newskill = Skill(
             movement = skilldict["movement"],
             weapon = skilldict["weapon"],
             ballistic = skilldict["ballistic"],
-            strength=skilldict["strength"],
-            toughness=skilldict["toughness"],
-            wounds=skilldict["wounds"],
-            initiative=skilldict["initiative"],
-            actions=skilldict["actions"],
-            leadership=skilldict["leadership"],
-            armoursave=skilldict["armoursave"]
+            strength = skilldict["strength"],
+            toughness = skilldict["toughness"],
+            wounds = skilldict["wounds"],
+            initiative = skilldict["initiative"],
+            actions = skilldict["actions"],
+            leadership = skilldict["leadership"],
+            armoursave = skilldict["armoursave"]
             )
 
         abilitylist = []
-        for abilitydict in data[race][source][category].get("abilitylist"):
+        for abilitydict in data[race][source][warband][category].get("abilitylist"):
             abilityobject = Ability(name=abilitydict["name"], description=abilitydict["description"])
             abilitylist.append(abilityobject)
 
         magiclist = []
-        for magicdict in data[race][source][category].get("magiclist"):
+        for magicdict in data[race][source][warband][category].get("magiclist"):
             magicobject = Magic(source=magicdict["source"], category=magicdict["category"], name=magicdict["name"], difficulty=magicdict["difficulty"], description=magicdict["description"])
             magiclist.append(magicobject)
 
         itemlist = []
-        for itemdict in data[race][source][category].get("itemlist"):
+        for itemdict in data[race][source][warband][category].get("itemlist"):
             itemobject = Item(source=itemdict["source"], category=itemdict["category"], name=itemdict["name"], distance=itemdict["distance"], description=itemdict["description"])
             itemlist.append(itemobject)
 
@@ -367,16 +374,17 @@ class Character(object):
             name = name,
             race = race,
             source = source,
+            warband = warband,
             category = category,
-            ishero = data[race][source][category].get("ishero"),
+            ishero = data[race][source][warband][category].get("ishero"),
             skill = newskill,
             abilitylist = abilitylist,
             magiclist = magiclist,
             itemlist = itemlist,
-            experience = data[race][source][category].get("experience"),
-            price = data[race][source][category].get("price"),
-            maxcount = data[race][source][category].get("maxcount"),
-            description = data[race][source][category].get("description")        
+            experience = data[race][source][warband][category].get("experience"),
+            price = data[race][source][warband][category].get("price"),
+            maxcount = data[race][source][warband][category].get("maxcount"),
+            description = data[race][source][warband][category].get("description")        
             )
         
         return newcharacter
@@ -390,24 +398,24 @@ class Character(object):
 
 class Hero(Character):
     @staticmethod
-    def create_character(name, race, source, category):
+    def create_character(name, race, source, warband, category):
         # open reference data json file
         data = open_json("database/references/characters_ref.json")
 
-        if data[race][source][category].get("ishero") == False:
+        if data[race][source][warband][category].get("ishero") == False:
             print("Henchmen can't be added outside a squad")
         else:
-            newhero = Character.create_character(name, race, source, category)
+            newhero = Character.create_character(name, race, source, warband, category)
             return newhero
 
 class Henchman(Character):
     @staticmethod
-    def create_character(name, race, source, category):
+    def create_character(name, race, source, warband, category):
         # open reference data json file
         data = open_json("database/references/characters_ref.json")
 
-        if data[race][source][category].get("ishero") == True:
+        if data[race][source][warband][category].get("ishero") == True:
             print("Heroes can't be added to a squad")
         else:
-            newhenchman = Character.create_character(name, race, source, category)
+            newhenchman = Character.create_character(name, race, source, warband, category)
             return newhenchman

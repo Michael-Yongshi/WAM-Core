@@ -62,17 +62,6 @@ def add_warbandref(race, source, name, rulelist, description):
     print(f"Added warband: {name}")
     save_json(data, filepath)
 
-def create_characterref():
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "characters_ref.json"
-
-    # Create data file
-    data = {}
-
-    print(f"Created characterfile")
-    save_json(data, filepath)
-
 def get_warbandref(race, source, name):
     # Paths
     folderpath = "database/references/"
@@ -95,7 +84,18 @@ def get_warbandref(race, source, name):
     print(warbanddict)
     return warbanddict
 
-def add_characterref(race, source, category, ishero, skill, abilitylist, magiclist, itemlist, experience, price, maxcount, description):
+def create_characterref():
+    # Paths
+    folderpath = "database/references/"
+    filepath = folderpath + "characters_ref.json"
+
+    # Create data file
+    data = {}
+
+    print(f"Created characterfile")
+    save_json(data, filepath)
+
+def add_characterref(race, source, warband, category, ishero, skill, abilitylist, magiclist, itemlist, experience, price, maxcount, description):
     # Paths
     folderpath = "database/references/"
     filepath = folderpath + "characters_ref.json"
@@ -115,6 +115,12 @@ def add_characterref(race, source, category, ishero, skill, abilitylist, magicli
     else:
         data[race][source] = {}
 
+    # Second check if source already exists
+    if warband in data[race][source]:
+        pass
+    else:
+        data[race][source][warband] = {}
+
     skilldict = {
         "movement": skill[0],
         "weapon": skill[1],
@@ -128,9 +134,10 @@ def add_characterref(race, source, category, ishero, skill, abilitylist, magicli
         "armoursave": skill[9]
         },
 
-    data[race][source][category]={
+    data[race][source][warband][category]={
         'race': race,
         'source': source,
+        'warband': warband,
         'category': category,
         'ishero': ishero,
         "skill": skilldict,
@@ -147,7 +154,7 @@ def add_characterref(race, source, category, ishero, skill, abilitylist, magicli
     save_json(data, filepath)
 
 
-def get_characterref(race, source, category):
+def get_characterref(race, source, warband, category):
     # Paths
     folderpath = "database/references/"
     filepath = folderpath + "characters_ref.json"
@@ -159,11 +166,15 @@ def get_characterref(race, source, category):
     if race in data:
         # Second check if source exists
         if source in data[race]:
-            # Third check if character exists
-            if category in data[race][source]: 
-                characterdict = data[race][source][category]
+            # Third check if warband exists
+            if warband in data[race][source]: 
+                # fourth check if character exists
+                if category in data[race][source][warband]: 
+                    characterdict = data[race][source][warband][category]
+                else:
+                    print(f"Type:{category} does not exist")
             else:
-                print(f"Type:{category} does not exist")
+                print(f"Type:{warband} does not exist")
         else:
             print(f"source {source} does not exist")
     else:

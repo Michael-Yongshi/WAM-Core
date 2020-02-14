@@ -1,4 +1,6 @@
-from database.json import open_json
+from source.json_methods import (
+    open_json,
+)
 
 # Contains several component classes that are used in different places:
 # Inventory

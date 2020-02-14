@@ -4,7 +4,7 @@
     "source": "Broheim - High Elves",
     "description": "No description",
     "treasury": {
-        "gold": 250,
+        "gold": 260,
         "wyrd": 0
     },
     "rulelist": {
@@ -155,12 +155,12 @@
                     "abilitylist": {
                         "Ability1": {
                             "name": "Parry",
-                            "description": "Enables a single parry of an attackers hit. Parries when dicethrow is greater than attackers throw."
+                            "description": "Swords offer an excellent balance of defense and offence. A model armed with a sword may parry blows. When his opponent rolls to hit, the model armed with a sword may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength \u2013 they are simply too powerful to be stopped."
                         }
                     },
                     "magiclist": {},
                     "price": 10,
-                    "description": "A basic Sword."
+                    "description": "The sword is often referred to as the \u2018king of weapons\u2019. The most common sword available, the broadsword of the Empire, is a masterpiece by the standards of any smith: four full feet of gleaming steel, double-edged and razor-sharp. Swords are much more effective weapons than crude clubs and axes, though learning to use a sword is a long and difficult process. It takes years to truly master this weapon \u2013 most warriors in Mordheim die long before they get this far!"
                 },
                 "Item2": {
                     "name": "Light Armour",
@@ -182,7 +182,7 @@
                     "abilitylist": {},
                     "magiclist": {},
                     "price": 20,
-                    "description": "Some lightweighted armour."
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
                 },
                 "Item3": {
                     "name": "Shield",
@@ -203,8 +203,8 @@
                     },
                     "abilitylist": {},
                     "magiclist": {},
-                    "price": 20,
-                    "description": "A basic shield."
+                    "price": 5,
+                    "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner."
                 }
             },
             "experience": 11,
@@ -258,12 +258,12 @@
                     "abilitylist": {
                         "Ability1": {
                             "name": "Parry",
-                            "description": "Enables a single parry of an attackers hit. Parries when dicethrow is greater than attackers throw."
+                            "description": "Swords offer an excellent balance of defense and offence. A model armed with a sword may parry blows. When his opponent rolls to hit, the model armed with a sword may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength \u2013 they are simply too powerful to be stopped."
                         }
                     },
                     "magiclist": {},
                     "price": 10,
-                    "description": "A basic Sword."
+                    "description": "The sword is often referred to as the \u2018king of weapons\u2019. The most common sword available, the broadsword of the Empire, is a masterpiece by the standards of any smith: four full feet of gleaming steel, double-edged and razor-sharp. Swords are much more effective weapons than crude clubs and axes, though learning to use a sword is a long and difficult process. It takes years to truly master this weapon \u2013 most warriors in Mordheim die long before they get this far!"
                 },
                 "Item2": {
                     "name": "Light Armour",
@@ -285,7 +285,7 @@
                     "abilitylist": {},
                     "magiclist": {},
                     "price": 20,
-                    "description": "Some lightweighted armour."
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
                 },
                 "Item3": {
                     "name": "Shield",
@@ -306,8 +306,8 @@
                     },
                     "abilitylist": {},
                     "magiclist": {},
-                    "price": 20,
-                    "description": "A basic shield."
+                    "price": 5,
+                    "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner."
                 }
             },
             "experience": 11,
@@ -361,7 +361,7 @@
                     "abilitylist": {},
                     "magiclist": {},
                     "price": 15,
-                    "description": "A Long bow."
+                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
                 },
                 "Item2": {
                     "name": "Light Armour",
@@ -383,7 +383,7 @@
                     "abilitylist": {},
                     "magiclist": {},
                     "price": 20,
-                    "description": "Some lightweighted armour."
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
                 }
             },
             "experience": 8,
@@ -437,7 +437,7 @@
                     "abilitylist": {},
                     "magiclist": {},
                     "price": 15,
-                    "description": "A Long bow."
+                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
                 },
                 "Item2": {
                     "name": "Light Armour",
@@ -459,7 +459,7 @@
                     "abilitylist": {},
                     "magiclist": {},
                     "price": 20,
-                    "description": "Some lightweighted armour."
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
                 }
             },
             "experience": 8,
@@ -513,7 +513,7 @@
                     "abilitylist": {},
                     "magiclist": {},
                     "price": 15,
-                    "description": "A Long bow."
+                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
                 },
                 "Item2": {
                     "name": "Light Armour",
@@ -535,7 +535,7 @@
                     "abilitylist": {},
                     "magiclist": {},
                     "price": 20,
-                    "description": "Some lightweighted armour."
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
                 }
             },
             "experience": 8,
@@ -616,12 +616,20 @@
                             "abilitylist": {
                                 "Ability1": {
                                     "name": "First Strike",
-                                    "description": "Enables the wielder to always attack first, even when charged."
+                                    "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat."
+                                },
+                                "Ability2": {
+                                    "name": "Unwieldy",
+                                    "description": "A warrior with a spear may only use a shield or a buckler in his other hand. He may not use a second weapon."
+                                },
+                                "Ability3": {
+                                    "name": "Cavalry Bonus",
+                                    "description": "If using the rules for mounted models, a mounted warrior armed with a spear receives a +1 Strength bonus when he charges. This bonus only applies for that turn."
                                 }
                             },
                             "magiclist": {},
-                            "price": 15,
-                            "description": "A basic Spear."
+                            "price": 10,
+                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
                         }
                     },
                     "experience": 0,
@@ -697,12 +705,20 @@
                             "abilitylist": {
                                 "Ability1": {
                                     "name": "First Strike",
-                                    "description": "Enables the wielder to always attack first, even when charged."
+                                    "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat."
+                                },
+                                "Ability2": {
+                                    "name": "Unwieldy",
+                                    "description": "A warrior with a spear may only use a shield or a buckler in his other hand. He may not use a second weapon."
+                                },
+                                "Ability3": {
+                                    "name": "Cavalry Bonus",
+                                    "description": "If using the rules for mounted models, a mounted warrior armed with a spear receives a +1 Strength bonus when he charges. This bonus only applies for that turn."
                                 }
                             },
                             "magiclist": {},
-                            "price": 15,
-                            "description": "A basic Spear."
+                            "price": 10,
+                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
                         }
                     },
                     "experience": 0,
@@ -764,7 +780,7 @@
                             "description": "A basic dagger. Most units already carry one."
                         },
                         "Item2": {
-                            "name": "Greatsword",
+                            "name": "Great Sword",
                             "source": "Core Rules",
                             "category": "Melee Weapon",
                             "distance": 0,
@@ -782,13 +798,17 @@
                             },
                             "abilitylist": {
                                 "Ability1": {
+                                    "name": "Two Handed",
+                                    "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."
+                                },
+                                "Ability2": {
                                     "name": "Last Strike",
-                                    "description": "Disables the wielder to attack first, even when charging."
+                                    "description": "These Double-handed weapons are so heavy that the model using them always strikes last, even when charging."
                                 }
                             },
                             "magiclist": {},
                             "price": 15,
-                            "description": "A very large sword that strikes slow but powerfull."
+                            "description": "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively."
                         }
                     },
                     "experience": 0,
@@ -869,7 +889,7 @@
                             "abilitylist": {},
                             "magiclist": {},
                             "price": 15,
-                            "description": "A Long bow."
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
                         }
                     },
                     "experience": 0,
@@ -950,7 +970,7 @@
                             "abilitylist": {},
                             "magiclist": {},
                             "price": 15,
-                            "description": "A Long bow."
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
                         }
                     },
                     "experience": 0,
@@ -1031,7 +1051,7 @@
                             "abilitylist": {},
                             "magiclist": {},
                             "price": 15,
-                            "description": "A Long bow."
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
                         }
                     },
                     "experience": 0,
@@ -1112,7 +1132,7 @@
                             "abilitylist": {},
                             "magiclist": {},
                             "price": 15,
-                            "description": "A Long bow."
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
                         }
                     },
                     "experience": 0,

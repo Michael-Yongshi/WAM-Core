@@ -1,11 +1,11 @@
 import os
 
-from database.json import (
+from source.json_methods import (
     open_json,
     save_json,
-    )
+)
 
-from class_hierarchy import (
+from source.class_hierarchy import (
     Warband,
     Squad,
     Character,
@@ -13,7 +13,7 @@ from class_hierarchy import (
     Henchman,
     )
 
-from class_components import (
+from source.class_components import (
     Rule,
     Treasury,
     Item,
@@ -22,6 +22,7 @@ from class_components import (
     Magic,
     )
 
+# specific methods for application
 def cache_warband(wbid):
     
     datadict = wbid.to_dict()
@@ -82,9 +83,3 @@ def get_current_warband():
     wbid = Warband.from_dict(datadict)
 
     return wbid
-
-if __name__ == "__main__":
-    wbname = "Uthluan Wyrdbreakers"
-    save_warband(wbname)
-    load_warband(wbname)
-    show_saved_warbands()

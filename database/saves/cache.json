@@ -1,17 +1,45 @@
 {
-    "name": "Wyrdbreaker Brethren",
+    "name": "Full WB test",
     "race": "High Elf",
     "source": "Broheim - High Elves",
-    "description": null,
+    "description": "No description",
     "treasury": {
-        "gold": 350,
+        "gold": 260,
         "wyrd": 0
     },
-    "rulelist": {},
-    "itemlist": {},
+    "rulelist": {
+        "Rule1": {
+            "name": "Test rule",
+            "description": "Test rule description."
+        }
+    },
+    "itemlist": {
+        "Item1": {
+            "name": "Test item",
+            "source": "manual",
+            "category": "Other",
+            "distance": 0,
+            "skill": {
+                "movement": 0,
+                "weapon": 0,
+                "ballistic": 0,
+                "strength": 0,
+                "toughness": 0,
+                "wounds": 0,
+                "initiative": 0,
+                "actions": 0,
+                "leadership": 0,
+                "armoursave": 0
+            },
+            "abilitylist": {},
+            "magiclist": {},
+            "price": 0,
+            "description": null
+        }
+    },
     "herolist": {
         "Hero1": {
-            "name": "Myriadon",
+            "name": "A",
             "race": "High Elf",
             "source": "Broheim - High Elves",
             "category": "Loremaster",
@@ -49,55 +77,6 @@
             },
             "itemlist": {
                 "Item1": {
-                    "name": "Wyrdbreaker",
-                    "source": "Core Rules",
-                    "category": "Other",
-                    "distance": 0,
-                    "skill": {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    },
-                    "abilitylist": {},
-                    "magiclist": {},
-                    "price": 0,
-                    "description": "test"
-                },
-                "Item2": {
-                    "name": "Starting Dagger",
-                    "source": "Core Rules",
-                    "category": "Melee Weapon",
-                    "distance": 0,
-                    "skill": {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    },
-                    "abilitylist": {
-                        "Ability1": {
-                            "name": "Enemy Armor Save",
-                            "description": "These weapons are not the best weapons to use for penetrating an enemy model\u2019s armor. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
-                        }
-                    },
-                    "magiclist": {},
-                    "price": 0,
-                    "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
-                },
-                "Item3": {
                     "name": "Mage Staff (Two Handed)",
                     "source": "Broheim - High Elves",
                     "category": "Melee Weapon",
@@ -131,7 +110,7 @@
             "description": "Loremasters are the most powerful mages in the entire Warhammer world. Their knowledge of the arcane arts and their intensive training at the Tower of Hoeth makes them perfect for leading expeditions into Lustria. They are capable and efficient with years of extensive training and skill at their disposal. Loremasters alone command magic powerful enough to match the might of the mysterious Slann. They delve into the temple cities of the Lizardmen in search of any remaining artifacts of the Old Ones power."
         },
         "Hero2": {
-            "name": "Avareac",
+            "name": "Bearand",
             "race": "High Elf",
             "source": "Broheim - High Elves",
             "category": "Sword Warden",
@@ -157,7 +136,7 @@
             "magiclist": {},
             "itemlist": {
                 "Item1": {
-                    "name": "Starting Dagger",
+                    "name": "Sword",
                     "source": "Core Rules",
                     "category": "Melee Weapon",
                     "distance": 0,
@@ -173,17 +152,995 @@
                         "leadership": 0,
                         "armoursave": 0
                     },
+                    "abilitylist": {
+                        "Ability1": {
+                            "name": "Parry",
+                            "description": "Swords offer an excellent balance of defense and offence. A model armed with a sword may parry blows. When his opponent rolls to hit, the model armed with a sword may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength \u2013 they are simply too powerful to be stopped."
+                        }
+                    },
+                    "magiclist": {},
+                    "price": 10,
+                    "description": "The sword is often referred to as the \u2018king of weapons\u2019. The most common sword available, the broadsword of the Empire, is a masterpiece by the standards of any smith: four full feet of gleaming steel, double-edged and razor-sharp. Swords are much more effective weapons than crude clubs and axes, though learning to use a sword is a long and difficult process. It takes years to truly master this weapon \u2013 most warriors in Mordheim die long before they get this far!"
+                },
+                "Item2": {
+                    "name": "Light Armour",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
                     "abilitylist": {},
                     "magiclist": {},
-                    "price": 0,
-                    "description": "A basic dagger. Most units already carry one."
+                    "price": 20,
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                },
+                "Item3": {
+                    "name": "Shield",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": {},
+                    "magiclist": {},
+                    "price": 5,
+                    "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner."
                 }
             },
             "experience": 11,
             "price": 50,
             "maxcount": 2,
             "description": "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster\u2019s personal attendants and protectors."
+        },
+        "Hero3": {
+            "name": "Crypton",
+            "race": "High Elf",
+            "source": "Broheim - High Elves",
+            "category": "Sword Warden",
+            "ishero": true,
+            "skill": {
+                "movement": 5,
+                "weapon": 5,
+                "ballistic": 4,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 6,
+                "actions": 1,
+                "leadership": 8,
+                "armoursave": 0
+            },
+            "abilitylist": {
+                "Ability1": {
+                    "name": "Excellent Sight",
+                    "description": "Spot hidden objects at double the range."
+                }
+            },
+            "magiclist": {},
+            "itemlist": {
+                "Item1": {
+                    "name": "Sword",
+                    "source": "Core Rules",
+                    "category": "Melee Weapon",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": {
+                        "Ability1": {
+                            "name": "Parry",
+                            "description": "Swords offer an excellent balance of defense and offence. A model armed with a sword may parry blows. When his opponent rolls to hit, the model armed with a sword may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength \u2013 they are simply too powerful to be stopped."
+                        }
+                    },
+                    "magiclist": {},
+                    "price": 10,
+                    "description": "The sword is often referred to as the \u2018king of weapons\u2019. The most common sword available, the broadsword of the Empire, is a masterpiece by the standards of any smith: four full feet of gleaming steel, double-edged and razor-sharp. Swords are much more effective weapons than crude clubs and axes, though learning to use a sword is a long and difficult process. It takes years to truly master this weapon \u2013 most warriors in Mordheim die long before they get this far!"
+                },
+                "Item2": {
+                    "name": "Light Armour",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": {},
+                    "magiclist": {},
+                    "price": 20,
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                },
+                "Item3": {
+                    "name": "Shield",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": {},
+                    "magiclist": {},
+                    "price": 5,
+                    "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner."
+                }
+            },
+            "experience": 11,
+            "price": 50,
+            "maxcount": 2,
+            "description": "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster\u2019s personal attendants and protectors."
+        },
+        "Hero4": {
+            "name": "Danan",
+            "race": "High Elf",
+            "source": "Broheim - High Elves",
+            "category": "Ranger",
+            "ishero": true,
+            "skill": {
+                "movement": 5,
+                "weapon": 4,
+                "ballistic": 4,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 6,
+                "actions": 1,
+                "leadership": 8,
+                "armoursave": 0
+            },
+            "abilitylist": {
+                "Ability1": {
+                    "name": "Excellent Sight",
+                    "description": "Spot hidden objects at double the range."
+                }
+            },
+            "magiclist": {},
+            "itemlist": {
+                "Item1": {
+                    "name": "Long Bow",
+                    "source": "Core Rules",
+                    "category": "Missile Weapon",
+                    "distance": 30,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 3,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": {},
+                    "magiclist": {},
+                    "price": 15,
+                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                },
+                "Item2": {
+                    "name": "Light Armour",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": {},
+                    "magiclist": {},
+                    "price": 20,
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                }
+            },
+            "experience": 8,
+            "price": 45,
+            "maxcount": 2,
+            "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again."
+        },
+        "Hero5": {
+            "name": "Everia",
+            "race": "High Elf",
+            "source": "Broheim - High Elves",
+            "category": "Ranger",
+            "ishero": true,
+            "skill": {
+                "movement": 5,
+                "weapon": 4,
+                "ballistic": 4,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 6,
+                "actions": 1,
+                "leadership": 8,
+                "armoursave": 0
+            },
+            "abilitylist": {
+                "Ability1": {
+                    "name": "Excellent Sight",
+                    "description": "Spot hidden objects at double the range."
+                }
+            },
+            "magiclist": {},
+            "itemlist": {
+                "Item1": {
+                    "name": "Long Bow",
+                    "source": "Core Rules",
+                    "category": "Missile Weapon",
+                    "distance": 30,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 3,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": {},
+                    "magiclist": {},
+                    "price": 15,
+                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                },
+                "Item2": {
+                    "name": "Light Armour",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": {},
+                    "magiclist": {},
+                    "price": 20,
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                }
+            },
+            "experience": 8,
+            "price": 45,
+            "maxcount": 2,
+            "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again."
+        },
+        "Hero6": {
+            "name": "Crytonia",
+            "race": "High Elf",
+            "source": "Broheim - High Elves",
+            "category": "Ranger",
+            "ishero": true,
+            "skill": {
+                "movement": 5,
+                "weapon": 4,
+                "ballistic": 4,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 6,
+                "actions": 1,
+                "leadership": 8,
+                "armoursave": 0
+            },
+            "abilitylist": {
+                "Ability1": {
+                    "name": "Excellent Sight",
+                    "description": "Spot hidden objects at double the range."
+                }
+            },
+            "magiclist": {},
+            "itemlist": {
+                "Item1": {
+                    "name": "Long Bow",
+                    "source": "Core Rules",
+                    "category": "Missile Weapon",
+                    "distance": 30,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 3,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": {},
+                    "magiclist": {},
+                    "price": 15,
+                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                },
+                "Item2": {
+                    "name": "Light Armour",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": {},
+                    "magiclist": {},
+                    "price": 20,
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                }
+            },
+            "experience": 8,
+            "price": 45,
+            "maxcount": 2,
+            "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again."
         }
     },
-    "squadlist": {}
+    "squadlist": {
+        "squad1": {
+            "name": "Spearguard",
+            "henchmanlist": {
+                "Henchman1": {
+                    "name": "Spearguard",
+                    "race": "High Elf",
+                    "source": "Broheim - High Elves",
+                    "category": "Seaguard",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 4,
+                        "ballistic": 4,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 6,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
+                    "abilitylist": {
+                        "Ability1": {
+                            "name": "Excellent Sight",
+                            "description": "Spot hidden objects at double the range."
+                        }
+                    },
+                    "magiclist": {},
+                    "itemlist": {
+                        "Item1": {
+                            "name": "Starting Dagger",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": {},
+                            "magiclist": {},
+                            "price": 0,
+                            "description": "A basic dagger. Most units already carry one."
+                        },
+                        "Item2": {
+                            "name": "Spear",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": {
+                                "Ability1": {
+                                    "name": "First Strike",
+                                    "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat."
+                                },
+                                "Ability2": {
+                                    "name": "Unwieldy",
+                                    "description": "A warrior with a spear may only use a shield or a buckler in his other hand. He may not use a second weapon."
+                                },
+                                "Ability3": {
+                                    "name": "Cavalry Bonus",
+                                    "description": "If using the rules for mounted models, a mounted warrior armed with a spear receives a +1 Strength bonus when he charges. This bonus only applies for that turn."
+                                }
+                            },
+                            "magiclist": {},
+                            "price": 10,
+                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
+                        }
+                    },
+                    "experience": 0,
+                    "price": 35,
+                    "maxcount": 0,
+                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops."
+                },
+                "Henchman2": {
+                    "name": "Spearguard",
+                    "race": "High Elf",
+                    "source": "Broheim - High Elves",
+                    "category": "Seaguard",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 4,
+                        "ballistic": 4,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 6,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
+                    "abilitylist": {
+                        "Ability1": {
+                            "name": "Excellent Sight",
+                            "description": "Spot hidden objects at double the range."
+                        }
+                    },
+                    "magiclist": {},
+                    "itemlist": {
+                        "Item1": {
+                            "name": "Starting Dagger",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": {},
+                            "magiclist": {},
+                            "price": 0,
+                            "description": "A basic dagger. Most units already carry one."
+                        },
+                        "Item2": {
+                            "name": "Spear",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": {
+                                "Ability1": {
+                                    "name": "First Strike",
+                                    "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat."
+                                },
+                                "Ability2": {
+                                    "name": "Unwieldy",
+                                    "description": "A warrior with a spear may only use a shield or a buckler in his other hand. He may not use a second weapon."
+                                },
+                                "Ability3": {
+                                    "name": "Cavalry Bonus",
+                                    "description": "If using the rules for mounted models, a mounted warrior armed with a spear receives a +1 Strength bonus when he charges. This bonus only applies for that turn."
+                                }
+                            },
+                            "magiclist": {},
+                            "price": 10,
+                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
+                        }
+                    },
+                    "experience": 0,
+                    "price": 35,
+                    "maxcount": 0,
+                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops."
+                }
+            }
+        },
+        "squad2": {
+            "name": "Bladeguard",
+            "henchmanlist": {
+                "Henchman1": {
+                    "name": "Bladeguard",
+                    "race": "High Elf",
+                    "source": "Broheim - High Elves",
+                    "category": "Seaguard",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 4,
+                        "ballistic": 4,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 6,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
+                    "abilitylist": {
+                        "Ability1": {
+                            "name": "Excellent Sight",
+                            "description": "Spot hidden objects at double the range."
+                        }
+                    },
+                    "magiclist": {},
+                    "itemlist": {
+                        "Item1": {
+                            "name": "Starting Dagger",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": {},
+                            "magiclist": {},
+                            "price": 0,
+                            "description": "A basic dagger. Most units already carry one."
+                        },
+                        "Item2": {
+                            "name": "Great Sword",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 2,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": {
+                                "Ability1": {
+                                    "name": "Two Handed",
+                                    "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."
+                                },
+                                "Ability2": {
+                                    "name": "Last Strike",
+                                    "description": "These Double-handed weapons are so heavy that the model using them always strikes last, even when charging."
+                                }
+                            },
+                            "magiclist": {},
+                            "price": 15,
+                            "description": "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively."
+                        }
+                    },
+                    "experience": 0,
+                    "price": 35,
+                    "maxcount": 0,
+                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops."
+                }
+            }
+        },
+        "squad3": {
+            "name": "Cadet",
+            "henchmanlist": {
+                "Henchman1": {
+                    "name": "Cadet",
+                    "race": "High Elf",
+                    "source": "Broheim - High Elves",
+                    "category": "Cadet",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 5,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
+                    "abilitylist": {
+                        "Ability1": {
+                            "name": "Excellent Sight",
+                            "description": "Spot hidden objects at double the range."
+                        }
+                    },
+                    "magiclist": {},
+                    "itemlist": {
+                        "Item1": {
+                            "name": "Starting Dagger",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": {},
+                            "magiclist": {},
+                            "price": 0,
+                            "description": "A basic dagger. Most units already carry one."
+                        },
+                        "Item2": {
+                            "name": "Long Bow",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": {},
+                            "magiclist": {},
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    },
+                    "experience": 0,
+                    "price": 30,
+                    "maxcount": 5,
+                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                }
+            }
+        },
+        "squad4": {
+            "name": "Cadet2",
+            "henchmanlist": {
+                "Henchman1": {
+                    "name": "Cadet2",
+                    "race": "High Elf",
+                    "source": "Broheim - High Elves",
+                    "category": "Cadet",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 5,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
+                    "abilitylist": {
+                        "Ability1": {
+                            "name": "Excellent Sight",
+                            "description": "Spot hidden objects at double the range."
+                        }
+                    },
+                    "magiclist": {},
+                    "itemlist": {
+                        "Item1": {
+                            "name": "Starting Dagger",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": {},
+                            "magiclist": {},
+                            "price": 0,
+                            "description": "A basic dagger. Most units already carry one."
+                        },
+                        "Item2": {
+                            "name": "Long Bow",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": {},
+                            "magiclist": {},
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    },
+                    "experience": 0,
+                    "price": 30,
+                    "maxcount": 5,
+                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                }
+            }
+        },
+        "squad5": {
+            "name": "Cadet3",
+            "henchmanlist": {
+                "Henchman1": {
+                    "name": "Cadet3",
+                    "race": "High Elf",
+                    "source": "Broheim - High Elves",
+                    "category": "Cadet",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 5,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
+                    "abilitylist": {
+                        "Ability1": {
+                            "name": "Excellent Sight",
+                            "description": "Spot hidden objects at double the range."
+                        }
+                    },
+                    "magiclist": {},
+                    "itemlist": {
+                        "Item1": {
+                            "name": "Starting Dagger",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": {},
+                            "magiclist": {},
+                            "price": 0,
+                            "description": "A basic dagger. Most units already carry one."
+                        },
+                        "Item2": {
+                            "name": "Long Bow",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": {},
+                            "magiclist": {},
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    },
+                    "experience": 0,
+                    "price": 30,
+                    "maxcount": 5,
+                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                }
+            }
+        },
+        "squad6": {
+            "name": "Cadet4",
+            "henchmanlist": {
+                "Henchman1": {
+                    "name": "Cadet4",
+                    "race": "High Elf",
+                    "source": "Broheim - High Elves",
+                    "category": "Cadet",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 5,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
+                    "abilitylist": {
+                        "Ability1": {
+                            "name": "Excellent Sight",
+                            "description": "Spot hidden objects at double the range."
+                        }
+                    },
+                    "magiclist": {},
+                    "itemlist": {
+                        "Item1": {
+                            "name": "Starting Dagger",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": {},
+                            "magiclist": {},
+                            "price": 0,
+                            "description": "A basic dagger. Most units already carry one."
+                        },
+                        "Item2": {
+                            "name": "Long Bow",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": {},
+                            "magiclist": {},
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    },
+                    "experience": 0,
+                    "price": 30,
+                    "maxcount": 5,
+                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                }
+            }
+        }
+    }
 }

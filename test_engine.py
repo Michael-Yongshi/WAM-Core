@@ -1,15 +1,17 @@
-from database.json import (
+from source.json_methods import (
     open_json,
     save_json,
     )
-
-from generic_methods import (
+    
+from source.generic_methods import (
     save_warband,
     load_warband,
     cache_warband,
+    show_saved_warbands,
+    get_current_warband,
     )
 
-from class_hierarchy import (
+from source.class_hierarchy import (
     Warband,
     Squad,
     Character,
@@ -17,7 +19,7 @@ from class_hierarchy import (
     Henchman,
     )
 
-from class_components import (
+from source.class_hierarchy import (
     Rule,
     Treasury,
     Item,
@@ -84,7 +86,7 @@ def test_createWarband(wbname, wbrace, wbsource):
     # Adding items to the squads
     squad1.equip_squad(name = "Spear", source = "Core Rules")
 
-    squad2.equip_squad(name = "Greatsword", source = "Core Rules")
+    squad2.equip_squad(name = "Great Sword", source = "Core Rules")
 
     # adding the squads to the squadlist
     wbid.squadlist = [

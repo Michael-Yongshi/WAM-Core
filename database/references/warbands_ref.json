@@ -1,24 +1,57 @@
 {
-    "warbands_ref": [
-        {
-            "race": "High Elf",
-            "name": "High Elves",
-            "source": "http://broheim.net/warbands.html"
-        },
-        {
-            "race": "High Elf",
-            "name": "Lothern Sea Patrol",
-            "source": "http://broheim.net/warbands.html"
-        },
-        {
-            "race": "Human",
-            "name": "Humantest",
-            "source": "test"
-        },
-        {
-            "race": "Human",
-            "name": "Humantest",
-            "source": "test"
+    "Human": {
+        "Core Rules": {
+            "Reikland": {
+                "race": "Human",
+                "source": "Core Rules",
+                "name": "Reikland",
+                "rulelist": [
+                    {
+                        "name": "Excellent Leadership",
+                        "description": "Reikland Mercenaries are accustomed to the demands of military discipline and have a strongly developed loyalty between officers and men. To represent this, fighters may use their Captain\u2019s Leadership if within 12 inch rather than the usual 6 inch."
+                    },
+                    {
+                        "name": "Trained Marksmen",
+                        "description": "A strong tradition of martial training is also responsible for the high standards of archery amongst the people of Reikland. All Marksmen therefore start with 4 of Ballistic Skill instead of the normal 3, whether they are recruited when the warband is first formed or added later."
+                    }
+                ],
+                "description": "Reikland lies at the heart of the Empire and its greatest city is Altdorf, home of the Grand Theogonist and seat of the Temple of Sigmar. Reiklanders are devout followers of Sigmar, the founder, first Emperor, and patron god of the Empire.The Grand Prince of Reikland (as Siegfried, the ruler of Reikland, styles himself) is supported in his claim to the throne by the Grand Theogonist and opposed most strongly by the Count of Middenheim and the Priests of Ulric.Throughout the Empire Reiklanders are commonly supposed to embody the discipline and loyalty of the professional warrior. Brave and well-versed in the arts of war, Reiklanders disdain fashionable clothing in favour of well-made and practical wargear.In battle they often wear coloured ribbons as marks of identification or authority. They are justly proud of their dynamic and ambitious Grand Prince and contemptuous of other claimants to the throne, especially the Count of Middenheim, Mannfred Todbringer, whom they sneeringly call the \u2018lap-dog of Ulric\u2019.<i>-Ah, Reiklanders, the finest of men! Disciplined, magnificent archers and good, solid warriors! Reiklanders need the best leaders, so you\u2019d better shape up boy! For these warriors are good at almost all the skills of war, and they are more likely to hold their nerve than others in Mordheim.-</i>"
+            },
+            "Middenheim": {
+                "race": "Human",
+                "source": "Core Rules",
+                "name": "Middenheim",
+                "rulelist": [
+                    {
+                        "name": "Body Builders",
+                        "description": "The men of Middenheim are famous for their physical prowess. To represent their advantage in size and bulk, the Champions and Captains of a Middenheim warband start with Strength 4 instead of 3."
+                    }
+                ],
+                "description": "Middenheim stands on a mountain pinnacle surrounded by dark forest in the centre of Middenland, and is also known as the City of the White Wolf after Ulric, the old god of wolves and winter. The Priesthood of Ulric is still strong in Middenheim where Ulric is venerated as the patron of the city.The tradition of rivalry between Middenheim and Reikland goes back hundreds of years, and the Count of Middenheim, Mannfred Todbringer, is one of the chief contenders for the Emperor\u2019s throne. As a result there has always been a great deal of friction between Middenheimers and the Temple of Sigmar.Middenheimers are typically large, strongly built men with a well deserved reputation for ferocity. Many wear wolf pelts which custom decrees to be the mark of those who have slain a wolf with their own hands. These grim warriors are famously contemptuous of danger.They frequently go into battle bare-headed, scoffing at those who choose, for reasons of good sense, to wear helmets. As Middenheimers favour long hair and beards their lack of headgear makes them look especially fierce when they charge upon their enemies howling their brutal battle-cries.<i>-These Northerners are nutters, madmen, berserkers! They are as strong as Ogres and meaner than Orcs. Watch out for them in close quarters \u2013 the chances are they\u2019ll crush your skull with a hammer or behead you with one of those hefty axes they carry around with them.-</i>"
+            },
+            "Marienburg": {
+                "race": "Human",
+                "source": "Core Rules",
+                "name": "Marienburg",
+                "rulelist": [
+                    {
+                        "name": "Natural Traders",
+                        "description": "As natural traders with contacts in the merchant guilds Marienburg warbands receive a +1 bonus when attempting to find rare items (see the Trading section for rules). To reflect their enormous wealth Marienburgers start off with an extra 100 gold crowns (600 in total) when fighting in a campaign. In a one-off game they are permitted an extra 20 percent gold crowns when recruiting a warband. For example, in a 1,000 gold crown game a Marienburger warband will have 1,200gc."
+                    }
+                ],
+                "description": "Marienburg is the largest and most prosperous trading city in the Old World. Many call it the City of Gold which alone conveys a good idea of the wealth of this sprawling cosmopolitan city.Nowhere else can be found the vast array of shops selling goods from as far away as the Elven kingdoms of Ulthuan in the west and distant Cathay in the east. The city\u2019s craftsmen represent every skill known to man, and a few others beside, so that it is said in Marienburg there is no activity that cannot be quickly turned to profit.Many mercantile guilds have their headquarters in Marienburg, most important of all the secretive High Order of Honourable Freetraders which represents the elite amongst mercantile society. This large, rich, and ambitious body of men feel themselves shackled by the old order and are eager to seize power for themselves.Their champion for the Emperor\u2019s throne is the Lady Magritta. Thanks to the unseen influence of Freetraders throughout the Empire all the minor Electors were persuaded to support the Lady Magritta\u2019s claim. It was only the Grand Theogonist\u2019s refusal to crown her that denied Marienburg the throne driving a wedge between the City of Gold and the Temple of Sigmar.Warbands sent to Mordheim are sumptuously dressed and armed. Though Marienburgers are often ridiculed as foppish and effete, their skill at arms and complete ruthlessness has earned them grudging respect. Their chief skills lie in duelling and in the use of poisons and other clandestine fighting methods. Richer individuals dress flamboyantly and wear jewellery.However, the bulk of most warbands are recruited from the dockland thugs, ships\u2019 crews, and stevedores who favour a simpler appearance: leather coats, bandanas and short swords that are easy to conceal.<i>-Don\u2019t let their fancy clothes and flash jewellery fool you, though. They\u2019re not wearing those weapons just for show, they know how to use them as well!-</i>"
+            }
         }
-    ]
+    },
+    "Chaos Human": {
+        "Core Rules": {
+            "The Cult of the Possessed": {
+                "race": "Chaos Human",
+                "source": "Core Rules",
+                "name": "The Cult of the Possessed",
+                "rulelist": [],
+                "description": "There is never any shortage of men willing to risk their lives for a chance of real power: men whose ambitions lie beyond the scope of their birthright, or whose sorcerous skills or physical deformities place them in constant danger of persecution. What do such men have to lose if they pledge their souls to the dark gods of Chaos!In the aftermath of the destruction of Mordheim all manner of mutants have appeared whilst many hitherto unblemished folk feel the stirring of strange powers, the first awakenings of magical gifts destined to bring them to a fiery death at the hands of the Witch Hunters. Now a leader has appeared, a new Dark Emperor, who claims lordship of the City of the Damned.He is called the Shadowlord, Master of the Possessed, and followers of the cults of Chaos gather from all over the Empire to pledge their souls to him. Though none know whether he is man or Daemon all proclaim him their saviour and eagerly seek to do his bidding. As all students of the dark arts know, it is by the power of magic that creatures such as Daemons and spirits are able to stalk the mortal world.The wyrdstone that proliferates in Mordheim grants unnatural life to many vile things that by all natural rights should never exist. The Possessed were once men but by surrendering themselves wholly to the dark gods they have allowed Daemons to possess their bodies. Their appearance is horrific \u2013 corrupted from within, their flesh is twisted into a new and monstrous form.With the power of the Possessed behind them the followers of the Shadowlord have grown powerful in Mordheim. In the Massacre of Silver Street the Cult of the Possessed ambushed and destroyed a large force sent in to hunt them down. Now the streets of Mordheim belong to the Shadowlord and his servants. The contaminated air does not affect them at all or, more likely, it nourishes their inner corruption.Men who venture into Mordheim alone are hunted down and sacrificed to the dark gods. All warbands of the Possessed gather wyrdstone for the Shadowlord who remains hidden in the Pit where he is said to be guarded by titanic Possessed the size of houses. A few shards of the precious stone are kept by the warbands and used to create more of the Possessed. Cult of the possessed.The leaders of cult warbands are called Magisters and each leads a group of cultists: minions of the dark gods of Chaos. These are men whose hunger for power knows no bounds, who willingly give their bodies over to possession. All take part in the blood sacrifices, dark rituals, and worship of Daemons \u2013 nothing is too base for them!These degenerate humans are joined by other creatures as vile as they \u2013 things half-man half-beast that call themselves Gors, and which men refer to as Beastmen. There are few sights as horrific as a cult warband. Deranged warriors smeared with blood and dirt wave jagged weapons and chant blasphemous rites as they throw themselves upon their foes.Many are hardly recognisable as human, their bodies are so scarred and disfigured. The stigmata of mutation is borne by most, but the most unsettling of all are the Possessed themselves \u2013 melded flesh made of men, beasts, and metal driven by the implacable will of a Daemon.<i>-The Possessed. The Damned. The bogeymen. These scum are the worst of the worst. They are dangerous creatures, perhaps more so than any other group in the entire city. This Chaos-worshipping scum consists of mutants, Beastmen and cultists, and even worse things called the Possessed. If you ever let them get close to you, you\u2019ll be in big trouble \u2013 there are few who are a match for this scum in close quarters.-</i>"
+            }
+        }
+    }
 }

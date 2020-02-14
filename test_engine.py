@@ -225,6 +225,6 @@ if __name__ == "__main__":
     wbname = "Full WB test"
     wbrace = "High Elf"
     wbsource = "Broheim - High Elves"
-    test_createWarband(wbname, wbrace, wbsource)
 
-    test_updateWarband()
+    test_createWarband(wbname, wbrace, wbsource)    # Creates an object and caches it to cache.json
+    test_updateWarband()                            # gets object from cache.json and updates it, then saves it to a warband savefile

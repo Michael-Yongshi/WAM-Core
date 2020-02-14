@@ -20,12 +20,12 @@
             "abilitylist": [
                 {
                     "name": "Enemy Armor Save",
-                    "description": "These weapons are not the best weapons to use for penetrating an enemy model\u2019s armor. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                    "description": "These weapons are not the best weapons to use for penetrating an enemy model\u2019s armor. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally. "
                 }
             ],
             "magiclist": [],
             "price": 0,
-            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back. "
         },
         "Extra Dagger": {
             "category": "Melee Weapon",
@@ -47,12 +47,12 @@
             "abilitylist": [
                 {
                     "name": "Enemy Armor Save",
-                    "description": "These weapons are not the best weapons to use for penetrating an enemy model\u2019s armor. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                    "description": "These weapons are not the best weapons to use for penetrating an enemy model\u2019s armor. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally. "
                 }
             ],
             "magiclist": [],
             "price": 2,
-            "description": "A extra dagger. For units that want to dual wield daggers."
+            "description": "A extra dagger. For units that want to dual wield daggers. "
         },
         "Club": {
             "category": "Melee Weapon",
@@ -74,12 +74,12 @@
             "abilitylist": [
                 {
                     "name": "Concussion",
-                    "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model\u2019s injuries."
+                    "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model\u2019s injuries. "
                 }
             ],
             "magiclist": [],
             "price": 3,
-            "description": "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious."
+            "description": "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious. "
         },
         "Mace": {
             "category": "Melee Weapon",
@@ -101,12 +101,12 @@
             "abilitylist": [
                 {
                     "name": "Concussion",
-                    "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model\u2019s injuries."
+                    "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model\u2019s injuries. "
                 }
             ],
             "magiclist": [],
             "price": 3,
-            "description": "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious."
+            "description": "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious. "
         },
         "Hammer": {
             "category": "Melee Weapon",
@@ -128,12 +128,12 @@
             "abilitylist": [
                 {
                     "name": "Cutting Edge",
-                    "description": "An axe has an extra save modifier of -1, so a model with Strength 4 using an axe has a -2 save modifier when he hits an opponent in hand-to-hand combat."
+                    "description": "An axe has an extra save modifier of -1, so a model with Strength 4 using an axe has a -2 save modifier when he hits an opponent in hand-to-hand combat. "
                 }
             ],
             "magiclist": [],
             "price": 3,
-            "description": "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious."
+            "description": "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious. "
         },
         "Axe": {
             "category": "Melee Weapon",
@@ -155,12 +155,12 @@
             "abilitylist": [
                 {
                     "name": "Concussion",
-                    "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model\u2019s injuries."
+                    "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model\u2019s injuries. "
                 }
             ],
             "magiclist": [],
             "price": 5,
-            "description": "The axe is the traditional weapon of Empire woodsmen, and is also used as a weapon in poorer rural areas. Axes have a heavy blade and, if swung by a strong man, can cause a lot of damage. The blade of an axe can easily cut through armor, though it requires considerable strength from the wielder. Of all the warriors in the Old World, Dwarfs are the most adept at making axes. Their axes are invaluable to the warriors of the Old World and are some of the most sought after weapons."
+            "description": "The axe is the traditional weapon of Empire woodsmen, and is also used as a weapon in poorer rural areas. Axes have a heavy blade and, if swung by a strong man, can cause a lot of damage. The blade of an axe can easily cut through armor, though it requires considerable strength from the wielder. Of all the warriors in the Old World, Dwarfs are the most adept at making axes. Their axes are invaluable to the warriors of the Old World and are some of the most sought after weapons. "
         },
         "Sword": {
             "category": "Melee Weapon",
@@ -182,7 +182,7 @@
             "abilitylist": [
                 {
                     "name": "Parry",
-                    "description": "Swords offer an excellent balance of defense and offence. A model armed with a sword may parry blows. When his opponent rolls to hit, the model armed with a sword may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength \u2013 they are simply too powerful to be stopped."
+                    "description": "Swords offer an excellent balance of defense and offence. A model armed with a sword may parry blows. When his opponent rolls to hit, the model armed with a sword may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength \u2013 they are simply too powerful to be stopped. "
                 }
             ],
             "magiclist": [],
@@ -209,20 +209,20 @@
             "abilitylist": [
                 {
                     "name": "First Strike",
-                    "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat."
+                    "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat. "
                 },
                 {
                     "name": "Unwieldy",
-                    "description": "A warrior with a spear may only use a shield or a buckler in his other hand. He may not use a second weapon."
+                    "description": "A warrior with a spear may only use a shield or a buckler in his other hand. He may not use a second weapon. "
                 },
                 {
                     "name": "Cavalry Bonus",
-                    "description": "If using the rules for mounted models, a mounted warrior armed with a spear receives a +1 Strength bonus when he charges. This bonus only applies for that turn."
+                    "description": "If using the rules for mounted models, a mounted warrior armed with a spear receives a +1 Strength bonus when he charges. This bonus only applies for that turn. "
                 }
             ],
             "magiclist": [],
             "price": 10,
-            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
+            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves. "
         },
         "Halberd": {
             "category": "Melee Weapon",
@@ -244,12 +244,12 @@
             "abilitylist": [
                 {
                     "name": "Two Handed",
-                    "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."
+                    "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting. "
                 }
             ],
             "magiclist": [],
             "price": 10,
-            "description": "The halberd\u2019s heavy blade is mounted upon a sturdy shaft of oak or steel and has a point like a spear and a cutting edge like an axe. Since it can be used to chop as well as thrust, it is an adaptable weapon, but is difficult to use inside buildings."
+            "description": "The halberd\u2019s heavy blade is mounted upon a sturdy shaft of oak or steel and has a point like a spear and a cutting edge like an axe. Since it can be used to chop as well as thrust, it is an adaptable weapon, but is difficult to use inside buildings. "
         },
         "Great Sword": {
             "category": "Melee Weapon",
@@ -271,16 +271,16 @@
             "abilitylist": [
                 {
                     "name": "Two Handed",
-                    "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."
+                    "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting. "
                 },
                 {
                     "name": "Last Strike",
-                    "description": "These Double-handed weapons are so heavy that the model using them always strikes last, even when charging."
+                    "description": "These Double-handed weapons are so heavy that the model using them always strikes last, even when charging. "
                 }
             ],
             "magiclist": [],
             "price": 15,
-            "description": "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively."
+            "description": "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively. "
         },
         "Great Axe": {
             "category": "Melee Weapon",
@@ -302,16 +302,16 @@
             "abilitylist": [
                 {
                     "name": "Two Handed",
-                    "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."
+                    "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting. "
                 },
                 {
                     "name": "Last Strike",
-                    "description": "These Double-handed weapons are so heavy that the model using them always strikes last, even when charging."
+                    "description": "These Double-handed weapons are so heavy that the model using them always strikes last, even when charging. "
                 }
             ],
             "magiclist": [],
             "price": 15,
-            "description": "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively."
+            "description": "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively. "
         },
         "Flail": {
             "category": "Melee Weapon",
@@ -333,16 +333,16 @@
             "abilitylist": [
                 {
                     "name": "Two Handed",
-                    "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."
+                    "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting. "
                 },
                 {
                     "name": "Heavy",
-                    "description": "A flail is extremely tiring to use and thus the +2 Strength bonus applies only in the first turn of each hand-to-hand combat."
+                    "description": "A flail is extremely tiring to use and thus the +2 Strength bonus applies only in the first turn of each hand-to-hand combat. "
                 }
             ],
             "magiclist": [],
             "price": 15,
-            "description": "The flail is a heavy weapon wielded with both hands. It normally consists of heavy weights, often spiked, attached to a pole or handle by means of heavy chains. Flails drain the user\u2019s stamina quickly, but are awesomely destructive in the hands of a skilled (or unhinged) warrior."
+            "description": "The flail is a heavy weapon wielded with both hands. It normally consists of heavy weights, often spiked, attached to a pole or handle by means of heavy chains. Flails drain the user\u2019s stamina quickly, but are awesomely destructive in the hands of a skilled (or unhinged) warrior. "
         },
         "Morning Star": {
             "category": "Melee Weapon",
@@ -364,16 +364,16 @@
             "abilitylist": [
                 {
                     "name": "Difficult to Use",
-                    "description": "A model with a morning star may not use a second weapon or buckler in his other hand because it requires all his skill to wield it. He may carry a shield as normal though."
+                    "description": "A model with a morning star may not use a second weapon or buckler in his other hand because it requires all his skill to wield it. He may carry a shield as normal though. "
                 },
                 {
                     "name": "Heavy",
-                    "description": "A flail is extremely tiring to use and thus the +1 Strength bonus applies only in the first turn of each hand-to-hand combat."
+                    "description": "A flail is extremely tiring to use and thus the +1 Strength bonus applies only in the first turn of each hand-to-hand combat. "
                 }
             ],
             "magiclist": [],
             "price": 15,
-            "description": "The flail is a heavy weapon wielded with both hands. It normally consists of heavy weights, often spiked, attached to a pole or handle by means of heavy chains. Flails drain the user\u2019s stamina quickly, but are awesomely destructive in the hands of a skilled (or unhinged) warrior."
+            "description": "The flail is a heavy weapon wielded with both hands. It normally consists of heavy weights, often spiked, attached to a pole or handle by means of heavy chains. Flails drain the user\u2019s stamina quickly, but are awesomely destructive in the hands of a skilled (or unhinged) warrior. "
         },
         "Bow": {
             "category": "Missile Weapon",
@@ -395,7 +395,7 @@
             "abilitylist": [],
             "magiclist": [],
             "price": 10,
-            "description": "The bow is carried by most races and used extensively in warfare. It is a compact yet powerful weapon, that is cheap to make and easy to maintain."
+            "description": "The bow is carried by most races and used extensively in warfare. It is a compact yet powerful weapon, that is cheap to make and easy to maintain. "
         },
         "Long Bow": {
             "category": "Missile Weapon",
@@ -417,7 +417,7 @@
             "abilitylist": [],
             "magiclist": [],
             "price": 15,
-            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy. "
         },
         "Elf Bow": {
             "category": "Missile Weapon",
@@ -444,7 +444,7 @@
             ],
             "magiclist": [],
             "price": 15,
-            "description": "A Long bow."
+            "description": "A Long bow. "
         },
         "Light Armour": {
             "category": "Armour & Protection",
@@ -466,7 +466,7 @@
             "abilitylist": [],
             "magiclist": [],
             "price": 20,
-            "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+            "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement. "
         },
         "Heavy Armour": {
             "category": "Armour & Protection",
@@ -488,12 +488,12 @@
             "abilitylist": [
                 {
                     "name": "Encumbered",
-                    "description": "A warrior that is armed with both heavy armor and a shield suffers a -1 Movement penalty."
+                    "description": "A warrior that is armed with both heavy armor and a shield suffers a -1 Movement penalty. "
                 }
             ],
             "magiclist": [],
             "price": 50,
-            "description": "Typical heavy armor is made from metal links and is called chain mail. Forging chain mail is a laborious and time consuming process, as the blacksmith must put together hundreds, sometimes thousands, of metal links. This makes chain mail expensive, but this type of armor provides excellent protection for anyone who can afford it. There are other types of heavy armor as well, of which the best known are the steel breastplates and greaves worn by the foot knights of the Templar orders."
+            "description": "Typical heavy armor is made from metal links and is called chain mail. Forging chain mail is a laborious and time consuming process, as the blacksmith must put together hundreds, sometimes thousands, of metal links. This makes chain mail expensive, but this type of armor provides excellent protection for anyone who can afford it. There are other types of heavy armor as well, of which the best known are the steel breastplates and greaves worn by the foot knights of the Templar orders. "
         },
         "Ithilmar Armour": {
             "category": "Armour & Protection",
@@ -515,7 +515,7 @@
             "abilitylist": [],
             "magiclist": [],
             "price": 90,
-            "description": "Ithilmar is a silvery metal which is as light as silk and stronger than steel. Elves are experts at fashioning weapons and armor from Ithilmar, and the Elven kingdom of Caledor is the only place in the world where this metal can be found. Ithilmar armor gives the wearer a 5+ basic save, and does not slow him down if he is also armed with a shield."
+            "description": "Ithilmar is a silvery metal which is as light as silk and stronger than steel. Elves are experts at fashioning weapons and armor from Ithilmar, and the Elven kingdom of Caledor is the only place in the world where this metal can be found. Ithilmar armor gives the wearer a 5+ basic save, and does not slow him down if he is also armed with a shield. "
         },
         "Helmet": {
             "category": "Armour & Protection",
@@ -537,12 +537,12 @@
             "abilitylist": [
                 {
                     "name": "Hardhead",
-                    "description": "A model that is equipped with a helmet has a special 4+ save on a D6 against being stunned. If the save is made, treat the stunned result as knocked down instead. This save is not modified by the opponent\u2019s Strength."
+                    "description": "A model that is equipped with a helmet has a special 4+ save on a D6 against being stunned. If the save is made, treat the stunned result as knocked down instead. This save is not modified by the opponent\u2019s Strength. "
                 }
             ],
             "magiclist": [],
             "price": 10,
-            "description": "From the shining steel helmets of Bretonnian knights to the leather caps of the Skaven, all sensible warriors try to protect the most vulnerable part of their body \u2013 their head. Even the most vain fighters still use a helmet, as it can be festooned with plumes, horns and other decorations. Helmets come in varying shapes and sizes, but their basic function remains the same."
+            "description": "From the shining steel helmets of Bretonnian knights to the leather caps of the Skaven, all sensible warriors try to protect the most vulnerable part of their body \u2013 their head. Even the most vain fighters still use a helmet, as it can be festooned with plumes, horns and other decorations. Helmets come in varying shapes and sizes, but their basic function remains the same. "
         },
         "Buckler": {
             "category": "Armour & Protection",
@@ -564,12 +564,12 @@
             "abilitylist": [
                 {
                     "name": "Parry",
-                    "description": "Swords offer an excellent balance of defense and offence. A model armed with a sword may parry blows. When his opponent rolls to hit, the model armed with a sword may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength \u2013 they are simply too powerful to be stopped."
+                    "description": "Swords offer an excellent balance of defense and offence. A model armed with a sword may parry blows. When his opponent rolls to hit, the model armed with a sword may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength \u2013 they are simply too powerful to be stopped. "
                 }
             ],
             "magiclist": [],
             "price": 5,
-            "description": "Bucklers are small, round shields designed for parrying or deflecting blows. They are usually made of steel for they need to be tremendously durable to survive the brutal blows of hand-to-hand combat. Using a buckler requires great skill, but a nimble warrior can protect himself from blows which would otherwise cripple him."
+            "description": "Bucklers are small, round shields designed for parrying or deflecting blows. They are usually made of steel for they need to be tremendously durable to survive the brutal blows of hand-to-hand combat. Using a buckler requires great skill, but a nimble warrior can protect himself from blows which would otherwise cripple him. "
         },
         "Shield": {
             "category": "Armour & Protection",
@@ -591,7 +591,7 @@
             "abilitylist": [],
             "magiclist": [],
             "price": 5,
-            "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner."
+            "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner. "
         },
         "Elven Wine": {
             "category": "Consumables",
@@ -613,12 +613,12 @@
             "abilitylist": [
                 {
                     "name": "Fearless",
-                    "description": "An elven warband that drinks Elven Wine before a battle will be immune to Fear for the whole of the battle."
+                    "description": "An elven warband that drinks Elven Wine before a battle will be immune to Fear for the whole of the battle. "
                 }
             ],
             "magiclist": [],
             "price": 50,
-            "description": "High Elven wines are well known to be the best in the world, and some are even rumored to have magical qualities. A fine Elven Wine can cast out doubt and fear and leave a general feeling of wellbeing in a warrior."
+            "description": "High Elven wines are well known to be the best in the world, and some are even rumored to have magical qualities. A fine Elven Wine can cast out doubt and fear and leave a general feeling of wellbeing in a warrior. "
         },
         "Mordheim Map": {
             "category": "Other",
@@ -640,7 +640,7 @@
             "abilitylist": [],
             "magiclist": [],
             "price": 20,
-            "description": "Temporary item, When you buy a map, roll a D6. Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
+            "description": "Temporary item, When you buy a map, roll a D6. Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot. "
         },
         "Fake Mordheim Map": {
             "category": "Other",
@@ -662,12 +662,12 @@
             "abilitylist": [
                 {
                     "name": "Fake Mordheim Map",
-                    "description": "The map is a fake, and is completely worthless. It leads you on a fool\u2019s errand. Your opponent may automatically choose the next scenario you play."
+                    "description": "The map is a fake, and is completely worthless. It leads you on a fool\u2019s errand. Your opponent may automatically choose the next scenario you play. "
                 }
             ],
             "magiclist": [],
             "price": 20,
-            "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
+            "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot. "
         },
         "Vague Mordheim Map": {
             "category": "Other",
@@ -689,12 +689,12 @@
             "abilitylist": [
                 {
                     "name": "Vague Mordheim Map",
-                    "description": "Though crude, the map is generally accurate (well\u2026 parts of it are\u2026 perhaps!). You may re-roll any one dice during the next exploration phase if you wish but you must accept the result of the second roll."
+                    "description": "Though crude, the map is generally accurate (well\u2026 parts of it are\u2026 perhaps!). You may re-roll any one dice during the next exploration phase if you wish but you must accept the result of the second roll. "
                 }
             ],
             "magiclist": [],
             "price": 20,
-            "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
+            "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot. "
         },
         "Catacomb Mordheim Map": {
             "category": "Other",
@@ -716,12 +716,12 @@
             "abilitylist": [
                 {
                     "name": "Catacomb Mordheim Map",
-                    "description": "The map shows a way through the catacombs into the city. You may automatically choose the scenario next time you fight a battle."
+                    "description": "The map shows a way through the catacombs into the city. You may automatically choose the scenario next time you fight a battle. "
                 }
             ],
             "magiclist": [],
             "price": 20,
-            "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
+            "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot. "
         },
         "Accurate Mordheim Map": {
             "category": "Other",
@@ -743,12 +743,12 @@
             "abilitylist": [
                 {
                     "name": "Accurate Mordheim Map",
-                    "description": "The map is recently made and very detailed. You may re-roll up to three dice during the next exploration phase if you wish. You must accept the result of the second roll."
+                    "description": "The map is recently made and very detailed. You may re-roll up to three dice during the next exploration phase if you wish. You must accept the result of the second roll. "
                 }
             ],
             "magiclist": [],
             "price": 20,
-            "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
+            "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot. "
         },
         "Master Mordheim Map": {
             "category": "Other",
@@ -770,12 +770,12 @@
             "abilitylist": [
                 {
                     "name": "Master Mordheim Map",
-                    "description": "This is one of the twelve master maps of Mordheim made for Count von Steinhardt of Ostermark. From now on you may always re-roll one dice when rolling on the Exploration chart as long as the Hero who possesses this map was not taken out of action in the battle."
+                    "description": "This is one of the twelve master maps of Mordheim made for Count von Steinhardt of Ostermark. From now on you may always re-roll one dice when rolling on the Exploration chart as long as the Hero who possesses this map was not taken out of action in the battle. "
                 }
             ],
             "magiclist": [],
             "price": 20,
-            "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
+            "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot. "
         }
     },
     "Broheim - High Elves": {
@@ -799,12 +799,12 @@
             "abilitylist": [
                 {
                     "name": "Concussion",
-                    "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model\u2019s injuries."
+                    "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model\u2019s injuries. "
                 }
             ],
             "magiclist": [],
             "price": 20,
-            "description": "A staff used by mages."
+            "description": "A staff used by mages. "
         },
         "Mage Staff (Two Handed)": {
             "category": "Melee Weapon",
@@ -826,12 +826,12 @@
             "abilitylist": [
                 {
                     "name": "Concussion",
-                    "description": "Stunned happens also on a trow of 2 at the injury roll."
+                    "description": "Stunned happens also on a trow of 2 at the injury roll. "
                 }
             ],
             "magiclist": [],
             "price": 20,
-            "description": "A staff used by mages."
+            "description": "A staff used by mages. "
         }
     }
 }

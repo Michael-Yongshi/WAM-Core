@@ -180,20 +180,25 @@ if __name__ == "__main__":
     )
     add_warbandref(
         race = "High Elf",
-        source = "Broheim",
+        source = "Broheim - Killershrike",
         name = "Wyrdbreakers",
-        rulelist = [],
+        rulelist = [
+            {"name": "Excellent Sight", "description": "Elves have eyesight unmatched by mere humans. Elves spot Hidden enemies from two times as far away as other warriors (ie, twice their Initiative value in inches)."}, 
+            {"name": "Haughty", "description": "The High Elves are a very proud and noble race. A High Elf Warband may never include hired swords that are not of High Elven blood, nor can they use any equipment of Dwarf origin. This includes Gromril weapons and armour."},
+            {"name": "Honourable", "description": "High Elves can never use poison or drugs of any kind no matter what the circumstance."},
+            {"name": "The Old Ways", "description": "The High Elves may never use black powder weapons of any sort. This goes against their ancestors and the traditions of the Old Ways."},
+            {"name": "Resolve", "description": "The High Elves have been fighting the Dark Elves for countless centuries. When fighting their dark kin the High Elves are driven by unwavering determination. They are considered to have a Leadership of 10 when taking Rout Tests against the Dark Elves. In addition, High Elves can never choose to voluntarily Rout as they must stop their evil kin at any cost."},
+        ],
         description = (
-"High Elves originate from the island kingdom of Ulthuan far to the west of the Empire, which is belaugered continuously by raids from their hated Dark Elven brethren, the fearless Norscans, and the incursions of Chaos which rack all civilized lands. "
-"The fair elven folk learn how to fight from childhood, and thanks to their extremely long lifespans they often grow in skill to become unrivaled in their prowess by other mortals. Despite their individual ability, their numbers are few compared to their co-inhabitants of the Old World and they are always in search of some edge with which to gain an advantage over their foes. "
-"Thus the High Elves are unrivaled practitioners of the arcane arts and their specialized school of Spell craft is so highly regarded it is referred to simply as the High Magic by other Wizards. The Elven Mages are very proficient at many aspects of Magic, including astrology and the prediction of what is to come. So it was that the coming of the comet known in the Empire as the Hammer of Sigmar was not a suprise to the inhabitants of Ulthuan. "
-"The Loremasters foretold the great power it would bring in the form of wyrdstone, but also the danger as they knew the substance was riddled with the Chaos taint and would spread the evils of corruption to all new levels. Therefore the Pheonix King, advised by the Loremasters, issued a decree: Wyrdstone must be destroyed whenever possible, and any brave enough to undertake the hardships of travel across the lands of the Humans and to bear the dangers of the Damned city to seek out and destroy the Chaos-tainted stones would be forever honored in the lands of the Elves. "
-"From across the provinces bands of young would-be heroes volunteered to pledge their blades to the Kings edict, and the Loremasters dispatched many apprentices to accompany them in their journey and lead them to the fell substance. Furthermore the Loremasters crafted magical devices called Wyrd-breakers to counter the Chaos taint of the wyrdstone and render the substance into more mundane gemstones thereby effectively destroying the wyrdstone but still allowing the Elves a source of revenue. Each of the young mages was given one and sent forth to rid the world of the taint of wyrdstone. "
-"<i>-Based on the premise of the high elves seeing wyrdstones as chaos instruments. However as Mordheim lays in outside territory and wanting to avoid full scale war, Tyrion together with Teclis ordered their generals to organise small autonomous and selfsufficient companies. These small companies could travel on unofficial grounds, protecting elven world from warring with the Empire. "
-"These companies will act without any link to the elven homeworld and such are not able to get more support from the elven lands beside a starting supply. The companies are given a wyrdstone breaker to turn wyrdstone in mere gems to sell off. These companies are not trusting anyone except the ones from true high elf origin. "
-"loremaster, in the noble high elves kingdom of asuryan. These warbands of high elves dress to move under cover and not get too much notice in the chaotic region of mordheim, as high elves are not generally liked and allies are slim. Although their many high elves traits like their fair skin or the light weapons and armour they carry do not make that easy.-</i>"
-
-
+            "High Elves originate from the island kingdom of Ulthuan far to the west of the Empire, which is belaugered continuously by raids from their hated Dark Elven brethren, the fearless Norscans, and the incursions of Chaos which rack all civilized lands. \n"
+            "The fair elven folk learn how to fight from childhood, and thanks to their extremely long lifespans they often grow in skill to become unrivaled in their prowess by other mortals. Despite their individual ability, their numbers are few compared to their co-inhabitants of the Old World and they are always in search of some edge with which to gain an advantage over their foes. /n"
+            "Thus the High Elves are unrivaled practitioners of the arcane arts and their specialized school of Spell craft is so highly regarded it is referred to simply as the High Magic by other Wizards. The Elven Mages are very proficient at many aspects of Magic, including astrology and the prediction of what is to come. So it was that the coming of the comet known in the Empire as the Hammer of Sigmar was not a suprise to the inhabitants of Ulthuan. \n"
+            "The Loremasters foretold the great power it would bring in the form of wyrdstone, but also the danger as they knew the substance was riddled with the Chaos taint and would spread the evils of corruption to all new levels. Therefore the Pheonix King, advised by the Loremasters, issued a decree: Wyrdstone must be destroyed whenever possible, and any brave enough to undertake the hardships of travel across the lands of the Humans and to bear the dangers of the Damned city to seek out and destroy the Chaos-tainted stones would be forever honored in the lands of the Elves. \n"
+            "From across the provinces bands of young would-be heroes volunteered to pledge their blades to the Kings edict, and the Loremasters dispatched many apprentices to accompany them in their journey and lead them to the fell substance. Furthermore the Loremasters crafted magical devices called Wyrd-breakers to counter the Chaos taint of the wyrdstone and render the substance into more mundane gemstones thereby effectively destroying the wyrdstone but still allowing the Elves a source of revenue. Each of the young mages was given one and sent forth to rid the world of the taint of wyrdstone. \n"
+            "------------------------------\n"
+            "Based on the premise of the high elves seeing wyrdstones as chaos instruments. However as Mordheim lays in outside territory and wanting to avoid full scale war, Tyrion together with Teclis ordered their generals to organise small autonomous and selfsufficient companies. These small companies could travel on unofficial grounds, protecting elven world from warring with the Empire. \n "
+            "These companies will act without any link to the elven homeworld and such are not able to get more support from the elven lands beside a starting supply. The companies are given a wyrdstone breaker to turn wyrdstone in mere gems to sell off. These companies are not trusting anyone except the ones from true high elf origin. \n "
+            "loremaster, in the noble high elves kingdom of asuryan. These warbands of high elves dress to move under cover and not get too much notice in the chaotic region of mordheim, as high elves are not generally liked and allies are slim. Although their many high elves traits like their fair skin or the light weapons and armour they carry do not make that easy. \n "
         ),
     )
 
@@ -1202,10 +1207,10 @@ if __name__ == "__main__":
         description = "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships. "
     )
     
-    # Wyrdbreakers characters from the Broheim website
+    # Wyrdbreakers characters from the Broheim website with lore from killershrike website
     add_characterref(
         race = "High Elf",
-        source = "Broheim",
+        source = "Broheim - Killershrike",
         warband = "Wyrdbreakers",
         category = "Loremaster",
         ishero = True,
@@ -1225,7 +1230,7 @@ if __name__ == "__main__":
     )
     add_characterref(
         race = "High Elf",
-        source = "Broheim",
+        source = "Broheim - Killershrike",
         warband = "Wyrdbreakers",
         category = "Ranger",
         ishero = True,
@@ -1242,7 +1247,7 @@ if __name__ == "__main__":
     )
     add_characterref(
         race = "High Elf",
-        source = "Broheim",
+        source = "Broheim - Killershrike",
         warband = "Wyrdbreakers",
         category = "Sword Warden",
         ishero = True,
@@ -1259,7 +1264,7 @@ if __name__ == "__main__":
     )
     add_characterref(
         race = "High Elf",
-        source = "Broheim",
+        source = "Broheim - Killershrike",
         warband = "Wyrdbreakers",
         category = "Seaguard",
         ishero = False,
@@ -1276,7 +1281,7 @@ if __name__ == "__main__":
     )
     add_characterref(
         race = "High Elf",
-        source = "Broheim",
+        source = "Broheim - Killershrike",
         warband = "Wyrdbreakers",
         category = "Cadet",
         ishero = False,

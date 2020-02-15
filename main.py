@@ -278,16 +278,12 @@ class WarbandOverview(QMainWindow):
         # top left warband info
         wbnamelabel = QLabel()
         wbnamelabel.setText("Name: " + self.wbid.name)
-        wbnamelabel.setToolTip('This is your <b>Warband`s</b> name')
         wbracelabel = QLabel()
         wbracelabel.setText("Race: " + self.wbid.race)
-        wbracelabel.setToolTip('This is your <b>Warband`s</b> race')
         wbsrclabel = QLabel()
         wbsrclabel.setText("Source: " + self.wbid.source)
-        wbsrclabel.setToolTip('This is your <b>Warband`s</b> source')
         wbtypelabel = QLabel()
         wbtypelabel.setText("Type: " + self.wbid.warband)
-        wbtypelabel.setToolTip('This is your <b>Warband`s</b> type')
 
         wbbox = QVBoxLayout()
         wbbox.addWidget(wbnamelabel)
@@ -297,6 +293,13 @@ class WarbandOverview(QMainWindow):
 
         wbboxwidget = QBorderedWidget()
         wbboxwidget.setLayout(wbbox)
+        
+        # make rules printable for tooltip
+        printablerules = []
+        for r in self.wbid.rulelist:
+            printablerules += [r.name]
+    
+        wbboxwidget.setToolTip(f"Special Rules: {printablerules}\n\n{self.wbid.description}")
 
         # update wb info
         
@@ -701,7 +704,7 @@ class WarbandOverview(QMainWindow):
 
                     warband, okPressed = QInputDialog.getItem(self, "Create", "Choose a warband", warbands, 0, False)
                     if okPressed and warband:
-                        self.wbid = Warband(name=name, race=race, source=source, warband=warband, treasury=Treasury(gold=500))
+                        self.wbid = Warband.create_warband(name=name, race=race, source=source, warband=warband, gold=500)
                         self.currentunit = self.create_template_char()
                         self.initUI()
 

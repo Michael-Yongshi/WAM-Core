@@ -31,18 +31,12 @@ from source.class_components import (
 def test_createWarband(name, race, source, warband):
    
     # create_warband
-    wbid = Warband(
+    wbid = Warband.create_warband(
         name=name,
         race=race,
         source=source,
         warband=warband,
-        description="No description"
         )
-
-    # Manually adding rules of warband
-    wbid.rulelist=[
-            Rule(name="Test rule", description="Test rule description."),
-            ]
 
     # Manually adding an item
     wbid.itemlist=[

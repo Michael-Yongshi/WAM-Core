@@ -3,15 +3,31 @@
     "race": "High Elf",
     "source": "Broheim",
     "warband": "High Elves",
-    "description": "No description",
+    "description": "The Citadel of Dusk was built for the dual purpose of guarding the seaways off the east coast of Lustria against incursions from the rest of the world, and as a staging post from which the High Elves could watch the movements of the Lizardmen and their Slann masters. Despite the High Elves\u2019 best efforts to keep Lustria free of human adventurers, the people of the Old World have been dogged in their attempts to penetrate Ulthuan\u2019s extensive naval web and explore the jungle continent. So far the mighty Slann Mages have not appeared unduly concerned by the constant incursions onto their lands by the greedy peoples of the Old World and Naggaroth, and appear to have done little to prevent these predatory races from returning. Yet the High Elves know that despite the Slann`s relative calm in the face of these constant raids, the patience of ancient Mage-Priests is not limitless. The Elves fear that the Slann might one day rouse themselves from their century-long meditations to make a concerted effort to end any and all threats to the continuation of their culture as the inheritors of the Old Ones. If the Slann were to throw all their intellect and resources into total war, they could conceivably wipe out whole nations before they could be stopped, such is their awesome power. Fearing for their own survival as much as anything else, the High Elves have taken it upon themselves to keep Lustria secure from the predations of all other races, and protect the ancient secrets left behind by the Old Ones that the Slann safeguard. The High Elves` cause has not been helped by the many fantastic stories that persist throughout the Old World; stories of lost cities made entirely of gold lying hidden within its dense foliage, just waiting to be discovered and plundered.",
     "treasury": {
         "gold": 260,
         "wyrd": 0
     },
     "rulelist": {
         "Rule1": {
-            "name": "Test rule",
-            "description": "Test rule description."
+            "name": "Excellent Sight",
+            "description": "Elves have eyesight unmatched by mere humans. Elves spot Hidden enemies from two times as far away as other warriors (ie, twice their Initiative value in inches)."
+        },
+        "Rule2": {
+            "name": "Haughty",
+            "description": "The High Elves are a very proud and noble race. A High Elf Warband may never include hired swords that are not of High Elven blood, nor can they use any equipment of Dwarf origin. This includes Gromril weapons and armour."
+        },
+        "Rule3": {
+            "name": "Honourable",
+            "description": "High Elves can never use poison or drugs of any kind no matter what the circumstance."
+        },
+        "Rule4": {
+            "name": "The Old Ways",
+            "description": "The High Elves may never use black powder weapons of any sort. This goes against their ancestors and the traditions of the Old Ways."
+        },
+        "Rule5": {
+            "name": "Resolve",
+            "description": "The High Elves have been fighting the Dark Elves for countless centuries. When fighting their dark kin the High Elves are driven by unwavering determination. They are considered to have a Leadership of 10 when taking Rout Tests against the Dark Elves. In addition, High Elves can never choose to voluntarily Rout as they must stop their evil kin at any cost."
         }
     },
     "itemlist": {

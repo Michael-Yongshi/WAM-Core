@@ -113,6 +113,33 @@ class Warband(object):
 
         return wbid
     
+    def create_warband(name, race, source, warband, gold=500):
+        """Create a new warband based on the given parameters"""
+        # open reference data json file
+        data = open_json("database/references/warbands_ref.json")
+
+        rulelist = []
+        for ruledict in data[race][source][warband].get("rulelist"):
+            ruleobject = Rule(name = ruledict["name"], description = ruledict["description"])
+            rulelist.append(ruleobject)
+
+        treasury=Treasury(
+            gold = gold,
+        )
+        
+        # create new basic warband object
+        new_warband = Warband(
+            name = name, 
+            race = race, 
+            source = source, 
+            warband = warband, 
+            treasury = treasury,
+            rulelist = rulelist,
+            description = data[race][source][warband].get("description")  
+        )      
+                
+        return new_warband
+
     def get_price(self):
         """ Temporary function, should be split in seperate functions to adjust gold baded on single events of buying equipment or getting loot"""
         
@@ -174,7 +201,7 @@ class Squad(object):
     def create_squad(name, race, source, warband, category, number=1):
         """Create a new squad with the given parameters and creates the amount of henchman determined by the number parameter"""
         
-        newsquad = Squad(
+        new_squad = Squad(
             name = name,
             henchmanlist = []
             )
@@ -187,9 +214,9 @@ class Squad(object):
                 warband = warband,
                 category = category,  
                 )
-            newsquad.henchmanlist.append(newhenchman)
+            new_squad.henchmanlist.append(newhenchman)
                 
-        return newsquad
+        return new_squad
 
     def change_henchman_count(self, deltasize):
         if deltasize > 0:

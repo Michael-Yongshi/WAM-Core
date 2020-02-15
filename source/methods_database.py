@@ -262,6 +262,76 @@ def get_itemref(source, item):
     return itemdict
 
 
+def create_abilityref():
+    # Paths
+    folderpath = "database/references/"
+    filepath = folderpath + "abilities_ref.json"
+
+    # Create data file
+    data = {}
+    data["Core Rules"] = {}
+
+    print(f"Created abilityfile")
+    save_json(data, filepath)
+
+
+def add_abilityref(source, category, name, description):
+    # Paths
+    folderpath = "database/references/"
+    filepath = folderpath + "abilities_ref.json"
+    
+    # open abilitys_ref.json
+    data = open_json(filepath)
+
+    # First check if source already exists
+    if source in data:
+        pass
+    else:
+        data[source] = {}
+
+    # Second check if category already exists
+    if category in data[source]:
+        pass
+    else:
+        data[source][category] = {}
+
+    # Add data
+    data[source][category][name]={
+        'source': source,
+        'category': category,
+        'name': name,
+        'description': description,
+    }
+   
+    print(f"Added ability: {name}")
+    save_json(data, filepath)
+
+
+def get_abilityref(source, category, name):
+    # Paths
+    folderpath = "database/references/"
+    filepath = folderpath + "abilities_ref.json"
+
+    # open ref json
+    data = open_json(filepath)
+
+    # First check if source exists
+    if source in data:
+        if category in data[source]:
+            # Third check if ability exists
+            if name in data[source][category]: 
+                abilitydict = data[source][category][name]
+            else:
+                print(f"ability:{name} does not exist")
+        else:
+            print(f"Category: {category} does not exist")
+    else:
+        print(f"Source {source} does not exist")
+
+    print(f"Here is data for {name}")
+    print(abilitydict)
+    return abilitydict
+
 
 def create_magicref():
     # Paths
@@ -298,6 +368,9 @@ def add_magicref(source, category, name, difficulty, description):
 
     # Add data
     data[source][category][name]={
+        'source': source,
+        'category': category,
+        'name': name,
         'difficulty': difficulty,
         'description': description
     }

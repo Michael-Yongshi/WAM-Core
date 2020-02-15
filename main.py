@@ -767,26 +767,32 @@ class WarbandOverview(QMainWindow):
             source, okPressed = QInputDialog.getItem(self, "Select source", "Choose a source", sources, 0, False)
             if okPressed and source:
             
-                # get all available abilitys
-                abilitys = []
+                # get all available categories
+                categories = []
                 for key in abilitydict[source]:
-                    abilitys.append(key)
+                    categories.append(key)
 
-                ability, okPressed = QInputDialog.getItem(self, "Create", "Choose an ability", abilitys, 0, False)
-                if okPressed and ability:
-                    new_ability = ability.create_ability(
-                        name = ability,
-                        source = source,
-                    )
+                category, okPressed = QInputDialog.getItem(self, "Select category", "Choose a category", categories, 0, False)
+                if okPressed and category:
 
-                    abilityprice = abilitydict[source][ability]["price"]
-                    if self.wbid.treasury.gold >= abilityprice:
+                    # get all available abilities
+                    abilities = []
+                    for key in abilitydict[source][category]:
+                        abilities.append(key)
+
+                    ability, okPressed = QInputDialog.getItem(self, "Create", "Choose an ability", abilities, 0, False)
+                    if okPressed and ability:
+                        new_ability = Ability(
+                            source = source,
+                            category = category,
+                            name = ability,
+                            description = abilitydict[source][category][ability]["description"],
+                        )
                         
                         if unit.ishero == True:
                             for hero in self.wbid.herolist:
                                 if unit.name == hero.name:
                                     hero.abilitylist.append(new_ability)
-                                    self.wbid.treasury.gold -= abilityprice
                                     self.initUI()
                                     
                         else:
@@ -794,11 +800,7 @@ class WarbandOverview(QMainWindow):
                                 if unit.name == s.name:
                                     for henchman in s.henchmanlist:
                                         henchman.abilitylist.append(new_ability)
-                                        self.wbid.treasury.gold -= abilityprice
                                     self.initUI()
-
-                    else:
-                        message = QMessageBox.information(self, 'Lack of funds!', "Can't add new ability, lack of funds", QMessageBox.Ok)
 
         return create_ability_for_unit
 

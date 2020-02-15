@@ -1325,6 +1325,7 @@ if __name__ == "__main__":
     )
 
     create_itemref()
+    # Melee items
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
@@ -1332,7 +1333,7 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Enemy Armor Save", "description": "These weapons are not the best weapons to use for penetrating an enemy model’s armor. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally. "},
+            {"name": "Cloth is Armour", "description": "These weapons are not the best weapons to use for penetrating an enemy model’s armor. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."},
             ],
         magiclist = [],
         price = 0,
@@ -1345,7 +1346,7 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Enemy Armor Save", "description": "These weapons are not the best weapons to use for penetrating an enemy model’s armor. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally. "},
+            {"name": "Cloth is Armour", "description": "These weapons are not the best weapons to use for penetrating an enemy model’s armor. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."},
             ],
         magiclist = [],
         price = 2,
@@ -1435,6 +1436,20 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
+        name = "Steel Whip",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Cannot be parried", "description":"The steel whip is a flexible weapon and the Priestesses use it with great expertise. Attempts to parry its strikes are futile. A model attacked by a steel whip may not make parries with swords or bucklers."},
+            {"name": "Whipcrack", "description":" when the wielder charges they gain +1A for that turn. This bonus attack is added after any other modifications. When the wielder is charged they gain +1A that they may only use against the charger. This additional attack will ‘strike first’. If the wielder is simultaneously charged by two or more opponents they will still only receive a total of +1A. If the wielder is using two whips at the same time then they get +1A for the additional hand weapon, but only the first whip gets the whipcrack +1A."},
+        ],
+        magiclist = [],
+        price = 10,
+        description = "The halberd’s heavy blade is mounted upon a sturdy shaft of oak or steel and has a point like a spear and a cutting edge like an axe. Since it can be used to chop as well as thrust, it is an adaptable weapon, but is difficult to use inside buildings. "
+        )
+    add_itemref(
+        source = "Core Rules",
+        category = "Melee Weapon",
         name = "Great Sword",
         distance = 0,
         skill = [0, 0, 0, 2, 0, 0, 0, 0, 0, 0],
@@ -1490,6 +1505,67 @@ if __name__ == "__main__":
         )
     add_itemref(
         source = "Core Rules",
+        category = "Melee Weapon",
+        name = "Sigmarite Warhammer",
+        distance = 0,
+        skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Concussion", "description": "Warhammers are excellent at striking people senseless. When using a Warhammer in close combat a roll of 2-4 is treated as Stunned when rolling on the Injury chart."},
+            {"name": "Holy Weapon", "description": "Each Warhammer is blessed by the High Matriarch herself before it is handed to the Sisters. The Warhammer has a +1 bonus on all to wound rolls against any Possessed or Undead models. Note that you will still need to score a 6 before any modifiers in order to cause a critical hit. Only Matriarchs and Sister Superiors may carry two Sigmarite Warhammers."},
+            ],
+        magiclist = [],
+        price = 15,
+        description = "One of the traditional weapons of the Sisterhood, the Warhammer echoes Ghal-Maraz, the great hammer of Sigmar himself."
+        )
+    add_itemref(
+        source = "Core Rules",
+        category = "Melee Weapon",
+        name = "Fighting Claws",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Pair", "description": "Fighting Claws are traditionally used in pairs, one in each hand. A warrior armed with Fighting Claws gets an additional attack."},
+            {"name": "Climb", "description": "A Skaven equipped with Fighting Claws can add +1 to his Initiative when making Climbing tests."},
+            {"name": "Parry", "description": "A Skaven armed with Fighting Claws may parry blows and can re-roll a failed attempt once, in the same way as a model armed with a sword and buckler."},
+            {"name": "Cumbersome", "description": "A model armed with Fighting Claws may not use any other weapons in the entire battle."},
+            ],
+        magiclist = [],
+        price = 35,
+        description = "The martial arts practiced by Clan Eshin employ many unusual weapons. The most famous of these are the Eshin Fighting Claws: sharp metal blades attached to the paws of a Skaven warrior. It takes a real expert to use them effectively, but an adept of Clan Eshin is a fearsome opponent when armed this way."
+        )
+    add_itemref(
+        source = "Core Rules",
+        category = "Melee Weapon",
+        name = "Lance",
+        distance = 0,
+        skill = [0, 0, 0, 2, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Cavalry Weapon", "description": "A warrior must own a warhorse to use a lance, as it can only be used whilst he is on horseback."},
+            {"name": "Cavalry Charge Bonus", "description": "If using optional rules for mounted models, a warrior armed with a lance receives a +2 Strength bonus when he charges. This bonus only applies for that turn."},
+        ],
+        magiclist = [],
+        price = 40,
+        description = "Lances are long, heavy spears used by mounted shock troops to rip through armor and fling their foes to the ground. They are the chosen weapons of Knights Templar and other wealthy warriors. To use a lance requires great skill and strength, and only the richest warriors ride the heavy warhorses needed to wield these mighty weapons effectively."
+        )
+    add_itemref(
+        source = "Core Rules",
+        category = "Melee Weapon",
+        name = "Weeping Blades",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Pair", "description": "Weeping Blades are traditionally used in pairs, one in each hand. A warrior armed with Weeping Blades gets an additional attack."},
+            {"name": "Venomous", "description": "The venom of Weeping Blades will enter the blood of the victim and ravage his organs and muscles. These weapons count as being permanently coated in black lotus (see the Equipment section). No additional poison may be applied to Weeping Blades."},
+            {"name": "Parry", "description": "Weeping Blades are swords and can be used for parrying"},
+        ],
+        magiclist = [],
+        price = 50,
+        description = "The adepts of Clan Eshin use weapons called Weeping Blades, murderous swords constructed with a small amount of warpstone in their structure. A Weeping Blade constantly sweats a deadly corrosive venom."
+        )
+    
+    # Missile items
+    add_itemref(
+        source = "Core Rules",
         category = "Missile Weapon",
         name = "Bow",
         distance = 24,
@@ -1513,6 +1589,21 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Missile Weapon",
+        name = "Blowpipe",
+        distance = 8,
+        skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Cloth is Armour", "description": "These weapons are not the best weapons to use for penetrating an enemy model’s armor. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."},
+            {"name": "Poison", "description": "The needles fired by a blowpipe are coated in a venom very similar in its effects to the Black Lotus (if you roll a 6 on the To Hit roll, the victim is automatically wounded). A blowpipe cannot cause critical hits. This weapon has a positive armor save modifier, so a model that normally has a save of 5+ will get a save of 4+ against a blowpipe dart. Even models that normally do not have an armor save will get a 6+ save to take into account protection offered by clothes, fur or the like."},
+            {"name": "Stealthy", "description": "A Skaven armed with a blowpipe can fire while hidden without revealing his position to the enemy. The target model can take an Initiative test in order to try to spot the firing Skaven. If the test is successful, the Skaven no longer counts as hidden."},
+        ],
+        magiclist = [],
+        price = 35,
+        description = "A Long bow. "
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Missile Weapon",
         name = "Elf Bow",
         distance = 36,
         skill = [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
@@ -1520,7 +1611,7 @@ if __name__ == "__main__":
             {"name": "Armour Piercing", "description": "An Elf bow has a -1 save modifier on armor saves against it"},
         ],
         magiclist = [],
-        price = 15,
+        price = 35,
         description = "A Long bow. "
     )
     add_itemref(

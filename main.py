@@ -275,19 +275,6 @@ class WarbandOverview(QMainWindow):
 
         return wbinvboxwidget
 
-    def dialog_treasury(self):
-        
-        newgold, okPressed = QInputDialog.getInt(self, 'Gold change', f"Change gold amount to:", self.wbid.treasury.gold, 0, 99999, 1)
-        if okPressed:
-            self.wbid.treasury.gold = newgold
-
-        newwyrd, okPressed = QInputDialog.getInt(self, 'Wyrd change', f"Change wyrd amount to:", self.wbid.treasury.wyrd, 0, 99999, 1)
-        if okPressed:
-            self.wbid.treasury.wyrd = newwyrd
-
-        # relaunch ui to process changes in ui
-        self.initUI()
-
     def set_wbname(self):
         # top left warband info
         wbnamelabel = QLabel()
@@ -304,6 +291,7 @@ class WarbandOverview(QMainWindow):
         wbbox.addWidget(wbracelabel)
         wbbox.addWidget(wbsrclabel)
         wbbox.addWidget(wbtypelabel)
+        wbbox.addWidget(wbemptylabel)
 
         wbboxwidget = QBorderedWidget()
         wbboxwidget.setLayout(wbbox)
@@ -360,6 +348,11 @@ class WarbandOverview(QMainWindow):
             herowidget.setLayout(herogrid)
             herowidget.clicked.connect(self.create_new_hero)
             herobox.addWidget(herowidget)
+        
+        while h <= 5:
+            h += 1
+            herowidget = QUnBorderedWidget()
+            herobox.addWidget(herowidget)
 
         heroboxwidget = QBorderedWidget()
         heroboxwidget.setLayout(herobox)
@@ -414,6 +407,11 @@ class WarbandOverview(QMainWindow):
             squadwidget = QInteractiveWidget()
             squadwidget.setLayout(squadgrid)
             squadwidget.clicked.connect(self.create_new_squad)
+            squadbox.addWidget(squadwidget)
+
+        while s <= 5:
+            s += 1
+            squadwidget = QUnBorderedWidget()
             squadbox.addWidget(squadwidget)
 
         squadboxwidget = QBorderedWidget()
@@ -543,6 +541,19 @@ class WarbandOverview(QMainWindow):
         cache_warband(self.wbid)                #set to run next time at stsrtup
         message = QMessageBox.information(self, "Saved", "Save successful!", QMessageBox.Ok)
 
+    def dialog_treasury(self):
+        
+        newgold, okPressed = QInputDialog.getInt(self, 'Gold change', f"Change gold amount to:", self.wbid.treasury.gold, 0, 99999, 1)
+        if okPressed:
+            self.wbid.treasury.gold = newgold
+
+        newwyrd, okPressed = QInputDialog.getInt(self, 'Wyrd change', f"Change wyrd amount to:", self.wbid.treasury.wyrd, 0, 99999, 1)
+        if okPressed:
+            self.wbid.treasury.wyrd = newwyrd
+
+        # relaunch ui to process changes in ui
+        self.initUI()
+        
     def create_method_focus(self, unit):          
         """This method is used in order to create a new method that holds a reference to a passed attribute,
         this is used when a widget needs to be clickable but the signal needs to carry information other than the signal itself.

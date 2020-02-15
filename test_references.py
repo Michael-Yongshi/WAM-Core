@@ -1598,8 +1598,8 @@ if __name__ == "__main__":
             {"name": "Stealthy", "description": "A Skaven armed with a blowpipe can fire while hidden without revealing his position to the enemy. The target model can take an Initiative test in order to try to spot the firing Skaven. If the test is successful, the Skaven no longer counts as hidden."},
         ],
         magiclist = [],
-        price = 35,
-        description = "A Long bow. "
+        price = 25,
+        description = "The blowpipe is a short hollow tube which can be used to shoot poisoned darts. While the darts by themselves are too small to cause significant damage, the poison used by the Skaven can cause searing agony and eventual death. The other advantage of a blowpipe is that it is silent, and a well-hidden shooter can fire the darts undetected."
     )
     add_itemref(
         source = "Core Rules",
@@ -1612,8 +1612,35 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         price = 35,
-        description = "A Long bow. "
+        description = "Elven bows are the finest missile weapons of their kind. Constructed from Ithilmar or wood from the Elf forests, with strings woven from the hair of Elf maidens, Elven bows are far superior to any missile weapons made by other races. In the hands of an Elven archer, the Elf bow is a truly potent weapon, its long range and penetrating power making it far superior to any bow made by humans."
     )
+    add_itemref(
+        source = "Core Rules",
+        category = "Missile Weapon",
+        name = "Crossbow Pistol",
+        distance = 10,
+        skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Fire before Melee", "description": " A model armed with a crossbow pistol may shoot it in the first round of a hand-to-hand combat and this shot is always resolved first, before any blows are struck. This shot has an extra -2 to hit penalty. Use model’s Ballistic Skill to see whether it hits or not. This bonus attack is in addition to any close combat weapon attacks."},
+        ],
+        magiclist = [],
+        price = 35,
+        description = "Crossbow pistols are masterpieces made by expert weapon-smiths. They are miniature crossbows with all the power and accuracy of the real thing. As these weapons may be easily concealed, they are the favored weapon of assassins."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Missile Weapon",
+        name = "Crossbow",
+        distance = 30,
+        skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Stationary Fire", "description": "You may not move and fire a crossbow on the same turn, other than to pivot on the spot to face your target or to stand up."},
+        ],
+        magiclist = [],
+        price = 25,
+        description = "A crossbow consists of a short, strong bow-stave mounted on a wooden or steel stock. The crossbows of the Empire are made of steel and often include a winding mechanism to draw back the string. It takes a long time to prepare a crossbow, but a bolt fired from one has a tremendous range and can penetrate armor easily. Crossbows take much longer than other bows to make, so they are expensive and relatively rare weapons. Still, they are the preferred weapon of many in Mordheim because of their power and long range."
+    )
+    # armour and stuff
     add_itemref(
         source = "Core Rules",
         category = "Armour & Protection",

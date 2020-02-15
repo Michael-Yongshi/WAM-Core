@@ -1855,11 +1855,24 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 2],
         abilitylist = [
-            {"name": "Encumbered", "description": "A warrior that is armed with both heavy armor and a shield suffers a -1 Movement penalty. "},
+            {"name": "Encumbered", "description": "A warrior that is armed with both heavy armor and a shield suffers a -1 Movement penalty."},
         ],
         magiclist = [],
         price = 50,
         description = "Typical heavy armor is made from metal links and is called chain mail. Forging chain mail is a laborious and time consuming process, as the blacksmith must put together hundreds, sometimes thousands, of metal links. This makes chain mail expensive, but this type of armor provides excellent protection for anyone who can afford it. There are other types of heavy armor as well, of which the best known are the steel breastplates and greaves worn by the foot knights of the Templar orders. "
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Armour & Protection",
+        name = "Cathayan Silk Clothes",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Rally!", "description": " Any Mercenary warband whose leader is wearing silk clothes may re-roll the first failed Rout test. However, after each battle in which the leader is taken out of action, roll a D6. On a roll of 1-3 the clothes are ruined and must be discarded."}
+        ],
+        magiclist = [],
+        price = 50,
+        description = "Some rich warband leaders like to flaunt their wealth and purchase clothes made out of silk from distant Cathay. This silk is the most expensive fabric in the known world, and wearing such clothes is a sure way to attract attention – especially thieves and assassins!"
     )
     add_itemref(
         source = "Core Rules",
@@ -1870,6 +1883,32 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         price = 90,
+        description = "Ithilmar is a silvery metal which is as light as silk and stronger than steel. Elves are experts at fashioning weapons and armor from Ithilmar, and the Elven kingdom of Caledor is the only place in the world where this metal can be found. Ithilmar armor gives the wearer a 5+ basic save, and does not slow him down if he is also armed with a shield. "
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Armour & Protection",
+        name = "Elven Cloak",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Camouflage", "description": "A warrior aiming a missile weapon at a warrior wearing an Elven cloak suffers -1 on his to hit roll."},        
+        ],
+        magiclist = [],
+        price = 100,
+        description = "Made from the hair of Elven maidens and interwoven with living tree leaves, an Elven cloak is a wonder to behold. A warrior wearing such a cloak will blend into the shadows, making it very difficult to shoot at them with missile weapons. Elven cloaks rarely come up for sale, but are sometimes recovered from dead warriors or offered by Elves as rewards to men who have served them in some way. A warrior aiming a missile weapon at a warrior wearing an Elven cloak suffers -1 on his to hit roll. Being from Ulthuan, Shadow Warriors (A02 60) have access to items that are rarely seen by other races."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Armour & Protection",
+        name = "Gromril Armour",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 4],
+        abilitylist = [
+            {"name": "Shieldwalker", "description": "A warrior that is armed with both heavy armor and a shield suffers a -1 Movement penalty. However, it does not slow him down if he is also armed with a shield"},        
+        ],
+        magiclist = [],
+        price = 150,
         description = "Ithilmar is a silvery metal which is as light as silk and stronger than steel. Elves are experts at fashioning weapons and armor from Ithilmar, and the Elven kingdom of Caledor is the only place in the world where this metal can be found. Ithilmar armor gives the wearer a 5+ basic save, and does not slow him down if he is also armed with a shield. "
     )
     add_itemref(
@@ -1907,6 +1946,85 @@ if __name__ == "__main__":
         price = 5,
         description = "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user’s life as his enemy’s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner. "
     )
+
+    # Consumables
+    add_itemref(
+        source = "Core Rules",
+        category = "Consumables",
+        name = "Garlic",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Smell", "description": " A Vampire must pass a Leadership test or it will be unable to charge a model carrying a clove of garlic."}
+        ],
+        magiclist = [],
+        price = 10,
+        description = "May not be bought by Undead. Garlic is a common herb grown in most gardens of the Empire. It is said to ward off Vampires and other denizens of the dark. Garlic lasts for the duration of one battle only, whether it is used or not."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Consumables",
+        name = "Black Lotus",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Black Lotus", "description": "A weapon coated with the sap of the Black Lotus will wound its target automatically if you roll a 6 to hit. Note that you can still roll a dice for every wound inflicted in this way. If you roll a 6, you will inflict a critical hit with that roll. If you do not roll a 6, you will cause a normal wound. Take armor saves as normal."}
+        ],
+        magiclist = [],
+        price = 10,
+        description = "Not available to Witch Hunters, Warrior-Priests or Sisters of Sigmar. The use of poison is almost universally abhorred, but in the ruthless and brutal battles fought in Mordheim, desperate warbands often resort to the use of envenomed blades. Poison may not be used with Blackpowder weapons. When you buy a vial of poison, there is always only enough to last the duration of one battle. You can only poison a single weapon with one vial of poison. In the deepest forests of the Southlands grows a plant that is extremely poisonous. It is known as Black Lotus and is much sought after by alchemists, assassins, wizards of the Western Coast and bored wives."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Consumables",
+        name = "Dark Venom",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Dark Venom", "description": "Any hit caused by a weapon coated with Dark Venom counts as having +1 Strength, so, for example, if a warrior with Strength 3 wielding a poisoned sword hits an opponent, he will cause a Strength 4 hit instead. Armor saving throws are modified to take into account the increased Strength of the attack."}
+        ],
+        magiclist = [],
+        price = 30,
+        description = "Not available to Witch Hunters, Warrior-Priests, or Sisters of Sigmar The use of poison is almost universally abhorred, but in the ruthless and brutal battles fought in Mordheim, desperate warbands often resort to the use of envenomed blades. Poison may not be used with Blackpowder weapons. When you buy a vial of poison, there is always only enough to last the duration of one battle. You can only poison a single weapon with one vial of poison. This is a poison extracted from Heldrakes, gigantic sea serpents that plague the Western Ocean and the coast of Naggaroth. The slightest wound infected by Dark Venom causes excruciating pain, incapacitating the bravest of men."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Consumables",
+        name = "Crimson Shade",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Crimson Shade", "description": "A model using Crimson Shade has his Initiative increased by +D3 points, and Movement and Strength by +1 (this effect lasts for one game). Crimson Shade has no effect on Undead such as Vampires and Zombies, or the Possessed."},
+            {"name": "Side Effects", "description": "After the battle, roll 2D6. On a roll of 2-3, the model becomes addicted and you must try to buy him a new batch of Crimson Shade before every battle from now on. If you fail to buy any, he will leave your warband. On a roll of 12 the model’s Initiative is increased permanently by +1."},
+        ],
+        magiclist = [],
+        price = 35,
+        description = "The use of poison is almost universally abhorred, but in the ruthless and brutal battles fought in Mordheim, desperate warbands often resort to the use of envenomed blades. Poison may not be used with Blackpowder weapons. When you buy a vial of poison, there is always only enough to last the duration of one battle. You can only poison a single weapon with one vial of poison. Crimson Shade is the name given by Old Worlders to the leaves of the blood oak of Estalia. It is an extremely addictive drug, but grants its users inhuman quickness and strength."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Consumables",
+        name = "Blessed Water",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [],
+        magiclist = [],
+        price = 10,
+        description = "The priests of Ulric, Sigmar, Morr and Manann hold great power over evil. Pure water from a clear fountain, blessed by one of these priests, is said to burn things of darkness and evil. A vial of blessed water contains enough liquid for just one use, and has a thrown range of twice the thrower’s Strength in inches. Roll to hit using the model’s BS. No modifiers for range or moving apply. Blessed water causes 1 wound on Undead, Daemon or Possessed models automatically. There is no armor save. Undead or Possessed models may not use blessed water."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Consumables",
+        name = "Bugman`s Ale",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Fearless", "description": "A warband that drinks Bugman`s Ale before a battle will be immune to Fear for the whole of the battle."}
+        ],
+        magiclist = [],
+        price = 50,
+        description = "Of all the Dwarf brewmasters, Josef Bugman is the most famous. His ale is known throughout the Old World, and widely regarded as the best. A warband that drinks a barrel of Bugman’s before a battle will be immune to fear for the whole of the battle. Elves may not drink Bugman’s ale as they are far too delicate to cope with its effects. There is only enough ale to supply the warband for one battle."
+    )
     add_itemref(
         source = "Core Rules",
         category = "Consumables",
@@ -1920,6 +2038,8 @@ if __name__ == "__main__":
         price = 50,
         description = "High Elven wines are well known to be the best in the world, and some are even rumored to have magical qualities. A fine Elven Wine can cast out doubt and fear and leave a general feeling of wellbeing in a warrior. "
     )
+
+    # Other items
     add_itemref(
         source = "Core Rules",
         category = "Other",

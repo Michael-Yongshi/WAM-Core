@@ -236,8 +236,9 @@ class WarbandOverview(QMainWindow):
         wyrdlabel.setToolTip("This is the amount of wyrdstones, or their equivalent, your warband holds.")
         treabox.addWidget(wyrdlabel)
         
-        treaboxwidget = QBorderedWidget()
+        treaboxwidget = QInteractiveWidget()
         treaboxwidget.setLayout(treabox)
+        treaboxwidget.clicked.connect(self.dialog_treasury)
         wbinvbox.addWidget(treaboxwidget)
 
         # add items
@@ -273,7 +274,20 @@ class WarbandOverview(QMainWindow):
         wbinvboxwidget.setLayout(wbinvbox)
 
         return wbinvboxwidget
-    
+
+    def dialog_treasury(self):
+        
+        newgold, okPressed = QInputDialog.getInt(self, 'Gold change', f"Change gold amount to:", self.wbid.treasury.gold, 0, 99999, 1)
+        if okPressed:
+            self.wbid.treasury.gold = newgold
+
+        newwyrd, okPressed = QInputDialog.getInt(self, 'Wyrd change', f"Change wyrd amount to:", self.wbid.treasury.wyrd, 0, 99999, 1)
+        if okPressed:
+            self.wbid.treasury.wyrd = newwyrd
+
+        # relaunch ui to process changes in ui
+        self.initUI()
+
     def set_wbname(self):
         # top left warband info
         wbnamelabel = QLabel()

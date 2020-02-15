@@ -1567,6 +1567,30 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Missile Weapon",
+        name = "Sling",
+        distance = 18,
+        skill = [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Twice at Half", "description": "A slinger may fire twice in the shooting phase if he does not move in the movement phase. He cannot shoot over half range (9 inch) though, if he fires twice. If the model fires twice then each shot is at -1 to hit."},
+        ],
+        magiclist = [],
+        price = 2,
+        description = "Short bows are small, short-ranged bows that are cheap and require little strength to use. Some cavalry carry a shortened bow which is easier to shoot from horseback than a larger bow. Halflings also use short bows, as they lack the strength and height required to use a long bow."
+    )  
+    add_itemref(
+        source = "Core Rules",
+        category = "Missile Weapon",
+        name = "Short Bow",
+        distance = 16,
+        skill = [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
+        abilitylist = [],
+        magiclist = [],
+        price = 5,
+        description = "Short bows are small, short-ranged bows that are cheap and require little strength to use. Some cavalry carry a shortened bow which is easier to shoot from horseback than a larger bow. Halflings also use short bows, as they lack the strength and height required to use a long bow."
+    )  
+    add_itemref(
+        source = "Core Rules",
+        category = "Missile Weapon",
         name = "Bow",
         distance = 24,
         skill = [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
@@ -1589,6 +1613,32 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Missile Weapon",
+        name = "Trowing Knives",
+        distance = 6,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Thrown Weapon", "description": "Models using throwing stars or knives do not suffer penalties for range or moving as these weapons are perfectly balanced for throwing. They cannot be used in close combat."},
+        ],
+        magiclist = [],
+        price = 15,
+        description = "Throwing stars are used mainly by the assassins of the sinister House of Shadows, or by street thugs who specialize in ambushing the unwary. A perfectly balanced knife thrown from behind has ended the life of many a noble and merchant in Mordheim. Throwing knives are not suitable for close combat, as their balance makes them unwieldy in close quarters."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Missile Weapon",
+        name = "Trowing Stars",
+        distance = 6,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Thrown Weapon", "description": "Models using throwing stars or knives do not suffer penalties for range or moving as these weapons are perfectly balanced for throwing. They cannot be used in close combat."},
+        ],
+        magiclist = [],
+        price = 15,
+        description = "Throwing stars are used mainly by the assassins of the sinister House of Shadows, or by street thugs who specialize in ambushing the unwary. A perfectly balanced knife thrown from behind has ended the life of many a noble and merchant in Mordheim. Throwing knives are not suitable for close combat, as their balance makes them unwieldy in close quarters."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Missile Weapon",
         name = "Blowpipe",
         distance = 8,
         skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
@@ -1600,6 +1650,19 @@ if __name__ == "__main__":
         magiclist = [],
         price = 25,
         description = "The blowpipe is a short hollow tube which can be used to shoot poisoned darts. While the darts by themselves are too small to cause significant damage, the poison used by the Skaven can cause searing agony and eventual death. The other advantage of a blowpipe is that it is silent, and a well-hidden shooter can fire the darts undetected."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Missile Weapon",
+        name = "Crossbow",
+        distance = 30,
+        skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Stationary Fire", "description": "You may not move and fire a crossbow on the same turn, other than to pivot on the spot to face your target or to stand up."},
+        ],
+        magiclist = [],
+        price = 25,
+        description = "A crossbow consists of a short, strong bow-stave mounted on a wooden or steel stock. The crossbows of the Empire are made of steel and often include a winding mechanism to draw back the string. It takes a long time to prepare a crossbow, but a bolt fired from one has a tremendous range and can penetrate armor easily. Crossbows take much longer than other bows to make, so they are expensive and relatively rare weapons. Still, they are the preferred weapon of many in Mordheim because of their power and long range."
     )
     add_itemref(
         source = "Core Rules",
@@ -1621,7 +1684,7 @@ if __name__ == "__main__":
         distance = 10,
         skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Fire before Melee", "description": " A model armed with a crossbow pistol may shoot it in the first round of a hand-to-hand combat and this shot is always resolved first, before any blows are struck. This shot has an extra -2 to hit penalty. Use model’s Ballistic Skill to see whether it hits or not. This bonus attack is in addition to any close combat weapon attacks."},
+            {"name": "Fire before Melee", "description": "A model armed with a crossbow pistol may shoot it in the first round of a hand-to-hand combat and this shot is always resolved first, before any blows are struck. This shot has an extra -2 to hit penalty. Use model’s Ballistic Skill to see whether it hits or not. This bonus attack is in addition to any close combat weapon attacks."},
         ],
         magiclist = [],
         price = 35,
@@ -1630,15 +1693,148 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Missile Weapon",
-        name = "Crossbow",
-        distance = 30,
-        skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
+        name = "Repeater Crossbow",
+        distance = 24,
+        skill = [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Stationary Fire", "description": "You may not move and fire a crossbow on the same turn, other than to pivot on the spot to face your target or to stand up."},
+            {"name": "Fire Twice", "description": " A model armed with a repeater crossbow may choose to fire twice per turn with an extra -1 to hit penalty on both shots."},
         ],
         magiclist = [],
-        price = 25,
-        description = "A crossbow consists of a short, strong bow-stave mounted on a wooden or steel stock. The crossbows of the Empire are made of steel and often include a winding mechanism to draw back the string. It takes a long time to prepare a crossbow, but a bolt fired from one has a tremendous range and can penetrate armor easily. Crossbows take much longer than other bows to make, so they are expensive and relatively rare weapons. Still, they are the preferred weapon of many in Mordheim because of their power and long range."
+        price = 40,
+        description = "Repeater crossbows are extremely complex devices, expensive to acquire and difficult to make. While this makes them rare, they certainly have their uses: they can rain a deadly hail of bolts on enemies, and a warrior using one may move quite fast and still fire his weapon."
+    )
+
+    # Black powder weapons
+    add_itemref(
+        source = "Core Rules",
+        category = "Blackpowder Weapon",
+        name = "Pistol",
+        distance = 6,
+        skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
+        abilitylist = [            
+            {"name": "Prepare Shot", "description": "A pistol takes a whole turn to reload, so you may only fire every other turn. If you have a brace of pistols (i.e., two) you may fire every turn."},
+            {"name": "Armour Piercing x2", "description": "Pistols are even better at penetrating armor than their Strength value of 4 suggests. A model wounded by a pistol must take its armor save with a -2 modifier."},
+            {"name": "Fire during Melee", "description": "Pistols can be used in hand-to-hand combat as well as for shooting. A model armed with a pistol and another close combat weapon gains +1 Attack, which is resolved at Strength 4 with a -2 save modifier. This bonus attack can be used only once per combat. If you are firing a brace of pistols, your model can fight with 2 Attacks in the first turn of close combat. These attacks are resolved with a model’s Weapon Skill like any normal close combat attack and likewise may be parried. Successful hits are resolved at Strength 4 and with a -2 save modifier, regardless of the firer’s Strength."},
+        ],
+        magiclist = [],
+        price = 15,
+        description = "A pistol is a small, simple Blackpowder weapon fired by a spring mechanism. Most pistols are expensive, unreliable, and poorly constructed."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Blackpowder Weapon",
+        name = "Pistol Brace",
+        distance = 6,
+        skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
+        abilitylist = [            
+            {"name": "Armour Piercing x2", "description": "Pistols are even better at penetrating armor than their Strength value of 4 suggests. A model wounded by a pistol must take its armor save with a -2 modifier."},
+            {"name": "Fire during Melee", "description": "Pistols can be used in hand-to-hand combat as well as for shooting. A model armed with a pistol and another close combat weapon gains +1 Attack, which is resolved at Strength 4 with a -2 save modifier. This bonus attack can be used only once per combat. If you are firing a brace of pistols, your model can fight with 2 Attacks in the first turn of close combat. These attacks are resolved with a model’s Weapon Skill like any normal close combat attack and likewise may be parried. Successful hits are resolved at Strength 4 and with a -2 save modifier, regardless of the firer’s Strength."},
+        ],
+        magiclist = [],
+        price = 30,
+        description = "Set of two pistols. A pistol is a small, simple Blackpowder weapon fired by a spring mechanism. Most pistols are expensive, unreliable, and poorly constructed."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Blackpowder Weapon",
+        name = "Blunderbuss",
+        distance = 16,
+        skill = [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Shot", "description": "When your model fires the blunderbuss, draw a line 16 inch long and 1 inch wide in any direction from the firer (the line must be absolutely straight). Any and all models in its path are automatically hit by a Strength 3 hit."},
+        ],
+        magiclist = [],
+        price = 30,
+        description = "A blunderbuss is a primitive Blackpowder weapon, which fires a hail of lead balls, rusty bolts, bent nails, and other assorted scrap metal. It is a powerful, if erratic, weapon and takes such a long time to load that most warriors discard it after the first shot."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Blackpowder Weapon",
+        name = "Dueling Pistol",
+        distance = 10,
+        skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Accurate", "description": "A dueling pistol is built for accuracy as a skilled duelist is able to hit a coin from twenty paces. All shots and close combat attacks from a dueling pistol have a +1 bonus to hit."},
+            {"name": "Prepare Shot", "description": "A dueling pistol takes a complete turn to reload, so your model may only fire every other turn. If he has a brace of dueling pistols he may fire every turn."},
+            {"name": "Armour Piercing x2", "description": "Dueling pistols are even better at penetrating armor than their Strength 4 suggests. A warrior wounded by a dueling pistol must make his armor save with a -2 modifier."},
+            {"name": "Fire during Melee", "description": "Dueling pistols can be used in hand-to-hand combat as well as for shooting. A model armed with a dueling pistol and another close combat weapon gains +1 Attack, which is resolved at Strength 4 with a -2 save modifier. This bonus attack can be used only once per combat. If you are firing a brace of dueling pistols, your model can fight with 2 Attacks in the first turn of close combat. These attacks are resolved with a model’s Weapon Skill like any normal close combat attack and likewise may be parried. Successful hits are resolved at Strength 4 and with a -2 save modifier, regardless of the firer’s Strength."},
+        ],
+        magiclist = [],
+        price = 30,
+        description = "A dueling pistol is a work of art, and a gunsmith labors long and hard to produce a single example. They are often carried by Imperial nobles to solve disputes over love and honor, and many a noble has died at dawn in a duel over some grievance. Dueling pistols are prohibitively expensive weapons and common warriors rarely have them. Even if they do manage to steal or buy one, the ammunition is prohibitively expensive. Some of the wealthiest warriors in Mordheim carry dueling pistols as status symbols, commanding great respect, admiration and envy."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Blackpowder Weapon",
+        name = "Dueling Pistol Brace",
+        distance = 10,
+        skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Accurate", "description": "A dueling pistol is built for accuracy as a skilled duelist is able to hit a coin from twenty paces. All shots and close combat attacks from a dueling pistol have a +1 bonus to hit."},
+            {"name": "Armour Piercing x2", "description": "Dueling pistols are even better at penetrating armor than their Strength 4 suggests. A warrior wounded by a dueling pistol must make his armor save with a -2 modifier."},
+            {"name": "Fire during Melee", "description": "Dueling pistols can be used in hand-to-hand combat as well as for shooting. A model armed with a dueling pistol and another close combat weapon gains +1 Attack, which is resolved at Strength 4 with a -2 save modifier. This bonus attack can be used only once per combat. If you are firing a brace of dueling pistols, your model can fight with 2 Attacks in the first turn of close combat. These attacks are resolved with a model’s Weapon Skill like any normal close combat attack and likewise may be parried. Successful hits are resolved at Strength 4 and with a -2 save modifier, regardless of the firer’s Strength."},
+        ],
+        magiclist = [],
+        price = 30,
+        description = "A set of two dueling pistols. A dueling pistol is a work of art, and a gunsmith labors long and hard to produce a single example. They are often carried by Imperial nobles to solve disputes over love and honor, and many a noble has died at dawn in a duel over some grievance. Dueling pistols are prohibitively expensive weapons and common warriors rarely have them. Even if they do manage to steal or buy one, the ammunition is prohibitively expensive. Some of the wealthiest warriors in Mordheim carry dueling pistols as status symbols, commanding great respect, admiration and envy."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Blackpowder Weapon",
+        name = "Handgun",
+        distance = 24,
+        skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Stationary Fire", "description": "You may not move and fire a handgun in the same turn, other than to pivot on the spot to face your target or stand up."},
+            {"name": "Prepare Shot", "description": "A handgun takes a complete turn to reload, so you may only fire it every other turn."},
+            {"name": "Armour Piercing x2", "description": "Handguns are even better at penetrating armor than their Strength 4 suggests. A warrior wounded by a dueling pistol must make his armor save with a -2 modifier."},
+        ],
+        magiclist = [],
+        price = 35,
+        description = "A handgun is a simple firearm. The quality of construction varies ranging from the crude wooden ‘hakbuts’ of the artillery school of Nuln, to the more sophisticated Dwarf firearms that have levers and springs which hold the burning match, and triggers which release the firing mechanism and fire the gun. Handguns are not terribly reliable weapons: the gun barrel occasionally tends to explode violently or the powder fails to ignite. But the weapon has a great range and tremendous penetrating power, making a mockery of even the thickest armor. In Mordheim, handguns are rare and expensive, but a warband which can boast such a weapon will command respect from all its rivals."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Blackpowder Weapon",
+        name = "Warplock Pistol",
+        distance = 8,
+        skill = [0, 0, 0, 5, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Armour Piercing x3", "description": "Warplock pistols are even better at penetrating armor than their Strength 5 suggests. A warrior wounded by a warplock pistol must make his armor save with a -3 modifier."},
+            {"name": "Prepare Shot", "description": "A warplock pistol takes a complete turn to reload, so you may only fire it every other turn."},
+        ],
+        magiclist = [],
+        price = 35,
+        description = "Warplock pistols are terrifying weapons, testimony to the mad genius of Clan Skryre engineers. Warplock pistols shoot ammunition made of magically treated warpstone and wounds caused by Warplock pistols are horrible to behold and often cause infections."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Blackpowder Weapon",
+        name = "Warplock Pistol Brace",
+        distance = 8,
+        skill = [0, 0, 0, 5, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Armour Piercing x3", "description": "Warplock pistols are even better at penetrating armor than their Strength 5 suggests. A warrior wounded by a warplock pistol must make his armor save with a -3 modifier."},
+        ],
+        magiclist = [],
+        price = 35,
+        description = "A set of two warplock pistols. Warplock pistols are terrifying weapons, testimony to the mad genius of Clan Skryre engineers. Warplock pistols shoot ammunition made of magically treated warpstone and wounds caused by Warplock pistols are horrible to behold and often cause infections."
+    )
+    add_itemref(
+        source = "Core Rules",
+        category = "Blackpowder Weapon",
+        name = "Hochland Long Hunting Rifle",
+        distance = 48,
+        skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
+        abilitylist = [
+            {"name": "Stationary Fire", "description": "You may not move and fire a Hochland Long Rifle in the same turn, other than to pivot on the spot to face your target or stand up."},
+            {"name": "Prepare Shot", "description": "A Hochland Long Rifle takes a complete turn to reload, so you may only fire it every other turn."},
+            {"name": "Pick Target", "description": "A model armed with a Hochland long rifle can target any enemy model in sight, not just the closest one."},
+            {"name": "Armour Piercing x2", "description": "Hochland Long Rifles are even better at penetrating armor than their Strength 4 suggests. A warrior wounded by a dueling pistol must make his armor save with a -2 modifier."},
+        ],
+        magiclist = [],
+        price = 200,
+        description = "Hochland is a province famed for its hunters, and the preferred weapon of its nobility when they go hunting is a long-ranged rifle. They are extremely rare and precious weapons, and only the most experienced weapon smiths are capable of manufacturing them."
     )
     # armour and stuff
     add_itemref(

@@ -204,7 +204,6 @@ class WarbandOverview(QMainWindow):
         btnsave = QPushButton('Save Warband', self)
         btnsave.setShortcut("Ctrl+S")
         btnsave.setToolTip('Save current <b>Warband</b>')
-
         btnsave.clicked.connect(self.save_warband)
 
         btnquit = QPushButton('Quit', self)
@@ -291,7 +290,6 @@ class WarbandOverview(QMainWindow):
         wbbox.addWidget(wbracelabel)
         wbbox.addWidget(wbsrclabel)
         wbbox.addWidget(wbtypelabel)
-        wbbox.addWidget(wbemptylabel)
 
         wbboxwidget = QBorderedWidget()
         wbboxwidget.setLayout(wbbox)
@@ -427,14 +425,18 @@ class WarbandOverview(QMainWindow):
         namelabel = QLabel()
     
         namelabel.setText(self.currentunit.name)    
-        namebox.addWidget(namelabel, 0, 0, 1, 2)
+        namebox.addWidget(namelabel, 0, 0)
         catlabel = QLabel()
         catlabel.setText(self.currentunit.category)
         namebox.addWidget(catlabel, 1, 0,)
         herolabel = QLabel()
         herolabel.setText(str(self.currentunit.ishero))
         namebox.addWidget(herolabel, 1, 1)
-        
+        btnremove = QPushButton('Remove Unit', self)
+        btnremove.setToolTip('Remove current unit')
+        btnremove.clicked.connect(self.create_method_unit(self.currentunit))
+        namebox.addWidget(btnremove, 0, 1)
+
         namewidget = QInteractiveWidget()
         namewidget.setLayout(namebox)
 
@@ -599,6 +601,49 @@ class WarbandOverview(QMainWindow):
                         print("Can't remove the last member, please disband the whole squad")
 
         return change_squad_number
+
+    def create_method_unit(self, unit): 
+        """This method is used in order to create a new method that holds a reference to a passed attribute,
+        this is used when a widget needs to be clickable but the signal needs to carry information other than the signal itself.
+        This one specifically gets a current unit and then creates a window based on the attribute"""
+        def focus_unit():
+
+            if unit == None:
+                self.currentthing = None               
+            elif unit != self.currentthing:
+                self.currentthing = unit
+                remove = QMessageBox.question(self, 'Remove unit', f"Do you want to remove this unit?", QMessageBox.Yes | QMessageBox.No)
+                if remove == QMessageBox.Yes:
+                    process_gold = QMessageBox.question(self, "Process gold", "Is change due to an event?", QMessageBox.Yes | QMessageBox.No)
+                    unitprice = 0
+
+                    if self.currentunit.ishero == True:
+                        for hero in self.wbid.herolist:
+                            if hero == self.currentunit:
+                                if process_gold == QMessageBox.No:
+                                    unitprice += hero.price
+                                    for item in hero.itemlist:
+                                        unitprice += item.price
+                                index = self.wbid.herolist.index(hero)
+                                self.wbid.herolist.pop(index)
+                                break
+
+                    else:
+                        for squad in self.wbid.squadlist:
+                            if squad.henchmanlist[0] == self.currentunit:
+                                if process_gold == QMessageBox.No:
+                                    squadsize = len(squad.henchmanlist)
+                                    henchprice = self.currentunit.price
+                                    for item in self.currentunit.itemlist:
+                                        henchprice += item.price
+                                    unitprice = henchprice * squadsize
+                                index = self.wbid.squadlist.index(squad)
+                                self.wbid.squadlist.pop(index)
+                                break
+                    self.wbid.treasury.gold += unitprice
+                    self.initUI()
+        
+        return focus_unit
 
     def create_method_item(self, item):          
         """This method is used in order to create a new method that holds a reference to a passed attribute,

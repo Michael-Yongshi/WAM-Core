@@ -494,6 +494,17 @@ class WarbandOverview(QMainWindow):
             label.setToolTip(f"<font><b>{ability.name}</b> <br/> {ability.description}</font>")
             abilitybox.addWidget(label) #adds the ability to a label and at it to the vertical ability layout
         
+        # add new ability widget
+        label = QLabel()
+        label.setText("New Ability")
+        abilitywrap = QVBoxLayout()
+        abilitywrap.addWidget(label)
+        abilitywidget = QInteractiveWidget()
+        abilitywidget.setLayout(abilitywrap)
+        abilitywidget.clicked.connect(self.create_method_new_ability(unit=self.currentunit))
+        abilitybox.addWidget(abilitywidget) #adds the ability to a label and at it to the vertical item layout
+
+
         abilitywidget = QInteractiveWidget()
         abilitywidget.setLayout(abilitybox)
 
@@ -506,8 +517,17 @@ class WarbandOverview(QMainWindow):
             label.setToolTip(f"<font><b>{magic.name}</b> <br/> {magic.description}</font>")
             magicbox.addWidget(label) #adds the magic to a label and at it to the vertical magic layout
         
+        # add new magic widget
+        label = QLabel()
+        label.setText("New Magic")
+        magicwrap = QVBoxLayout()
+        magicwrap.addWidget(label)
         magicwidget = QInteractiveWidget()
-        
+        magicwidget.setLayout(magicwrap)
+        magicwidget.clicked.connect(self.create_method_new_magic(unit=self.currentunit))
+        magicbox.addWidget(magicwidget) #adds the magic to a label and at it to the vertical item layout
+
+        magicwidget = QInteractiveWidget()
         magicwidget.setLayout(magicbox)
         
         listbox = QHBoxLayout()
@@ -640,6 +660,7 @@ class WarbandOverview(QMainWindow):
                                 index = self.wbid.squadlist.index(squad)
                                 self.wbid.squadlist.pop(index)
                                 break
+
                     self.wbid.treasury.gold += unitprice
                     self.initUI()
         
@@ -733,6 +754,100 @@ class WarbandOverview(QMainWindow):
                         message = QMessageBox.information(self, 'Lack of funds!', "Can't add new item, lack of funds", QMessageBox.Ok)
 
         return create_item_for_unit
+
+    def create_method_new_ability(self, unit):
+        """Method for creating a new ability and receiving as attribute the unit it should be added to.
+                    """
+        def create_ability_for_unit():
+            abilitydict = open_json("database/references/abilities_ref.json")
+            sources = []
+            for key in abilitydict:
+                sources.append(key)
+
+            source, okPressed = QInputDialog.getItem(self, "Select source", "Choose a source", sources, 0, False)
+            if okPressed and source:
+            
+                # get all available abilitys
+                abilitys = []
+                for key in abilitydict[source]:
+                    abilitys.append(key)
+
+                ability, okPressed = QInputDialog.getItem(self, "Create", "Choose an ability", abilitys, 0, False)
+                if okPressed and ability:
+                    new_ability = ability.create_ability(
+                        name = ability,
+                        source = source,
+                    )
+
+                    abilityprice = abilitydict[source][ability]["price"]
+                    if self.wbid.treasury.gold >= abilityprice:
+                        
+                        if unit.ishero == True:
+                            for hero in self.wbid.herolist:
+                                if unit.name == hero.name:
+                                    hero.abilitylist.append(new_ability)
+                                    self.wbid.treasury.gold -= abilityprice
+                                    self.initUI()
+                                    
+                        else:
+                            for s in self.wbid.squadlist:
+                                if unit.name == s.name:
+                                    for henchman in s.henchmanlist:
+                                        henchman.abilitylist.append(new_ability)
+                                        self.wbid.treasury.gold -= abilityprice
+                                    self.initUI()
+
+                    else:
+                        message = QMessageBox.information(self, 'Lack of funds!', "Can't add new ability, lack of funds", QMessageBox.Ok)
+
+        return create_ability_for_unit
+
+    def create_method_new_magic(self, unit):
+        """Method for creating a new magic and receiving as attribute the unit it should be added to.
+                    """
+        def create_magic_for_unit():
+            magicdict = open_json("database/references/magics_ref.json")
+            sources = []
+            for key in magicdict:
+                sources.append(key)
+
+            source, okPressed = QInputDialog.getItem(self, "Select source", "Choose a source", sources, 0, False)
+            if okPressed and source:
+            
+                # get all available magics
+                magics = []
+                for key in magicdict[source]:
+                    magics.append(key)
+
+                magic, okPressed = QInputDialog.getItem(self, "Create", "Choose an magic", magics, 0, False)
+                if okPressed and magic:
+                    new_magic = magic.create_magic(
+                        name = magic,
+                        source = source,
+                    )
+
+                    magicprice = magicdict[source][magic]["price"]
+                    if self.wbid.treasury.gold >= magicprice:
+                        
+                        if unit.ishero == True:
+                            for hero in self.wbid.herolist:
+                                if unit.name == hero.name:
+                                    hero.magiclist.append(new_magic)
+                                    self.wbid.treasury.gold -= magicprice
+                                    self.initUI()
+                                    
+                        else:
+                            for s in self.wbid.squadlist:
+                                if unit.name == s.name:
+                                    for henchman in s.henchmanlist:
+                                        henchman.magiclist.append(new_magic)
+                                        self.wbid.treasury.gold -= magicprice
+                                    self.initUI()
+
+                    else:
+                        message = QMessageBox.information(self, 'Lack of funds!', "Can't add new magic, lack of funds", QMessageBox.Ok)
+
+        return create_magic_for_unit
 
     def create_template_char(self):
         template_char = Character(

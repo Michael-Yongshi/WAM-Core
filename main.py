@@ -1,5 +1,3 @@
-# pip3 install --user pyqt5
-
 import sys
 
 from PyQt5.QtCore import (

@@ -989,7 +989,7 @@ if __name__ == "__main__":
     add_characterref(
         race = "Skaven",
         source = "Core Rules",
-        warband = "The Skaven",
+        warband = "Skaven",
         category = "Assessin Adept",
         ishero = True,
         skill = [6, 4, 4, 4, 3, 1, 5, 1, 7, 0],
@@ -1009,7 +1009,7 @@ if __name__ == "__main__":
     add_characterref(
         race = "Skaven",
         source = "Core Rules",
-        warband = "The Skaven",
+        warband = "Skaven",
         category = "Eshin Sorcerer",
         ishero = True,
         skill = [5, 3, 3, 3, 3, 1, 4, 1, 6, 0],
@@ -1028,7 +1028,7 @@ if __name__ == "__main__":
     add_characterref(
         race = "Skaven",
         source = "Core Rules",
-        warband = "The Skaven",
+        warband = "Skaven",
         category = "Black Skaven",
         ishero = True,
         skill = [6, 4, 3, 4, 3, 1, 5, 1, 6, 0],
@@ -1045,7 +1045,7 @@ if __name__ == "__main__":
     add_characterref(
         race = "Skaven",
         source = "Core Rules",
-        warband = "The Skaven",
+        warband = "Skaven",
         category = "Night Runner",
         ishero = True,
         skill = [6, 2, 3, 3, 3, 1, 4, 1, 4, 0],
@@ -1062,7 +1062,7 @@ if __name__ == "__main__":
     add_characterref(
         race = "Skaven",
         source = "Core Rules",
-        warband = "The Skaven",
+        warband = "Skaven",
         category = "Verminkin",
         ishero = False,
         skill = [5, 3, 3, 3, 3, 1, 4, 1, 5, 0],

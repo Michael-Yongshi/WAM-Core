@@ -29,7 +29,7 @@ set git email with git --global user.name ""
 pip3 install --user requests
 pip3 install --user pyqt5
 pip3 install --user pyinstaller
-create exe file with "python -m PyInstaller cli.py"
+create exe file with "python -m PyInstaller cli.py --onefile --name WAM"
 
 ```
 Give examples

@@ -143,7 +143,6 @@ class Item(object):
         # open reference data json file
         data = open_json("database/references/items_ref.json")
         datadict = data[source][category][name]
-        print(datadict)
 
         new_item = Item.from_dict(datadict)
 
@@ -184,6 +183,7 @@ class Skill(object):
 
     @staticmethod
     def from_dict(datadict):
+
         skill = Skill(
             movement=datadict["movement"],
             weapon=datadict["weapon"],
@@ -200,6 +200,7 @@ class Skill(object):
         return skill
 
     def to_list(self):
+
         data = []
         data.append(self.movement),
         data.append(self.weapon),
@@ -241,6 +242,7 @@ class Ability(object):
     
     @staticmethod
     def from_dict(datadict):
+
         data = Ability(
             source=datadict["source"],
             category=datadict["category"],
@@ -270,6 +272,7 @@ class Magic(object):
         self.description = description
 
     def to_dict(self):  
+
         data = {
 
             # 'key': str(self),
@@ -284,6 +287,7 @@ class Magic(object):
 
     @staticmethod
     def from_dict(datadict):
+        
         data = Magic(
             source = datadict["source"],
             category=datadict["category"],

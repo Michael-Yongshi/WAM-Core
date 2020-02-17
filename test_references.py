@@ -1428,10 +1428,10 @@ if __name__ == "__main__":
         name = "Halberd",
         distance = 0,
         skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
-        abilitylist = [{"name": "Two Handed", "description":"A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting. "}],
+        abilitylist = [{"name": "Two Handed", "description":"A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."}],
         magiclist = [],
         price = 10,
-        description = "The halberd’s heavy blade is mounted upon a sturdy shaft of oak or steel and has a point like a spear and a cutting edge like an axe. Since it can be used to chop as well as thrust, it is an adaptable weapon, but is difficult to use inside buildings. "
+        description = "The halberd’s heavy blade is mounted upon a sturdy shaft of oak or steel and has a point like a spear and a cutting edge like an axe. Since it can be used to chop as well as thrust, it is an adaptable weapon, but is difficult to use inside buildings."
         )
     add_itemref(
         source = "Core Rules",
@@ -2121,7 +2121,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Broheim",
         category = "Melee Weapon",
-        name = "Mage Staff (One Handed)",
+        name = "Mage Wand",
         distance = 0,
         skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -2129,25 +2129,28 @@ if __name__ == "__main__":
             ],
         magiclist = [],
         price = 20,
-        description = "A staff used by mages. "
+        description = "A Mage Staff used one handed."
         )
     add_itemref(
         source = "Broheim",
         category = "Melee Weapon",
-        name = "Mage Staff (Two Handed)",
+        name = "Mage Quarter Staff",
         distance = 0,
         skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Concussion", "description": "Stunned happens also on a trow of 2 at the injury roll. "}
+            {"name": "Concussion", "description": "Stunned happens also on a trow of 2 at the injury roll."},
+            {"name": "Two Handed", "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."}
             ],
-        magiclist = [],
+        magiclist = [
+            {"name": "Flipendo", "description": "Summons Harry Potter."}
+        ],
         price = 20,
-        description = "A staff used by mages. "
+        description = "A Mage Staff used two handed."
         )
 
     get_itemref(
-        source = "Broheim", 
-        item = "Mage Staff (One Handed)"
+        source = "Core Rules", 
+        item = "Starting Dagger",
     )
 
     create_magicref()

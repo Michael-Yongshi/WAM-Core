@@ -1677,11 +1677,11 @@
     },
     "Skaven": {
         "Core Rules": {
-            "The Skaven": {
+            "Skaven": {
                 "Assessin Adept": {
                     "race": "Skaven",
                     "source": "Core Rules",
-                    "warband": "The Skaven",
+                    "warband": "Skaven",
                     "category": "Assessin Adept",
                     "ishero": true,
                     "skill": [
@@ -1726,7 +1726,7 @@
                 "Eshin Sorcerer": {
                     "race": "Skaven",
                     "source": "Core Rules",
-                    "warband": "The Skaven",
+                    "warband": "Skaven",
                     "category": "Eshin Sorcerer",
                     "ishero": true,
                     "skill": [
@@ -1767,7 +1767,7 @@
                 "Black Skaven": {
                     "race": "Skaven",
                     "source": "Core Rules",
-                    "warband": "The Skaven",
+                    "warband": "Skaven",
                     "category": "Black Skaven",
                     "ishero": true,
                     "skill": [
@@ -1803,7 +1803,7 @@
                 "Night Runner": {
                     "race": "Skaven",
                     "source": "Core Rules",
-                    "warband": "The Skaven",
+                    "warband": "Skaven",
                     "category": "Night Runner",
                     "ishero": true,
                     "skill": [
@@ -1839,7 +1839,7 @@
                 "Verminkin": {
                     "race": "Skaven",
                     "source": "Core Rules",
-                    "warband": "The Skaven",
+                    "warband": "Skaven",
                     "category": "Verminkin",
                     "ishero": false,
                     "skill": [
@@ -1871,7 +1871,9 @@
                     "price": 20,
                     "maxcount": 0,
                     "description": "Verminkin are the Clanrats of Clan Eshin. The strongest amongst them are initiated into the secrets of the clans and begin their training to become Assassins, the most feared warriors of the Skaven warbands. All the Clanrats of Clan Eshin dream of rising to the status of an Assassin one day."
-                },
+                }
+            },
+            "The Skaven": {
                 "Giant Rats": {
                     "race": "Skaven",
                     "source": "Core Rules",

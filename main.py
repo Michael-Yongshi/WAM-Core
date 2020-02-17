@@ -249,7 +249,7 @@ class WarbandOverview(QMainWindow):
             itemwrap.addWidget(label)
             itemwidget = QInteractiveWidget()
             itemwidget.setLayout(itemwrap)
-            itemwidget.clicked.connect(self.create_method_item(item=item))
+            itemwidget.clicked.connect(self.create_method_remove_item(item=item))
             itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
         
         # add new item widget
@@ -371,7 +371,7 @@ class WarbandOverview(QMainWindow):
             numbox.addWidget(numlabel)
             numwidget = QInteractiveWidget()
             numwidget.setLayout(numbox)
-            numwidget.clicked.connect(self.create_method_squad_number(squad))
+            numwidget.clicked.connect(self.create_method_change_squad_number(squad))
             squadgrid.addWidget(numwidget, 0, 0, 1, 1)
 
             namelabel = QLabel()
@@ -432,7 +432,7 @@ class WarbandOverview(QMainWindow):
         namebox.addWidget(herolabel, 1, 1)
         btnremove = QPushButton('Remove Unit', self)
         btnremove.setToolTip('Remove current unit')
-        btnremove.clicked.connect(self.create_method_unit(self.currentunit))
+        btnremove.clicked.connect(self.create_method_remove_squad(self.currentunit))
         namebox.addWidget(btnremove, 0, 1)
 
         namewidget = QInteractiveWidget()
@@ -454,6 +454,25 @@ class WarbandOverview(QMainWindow):
         skillwidget = QBorderedWidget()
         skillwidget.setLayout(skillbox)
         
+        #show abilities
+        abilitybox = QVBoxLayout() # create a vertical layout to show them in a neat line
+
+        for ability in self.currentunit.abilitylist:
+            label = QLabel()
+            label.setText(str(ability.name))
+            label.setToolTip(f"<font><b>{ability.name}</b> <br/> {ability.description}</font>")
+            abilitybox.addWidget(label) #adds the ability to a label and at it to the vertical ability layout
+        # Wait for item abilities to add new ability and add it to the bot widget.
+
+        #show magic
+        magicbox = QVBoxLayout() # create a vertical layout to show them in a neat line
+
+        for magic in self.currentunit.magiclist:
+            label = QLabel()
+            label.setText(str(magic.name))
+            label.setToolTip(f"<font><b>{magic.name}</b> <br/> {magic.description}</font>")
+            magicbox.addWidget(label) #adds the magic to a label and at it to the vertical magic layout
+        # Wait for item magic to add new ability and add it to the bot widget.
 
         #add items
         itembox = QVBoxLayout() # create a vertical layout to show them in a neat line
@@ -466,9 +485,21 @@ class WarbandOverview(QMainWindow):
             itemwrap.addWidget(label)
             itemwidget = QInteractiveWidget()
             itemwidget.setLayout(itemwrap)
-            itemwidget.clicked.connect(self.create_method_item(item=item))
+            itemwidget.clicked.connect(self.create_method_remove_item(item=item))
             itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
+
+            for ability in item.abilitylist:
+                label = QLabel()
+                label.setText(f"{ability.name} (source: {item.name})")
+                label.setToolTip(f"<font>(source: {item} <br/> <b>{ability.name}</b> <br/> {ability.description}</font>")
+                abilitybox.addWidget(label) #adds the ability to a label and at it to the vertical ability layout
         
+            for magic in item.magiclist:
+                label = QLabel()
+                label.setText(f"{magic.name} (source: {item.name})")
+                label.setToolTip(f"<font>(source: {item} <br/> <b>{magic.name}</b> <br/> {magic.description}</font>")
+                magicbox.addWidget(label) #adds the magic to a label and at it to the vertical magic layout
+
         # add new item widget
         label = QLabel()
         label.setText("New Item")
@@ -483,15 +514,6 @@ class WarbandOverview(QMainWindow):
         itemboxwidget.setLayout(itembox)
         itemboxwidget.setToolTip("These are your units items.")
 
-        #show abilities
-        abilitybox = QVBoxLayout() # create a vertical layout to show them in a neat line
-
-        for ability in self.currentunit.abilitylist:
-            label = QLabel()
-            label.setText(str(ability.name))
-            label.setToolTip(f"<font><b>{ability.name}</b> <br/> {ability.description}</font>")
-            abilitybox.addWidget(label) #adds the ability to a label and at it to the vertical ability layout
-        
         # add new ability widget
         label = QLabel()
         label.setText("New Ability")
@@ -502,18 +524,8 @@ class WarbandOverview(QMainWindow):
         abilitywidget.clicked.connect(self.create_method_new_ability(unit=self.currentunit))
         abilitybox.addWidget(abilitywidget) #adds the ability to a label and at it to the vertical item layout
 
-
         abilitywidget = QInteractiveWidget()
         abilitywidget.setLayout(abilitybox)
-
-        #show magic
-        magicbox = QVBoxLayout() # create a vertical layout to show them in a neat line
-
-        for magic in self.currentunit.magiclist:
-            label = QLabel()
-            label.setText(str(magic.name))
-            label.setToolTip(f"<font><b>{magic.name}</b> <br/> {magic.description}</font>")
-            magicbox.addWidget(label) #adds the magic to a label and at it to the vertical magic layout
         
         # add new magic widget
         label = QLabel()
@@ -528,6 +540,7 @@ class WarbandOverview(QMainWindow):
         magicwidget = QInteractiveWidget()
         magicwidget.setLayout(magicbox)
         
+        # Add abilities, items and magic to the listbox
         listbox = QHBoxLayout()
         listbox.addWidget(itemboxwidget) # adds the item layout to the grid
         listbox.addWidget(abilitywidget) # adds the ability layout to the grid
@@ -589,7 +602,7 @@ class WarbandOverview(QMainWindow):
 
         return focus_unit
 
-    def create_method_squad_number(self, squad):          
+    def create_method_change_squad_number(self, squad):          
         """This method is used in order to create a new method that holds a reference to a passed attribute,
         this is used when a widget needs to be clickable but the signal needs to carry information other than the signal itself.
         This one specifically gets a current item and then creates a window based on the attribute"""
@@ -620,11 +633,11 @@ class WarbandOverview(QMainWindow):
 
         return change_squad_number
 
-    def create_method_unit(self, unit): 
+    def create_method_remove_squad(self, unit): 
         """This method is used in order to create a new method that holds a reference to a passed attribute,
         this is used when a widget needs to be clickable but the signal needs to carry information other than the signal itself.
         This one specifically gets a current unit and then creates a window based on the attribute"""
-        def focus_unit():
+        def remove_squad():
 
             if unit == None:
                 self.currentthing = None               
@@ -662,13 +675,13 @@ class WarbandOverview(QMainWindow):
                     self.wbid.treasury.gold += unitprice
                     self.initUI()
         
-        return focus_unit
+        return remove_squad
 
-    def create_method_item(self, item):          
+    def create_method_remove_item(self, item):          
         """This method is used in order to create a new method that holds a reference to a passed attribute,
         this is used when a widget needs to be clickable but the signal needs to carry information other than the signal itself.
         This one specifically gets a current item and then creates a window based on the attribute"""
-        def focus_item():
+        def remove_item():
 
             if item == None:
                 self.currentthing = None               
@@ -704,7 +717,7 @@ class WarbandOverview(QMainWindow):
                     self.wbid.treasury.gold += itemprice
                     self.initUI()
         
-        return focus_item
+        return remove_item
 
     def create_method_new_item(self, unit):
         """Method for creating a new item and receiving as attribute the unit it should be added to.

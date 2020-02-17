@@ -244,12 +244,12 @@
             "abilitylist": [
                 {
                     "name": "Two Handed",
-                    "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting. "
+                    "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."
                 }
             ],
             "magiclist": [],
             "price": 10,
-            "description": "The halberd\u2019s heavy blade is mounted upon a sturdy shaft of oak or steel and has a point like a spear and a cutting edge like an axe. Since it can be used to chop as well as thrust, it is an adaptable weapon, but is difficult to use inside buildings. "
+            "description": "The halberd\u2019s heavy blade is mounted upon a sturdy shaft of oak or steel and has a point like a spear and a cutting edge like an axe. Since it can be used to chop as well as thrust, it is an adaptable weapon, but is difficult to use inside buildings."
         },
         "Steel Whip": {
             "category": "Melee Weapon",
@@ -1706,7 +1706,7 @@
         }
     },
     "Broheim": {
-        "Mage Staff (One Handed)": {
+        "Mage Wand": {
             "category": "Melee Weapon",
             "distance": 0,
             "skill": [
@@ -1731,9 +1731,9 @@
             ],
             "magiclist": [],
             "price": 20,
-            "description": "A staff used by mages. "
+            "description": "A Mage Staff used one handed."
         },
-        "Mage Staff (Two Handed)": {
+        "Mage Quarter Staff": {
             "category": "Melee Weapon",
             "distance": 0,
             "skill": [
@@ -1753,12 +1753,21 @@
             "abilitylist": [
                 {
                     "name": "Concussion",
-                    "description": "Stunned happens also on a trow of 2 at the injury roll. "
+                    "description": "Stunned happens also on a trow of 2 at the injury roll."
+                },
+                {
+                    "name": "Two Handed",
+                    "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."
                 }
             ],
-            "magiclist": [],
+            "magiclist": [
+                {
+                    "name": "Flipendo",
+                    "description": "Summons Harry Potter."
+                }
+            ],
             "price": 20,
-            "description": "A staff used by mages. "
+            "description": "A Mage Staff used two handed."
         }
     }
 }

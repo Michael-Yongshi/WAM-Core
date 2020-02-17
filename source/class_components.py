@@ -237,7 +237,9 @@ class Skill(object):
 
 class Ability(object):
     """Default object to assign ablities as a basis for character and item abilities"""
-    def __init__(self, name, description=None):
+    def __init__(self, name, source="Automatic", category="Automatic", description=None):
+        self.source = source
+        self.category = category
         self.name = name
         self.description = description
 
@@ -245,6 +247,8 @@ class Ability(object):
         data = {}
         data[str(ref)] = {
             # 'key': str(self),
+            'source': self.source,
+            'category': self.category,
             'name': self.name,
             'description': self.description
         }
@@ -253,6 +257,8 @@ class Ability(object):
     @staticmethod
     def from_dict(datadict):
         data = Ability(
+            source=datadict["source"],
+            category=datadict["category"],
             name=datadict["name"],
             description=datadict["description"]
             )

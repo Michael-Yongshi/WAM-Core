@@ -2,14 +2,17 @@ from source.methods_database import (
     create_warbandref,
     create_characterref,
     create_itemref,
+    create_abilityref,
     create_magicref,
     add_warbandref,
     add_characterref,
     add_itemref,
+    add_abilityref,
     add_magicref,
     get_warbandref,
     get_characterref,
     get_itemref,
+    get_abilityref,
     get_magicref,
 )
 
@@ -2153,6 +2156,54 @@ if __name__ == "__main__":
         item = "Starting Dagger",
     )
 
+# (re-)creating an abilities-ref json file
+    create_abilityref()
+
+    # Core rules
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Injury",
+        name = "Scarred",
+        description = "Feared"
+    )
+
+    # Broheim added abilities (warband specific)
+    add_abilityref(
+        source = "Broheim", 
+        category = "Ability",
+        name = "High Sorcery",
+        description = "A Loremaster’s knowledge of magic goes far beyond that of any other race. When an enemy spellcaster successfully casts a spell the Loremaster may attempt to dispel it. If the Loremaster rolls greater then his opponent’s casting roll for the spell then it is dispelled. Only the Loremaster may have this skill."
+    )
+    add_abilityref(
+        source = "Broheim", 
+        category = "Ability",
+        name = "Stand and Fire",
+        description = "If the Elf passes a leadership test he may choose to stand and fire at a charging opponent. The Elf suffers a –1 penalty to hit and may only fire once, at a single opponent. If his opponent is knocked down or stunned, place him halfway between the Elf and where he started from (or in view if he was out of sight)."
+    )
+    add_abilityref(
+        source = "Broheim", 
+        category = "Ability",
+        name = "Miniath",
+        description = "The Elf has been trained in the martial art of the White Tower known as Miniath, allowing him to parry with any weapon. If he has a weapon that he can parry with he gains an additional parry attempt."
+    )
+    add_abilityref(
+        source = "Broheim", 
+        category = "Ability",
+        name = "Unerring Strike",
+        description = "The Elf is an expert at delivering deadly accurate blows. He may re-roll any failed to wound rolls."
+    )
+    add_abilityref(
+        source = "Broheim", 
+        category = "Ability",
+        name = "Fey Quickness",
+        description = "Few can ever hope to match an Elf’s inhuman quickness and agility. An Elf with Fey Quickness can avoid melee or missile attacks on a roll of 6. If the Elf also has Step Aside or Dodge this will increase to a 4+ in the relevant area. For example, an Elf with Fey Quickness and Step Aside avoids melee attacks on a 4+ and missile attacks on a 6."
+    )
+    get_abilityref(
+        source = "Broheim",
+        category = "Ability",
+        name = "Fey Quickness",
+    )
+
     create_magicref()
     add_magicref(
         source = "Broheim", 
@@ -2203,34 +2254,6 @@ if __name__ == "__main__":
     )
 
 
-# # (re-)creating an abilities-ref json file
-# data = {}
-# data['abilities_ref'] = []
-# data['abilities_ref'].append({
-#     'name': 'High Sorcery',
-#     'restriction': 'High Elf, Loremaster',
-#     'desc': 'A Loremaster’s knowledge of magic goes far beyond that of any other race. When an enemy spellcaster successfully casts a spell the Loremaster may attempt to dispel it. If the Loremaster rolls greater then his opponent’s casting roll for the spell then it is dispelled. Only the Loremaster may have this skill.'
-# })
-# data['abilities_ref'].append({
-#     'name': 'Stand and Fire',
-#     'restriction': 'High Elf',
-#     'desc': 'If the Elf passes a leadership test he may choose to stand and fire at a charging opponent. The Elf suffers a –1 penalty to hit and may only fire once, at a single opponent. If his opponent is knocked down or stunned, place him halfway between the Elf and where he started from (or in view if he was out of sight).'
-# })
-# data['abilities_ref'].append({
-#     'name': 'Miniath',
-#     'restriction': 'High Elf',
-#     'desc': 'The Elf has been trained in the martial art of the White Tower known as Miniath, allowing him to parry with any weapon. If he has a weapon that he can parry with he gains an additional parry attempt.'
-# })
-# data['abilities_ref'].append({
-#     'name': 'Unerring Strike',
-#     'restriction': 'High Elf',
-#     'desc': 'The Elf is an expert at delivering deadly accurate blows. He may re-roll any failed to wound rolls.'
-# })
-# data['abilities_ref'].append({
-#     'name': 'Fey Quickness',
-#     'restriction': 'High Elf',
-#     'desc': 'Few can ever hope to match an Elf’s inhuman quickness and agility. An Elf with Fey Quickness can avoid melee or missile attacks on a roll of 6. If the Elf also has Step Aside or Dodge this will increase to a 4+ in the relevant area. For example, an Elf with Fey Quickness and Step Aside avoids melee attacks on a 4+ and missile attacks on a 6.'
-# })
 
 # with open('database/references/abilities_ref.json', 'w') as outfile:
 #     json.dump(data, outfile, indent=4)

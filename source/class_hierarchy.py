@@ -384,7 +384,7 @@ class Character(object):
 
         abilitylist = []
         for abilitydict in data[race][source][warband][category].get("abilitylist"):
-            abilityobject = Ability(name=abilitydict["name"], description=abilitydict["description"])
+            abilityobject = Ability(source=abilitydict["source"], category=abilitydict["category"], name=abilitydict["name"], description=abilitydict["description"])
             abilitylist.append(abilityobject)
 
         magiclist = []

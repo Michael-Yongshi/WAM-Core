@@ -91,7 +91,7 @@ def test_createWarband(name, race, source, warband):
     print("squad1 item succesfull")
 
     squad2.equip_squad(name = "Great Sword", category = "Melee Weapon", source = "Core Rules")
-    print("squad1 item succesfull")
+    print("squad2 item succesfull")
 
     # adding the squads to the squadlist
     wbid.squadlist = [
@@ -116,6 +116,7 @@ def test_updateWarband():
 
     # from dictionary to objects for manipulation
     wbid = Warband.from_dict(datadict)
+    print("warband extraction succesfull")
 
     # Add another hero
     newhero = Hero.create_character(
@@ -125,6 +126,7 @@ def test_updateWarband():
         warband = "High Elves",
         category="Sword Warden"
         )
+    print("hero1 creation succesful")
     newhero2 = Hero.create_character(
         name="Crypton", 
         race="High Elf", 
@@ -132,6 +134,7 @@ def test_updateWarband():
         warband = "High Elves",
         category="Sword Warden"
         )
+    print("hero2 creation succesful")
     newhero3 = Hero.create_character(
         name="Danan", 
         race="High Elf", 
@@ -139,6 +142,7 @@ def test_updateWarband():
         warband = "High Elves",
         category="Ranger"
         )
+    print("hero3 creation succesful")
     newhero4 = Hero.create_character(
         name="Everia", 
         race="High Elf", 
@@ -146,6 +150,7 @@ def test_updateWarband():
         warband = "High Elves",
         category="Ranger"
         )
+    print("hero4 creation succesful")
     newhero5 = Hero.create_character(
         name="Felicia", 
         race="High Elf", 
@@ -153,30 +158,35 @@ def test_updateWarband():
         warband = "High Elves",
         category="Ranger"
         )
-    
+    print("hero5 creation succesful")
     # Add items for new hero
     newhero.itemlist = [
         Item.create_item(name = "Sword", category = "Melee Weapon", source = "Core Rules"),
         Item.create_item(name = "Light Armour", category = "Armour & Protection", source = "Core Rules"),
         Item.create_item(name = "Shield", category = "Armour & Protection", source = "Core Rules")
         ]
+    print("newhero1 item succesfull")
     newhero2.itemlist = [
         Item.create_item(name = "Sword", category = "Melee Weapon", source = "Core Rules"),
         Item.create_item(name = "Light Armour", category = "Armour & Protection", source = "Core Rules"),
         Item.create_item(name = "Shield", category = "Armour & Protection", source = "Core Rules")
         ]
+    print("newhero2 item succesfull")
     newhero3.itemlist = [
         Item.create_item(name = "Long Bow", category = "Missile Weapon", source = "Core Rules"),
         Item.create_item(name = "Light Armour", category = "Armour & Protection", source = "Core Rules"),
         ]
+    print("newhero3 item succesfull")
     newhero4.itemlist = [
         Item.create_item(name = "Long Bow", category = "Missile Weapon", source = "Core Rules"),
         Item.create_item(name = "Light Armour", category = "Armour & Protection", source = "Core Rules"),
         ]
+    print("newhero4 item succesfull")
     newhero5.itemlist = [
         Item.create_item(name = "Long Bow", category = "Missile Weapon", source = "Core Rules"),
         Item.create_item(name = "Light Armour", category = "Armour & Protection", source = "Core Rules"),
         ]
+    print("newhero5 item succesfull")
 
     # adding the heroes to the warband hero list
     wbid.herolist.append(newhero)
@@ -184,6 +194,7 @@ def test_updateWarband():
     wbid.herolist.append(newhero3)
     wbid.herolist.append(newhero4)
     wbid.herolist.append(newhero5)
+    print("hero assigning succesful")
 
     # Create Squads and the henchmen within
     newsquad = Squad.create_squad(
@@ -194,6 +205,7 @@ def test_updateWarband():
         category = "Cadet",
         number = 1
         )
+    print("squad1 creation succesful")
     newsquad2 = Squad.create_squad(
         name = "Cadet2",
         race = "High Elf",
@@ -202,6 +214,7 @@ def test_updateWarband():
         category = "Cadet",
         number = 1
         )
+    print("squad2 creation succesful")
     newsquad3 = Squad.create_squad(
         name = "Cadet3",
         race = "High Elf",
@@ -210,6 +223,7 @@ def test_updateWarband():
         category = "Cadet",
         number = 1
         )
+    print("squad3 creation succesful")
     newsquad4 = Squad.create_squad(
         name = "Cadet4",
         race = "High Elf",
@@ -218,19 +232,21 @@ def test_updateWarband():
         category = "Cadet",
         number = 1
         )
-
+    print("squad4 creation succesful")
     
     # Adding items to the squads
     newsquad.equip_squad(name = "Long Bow", category = "Missile Weapon", source = "Core Rules")
     newsquad2.equip_squad(name = "Long Bow", category = "Missile Weapon", source = "Core Rules")
     newsquad3.equip_squad(name = "Long Bow", category = "Missile Weapon", source = "Core Rules")
     newsquad4.equip_squad(name = "Long Bow", category = "Missile Weapon", source = "Core Rules")
-
+    print("squad equipment creation succesful")
+    
     # adding the squads to the squadlist
     wbid.squadlist.append(newsquad)
     wbid.squadlist.append(newsquad2)
     wbid.squadlist.append(newsquad3)
     wbid.squadlist.append(newsquad4)
+    print("squad assigning succesful")
 
     cache_warband(wbid)
     save_warband(wbid)

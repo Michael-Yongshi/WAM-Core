@@ -221,7 +221,7 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 4, 4, 3, 3, 1, 4, 1, 8, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Excellent Leader"},
+            {"source": "Core Rules", "category": "Character", "name": "Excellent Leader"},
         ],
         magiclist = [],
         itemlist = [
@@ -308,7 +308,7 @@ if __name__ == "__main__":
         ishero = False,
         skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Expert Swordsman"},
+            {"source": "Core Rules", "category": "Character", "name": "Expert Swordsman"},
             ],
         magiclist = [],
         itemlist = [
@@ -329,7 +329,7 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 4, 4, 4, 3, 1, 4, 1, 8, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Leader"},
+            {"source": "Core Rules", "category": "Character", "name": "Leader"},
         ],
         magiclist = [],
         itemlist = [
@@ -416,7 +416,7 @@ if __name__ == "__main__":
         ishero = False,
         skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Expert Swordsman"},
+            {"source": "Core Rules", "category": "Character", "name": "Expert Swordsman"},
             ],
         magiclist = [],
         itemlist = [
@@ -437,7 +437,7 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 4, 4, 3, 3, 1, 4, 1, 8, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Leader"},
+            {"source": "Core Rules", "category": "Character", "name": "Leader"},
         ],
         magiclist = [],
         itemlist = [
@@ -524,7 +524,7 @@ if __name__ == "__main__":
         ishero = False,
         skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Expert Swordsman"},
+            {"source": "Core Rules", "category": "Character", "name": "Expert Swordsman"},
             ],
         magiclist = [],
         itemlist = [
@@ -545,8 +545,8 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 4, 4, 3, 3, 1, 3, 1, 8, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Leader"},
-            {"source": "Core Rules", "category": "Ability", "name": "Chaos Ritualist"},
+            {"source": "Core Rules", "category": "Character", "name": "Leader"},
+            {"source": "Core Rules", "category": "Character", "name": "Chaos Ritualist"},
             ],
         magiclist = [],
         itemlist = [
@@ -565,9 +565,9 @@ if __name__ == "__main__":
         ishero = True,
         skill = [5, 4, 0, 4, 4, 2, 4, 2, 7, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Unarmed and Unarmoured"},
-            {"source": "Core Rules", "category": "Ability", "name": "Cause Fear"},
-            {"source": "Core Rules", "category": "Ability", "name": "Can Mutate"},        
+            {"source": "Core Rules", "category": "Character", "name": "Unarmed and Unarmoured"},
+            {"source": "Core Rules", "category": "Character", "name": "Cause Fear"},
+            {"source": "Core Rules", "category": "Character", "name": "Can Mutate"},        
         ],
         magiclist = [],
         itemlist = [],
@@ -585,7 +585,7 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Mutated"},
+            {"source": "Core Rules", "category": "Character", "name": "Mutated"},
             ],
         magiclist = [],
         itemlist = [
@@ -604,7 +604,7 @@ if __name__ == "__main__":
         ishero = False,
         skill = [4, 2, 2, 4, 3, 1, 3, 1, 6, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Crazed"},
+            {"source": "Core Rules", "category": "Character", "name": "Crazed"},
         ],
         magiclist = [],
         itemlist = [
@@ -659,8 +659,8 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 4, 4, 3, 3, 1, 4, 1, 8, 0],
         abilitylist = [            
-            {"source": "Core Rules", "category": "Ability", "name": "Leader"},
-            {"source": "Core Rules", "category": "Ability", "name": "Burn the Witch!"},
+            {"source": "Core Rules", "category": "Character", "name": "Leader"},
+            {"source": "Core Rules", "category": "Character", "name": "Burn the Witch!"},
         ],
         magiclist = [],
         itemlist = [
@@ -679,7 +679,7 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 8, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Prayers of Sigmar"},
+            {"source": "Core Rules", "category": "Character", "name": "Prayers of Sigmar"},
         ],
         magiclist = [],
         itemlist = [
@@ -698,7 +698,7 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Burn the Witch!"},
+            {"source": "Core Rules", "category": "Character", "name": "Burn the Witch!"},
         ],
         magiclist = [],
         itemlist = [
@@ -734,9 +734,9 @@ if __name__ == "__main__":
         ishero = False,
         skill = [4, 3, 3, 4, 4, 1, 3, 1, 10, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Melee Only"},
-            {"source": "Core Rules", "category": "Ability", "name": "No Leader"},
-            {"source": "Core Rules", "category": "Ability", "name": "Fanatical"},
+            {"source": "Core Rules", "category": "Character", "name": "Melee Only"},
+            {"source": "Core Rules", "category": "Character", "name": "No Leader"},
+            {"source": "Core Rules", "category": "Character", "name": "Fanatical"},
         ],
         magiclist = [],
         itemlist = [],
@@ -753,8 +753,8 @@ if __name__ == "__main__":
         ishero = False,
         skill = [6, 4, 0, 4, 3, 1, 4, 1, 5, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Unarmed and Unarmoured"},
-            {"source": "Core Rules", "category": "Ability", "name": "Animal"},
+            {"source": "Core Rules", "category": "Character", "name": "Unarmed and Unarmoured"},
+            {"source": "Core Rules", "category": "Character", "name": "Animal"},
         ],
         magiclist = [],
         itemlist = [],
@@ -773,8 +773,8 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 4, 4, 3, 3, 1, 4, 1, 8, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Leader"},
-            {"source": "Core Rules", "category": "Ability", "name": "Prayers of Sigmar"},
+            {"source": "Core Rules", "category": "Character", "name": "Leader"},
+            {"source": "Core Rules", "category": "Character", "name": "Prayers of Sigmar"},
         ],
         magiclist = [],
         itemlist = [
@@ -810,8 +810,8 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 2, 2, 3, 3, 1, 3, 1, 7, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Unarmoured"},
-            {"source": "Core Rules", "category": "Ability", "name": "Blessed Sight"},
+            {"source": "Core Rules", "category": "Character", "name": "Unarmoured"},
+            {"source": "Core Rules", "category": "Character", "name": "Blessed Sight"},
         ],
         magiclist = [],
         itemlist = [
@@ -866,11 +866,11 @@ if __name__ == "__main__":
         ishero = True,
         skill = [6, 4, 4, 4, 4, 2, 5, 2, 8, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Leader"},
-            {"source": "Core Rules", "category": "Ability", "name": "Cause Fear"},
-            {"source": "Core Rules", "category": "Ability", "name": "Immune to Psychology"},
-            {"source": "Core Rules", "category": "Ability", "name": "Immune to Poison"},
-            {"source": "Core Rules", "category": "Ability", "name": "Immune to Pain"},
+            {"source": "Core Rules", "category": "Character", "name": "Leader"},
+            {"source": "Core Rules", "category": "Character", "name": "Cause Fear"},
+            {"source": "Core Rules", "category": "Character", "name": "Immune to Psychology"},
+            {"source": "Core Rules", "category": "Character", "name": "Immune to Poison"},
+            {"source": "Core Rules", "category": "Character", "name": "Immune to Pain"},
         ],
         magiclist = [],
         itemlist = [
@@ -889,7 +889,7 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Necromancer"},
+            {"source": "Core Rules", "category": "Character", "name": "Necromancer"},
         ],
         magiclist = [],
         itemlist = [
@@ -927,13 +927,13 @@ if __name__ == "__main__":
         ishero = False,
         skill = [4, 2, 0, 3, 3, 1, 1, 1, 5, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Unarmed and Unarmoured"},
-            {"source": "Core Rules", "category": "Ability", "name": "Cause Fear"},
-            {"source": "Core Rules", "category": "Ability", "name": "Immune to Psychology"},
-            {"source": "Core Rules", "category": "Ability", "name": "Immune to Poison"},
-            {"source": "Core Rules", "category": "Ability", "name": "Immune to Pain"},
-            {"source": "Core Rules", "category": "Ability", "name": "Animal"},
-            {"source": "Core Rules", "category": "Ability", "name": "May not Run"},
+            {"source": "Core Rules", "category": "Character", "name": "Unarmed and Unarmoured"},
+            {"source": "Core Rules", "category": "Character", "name": "Cause Fear"},
+            {"source": "Core Rules", "category": "Character", "name": "Immune to Psychology"},
+            {"source": "Core Rules", "category": "Character", "name": "Immune to Poison"},
+            {"source": "Core Rules", "category": "Character", "name": "Immune to Pain"},
+            {"source": "Core Rules", "category": "Character", "name": "Animal"},
+            {"source": "Core Rules", "category": "Character", "name": "May not Run"},
         ],
         magiclist = [],
         itemlist = [],
@@ -950,8 +950,8 @@ if __name__ == "__main__":
         ishero = False,
         skill = [4, 2, 2, 3, 4, 1, 3, 2, 5, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Unarmed"},
-            {"source": "Core Rules", "category": "Ability", "name": "Cause Fear"},
+            {"source": "Core Rules", "category": "Character", "name": "Unarmed"},
+            {"source": "Core Rules", "category": "Character", "name": "Cause Fear"},
         ],
         magiclist = [],
         itemlist = [
@@ -972,14 +972,14 @@ if __name__ == "__main__":
         ishero = False,
         skill = [9, 3, 0, 4, 3, 1, 2, 1, 4, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Double Charge"},
-            {"source": "Core Rules", "category": "Ability", "name": "Unarmed and Unarmoured"},
-            {"source": "Core Rules", "category": "Ability", "name": "Cause Fear"},
-            {"source": "Core Rules", "category": "Ability", "name": "Immune to Psychology"},
-            {"source": "Core Rules", "category": "Ability", "name": "Immune to Poison"},
-            {"source": "Core Rules", "category": "Ability", "name": "Immune to Pain"},
-            {"source": "Core Rules", "category": "Ability", "name": "May not Run"},
-            {"source": "Core Rules", "category": "Ability", "name": "Animal"},
+            {"source": "Core Rules", "category": "Character", "name": "Double Charge"},
+            {"source": "Core Rules", "category": "Character", "name": "Unarmed and Unarmoured"},
+            {"source": "Core Rules", "category": "Character", "name": "Cause Fear"},
+            {"source": "Core Rules", "category": "Character", "name": "Immune to Psychology"},
+            {"source": "Core Rules", "category": "Character", "name": "Immune to Poison"},
+            {"source": "Core Rules", "category": "Character", "name": "Immune to Pain"},
+            {"source": "Core Rules", "category": "Character", "name": "May not Run"},
+            {"source": "Core Rules", "category": "Character", "name": "Animal"},
         ],
         magiclist = [],
         itemlist = [],
@@ -998,8 +998,8 @@ if __name__ == "__main__":
         ishero = True,
         skill = [6, 4, 4, 4, 3, 1, 5, 1, 7, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Leader"},
-            {"source": "Core Rules", "category": "Ability", "name": "Armour Piercing"},
+            {"source": "Core Rules", "category": "Character", "name": "Leader"},
+            {"source": "Core Rules", "category": "Character", "name": "Armour Piercing"},
         ],
         magiclist = [],
         itemlist = [
@@ -1018,7 +1018,7 @@ if __name__ == "__main__":
         ishero = True,
         skill = [5, 3, 3, 3, 3, 1, 4, 1, 6, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Horned Rat Sorcerer"},
+            {"source": "Core Rules", "category": "Character", "name": "Horned Rat Sorcerer"},
         ],
         magiclist = [],
         itemlist = [
@@ -1088,9 +1088,9 @@ if __name__ == "__main__":
         ishero = False,
         skill = [6, 4, 4, 4, 4, 2, 5, 2, 8, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Unarmed and Unarmoured"},
-            {"source": "Core Rules", "category": "Ability", "name": "Pack size"},
-            {"source": "Core Rules", "category": "Ability", "name": "Animal"},
+            {"source": "Core Rules", "category": "Character", "name": "Unarmed and Unarmoured"},
+            {"source": "Core Rules", "category": "Character", "name": "Pack size"},
+            {"source": "Core Rules", "category": "Character", "name": "Animal"},
         ],
         magiclist = [],
         itemlist = [],
@@ -1107,11 +1107,11 @@ if __name__ == "__main__":
         ishero = False,
         skill = [6, 3, 3, 5, 5, 3, 4, 3, 4, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Unarmed and Unarmoured"},
-            {"source": "Core Rules", "category": "Ability", "name": "Cause Fear"},
-            {"source": "Core Rules", "category": "Ability", "name": "Stupidity"},
-            {"source": "Core Rules", "category": "Ability", "name": "Animal"},
-            {"source": "Core Rules", "category": "Ability", "name": "Large Target"},
+            {"source": "Core Rules", "category": "Character", "name": "Unarmed and Unarmoured"},
+            {"source": "Core Rules", "category": "Character", "name": "Cause Fear"},
+            {"source": "Core Rules", "category": "Character", "name": "Stupidity"},
+            {"source": "Core Rules", "category": "Character", "name": "Animal"},
+            {"source": "Core Rules", "category": "Character", "name": "Large Target"},
         ],
         magiclist = [],
         itemlist = [],
@@ -1130,8 +1130,8 @@ if __name__ == "__main__":
         ishero = True,
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 9, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Leader"},
-            {"source": "Broheim", "category": "Ability", "name": "High Elven Magician"}
+            {"source": "Core Rules", "category": "Character", "name": "Leader"},
+            {"source": "Broheim", "category": "Character", "name": "High Elven Magician"}
             ],
         magiclist = [],
         itemlist = [
@@ -1221,8 +1221,8 @@ if __name__ == "__main__":
         ishero = True,
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 9, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Ability", "name": "Leader"},
-            {"source": "Broheim", "category": "Ability", "name": "High Elven Magician"}
+            {"source": "Core Rules", "category": "Character", "name": "Leader"},
+            {"source": "Broheim", "category": "Character", "name": "High Elven Magician"}
             ],
         magiclist = [],
         itemlist = [
@@ -1303,26 +1303,6 @@ if __name__ == "__main__":
         description = "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships. "
     )
 
-    # Manual addition
-    add_characterref(
-        race = "High Elf",
-        source = "Manual",
-        warband = "Manual",
-        category = "Khaine",
-        ishero = True,
-        skill = [6, 6, 6, 6, 6, 6, 6, 6, 6, 6],
-        abilitylist = [
-            {"name": "Excellent Sight", "description":"Spot hidden objects at double the range. "}, {"name": "Fear", "description": "Spreads fear in nearby enemies. "},
-            ],
-        magiclist = [],
-        itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
-        ],
-        experience = 100,
-        price = 30,
-        maxcount = 5,
-        description = "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships. "
-    )
     get_characterref(
         race = "High Elf",
         source = "Broheim",
@@ -1339,8 +1319,8 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Cloth is Armour", "description": "These weapons are not the best weapons to use for penetrating an enemy model’s armor. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."},
-            ],
+            {"source": "Core Rules", "category": "Item", "name": "Cloth is Armour"},            
+        ],
         magiclist = [],
         price = 0,
         description = "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back. "
@@ -1352,8 +1332,8 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Cloth is Armour", "description": "These weapons are not the best weapons to use for penetrating an enemy model’s armor. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."},
-            ],
+            {"source": "Core Rules", "category": "Item", "name": "Cloth is Armour"},
+        ],
         magiclist = [],
         price = 2,
         description = "A extra dagger. For units that want to dual wield daggers. "
@@ -1364,7 +1344,9 @@ if __name__ == "__main__":
         name = "Club",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        abilitylist = [{"name": "Concussion", "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model’s injuries. "}],
+        abilitylist = [
+            {"source": "Core Rules", "category": "Item", "name": "Concussion"},
+        ],
         magiclist = [],
         price = 3,
         description = "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious. "
@@ -1375,7 +1357,9 @@ if __name__ == "__main__":
         name = "Mace",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        abilitylist = [{"name": "Concussion", "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model’s injuries. "}],
+        abilitylist = [
+            {"source": "Core Rules", "category": "Item", "name": "Concussion"},
+        ],
         magiclist = [],
         price = 3,
         description = "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious. "
@@ -1386,7 +1370,9 @@ if __name__ == "__main__":
         name = "Hammer",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        abilitylist = [{"name": "Cutting Edge", "description": "An axe has an extra save modifier of -1, so a model with Strength 4 using an axe has a -2 save modifier when he hits an opponent in hand-to-hand combat. "}],
+        abilitylist = [
+            {"source": "Core Rules", "category": "Item", "name": "Concussion"},
+        ],
         magiclist = [],
         price = 3,
         description = "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious. "
@@ -1397,7 +1383,9 @@ if __name__ == "__main__":
         name = "Axe",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        abilitylist = [{"name": "Concussion", "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model’s injuries. "}],
+        abilitylist = [
+            {"source": "Core Rules", "category": "Item", "name": "Cutting Edge"},
+        ],
         magiclist = [],
         price = 5,
         description = "The axe is the traditional weapon of Empire woodsmen, and is also used as a weapon in poorer rural areas. Axes have a heavy blade and, if swung by a strong man, can cause a lot of damage. The blade of an axe can easily cut through armor, though it requires considerable strength from the wielder. Of all the warriors in the Old World, Dwarfs are the most adept at making axes. Their axes are invaluable to the warriors of the Old World and are some of the most sought after weapons. "
@@ -1408,7 +1396,9 @@ if __name__ == "__main__":
         name = "Sword",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        abilitylist = [{"name": "Parry", "description": "Swords offer an excellent balance of defense and offence. A model armed with a sword may parry blows. When his opponent rolls to hit, the model armed with a sword may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength – they are simply too powerful to be stopped. "}],
+        abilitylist = [
+            {"source": "Core Rules", "category": "Item", "name": "Parry"},
+            ],
         magiclist = [],
         price = 10,
         description = "The sword is often referred to as the ‘king of weapons’. The most common sword available, the broadsword of the Empire, is a masterpiece by the standards of any smith: four full feet of gleaming steel, double-edged and razor-sharp. Swords are much more effective weapons than crude clubs and axes, though learning to use a sword is a long and difficult process. It takes years to truly master this weapon – most warriors in Mordheim die long before they get this far!"
@@ -1420,9 +1410,9 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "First Strike", "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat. "},
-            {"name": "Unwieldy", "description": "A warrior with a spear may only use a shield or a buckler in his other hand. He may not use a second weapon. "},
-            {"name": "Cavalry Bonus", "description": "If using the rules for mounted models, a mounted warrior armed with a spear receives a +1 Strength bonus when he charges. This bonus only applies for that turn. "},
+            {"source": "Core Rules", "category": "Item", "name": "First Strike"},
+            {"source": "Core Rules", "category": "Item", "name": "Unwieldy"},
+            {"source": "Core Rules", "category": "Item", "name": "Cavalry Charge Bonus"},
         ],
         magiclist = [],
         price = 10,
@@ -1434,7 +1424,8 @@ if __name__ == "__main__":
         name = "Halberd",
         distance = 0,
         skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
-        abilitylist = [{"name": "Two Handed", "description":"A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."}],
+        abilitylist = [
+            {"source": "Core Rules", "category": "Item", "name": "Two Handed"}],
         magiclist = [],
         price = 10,
         description = "The halberd’s heavy blade is mounted upon a sturdy shaft of oak or steel and has a point like a spear and a cutting edge like an axe. Since it can be used to chop as well as thrust, it is an adaptable weapon, but is difficult to use inside buildings."
@@ -1446,8 +1437,8 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Cannot be parried", "description":"The steel whip is a flexible weapon and the Priestesses use it with great expertise. Attempts to parry its strikes are futile. A model attacked by a steel whip may not make parries with swords or bucklers."},
-            {"name": "Whipcrack", "description":" when the wielder charges they gain +1A for that turn. This bonus attack is added after any other modifications. When the wielder is charged they gain +1A that they may only use against the charger. This additional attack will ‘strike first’. If the wielder is simultaneously charged by two or more opponents they will still only receive a total of +1A. If the wielder is using two whips at the same time then they get +1A for the additional hand weapon, but only the first whip gets the whipcrack +1A."},
+            {"source": "Core Rules", "category": "Item", "name": "Cannot be Parried"},
+            {"source": "Core Rules", "category": "Item", "name": "Whipcrack"},
         ],
         magiclist = [],
         price = 10,
@@ -1460,8 +1451,8 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 2, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Two Handed", "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting. "},
-            {"name": "Last Strike", "description": "These Double-handed weapons are so heavy that the model using them always strikes last, even when charging. "},
+            {"source": "Core Rules", "category": "Item", "name": "Two Handed"},
+            {"source": "Core Rules", "category": "Item", "name": "Last Strike"},
             ],
         magiclist = [],
         price = 15,
@@ -1474,8 +1465,8 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 2, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Two Handed", "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting. "},
-            {"name": "Last Strike", "description": "These Double-handed weapons are so heavy that the model using them always strikes last, even when charging. "},
+            {"source": "Core Rules", "category": "Item", "name": "Two Handed"},
+            {"source": "Core Rules", "category": "Item", "name": "Last Strike"},
             ],
         magiclist = [],
         price = 15,
@@ -1488,8 +1479,8 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 2, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Two Handed", "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting. "},
-            {"name": "Heavy", "description": "A flail is extremely tiring to use and thus the +2 Strength bonus applies only in the first turn of each hand-to-hand combat. "},
+            {"source": "Core Rules", "category": "Item", "name": "Two Handed"},
+            {"source": "Core Rules", "category": "Item", "name": "Heavy"},
             ],
         magiclist = [],
         price = 15,
@@ -1502,8 +1493,8 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Difficult to Use", "description": "A model with a morning star may not use a second weapon or buckler in his other hand because it requires all his skill to wield it. He may carry a shield as normal though. "},
-            {"name": "Heavy", "description": "A flail is extremely tiring to use and thus the +1 Strength bonus applies only in the first turn of each hand-to-hand combat. "},
+            {"source": "Core Rules", "category": "Item", "name": "Difficult to Use"},
+            {"source": "Core Rules", "category": "Item", "name": "Heavy"},
             ],
         magiclist = [],
         price = 15,
@@ -1516,12 +1507,12 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Concussion", "description": "Warhammers are excellent at striking people senseless. When using a Warhammer in close combat a roll of 2-4 is treated as Stunned when rolling on the Injury chart."},
-            {"name": "Holy Weapon", "description": "Each Warhammer is blessed by the High Matriarch herself before it is handed to the Sisters. The Warhammer has a +1 bonus on all to wound rolls against any Possessed or Undead models. Note that you will still need to score a 6 before any modifiers in order to cause a critical hit. Only Matriarchs and Sister Superiors may carry two Sigmarite Warhammers."},
+            {"source": "Core Rules", "category": "Item", "name": "Concussion"},
+            {"source": "Core Rules", "category": "Item", "name": "Holy Weapon"},
             ],
         magiclist = [],
         price = 15,
-        description = "One of the traditional weapons of the Sisterhood, the Warhammer echoes Ghal-Maraz, the great hammer of Sigmar himself."
+        description = "One of the traditional weapons of the Sisterhood, the Warhammer echoes Ghal-Maraz, the great hammer of Sigmar himself. Only the matriarch herself and sister superiors may carry two Sigmarite Warhammers."
         )
     add_itemref(
         source = "Core Rules",
@@ -1530,10 +1521,11 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Pair", "description": "Fighting Claws are traditionally used in pairs, one in each hand. A warrior armed with Fighting Claws gets an additional attack."},
-            {"name": "Climb", "description": "A Skaven equipped with Fighting Claws can add +1 to his Initiative when making Climbing tests."},
-            {"name": "Parry", "description": "A Skaven armed with Fighting Claws may parry blows and can re-roll a failed attempt once, in the same way as a model armed with a sword and buckler."},
-            {"name": "Cumbersome", "description": "A model armed with Fighting Claws may not use any other weapons in the entire battle."},
+            {"source": "Core Rules", "category": "Item", "name": "Pair"},
+            {"source": "Core Rules", "category": "Item", "name": "Climb"},
+            {"source": "Core Rules", "category": "Item", "name": "Parry"},
+            {"source": "Core Rules", "category": "Item", "name": "Parry"},
+            {"source": "Core Rules", "category": "Item", "name": "Cumbersome"},
             ],
         magiclist = [],
         price = 35,
@@ -1546,8 +1538,9 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 2, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Cavalry Weapon", "description": "A warrior must own a warhorse to use a lance, as it can only be used whilst he is on horseback."},
-            {"name": "Cavalry Charge Bonus", "description": "If using optional rules for mounted models, a warrior armed with a lance receives a +2 Strength bonus when he charges. This bonus only applies for that turn."},
+            {"source": "Core Rules", "category": "Item", "name": "Cavalry Weapon"},
+            {"source": "Core Rules", "category": "Item", "name": "Cavalry Charge Bonus"},
+            {"source": "Core Rules", "category": "Item", "name": "Cavalry Charge Bonus"},
         ],
         magiclist = [],
         price = 40,
@@ -1560,9 +1553,9 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Pair", "description": "Weeping Blades are traditionally used in pairs, one in each hand. A warrior armed with Weeping Blades gets an additional attack."},
-            {"name": "Venomous", "description": "The venom of Weeping Blades will enter the blood of the victim and ravage his organs and muscles. These weapons count as being permanently coated in black lotus (see the Equipment section). No additional poison may be applied to Weeping Blades."},
-            {"name": "Parry", "description": "Weeping Blades are swords and can be used for parrying"},
+            {"source": "Core Rules", "category": "Item", "name": "Pair"},
+            {"source": "Core Rules", "category": "Item", "name": "Venomous"},
+            {"source": "Core Rules", "category": "Item", "name": "Parry"},
         ],
         magiclist = [],
         price = 50,
@@ -1577,7 +1570,7 @@ if __name__ == "__main__":
         distance = 18,
         skill = [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Twice at Half", "description": "A slinger may fire twice in the shooting phase if he does not move in the movement phase. He cannot shoot over half range (9 inch) though, if he fires twice. If the model fires twice then each shot is at -1 to hit."},
+            {"source": "Core Rules", "category": "Item", "name": "Stationary Fire x2"},
         ],
         magiclist = [],
         price = 2,
@@ -1623,7 +1616,7 @@ if __name__ == "__main__":
         distance = 6,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Thrown Weapon", "description": "Models using throwing stars or knives do not suffer penalties for range or moving as these weapons are perfectly balanced for throwing. They cannot be used in close combat."},
+            {"source": "Core Rules", "category": "Item", "name": "Thrown Weapon"},
         ],
         magiclist = [],
         price = 15,
@@ -1636,7 +1629,7 @@ if __name__ == "__main__":
         distance = 6,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Thrown Weapon", "description": "Models using throwing stars or knives do not suffer penalties for range or moving as these weapons are perfectly balanced for throwing. They cannot be used in close combat."},
+            {"source": "Core Rules", "category": "Item", "name": "Thrown Weapon"},
         ],
         magiclist = [],
         price = 15,
@@ -1649,9 +1642,9 @@ if __name__ == "__main__":
         distance = 8,
         skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Cloth is Armour", "description": "These weapons are not the best weapons to use for penetrating an enemy model’s armor. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."},
-            {"name": "Poison", "description": "The needles fired by a blowpipe are coated in a venom very similar in its effects to the Black Lotus (if you roll a 6 on the To Hit roll, the victim is automatically wounded). A blowpipe cannot cause critical hits. This weapon has a positive armor save modifier, so a model that normally has a save of 5+ will get a save of 4+ against a blowpipe dart. Even models that normally do not have an armor save will get a 6+ save to take into account protection offered by clothes, fur or the like."},
-            {"name": "Stealthy", "description": "A Skaven armed with a blowpipe can fire while hidden without revealing his position to the enemy. The target model can take an Initiative test in order to try to spot the firing Skaven. If the test is successful, the Skaven no longer counts as hidden."},
+            {"source": "Core Rules", "category": "Item", "name": "Cloth is Armour"},
+            {"source": "Core Rules", "category": "Item", "name": "Poison"},
+            {"source": "Core Rules", "category": "Item", "name": "Stealthy"},
         ],
         magiclist = [],
         price = 25,
@@ -1664,7 +1657,7 @@ if __name__ == "__main__":
         distance = 30,
         skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Stationary Fire", "description": "You may not move and fire a crossbow on the same turn, other than to pivot on the spot to face your target or to stand up."},
+            {"source": "Core Rules", "category": "Item", "name": "Stationary Fire"},
         ],
         magiclist = [],
         price = 25,
@@ -1677,7 +1670,7 @@ if __name__ == "__main__":
         distance = 36,
         skill = [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Armour Piercing", "description": "An Elf bow has a -1 save modifier on armor saves against it"},
+            {"source": "Core Rules", "category": "Item", "name": "Armour Piercing"},
         ],
         magiclist = [],
         price = 35,
@@ -1690,7 +1683,7 @@ if __name__ == "__main__":
         distance = 10,
         skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Fire before Melee", "description": "A model armed with a crossbow pistol may shoot it in the first round of a hand-to-hand combat and this shot is always resolved first, before any blows are struck. This shot has an extra -2 to hit penalty. Use model’s Ballistic Skill to see whether it hits or not. This bonus attack is in addition to any close combat weapon attacks."},
+            {"source": "Core Rules", "category": "Item", "name": "Fire before Melee"},
         ],
         magiclist = [],
         price = 35,
@@ -1703,7 +1696,7 @@ if __name__ == "__main__":
         distance = 24,
         skill = [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Fire Twice", "description": " A model armed with a repeater crossbow may choose to fire twice per turn with an extra -1 to hit penalty on both shots."},
+            {"source": "Core Rules", "category": "Item", "name": "Fire Twice"},
         ],
         magiclist = [],
         price = 40,
@@ -1718,9 +1711,10 @@ if __name__ == "__main__":
         distance = 6,
         skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
         abilitylist = [            
-            {"name": "Prepare Shot", "description": "A pistol takes a whole turn to reload, so you may only fire every other turn. If you have a brace of pistols (i.e., two) you may fire every turn."},
-            {"name": "Armour Piercing x2", "description": "Pistols are even better at penetrating armor than their Strength value of 4 suggests. A model wounded by a pistol must take its armor save with a -2 modifier."},
-            {"name": "Fire during Melee", "description": "Pistols can be used in hand-to-hand combat as well as for shooting. A model armed with a pistol and another close combat weapon gains +1 Attack, which is resolved at Strength 4 with a -2 save modifier. This bonus attack can be used only once per combat. If you are firing a brace of pistols, your model can fight with 2 Attacks in the first turn of close combat. These attacks are resolved with a model’s Weapon Skill like any normal close combat attack and likewise may be parried. Successful hits are resolved at Strength 4 and with a -2 save modifier, regardless of the firer’s Strength."},
+            {"source": "Core Rules", "category": "Item", "name": "Prepare Shot"},
+            {"source": "Core Rules", "category": "Item", "name": "Armour Piercing"},
+            {"source": "Core Rules", "category": "Item", "name": "Armour Piercing"},
+            {"source": "Core Rules", "category": "Item", "name": "Fire during Melee"},
         ],
         magiclist = [],
         price = 15,
@@ -1733,8 +1727,10 @@ if __name__ == "__main__":
         distance = 6,
         skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
         abilitylist = [            
-            {"name": "Armour Piercing x2", "description": "Pistols are even better at penetrating armor than their Strength value of 4 suggests. A model wounded by a pistol must take its armor save with a -2 modifier."},
-            {"name": "Fire during Melee", "description": "Pistols can be used in hand-to-hand combat as well as for shooting. A model armed with a pistol and another close combat weapon gains +1 Attack, which is resolved at Strength 4 with a -2 save modifier. This bonus attack can be used only once per combat. If you are firing a brace of pistols, your model can fight with 2 Attacks in the first turn of close combat. These attacks are resolved with a model’s Weapon Skill like any normal close combat attack and likewise may be parried. Successful hits are resolved at Strength 4 and with a -2 save modifier, regardless of the firer’s Strength."},
+            {"source": "Core Rules", "category": "Item", "name": "Armour Piercing"},
+            {"source": "Core Rules", "category": "Item", "name": "Armour Piercing"},
+            {"source": "Core Rules", "category": "Item", "name": "Fire during Melee"},
+            {"source": "Core Rules", "category": "Item", "name": "Fire during Melee"},
         ],
         magiclist = [],
         price = 30,
@@ -1747,7 +1743,7 @@ if __name__ == "__main__":
         distance = 16,
         skill = [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Shot", "description": "When your model fires the blunderbuss, draw a line 16 inch long and 1 inch wide in any direction from the firer (the line must be absolutely straight). Any and all models in its path are automatically hit by a Strength 3 hit."},
+            {"source": "Core Rules", "category": "Item", "name": "Blunderbuss Shot"},
         ],
         magiclist = [],
         price = 30,
@@ -1760,10 +1756,11 @@ if __name__ == "__main__":
         distance = 10,
         skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Accurate", "description": "A dueling pistol is built for accuracy as a skilled duelist is able to hit a coin from twenty paces. All shots and close combat attacks from a dueling pistol have a +1 bonus to hit."},
-            {"name": "Prepare Shot", "description": "A dueling pistol takes a complete turn to reload, so your model may only fire every other turn. If he has a brace of dueling pistols he may fire every turn."},
-            {"name": "Armour Piercing x2", "description": "Dueling pistols are even better at penetrating armor than their Strength 4 suggests. A warrior wounded by a dueling pistol must make his armor save with a -2 modifier."},
-            {"name": "Fire during Melee", "description": "Dueling pistols can be used in hand-to-hand combat as well as for shooting. A model armed with a dueling pistol and another close combat weapon gains +1 Attack, which is resolved at Strength 4 with a -2 save modifier. This bonus attack can be used only once per combat. If you are firing a brace of dueling pistols, your model can fight with 2 Attacks in the first turn of close combat. These attacks are resolved with a model’s Weapon Skill like any normal close combat attack and likewise may be parried. Successful hits are resolved at Strength 4 and with a -2 save modifier, regardless of the firer’s Strength."},
+            {"source": "Core Rules", "category": "Item", "name": "Accurate"},
+            {"source": "Core Rules", "category": "Item", "name": "Prepare Shot"},
+            {"source": "Core Rules", "category": "Item", "name": "Armour Piercing"},
+            {"source": "Core Rules", "category": "Item", "name": "Armour Piercing"},
+            {"source": "Core Rules", "category": "Item", "name": "Fire during Melee"},
         ],
         magiclist = [],
         price = 30,
@@ -1776,9 +1773,10 @@ if __name__ == "__main__":
         distance = 10,
         skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Accurate", "description": "A dueling pistol is built for accuracy as a skilled duelist is able to hit a coin from twenty paces. All shots and close combat attacks from a dueling pistol have a +1 bonus to hit."},
-            {"name": "Armour Piercing x2", "description": "Dueling pistols are even better at penetrating armor than their Strength 4 suggests. A warrior wounded by a dueling pistol must make his armor save with a -2 modifier."},
-            {"name": "Fire during Melee", "description": "Dueling pistols can be used in hand-to-hand combat as well as for shooting. A model armed with a dueling pistol and another close combat weapon gains +1 Attack, which is resolved at Strength 4 with a -2 save modifier. This bonus attack can be used only once per combat. If you are firing a brace of dueling pistols, your model can fight with 2 Attacks in the first turn of close combat. These attacks are resolved with a model’s Weapon Skill like any normal close combat attack and likewise may be parried. Successful hits are resolved at Strength 4 and with a -2 save modifier, regardless of the firer’s Strength."},
+            {"source": "Core Rules", "category": "Item", "name": "Armour Piercing"},
+            {"source": "Core Rules", "category": "Item", "name": "Armour Piercing"},
+            {"source": "Core Rules", "category": "Item", "name": "Fire during Melee"},
+            {"source": "Core Rules", "category": "Item", "name": "Fire during Melee"},
         ],
         magiclist = [],
         price = 30,
@@ -1791,9 +1789,10 @@ if __name__ == "__main__":
         distance = 24,
         skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Stationary Fire", "description": "You may not move and fire a handgun in the same turn, other than to pivot on the spot to face your target or stand up."},
-            {"name": "Prepare Shot", "description": "A handgun takes a complete turn to reload, so you may only fire it every other turn."},
-            {"name": "Armour Piercing x2", "description": "Handguns are even better at penetrating armor than their Strength 4 suggests. A warrior wounded by a dueling pistol must make his armor save with a -2 modifier."},
+            {"source": "Core Rules", "category": "Item", "name": "Stationary Fire"},
+            {"source": "Core Rules", "category": "Item", "name": "Prepare Shot"},
+            {"source": "Core Rules", "category": "Item", "name": "Armour Piercing"},
+            {"source": "Core Rules", "category": "Item", "name": "Armour Piercing"},
         ],
         magiclist = [],
         price = 35,
@@ -1806,8 +1805,10 @@ if __name__ == "__main__":
         distance = 8,
         skill = [0, 0, 0, 5, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Armour Piercing x3", "description": "Warplock pistols are even better at penetrating armor than their Strength 5 suggests. A warrior wounded by a warplock pistol must make his armor save with a -3 modifier."},
-            {"name": "Prepare Shot", "description": "A warplock pistol takes a complete turn to reload, so you may only fire it every other turn."},
+            {"source": "Core Rules", "category": "Item", "name": "Prepare Shot"},
+            {"source": "Core Rules", "category": "Item", "name": "Armour Piercing"},
+            {"source": "Core Rules", "category": "Item", "name": "Armour Piercing"},
+            {"source": "Core Rules", "category": "Item", "name": "Armour Piercing"},
         ],
         magiclist = [],
         price = 35,
@@ -1820,7 +1821,9 @@ if __name__ == "__main__":
         distance = 8,
         skill = [0, 0, 0, 5, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Armour Piercing x3", "description": "Warplock pistols are even better at penetrating armor than their Strength 5 suggests. A warrior wounded by a warplock pistol must make his armor save with a -3 modifier."},
+            {"source": "Core Rules", "category": "Item", "name": "Armour Piercing"},
+            {"source": "Core Rules", "category": "Item", "name": "Armour Piercing"},
+            {"source": "Core Rules", "category": "Item", "name": "Armour Piercing"},
         ],
         magiclist = [],
         price = 35,
@@ -1833,10 +1836,11 @@ if __name__ == "__main__":
         distance = 48,
         skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Stationary Fire", "description": "You may not move and fire a Hochland Long Rifle in the same turn, other than to pivot on the spot to face your target or stand up."},
-            {"name": "Prepare Shot", "description": "A Hochland Long Rifle takes a complete turn to reload, so you may only fire it every other turn."},
-            {"name": "Pick Target", "description": "A model armed with a Hochland long rifle can target any enemy model in sight, not just the closest one."},
-            {"name": "Armour Piercing x2", "description": "Hochland Long Rifles are even better at penetrating armor than their Strength 4 suggests. A warrior wounded by a dueling pistol must make his armor save with a -2 modifier."},
+            {"source": "Core Rules", "category": "Item", "name": "Stationary Fire"},
+            {"source": "Core Rules", "category": "Item", "name": "Prepare Shot"},
+            {"source": "Core Rules", "category": "Item", "name": "Pick Target"},
+            {"source": "Core Rules", "category": "Item", "name": "Armour Piercing"},
+            {"source": "Core Rules", "category": "Item", "name": "Armour Piercing"},
         ],
         magiclist = [],
         price = 200,
@@ -1861,7 +1865,7 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 2],
         abilitylist = [
-            {"name": "Encumbered", "description": "A warrior that is armed with both heavy armor and a shield suffers a -1 Movement penalty."},
+            {"source": "Core Rules", "category": "Item", "name": "Encumbered 1 of 2"},
         ],
         magiclist = [],
         price = 50,
@@ -1874,7 +1878,8 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Rally!", "description": " Any Mercenary warband whose leader is wearing silk clothes may re-roll the first failed Rout test. However, after each battle in which the leader is taken out of action, roll a D6. On a roll of 1-3 the clothes are ruined and must be discarded."}
+            {"source": "Core Rules", "category": "Item", "name": "Rally!"},
+            {"source": "Core Rules", "category": "Item", "name": "Brittle"},
         ],
         magiclist = [],
         price = 50,
@@ -1889,7 +1894,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         price = 90,
-        description = "Ithilmar is a silvery metal which is as light as silk and stronger than steel. Elves are experts at fashioning weapons and armor from Ithilmar, and the Elven kingdom of Caledor is the only place in the world where this metal can be found. Ithilmar armor gives the wearer a 5+ basic save, and does not slow him down if he is also armed with a shield. "
+        description = "Ithilmar is a silvery metal which is as light as silk and stronger than steel. Elves are experts at fashioning weapons and armor from Ithilmar, and the Elven kingdom of Caledor is the only place in the world where this metal can be found."
     )
     add_itemref(
         source = "Core Rules",
@@ -1898,7 +1903,7 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Camouflage", "description": "A warrior aiming a missile weapon at a warrior wearing an Elven cloak suffers -1 on his to hit roll."},        
+            {"source": "Core Rules", "category": "Item", "name": "Camouflage"},        
         ],
         magiclist = [],
         price = 100,
@@ -1909,13 +1914,11 @@ if __name__ == "__main__":
         category = "Armour & Protection",
         name = "Gromril Armour",
         distance = 0,
-        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 4],
-        abilitylist = [
-            {"name": "Shieldwalker", "description": "A warrior that is armed with both heavy armor and a shield suffers a -1 Movement penalty. However, it does not slow him down if he is also armed with a shield"},        
-        ],
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 2],
+        abilitylist = [],
         magiclist = [],
         price = 150,
-        description = "Ithilmar is a silvery metal which is as light as silk and stronger than steel. Elves are experts at fashioning weapons and armor from Ithilmar, and the Elven kingdom of Caledor is the only place in the world where this metal can be found. Ithilmar armor gives the wearer a 5+ basic save, and does not slow him down if he is also armed with a shield. "
+        description = "Gromril is the rarest and strongest metal known of in the Old World. Only a very few Dwarf smiths know the secret of forging Gromril, and a suit of armor made from it fetches a huge price."
     )
     add_itemref(
         source = "Core Rules",
@@ -1924,7 +1927,7 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Hardhead", "description": "A model that is equipped with a helmet has a special 4+ save on a D6 against being stunned. If the save is made, treat the stunned result as knocked down instead. This save is not modified by the opponent’s Strength. "},
+            {"source": "Core Rules", "category": "Item", "name": "Hardhead"},
         ],
         magiclist = [],
         price = 10,
@@ -1936,7 +1939,7 @@ if __name__ == "__main__":
         name = "Buckler",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        abilitylist = [{"name": "Parry", "description": "Swords offer an excellent balance of defense and offence. A model armed with a sword may parry blows. When his opponent rolls to hit, the model armed with a sword may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength – they are simply too powerful to be stopped. "}],
+        abilitylist = [{"source": "Core Rules", "category": "Item", "name": "Parry"}],
         magiclist = [],
         price = 5,
         description = "Bucklers are small, round shields designed for parrying or deflecting blows. They are usually made of steel for they need to be tremendously durable to survive the brutal blows of hand-to-hand combat. Using a buckler requires great skill, but a nimble warrior can protect himself from blows which would otherwise cripple him. "
@@ -1947,7 +1950,9 @@ if __name__ == "__main__":
         name = "Shield",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-        abilitylist = [],
+        abilitylist = [
+            {"source": "Core Rules", "category": "Item", "name": "Encumbered 2 of 2"},
+        ],
         magiclist = [],
         price = 5,
         description = "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user’s life as his enemy’s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner. "
@@ -1961,7 +1966,7 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Smell", "description": " A Vampire must pass a Leadership test or it will be unable to charge a model carrying a clove of garlic."}
+            {"source": "Core Rules", "category": "Item", "name": "Garlic Smell"},
         ],
         magiclist = [],
         price = 10,
@@ -1974,7 +1979,7 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Black Lotus", "description": "A weapon coated with the sap of the Black Lotus will wound its target automatically if you roll a 6 to hit. Note that you can still roll a dice for every wound inflicted in this way. If you roll a 6, you will inflict a critical hit with that roll. If you do not roll a 6, you will cause a normal wound. Take armor saves as normal."}
+            {"source": "Core Rules", "category": "Item", "name": "Black Lotus", "description": "A weapon coated with the sap of the Black Lotus will wound its target automatically if you roll a 6 to hit. Note that you can still roll a dice for every wound inflicted in this way. If you roll a 6, you will inflict a critical hit with that roll. If you do not roll a 6, you will cause a normal wound. Take armor saves as normal."}
         ],
         magiclist = [],
         price = 10,
@@ -1987,7 +1992,7 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Dark Venom", "description": "Any hit caused by a weapon coated with Dark Venom counts as having +1 Strength, so, for example, if a warrior with Strength 3 wielding a poisoned sword hits an opponent, he will cause a Strength 4 hit instead. Armor saving throws are modified to take into account the increased Strength of the attack."}
+            {"source": "Core Rules", "category": "Item", "name": "Dark Venom", "description": "Any hit caused by a weapon coated with Dark Venom counts as having +1 Strength, so, for example, if a warrior with Strength 3 wielding a poisoned sword hits an opponent, he will cause a Strength 4 hit instead. Armor saving throws are modified to take into account the increased Strength of the attack."}
         ],
         magiclist = [],
         price = 30,
@@ -2000,8 +2005,8 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Crimson Shade", "description": "A model using Crimson Shade has his Initiative increased by +D3 points, and Movement and Strength by +1 (this effect lasts for one game). Crimson Shade has no effect on Undead such as Vampires and Zombies, or the Possessed."},
-            {"name": "Side Effects", "description": "After the battle, roll 2D6. On a roll of 2-3, the model becomes addicted and you must try to buy him a new batch of Crimson Shade before every battle from now on. If you fail to buy any, he will leave your warband. On a roll of 12 the model’s Initiative is increased permanently by +1."},
+            {"source": "Core Rules", "category": "Item", "name": "Crimson Shade", "description": "A model using Crimson Shade has his Initiative increased by +D3 points, and Movement and Strength by +1 (this effect lasts for one game). Crimson Shade has no effect on Undead such as Vampires and Zombies, or the Possessed."},
+            {"source": "Core Rules", "category": "Item", "name": "Side Effects", "description": "After the battle, roll 2D6. On a roll of 2-3, the model becomes addicted and you must try to buy him a new batch of Crimson Shade before every battle from now on. If you fail to buy any, he will leave your warband. On a roll of 12 the model’s Initiative is increased permanently by +1."},
         ],
         magiclist = [],
         price = 35,
@@ -2025,7 +2030,7 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Fearless", "description": "A warband that drinks Bugman`s Ale before a battle will be immune to Fear for the whole of the battle."}
+            {"source": "Core Rules", "category": "Item", "name": "Fearless", "description": "A warband that drinks Bugman`s Ale before a battle will be immune to Fear for the whole of the battle."}
         ],
         magiclist = [],
         price = 50,
@@ -2038,7 +2043,7 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Fearless", "description": "An elven warband that drinks Elven Wine before a battle will be immune to Fear for the whole of the battle. "}
+            {"source": "Core Rules", "category": "Item", "name": "Fearless", "description": "An elven warband that drinks Elven Wine before a battle will be immune to Fear for the whole of the battle. "}
         ],
         magiclist = [],
         price = 50,
@@ -2064,7 +2069,7 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Fake Mordheim Map", "description": "The map is a fake, and is completely worthless. It leads you on a fool’s errand. Your opponent may automatically choose the next scenario you play. "}
+            {"source": "Core Rules", "category": "Item", "name": "Fake Mordheim Map", "description": "The map is a fake, and is completely worthless. It leads you on a fool’s errand. Your opponent may automatically choose the next scenario you play. "}
         ],
         magiclist = [],
         price = 20,
@@ -2077,7 +2082,7 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Vague Mordheim Map", "description": "Though crude, the map is generally accurate (well… parts of it are… perhaps!). You may re-roll any one dice during the next exploration phase if you wish but you must accept the result of the second roll. "}
+            {"source": "Core Rules", "category": "Item", "name": "Vague Mordheim Map", "description": "Though crude, the map is generally accurate (well… parts of it are… perhaps!). You may re-roll any one dice during the next exploration phase if you wish but you must accept the result of the second roll. "}
         ],
         magiclist = [],
         price = 20,
@@ -2090,7 +2095,7 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Catacomb Mordheim Map", "description": "The map shows a way through the catacombs into the city. You may automatically choose the scenario next time you fight a battle. "}
+            {"source": "Core Rules", "category": "Item", "name": "Catacomb Mordheim Map", "description": "The map shows a way through the catacombs into the city. You may automatically choose the scenario next time you fight a battle. "}
         ],
         magiclist = [],
         price = 20,
@@ -2103,7 +2108,7 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Accurate Mordheim Map", "description": "The map is recently made and very detailed. You may re-roll up to three dice during the next exploration phase if you wish. You must accept the result of the second roll. "}
+            {"source": "Core Rules", "category": "Item", "name": "Accurate Mordheim Map", "description": "The map is recently made and very detailed. You may re-roll up to three dice during the next exploration phase if you wish. You must accept the result of the second roll. "}
         ],
         magiclist = [],
         price = 20,
@@ -2116,7 +2121,7 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Master Mordheim Map", "description": "This is one of the twelve master maps of Mordheim made for Count von Steinhardt of Ostermark. From now on you may always re-roll one dice when rolling on the Exploration chart as long as the Hero who possesses this map was not taken out of action in the battle. "}
+            {"source": "Core Rules", "category": "Item", "name": "Master Mordheim Map", "description": "This is one of the twelve master maps of Mordheim made for Count von Steinhardt of Ostermark. From now on you may always re-roll one dice when rolling on the Exploration chart as long as the Hero who possesses this map was not taken out of action in the battle. "}
         ],
         magiclist = [],
         price = 20,
@@ -2131,7 +2136,7 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Concussion", "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model’s injuries. "}
+            {"source": "Core Rules", "category": "Item", "name": "Concussion", "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model’s injuries. "}
             ],
         magiclist = [],
         price = 20,
@@ -2144,11 +2149,11 @@ if __name__ == "__main__":
         distance = 0,
         skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"name": "Concussion", "description": "Stunned happens also on a trow of 2 at the injury roll."},
-            {"name": "Two Handed", "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."}
+            {"source": "Core Rules", "category": "Item", "name": "Concussion"}, 
+            {"source": "Core Rules", "category": "Item", "name": "Two Handed"}, 
             ],
         magiclist = [
-            {"name": "Flipendo", "description": "Summons Harry Potter."}
+            {"source": "Broheim", "category": "High Elven Magic", "name": "Word of Power"}
         ],
         price = 20,
         description = "A Mage Staff used two handed."
@@ -2177,184 +2182,403 @@ if __name__ == "__main__":
     # Core rules Abilities
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Leader",
         description = "Nearby units (6 inch) can use this characters leader skill."
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Excellent Leader",
         description = "Nearby units (12 inch) can use this characters leader skill."
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Expert Swordsman",
         description = "Swordsmen are so skilled with their weapons that they may re-roll any failed hits when charging. Note that this only applies when they are armed with normal swords, and not with doublehanded swords or any other weapons."
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Chaos Ritualist",
         description = "This character is a wizard and uses Chaos Rituals. See the Magic section for details.",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Unarmed and Unarmoured",
         description = "This character is unable to use any weapons or armour.",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Unarmoured",
         description = "This character is unable to wear armour.",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Unarmed",
         description = "This character is unable to use any weapons.",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Cause Fear",
         description = "This character is terrifying and therefore instill fear in their enemies. See the Psychology section for details.",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Can Mutate",
         description = "This character is able to mutate and may start the game with one or more mutations. See the Mutations list over the page for costs.",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Mutated",
         description = "This character is a mutated being and must start the game with at least one or more mutations. See the Mutations list over the page for costs.",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Crazed",
         description = "This character has been driven insane by daemonic possession and knows no fear. They automatically pass any Leadership tests they are required to take.",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Burn the Witch!",
         description = "This character hates all models who can cast spells.",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Prayers of Sigmar",
         description = "This character is a servant of Sigmar and may use the Prayers of Sigmar as detailed in the Magic section.",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Melee Only",
         description = "This character cannot use missile weapons, even if they gain an Advance roll which would otherwise allow them to do so.",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Fanatical",
         description = "This character automatically passes all Leadership-based tests it is required to take.",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "No Leader",
         description = "This character can never become a warband leader.",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Animal",
         description = "This character is an animal and thus cannot gain experience.",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Blessed Sight",
         description = "This character can re-roll any failed characteristic tests (climbing, resisting spells or any other reason), and any rolls to hit in close combat or shooting. You must accept the second result. In addition, this character can use its Blessed Sight to help the warband when they are searching the city for wyrdstone. If the character is not put out of action in the battle, you may roll two dice for it in the exploration phase and pick either dice as the result.",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Immune to Psychology",
         description = "This character is not affected by psychology (such as fear) and never leaves combat.",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Immune to Poison",
         description = "This character is not affected by any poison.",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Immune to Pain",
         description = "This character is not affected by pain and therefore treats a ‘stunned’ result on the Injury chart as ‘knocked down’.",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Necromancer",
         description = "This wizard is a necromancer, thus is able to use Necromantic magic. See the Magic section for details.",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "May Not Run",
         description = "This character may not run (but may charge normally).",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Double Charge",
         description = "This character overpowers its opponents when it charges. It fights with 2 attacks instead of 1 during the turn it charges.",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Armour Piercing",
         description = "This character always has an extra -1 modifier to any armour save the enemy has to take against wounds it inflicted (both with missile and close combat weapons).",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Horned Rat Sorcerer",
         description = "This character is a wizard and uses the Magic of the Horned Rat. See the Magic section for details.",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Pack Size",
         description = "You can recruit as many characters of this type as you wish.",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Stupidity",
         description = "This character is subject to stupidity unless a Hero is within 6 inch of it.",
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Ability",
+        category = "Character",
         name = "Large Target",
         description = "This character is a Large Target as defined in the shooting rules.",
     )
     add_abilityref(
         source = "Broheim", 
-        category = "Ability",
+        category = "Character",
         name = "High Elven Magician",
         description = "This character is able to use High Elven magic.",
     )
+
+    # Add abilities of items
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Two Handed",
+        description = "A model armed with this weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Unwieldy",
+        description = "A model armed with this weapon may only use a shield or a buckler in his other hand. He may not use a second weapon, because it requires all his skill to wield it.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Difficult to use",
+        description = "A model armed with this weapon may only use a shield in his other hand. He may not use a not use a second weapon or buckler, because it requires all his skill to wield it.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Cumbersome",
+        description = "A model armed with this weapon may not use any other weapons in the entire battle."
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Cutting Edge",
+        description = "This weapon has an extra save modifier of -1, so a model with Strength 4 using an axe has a -2 save modifier when he hits an opponent in hand-to-hand combat."
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Parry",
+        description = "This weapon offers an excellent balance of defense and offence. A model armed with this weapon may parry blows. When his opponent rolls to hit, the model armed with this weapon may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength – they are simply too powerful to be stopped. The character may reroll a failed parry attempt for every extra item that allows for Parrying."
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "First Strike",
+        description = "A warrior with a spear strikes first in the first turn of hand-to-hand combat.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Last Strike",
+        description = "This weapon is so heavy that the model using it always strikes last, even when charging.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Cavalry Charge Bonus",
+        description = "If using the rules for mounted models, a mounted warrior armed with this weapon receives a +1 Strength bonus when he charges. This bonus only applies for that turn.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Cavalry Weapon",
+        description = "A character must own a warhorse to use this weapon, as it can only be used whilst he is on horseback.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Cannot be Parried",
+        description = "The steel whip is a flexible weapon and the Priestesses use it with great expertise. Attempts to parry its strikes are futile. A model attacked by a steel whip may not make parries with swords or bucklers.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Whipcrack",
+        description = "When the wielder charges they gain +1A for that turn. This bonus attack is added after any other modifications. When the wielder is charged they gain +1A that they may only use against the charger. This additional attack will ‘strike first’. If the wielder is simultaneously charged by two or more opponents they will still only receive a total of +1A. If the wielder is using two whips at the same time then they get +1A for the additional hand weapon, but only the first whip gets the whipcrack +1A.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Heavy",
+        description = "This weapon is extremely tiring to use and thus any Strength bonus applies only in the first turn of each hand-to-hand combat.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Holy Weapon",
+        description = "This weapon is blessed and has a +1 bonus on all to wound rolls against any Possessed or Undead models. Note that you will still need to score a 6 before any modifiers in order to cause a critical hit.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Pair",
+        description = "These weapons are traditionally used in pairs, one in each hand. A warrior armed with these weapons gets an additional attack.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Climb",
+        description = "A character equipped with this weapon can add +1 to his Initiative when making Climbing tests.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Venomous / Black Lotus",
+        description = "The venom of this weapon will enter the blood of the victim and ravage his organs and muscles. This weapon counts as being permanently coated in Black Lotus (see the Equipment section). No additional poison may be applied to this weapon.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Stationary Fire",
+        description = "The character may not move and fire this weapon on the same turn, other than to pivot on the spot to face its target or to stand up.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Stationary Fire X2",
+        description = "A slinger may fire twice in the shooting phase if he does not move in the movement phase. He cannot shoot over half range (9 inch) though, if he fires twice. If the model fires twice then each shot is at -1 to hit.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Thrown Weapon",
+        description = "Models using this weapon do not suffer penalties for range or moving as this weapon is perfectly balanced for throwing. It cannot be used in close combat.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Stealthy",
+        description = "A character armed with a blowpipe can fire while hidden without revealing his position to the enemy. The target model can take an Initiative test in order to try to spot the firing character. If the test is successful, the character no longer counts as hidden.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Armour Piercing",
+        description = "This weapon has a -1 save modifier on armor saves against it",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Fire before Melee",
+        description = "A model armed with this weapon may shoot in the first round of a hand-to-hand combat and this shot is always resolved first, before any blows are struck. This shot has an extra -2 to hit penalty. Use model’s Ballistic Skill to see whether it hits or not. This bonus attack is in addition to any close combat weapon attacks.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Fire Twice",
+        description = "A model armed with this weapon may choose to fire twice per turn with an extra -1 to hit penalty on both shots.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Prepare Shot",
+        description = "This weapon takes a whole turn to reload, so you may only fire every other turn. Some weapons when paired (i.e., two) allow you to fire every turn.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Fire during Melee",
+        description = "This weapon can be used in hand-to-hand combat as well as for shooting. A model armed with this weapon and another close combat weapon gains +1 Attack, which is resolved at Strength 4 with a -2 save modifier. This bonus attack can be used only once per combat. If you have two weapons with this ability, your model can fight with 2 Attacks in the first turn of close combat. These attacks are resolved with a model’s Weapon Skill like any normal close combat attack and likewise may be parried. Successful hits are resolved at Strength 4 and with a -2 save modifier, regardless of the firer’s Strength.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Blunderbuss Shot",
+        description = "When your model fires the blunderbuss, draw a line 16 inch long and 1 inch wide in any direction from the firer (the line must be absolutely straight). Any and all models in its path are automatically hit by a Strength 3 hit.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Accurate",
+        description = "This weapon is built for accuracy as a skilled wielder is able to hit a coin from twenty paces. All shots and close combat attacks from this weapon have a +1 bonus to hit.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Pick Target",
+        description = "A model armed with this weapon can target any enemy model in sight, not just the closest one.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Encumbered 1 of 2",
+        description = "A warrior that is armed with both heavy armor and a shield suffers a -1 Movement penalty.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Encumbered 2 of 2",
+        description = "A warrior that is armed with both heavy armor and a shield suffers a -1 Movement penalty.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Rally!",
+        description = "Any warband whose leader is carrying this item may re-roll the first failed Rout test.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Brittle",
+        description = "After each battle in which the wielder is taken out of action, roll a D6. On a roll of 1-3 the item is ruined and must be discarded.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Camouflage",
+        description = "A warrior aiming a missile weapon at a warrior wearing this item suffers -1 on his to hit roll.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Hardhead",
+        description = "A model that is equipped with a helmet has a special 4+ save on a D6 against being stunned. If the save is made, treat the stunned result as knocked down instead. This save is not modified by the opponent’s Strength.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Garlic Smell",
+        description = "A Vampire must pass a Leadership test or it will be unable to charge a model carrying a clove of garlic.",
+    )
+
     # Core rules Injuries
     add_abilityref(
         source = "Core Rules", 
@@ -2363,40 +2587,54 @@ if __name__ == "__main__":
         description = "Feared"
     )
 
+    # Core rules Injuries
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Cloth is Armour",
+        description = "This weapon is not the best weapon to use for penetrating an enemy model’s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Concussion",
+        description = "This weapon is excellent to use for striking your enemy senseless. When using this weapon, a roll of 2-4 is treated as stunned when rolling to see the extent of a model’s injuries."
+    )
+
     # Broheim added abilities (high elves)
     add_abilityref(
         source = "Broheim", 
-        category = "Ability",
+        category = "Character",
         name = "Dispel",
         description = "A Loremaster’s knowledge of magic goes far beyond that of any other race. When an enemy spellcaster successfully casts a spell the Loremaster may attempt to dispel it. If the Loremaster rolls greater then his opponent’s casting roll for the spell then it is dispelled. Only the Loremaster may have this skill."
     )
     add_abilityref(
         source = "Broheim", 
-        category = "Ability",
+        category = "Character",
         name = "Stand and Fire",
         description = "If the Elf passes a leadership test he may choose to stand and fire at a charging opponent. The Elf suffers a –1 penalty to hit and may only fire once, at a single opponent. If his opponent is knocked down or stunned, place him halfway between the Elf and where he started from (or in view if he was out of sight)."
     )
     add_abilityref(
         source = "Broheim", 
-        category = "Ability",
+        category = "Character",
         name = "Miniath",
         description = "The Elf has been trained in the martial art of the White Tower known as Miniath, allowing him to parry with any weapon. If he has a weapon that he can parry with he gains an additional parry attempt."
     )
     add_abilityref(
         source = "Broheim", 
-        category = "Ability",
+        category = "Character",
         name = "Unerring Strike",
         description = "The Elf is an expert at delivering deadly accurate blows. He may re-roll any failed to wound rolls."
     )
     add_abilityref(
         source = "Broheim", 
-        category = "Ability",
+        category = "Character",
         name = "Fey Quickness",
         description = "Few can ever hope to match an Elf’s inhuman quickness and agility. An Elf with Fey Quickness can avoid melee or missile attacks on a roll of 6. If the Elf also has Step Aside or Dodge this will increase to a 4+ in the relevant area. For example, an Elf with Fey Quickness and Step Aside avoids melee attacks on a 4+ and missile attacks on a 6."
     )
     get_abilityref(
         source = "Broheim",
-        category = "Ability",
+        category = "Character",
         name = "Fey Quickness",
     )
 

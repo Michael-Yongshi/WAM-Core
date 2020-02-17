@@ -6,24 +6,23 @@
                 "category": "Melee Weapon",
                 "name": "Starting Dagger",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Cloth is Armour",
-                        "description": "These weapons are not the best weapons to use for penetrating an enemy model\u2019s armor. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Cloth is Armour"
                     }
                 ],
                 "magiclist": [],
@@ -35,24 +34,23 @@
                 "category": "Melee Weapon",
                 "name": "Extra Dagger",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Cloth is Armour",
-                        "description": "These weapons are not the best weapons to use for penetrating an enemy model\u2019s armor. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Cloth is Armour"
                     }
                 ],
                 "magiclist": [],
@@ -64,24 +62,23 @@
                 "category": "Melee Weapon",
                 "name": "Club",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Concussion",
-                        "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model\u2019s injuries. "
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Concussion"
                     }
                 ],
                 "magiclist": [],
@@ -93,24 +90,23 @@
                 "category": "Melee Weapon",
                 "name": "Mace",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Concussion",
-                        "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model\u2019s injuries. "
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Concussion"
                     }
                 ],
                 "magiclist": [],
@@ -122,24 +118,23 @@
                 "category": "Melee Weapon",
                 "name": "Hammer",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Cutting Edge",
-                        "description": "An axe has an extra save modifier of -1, so a model with Strength 4 using an axe has a -2 save modifier when he hits an opponent in hand-to-hand combat. "
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Concussion"
                     }
                 ],
                 "magiclist": [],
@@ -151,24 +146,23 @@
                 "category": "Melee Weapon",
                 "name": "Axe",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Concussion",
-                        "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model\u2019s injuries. "
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Cutting Edge"
                     }
                 ],
                 "magiclist": [],
@@ -180,24 +174,23 @@
                 "category": "Melee Weapon",
                 "name": "Sword",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Parry",
-                        "description": "Swords offer an excellent balance of defense and offence. A model armed with a sword may parry blows. When his opponent rolls to hit, the model armed with a sword may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength \u2013 they are simply too powerful to be stopped. "
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Parry"
                     }
                 ],
                 "magiclist": [],
@@ -209,32 +202,33 @@
                 "category": "Melee Weapon",
                 "name": "Spear",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "First Strike",
-                        "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat. "
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "First Strike"
                     },
                     {
-                        "name": "Unwieldy",
-                        "description": "A warrior with a spear may only use a shield or a buckler in his other hand. He may not use a second weapon. "
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Unwieldy"
                     },
                     {
-                        "name": "Cavalry Bonus",
-                        "description": "If using the rules for mounted models, a mounted warrior armed with a spear receives a +1 Strength bonus when he charges. This bonus only applies for that turn. "
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Cavalry Charge Bonus"
                     }
                 ],
                 "magiclist": [],
@@ -246,24 +240,23 @@
                 "category": "Melee Weapon",
                 "name": "Halberd",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 1,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 1,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Two Handed",
-                        "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Two Handed"
                     }
                 ],
                 "magiclist": [],
@@ -275,28 +268,28 @@
                 "category": "Melee Weapon",
                 "name": "Steel Whip",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Cannot be parried",
-                        "description": "The steel whip is a flexible weapon and the Priestesses use it with great expertise. Attempts to parry its strikes are futile. A model attacked by a steel whip may not make parries with swords or bucklers."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Cannot be Parried"
                     },
                     {
-                        "name": "Whipcrack",
-                        "description": " when the wielder charges they gain +1A for that turn. This bonus attack is added after any other modifications. When the wielder is charged they gain +1A that they may only use against the charger. This additional attack will \u2018strike first\u2019. If the wielder is simultaneously charged by two or more opponents they will still only receive a total of +1A. If the wielder is using two whips at the same time then they get +1A for the additional hand weapon, but only the first whip gets the whipcrack +1A."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Whipcrack"
                     }
                 ],
                 "magiclist": [],
@@ -308,28 +301,28 @@
                 "category": "Melee Weapon",
                 "name": "Great Sword",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 2,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 2,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Two Handed",
-                        "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting. "
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Two Handed"
                     },
                     {
-                        "name": "Last Strike",
-                        "description": "These Double-handed weapons are so heavy that the model using them always strikes last, even when charging. "
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Last Strike"
                     }
                 ],
                 "magiclist": [],
@@ -341,28 +334,28 @@
                 "category": "Melee Weapon",
                 "name": "Great Axe",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 2,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 2,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Two Handed",
-                        "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting. "
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Two Handed"
                     },
                     {
-                        "name": "Last Strike",
-                        "description": "These Double-handed weapons are so heavy that the model using them always strikes last, even when charging. "
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Last Strike"
                     }
                 ],
                 "magiclist": [],
@@ -374,28 +367,28 @@
                 "category": "Melee Weapon",
                 "name": "Flail",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 2,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 2,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Two Handed",
-                        "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting. "
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Two Handed"
                     },
                     {
-                        "name": "Heavy",
-                        "description": "A flail is extremely tiring to use and thus the +2 Strength bonus applies only in the first turn of each hand-to-hand combat. "
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Heavy"
                     }
                 ],
                 "magiclist": [],
@@ -407,28 +400,28 @@
                 "category": "Melee Weapon",
                 "name": "Morning Star",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 1,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 1,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Difficult to Use",
-                        "description": "A model with a morning star may not use a second weapon or buckler in his other hand because it requires all his skill to wield it. He may carry a shield as normal though. "
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Difficult to Use"
                     },
                     {
-                        "name": "Heavy",
-                        "description": "A flail is extremely tiring to use and thus the +1 Strength bonus applies only in the first turn of each hand-to-hand combat. "
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Heavy"
                     }
                 ],
                 "magiclist": [],
@@ -440,69 +433,76 @@
                 "category": "Melee Weapon",
                 "name": "Sigmarite Warhammer",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 1,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 1,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Concussion",
-                        "description": "Warhammers are excellent at striking people senseless. When using a Warhammer in close combat a roll of 2-4 is treated as Stunned when rolling on the Injury chart."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Concussion"
                     },
                     {
-                        "name": "Holy Weapon",
-                        "description": "Each Warhammer is blessed by the High Matriarch herself before it is handed to the Sisters. The Warhammer has a +1 bonus on all to wound rolls against any Possessed or Undead models. Note that you will still need to score a 6 before any modifiers in order to cause a critical hit. Only Matriarchs and Sister Superiors may carry two Sigmarite Warhammers."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Holy Weapon"
                     }
                 ],
                 "magiclist": [],
                 "price": 15,
-                "description": "One of the traditional weapons of the Sisterhood, the Warhammer echoes Ghal-Maraz, the great hammer of Sigmar himself."
+                "description": "One of the traditional weapons of the Sisterhood, the Warhammer echoes Ghal-Maraz, the great hammer of Sigmar himself. Only the matriarch herself and sister superiors may carry two Sigmarite Warhammers."
             },
             "Fighting Claws": {
                 "source": "Core Rules",
                 "category": "Melee Weapon",
                 "name": "Fighting Claws",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Pair",
-                        "description": "Fighting Claws are traditionally used in pairs, one in each hand. A warrior armed with Fighting Claws gets an additional attack."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Pair"
                     },
                     {
-                        "name": "Climb",
-                        "description": "A Skaven equipped with Fighting Claws can add +1 to his Initiative when making Climbing tests."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Climb"
                     },
                     {
-                        "name": "Parry",
-                        "description": "A Skaven armed with Fighting Claws may parry blows and can re-roll a failed attempt once, in the same way as a model armed with a sword and buckler."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Parry"
                     },
                     {
-                        "name": "Cumbersome",
-                        "description": "A model armed with Fighting Claws may not use any other weapons in the entire battle."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Parry"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Cumbersome"
                     }
                 ],
                 "magiclist": [],
@@ -514,28 +514,33 @@
                 "category": "Melee Weapon",
                 "name": "Lance",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 2,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 2,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Cavalry Weapon",
-                        "description": "A warrior must own a warhorse to use a lance, as it can only be used whilst he is on horseback."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Cavalry Weapon"
                     },
                     {
-                        "name": "Cavalry Charge Bonus",
-                        "description": "If using optional rules for mounted models, a warrior armed with a lance receives a +2 Strength bonus when he charges. This bonus only applies for that turn."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Cavalry Charge Bonus"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Cavalry Charge Bonus"
                     }
                 ],
                 "magiclist": [],
@@ -547,32 +552,33 @@
                 "category": "Melee Weapon",
                 "name": "Weeping Blades",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Pair",
-                        "description": "Weeping Blades are traditionally used in pairs, one in each hand. A warrior armed with Weeping Blades gets an additional attack."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Pair"
                     },
                     {
-                        "name": "Venomous",
-                        "description": "The venom of Weeping Blades will enter the blood of the victim and ravage his organs and muscles. These weapons count as being permanently coated in black lotus (see the Equipment section). No additional poison may be applied to Weeping Blades."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Venomous"
                     },
                     {
-                        "name": "Parry",
-                        "description": "Weeping Blades are swords and can be used for parrying"
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Parry"
                     }
                 ],
                 "magiclist": [],
@@ -586,24 +592,23 @@
                 "category": "Missile Weapon",
                 "name": "Sling",
                 "distance": 18,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 3,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 3,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Twice at Half",
-                        "description": "A slinger may fire twice in the shooting phase if he does not move in the movement phase. He cannot shoot over half range (9 inch) though, if he fires twice. If the model fires twice then each shot is at -1 to hit."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Stationary Fire x2"
                     }
                 ],
                 "magiclist": [],
@@ -615,20 +620,18 @@
                 "category": "Missile Weapon",
                 "name": "Short Bow",
                 "distance": 16,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 3,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 3,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [],
                 "magiclist": [],
                 "price": 5,
@@ -639,20 +642,18 @@
                 "category": "Missile Weapon",
                 "name": "Bow",
                 "distance": 24,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 3,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 3,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [],
                 "magiclist": [],
                 "price": 10,
@@ -663,20 +664,18 @@
                 "category": "Missile Weapon",
                 "name": "Long Bow",
                 "distance": 30,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 3,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 3,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [],
                 "magiclist": [],
                 "price": 15,
@@ -687,24 +686,23 @@
                 "category": "Missile Weapon",
                 "name": "Trowing Knives",
                 "distance": 6,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Thrown Weapon",
-                        "description": "Models using throwing stars or knives do not suffer penalties for range or moving as these weapons are perfectly balanced for throwing. They cannot be used in close combat."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Thrown Weapon"
                     }
                 ],
                 "magiclist": [],
@@ -716,24 +714,23 @@
                 "category": "Missile Weapon",
                 "name": "Trowing Stars",
                 "distance": 6,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Thrown Weapon",
-                        "description": "Models using throwing stars or knives do not suffer penalties for range or moving as these weapons are perfectly balanced for throwing. They cannot be used in close combat."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Thrown Weapon"
                     }
                 ],
                 "magiclist": [],
@@ -745,32 +742,33 @@
                 "category": "Missile Weapon",
                 "name": "Blowpipe",
                 "distance": 8,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 1,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 1,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Cloth is Armour",
-                        "description": "These weapons are not the best weapons to use for penetrating an enemy model\u2019s armor. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Cloth is Armour"
                     },
                     {
-                        "name": "Poison",
-                        "description": "The needles fired by a blowpipe are coated in a venom very similar in its effects to the Black Lotus (if you roll a 6 on the To Hit roll, the victim is automatically wounded). A blowpipe cannot cause critical hits. This weapon has a positive armor save modifier, so a model that normally has a save of 5+ will get a save of 4+ against a blowpipe dart. Even models that normally do not have an armor save will get a 6+ save to take into account protection offered by clothes, fur or the like."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Poison"
                     },
                     {
-                        "name": "Stealthy",
-                        "description": "A Skaven armed with a blowpipe can fire while hidden without revealing his position to the enemy. The target model can take an Initiative test in order to try to spot the firing Skaven. If the test is successful, the Skaven no longer counts as hidden."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Stealthy"
                     }
                 ],
                 "magiclist": [],
@@ -782,24 +780,23 @@
                 "category": "Missile Weapon",
                 "name": "Crossbow",
                 "distance": 30,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 4,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 4,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Stationary Fire",
-                        "description": "You may not move and fire a crossbow on the same turn, other than to pivot on the spot to face your target or to stand up."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Stationary Fire"
                     }
                 ],
                 "magiclist": [],
@@ -811,24 +808,23 @@
                 "category": "Missile Weapon",
                 "name": "Elf Bow",
                 "distance": 36,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 3,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 3,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Armour Piercing",
-                        "description": "An Elf bow has a -1 save modifier on armor saves against it"
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Armour Piercing"
                     }
                 ],
                 "magiclist": [],
@@ -840,24 +836,23 @@
                 "category": "Missile Weapon",
                 "name": "Crossbow Pistol",
                 "distance": 10,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 4,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 4,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Fire before Melee",
-                        "description": "A model armed with a crossbow pistol may shoot it in the first round of a hand-to-hand combat and this shot is always resolved first, before any blows are struck. This shot has an extra -2 to hit penalty. Use model\u2019s Ballistic Skill to see whether it hits or not. This bonus attack is in addition to any close combat weapon attacks."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Fire before Melee"
                     }
                 ],
                 "magiclist": [],
@@ -869,24 +864,23 @@
                 "category": "Missile Weapon",
                 "name": "Repeater Crossbow",
                 "distance": 24,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 3,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 3,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Fire Twice",
-                        "description": " A model armed with a repeater crossbow may choose to fire twice per turn with an extra -1 to hit penalty on both shots."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Fire Twice"
                     }
                 ],
                 "magiclist": [],
@@ -900,32 +894,38 @@
                 "category": "Blackpowder Weapon",
                 "name": "Pistol",
                 "distance": 6,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 4,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 4,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Prepare Shot",
-                        "description": "A pistol takes a whole turn to reload, so you may only fire every other turn. If you have a brace of pistols (i.e., two) you may fire every turn."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Prepare Shot"
                     },
                     {
-                        "name": "Armour Piercing x2",
-                        "description": "Pistols are even better at penetrating armor than their Strength value of 4 suggests. A model wounded by a pistol must take its armor save with a -2 modifier."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Armour Piercing"
                     },
                     {
-                        "name": "Fire during Melee",
-                        "description": "Pistols can be used in hand-to-hand combat as well as for shooting. A model armed with a pistol and another close combat weapon gains +1 Attack, which is resolved at Strength 4 with a -2 save modifier. This bonus attack can be used only once per combat. If you are firing a brace of pistols, your model can fight with 2 Attacks in the first turn of close combat. These attacks are resolved with a model\u2019s Weapon Skill like any normal close combat attack and likewise may be parried. Successful hits are resolved at Strength 4 and with a -2 save modifier, regardless of the firer\u2019s Strength."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Armour Piercing"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Fire during Melee"
                     }
                 ],
                 "magiclist": [],
@@ -937,28 +937,38 @@
                 "category": "Blackpowder Weapon",
                 "name": "Pistol Brace",
                 "distance": 6,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 4,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 4,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Armour Piercing x2",
-                        "description": "Pistols are even better at penetrating armor than their Strength value of 4 suggests. A model wounded by a pistol must take its armor save with a -2 modifier."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Armour Piercing"
                     },
                     {
-                        "name": "Fire during Melee",
-                        "description": "Pistols can be used in hand-to-hand combat as well as for shooting. A model armed with a pistol and another close combat weapon gains +1 Attack, which is resolved at Strength 4 with a -2 save modifier. This bonus attack can be used only once per combat. If you are firing a brace of pistols, your model can fight with 2 Attacks in the first turn of close combat. These attacks are resolved with a model\u2019s Weapon Skill like any normal close combat attack and likewise may be parried. Successful hits are resolved at Strength 4 and with a -2 save modifier, regardless of the firer\u2019s Strength."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Armour Piercing"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Fire during Melee"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Fire during Melee"
                     }
                 ],
                 "magiclist": [],
@@ -970,24 +980,23 @@
                 "category": "Blackpowder Weapon",
                 "name": "Blunderbuss",
                 "distance": 16,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 3,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 3,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Shot",
-                        "description": "When your model fires the blunderbuss, draw a line 16 inch long and 1 inch wide in any direction from the firer (the line must be absolutely straight). Any and all models in its path are automatically hit by a Strength 3 hit."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Blunderbuss Shot"
                     }
                 ],
                 "magiclist": [],
@@ -999,36 +1008,43 @@
                 "category": "Blackpowder Weapon",
                 "name": "Dueling Pistol",
                 "distance": 10,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 4,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 4,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Accurate",
-                        "description": "A dueling pistol is built for accuracy as a skilled duelist is able to hit a coin from twenty paces. All shots and close combat attacks from a dueling pistol have a +1 bonus to hit."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Accurate"
                     },
                     {
-                        "name": "Prepare Shot",
-                        "description": "A dueling pistol takes a complete turn to reload, so your model may only fire every other turn. If he has a brace of dueling pistols he may fire every turn."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Prepare Shot"
                     },
                     {
-                        "name": "Armour Piercing x2",
-                        "description": "Dueling pistols are even better at penetrating armor than their Strength 4 suggests. A warrior wounded by a dueling pistol must make his armor save with a -2 modifier."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Armour Piercing"
                     },
                     {
-                        "name": "Fire during Melee",
-                        "description": "Dueling pistols can be used in hand-to-hand combat as well as for shooting. A model armed with a dueling pistol and another close combat weapon gains +1 Attack, which is resolved at Strength 4 with a -2 save modifier. This bonus attack can be used only once per combat. If you are firing a brace of dueling pistols, your model can fight with 2 Attacks in the first turn of close combat. These attacks are resolved with a model\u2019s Weapon Skill like any normal close combat attack and likewise may be parried. Successful hits are resolved at Strength 4 and with a -2 save modifier, regardless of the firer\u2019s Strength."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Armour Piercing"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Fire during Melee"
                     }
                 ],
                 "magiclist": [],
@@ -1040,32 +1056,38 @@
                 "category": "Blackpowder Weapon",
                 "name": "Dueling Pistol Brace",
                 "distance": 10,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 4,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 4,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Accurate",
-                        "description": "A dueling pistol is built for accuracy as a skilled duelist is able to hit a coin from twenty paces. All shots and close combat attacks from a dueling pistol have a +1 bonus to hit."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Armour Piercing"
                     },
                     {
-                        "name": "Armour Piercing x2",
-                        "description": "Dueling pistols are even better at penetrating armor than their Strength 4 suggests. A warrior wounded by a dueling pistol must make his armor save with a -2 modifier."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Armour Piercing"
                     },
                     {
-                        "name": "Fire during Melee",
-                        "description": "Dueling pistols can be used in hand-to-hand combat as well as for shooting. A model armed with a dueling pistol and another close combat weapon gains +1 Attack, which is resolved at Strength 4 with a -2 save modifier. This bonus attack can be used only once per combat. If you are firing a brace of dueling pistols, your model can fight with 2 Attacks in the first turn of close combat. These attacks are resolved with a model\u2019s Weapon Skill like any normal close combat attack and likewise may be parried. Successful hits are resolved at Strength 4 and with a -2 save modifier, regardless of the firer\u2019s Strength."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Fire during Melee"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Fire during Melee"
                     }
                 ],
                 "magiclist": [],
@@ -1077,32 +1099,38 @@
                 "category": "Blackpowder Weapon",
                 "name": "Handgun",
                 "distance": 24,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 4,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 4,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Stationary Fire",
-                        "description": "You may not move and fire a handgun in the same turn, other than to pivot on the spot to face your target or stand up."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Stationary Fire"
                     },
                     {
-                        "name": "Prepare Shot",
-                        "description": "A handgun takes a complete turn to reload, so you may only fire it every other turn."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Prepare Shot"
                     },
                     {
-                        "name": "Armour Piercing x2",
-                        "description": "Handguns are even better at penetrating armor than their Strength 4 suggests. A warrior wounded by a dueling pistol must make his armor save with a -2 modifier."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Armour Piercing"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Armour Piercing"
                     }
                 ],
                 "magiclist": [],
@@ -1114,28 +1142,38 @@
                 "category": "Blackpowder Weapon",
                 "name": "Warplock Pistol",
                 "distance": 8,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 5,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 5,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Armour Piercing x3",
-                        "description": "Warplock pistols are even better at penetrating armor than their Strength 5 suggests. A warrior wounded by a warplock pistol must make his armor save with a -3 modifier."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Prepare Shot"
                     },
                     {
-                        "name": "Prepare Shot",
-                        "description": "A warplock pistol takes a complete turn to reload, so you may only fire it every other turn."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Armour Piercing"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Armour Piercing"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Armour Piercing"
                     }
                 ],
                 "magiclist": [],
@@ -1147,24 +1185,33 @@
                 "category": "Blackpowder Weapon",
                 "name": "Warplock Pistol Brace",
                 "distance": 8,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 5,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 5,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Armour Piercing x3",
-                        "description": "Warplock pistols are even better at penetrating armor than their Strength 5 suggests. A warrior wounded by a warplock pistol must make his armor save with a -3 modifier."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Armour Piercing"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Armour Piercing"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Armour Piercing"
                     }
                 ],
                 "magiclist": [],
@@ -1176,36 +1223,43 @@
                 "category": "Blackpowder Weapon",
                 "name": "Hochland Long Hunting Rifle",
                 "distance": 48,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 4,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 4,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Stationary Fire",
-                        "description": "You may not move and fire a Hochland Long Rifle in the same turn, other than to pivot on the spot to face your target or stand up."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Stationary Fire"
                     },
                     {
-                        "name": "Prepare Shot",
-                        "description": "A Hochland Long Rifle takes a complete turn to reload, so you may only fire it every other turn."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Prepare Shot"
                     },
                     {
-                        "name": "Pick Target",
-                        "description": "A model armed with a Hochland long rifle can target any enemy model in sight, not just the closest one."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Pick Target"
                     },
                     {
-                        "name": "Armour Piercing x2",
-                        "description": "Hochland Long Rifles are even better at penetrating armor than their Strength 4 suggests. A warrior wounded by a dueling pistol must make his armor save with a -2 modifier."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Armour Piercing"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Armour Piercing"
                     }
                 ],
                 "magiclist": [],
@@ -1219,20 +1273,18 @@
                 "category": "Armour & Protection",
                 "name": "Light Armour",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 1
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 1
+                },
                 "abilitylist": [],
                 "magiclist": [],
                 "price": 20,
@@ -1243,24 +1295,23 @@
                 "category": "Armour & Protection",
                 "name": "Heavy Armour",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 2
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 2
+                },
                 "abilitylist": [
                     {
-                        "name": "Encumbered",
-                        "description": "A warrior that is armed with both heavy armor and a shield suffers a -1 Movement penalty."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Encumbered 1 of 2"
                     }
                 ],
                 "magiclist": [],
@@ -1272,24 +1323,28 @@
                 "category": "Armour & Protection",
                 "name": "Cathayan Silk Clothes",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Rally!",
-                        "description": " Any Mercenary warband whose leader is wearing silk clothes may re-roll the first failed Rout test. However, after each battle in which the leader is taken out of action, roll a D6. On a roll of 1-3 the clothes are ruined and must be discarded."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Rally!"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Brittle"
                     }
                 ],
                 "magiclist": [],
@@ -1301,48 +1356,45 @@
                 "category": "Armour & Protection",
                 "name": "Ithilmar Armour",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 2
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 2
+                },
                 "abilitylist": [],
                 "magiclist": [],
                 "price": 90,
-                "description": "Ithilmar is a silvery metal which is as light as silk and stronger than steel. Elves are experts at fashioning weapons and armor from Ithilmar, and the Elven kingdom of Caledor is the only place in the world where this metal can be found. Ithilmar armor gives the wearer a 5+ basic save, and does not slow him down if he is also armed with a shield. "
+                "description": "Ithilmar is a silvery metal which is as light as silk and stronger than steel. Elves are experts at fashioning weapons and armor from Ithilmar, and the Elven kingdom of Caledor is the only place in the world where this metal can be found."
             },
             "Elven Cloak": {
                 "source": "Core Rules",
                 "category": "Armour & Protection",
                 "name": "Elven Cloak",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Camouflage",
-                        "description": "A warrior aiming a missile weapon at a warrior wearing an Elven cloak suffers -1 on his to hit roll."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Camouflage"
                     }
                 ],
                 "magiclist": [],
@@ -1354,53 +1406,45 @@
                 "category": "Armour & Protection",
                 "name": "Gromril Armour",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 4
-                    }
-                ],
-                "abilitylist": [
-                    {
-                        "name": "Shieldwalker",
-                        "description": "A warrior that is armed with both heavy armor and a shield suffers a -1 Movement penalty. However, it does not slow him down if he is also armed with a shield"
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 2
+                },
+                "abilitylist": [],
                 "magiclist": [],
                 "price": 150,
-                "description": "Ithilmar is a silvery metal which is as light as silk and stronger than steel. Elves are experts at fashioning weapons and armor from Ithilmar, and the Elven kingdom of Caledor is the only place in the world where this metal can be found. Ithilmar armor gives the wearer a 5+ basic save, and does not slow him down if he is also armed with a shield. "
+                "description": "Gromril is the rarest and strongest metal known of in the Old World. Only a very few Dwarf smiths know the secret of forging Gromril, and a suit of armor made from it fetches a huge price."
             },
             "Helmet": {
                 "source": "Core Rules",
                 "category": "Armour & Protection",
                 "name": "Helmet",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Hardhead",
-                        "description": "A model that is equipped with a helmet has a special 4+ save on a D6 against being stunned. If the save is made, treat the stunned result as knocked down instead. This save is not modified by the opponent\u2019s Strength. "
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Hardhead"
                     }
                 ],
                 "magiclist": [],
@@ -1412,24 +1456,23 @@
                 "category": "Armour & Protection",
                 "name": "Buckler",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Parry",
-                        "description": "Swords offer an excellent balance of defense and offence. A model armed with a sword may parry blows. When his opponent rolls to hit, the model armed with a sword may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength \u2013 they are simply too powerful to be stopped. "
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Parry"
                     }
                 ],
                 "magiclist": [],
@@ -1441,21 +1484,25 @@
                 "category": "Armour & Protection",
                 "name": "Shield",
                 "distance": 0,
-                "skill": [
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 1
+                },
+                "abilitylist": [
                     {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 1
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Encumbered 2 of 2"
                     }
                 ],
-                "abilitylist": [],
                 "magiclist": [],
                 "price": 5,
                 "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner. "
@@ -1467,24 +1514,23 @@
                 "category": "Consumables",
                 "name": "Garlic",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Smell",
-                        "description": " A Vampire must pass a Leadership test or it will be unable to charge a model carrying a clove of garlic."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Garlic Smell"
                     }
                 ],
                 "magiclist": [],
@@ -1496,22 +1542,22 @@
                 "category": "Consumables",
                 "name": "Black Lotus",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
+                        "source": "Core Rules",
+                        "category": "Item",
                         "name": "Black Lotus",
                         "description": "A weapon coated with the sap of the Black Lotus will wound its target automatically if you roll a 6 to hit. Note that you can still roll a dice for every wound inflicted in this way. If you roll a 6, you will inflict a critical hit with that roll. If you do not roll a 6, you will cause a normal wound. Take armor saves as normal."
                     }
@@ -1525,22 +1571,22 @@
                 "category": "Consumables",
                 "name": "Dark Venom",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
+                        "source": "Core Rules",
+                        "category": "Item",
                         "name": "Dark Venom",
                         "description": "Any hit caused by a weapon coated with Dark Venom counts as having +1 Strength, so, for example, if a warrior with Strength 3 wielding a poisoned sword hits an opponent, he will cause a Strength 4 hit instead. Armor saving throws are modified to take into account the increased Strength of the attack."
                     }
@@ -1554,26 +1600,28 @@
                 "category": "Consumables",
                 "name": "Crimson Shade",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
+                        "source": "Core Rules",
+                        "category": "Item",
                         "name": "Crimson Shade",
                         "description": "A model using Crimson Shade has his Initiative increased by +D3 points, and Movement and Strength by +1 (this effect lasts for one game). Crimson Shade has no effect on Undead such as Vampires and Zombies, or the Possessed."
                     },
                     {
+                        "source": "Core Rules",
+                        "category": "Item",
                         "name": "Side Effects",
                         "description": "After the battle, roll 2D6. On a roll of 2-3, the model becomes addicted and you must try to buy him a new batch of Crimson Shade before every battle from now on. If you fail to buy any, he will leave your warband. On a roll of 12 the model\u2019s Initiative is increased permanently by +1."
                     }
@@ -1587,20 +1635,18 @@
                 "category": "Consumables",
                 "name": "Blessed Water",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [],
                 "magiclist": [],
                 "price": 10,
@@ -1611,22 +1657,22 @@
                 "category": "Consumables",
                 "name": "Bugman`s Ale",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
+                        "source": "Core Rules",
+                        "category": "Item",
                         "name": "Fearless",
                         "description": "A warband that drinks Bugman`s Ale before a battle will be immune to Fear for the whole of the battle."
                     }
@@ -1640,22 +1686,22 @@
                 "category": "Consumables",
                 "name": "Elven Wine",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
+                        "source": "Core Rules",
+                        "category": "Item",
                         "name": "Fearless",
                         "description": "An elven warband that drinks Elven Wine before a battle will be immune to Fear for the whole of the battle. "
                     }
@@ -1671,20 +1717,18 @@
                 "category": "Other",
                 "name": "Mordheim Map",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [],
                 "magiclist": [],
                 "price": 20,
@@ -1695,22 +1739,22 @@
                 "category": "Other",
                 "name": "Fake Mordheim Map",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
+                        "source": "Core Rules",
+                        "category": "Item",
                         "name": "Fake Mordheim Map",
                         "description": "The map is a fake, and is completely worthless. It leads you on a fool\u2019s errand. Your opponent may automatically choose the next scenario you play. "
                     }
@@ -1724,22 +1768,22 @@
                 "category": "Other",
                 "name": "Vague Mordheim Map",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
+                        "source": "Core Rules",
+                        "category": "Item",
                         "name": "Vague Mordheim Map",
                         "description": "Though crude, the map is generally accurate (well\u2026 parts of it are\u2026 perhaps!). You may re-roll any one dice during the next exploration phase if you wish but you must accept the result of the second roll. "
                     }
@@ -1753,22 +1797,22 @@
                 "category": "Other",
                 "name": "Catacomb Mordheim Map",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
+                        "source": "Core Rules",
+                        "category": "Item",
                         "name": "Catacomb Mordheim Map",
                         "description": "The map shows a way through the catacombs into the city. You may automatically choose the scenario next time you fight a battle. "
                     }
@@ -1782,22 +1826,22 @@
                 "category": "Other",
                 "name": "Accurate Mordheim Map",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
+                        "source": "Core Rules",
+                        "category": "Item",
                         "name": "Accurate Mordheim Map",
                         "description": "The map is recently made and very detailed. You may re-roll up to three dice during the next exploration phase if you wish. You must accept the result of the second roll. "
                     }
@@ -1811,22 +1855,22 @@
                 "category": "Other",
                 "name": "Master Mordheim Map",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
+                        "source": "Core Rules",
+                        "category": "Item",
                         "name": "Master Mordheim Map",
                         "description": "This is one of the twelve master maps of Mordheim made for Count von Steinhardt of Ostermark. From now on you may always re-roll one dice when rolling on the Exploration chart as long as the Hero who possesses this map was not taken out of action in the battle. "
                     }
@@ -1844,22 +1888,22 @@
                 "category": "Melee Weapon",
                 "name": "Mage Wand",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 1,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 1,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
+                        "source": "Core Rules",
+                        "category": "Item",
                         "name": "Concussion",
                         "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model\u2019s injuries. "
                     }
@@ -1873,34 +1917,35 @@
                 "category": "Melee Weapon",
                 "name": "Mage Quarter Staff",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 1,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 1,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [
                     {
-                        "name": "Concussion",
-                        "description": "Stunned happens also on a trow of 2 at the injury roll."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Concussion"
                     },
                     {
-                        "name": "Two Handed",
-                        "description": "A model armed with a double-handed weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."
+                        "source": "Core Rules",
+                        "category": "Item",
+                        "name": "Two Handed"
                     }
                 ],
                 "magiclist": [
                     {
-                        "name": "Flipendo",
-                        "description": "Summons Harry Potter."
+                        "source": "Broheim",
+                        "category": "High Elven Magic",
+                        "name": "Word of Power"
                     }
                 ],
                 "price": 20,
@@ -1913,20 +1958,18 @@
                 "category": "Other",
                 "name": "Wyrdbreaker",
                 "distance": 0,
-                "skill": [
-                    {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    }
-                ],
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0
+                },
                 "abilitylist": [],
                 "magiclist": [],
                 "price": 0,

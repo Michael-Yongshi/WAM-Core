@@ -8,24 +8,22 @@
                     "warband": "Reikland",
                     "category": "Mercenary Captain",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 4,
-                            "ballistic": 4,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 4,
-                            "actions": 1,
-                            "leadership": 8,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 4,
+                        "ballistic": 4,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 4,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Excellent Leader"
                         }
                     ],
@@ -48,20 +46,18 @@
                     "warband": "Reikland",
                     "category": "Champion",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 4,
-                            "ballistic": 3,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 7,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 4,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -82,20 +78,18 @@
                     "warband": "Reikland",
                     "category": "Youngblood",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 2,
-                            "ballistic": 2,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 6,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 6,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -116,20 +110,18 @@
                     "warband": "Reikland",
                     "category": "Warrior",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 3,
-                            "ballistic": 3,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 7,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -150,20 +142,18 @@
                     "warband": "Reikland",
                     "category": "Marksman",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 3,
-                            "ballistic": 4,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 7,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 3,
+                        "ballistic": 4,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -184,24 +174,22 @@
                     "warband": "Reikland",
                     "category": "Swordsman",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 4,
-                            "ballistic": 3,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 7,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 4,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Expert Swordsman"
                         }
                     ],
@@ -226,24 +214,22 @@
                     "warband": "Middenheim",
                     "category": "Mercenary Captain",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 4,
-                            "ballistic": 4,
-                            "strength": 4,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 4,
-                            "actions": 1,
-                            "leadership": 8,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 4,
+                        "ballistic": 4,
+                        "strength": 4,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 4,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Leader"
                         }
                     ],
@@ -266,20 +252,18 @@
                     "warband": "Middenheim",
                     "category": "Champion",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 4,
-                            "ballistic": 3,
-                            "strength": 4,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 7,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 4,
+                        "ballistic": 3,
+                        "strength": 4,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -300,20 +284,18 @@
                     "warband": "Middenheim",
                     "category": "Youngblood",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 2,
-                            "ballistic": 2,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 6,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 6,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -334,20 +316,18 @@
                     "warband": "Middenheim",
                     "category": "Warrior",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 3,
-                            "ballistic": 3,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 7,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -368,20 +348,18 @@
                     "warband": "Middenheim",
                     "category": "Marksman",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 3,
-                            "ballistic": 3,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 7,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -402,24 +380,22 @@
                     "warband": "Middenheim",
                     "category": "Swordsman",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 4,
-                            "ballistic": 3,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 7,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 4,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Expert Swordsman"
                         }
                     ],
@@ -444,24 +420,22 @@
                     "warband": "Marienburg",
                     "category": "Mercenary Captain",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 4,
-                            "ballistic": 4,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 4,
-                            "actions": 1,
-                            "leadership": 8,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 4,
+                        "ballistic": 4,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 4,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Leader"
                         }
                     ],
@@ -484,20 +458,18 @@
                     "warband": "Marienburg",
                     "category": "Champion",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 4,
-                            "ballistic": 3,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 7,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 4,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -518,20 +490,18 @@
                     "warband": "Marienburg",
                     "category": "Youngblood",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 2,
-                            "ballistic": 2,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 6,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 6,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -552,20 +522,18 @@
                     "warband": "Marienburg",
                     "category": "Warrior",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 3,
-                            "ballistic": 3,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 7,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -586,20 +554,18 @@
                     "warband": "Marienburg",
                     "category": "Marksman",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 3,
-                            "ballistic": 3,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 7,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -620,24 +586,22 @@
                     "warband": "Marienburg",
                     "category": "Swordsman",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 4,
-                            "ballistic": 3,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 7,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 4,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Expert Swordsman"
                         }
                     ],
@@ -662,29 +626,27 @@
                     "warband": "Witch Hunters",
                     "category": "Witch Hunter Captain",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 4,
-                            "ballistic": 4,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 4,
-                            "actions": 1,
-                            "leadership": 8,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 4,
+                        "ballistic": 4,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 4,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Leader"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Burn the Witch!"
                         }
                     ],
@@ -707,24 +669,22 @@
                     "warband": "Witch Hunters",
                     "category": "Warrior Priest",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 3,
-                            "ballistic": 3,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 8,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Prayers of Sigmar"
                         }
                     ],
@@ -747,24 +707,22 @@
                     "warband": "Witch Hunters",
                     "category": "Witch Hunter",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 3,
-                            "ballistic": 3,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 7,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Burn the Witch!"
                         }
                     ],
@@ -787,20 +745,18 @@
                     "warband": "Witch Hunters",
                     "category": "Zealot",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 2,
-                            "ballistic": 2,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 7,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -821,34 +777,32 @@
                     "warband": "Witch Hunters",
                     "category": "Flagellant",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 3,
-                            "ballistic": 3,
-                            "strength": 4,
-                            "toughness": 4,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 10,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 4,
+                        "toughness": 4,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 10,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Melee Only"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "No Leader"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Fanatical"
                         }
                     ],
@@ -865,29 +819,27 @@
                     "warband": "Witch Hunters",
                     "category": "Warhound",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 6,
-                            "weapon": 4,
-                            "ballistic": 0,
-                            "strength": 4,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 4,
-                            "actions": 1,
-                            "leadership": 5,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 6,
+                        "weapon": 4,
+                        "ballistic": 0,
+                        "strength": 4,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 4,
+                        "actions": 1,
+                        "leadership": 5,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Unarmed and Unarmoured"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Animal"
                         }
                     ],
@@ -906,29 +858,27 @@
                     "warband": "Sisters of Sigmar",
                     "category": "Sigmarite Matriarch",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 4,
-                            "ballistic": 4,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 4,
-                            "actions": 1,
-                            "leadership": 8,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 4,
+                        "ballistic": 4,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 4,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Leader"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Prayers of Sigmar"
                         }
                     ],
@@ -951,20 +901,18 @@
                     "warband": "Sisters of Sigmar",
                     "category": "Sister Superior",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 4,
-                            "ballistic": 3,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 7,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 4,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -985,29 +933,27 @@
                     "warband": "Sisters of Sigmar",
                     "category": "Augur",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 2,
-                            "ballistic": 2,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 7,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Unarmoured"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Blessed Sight"
                         }
                     ],
@@ -1030,20 +976,18 @@
                     "warband": "Sisters of Sigmar",
                     "category": "Novice",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 2,
-                            "ballistic": 2,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 6,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 6,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -1064,20 +1008,18 @@
                     "warband": "Sisters of Sigmar",
                     "category": "Sister",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 3,
-                            "ballistic": 3,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 7,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -1104,29 +1046,27 @@
                     "warband": "The Cult of the Possessed",
                     "category": "Magister",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 4,
-                            "ballistic": 4,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 8,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 4,
+                        "ballistic": 4,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Leader"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Chaos Ritualist"
                         }
                     ],
@@ -1149,34 +1089,32 @@
                     "warband": "The Cult of the Possessed",
                     "category": "Possessed",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 5,
-                            "weapon": 4,
-                            "ballistic": 0,
-                            "strength": 4,
-                            "toughness": 4,
-                            "wounds": 2,
-                            "initiative": 4,
-                            "actions": 2,
-                            "leadership": 7,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 4,
+                        "ballistic": 0,
+                        "strength": 4,
+                        "toughness": 4,
+                        "wounds": 2,
+                        "initiative": 4,
+                        "actions": 2,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Unarmed and Unarmoured"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Cause Fear"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Can Mutate"
                         }
                     ],
@@ -1193,24 +1131,22 @@
                     "warband": "The Cult of the Possessed",
                     "category": "Mutant",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 3,
-                            "ballistic": 3,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 7,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Mutated"
                         }
                     ],
@@ -1233,24 +1169,22 @@
                     "warband": "The Cult of the Possessed",
                     "category": "Darksoul",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 2,
-                            "ballistic": 2,
-                            "strength": 4,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 6,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
+                        "strength": 4,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 6,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Crazed"
                         }
                     ],
@@ -1273,20 +1207,18 @@
                     "warband": "The Cult of the Possessed",
                     "category": "Brethren",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 3,
-                            "ballistic": 3,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 7,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -1307,20 +1239,18 @@
                     "warband": "The Cult of the Possessed",
                     "category": "Beastman",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 4,
-                            "ballistic": 3,
-                            "strength": 3,
-                            "toughness": 4,
-                            "wounds": 2,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 7,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 4,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 4,
+                        "wounds": 2,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -1347,44 +1277,42 @@
                     "warband": "The Undead",
                     "category": "Vampire",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 6,
-                            "weapon": 4,
-                            "ballistic": 4,
-                            "strength": 4,
-                            "toughness": 4,
-                            "wounds": 2,
-                            "initiative": 5,
-                            "actions": 2,
-                            "leadership": 8,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 6,
+                        "weapon": 4,
+                        "ballistic": 4,
+                        "strength": 4,
+                        "toughness": 4,
+                        "wounds": 2,
+                        "initiative": 5,
+                        "actions": 2,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Leader"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Cause Fear"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Immune to Psychology"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Immune to Poison"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Immune to Pain"
                         }
                     ],
@@ -1407,24 +1335,22 @@
                     "warband": "The Undead",
                     "category": "Necromancer",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 3,
-                            "ballistic": 3,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 7,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Necromancer"
                         }
                     ],
@@ -1447,20 +1373,18 @@
                     "warband": "The Undead",
                     "category": "Dreg",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 2,
-                            "ballistic": 2,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 1,
-                            "leadership": 7,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -1481,54 +1405,52 @@
                     "warband": "The Undead",
                     "category": "Zombie",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 2,
-                            "ballistic": 0,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 1,
-                            "actions": 1,
-                            "leadership": 5,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 0,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 1,
+                        "actions": 1,
+                        "leadership": 5,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Unarmed and Unarmoured"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Cause Fear"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Immune to Psychology"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Immune to Poison"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Immune to Pain"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Animal"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "May not Run"
                         }
                     ],
@@ -1545,29 +1467,27 @@
                     "warband": "The Undead",
                     "category": "Ghoul",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 4,
-                            "weapon": 2,
-                            "ballistic": 2,
-                            "strength": 3,
-                            "toughness": 4,
-                            "wounds": 1,
-                            "initiative": 3,
-                            "actions": 2,
-                            "leadership": 5,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
+                        "strength": 3,
+                        "toughness": 4,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 2,
+                        "leadership": 5,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Unarmed"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Cause Fear"
                         }
                     ],
@@ -1590,59 +1510,57 @@
                     "warband": "The Undead",
                     "category": "Dire Wolf",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 9,
-                            "weapon": 3,
-                            "ballistic": 0,
-                            "strength": 4,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 2,
-                            "actions": 1,
-                            "leadership": 4,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 9,
+                        "weapon": 3,
+                        "ballistic": 0,
+                        "strength": 4,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 2,
+                        "actions": 1,
+                        "leadership": 4,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Double Charge"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Unarmed and Unarmoured"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Cause Fear"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Immune to Psychology"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Immune to Poison"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Immune to Pain"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "May not Run"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Animal"
                         }
                     ],
@@ -1665,29 +1583,27 @@
                     "warband": "Skaven",
                     "category": "Assessin Adept",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 6,
-                            "weapon": 4,
-                            "ballistic": 4,
-                            "strength": 4,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 5,
-                            "actions": 1,
-                            "leadership": 7,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 6,
+                        "weapon": 4,
+                        "ballistic": 4,
+                        "strength": 4,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 5,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Leader"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Armour Piercing"
                         }
                     ],
@@ -1710,24 +1626,22 @@
                     "warband": "Skaven",
                     "category": "Eshin Sorcerer",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 5,
-                            "weapon": 3,
-                            "ballistic": 3,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 4,
-                            "actions": 1,
-                            "leadership": 6,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 4,
+                        "actions": 1,
+                        "leadership": 6,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Horned Rat Sorcerer"
                         }
                     ],
@@ -1750,20 +1664,18 @@
                     "warband": "Skaven",
                     "category": "Black Skaven",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 6,
-                            "weapon": 4,
-                            "ballistic": 3,
-                            "strength": 4,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 5,
-                            "actions": 1,
-                            "leadership": 6,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 6,
+                        "weapon": 4,
+                        "ballistic": 3,
+                        "strength": 4,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 5,
+                        "actions": 1,
+                        "leadership": 6,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -1784,20 +1696,18 @@
                     "warband": "Skaven",
                     "category": "Night Runner",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 6,
-                            "weapon": 2,
-                            "ballistic": 3,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 4,
-                            "actions": 1,
-                            "leadership": 4,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 6,
+                        "weapon": 2,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 4,
+                        "actions": 1,
+                        "leadership": 4,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -1818,20 +1728,18 @@
                     "warband": "Skaven",
                     "category": "Verminkin",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 5,
-                            "weapon": 3,
-                            "ballistic": 3,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 4,
-                            "actions": 1,
-                            "leadership": 5,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 4,
+                        "actions": 1,
+                        "leadership": 5,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -1854,34 +1762,32 @@
                     "warband": "The Skaven",
                     "category": "Giant Rats",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 6,
-                            "weapon": 4,
-                            "ballistic": 4,
-                            "strength": 4,
-                            "toughness": 4,
-                            "wounds": 2,
-                            "initiative": 5,
-                            "actions": 2,
-                            "leadership": 8,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 6,
+                        "weapon": 4,
+                        "ballistic": 4,
+                        "strength": 4,
+                        "toughness": 4,
+                        "wounds": 2,
+                        "initiative": 5,
+                        "actions": 2,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Unarmed and Unarmoured"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Pack size"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Animal"
                         }
                     ],
@@ -1898,44 +1804,42 @@
                     "warband": "The Skaven",
                     "category": "Rat Ogre",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 6,
-                            "weapon": 3,
-                            "ballistic": 3,
-                            "strength": 5,
-                            "toughness": 5,
-                            "wounds": 3,
-                            "initiative": 4,
-                            "actions": 3,
-                            "leadership": 4,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 6,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 5,
+                        "toughness": 5,
+                        "wounds": 3,
+                        "initiative": 4,
+                        "actions": 3,
+                        "leadership": 4,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Unarmed and Unarmoured"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Cause Fear"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Stupidity"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Animal"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Large Target"
                         }
                     ],
@@ -1958,29 +1862,27 @@
                     "warband": "High Elves",
                     "category": "Loremaster",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 5,
-                            "weapon": 4,
-                            "ballistic": 4,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 6,
-                            "actions": 1,
-                            "leadership": 9,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 4,
+                        "ballistic": 4,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 6,
+                        "actions": 1,
+                        "leadership": 9,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Leader"
                         },
                         {
                             "source": "Broheim",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "High Elven Magician"
                         }
                     ],
@@ -2008,20 +1910,18 @@
                     "warband": "High Elves",
                     "category": "Ranger",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 5,
-                            "weapon": 4,
-                            "ballistic": 4,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 6,
-                            "actions": 1,
-                            "leadership": 8,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 4,
+                        "ballistic": 4,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 6,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -2042,20 +1942,18 @@
                     "warband": "High Elves",
                     "category": "Sword Warden",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 5,
-                            "weapon": 5,
-                            "ballistic": 4,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 6,
-                            "actions": 1,
-                            "leadership": 8,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 5,
+                        "ballistic": 4,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 6,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -2076,20 +1974,18 @@
                     "warband": "High Elves",
                     "category": "Seaguard",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 5,
-                            "weapon": 4,
-                            "ballistic": 4,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 6,
-                            "actions": 1,
-                            "leadership": 8,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 4,
+                        "ballistic": 4,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 6,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -2110,20 +2006,18 @@
                     "warband": "High Elves",
                     "category": "Cadet",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 5,
-                            "weapon": 3,
-                            "ballistic": 3,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 5,
-                            "actions": 1,
-                            "leadership": 8,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 5,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -2148,29 +2042,27 @@
                     "warband": "Wyrdbreakers",
                     "category": "Loremaster",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 5,
-                            "weapon": 4,
-                            "ballistic": 4,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 6,
-                            "actions": 1,
-                            "leadership": 9,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 4,
+                        "ballistic": 4,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 6,
+                        "actions": 1,
+                        "leadership": 9,
+                        "armoursave": 0
+                    },
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "Leader"
                         },
                         {
                             "source": "Broheim",
-                            "category": "Ability",
+                            "category": "Character",
                             "name": "High Elven Magician"
                         }
                     ],
@@ -2198,20 +2090,18 @@
                     "warband": "Wyrdbreakers",
                     "category": "Ranger",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 5,
-                            "weapon": 4,
-                            "ballistic": 4,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 6,
-                            "actions": 1,
-                            "leadership": 8,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 4,
+                        "ballistic": 4,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 6,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -2232,20 +2122,18 @@
                     "warband": "Wyrdbreakers",
                     "category": "Sword Warden",
                     "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 5,
-                            "weapon": 5,
-                            "ballistic": 4,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 6,
-                            "actions": 1,
-                            "leadership": 8,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 5,
+                        "ballistic": 4,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 6,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -2266,20 +2154,18 @@
                     "warband": "Wyrdbreakers",
                     "category": "Seaguard",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 5,
-                            "weapon": 4,
-                            "ballistic": 4,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 6,
-                            "actions": 1,
-                            "leadership": 8,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 4,
+                        "ballistic": 4,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 6,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -2300,20 +2186,18 @@
                     "warband": "Wyrdbreakers",
                     "category": "Cadet",
                     "ishero": false,
-                    "skill": [
-                        {
-                            "movement": 5,
-                            "weapon": 3,
-                            "ballistic": 3,
-                            "strength": 3,
-                            "toughness": 3,
-                            "wounds": 1,
-                            "initiative": 5,
-                            "actions": 1,
-                            "leadership": 8,
-                            "armoursave": 0
-                        }
-                    ],
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 5,
+                        "actions": 1,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
                     "abilitylist": [],
                     "magiclist": [],
                     "itemlist": [
@@ -2324,53 +2208,6 @@
                         }
                     ],
                     "experience": 0,
-                    "price": 30,
-                    "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships. "
-                }
-            }
-        },
-        "Manual": {
-            "Manual": {
-                "Khaine": {
-                    "race": "High Elf",
-                    "source": "Manual",
-                    "warband": "Manual",
-                    "category": "Khaine",
-                    "ishero": true,
-                    "skill": [
-                        {
-                            "movement": 6,
-                            "weapon": 6,
-                            "ballistic": 6,
-                            "strength": 6,
-                            "toughness": 6,
-                            "wounds": 6,
-                            "initiative": 6,
-                            "actions": 6,
-                            "leadership": 6,
-                            "armoursave": 6
-                        }
-                    ],
-                    "abilitylist": [
-                        {
-                            "name": "Excellent Sight",
-                            "description": "Spot hidden objects at double the range. "
-                        },
-                        {
-                            "name": "Fear",
-                            "description": "Spreads fear in nearby enemies. "
-                        }
-                    ],
-                    "magiclist": [],
-                    "itemlist": [
-                        {
-                            "source": "Core Rules",
-                            "category": "Melee Weapon",
-                            "name": "Starting Dagger"
-                        }
-                    ],
-                    "experience": 100,
                     "price": 30,
                     "maxcount": 5,
                     "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships. "

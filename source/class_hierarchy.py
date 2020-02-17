@@ -40,33 +40,21 @@ class Warband(object):
 
         treasury = self.treasury.to_dict()
 
-        rulelist = {} # change in a dict before setting dict values
-        r = 1
+        rulelist = []
         for rule in self.rulelist:
-            ruleref = "Rule" + str(r) # to make sure it has a unique key
-            rulelist.update(rule.to_dict(ref=ruleref)) # adding this one to the list
-            r += 1 # iterate
+            rulelist += [rule.to_dict()] 
 
-        itemlist = {}
-        i = 1
+        itemlist = []
         for item in self.itemlist:
-            itemref = "Item" + str(i)
-            itemlist.update(item.to_dict(ref=itemref))
-            i += 1
+            itemlist += [item.to_dict()]
 
-        herolist={} 
-        h = 1
+        herolist = []
         for hero in self.herolist:
-            heroref = "Hero" + str(h)
-            herolist.update(hero.to_dict(ref=heroref))
-            h += 1
+            herolist += [hero.to_dict()]
 
-        squadlist={} 
-        s = 1
+        squadlist=[]
         for squad in self.squadlist:
-            squadref = "squad" + str(s) 
-            squadlist.update(squad.to_dict(ref=squadref))
-            s += 1
+            squadlist += [squad.to_dict()]
 
         data = {
             # 'key': str(self),
@@ -79,7 +67,7 @@ class Warband(object):
             'rulelist': rulelist,
             'itemlist': itemlist,
             'herolist': herolist, 
-            'squadlist': squadlist
+            'squadlist': squadlist,
         }
 
         return data
@@ -91,19 +79,19 @@ class Warband(object):
         treasury = Treasury.from_dict(datadict["treasury"])
 
         rulelist = []
-        for rule in datadict["rulelist"].values():
+        for rule in datadict["rulelist"]:
             rulelist += [Rule.from_dict(rule)]
 
         itemlist = []
-        for item in datadict["itemlist"].values():
+        for item in datadict["itemlist"]:
             itemlist += [Item.from_dict(item)]
 
         herolist = []
-        for hero in datadict["herolist"].values():
+        for hero in datadict["herolist"]:
             herolist += [Character.from_dict(hero)]
 
         squadlist = []
-        for squad in datadict["squadlist"].values():
+        for squad in datadict["squadlist"]:
             squadlist += [Squad.from_dict(squad)]
 
         wbid = Warband(
@@ -176,26 +164,23 @@ class Squad(object):
         self.name = name
         self.henchmanlist = henchmanlist
 
-    def to_dict(self, ref):  
-        henchmanlist={} 
-        h = 1
+    def to_dict(self):  
+        henchmanlist=[] 
         for henchman in self.henchmanlist:
-            henchmanref = "Henchman" + str(h) 
-            henchmanlist.update(henchman.to_dict(ref=henchmanref))
-            h += 1
+            henchmanlist += [henchman.to_dict()]
         
-        data = {}
-        data[str(ref)] = {
+        data = {
             # 'key': str(self),
             'name': self.name,
             'henchmanlist': henchmanlist
         }
+        
         return data
 
     @staticmethod
     def from_dict(datadict):
         henchmanlist = []
-        for henchman in datadict["henchmanlist"].values():
+        for henchman in datadict["henchmanlist"]:
             henchmanlist += [Character.from_dict(henchman)]
 
         squad = Squad(
@@ -206,7 +191,7 @@ class Squad(object):
         return squad
 
     @staticmethod
-    def create_squad(name, race, source, warband, category, number=1):
+    def create_squad(race, source, warband, category, name, number=1):
         """Create a new squad with the given parameters and creates the amount of henchman determined by the number parameter"""
         
         new_squad = Squad(
@@ -238,13 +223,14 @@ class Squad(object):
             for _ in range(0, 0 - deltasize):
                 self.henchmanlist.pop(-1)
 
-    def equip_squad(self, name, source):
+    def equip_squad(self, source, category, name):
         """Basically runs a create item method for every henchman in this squad"""
 
         for henchman in self.henchmanlist:
             newitem = Item.create_item(
-                name = name,  
-                source = source
+                source = source,
+                category = category,
+                name = name,
                 )
             henchman.itemlist.append(newitem)
 
@@ -291,32 +277,22 @@ class Character(object):
         self.maxcount = maxcount
         self.description = description
     
-    def to_dict(self, ref):  
+    def to_dict(self):  
         skill = self.skill.to_dict()
     
-        abilitylist = {}
-        a = 1
+        abilitylist = []
         for ability in self.abilitylist:
-            abilityref = "Ability" + str(a)
-            abilitylist.update(ability.to_dict(ref=abilityref))
-            a += 1
+            abilitylist += [ability.to_dict()]
 
-        magiclist = {}
-        m = 1
+        magiclist = []
         for magic in self.magiclist:
-            magicref = "Magic" + str(m)
-            magiclist.update(magic.to_dict(ref=magicref))
-            m += 1
+            magiclist += [magic.to_dict()]
 
-        itemlist = {}
-        i = 1
+        itemlist = []
         for item in self.itemlist:
-            itemref = "Item" + str(i)
-            itemlist.update(item.to_dict(ref=itemref))
-            i += 1
+            itemlist += [item.to_dict()]
         
-        data = {}
-        data[str(ref)] = {
+        data = {
             # 'key': str(self),
             'name': self.name,
             'race': self.race,
@@ -337,22 +313,39 @@ class Character(object):
 
     @staticmethod
     def from_dict(datadict):
-        skill = Skill.from_dict(datadict["skill"])
         
+        skilldict = datadict["skill"]
+        skill = Skill.from_dict(skilldict)
+
         abilitylist = []
-        for ability in datadict["abilitylist"].values():
-            abilitylist += [Ability.from_dict(ability)]
+        for abilitydict in datadict["abilitylist"]:
+            abilityref = get_abilityref(
+                source=abilitydict["source"], 
+                category=abilitydict["category"], 
+                name=abilitydict["name"], 
+            )
+            abilitylist += [Ability.from_dict(abilityref)]
 
         magiclist = []
-        for magic in datadict["magiclist"].values():
-            magiclist += [Magic.from_dict(magic)]
+        for magicdict in datadict["magiclist"]:
+            magicref = get_magicref(
+                source=magicdict["source"], 
+                category=magicdict["category"], 
+                name=magicdict["name"], 
+            )
+            magiclist += [Magic.from_dict(magicref)]
 
         itemlist = []
-        for item in datadict["itemlist"].values():
-            itemlist += [Item.from_dict(item)]
+        for itemdict in datadict["itemlist"]:
+            itemref = get_itemref(
+                source=itemdict["source"], 
+                category=itemdict["category"], 
+                name=itemdict["name"], 
+            )
+            itemlist += [Item.from_dict(itemref)]
 
         data = Character(
-            name = datadict["name"],
+            name = datadict["category"],
             race = datadict["race"],
             source = datadict["source"],
             warband = datadict["warband"],
@@ -365,68 +358,21 @@ class Character(object):
             experience = datadict["experience"],
             price = datadict["price"],
             maxcount = datadict["maxcount"],
-            description = datadict["description"]
+            description = datadict["description"]        
             )
-
+        
         return data
     
     @staticmethod
     def create_character(name, race, source, warband, category):
         # open reference data json file
         data = open_json("database/references/characters_ref.json")
+        datadict = data[race][source][warband][category]
 
-        skilllist = data[race][source][warband][category].get("skill")
-        skilldict = skilllist[0]
-        skillobject = Skill.from_dict(skilldict)
+        new_character = Character.from_dict(datadict)
+        new_character.name = name
 
-        abilitylist = []
-        for abilitydict in data[race][source][warband][category].get("abilitylist"):
-            abilityref = get_abilityref(
-                source=abilitydict["source"], 
-                category=abilitydict["category"], 
-                name=abilitydict["name"], 
-            )
-            abilityobject = Ability.from_dict(abilityref)
-            abilitylist.append(abilityobject)
-
-        magiclist = []
-        for magicdict in data[race][source][warband][category].get("magiclist"):
-            magicref = get_magicref(
-                source=magicdict["source"], 
-                category=magicdict["category"], 
-                name=magicdict["name"], 
-            )
-            magicobject = Magic.from_dict(magicref)
-            magiclist.append(magicobject)
-
-        itemlist = []
-        for itemdict in data[race][source][warband][category].get("itemlist"):
-            itemref = get_itemref(
-                source=itemdict["source"], 
-                category=itemdict["category"], 
-                name=itemdict["name"], 
-            )
-            itemobject = Item.from_dict(itemref)
-            itemlist.append(itemobject)
-
-        newcharacter = Character(
-            name = name,
-            race = race,
-            source = source,
-            warband = warband,
-            category = category,
-            ishero = data[race][source][warband][category].get("ishero"),
-            skill = skillobject,
-            abilitylist = abilitylist,
-            magiclist = magiclist,
-            itemlist = itemlist,
-            experience = data[race][source][warband][category].get("experience"),
-            price = data[race][source][warband][category].get("price"),
-            maxcount = data[race][source][warband][category].get("maxcount"),
-            description = data[race][source][warband][category].get("description")        
-            )
-        
-        return newcharacter
+        return new_character
 
     def get_price(self):
         charprice = self.price

@@ -801,7 +801,7 @@ class WarbandOverview(QMainWindow):
         """Method for creating a new magic and receiving as attribute the unit it should be added to.
                     """
         def create_magic_for_unit():
-            magicdict = open_json("database/references/magics_ref.json")
+            magicdict = open_json("database/references/magic_ref.json")
             sources = []
             for key in magicdict:
                 sources.append(key)
@@ -809,26 +809,31 @@ class WarbandOverview(QMainWindow):
             source, okPressed = QInputDialog.getItem(self, "Select source", "Choose a source", sources, 0, False)
             if okPressed and source:
             
-                # get all available magics
-                magics = []
+                # get all available categories
+                categories = []
                 for key in magicdict[source]:
-                    magics.append(key)
+                    categories.append(key)
 
-                magic, okPressed = QInputDialog.getItem(self, "Create", "Choose an magic", magics, 0, False)
-                if okPressed and magic:
-                    new_magic = magic.create_magic(
-                        name = magic,
-                        source = source,
-                    )
+                category, okPressed = QInputDialog.getItem(self, "Create", "Choose a category", categories, 0, False)
+                if okPressed and category:
 
-                    magicprice = magicdict[source][magic]["price"]
-                    if self.wbid.treasury.gold >= magicprice:
+                    # get all available magic
+                    magics = []
+                    for key in magicdict[source][category]:
+                        magics.append(key)
+
+                    magic, okPressed = QInputDialog.getItem(self, "Create", "Choose magic", magics, 0, False)
+                    if okPressed and magic:
+                        new_magic = Magic.create_magic(
+                            name = magic,
+                            category = category,
+                            source = source,
+                        )
                         
                         if unit.ishero == True:
                             for hero in self.wbid.herolist:
                                 if unit.name == hero.name:
                                     hero.magiclist.append(new_magic)
-                                    self.wbid.treasury.gold -= magicprice
                                     self.initUI()
                                     
                         else:
@@ -836,11 +841,7 @@ class WarbandOverview(QMainWindow):
                                 if unit.name == s.name:
                                     for henchman in s.henchmanlist:
                                         henchman.magiclist.append(new_magic)
-                                        self.wbid.treasury.gold -= magicprice
                                     self.initUI()
-
-                    else:
-                        message = QMessageBox.information(self, 'Lack of funds!', "Can't add new magic, lack of funds", QMessageBox.Ok)
 
         return create_magic_for_unit
 

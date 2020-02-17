@@ -105,6 +105,7 @@ def add_characterref(race, source, warband, category, ishero, skill, abilitylist
     else:
         data[race][source][warband] = {}
 
+    skilldict = {}
     skilldict = {
         "movement": skill[0],
         "weapon": skill[1],
@@ -124,7 +125,7 @@ def add_characterref(race, source, warband, category, ishero, skill, abilitylist
         'warband': warband,
         'category': category,
         'ishero': ishero,
-        "skill": skilldict,
+        'skill': skilldict[0],
         'abilitylist': abilitylist,
         'magiclist': magiclist,
         'itemlist': itemlist,
@@ -220,7 +221,7 @@ def add_itemref(source, category, name, distance, skill, abilitylist, magiclist,
         'category': category,
         'name': name,
         'distance': distance,
-        'skill': skilldict,
+        'skill': skilldict[0],
         'abilitylist': abilitylist,
         'magiclist': magiclist,
         'price': price,

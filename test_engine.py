@@ -40,7 +40,7 @@ def test_createWarband(name, race, source, warband):
 
     # Manually adding an item
     wbid.itemlist=[
-        Item(name="Test item", source = "manual", category="Other")
+        Item(source = "Broheim", category="Other", name="Wyrdbreaker")
         ]
     
     # Creating heroes
@@ -51,17 +51,20 @@ def test_createWarband(name, race, source, warband):
         warband="High Elves",
         category="Loremaster",
         )
-    
+    print("hero1 create succesfull")
+
     # Adding items to heroes
     hero1.itemlist = [
-        Item.create_item(name = "Mage Quarter Staff", source = "Broheim")
+        Item.create_item(name = "Mage Quarter Staff", category = "Melee Weapon", source = "Broheim")
         ]
+    print("hero1 item succesfull")
 
     # adding the heroes to the warband hero list
     wbid.herolist = [
         hero1
         ]
-    
+    print("hero1 assign succesfull")
+
     # Create Squads and the henchmen within
     squad1 = Squad.create_squad(
         name = "Spearguard",
@@ -71,7 +74,8 @@ def test_createWarband(name, race, source, warband):
         category = "Seaguard",
         number = 2
         )
-    
+    print("squad1 create succesfull")
+
     squad2 = Squad.create_squad(
         name = "Bladeguard",
         race = "High Elf",
@@ -80,11 +84,14 @@ def test_createWarband(name, race, source, warband):
         category = "Seaguard",
         number = 1
         )
+    print("squad2 create succesfull")
 
     # Adding items to the squads
-    squad1.equip_squad(name = "Spear", source = "Core Rules")
+    squad1.equip_squad(name = "Spear", category = "Melee Weapon", source = "Core Rules")
+    print("squad1 item succesfull")
 
-    squad2.equip_squad(name = "Great Sword", source = "Core Rules")
+    squad2.equip_squad(name = "Great Sword", category = "Melee Weapon", source = "Core Rules")
+    print("squad1 item succesfull")
 
     # adding the squads to the squadlist
     wbid.squadlist = [
@@ -92,6 +99,7 @@ def test_createWarband(name, race, source, warband):
         squad2
         ]
 
+    print("squad 12 assign succesfull")
     # Current gold minus cost of the warband
     startgold = 500
     wbid.treasury.gold = startgold - wbid.get_price()
@@ -148,26 +156,26 @@ def test_updateWarband():
     
     # Add items for new hero
     newhero.itemlist = [
-        Item.create_item(name = "Sword", source = "Core Rules"),
-        Item.create_item(name = "Light Armour", source = "Core Rules"),
-        Item.create_item(name = "Shield", source = "Core Rules")
+        Item.create_item(name = "Sword", category = "Melee Weapon", source = "Core Rules"),
+        Item.create_item(name = "Light Armour", category = "Armour & Protection", source = "Core Rules"),
+        Item.create_item(name = "Shield", category = "Armour & Protection", source = "Core Rules")
         ]
     newhero2.itemlist = [
-        Item.create_item(name = "Sword", source = "Core Rules"),
-        Item.create_item(name = "Light Armour", source = "Core Rules"),
-        Item.create_item(name = "Shield", source = "Core Rules")
+        Item.create_item(name = "Sword", category = "Melee Weapon", source = "Core Rules"),
+        Item.create_item(name = "Light Armour", category = "Armour & Protection", source = "Core Rules"),
+        Item.create_item(name = "Shield", category = "Armour & Protection", source = "Core Rules")
         ]
     newhero3.itemlist = [
-        Item.create_item(name = "Long Bow", source = "Core Rules"),
-        Item.create_item(name = "Light Armour", source = "Core Rules"),
+        Item.create_item(name = "Long Bow", category = "Missile Weapon", source = "Core Rules"),
+        Item.create_item(name = "Light Armour", category = "Armour & Protection", source = "Core Rules"),
         ]
     newhero4.itemlist = [
-        Item.create_item(name = "Long Bow", source = "Core Rules"),
-        Item.create_item(name = "Light Armour", source = "Core Rules"),
+        Item.create_item(name = "Long Bow", category = "Missile Weapon", source = "Core Rules"),
+        Item.create_item(name = "Light Armour", category = "Armour & Protection", source = "Core Rules"),
         ]
     newhero5.itemlist = [
-        Item.create_item(name = "Long Bow", source = "Core Rules"),
-        Item.create_item(name = "Light Armour", source = "Core Rules"),
+        Item.create_item(name = "Long Bow", category = "Missile Weapon", source = "Core Rules"),
+        Item.create_item(name = "Light Armour", category = "Armour & Protection", source = "Core Rules"),
         ]
 
     # adding the heroes to the warband hero list
@@ -213,10 +221,10 @@ def test_updateWarband():
 
     
     # Adding items to the squads
-    newsquad.equip_squad(name = "Long Bow", source = "Core Rules")
-    newsquad2.equip_squad(name = "Long Bow", source = "Core Rules")
-    newsquad3.equip_squad(name = "Long Bow", source = "Core Rules")
-    newsquad4.equip_squad(name = "Long Bow", source = "Core Rules")
+    newsquad.equip_squad(name = "Long Bow", category = "Missile Weapon", source = "Core Rules")
+    newsquad2.equip_squad(name = "Long Bow", category = "Missile Weapon", source = "Core Rules")
+    newsquad3.equip_squad(name = "Long Bow", category = "Missile Weapon", source = "Core Rules")
+    newsquad4.equip_squad(name = "Long Bow", category = "Missile Weapon", source = "Core Rules")
 
     # adding the squads to the squadlist
     wbid.squadlist.append(newsquad)

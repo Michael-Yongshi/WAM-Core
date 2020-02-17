@@ -18,14 +18,18 @@ install vscode
 install git scm
 install python
 install vscode - python extension
-set git repository by entering git clone + url
+
+set git repository by entering "git clone"
+set git url in the pop up
 set git credentials by entering credentials in popup
+
 set git name with git --global user.email ""
 set git email with git --global user.name ""
+
 pip3 install --user requests
 pip3 install --user pyqt5
 pip3 install --user pyinstaller
-
+create exe file with "python -m PyInstaller cli.py"
 
 ```
 Give examples

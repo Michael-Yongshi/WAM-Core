@@ -24,18 +24,17 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Leader",
-                            "description": "Nearby units (12 inch) can use this characters leader skill"
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Excellent Leader"
                         }
                     ],
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 20,
@@ -67,11 +66,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 8,
@@ -103,11 +100,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -139,11 +134,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -175,11 +168,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -209,18 +200,17 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Expert Swordsmen",
-                            "description": "Swordsmen are so skilled with their weapons that they may re-roll any failed hits when charging. Note that this only applies when they are armed with normal swords, and not with doublehanded swords or any other weapons. "
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Expert Swordsman"
                         }
                     ],
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -252,18 +242,17 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Leader",
-                            "description": "Nearby units (6 inch) can use this characters leader skill"
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Leader"
                         }
                     ],
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 20,
@@ -295,11 +284,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 8,
@@ -331,11 +318,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -367,11 +352,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -403,11 +386,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -437,18 +418,17 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Expert Swordsmen",
-                            "description": "Swordsmen are so skilled with their weapons that they may re-roll any failed hits when charging. Note that this only applies when they are armed with normal swords, and not with doublehanded swords or any other weapons. "
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Expert Swordsman"
                         }
                     ],
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -480,18 +460,17 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Leader",
-                            "description": "Nearby units (6 inch) can use this characters leader skill"
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Leader"
                         }
                     ],
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 20,
@@ -523,11 +502,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 8,
@@ -559,11 +536,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -595,11 +570,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -631,11 +604,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -665,18 +636,17 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Expert Swordsmen",
-                            "description": "Swordsmen are so skilled with their weapons that they may re-roll any failed hits when charging. Note that this only applies when they are armed with normal swords, and not with doublehanded swords or any other weapons. "
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Expert Swordsman"
                         }
                     ],
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -708,22 +678,22 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Leader",
-                            "description": "Any models in the warband within 6 inch of the Magister may use his Leadership instead of their own. "
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Leader"
                         },
                         {
-                            "name": "Burn the Witch!",
-                            "description": "A Witch Hunter Captain hates all models who can cast spells."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Burn the Witch!"
                         }
                     ],
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 20,
@@ -753,18 +723,17 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Prayers",
-                            "description": "A Warrior-Priest is a servant of Sigmar and may use the Prayers of Sigmar as detailed in the Magic section."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Prayers of Sigmar"
                         }
                     ],
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 12,
@@ -794,18 +763,17 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Burn the Witch!",
-                            "description": "A Witch Hunter hates all models who can cast spells."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Burn the Witch!"
                         }
                     ],
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 8,
@@ -837,11 +805,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -871,12 +837,19 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Missile Aversion",
-                            "description": "Flagellants never use missile weapons, even if they gain an Advance roll which would otherwise allow them to do so."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Melee Only"
                         },
                         {
-                            "name": "Fanatical",
-                            "description": "Flagellants are convinced that the end of the world is nigh, and nothing in this world holds any terror for them. Flagellants automatically pass all Leadership-based tests they are required to take. A Flagellant may never become a warband leader."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "No Leader"
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Fanatical"
                         }
                     ],
                     "magiclist": [],
@@ -884,7 +857,7 @@
                     "experience": 0,
                     "price": 40,
                     "maxcount": 5,
-                    "description": "Flagellants are fanatics and madmen obsessed with the end of the world. They are often men who have lost their families to war or the ravages of nature, and have also lost their minds. With insane persistence, they travel the length and breadth of the Empire, preaching their view of the end of the world. With their rousing speeches, Witch Hunters can muster these dangerous lunatics to fight in the streets of Mordheim, where no sane man dares tread. Flagellants are extremely dangerous opponents in close combat, for they have the strength of madmen, and their bodies have become inured to pain because of self-mutilation."
+                    "description": "Flagellants are fanatics and madmen obsessed with the end of the world. They are often men who have lost their families to war or the ravages of nature, and have also lost their minds. With insane persistence, they travel the length and breadth of the Empire, preaching their view of the end of the world. With their rousing speeches, Witch Hunters can muster these dangerous lunatics to fight in the streets of Mordheim, where no sane man dares tread. Flagellants are convinced that the end of the world is nigh, and nothing in this world holds any terror for them. Flagellants are extremely dangerous opponents in close combat, for they have the strength of madmen, and their bodies have become inured to pain because of self-mutilation."
                 },
                 "Warhound": {
                     "race": "Human",
@@ -908,12 +881,14 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Unarmed and Unarmoured",
-                            "description": "Jaws and brutality! Warhounds never use or need weapons and armour."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Unarmed and Unarmoured"
                         },
                         {
-                            "name": "Animal",
-                            "description": "Warhounds are animals and thus do not gain experience."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Animal"
                         }
                     ],
                     "magiclist": [],
@@ -947,22 +922,22 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Leader",
-                            "description": "Any models in the warband within 6 inch of the Magister may use his Leadership instead of their own. "
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Leader"
                         },
                         {
-                            "name": "Prayers of Sigmar",
-                            "description": "The Matriarch has studied the Prayers of Sigmar. See the Magic section."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Prayers of Sigmar"
                         }
                     ],
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 20,
@@ -994,11 +969,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 8,
@@ -1028,22 +1001,22 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Unarmoured",
-                            "description": "Augurs never wear armour."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Unarmoured"
                         },
                         {
-                            "name": "Blessed Sight",
-                            "description": "An Augur can re-roll any failed characteristic tests (climbing, resisting spells or any other reason), and any rolls to hit in close combat or shooting. You must accept the second result. In addition, an Augur can use her Blessed Sight to help the Sisterhood when they are searching the city for wyrdstone. If the Augur is not put out of action in the battle, you may roll two dice for her in the exploration phase and pick either dice as the result."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Blessed Sight"
                         }
                     ],
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -1075,11 +1048,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -1111,11 +1082,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -1151,22 +1120,22 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Leader",
-                            "description": "Any models in the warband within 6 inch of the Magister may use his Leadership instead of their own. "
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Leader"
                         },
                         {
-                            "name": "Chaos Ritualist",
-                            "description": "The Magister is a wizard and uses Chaos Rituals. See the Magic section for details. "
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Chaos Ritualist"
                         }
                     ],
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 20,
@@ -1196,16 +1165,19 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Unarmed and Unarmoured",
-                            "description": "The Possessed never use weapons or armour. "
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Unarmed and Unarmoured"
                         },
                         {
-                            "name": "Fear",
-                            "description": " The Possessed are terrifying, twisted creatures and therefore cause fear. See the Psychology section for details. "
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Cause Fear"
                         },
                         {
-                            "name": "Mutations",
-                            "description": "Possessed may start the game with one or more mutations each. See the Mutations list over the page for costs. "
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Can Mutate"
                         }
                     ],
                     "magiclist": [],
@@ -1237,18 +1209,17 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Mutations",
-                            "description": "Mutants must start the game with one or more mutations each. See the Mutations list over the page for the cost. "
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Mutated"
                         }
                     ],
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -1278,18 +1249,17 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Crazed",
-                            "description": "Darksouls have been driven insane by daemonic possession and know no fear. They automatically pass any Leadership tests they are required to take. "
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Crazed"
                         }
                     ],
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -1321,11 +1291,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -1357,11 +1325,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -1397,34 +1363,37 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Leader",
-                            "description": "Any models in the warband within 6 inch of the Magister may use his Leadership instead of their own."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Leader"
                         },
                         {
-                            "name": "Cause Fear",
-                            "description": "Vampires are terrifying Undead creatures and therefore cause fear."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Cause Fear"
                         },
                         {
-                            "name": "Immune to Psychology",
-                            "description": "Vampires are not affected by psychology (such as fear) and never leave combat."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Immune to Psychology"
                         },
                         {
-                            "name": "Immune to Poison",
-                            "description": "Vampires are not affected by any poison."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Immune to Poison"
                         },
                         {
-                            "name": "Immune to Pain",
-                            "description": "Vampires treat a \u2018stunned\u2019 result on the Injury chart as \u2018knocked down\u2019."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Immune to Pain"
                         }
                     ],
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 20,
@@ -1454,18 +1423,17 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Necromancer",
-                            "description": "Necromancers are wizards and so are able to use Necromantic magic. See the Magic section for details."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Necromancer"
                         }
                     ],
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 8,
@@ -1497,11 +1465,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -1531,32 +1497,39 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Unarmed and Unarmoured",
-                            "description": "Zombies may not have any weapons or armour and suffer no penalties for this."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Unarmed and Unarmoured"
                         },
                         {
-                            "name": "Cause Fear",
-                            "description": "Zombies are terrifying Undead creatures and therefore cause fear."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Cause Fear"
                         },
                         {
-                            "name": "Immune to Psychology",
-                            "description": "Zombies are not affected by psychology (such as fear) and never leave combat."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Immune to Psychology"
                         },
                         {
-                            "name": "Immune to Poison",
-                            "description": "Zombies are not affected by any poison."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Immune to Poison"
                         },
                         {
-                            "name": "Immune to Pain",
-                            "description": "Zombies treat a \u2018stunned\u2019 result on the Injury chart as \u2018knocked down\u2019."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Immune to Pain"
                         },
                         {
-                            "name": "No Brain",
-                            "description": "Zombies never gain experience. They do not learn from their mistakes. What did you expect?"
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Animal"
                         },
                         {
-                            "name": "May not Run",
-                            "description": "Zombies are slow Undead creatures and may not run (but may charge normally)."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "May not Run"
                         }
                     ],
                     "magiclist": [],
@@ -1588,22 +1561,22 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Unarmed",
-                            "description": "Ghouls never carry any equipment, apart from a few bones which they use as primitive weapons."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Unarmed"
                         },
                         {
-                            "name": "Cause Fear",
-                            "description": "Ghouls are twisted and repulsive creatures and therefore cause fear."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Cause Fear"
                         }
                     ],
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -1633,36 +1606,44 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Double Charge",
-                            "description": "Dire Wolves are slavering creatures that overpower their opponents when they charge. Dire Wolves fight with 2 attacks instead of 1 during the turn they charge."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Double Charge"
                         },
                         {
-                            "name": "Unarmed and Unarmoured",
-                            "description": "Jaws and brutality! Dire Wolves never use or need weapons and armour."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Unarmed and Unarmoured"
                         },
                         {
-                            "name": "Cause Fear",
-                            "description": "Dire Wolves are terrifying Undead creatures and therefore cause fear."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Cause Fear"
                         },
                         {
-                            "name": "Immune to Psychology",
-                            "description": "Dire Wolves are not affected by psychology (such as fear) and never leave combat."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Immune to Psychology"
                         },
                         {
-                            "name": "Immune to Poison",
-                            "description": "Dire Wolves are not affected by any poison."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Immune to Poison"
                         },
                         {
-                            "name": "Immune to Pain",
-                            "description": "Dire Wolves treat a \u2018stunned\u2019 result on the Injury chart as \u2018knocked down\u2019."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Immune to Pain"
                         },
                         {
-                            "name": "May not Run",
-                            "description": " Dire Wolves are slow to react and may not run (but may charge normally)."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "May not Run"
                         },
                         {
-                            "name": "Unliving",
-                            "description": "Dire Wolves do not gain experience. You can\u2019t teach an old dog new tricks!"
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Animal"
                         }
                     ],
                     "magiclist": [],
@@ -1700,22 +1681,22 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Leader",
-                            "description": "Any models in the warband within 6 inch of the Magister may use his Leadership instead of their own."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Leader"
                         },
                         {
-                            "name": "Armour Piercing",
-                            "description": "An Assassin Adept always has an extra -1 modifier to any armour save the enemy has to take against wounds they inflicted (both with shooting and close combat weapons)."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Armour Piercing"
                         }
                     ],
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 20,
@@ -1745,18 +1726,17 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Horned Rat Sorcerer",
-                            "description": "An Eshin Sorcerer is a wizard and uses the Magic of the Horned Rat. See the Magic section for details."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Horned Rat Sorcerer"
                         }
                     ],
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 8,
@@ -1788,11 +1768,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 8,
@@ -1824,11 +1802,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -1860,11 +1836,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -1896,16 +1870,19 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Unarmed and Unarmoured",
-                            "description": "Giant Rats never use any armour or weapons."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Unarmed and Unarmoured"
                         },
                         {
-                            "name": "Pack size",
-                            "description": "You can recruit as many Giant Rats as you wish."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Pack size"
                         },
                         {
-                            "name": "Animal",
-                            "description": "Giant Rats are animals and do not gain experience."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Animal"
                         }
                     ],
                     "magiclist": [],
@@ -1937,24 +1914,29 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "Unarmed and Unarmoured",
-                            "description": "Jaws, claws and brute force! Rat Ogres can never use weapons or armour."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Unarmed and Unarmoured"
                         },
                         {
-                            "name": "Cause Fear",
-                            "description": "Rat Ogres are so frightening they cause fear."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Cause Fear"
                         },
                         {
-                            "name": "Stupidity",
-                            "description": "A Rat Ogre is subject to stupidity unless a Skaven Hero is within 6 inch of it."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Stupidity"
                         },
                         {
-                            "name": "Animal",
-                            "description": "Rat Ogres are animals and do not gain experience."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Animal"
                         },
                         {
-                            "name": "Large Target",
-                            "description": "Rat Ogres are Large Targets as defined in the shooting rules."
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Large Target"
                         }
                     ],
                     "magiclist": [],
@@ -1992,25 +1974,27 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "High Elven Magician",
-                            "description": "Character is able to use High Elven magic. "
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Leader"
+                        },
+                        {
+                            "source": "Broheim",
+                            "category": "Ability",
+                            "name": "High Elven Magician"
                         }
                     ],
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         },
                         {
-                            "name": "Wyrdbreaker",
+                            "source": "Broheim",
                             "category": "Other",
-                            "source": "Core Rules",
-                            "distance": 0,
-                            "description": "test"
+                            "name": "Wyrdbreaker"
                         }
                     ],
                     "experience": 20,
@@ -2042,11 +2026,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 8,
@@ -2078,11 +2060,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 11,
@@ -2114,11 +2094,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -2150,11 +2128,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -2188,25 +2164,27 @@
                     ],
                     "abilitylist": [
                         {
-                            "name": "High Elven Magician",
-                            "description": "Character is able to use High Elven magic. "
+                            "source": "Core Rules",
+                            "category": "Ability",
+                            "name": "Leader"
+                        },
+                        {
+                            "source": "Broheim",
+                            "category": "Ability",
+                            "name": "High Elven Magician"
                         }
                     ],
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         },
                         {
-                            "name": "Wyrdbreaker",
+                            "source": "Broheim",
                             "category": "Other",
-                            "source": "Core Rules",
-                            "distance": 0,
-                            "description": "test"
+                            "name": "Wyrdbreaker"
                         }
                     ],
                     "experience": 20,
@@ -2238,11 +2216,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 8,
@@ -2274,11 +2250,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 11,
@@ -2310,11 +2284,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -2346,11 +2318,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -2395,11 +2365,9 @@
                     "magiclist": [],
                     "itemlist": [
                         {
-                            "name": "Starting Dagger",
-                            "category": "Melee Weapon",
                             "source": "Core Rules",
-                            "distance": 0,
-                            "description": "A basic dagger. Most units already carry one. "
+                            "category": "Melee Weapon",
+                            "name": "Starting Dagger"
                         }
                     ],
                     "experience": 100,

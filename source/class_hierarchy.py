@@ -4,6 +4,14 @@ from source.methods_json import (
     open_json,
 )
 
+from source.methods_database import(
+    get_abilityref,
+    get_characterref,
+    get_itemref,
+    get_magicref,
+    get_warbandref,
+)
+
 from source.class_components import (
     Rule,
     Treasury,
@@ -369,32 +377,36 @@ class Character(object):
 
         skilllist = data[race][source][warband][category].get("skill")
         skilldict = skilllist[0]
-        newskill = Skill(
-            movement = skilldict["movement"],
-            weapon = skilldict["weapon"],
-            ballistic = skilldict["ballistic"],
-            strength = skilldict["strength"],
-            toughness = skilldict["toughness"],
-            wounds = skilldict["wounds"],
-            initiative = skilldict["initiative"],
-            actions = skilldict["actions"],
-            leadership = skilldict["leadership"],
-            armoursave = skilldict["armoursave"]
-            )
+        skillobject = Skill.from_dict(skilldict)
 
         abilitylist = []
         for abilitydict in data[race][source][warband][category].get("abilitylist"):
-            abilityobject = Ability(source=abilitydict["source"], category=abilitydict["category"], name=abilitydict["name"], description=abilitydict["description"])
+            abilityref = get_abilityref(
+                source=abilitydict["source"], 
+                category=abilitydict["category"], 
+                name=abilitydict["name"], 
+            )
+            abilityobject = Ability.from_dict(abilityref)
             abilitylist.append(abilityobject)
 
         magiclist = []
         for magicdict in data[race][source][warband][category].get("magiclist"):
-            magicobject = Magic(source=magicdict["source"], category=magicdict["category"], name=magicdict["name"], difficulty=magicdict["difficulty"], description=magicdict["description"])
+            magicref = get_magicref(
+                source=magicdict["source"], 
+                category=magicdict["category"], 
+                name=magicdict["name"], 
+            )
+            magicobject = Magic.from_dict(magicref)
             magiclist.append(magicobject)
 
         itemlist = []
         for itemdict in data[race][source][warband][category].get("itemlist"):
-            itemobject = Item(source=itemdict["source"], category=itemdict["category"], name=itemdict["name"], distance=itemdict["distance"], description=itemdict["description"])
+            itemref = get_itemref(
+                source=itemdict["source"], 
+                category=itemdict["category"], 
+                name=itemdict["name"], 
+            )
+            itemobject = Item.from_dict(itemref)
             itemlist.append(itemobject)
 
         newcharacter = Character(
@@ -404,7 +416,7 @@ class Character(object):
             warband = warband,
             category = category,
             ishero = data[race][source][warband][category].get("ishero"),
-            skill = newskill,
+            skill = skillobject,
             abilitylist = abilitylist,
             magiclist = magiclist,
             itemlist = itemlist,

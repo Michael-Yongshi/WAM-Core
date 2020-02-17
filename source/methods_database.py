@@ -3,22 +3,6 @@ from source.methods_json import (
     save_json,
 )
 
-from source.class_hierarchy import (
-    Warband,
-    Squad,
-    Character,
-    Hero,
-    Henchman,
-    )
-
-from source.class_components import (
-    Rule,
-    Treasury,
-    Item,
-    Skill,
-    Ability,
-    Magic,
-    )
 
 def create_warbandref():
     # Paths
@@ -74,15 +58,15 @@ def get_warbandref(race, source, name):
     if race in data:
         # Second check if source exists
         if source in data[race]:
+            
             warbanddict = data[race][source][name]
+            return warbanddict
+
         else:
             print(f"source {source} does not exist")
     else:
         print(f"Race {race} does not exist")
 
-    print(f"Here is data for {name}")
-    print(warbanddict)
-    return warbanddict
 
 def create_characterref():
     # Paths
@@ -170,7 +154,10 @@ def get_characterref(race, source, warband, category):
             if warband in data[race][source]: 
                 # fourth check if character exists
                 if category in data[race][source][warband]: 
+
                     characterdict = data[race][source][warband][category]
+                    return characterdict
+                    
                 else:
                     print(f"Type:{category} does not exist")
             else:
@@ -180,9 +167,6 @@ def get_characterref(race, source, warband, category):
     else:
         print(f"Race {race} does not exist")
 
-    print(f"Here is data for {category}")
-    print(characterdict)
-    return characterdict
 
 def create_itemref():
     # Paths
@@ -197,7 +181,7 @@ def create_itemref():
     save_json(data, filepath)
 
 
-def add_itemref(category, name, distance, skill, abilitylist, magiclist, price, description, source="Manual"):
+def add_itemref(source, category, name, distance, skill, abilitylist, magiclist, price, description):
     # Paths
     folderpath = "database/references/"
     filepath = folderpath + "items_ref.json"
@@ -210,6 +194,12 @@ def add_itemref(category, name, distance, skill, abilitylist, magiclist, price, 
         pass
     else:
         data[source] = {}
+
+    # Second check if category already exists
+    if category in data[source]:
+        pass
+    else:
+        data[source][category] = {}
 
     skilldict = {
         "movement": skill[0],
@@ -225,8 +215,10 @@ def add_itemref(category, name, distance, skill, abilitylist, magiclist, price, 
         },
 
     # Add data
-    data[source][name]={
+    data[source][category][name]={
+        'source': source,
         'category': category,
+        'name': name,
         'distance': distance,
         'skill': skilldict,
         'abilitylist': abilitylist,
@@ -239,7 +231,7 @@ def add_itemref(category, name, distance, skill, abilitylist, magiclist, price, 
     save_json(data, filepath)
 
 
-def get_itemref(source, item):
+def get_itemref(source, category, name):
     # Paths
     folderpath = "database/references/"
     filepath = folderpath + "items_ref.json"
@@ -249,17 +241,20 @@ def get_itemref(source, item):
 
     # First check if source exists
     if source in data:
-        # Second check if item exists
-        if item in data[source]: 
-            itemdict = data[source][item]
+        # Second check if category exists
+        if category in data[source]:
+            # Third check if item exists
+            if name in data[source][category]: 
+
+                itemdict = data[source][category][name]
+                return itemdict
+
+            else:
+                print(f"Item:{name} does not exist")
         else:
-            print(f"Item:{item} does not exist")
+            print(f"Category {category} does not exist")
     else:
         print(f"Source {source} does not exist")
-
-    print(f"Here is data for {item}")
-    print(itemdict)
-    return itemdict
 
 
 def create_abilityref():
@@ -320,17 +315,16 @@ def get_abilityref(source, category, name):
         if category in data[source]:
             # Third check if ability exists
             if name in data[source][category]: 
+
                 abilitydict = data[source][category][name]
+                return abilitydict
+
             else:
                 print(f"ability:{name} does not exist")
         else:
             print(f"Category: {category} does not exist")
     else:
         print(f"Source {source} does not exist")
-
-    print(f"Here is data for {name}")
-    print(abilitydict)
-    return abilitydict
 
 
 def create_magicref():
@@ -392,15 +386,14 @@ def get_magicref(source, category, name):
         if category in data[source]:
             # Third check if magic exists
             if name in data[source][category]: 
+
                 magicdict = data[source][category][name]
+                return magicdict
+
             else:
                 print(f"magic:{name} does not exist")
         else:
             print(f"Category: {category} does not exist")
     else:
         print(f"Source {source} does not exist")
-
-    print(f"Here is data for {name}")
-    print(magicdict)
-    return magicdict
 

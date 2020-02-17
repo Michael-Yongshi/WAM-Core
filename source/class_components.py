@@ -2,6 +2,14 @@ from source.methods_json import (
     open_json,
 )
 
+from source.methods_database import(
+    get_abilityref,
+    get_characterref,
+    get_itemref,
+    get_magicref,
+    get_warbandref,
+)
+
 # Contains several component classes that are used in different places:
 # Inventory
 # Items
@@ -101,21 +109,35 @@ class Item(object):
 
     @staticmethod
     def from_dict(datadict):
-        skill = Skill.from_dict(datadict["skill"])
-        
+        skilllist = datadict.get("skill")
+        skilldict = skilllist[0]
+        skillobject = Skill.from_dict(skilldict)
+
         abilitylist = []
-        for ability in datadict["abilitylist"].values():
-            abilitylist += [Ability.from_dict(ability)]
-            
+        for abilitydict in datadict.get("abilitylist"):
+            abilityref = get_abilityref(
+                source=abilitydict["source"], 
+                category=abilitydict["category"], 
+                name=abilitydict["name"], 
+            )
+            abilityobject = Ability.from_dict(abilityref)
+            abilitylist.append(abilityobject)
+
         magiclist = []
-        for magic in datadict["magiclist"].values():
-            magiclist += [Magic.from_dict(magic)]
+        for magicdict in datadict.get("magiclist"):
+            magicref = get_magicref(
+                source=magicdict["source"], 
+                category=magicdict["category"], 
+                name=magicdict["name"], 
+            )
+            magicobject = Magic.from_dict(magicref)
+            magiclist.append(magicobject)
 
         item = Item(
             name=datadict["name"],
             source=datadict["source"],
             category=datadict["category"],
-            skill=skill,
+            skill=skillobject,
             abilitylist=abilitylist,
             magiclist=magiclist,
             price=datadict["price"],
@@ -200,6 +222,7 @@ class Skill(object):
 
     @staticmethod
     def from_dict(datadict):
+        print(datadict)
         skill = Skill(
             movement=datadict["movement"],
             weapon=datadict["weapon"],
@@ -237,7 +260,7 @@ class Skill(object):
 
 class Ability(object):
     """Default object to assign ablities as a basis for character and item abilities"""
-    def __init__(self, name, source="Automatic", category="Automatic", description=None):
+    def __init__(self, source, category, name, description=""):
         self.source = source
         self.category = category
         self.name = name

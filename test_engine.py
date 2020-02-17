@@ -54,7 +54,7 @@ def test_createWarband(name, race, source, warband):
     
     # Adding items to heroes
     hero1.itemlist = [
-        Item.create_item(name = "Mage Staff (Two Handed)", source = "Broheim")
+        Item.create_item(name = "Mage Quarter Staff", source = "Broheim")
         ]
 
     # adding the heroes to the warband hero list

@@ -221,11 +221,11 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 4, 4, 3, 3, 1, 4, 1, 8, 0],
         abilitylist = [
-            {"name": "Leader", "description":"Nearby units (12 inch) can use this characters leader skill"},
+            {"source": "Core Rules", "category": "Ability", "name": "Excellent Leader"},
         ],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 20,
         price = 60,
@@ -242,7 +242,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 8,
         price = 35,
@@ -259,7 +259,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 15,
@@ -276,7 +276,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 25,
@@ -293,7 +293,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 25,
@@ -308,11 +308,11 @@ if __name__ == "__main__":
         ishero = False,
         skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
         abilitylist = [
-            {"name": "Expert Swordsmen", "description":"Swordsmen are so skilled with their weapons that they may re-roll any failed hits when charging. Note that this only applies when they are armed with normal swords, and not with doublehanded swords or any other weapons. "},
+            {"source": "Core Rules", "category": "Ability", "name": "Expert Swordsman"},
             ],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 35,
@@ -329,11 +329,11 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 4, 4, 4, 3, 1, 4, 1, 8, 0],
         abilitylist = [
-            {"name": "Leader", "description":"Nearby units (6 inch) can use this characters leader skill"},
+            {"source": "Core Rules", "category": "Ability", "name": "Leader"},
         ],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 20,
         price = 60,
@@ -350,7 +350,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 8,
         price = 35,
@@ -367,7 +367,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 15,
@@ -384,7 +384,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 25,
@@ -401,7 +401,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 25,
@@ -416,11 +416,11 @@ if __name__ == "__main__":
         ishero = False,
         skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
         abilitylist = [
-            {"name": "Expert Swordsmen", "description":"Swordsmen are so skilled with their weapons that they may re-roll any failed hits when charging. Note that this only applies when they are armed with normal swords, and not with doublehanded swords or any other weapons. "},
+            {"source": "Core Rules", "category": "Ability", "name": "Expert Swordsman"},
             ],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 35,
@@ -437,11 +437,11 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 4, 4, 3, 3, 1, 4, 1, 8, 0],
         abilitylist = [
-            {"name": "Leader", "description":"Nearby units (6 inch) can use this characters leader skill"},
+            {"source": "Core Rules", "category": "Ability", "name": "Leader"},
         ],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 20,
         price = 60,
@@ -458,7 +458,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 8,
         price = 35,
@@ -475,7 +475,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 15,
@@ -492,7 +492,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 25,
@@ -509,7 +509,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 25,
@@ -524,11 +524,11 @@ if __name__ == "__main__":
         ishero = False,
         skill = [4, 4, 3, 3, 3, 1, 3, 1, 7, 0],
         abilitylist = [
-            {"name": "Expert Swordsmen", "description":"Swordsmen are so skilled with their weapons that they may re-roll any failed hits when charging. Note that this only applies when they are armed with normal swords, and not with doublehanded swords or any other weapons. "},
+            {"source": "Core Rules", "category": "Ability", "name": "Expert Swordsman"},
             ],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 35,
@@ -545,12 +545,12 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 4, 4, 3, 3, 1, 3, 1, 8, 0],
         abilitylist = [
-            {"name": "Leader", "description": "Any models in the warband within 6 inch of the Magister may use his Leadership instead of their own. "},
-            {"name": "Chaos Ritualist", "description": "The Magister is a wizard and uses Chaos Rituals. See the Magic section for details. "},
+            {"source": "Core Rules", "category": "Ability", "name": "Leader"},
+            {"source": "Core Rules", "category": "Ability", "name": "Chaos Ritualist"},
             ],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 20,
         price = 70,
@@ -565,9 +565,9 @@ if __name__ == "__main__":
         ishero = True,
         skill = [5, 4, 0, 4, 4, 2, 4, 2, 7, 0],
         abilitylist = [
-            {"name": "Unarmed and Unarmoured", "description": "The Possessed never use weapons or armour. "},
-            {"name": "Fear", "description":" The Possessed are terrifying, twisted creatures and therefore cause fear. See the Psychology section for details. "},
-            {"name": "Mutations", "description": "Possessed may start the game with one or more mutations each. See the Mutations list over the page for costs. "},        
+            {"source": "Core Rules", "category": "Ability", "name": "Unarmed and Unarmoured"},
+            {"source": "Core Rules", "category": "Ability", "name": "Cause Fear"},
+            {"source": "Core Rules", "category": "Ability", "name": "Can Mutate"},        
         ],
         magiclist = [],
         itemlist = [],
@@ -585,11 +585,11 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
         abilitylist = [
-            {"name": "Mutations", "description": "Mutants must start the game with one or more mutations each. See the Mutations list over the page for the cost. "},
+            {"source": "Core Rules", "category": "Ability", "name": "Mutated"},
             ],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 25,
@@ -604,11 +604,11 @@ if __name__ == "__main__":
         ishero = False,
         skill = [4, 2, 2, 4, 3, 1, 3, 1, 6, 0],
         abilitylist = [
-            {"name": "Crazed", "description":"Darksouls have been driven insane by daemonic possession and know no fear. They automatically pass any Leadership tests they are required to take. "},
+            {"source": "Core Rules", "category": "Ability", "name": "Crazed"},
         ],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 35,
@@ -625,7 +625,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 25,
@@ -642,7 +642,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 45,
@@ -659,12 +659,12 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 4, 4, 3, 3, 1, 4, 1, 8, 0],
         abilitylist = [            
-            {"name": "Leader", "description": "Any models in the warband within 6 inch of the Magister may use his Leadership instead of their own. "},
-            {"name": "Burn the Witch!", "description":"A Witch Hunter Captain hates all models who can cast spells."},
+            {"source": "Core Rules", "category": "Ability", "name": "Leader"},
+            {"source": "Core Rules", "category": "Ability", "name": "Burn the Witch!"},
         ],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 20,
         price = 60,
@@ -679,11 +679,11 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 8, 0],
         abilitylist = [
-            {"name": "Prayers", "description":"A Warrior-Priest is a servant of Sigmar and may use the Prayers of Sigmar as detailed in the Magic section."},
+            {"source": "Core Rules", "category": "Ability", "name": "Prayers of Sigmar"},
         ],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 12,
         price = 40,
@@ -698,11 +698,11 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
         abilitylist = [
-            {"name": "Burn the Witch!", "description":"A Witch Hunter hates all models who can cast spells."},
+            {"source": "Core Rules", "category": "Ability", "name": "Burn the Witch!"},
         ],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 8,
         price = 25,
@@ -719,7 +719,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 20,
@@ -734,15 +734,16 @@ if __name__ == "__main__":
         ishero = False,
         skill = [4, 3, 3, 4, 4, 1, 3, 1, 10, 0],
         abilitylist = [
-            {"name": "Missile Aversion", "description": "Flagellants never use missile weapons, even if they gain an Advance roll which would otherwise allow them to do so."},
-            {"name": "Fanatical", "description": "Flagellants are convinced that the end of the world is nigh, and nothing in this world holds any terror for them. Flagellants automatically pass all Leadership-based tests they are required to take. A Flagellant may never become a warband leader."},
+            {"source": "Core Rules", "category": "Ability", "name": "Melee Only"},
+            {"source": "Core Rules", "category": "Ability", "name": "No Leader"},
+            {"source": "Core Rules", "category": "Ability", "name": "Fanatical"},
         ],
         magiclist = [],
         itemlist = [],
         experience = 0,
         price = 40,
         maxcount = 5,
-        description = "Flagellants are fanatics and madmen obsessed with the end of the world. They are often men who have lost their families to war or the ravages of nature, and have also lost their minds. With insane persistence, they travel the length and breadth of the Empire, preaching their view of the end of the world. With their rousing speeches, Witch Hunters can muster these dangerous lunatics to fight in the streets of Mordheim, where no sane man dares tread. Flagellants are extremely dangerous opponents in close combat, for they have the strength of madmen, and their bodies have become inured to pain because of self-mutilation."
+        description = "Flagellants are fanatics and madmen obsessed with the end of the world. They are often men who have lost their families to war or the ravages of nature, and have also lost their minds. With insane persistence, they travel the length and breadth of the Empire, preaching their view of the end of the world. With their rousing speeches, Witch Hunters can muster these dangerous lunatics to fight in the streets of Mordheim, where no sane man dares tread. Flagellants are convinced that the end of the world is nigh, and nothing in this world holds any terror for them. Flagellants are extremely dangerous opponents in close combat, for they have the strength of madmen, and their bodies have become inured to pain because of self-mutilation."
         )
     add_characterref(
         race = "Human",
@@ -752,8 +753,8 @@ if __name__ == "__main__":
         ishero = False,
         skill = [6, 4, 0, 4, 3, 1, 4, 1, 5, 0],
         abilitylist = [
-            {"name": "Unarmed and Unarmoured", "description": "Jaws and brutality! Warhounds never use or need weapons and armour."},
-            {"name": "Animal", "description": "Warhounds are animals and thus do not gain experience."},
+            {"source": "Core Rules", "category": "Ability", "name": "Unarmed and Unarmoured"},
+            {"source": "Core Rules", "category": "Ability", "name": "Animal"},
         ],
         magiclist = [],
         itemlist = [],
@@ -772,12 +773,12 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 4, 4, 3, 3, 1, 4, 1, 8, 0],
         abilitylist = [
-            {"name": "Leader", "description": "Any models in the warband within 6 inch of the Magister may use his Leadership instead of their own. "},
-            {"name": "Prayers of Sigmar", "description": "The Matriarch has studied the Prayers of Sigmar. See the Magic section."},
+            {"source": "Core Rules", "category": "Ability", "name": "Leader"},
+            {"source": "Core Rules", "category": "Ability", "name": "Prayers of Sigmar"},
         ],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 20,
         price = 70,
@@ -794,7 +795,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 8,
         price = 35,
@@ -809,12 +810,12 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 2, 2, 3, 3, 1, 3, 1, 7, 0],
         abilitylist = [
-            {"name": "Unarmoured", "description": "Augurs never wear armour."},
-            {"name": "Blessed Sight", "description": "An Augur can re-roll any failed characteristic tests (climbing, resisting spells or any other reason), and any rolls to hit in close combat or shooting. You must accept the second result. In addition, an Augur can use her Blessed Sight to help the Sisterhood when they are searching the city for wyrdstone. If the Augur is not put out of action in the battle, you may roll two dice for her in the exploration phase and pick either dice as the result."},
+            {"source": "Core Rules", "category": "Ability", "name": "Unarmoured"},
+            {"source": "Core Rules", "category": "Ability", "name": "Blessed Sight"},
         ],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 25,
@@ -831,7 +832,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 15,
@@ -848,7 +849,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 25,
@@ -865,15 +866,15 @@ if __name__ == "__main__":
         ishero = True,
         skill = [6, 4, 4, 4, 4, 2, 5, 2, 8, 0],
         abilitylist = [
-            {"name": "Leader", "description": "Any models in the warband within 6 inch of the Magister may use his Leadership instead of their own."},
-            {"name": "Cause Fear", "description": "Vampires are terrifying Undead creatures and therefore cause fear."},
-            {"name": "Immune to Psychology", "description": "Vampires are not affected by psychology (such as fear) and never leave combat."},
-            {"name": "Immune to Poison", "description": "Vampires are not affected by any poison."},
-            {"name": "Immune to Pain", "description": "Vampires treat a ‘stunned’ result on the Injury chart as ‘knocked down’."},
+            {"source": "Core Rules", "category": "Ability", "name": "Leader"},
+            {"source": "Core Rules", "category": "Ability", "name": "Cause Fear"},
+            {"source": "Core Rules", "category": "Ability", "name": "Immune to Psychology"},
+            {"source": "Core Rules", "category": "Ability", "name": "Immune to Poison"},
+            {"source": "Core Rules", "category": "Ability", "name": "Immune to Pain"},
         ],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 20,
         price = 110,
@@ -888,11 +889,11 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 3, 3, 3, 3, 1, 3, 1, 7, 0],
         abilitylist = [
-            {"name": "Necromancer", "description": "Necromancers are wizards and so are able to use Necromantic magic. See the Magic section for details."}
+            {"source": "Core Rules", "category": "Ability", "name": "Necromancer"},
         ],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 8,
         price = 35,
@@ -909,7 +910,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 20,
@@ -926,13 +927,13 @@ if __name__ == "__main__":
         ishero = False,
         skill = [4, 2, 0, 3, 3, 1, 1, 1, 5, 0],
         abilitylist = [
-            {"name": "Unarmed and Unarmoured", "description": "Zombies may not have any weapons or armour and suffer no penalties for this."},
-            {"name": "Cause Fear", "description": "Zombies are terrifying Undead creatures and therefore cause fear."},
-            {"name": "Immune to Psychology", "description": "Zombies are not affected by psychology (such as fear) and never leave combat."},
-            {"name": "Immune to Poison", "description": "Zombies are not affected by any poison."},
-            {"name": "Immune to Pain", "description": "Zombies treat a ‘stunned’ result on the Injury chart as ‘knocked down’."},
-            {"name": "No Brain", "description": "Zombies never gain experience. They do not learn from their mistakes. What did you expect?"},
-            {"name": "May not Run", "description": "Zombies are slow Undead creatures and may not run (but may charge normally)."},
+            {"source": "Core Rules", "category": "Ability", "name": "Unarmed and Unarmoured"},
+            {"source": "Core Rules", "category": "Ability", "name": "Cause Fear"},
+            {"source": "Core Rules", "category": "Ability", "name": "Immune to Psychology"},
+            {"source": "Core Rules", "category": "Ability", "name": "Immune to Poison"},
+            {"source": "Core Rules", "category": "Ability", "name": "Immune to Pain"},
+            {"source": "Core Rules", "category": "Ability", "name": "Animal"},
+            {"source": "Core Rules", "category": "Ability", "name": "May not Run"},
         ],
         magiclist = [],
         itemlist = [],
@@ -949,12 +950,12 @@ if __name__ == "__main__":
         ishero = False,
         skill = [4, 2, 2, 3, 4, 1, 3, 2, 5, 0],
         abilitylist = [
-            {"name": "Unarmed", "description": "Ghouls never carry any equipment, apart from a few bones which they use as primitive weapons."},
-            {"name": "Cause Fear", "description": "Ghouls are twisted and repulsive creatures and therefore cause fear."},
+            {"source": "Core Rules", "category": "Ability", "name": "Unarmed"},
+            {"source": "Core Rules", "category": "Ability", "name": "Cause Fear"},
         ],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 40,
@@ -971,14 +972,14 @@ if __name__ == "__main__":
         ishero = False,
         skill = [9, 3, 0, 4, 3, 1, 2, 1, 4, 0],
         abilitylist = [
-            {"name": "Double Charge", "description": "Dire Wolves are slavering creatures that overpower their opponents when they charge. Dire Wolves fight with 2 attacks instead of 1 during the turn they charge."},
-            {"name": "Unarmed and Unarmoured", "description": "Jaws and brutality! Dire Wolves never use or need weapons and armour."},
-            {"name": "Cause Fear", "description": "Dire Wolves are terrifying Undead creatures and therefore cause fear."},
-            {"name": "Immune to Psychology", "description": "Dire Wolves are not affected by psychology (such as fear) and never leave combat."},
-            {"name": "Immune to Poison", "description": "Dire Wolves are not affected by any poison."},
-            {"name": "Immune to Pain", "description": "Dire Wolves treat a ‘stunned’ result on the Injury chart as ‘knocked down’."},
-            {"name": "May not Run", "description": " Dire Wolves are slow to react and may not run (but may charge normally)."},
-            {"name": "Unliving", "description": "Dire Wolves do not gain experience. You can’t teach an old dog new tricks!"},
+            {"source": "Core Rules", "category": "Ability", "name": "Double Charge"},
+            {"source": "Core Rules", "category": "Ability", "name": "Unarmed and Unarmoured"},
+            {"source": "Core Rules", "category": "Ability", "name": "Cause Fear"},
+            {"source": "Core Rules", "category": "Ability", "name": "Immune to Psychology"},
+            {"source": "Core Rules", "category": "Ability", "name": "Immune to Poison"},
+            {"source": "Core Rules", "category": "Ability", "name": "Immune to Pain"},
+            {"source": "Core Rules", "category": "Ability", "name": "May not Run"},
+            {"source": "Core Rules", "category": "Ability", "name": "Animal"},
         ],
         magiclist = [],
         itemlist = [],
@@ -997,12 +998,12 @@ if __name__ == "__main__":
         ishero = True,
         skill = [6, 4, 4, 4, 3, 1, 5, 1, 7, 0],
         abilitylist = [
-            {"name": "Leader", "description": "Any models in the warband within 6 inch of the Magister may use his Leadership instead of their own."},
-            {"name": "Armour Piercing", "description": "An Assassin Adept always has an extra -1 modifier to any armour save the enemy has to take against wounds they inflicted (both with shooting and close combat weapons)."},
+            {"source": "Core Rules", "category": "Ability", "name": "Leader"},
+            {"source": "Core Rules", "category": "Ability", "name": "Armour Piercing"},
         ],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 20,
         price = 60,
@@ -1017,11 +1018,11 @@ if __name__ == "__main__":
         ishero = True,
         skill = [5, 3, 3, 3, 3, 1, 4, 1, 6, 0],
         abilitylist = [
-            {"name": "Horned Rat Sorcerer", "description": "An Eshin Sorcerer is a wizard and uses the Magic of the Horned Rat. See the Magic section for details."},
+            {"source": "Core Rules", "category": "Ability", "name": "Horned Rat Sorcerer"},
         ],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 8,
         price = 0,
@@ -1038,7 +1039,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 8,
         price = 40,
@@ -1055,7 +1056,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 20,
@@ -1072,7 +1073,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 20,
@@ -1087,9 +1088,9 @@ if __name__ == "__main__":
         ishero = False,
         skill = [6, 4, 4, 4, 4, 2, 5, 2, 8, 0],
         abilitylist = [
-            {"name": "Unarmed and Unarmoured", "description": "Giant Rats never use any armour or weapons."},
-            {"name": "Pack size", "description": "You can recruit as many Giant Rats as you wish."},
-            {"name": "Animal", "description": "Giant Rats are animals and do not gain experience."},
+            {"source": "Core Rules", "category": "Ability", "name": "Unarmed and Unarmoured"},
+            {"source": "Core Rules", "category": "Ability", "name": "Pack size"},
+            {"source": "Core Rules", "category": "Ability", "name": "Animal"},
         ],
         magiclist = [],
         itemlist = [],
@@ -1106,11 +1107,11 @@ if __name__ == "__main__":
         ishero = False,
         skill = [6, 3, 3, 5, 5, 3, 4, 3, 4, 0],
         abilitylist = [
-            {"name": "Unarmed and Unarmoured", "description": "Jaws, claws and brute force! Rat Ogres can never use weapons or armour."},
-            {"name": "Cause Fear", "description": "Rat Ogres are so frightening they cause fear."},
-            {"name": "Stupidity", "description": "A Rat Ogre is subject to stupidity unless a Skaven Hero is within 6 inch of it."},
-            {"name": "Animal", "description": "Rat Ogres are animals and do not gain experience."},
-            {"name": "Large Target", "description": "Rat Ogres are Large Targets as defined in the shooting rules."},
+            {"source": "Core Rules", "category": "Ability", "name": "Unarmed and Unarmoured"},
+            {"source": "Core Rules", "category": "Ability", "name": "Cause Fear"},
+            {"source": "Core Rules", "category": "Ability", "name": "Stupidity"},
+            {"source": "Core Rules", "category": "Ability", "name": "Animal"},
+            {"source": "Core Rules", "category": "Ability", "name": "Large Target"},
         ],
         magiclist = [],
         itemlist = [],
@@ -1129,12 +1130,13 @@ if __name__ == "__main__":
         ishero = True,
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 9, 0],
         abilitylist = [
-            {"name": "High Elven Magician", "description":"Character is able to use High Elven magic. "}
+            {"source": "Core Rules", "category": "Ability", "name": "Leader"},
+            {"source": "Broheim", "category": "Ability", "name": "High Elven Magician"}
             ],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "},
-            {"name": "Wyrdbreaker", "category": "Other", "source": "Core Rules", "distance": 0, "description": "test"},
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Broheim", "category": "Other", "name": "Wyrdbreaker"},
         ],
         experience = 20,
         price = 80,
@@ -1151,7 +1153,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 8,
         price = 45,
@@ -1168,7 +1170,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 11,
         price = 50,
@@ -1185,7 +1187,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 35,
@@ -1202,7 +1204,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 30,
@@ -1219,12 +1221,13 @@ if __name__ == "__main__":
         ishero = True,
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 9, 0],
         abilitylist = [
-            {"name": "High Elven Magician", "description":"Character is able to use High Elven magic. "}
+            {"source": "Core Rules", "category": "Ability", "name": "Leader"},
+            {"source": "Broheim", "category": "Ability", "name": "High Elven Magician"}
             ],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "},
-            {"name": "Wyrdbreaker", "category": "Other", "source": "Core Rules", "distance": 0, "description": "test"},
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Broheim", "category": "Other", "name": "Wyrdbreaker"},
         ],
         experience = 20,
         price = 80,
@@ -1241,7 +1244,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 8,
         price = 45,
@@ -1258,7 +1261,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 11,
         price = 50,
@@ -1275,7 +1278,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 35,
@@ -1292,7 +1295,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 0,
         price = 30,
@@ -1313,7 +1316,7 @@ if __name__ == "__main__":
             ],
         magiclist = [],
         itemlist = [
-            {"name": "Starting Dagger", "category": "Melee Weapon", "source": "Core Rules", "distance": 0, "description": "A basic dagger. Most units already carry one. "}
+            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
         ],
         experience = 100,
         price = 30,
@@ -2150,16 +2153,209 @@ if __name__ == "__main__":
         price = 20,
         description = "A Mage Staff used two handed."
         )
+    add_itemref(
+        source = "Broheim",
+        category = "Other",
+        name = "Wyrdbreaker",
+        distance = 0,
+        skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        abilitylist = [],
+        magiclist = [],
+        price = 0,
+        description = "An item given by the loremaster council for warbands of high elves to nullify the chaos magic in wyrdstones and turn it into regular gems. This provides High Elf warbands with the necessary income to sustain themselves."
+        )
 
     get_itemref(
         source = "Core Rules", 
-        item = "Starting Dagger",
+        category = "Melee Weapon",
+        name = "Starting Dagger",
     )
 
 # (re-)creating an abilities-ref json file
     create_abilityref()
 
-    # Core rules
+    # Core rules Abilities
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Leader",
+        description = "Nearby units (6 inch) can use this characters leader skill."
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Excellent Leader",
+        description = "Nearby units (12 inch) can use this characters leader skill."
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Expert Swordsman",
+        description = "Swordsmen are so skilled with their weapons that they may re-roll any failed hits when charging. Note that this only applies when they are armed with normal swords, and not with doublehanded swords or any other weapons."
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Chaos Ritualist",
+        description = "This character is a wizard and uses Chaos Rituals. See the Magic section for details.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Unarmed and Unarmoured",
+        description = "This character is unable to use any weapons or armour.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Unarmoured",
+        description = "This character is unable to wear armour.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Unarmed",
+        description = "This character is unable to use any weapons.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Cause Fear",
+        description = "This character is terrifying and therefore instill fear in their enemies. See the Psychology section for details.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Can Mutate",
+        description = "This character is able to mutate and may start the game with one or more mutations. See the Mutations list over the page for costs.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Mutated",
+        description = "This character is a mutated being and must start the game with at least one or more mutations. See the Mutations list over the page for costs.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Crazed",
+        description = "This character has been driven insane by daemonic possession and knows no fear. They automatically pass any Leadership tests they are required to take.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Burn the Witch!",
+        description = "This character hates all models who can cast spells.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Prayers of Sigmar",
+        description = "This character is a servant of Sigmar and may use the Prayers of Sigmar as detailed in the Magic section.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Melee Only",
+        description = "This character cannot use missile weapons, even if they gain an Advance roll which would otherwise allow them to do so.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Fanatical",
+        description = "This character automatically passes all Leadership-based tests it is required to take.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "No Leader",
+        description = "This character can never become a warband leader.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Animal",
+        description = "This character is an animal and thus cannot gain experience.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Blessed Sight",
+        description = "This character can re-roll any failed characteristic tests (climbing, resisting spells or any other reason), and any rolls to hit in close combat or shooting. You must accept the second result. In addition, this character can use its Blessed Sight to help the warband when they are searching the city for wyrdstone. If the character is not put out of action in the battle, you may roll two dice for it in the exploration phase and pick either dice as the result.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Immune to Psychology",
+        description = "This character is not affected by psychology (such as fear) and never leaves combat.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Immune to Poison",
+        description = "This character is not affected by any poison.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Immune to Pain",
+        description = "This character is not affected by pain and therefore treats a ‘stunned’ result on the Injury chart as ‘knocked down’.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Necromancer",
+        description = "This wizard is a necromancer, thus is able to use Necromantic magic. See the Magic section for details.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "May Not Run",
+        description = "This character may not run (but may charge normally).",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Double Charge",
+        description = "This character overpowers its opponents when it charges. It fights with 2 attacks instead of 1 during the turn it charges.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Armour Piercing",
+        description = "This character always has an extra -1 modifier to any armour save the enemy has to take against wounds it inflicted (both with missile and close combat weapons).",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Horned Rat Sorcerer",
+        description = "This character is a wizard and uses the Magic of the Horned Rat. See the Magic section for details.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Pack Size",
+        description = "You can recruit as many characters of this type as you wish.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Stupidity",
+        description = "This character is subject to stupidity unless a Hero is within 6 inch of it.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Ability",
+        name = "Large Target",
+        description = "This character is a Large Target as defined in the shooting rules.",
+    )
+    add_abilityref(
+        source = "Broheim", 
+        category = "Ability",
+        name = "High Elven Magician",
+        description = "This character is able to use High Elven magic.",
+    )
+    # Core rules Injuries
     add_abilityref(
         source = "Core Rules", 
         category = "Injury",
@@ -2167,11 +2363,11 @@ if __name__ == "__main__":
         description = "Feared"
     )
 
-    # Broheim added abilities (warband specific)
+    # Broheim added abilities (high elves)
     add_abilityref(
         source = "Broheim", 
         category = "Ability",
-        name = "High Sorcery",
+        name = "Dispel",
         description = "A Loremaster’s knowledge of magic goes far beyond that of any other race. When an enemy spellcaster successfully casts a spell the Loremaster may attempt to dispel it. If the Loremaster rolls greater then his opponent’s casting roll for the spell then it is dispelled. Only the Loremaster may have this skill."
     )
     add_abilityref(

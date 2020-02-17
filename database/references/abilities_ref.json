@@ -1,5 +1,181 @@
 {
     "Core Rules": {
+        "Ability": {
+            "Leader": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Leader",
+                "description": "Nearby units (6 inch) can use this characters leader skill."
+            },
+            "Excellent Leader": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Excellent Leader",
+                "description": "Nearby units (12 inch) can use this characters leader skill."
+            },
+            "Expert Swordsman": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Expert Swordsman",
+                "description": "Swordsmen are so skilled with their weapons that they may re-roll any failed hits when charging. Note that this only applies when they are armed with normal swords, and not with doublehanded swords or any other weapons."
+            },
+            "Chaos Ritualist": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Chaos Ritualist",
+                "description": "This character is a wizard and uses Chaos Rituals. See the Magic section for details."
+            },
+            "Unarmed and Unarmoured": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Unarmed and Unarmoured",
+                "description": "This character is unable to use any weapons or armour."
+            },
+            "Unarmoured": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Unarmoured",
+                "description": "This character is unable to wear armour."
+            },
+            "Unarmed": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Unarmed",
+                "description": "This character is unable to use any weapons."
+            },
+            "Cause Fear": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Cause Fear",
+                "description": "This character is terrifying and therefore instill fear in their enemies. See the Psychology section for details."
+            },
+            "Can Mutate": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Can Mutate",
+                "description": "This character is able to mutate and may start the game with one or more mutations. See the Mutations list over the page for costs."
+            },
+            "Mutated": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Mutated",
+                "description": "This character is a mutated being and must start the game with at least one or more mutations. See the Mutations list over the page for costs."
+            },
+            "Crazed": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Crazed",
+                "description": "This character has been driven insane by daemonic possession and knows no fear. They automatically pass any Leadership tests they are required to take."
+            },
+            "Burn the Witch!": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Burn the Witch!",
+                "description": "This character hates all models who can cast spells."
+            },
+            "Prayers of Sigmar": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Prayers of Sigmar",
+                "description": "This character is a servant of Sigmar and may use the Prayers of Sigmar as detailed in the Magic section."
+            },
+            "Melee Only": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Melee Only",
+                "description": "This character cannot use missile weapons, even if they gain an Advance roll which would otherwise allow them to do so."
+            },
+            "Fanatical": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Fanatical",
+                "description": "This character automatically passes all Leadership-based tests it is required to take."
+            },
+            "No Leader": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "No Leader",
+                "description": "This character can never become a warband leader."
+            },
+            "Animal": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Animal",
+                "description": "This character is an animal and thus cannot gain experience."
+            },
+            "Blessed Sight": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Blessed Sight",
+                "description": "This character can re-roll any failed characteristic tests (climbing, resisting spells or any other reason), and any rolls to hit in close combat or shooting. You must accept the second result. In addition, this character can use its Blessed Sight to help the warband when they are searching the city for wyrdstone. If the character is not put out of action in the battle, you may roll two dice for it in the exploration phase and pick either dice as the result."
+            },
+            "Immune to Psychology": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Immune to Psychology",
+                "description": "This character is not affected by psychology (such as fear) and never leaves combat."
+            },
+            "Immune to Poison": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Immune to Poison",
+                "description": "This character is not affected by any poison."
+            },
+            "Immune to Pain": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Immune to Pain",
+                "description": "This character is not affected by pain and therefore treats a \u2018stunned\u2019 result on the Injury chart as \u2018knocked down\u2019."
+            },
+            "Necromancer": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Necromancer",
+                "description": "This wizard is a necromancer, thus is able to use Necromantic magic. See the Magic section for details."
+            },
+            "May Not Run": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "May Not Run",
+                "description": "This character may not run (but may charge normally)."
+            },
+            "Double Charge": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Double Charge",
+                "description": "This character overpowers its opponents when it charges. It fights with 2 attacks instead of 1 during the turn it charges."
+            },
+            "Armour Piercing": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Armour Piercing",
+                "description": "This character always has an extra -1 modifier to any armour save the enemy has to take against wounds it inflicted (both with missile and close combat weapons)."
+            },
+            "Horned Rat Sorcerer": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Horned Rat Sorcerer",
+                "description": "This character is a wizard and uses the Magic of the Horned Rat. See the Magic section for details."
+            },
+            "Pack Size": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Pack Size",
+                "description": "You can recruit as many characters of this type as you wish."
+            },
+            "Stupidity": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Stupidity",
+                "description": "This character is subject to stupidity unless a Hero is within 6 inch of it."
+            },
+            "Large Target": {
+                "source": "Core Rules",
+                "category": "Ability",
+                "name": "Large Target",
+                "description": "This character is a Large Target as defined in the shooting rules."
+            }
+        },
         "Injury": {
             "Scarred": {
                 "source": "Core Rules",
@@ -11,10 +187,16 @@
     },
     "Broheim": {
         "Ability": {
-            "High Sorcery": {
+            "High Elven Magician": {
                 "source": "Broheim",
                 "category": "Ability",
-                "name": "High Sorcery",
+                "name": "High Elven Magician",
+                "description": "This character is able to use High Elven magic."
+            },
+            "Dispel": {
+                "source": "Broheim",
+                "category": "Ability",
+                "name": "Dispel",
                 "description": "A Loremaster\u2019s knowledge of magic goes far beyond that of any other race. When an enemy spellcaster successfully casts a spell the Loremaster may attempt to dispel it. If the Loremaster rolls greater then his opponent\u2019s casting roll for the spell then it is dispelled. Only the Loremaster may have this skill."
             },
             "Stand and Fire": {

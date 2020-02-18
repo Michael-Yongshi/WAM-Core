@@ -345,7 +345,7 @@ class Character(object):
             itemlist += [Item.from_dict(itemref)]
 
         data = Character(
-            name = datadict["category"],
+            name = datadict["category"], # needs to be fixed, split form_dict of character (maybe of all classes, in get from reference and get from save file)
             race = datadict["race"],
             source = datadict["source"],
             warband = datadict["warband"],

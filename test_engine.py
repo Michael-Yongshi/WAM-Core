@@ -45,7 +45,7 @@ def test_createWarband(name, race, source, warband):
     
     # Creating heroes
     hero1 = Hero.create_character(
-        name="A", 
+        name="Hero A", 
         race="High Elf", 
         source="Broheim",
         warband="High Elves",

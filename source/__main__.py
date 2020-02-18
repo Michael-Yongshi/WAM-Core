@@ -437,19 +437,6 @@ class WarbandOverview(QMainWindow):
 
         namewidget = QInteractiveWidget()
         namewidget.setLayout(namebox)
-
-        #show skills at bottom left
-        skillbox = QHBoxLayout() # create a horizontal layout to show the skills in a neat line
-        
-        skilldict = self.currentunit.skill.to_dict()
-        # print(skilldict)
-        for key in skilldict:
-            label = QLabel()
-            label.setText(key[:2] + "\n" + str(skilldict[key]))  
-            skillbox.addWidget(label)
-  
-        skillwidget = QBorderedWidget()
-        skillwidget.setLayout(skillbox)
         
         #show abilities
         abilitybox = QVBoxLayout() # create a vertical layout to show them in a neat line
@@ -473,6 +460,8 @@ class WarbandOverview(QMainWindow):
 
         #add items
         itembox = QVBoxLayout() # create a vertical layout to show them in a neat line
+        
+        totalskills = self.currentunit.skill.to_list()
 
         for item in self.currentunit.itemlist:
             label = QLabel()
@@ -485,6 +474,9 @@ class WarbandOverview(QMainWindow):
             itemwidget.clicked.connect(self.create_method_remove_item(item=item))
             itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
 
+            pairskills = [sum(pair) for pair in zip(totalskills, item.skill.to_list())]
+            totalskills = pairskills
+
             for ability in item.abilitylist:
                 label = QLabel()
                 label.setText(f"{ability.name} (source: {item.name})")
@@ -496,6 +488,21 @@ class WarbandOverview(QMainWindow):
                 label.setText(f"{magic.name} (source: {item.name})")
                 label.setToolTip(f"<font>(source: {item} <br/> <b>{magic.name}</b> <br/> {magic.description}</font>")
                 magicbox.addWidget(label) #adds the magic to a label and at it to the vertical magic layout
+
+        #show skills at bottom left
+        skillbox = QHBoxLayout() # create a horizontal layout to show the skills in a neat line
+        
+        skillobject = Skill.from_list(totalskills)
+        skilldict = skillobject.to_dict()
+
+        # print(skilldict)
+        for key in skilldict:
+            label = QLabel()
+            label.setText(key[:2] + "\n" + str(skilldict[key]))  
+            skillbox.addWidget(label)
+
+        skillwidget = QBorderedWidget()
+        skillwidget.setLayout(skillbox)
 
         # add new item widget
         label = QLabel()

@@ -131,7 +131,7 @@ class WarbandOverview(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.wbid = get_current_warband()
+        self.wbid = self.create_template_wb()
         self.currentunit = self.create_template_char()
         self.currentthing = None
         self.initUI()
@@ -139,9 +139,9 @@ class WarbandOverview(QMainWindow):
     def initUI(self):
         
         # Some window settings
-        self.setWindowTitle('Warband Manager')
-        self.setToolTip('This is your <b>Warband</b> overview')
-        self.setWindowIcon(QIcon('icon.png'))     
+        self.setWindowTitle('WAM')
+        self.setToolTip('Warhammer Army Manager')
+        self.setWindowIcon(QIcon('war_72R_icon.ico'))     
 
         # build overview
         nested_widget = self.set_nested_widget()
@@ -445,10 +445,7 @@ class WarbandOverview(QMainWindow):
         # print(skilldict)
         for key in skilldict:
             label = QLabel()
-            if skilldict['wounds'] >= 1:
-                label.setText(key[:2] + "\n" + str(skilldict[key]))  
-            else: 
-                label.setText("")
+            label.setText(key[:2] + "\n" + str(skilldict[key]))  
             skillbox.addWidget(label)
   
         skillwidget = QBorderedWidget()
@@ -845,13 +842,22 @@ class WarbandOverview(QMainWindow):
 
         return create_magic_for_unit
 
+    def create_template_wb(self):
+        template_wb = Warband(
+            name="",
+            race="", 
+            source="", 
+            warband="",
+        )
+        return template_wb
+
     def create_template_char(self):
         template_char = Character(
             name="",
             race="", 
             source="", 
             warband="",
-            skill=Skill(0,0,0,0,0,0,0,0,0,0), 
+            skill=Skill("","","","","","","","","","",), 
             category="", 
             ishero=""
         )

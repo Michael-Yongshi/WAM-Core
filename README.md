@@ -29,7 +29,17 @@ set git email with git --global user.name ""
 pip3 install --user requests
 pip3 install --user pyqt5
 pip3 install --user pyinstaller
-create exe file with "python -m PyInstaller cli.py --onefile --name WAM"
+
+create normal distribution manually with 
+        python -m PyInstaller cli.py --add-data "database/saves/cache.json";"database/saves/" --add-data "database/references/*.json";"database/references/" --icon="source\war_72R_icon.ico" --name WAM
+
+create exe file manually with 
+        <!-- python -m PyInstaller cli.py --add-data "database/saves/cache.json";"database/saves/" --add-data "database/references/*.json";"database/references/" --icon="source\war_72R_icon.ico" --name WAM_OF --onefile -->
+
+create from spec with 
+        python -m PyInstaller WAM.spec
+        <!-- python -m PyInstaller WAM_OF.spec -->
+
 
 ```
 Give examples

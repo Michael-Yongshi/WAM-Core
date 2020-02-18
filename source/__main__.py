@@ -728,28 +728,28 @@ class WarbandOverview(QMainWindow):
                     """
         def create_item_for_unit():
             new_item = self.dialog_choose_item()
-
-            itemprice = new_item.price
-            if self.wbid.treasury.gold >= itemprice:
-                
-                if unit.ishero == True:
-                    for hero in self.wbid.herolist:
-                        if unit.name == hero.name:
-                            hero.itemlist.append(new_item)
-                            self.wbid.treasury.gold -= itemprice
-                            self.initUI()
-                            
-                else:
-                    for s in self.wbid.squadlist:
-                        if unit.name == s.name:
-                            for henchman in s.henchmanlist:
-                                henchman.itemlist.append(new_item)
+            if new_item != "Cancel":
+                itemprice = new_item.price
+                if self.wbid.treasury.gold >= itemprice:
+                    
+                    if unit.ishero == True:
+                        for hero in self.wbid.herolist:
+                            if unit.name == hero.name:
+                                hero.itemlist.append(new_item)
                                 self.wbid.treasury.gold -= itemprice
-                            self.initUI()
+                                self.initUI()
+                                
+                    else:
+                        for s in self.wbid.squadlist:
+                            if unit.name == s.name:
+                                for henchman in s.henchmanlist:
+                                    henchman.itemlist.append(new_item)
+                                    self.wbid.treasury.gold -= itemprice
+                                self.initUI()
 
-            else:
-                message = QMessageBox.information(self, 'Lack of funds!', "Can't add new item, lack of funds", QMessageBox.Ok)
-
+                else:
+                    message = QMessageBox.information(self, 'Lack of funds!', "Can't add new item, lack of funds", QMessageBox.Ok)
+            
         return create_item_for_unit
 
     def create_method_new_ability(self, unit):
@@ -984,15 +984,15 @@ class WarbandOverview(QMainWindow):
 
         """Create a new item and store it in this warband"""
         new_item = self.dialog_choose_item()
-
-        wbidgold = self.wbid.treasury.gold
-        itemprice = new_item.price
-        if wbidgold >= itemprice:
-            self.wbid.treasury.gold = wbidgold - itemprice
-            self.wbid.itemlist.append(new_item)
-            self.initUI()
-        else:
-            print("can't add new item, lack of funds")
+        if new_item != "Cancel":
+            wbidgold = self.wbid.treasury.gold
+            itemprice = new_item.price
+            if wbidgold >= itemprice:
+                self.wbid.treasury.gold = wbidgold - itemprice
+                self.wbid.itemlist.append(new_item)
+                self.initUI()
+            else:
+                print("can't add new item, lack of funds")
 
     def dialog_choose_item(self):
         
@@ -1026,7 +1026,16 @@ class WarbandOverview(QMainWindow):
                         source = source,
                     )
                     return new_item
-
+                    
+                else:
+                    string = "Cancel"
+                    return string
+            else:
+                string = "Cancel"
+                return string
+        else:
+            string = "Cancel"
+            return string
 
 def run():
     global app

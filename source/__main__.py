@@ -141,7 +141,7 @@ class WarbandOverview(QMainWindow):
         # Some window settings
         self.setWindowTitle('WAM')
         self.setToolTip('Warhammer Army Manager')
-        self.setWindowIcon(QIcon('icon.png'))     
+        self.setWindowIcon(QIcon('war_72R_icon.ico'))     
 
         # build overview
         nested_widget = self.set_nested_widget()

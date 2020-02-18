@@ -444,7 +444,7 @@ class WarbandOverview(QMainWindow):
         for ability in self.currentunit.abilitylist:
             label = QLabel()
             label.setText(str(ability.name))
-            label.setToolTip(f"<font><b>{ability.name}</b> <br/> {ability.description}</font>")
+            label.setToolTip(f"<font><b>{ability.name}</b> <br/><br/> {ability.description}</font>")
             abilitybox.addWidget(label) #adds the ability to a label and at it to the vertical ability layout
         # Wait for item abilities to add new ability and add it to the bot widget.
 
@@ -454,7 +454,7 @@ class WarbandOverview(QMainWindow):
         for magic in self.currentunit.magiclist:
             label = QLabel()
             label.setText(str(magic.name))
-            label.setToolTip(f"<font><b>{magic.name}</b> <br/> {magic.description}</font>")
+            label.setToolTip(f"<font><b>{magic.name}</b> <br/>Difficulty: {magic.difficulty} <br/><br/> {magic.description}</font>")
             magicbox.addWidget(label) #adds the magic to a label and at it to the vertical magic layout
         # Wait for item magic to add new ability and add it to the bot widget.
 
@@ -480,13 +480,13 @@ class WarbandOverview(QMainWindow):
             for ability in item.abilitylist:
                 label = QLabel()
                 label.setText(f"{ability.name} (source: {item.name})")
-                label.setToolTip(f"<font>(source: {item} <br/> <b>{ability.name}</b> <br/> {ability.description}</font>")
+                label.setToolTip(f"<font><b>{ability.name}</b> <br/>(source: {item.name}) <br/><br/>{ability.description}</font>")
                 abilitybox.addWidget(label) #adds the ability to a label and at it to the vertical ability layout
         
             for magic in item.magiclist:
                 label = QLabel()
                 label.setText(f"{magic.name} (source: {item.name})")
-                label.setToolTip(f"<font>(source: {item} <br/> <b>{magic.name}</b> <br/> {magic.description}</font>")
+                label.setToolTip(f"<font><b>{magic.name}</b> <br/>(source: {item.name} <br/>Difficulty: {magic.difficulty}<br/><br/>{magic.description}</font>")
                 magicbox.addWidget(label) #adds the magic to a label and at it to the vertical magic layout
 
         #show skills at bottom left
@@ -499,6 +499,7 @@ class WarbandOverview(QMainWindow):
         for key in skilldict:
             label = QLabel()
             label.setText(key[:2] + "\n" + str(skilldict[key]))  
+            label.setToolTip(f"The total <b>{key}</b> skill, <br/>including both base model scores and item influences.")
             skillbox.addWidget(label)
 
         skillwidget = QBorderedWidget()
@@ -511,6 +512,7 @@ class WarbandOverview(QMainWindow):
         itemwrap.addWidget(label)
         itemwidget = QInteractiveWidget()
         itemwidget.setLayout(itemwrap)
+        itemwidget.setToolTip(f"Buy a new item for this unit.")
         itemwidget.clicked.connect(self.create_method_new_item(unit=self.currentunit))
         itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
 
@@ -525,6 +527,7 @@ class WarbandOverview(QMainWindow):
         abilitywrap.addWidget(label)
         abilitywidget = QInteractiveWidget()
         abilitywidget.setLayout(abilitywrap)
+        abilitywidget.setToolTip(f"Add manually a new ability for this unit.")
         abilitywidget.clicked.connect(self.create_method_new_ability(unit=self.currentunit))
         abilitybox.addWidget(abilitywidget) #adds the ability to a label and at it to the vertical item layout
 
@@ -538,6 +541,7 @@ class WarbandOverview(QMainWindow):
         magicwrap.addWidget(label)
         magicwidget = QInteractiveWidget()
         magicwidget.setLayout(magicwrap)
+        magicwidget.setToolTip(f"Add manually a new magic skill for this unit.")
         magicwidget.clicked.connect(self.create_method_new_magic(unit=self.currentunit))
         magicbox.addWidget(magicwidget) #adds the magic to a label and at it to the vertical item layout
 

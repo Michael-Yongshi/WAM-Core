@@ -215,6 +215,24 @@ class Skill(object):
         
         return data
 
+    @staticmethod
+    def from_list(datalist):
+
+        skill = Skill(
+            movement=datalist[0],
+            weapon=datalist[1],
+            ballistic=datalist[2],
+            strength=datalist[3],
+            toughness=datalist[4],
+            wounds=datalist[5],
+            initiative=datalist[6],
+            actions=datalist[7],
+            leadership=datalist[8],
+            armoursave=datalist[9],
+            )
+
+        return skill
+
     def to_string(self):
         data = f"mo: {self.movement}, we: {self.weapon}, ba: {self.ballistic}, st: {self.strength}, to: {self.toughness}, wo: {self.wounds}, in: {self.initiative}, ac: {self.actions}, le: {self.leadership}, as: {self.armoursave}"
         

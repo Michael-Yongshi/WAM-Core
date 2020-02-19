@@ -40,7 +40,9 @@ create from spec with
         python -m PyInstaller WAM.spec
         <!-- python -m PyInstaller WAM_OF.spec -->
 
-
+- Solidity stuff
+        metamask network vincent: http://51.105.171.12
+        https://ethereum.org/python/
 ```
 Give examples
 ```

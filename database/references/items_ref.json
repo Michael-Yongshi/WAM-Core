@@ -4,7 +4,7 @@
             "Starting Dagger": {
                 "source": "Core Rules",
                 "category": "Melee Weapon",
-                "name": "Starting Dagger",
+                "subcategory": "Starting Dagger",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -27,12 +27,12 @@
                 ],
                 "magiclist": [],
                 "price": 0,
-                "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back. "
+                "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
             },
             "Extra Dagger": {
                 "source": "Core Rules",
                 "category": "Melee Weapon",
-                "name": "Extra Dagger",
+                "subcategory": "Extra Dagger",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -55,12 +55,12 @@
                 ],
                 "magiclist": [],
                 "price": 2,
-                "description": "A extra dagger. For units that want to dual wield daggers. "
+                "description": "A extra dagger. For units that want to dual wield daggers."
             },
             "Club": {
                 "source": "Core Rules",
                 "category": "Melee Weapon",
-                "name": "Club",
+                "subcategory": "Club",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -83,12 +83,12 @@
                 ],
                 "magiclist": [],
                 "price": 3,
-                "description": "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious. "
+                "description": "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious."
             },
             "Mace": {
                 "source": "Core Rules",
                 "category": "Melee Weapon",
-                "name": "Mace",
+                "subcategory": "Mace",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -111,12 +111,12 @@
                 ],
                 "magiclist": [],
                 "price": 3,
-                "description": "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious. "
+                "description": "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious."
             },
             "Hammer": {
                 "source": "Core Rules",
                 "category": "Melee Weapon",
-                "name": "Hammer",
+                "subcategory": "Hammer",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -139,12 +139,12 @@
                 ],
                 "magiclist": [],
                 "price": 3,
-                "description": "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious. "
+                "description": "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious."
             },
             "Axe": {
                 "source": "Core Rules",
                 "category": "Melee Weapon",
-                "name": "Axe",
+                "subcategory": "Axe",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -167,12 +167,12 @@
                 ],
                 "magiclist": [],
                 "price": 5,
-                "description": "The axe is the traditional weapon of Empire woodsmen, and is also used as a weapon in poorer rural areas. Axes have a heavy blade and, if swung by a strong man, can cause a lot of damage. The blade of an axe can easily cut through armor, though it requires considerable strength from the wielder. Of all the warriors in the Old World, Dwarfs are the most adept at making axes. Their axes are invaluable to the warriors of the Old World and are some of the most sought after weapons. "
+                "description": "The axe is the traditional weapon of Empire woodsmen, and is also used as a weapon in poorer rural areas. Axes have a heavy blade and, if swung by a strong man, can cause a lot of damage. The blade of an axe can easily cut through armor, though it requires considerable strength from the wielder. Of all the warriors in the Old World, Dwarfs are the most adept at making axes. Their axes are invaluable to the warriors of the Old World and are some of the most sought after weapons."
             },
             "Sword": {
                 "source": "Core Rules",
                 "category": "Melee Weapon",
-                "name": "Sword",
+                "subcategory": "Sword",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -200,7 +200,7 @@
             "Spear": {
                 "source": "Core Rules",
                 "category": "Melee Weapon",
-                "name": "Spear",
+                "subcategory": "Spear",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -233,12 +233,12 @@
                 ],
                 "magiclist": [],
                 "price": 10,
-                "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves. "
+                "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
             },
             "Halberd": {
                 "source": "Core Rules",
                 "category": "Melee Weapon",
-                "name": "Halberd",
+                "subcategory": "Halberd",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -266,7 +266,7 @@
             "Steel Whip": {
                 "source": "Core Rules",
                 "category": "Melee Weapon",
-                "name": "Steel Whip",
+                "subcategory": "Steel Whip",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -294,12 +294,12 @@
                 ],
                 "magiclist": [],
                 "price": 10,
-                "description": "The halberd\u2019s heavy blade is mounted upon a sturdy shaft of oak or steel and has a point like a spear and a cutting edge like an axe. Since it can be used to chop as well as thrust, it is an adaptable weapon, but is difficult to use inside buildings. "
+                "description": "The halberd\u2019s heavy blade is mounted upon a sturdy shaft of oak or steel and has a point like a spear and a cutting edge like an axe. Since it can be used to chop as well as thrust, it is an adaptable weapon, but is difficult to use inside buildings."
             },
             "Great Sword": {
                 "source": "Core Rules",
                 "category": "Melee Weapon",
-                "name": "Great Sword",
+                "subcategory": "Great Sword",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -327,12 +327,12 @@
                 ],
                 "magiclist": [],
                 "price": 15,
-                "description": "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively. "
+                "description": "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively."
             },
             "Great Axe": {
                 "source": "Core Rules",
                 "category": "Melee Weapon",
-                "name": "Great Axe",
+                "subcategory": "Great Axe",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -360,12 +360,12 @@
                 ],
                 "magiclist": [],
                 "price": 15,
-                "description": "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively. "
+                "description": "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively."
             },
             "Flail": {
                 "source": "Core Rules",
                 "category": "Melee Weapon",
-                "name": "Flail",
+                "subcategory": "Flail",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -393,12 +393,12 @@
                 ],
                 "magiclist": [],
                 "price": 15,
-                "description": "The flail is a heavy weapon wielded with both hands. It normally consists of heavy weights, often spiked, attached to a pole or handle by means of heavy chains. Flails drain the user\u2019s stamina quickly, but are awesomely destructive in the hands of a skilled (or unhinged) warrior. "
+                "description": "The flail is a heavy weapon wielded with both hands. It normally consists of heavy weights, often spiked, attached to a pole or handle by means of heavy chains. Flails drain the user\u2019s stamina quickly, but are awesomely destructive in the hands of a skilled (or unhinged) warrior."
             },
             "Morning Star": {
                 "source": "Core Rules",
                 "category": "Melee Weapon",
-                "name": "Morning Star",
+                "subcategory": "Morning Star",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -426,12 +426,12 @@
                 ],
                 "magiclist": [],
                 "price": 15,
-                "description": "The flail is a heavy weapon wielded with both hands. It normally consists of heavy weights, often spiked, attached to a pole or handle by means of heavy chains. Flails drain the user\u2019s stamina quickly, but are awesomely destructive in the hands of a skilled (or unhinged) warrior. "
+                "description": "The flail is a heavy weapon wielded with both hands. It normally consists of heavy weights, often spiked, attached to a pole or handle by means of heavy chains. Flails drain the user\u2019s stamina quickly, but are awesomely destructive in the hands of a skilled (or unhinged) warrior."
             },
             "Sigmarite Warhammer": {
                 "source": "Core Rules",
                 "category": "Melee Weapon",
-                "name": "Sigmarite Warhammer",
+                "subcategory": "Sigmarite Warhammer",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -464,7 +464,7 @@
             "Fighting Claws": {
                 "source": "Core Rules",
                 "category": "Melee Weapon",
-                "name": "Fighting Claws",
+                "subcategory": "Fighting Claws",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -512,7 +512,7 @@
             "Lance": {
                 "source": "Core Rules",
                 "category": "Melee Weapon",
-                "name": "Lance",
+                "subcategory": "Lance",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -550,7 +550,7 @@
             "Weeping Blades": {
                 "source": "Core Rules",
                 "category": "Melee Weapon",
-                "name": "Weeping Blades",
+                "subcategory": "Weeping Blades",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -590,7 +590,7 @@
             "Sling": {
                 "source": "Core Rules",
                 "category": "Missile Weapon",
-                "name": "Sling",
+                "subcategory": "Sling",
                 "distance": 18,
                 "skill": {
                     "movement": 0,
@@ -618,7 +618,7 @@
             "Short Bow": {
                 "source": "Core Rules",
                 "category": "Missile Weapon",
-                "name": "Short Bow",
+                "subcategory": "Short Bow",
                 "distance": 16,
                 "skill": {
                     "movement": 0,
@@ -640,7 +640,7 @@
             "Bow": {
                 "source": "Core Rules",
                 "category": "Missile Weapon",
-                "name": "Bow",
+                "subcategory": "Bow",
                 "distance": 24,
                 "skill": {
                     "movement": 0,
@@ -657,12 +657,12 @@
                 "abilitylist": [],
                 "magiclist": [],
                 "price": 10,
-                "description": "The bow is carried by most races and used extensively in warfare. It is a compact yet powerful weapon, that is cheap to make and easy to maintain. "
+                "description": "The bow is carried by most races and used extensively in warfare. It is a compact yet powerful weapon, that is cheap to make and easy to maintain."
             },
             "Long Bow": {
                 "source": "Core Rules",
                 "category": "Missile Weapon",
-                "name": "Long Bow",
+                "subcategory": "Long Bow",
                 "distance": 30,
                 "skill": {
                     "movement": 0,
@@ -679,12 +679,12 @@
                 "abilitylist": [],
                 "magiclist": [],
                 "price": 15,
-                "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy. "
+                "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
             },
             "Trowing Knives": {
                 "source": "Core Rules",
                 "category": "Missile Weapon",
-                "name": "Trowing Knives",
+                "subcategory": "Trowing Knives",
                 "distance": 6,
                 "skill": {
                     "movement": 0,
@@ -712,7 +712,7 @@
             "Trowing Stars": {
                 "source": "Core Rules",
                 "category": "Missile Weapon",
-                "name": "Trowing Stars",
+                "subcategory": "Trowing Stars",
                 "distance": 6,
                 "skill": {
                     "movement": 0,
@@ -740,7 +740,7 @@
             "Blowpipe": {
                 "source": "Core Rules",
                 "category": "Missile Weapon",
-                "name": "Blowpipe",
+                "subcategory": "Blowpipe",
                 "distance": 8,
                 "skill": {
                     "movement": 0,
@@ -778,7 +778,7 @@
             "Crossbow": {
                 "source": "Core Rules",
                 "category": "Missile Weapon",
-                "name": "Crossbow",
+                "subcategory": "Crossbow",
                 "distance": 30,
                 "skill": {
                     "movement": 0,
@@ -806,7 +806,7 @@
             "Elf Bow": {
                 "source": "Core Rules",
                 "category": "Missile Weapon",
-                "name": "Elf Bow",
+                "subcategory": "Elf Bow",
                 "distance": 36,
                 "skill": {
                     "movement": 0,
@@ -834,7 +834,7 @@
             "Crossbow Pistol": {
                 "source": "Core Rules",
                 "category": "Missile Weapon",
-                "name": "Crossbow Pistol",
+                "subcategory": "Crossbow Pistol",
                 "distance": 10,
                 "skill": {
                     "movement": 0,
@@ -862,7 +862,7 @@
             "Repeater Crossbow": {
                 "source": "Core Rules",
                 "category": "Missile Weapon",
-                "name": "Repeater Crossbow",
+                "subcategory": "Repeater Crossbow",
                 "distance": 24,
                 "skill": {
                     "movement": 0,
@@ -892,7 +892,7 @@
             "Pistol": {
                 "source": "Core Rules",
                 "category": "Blackpowder Weapon",
-                "name": "Pistol",
+                "subcategory": "Pistol",
                 "distance": 6,
                 "skill": {
                     "movement": 0,
@@ -935,7 +935,7 @@
             "Pistol Brace": {
                 "source": "Core Rules",
                 "category": "Blackpowder Weapon",
-                "name": "Pistol Brace",
+                "subcategory": "Pistol Brace",
                 "distance": 6,
                 "skill": {
                     "movement": 0,
@@ -978,7 +978,7 @@
             "Blunderbuss": {
                 "source": "Core Rules",
                 "category": "Blackpowder Weapon",
-                "name": "Blunderbuss",
+                "subcategory": "Blunderbuss",
                 "distance": 16,
                 "skill": {
                     "movement": 0,
@@ -1006,7 +1006,7 @@
             "Dueling Pistol": {
                 "source": "Core Rules",
                 "category": "Blackpowder Weapon",
-                "name": "Dueling Pistol",
+                "subcategory": "Dueling Pistol",
                 "distance": 10,
                 "skill": {
                     "movement": 0,
@@ -1054,7 +1054,7 @@
             "Dueling Pistol Brace": {
                 "source": "Core Rules",
                 "category": "Blackpowder Weapon",
-                "name": "Dueling Pistol Brace",
+                "subcategory": "Dueling Pistol Brace",
                 "distance": 10,
                 "skill": {
                     "movement": 0,
@@ -1097,7 +1097,7 @@
             "Handgun": {
                 "source": "Core Rules",
                 "category": "Blackpowder Weapon",
-                "name": "Handgun",
+                "subcategory": "Handgun",
                 "distance": 24,
                 "skill": {
                     "movement": 0,
@@ -1140,7 +1140,7 @@
             "Warplock Pistol": {
                 "source": "Core Rules",
                 "category": "Blackpowder Weapon",
-                "name": "Warplock Pistol",
+                "subcategory": "Warplock Pistol",
                 "distance": 8,
                 "skill": {
                     "movement": 0,
@@ -1183,7 +1183,7 @@
             "Warplock Pistol Brace": {
                 "source": "Core Rules",
                 "category": "Blackpowder Weapon",
-                "name": "Warplock Pistol Brace",
+                "subcategory": "Warplock Pistol Brace",
                 "distance": 8,
                 "skill": {
                     "movement": 0,
@@ -1221,7 +1221,7 @@
             "Hochland Long Hunting Rifle": {
                 "source": "Core Rules",
                 "category": "Blackpowder Weapon",
-                "name": "Hochland Long Hunting Rifle",
+                "subcategory": "Hochland Long Hunting Rifle",
                 "distance": 48,
                 "skill": {
                     "movement": 0,
@@ -1271,7 +1271,7 @@
             "Light Armour": {
                 "source": "Core Rules",
                 "category": "Armour & Protection",
-                "name": "Light Armour",
+                "subcategory": "Light Armour",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -1288,12 +1288,12 @@
                 "abilitylist": [],
                 "magiclist": [],
                 "price": 20,
-                "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement. "
+                "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
             },
             "Heavy Armour": {
                 "source": "Core Rules",
                 "category": "Armour & Protection",
-                "name": "Heavy Armour",
+                "subcategory": "Heavy Armour",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -1316,12 +1316,12 @@
                 ],
                 "magiclist": [],
                 "price": 50,
-                "description": "Typical heavy armor is made from metal links and is called chain mail. Forging chain mail is a laborious and time consuming process, as the blacksmith must put together hundreds, sometimes thousands, of metal links. This makes chain mail expensive, but this type of armor provides excellent protection for anyone who can afford it. There are other types of heavy armor as well, of which the best known are the steel breastplates and greaves worn by the foot knights of the Templar orders. "
+                "description": "Typical heavy armor is made from metal links and is called chain mail. Forging chain mail is a laborious and time consuming process, as the blacksmith must put together hundreds, sometimes thousands, of metal links. This makes chain mail expensive, but this type of armor provides excellent protection for anyone who can afford it. There are other types of heavy armor as well, of which the best known are the steel breastplates and greaves worn by the foot knights of the Templar orders."
             },
             "Cathayan Silk Clothes": {
                 "source": "Core Rules",
                 "category": "Armour & Protection",
-                "name": "Cathayan Silk Clothes",
+                "subcategory": "Cathayan Silk Clothes",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -1354,7 +1354,7 @@
             "Ithilmar Armour": {
                 "source": "Core Rules",
                 "category": "Armour & Protection",
-                "name": "Ithilmar Armour",
+                "subcategory": "Ithilmar Armour",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -1376,7 +1376,7 @@
             "Elven Cloak": {
                 "source": "Core Rules",
                 "category": "Armour & Protection",
-                "name": "Elven Cloak",
+                "subcategory": "Elven Cloak",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -1404,7 +1404,7 @@
             "Gromril Armour": {
                 "source": "Core Rules",
                 "category": "Armour & Protection",
-                "name": "Gromril Armour",
+                "subcategory": "Gromril Armour",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -1426,7 +1426,7 @@
             "Helmet": {
                 "source": "Core Rules",
                 "category": "Armour & Protection",
-                "name": "Helmet",
+                "subcategory": "Helmet",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -1449,12 +1449,12 @@
                 ],
                 "magiclist": [],
                 "price": 10,
-                "description": "From the shining steel helmets of Bretonnian knights to the leather caps of the Skaven, all sensible warriors try to protect the most vulnerable part of their body \u2013 their head. Even the most vain fighters still use a helmet, as it can be festooned with plumes, horns and other decorations. Helmets come in varying shapes and sizes, but their basic function remains the same. "
+                "description": "From the shining steel helmets of Bretonnian knights to the leather caps of the Skaven, all sensible warriors try to protect the most vulnerable part of their body \u2013 their head. Even the most vain fighters still use a helmet, as it can be festooned with plumes, horns and other decorations. Helmets come in varying shapes and sizes, but their basic function remains the same."
             },
             "Buckler": {
                 "source": "Core Rules",
                 "category": "Armour & Protection",
-                "name": "Buckler",
+                "subcategory": "Buckler",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -1477,12 +1477,12 @@
                 ],
                 "magiclist": [],
                 "price": 5,
-                "description": "Bucklers are small, round shields designed for parrying or deflecting blows. They are usually made of steel for they need to be tremendously durable to survive the brutal blows of hand-to-hand combat. Using a buckler requires great skill, but a nimble warrior can protect himself from blows which would otherwise cripple him. "
+                "description": "Bucklers are small, round shields designed for parrying or deflecting blows. They are usually made of steel for they need to be tremendously durable to survive the brutal blows of hand-to-hand combat. Using a buckler requires great skill, but a nimble warrior can protect himself from blows which would otherwise cripple him."
             },
             "Shield": {
                 "source": "Core Rules",
                 "category": "Armour & Protection",
-                "name": "Shield",
+                "subcategory": "Shield",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -1505,14 +1505,14 @@
                 ],
                 "magiclist": [],
                 "price": 5,
-                "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner. "
+                "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner."
             }
         },
         "Consumables": {
             "Garlic": {
                 "source": "Core Rules",
                 "category": "Consumables",
-                "name": "Garlic",
+                "subcategory": "Garlic",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -1540,7 +1540,7 @@
             "Black Lotus": {
                 "source": "Core Rules",
                 "category": "Consumables",
-                "name": "Black Lotus",
+                "subcategory": "Black Lotus",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -1569,7 +1569,7 @@
             "Dark Venom": {
                 "source": "Core Rules",
                 "category": "Consumables",
-                "name": "Dark Venom",
+                "subcategory": "Dark Venom",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -1598,7 +1598,7 @@
             "Crimson Shade": {
                 "source": "Core Rules",
                 "category": "Consumables",
-                "name": "Crimson Shade",
+                "subcategory": "Crimson Shade",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -1633,7 +1633,7 @@
             "Blessed Water": {
                 "source": "Core Rules",
                 "category": "Consumables",
-                "name": "Blessed Water",
+                "subcategory": "Blessed Water",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -1655,7 +1655,7 @@
             "Bugman`s Ale": {
                 "source": "Core Rules",
                 "category": "Consumables",
-                "name": "Bugman`s Ale",
+                "subcategory": "Bugman`s Ale",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -1684,7 +1684,7 @@
             "Elven Wine": {
                 "source": "Core Rules",
                 "category": "Consumables",
-                "name": "Elven Wine",
+                "subcategory": "Elven Wine",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -1703,19 +1703,19 @@
                         "source": "Core Rules",
                         "category": "Item",
                         "name": "Fearless",
-                        "description": "An elven warband that drinks Elven Wine before a battle will be immune to Fear for the whole of the battle. "
+                        "description": "An elven warband that drinks Elven Wine before a battle will be immune to Fear for the whole of the battle."
                     }
                 ],
                 "magiclist": [],
                 "price": 50,
-                "description": "High Elven wines are well known to be the best in the world, and some are even rumored to have magical qualities. A fine Elven Wine can cast out doubt and fear and leave a general feeling of wellbeing in a warrior. "
+                "description": "High Elven wines are well known to be the best in the world, and some are even rumored to have magical qualities. A fine Elven Wine can cast out doubt and fear and leave a general feeling of wellbeing in a warrior."
             }
         },
         "Other": {
             "Mordheim Map": {
                 "source": "Core Rules",
                 "category": "Other",
-                "name": "Mordheim Map",
+                "subcategory": "Mordheim Map",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -1732,12 +1732,12 @@
                 "abilitylist": [],
                 "magiclist": [],
                 "price": 20,
-                "description": "Temporary item, When you buy a map, roll a D6. Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot. "
+                "description": "Temporary item, When you buy a map, roll a D6. Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
             },
             "Fake Mordheim Map": {
                 "source": "Core Rules",
                 "category": "Other",
-                "name": "Fake Mordheim Map",
+                "subcategory": "Fake Mordheim Map",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -1756,17 +1756,17 @@
                         "source": "Core Rules",
                         "category": "Item",
                         "name": "Fake Mordheim Map",
-                        "description": "The map is a fake, and is completely worthless. It leads you on a fool\u2019s errand. Your opponent may automatically choose the next scenario you play. "
+                        "description": "The map is a fake, and is completely worthless. It leads you on a fool\u2019s errand. Your opponent may automatically choose the next scenario you play."
                     }
                 ],
                 "magiclist": [],
                 "price": 20,
-                "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot. "
+                "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
             },
             "Vague Mordheim Map": {
                 "source": "Core Rules",
                 "category": "Other",
-                "name": "Vague Mordheim Map",
+                "subcategory": "Vague Mordheim Map",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -1785,17 +1785,17 @@
                         "source": "Core Rules",
                         "category": "Item",
                         "name": "Vague Mordheim Map",
-                        "description": "Though crude, the map is generally accurate (well\u2026 parts of it are\u2026 perhaps!). You may re-roll any one dice during the next exploration phase if you wish but you must accept the result of the second roll. "
+                        "description": "Though crude, the map is generally accurate (well\u2026 parts of it are\u2026 perhaps!). You may re-roll any one dice during the next exploration phase if you wish but you must accept the result of the second roll."
                     }
                 ],
                 "magiclist": [],
                 "price": 20,
-                "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot. "
+                "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
             },
             "Catacomb Mordheim Map": {
                 "source": "Core Rules",
                 "category": "Other",
-                "name": "Catacomb Mordheim Map",
+                "subcategory": "Catacomb Mordheim Map",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -1814,17 +1814,17 @@
                         "source": "Core Rules",
                         "category": "Item",
                         "name": "Catacomb Mordheim Map",
-                        "description": "The map shows a way through the catacombs into the city. You may automatically choose the scenario next time you fight a battle. "
+                        "description": "The map shows a way through the catacombs into the city. You may automatically choose the scenario next time you fight a battle."
                     }
                 ],
                 "magiclist": [],
                 "price": 20,
-                "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot. "
+                "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
             },
             "Accurate Mordheim Map": {
                 "source": "Core Rules",
                 "category": "Other",
-                "name": "Accurate Mordheim Map",
+                "subcategory": "Accurate Mordheim Map",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -1843,17 +1843,17 @@
                         "source": "Core Rules",
                         "category": "Item",
                         "name": "Accurate Mordheim Map",
-                        "description": "The map is recently made and very detailed. You may re-roll up to three dice during the next exploration phase if you wish. You must accept the result of the second roll. "
+                        "description": "The map is recently made and very detailed. You may re-roll up to three dice during the next exploration phase if you wish. You must accept the result of the second roll."
                     }
                 ],
                 "magiclist": [],
                 "price": 20,
-                "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot. "
+                "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
             },
             "Master Mordheim Map": {
                 "source": "Core Rules",
                 "category": "Other",
-                "name": "Master Mordheim Map",
+                "subcategory": "Master Mordheim Map",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -1872,12 +1872,12 @@
                         "source": "Core Rules",
                         "category": "Item",
                         "name": "Master Mordheim Map",
-                        "description": "This is one of the twelve master maps of Mordheim made for Count von Steinhardt of Ostermark. From now on you may always re-roll one dice when rolling on the Exploration chart as long as the Hero who possesses this map was not taken out of action in the battle. "
+                        "description": "This is one of the twelve master maps of Mordheim made for Count von Steinhardt of Ostermark. From now on you may always re-roll one dice when rolling on the Exploration chart as long as the Hero who possesses this map was not taken out of action in the battle."
                     }
                 ],
                 "magiclist": [],
                 "price": 20,
-                "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot. "
+                "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
             }
         }
     },
@@ -1886,7 +1886,7 @@
             "Mage Wand": {
                 "source": "Broheim",
                 "category": "Melee Weapon",
-                "name": "Mage Wand",
+                "subcategory": "Mage Wand",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -1905,7 +1905,7 @@
                         "source": "Core Rules",
                         "category": "Item",
                         "name": "Concussion",
-                        "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model\u2019s injuries. "
+                        "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model\u2019s injuries."
                     }
                 ],
                 "magiclist": [],
@@ -1915,7 +1915,7 @@
             "Mage Quarter Staff": {
                 "source": "Broheim",
                 "category": "Melee Weapon",
-                "name": "Mage Quarter Staff",
+                "subcategory": "Mage Quarter Staff",
                 "distance": 0,
                 "skill": {
                     "movement": 0,
@@ -1956,7 +1956,7 @@
             "Wyrdbreaker": {
                 "source": "Broheim",
                 "category": "Other",
-                "name": "Wyrdbreaker",
+                "subcategory": "Wyrdbreaker",
                 "distance": 0,
                 "skill": {
                     "movement": 0,

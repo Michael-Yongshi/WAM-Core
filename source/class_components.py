@@ -66,10 +66,11 @@ class Treasury(object):
         return data
 
 class Item(object):
-    def __init__(self, name, source, category, distance=0, skill=None, abilitylist=[], magiclist=[], price=0, description=None):
+    def __init__(self, name, source, category, subcategory, distance=0, skill=None, abilitylist=[], magiclist=[], price=0, description=None):
         self.name = name
         self.source = source
         self.category = category
+        self.subcategory = subcategory
         self.distance = distance
         self.skill = skill if skill else Skill()
         self.abilitylist = abilitylist
@@ -90,9 +91,10 @@ class Item(object):
 
         data = {
             # 'key': str(self),
+            'name': self.name,
             'source': self.source,
             'category': self.category,
-            'name': self.name,
+            'subcategory': self.subcategory,
             'distance': self.distance,
             'skill': skill,
             'abilitylist': abilitylist,
@@ -106,37 +108,45 @@ class Item(object):
     def from_dict(datadict, create = False):
         
         if create == True:
-            pass
-            # decorative name = "",
-            # events = "",
+            name = ""
+            #  events = []
+
+            abilitylist = []
+            for abilitydict in datadict["abilitylist"]:
+                abilityref = get_abilityref(
+                    source=abilitydict["source"], 
+                    category=abilitydict["category"], 
+                    name=abilitydict["name"], 
+                )
+                abilitylist += [Ability.from_dict(abilityref)]
+
+            magiclist = []
+            for magicdict in datadict["magiclist"]:
+                magicref = get_magicref(
+                    source=magicdict["source"], 
+                    category=magicdict["category"], 
+                    name=magicdict["name"], 
+                )
+                magiclist += [Magic.from_dict(magicref)]
+            
         else:
-            pass
-            # decorative name = datadict["dec_name"],
-            # events = datadict["events"],
-        
+            name = datadict["name"]
+            # events = datadict["events"]
+                    
+            abilitylist = []
+            for abilitydict in datadict["abilitylist"]:
+                abilitylist += [Ability.from_dict(abilitydict)]
+
+            magiclist = []
+            for magicdict in datadict["magiclist"]:
+                magiclist += [Magic.from_dict(magicdict)]
+
         skilldict = datadict["skill"]
         skill = Skill.from_dict(skilldict)
 
-        abilitylist = []
-        for abilitydict in datadict["abilitylist"]:
-            abilityref = get_abilityref(
-                source=abilitydict["source"], 
-                category=abilitydict["category"], 
-                name=abilitydict["name"], 
-            )
-            abilitylist += [Ability.from_dict(abilityref)]
-
-        magiclist = []
-        for magicdict in datadict["magiclist"]:
-            magicref = get_magicref(
-                source=magicdict["source"], 
-                category=magicdict["category"], 
-                name=magicdict["name"], 
-            )
-            magiclist += [Magic.from_dict(magicref)]
-
         data = Item(
-            name=datadict["name"],
+            name=name,
+            subcategory=datadict["subcategory"],
             source=datadict["source"],
             category=datadict["category"],
             skill=skill,
@@ -149,10 +159,10 @@ class Item(object):
         return data
 
     @staticmethod
-    def create_item(source, category, name):
+    def create_item(source, category, subcategory):
         # open reference data json file
         data = open_json("database/references/items_ref.json")
-        datadict = data[source][category][name]
+        datadict = data[source][category][subcategory]
 
         new_item = Item.from_dict(datadict = datadict, create = True)
 
@@ -275,7 +285,7 @@ class Ability(object):
             source=datadict["source"],
             category=datadict["category"],
             name=datadict["name"],
-            description=datadict["description"]
+            description=datadict["description"],
             )
 
         return data
@@ -321,7 +331,7 @@ class Magic(object):
             category=datadict["category"],
             name=datadict["name"],
             difficulty=datadict["difficulty"],
-            description=datadict["description"]
+            description=datadict["description"],
             )
 
         return data

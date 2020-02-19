@@ -3,7 +3,7 @@
     "race": "High Elf",
     "source": "Broheim",
     "warband": "High Elves",
-    "description": "The Citadel of Dusk was built for the dual purpose of guarding the seaways off the east coast of Lustria against incursions from the rest of the world, and as a staging post from which the High Elves could watch the movements of the Lizardmen and their Slann masters. Despite the High Elves\u2019 best efforts to keep Lustria free of human adventurers, the people of the Old World have been dogged in their attempts to penetrate Ulthuan\u2019s extensive naval web and explore the jungle continent. So far the mighty Slann Mages have not appeared unduly concerned by the constant incursions onto their lands by the greedy peoples of the Old World and Naggaroth, and appear to have done little to prevent these predatory races from returning. Yet the High Elves know that despite the Slann`s relative calm in the face of these constant raids, the patience of ancient Mage-Priests is not limitless. The Elves fear that the Slann might one day rouse themselves from their century-long meditations to make a concerted effort to end any and all threats to the continuation of their culture as the inheritors of the Old Ones. If the Slann were to throw all their intellect and resources into total war, they could conceivably wipe out whole nations before they could be stopped, such is their awesome power. Fearing for their own survival as much as anything else, the High Elves have taken it upon themselves to keep Lustria secure from the predations of all other races, and protect the ancient secrets left behind by the Old Ones that the Slann safeguard. The High Elves` cause has not been helped by the many fantastic stories that persist throughout the Old World; stories of lost cities made entirely of gold lying hidden within its dense foliage, just waiting to be discovered and plundered.",
+    "description": "The Citadel of Dusk was built for the dual purpose of guarding the seaways off the east coast of Lustria against incursions from the rest of the world, and as a staging post from which the High Elves could watch the movements of the Lizardmen and their Slann masters. Despite the High Elves\u2019 best efforts to keep Lustria free of human adventurers, the people of the Old World have been dogged in their attempts to penetrate Ulthuan\u2019s extensive naval web and explore the jungle continent.So far the mighty Slann Mages have not appeared unduly concerned by the constant incursions onto their lands by the greedy peoples of the Old World and Naggaroth, and appear to have done little to prevent these predatory races from returning. Yet the High Elves know that despite the Slann`s relative calm in the face of these constant raids, the patience of ancient Mage-Priests is not limitless.The Elves fear that the Slann might one day rouse themselves from their century-long meditations to make a concerted effort to end any and all threats to the continuation of their culture as the inheritors of the Old Ones. If the Slann were to throw all their intellect and resources into total war, they could conceivably wipe out whole nations before they could be stopped, such is their awesome power.Fearing for their own survival as much as anything else, the High Elves have taken it upon themselves to keep Lustria secure from the predations of all other races, and protect the ancient secrets left behind by the Old Ones that the Slann safeguard. The High Elves` cause has not been helped by the many fantastic stories that persist throughout the Old World; stories of lost cities made entirely of gold lying hidden within its dense foliage, just waiting to be discovered and plundered.",
     "treasury": {
         "gold": 260,
         "wyrd": 0
@@ -32,9 +32,10 @@
     ],
     "itemlist": [
         {
+            "name": "",
             "source": "Broheim",
             "category": "Other",
-            "name": "Wyrdbreaker",
+            "subcategory": "Wyrdbreaker",
             "distance": 0,
             "skill": {
                 "movement": 0,
@@ -51,7 +52,7 @@
             "abilitylist": [],
             "magiclist": [],
             "price": 0,
-            "description": null
+            "description": "An item given by the loremaster council for warbands of high elves to nullify the chaos magic in wyrdstones and turn it into regular gems. This provides High Elf warbands with the necessary income to sustain themselves."
         }
     ],
     "herolist": [
@@ -91,9 +92,10 @@
             "magiclist": [],
             "itemlist": [
                 {
+                    "name": "",
                     "source": "Broheim",
                     "category": "Melee Weapon",
-                    "name": "Mage Quarter Staff",
+                    "subcategory": "Mage Quarter Staff",
                     "distance": 0,
                     "skill": {
                         "movement": 0,
@@ -127,7 +129,7 @@
                             "category": "High Elven Magic",
                             "name": "Word of Power",
                             "difficulty": 8,
-                            "description": "The Elven Mage utters the True Name of Asuryan, the lord of the Elf gods. Shaken by his awesome power, the enemies of the Elves become weak and ineffective. Any enemies within 8 inch of the Mage suffer a -3 Weaponskill penalty, down to a minimum of one. Lasts until the beginning of the next High Elf turn. "
+                            "description": "The Elven Mage utters the True Name of Asuryan, the lord of the Elf gods. Shaken by his awesome power, the enemies of the Elves become weak and ineffective. Any enemies within 8 inch of the Mage suffer a -3 Weaponskill penalty, down to a minimum of one. Lasts until the beginning of the next High Elf turn."
                         }
                     ],
                     "price": 20,
@@ -137,7 +139,7 @@
             "experience": 20,
             "price": 80,
             "maxcount": 1,
-            "description": "Loremasters are the most powerful mages in the entire Warhammer world. Their knowledge of the arcane arts and their intensive training at the Tower of Hoeth makes them perfect for leading expeditions into Lustria. They are capable and efficient with years of extensive training and skill at their disposal. Loremasters alone command magic powerful enough to match the might of the mysterious Slann. They delve into the temple cities of the Lizardmen in search of any remaining artifacts of the Old Ones power. "
+            "description": "Loremasters are the most powerful mages in the entire Warhammer world. Their knowledge of the arcane arts and their intensive training at the Tower of Hoeth makes them perfect for leading expeditions into Lustria. They are capable and efficient with years of extensive training and skill at their disposal. Loremasters alone command magic powerful enough to match the might of the mysterious Slann. They delve into the temple cities of the Lizardmen in search of any remaining artifacts of the Old Ones power."
         },
         {
             "name": "Bearand",
@@ -162,9 +164,10 @@
             "magiclist": [],
             "itemlist": [
                 {
+                    "name": "",
                     "source": "Core Rules",
                     "category": "Melee Weapon",
-                    "name": "Sword",
+                    "subcategory": "Sword",
                     "distance": 0,
                     "skill": {
                         "movement": 0,
@@ -191,9 +194,10 @@
                     "description": "The sword is often referred to as the \u2018king of weapons\u2019. The most common sword available, the broadsword of the Empire, is a masterpiece by the standards of any smith: four full feet of gleaming steel, double-edged and razor-sharp. Swords are much more effective weapons than crude clubs and axes, though learning to use a sword is a long and difficult process. It takes years to truly master this weapon \u2013 most warriors in Mordheim die long before they get this far!"
                 },
                 {
+                    "name": "",
                     "source": "Core Rules",
                     "category": "Armour & Protection",
-                    "name": "Light Armour",
+                    "subcategory": "Light Armour",
                     "distance": 0,
                     "skill": {
                         "movement": 0,
@@ -210,12 +214,13 @@
                     "abilitylist": [],
                     "magiclist": [],
                     "price": 20,
-                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement. "
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
                 },
                 {
+                    "name": "",
                     "source": "Core Rules",
                     "category": "Armour & Protection",
-                    "name": "Shield",
+                    "subcategory": "Shield",
                     "distance": 0,
                     "skill": {
                         "movement": 0,
@@ -239,13 +244,13 @@
                     ],
                     "magiclist": [],
                     "price": 5,
-                    "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner. "
+                    "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner."
                 }
             ],
             "experience": 11,
             "price": 50,
             "maxcount": 2,
-            "description": "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster\u2019s personal attendants and protectors. "
+            "description": "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster\u2019s personal attendants and protectors."
         },
         {
             "name": "Crypton",
@@ -270,9 +275,10 @@
             "magiclist": [],
             "itemlist": [
                 {
+                    "name": "",
                     "source": "Core Rules",
                     "category": "Melee Weapon",
-                    "name": "Sword",
+                    "subcategory": "Sword",
                     "distance": 0,
                     "skill": {
                         "movement": 0,
@@ -299,9 +305,10 @@
                     "description": "The sword is often referred to as the \u2018king of weapons\u2019. The most common sword available, the broadsword of the Empire, is a masterpiece by the standards of any smith: four full feet of gleaming steel, double-edged and razor-sharp. Swords are much more effective weapons than crude clubs and axes, though learning to use a sword is a long and difficult process. It takes years to truly master this weapon \u2013 most warriors in Mordheim die long before they get this far!"
                 },
                 {
+                    "name": "",
                     "source": "Core Rules",
                     "category": "Armour & Protection",
-                    "name": "Light Armour",
+                    "subcategory": "Light Armour",
                     "distance": 0,
                     "skill": {
                         "movement": 0,
@@ -318,12 +325,13 @@
                     "abilitylist": [],
                     "magiclist": [],
                     "price": 20,
-                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement. "
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
                 },
                 {
+                    "name": "",
                     "source": "Core Rules",
                     "category": "Armour & Protection",
-                    "name": "Shield",
+                    "subcategory": "Shield",
                     "distance": 0,
                     "skill": {
                         "movement": 0,
@@ -347,13 +355,13 @@
                     ],
                     "magiclist": [],
                     "price": 5,
-                    "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner. "
+                    "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner."
                 }
             ],
             "experience": 11,
             "price": 50,
             "maxcount": 2,
-            "description": "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster\u2019s personal attendants and protectors. "
+            "description": "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster\u2019s personal attendants and protectors."
         },
         {
             "name": "Danan",
@@ -378,9 +386,10 @@
             "magiclist": [],
             "itemlist": [
                 {
+                    "name": "",
                     "source": "Core Rules",
                     "category": "Missile Weapon",
-                    "name": "Long Bow",
+                    "subcategory": "Long Bow",
                     "distance": 0,
                     "skill": {
                         "movement": 0,
@@ -397,12 +406,13 @@
                     "abilitylist": [],
                     "magiclist": [],
                     "price": 15,
-                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy. "
+                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
                 },
                 {
+                    "name": "",
                     "source": "Core Rules",
                     "category": "Armour & Protection",
-                    "name": "Light Armour",
+                    "subcategory": "Light Armour",
                     "distance": 0,
                     "skill": {
                         "movement": 0,
@@ -419,13 +429,13 @@
                     "abilitylist": [],
                     "magiclist": [],
                     "price": 20,
-                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement. "
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
                 }
             ],
             "experience": 8,
             "price": 45,
             "maxcount": 2,
-            "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again. "
+            "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again."
         },
         {
             "name": "Everia",
@@ -450,9 +460,10 @@
             "magiclist": [],
             "itemlist": [
                 {
+                    "name": "",
                     "source": "Core Rules",
                     "category": "Missile Weapon",
-                    "name": "Long Bow",
+                    "subcategory": "Long Bow",
                     "distance": 0,
                     "skill": {
                         "movement": 0,
@@ -469,12 +480,13 @@
                     "abilitylist": [],
                     "magiclist": [],
                     "price": 15,
-                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy. "
+                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
                 },
                 {
+                    "name": "",
                     "source": "Core Rules",
                     "category": "Armour & Protection",
-                    "name": "Light Armour",
+                    "subcategory": "Light Armour",
                     "distance": 0,
                     "skill": {
                         "movement": 0,
@@ -491,13 +503,13 @@
                     "abilitylist": [],
                     "magiclist": [],
                     "price": 20,
-                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement. "
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
                 }
             ],
             "experience": 8,
             "price": 45,
             "maxcount": 2,
-            "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again. "
+            "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again."
         },
         {
             "name": "Felicia",
@@ -522,9 +534,10 @@
             "magiclist": [],
             "itemlist": [
                 {
+                    "name": "",
                     "source": "Core Rules",
                     "category": "Missile Weapon",
-                    "name": "Long Bow",
+                    "subcategory": "Long Bow",
                     "distance": 0,
                     "skill": {
                         "movement": 0,
@@ -541,12 +554,13 @@
                     "abilitylist": [],
                     "magiclist": [],
                     "price": 15,
-                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy. "
+                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
                 },
                 {
+                    "name": "",
                     "source": "Core Rules",
                     "category": "Armour & Protection",
-                    "name": "Light Armour",
+                    "subcategory": "Light Armour",
                     "distance": 0,
                     "skill": {
                         "movement": 0,
@@ -563,13 +577,13 @@
                     "abilitylist": [],
                     "magiclist": [],
                     "price": 20,
-                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement. "
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
                 }
             ],
             "experience": 8,
             "price": 45,
             "maxcount": 2,
-            "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again. "
+            "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again."
         }
     ],
     "squadlist": [
@@ -577,7 +591,7 @@
             "name": "Spearguard",
             "henchmanlist": [
                 {
-                    "name": "Spearguard",
+                    "name": "Spearguard0",
                     "race": "High Elf",
                     "source": "Broheim",
                     "warband": "High Elves",
@@ -599,9 +613,10 @@
                     "magiclist": [],
                     "itemlist": [
                         {
+                            "name": "",
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger",
+                            "subcategory": "Starting Dagger",
                             "distance": 0,
                             "skill": {
                                 "movement": 0,
@@ -625,12 +640,13 @@
                             ],
                             "magiclist": [],
                             "price": 0,
-                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back. "
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
                         },
                         {
+                            "name": "",
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Spear",
+                            "subcategory": "Spear",
                             "distance": 0,
                             "skill": {
                                 "movement": 0,
@@ -666,16 +682,16 @@
                             ],
                             "magiclist": [],
                             "price": 10,
-                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves. "
+                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
                         }
                     ],
                     "experience": 0,
                     "price": 35,
                     "maxcount": 0,
-                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops. "
+                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops."
                 },
                 {
-                    "name": "Spearguard",
+                    "name": "Spearguard1",
                     "race": "High Elf",
                     "source": "Broheim",
                     "warband": "High Elves",
@@ -697,9 +713,10 @@
                     "magiclist": [],
                     "itemlist": [
                         {
+                            "name": "",
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger",
+                            "subcategory": "Starting Dagger",
                             "distance": 0,
                             "skill": {
                                 "movement": 0,
@@ -723,12 +740,13 @@
                             ],
                             "magiclist": [],
                             "price": 0,
-                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back. "
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
                         },
                         {
+                            "name": "",
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Spear",
+                            "subcategory": "Spear",
                             "distance": 0,
                             "skill": {
                                 "movement": 0,
@@ -764,13 +782,13 @@
                             ],
                             "magiclist": [],
                             "price": 10,
-                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves. "
+                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
                         }
                     ],
                     "experience": 0,
                     "price": 35,
                     "maxcount": 0,
-                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops. "
+                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops."
                 }
             ]
         },
@@ -778,7 +796,7 @@
             "name": "Bladeguard",
             "henchmanlist": [
                 {
-                    "name": "Bladeguard",
+                    "name": "Bladeguard0",
                     "race": "High Elf",
                     "source": "Broheim",
                     "warband": "High Elves",
@@ -800,9 +818,10 @@
                     "magiclist": [],
                     "itemlist": [
                         {
+                            "name": "",
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger",
+                            "subcategory": "Starting Dagger",
                             "distance": 0,
                             "skill": {
                                 "movement": 0,
@@ -826,12 +845,13 @@
                             ],
                             "magiclist": [],
                             "price": 0,
-                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back. "
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
                         },
                         {
+                            "name": "",
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Great Sword",
+                            "subcategory": "Great Sword",
                             "distance": 0,
                             "skill": {
                                 "movement": 0,
@@ -861,13 +881,13 @@
                             ],
                             "magiclist": [],
                             "price": 15,
-                            "description": "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively. "
+                            "description": "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively."
                         }
                     ],
                     "experience": 0,
                     "price": 35,
                     "maxcount": 0,
-                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops. "
+                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops."
                 }
             ]
         },
@@ -875,7 +895,7 @@
             "name": "Cadet",
             "henchmanlist": [
                 {
-                    "name": "Cadet",
+                    "name": "Cadet0",
                     "race": "High Elf",
                     "source": "Broheim",
                     "warband": "High Elves",
@@ -897,9 +917,10 @@
                     "magiclist": [],
                     "itemlist": [
                         {
+                            "name": "",
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger",
+                            "subcategory": "Starting Dagger",
                             "distance": 0,
                             "skill": {
                                 "movement": 0,
@@ -923,12 +944,13 @@
                             ],
                             "magiclist": [],
                             "price": 0,
-                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back. "
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
                         },
                         {
+                            "name": "",
                             "source": "Core Rules",
                             "category": "Missile Weapon",
-                            "name": "Long Bow",
+                            "subcategory": "Long Bow",
                             "distance": 0,
                             "skill": {
                                 "movement": 0,
@@ -945,13 +967,13 @@
                             "abilitylist": [],
                             "magiclist": [],
                             "price": 15,
-                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy. "
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
                         }
                     ],
                     "experience": 0,
                     "price": 30,
                     "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships. "
+                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
                 }
             ]
         },
@@ -959,7 +981,7 @@
             "name": "Cadet2",
             "henchmanlist": [
                 {
-                    "name": "Cadet2",
+                    "name": "Cadet20",
                     "race": "High Elf",
                     "source": "Broheim",
                     "warband": "High Elves",
@@ -981,9 +1003,10 @@
                     "magiclist": [],
                     "itemlist": [
                         {
+                            "name": "",
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger",
+                            "subcategory": "Starting Dagger",
                             "distance": 0,
                             "skill": {
                                 "movement": 0,
@@ -1007,12 +1030,13 @@
                             ],
                             "magiclist": [],
                             "price": 0,
-                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back. "
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
                         },
                         {
+                            "name": "",
                             "source": "Core Rules",
                             "category": "Missile Weapon",
-                            "name": "Long Bow",
+                            "subcategory": "Long Bow",
                             "distance": 0,
                             "skill": {
                                 "movement": 0,
@@ -1029,13 +1053,13 @@
                             "abilitylist": [],
                             "magiclist": [],
                             "price": 15,
-                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy. "
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
                         }
                     ],
                     "experience": 0,
                     "price": 30,
                     "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships. "
+                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
                 }
             ]
         },
@@ -1043,7 +1067,7 @@
             "name": "Cadet3",
             "henchmanlist": [
                 {
-                    "name": "Cadet3",
+                    "name": "Cadet30",
                     "race": "High Elf",
                     "source": "Broheim",
                     "warband": "High Elves",
@@ -1065,9 +1089,10 @@
                     "magiclist": [],
                     "itemlist": [
                         {
+                            "name": "",
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger",
+                            "subcategory": "Starting Dagger",
                             "distance": 0,
                             "skill": {
                                 "movement": 0,
@@ -1091,12 +1116,13 @@
                             ],
                             "magiclist": [],
                             "price": 0,
-                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back. "
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
                         },
                         {
+                            "name": "",
                             "source": "Core Rules",
                             "category": "Missile Weapon",
-                            "name": "Long Bow",
+                            "subcategory": "Long Bow",
                             "distance": 0,
                             "skill": {
                                 "movement": 0,
@@ -1113,13 +1139,13 @@
                             "abilitylist": [],
                             "magiclist": [],
                             "price": 15,
-                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy. "
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
                         }
                     ],
                     "experience": 0,
                     "price": 30,
                     "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships. "
+                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
                 }
             ]
         },
@@ -1127,7 +1153,7 @@
             "name": "Cadet4",
             "henchmanlist": [
                 {
-                    "name": "Cadet4",
+                    "name": "Cadet40",
                     "race": "High Elf",
                     "source": "Broheim",
                     "warband": "High Elves",
@@ -1149,9 +1175,10 @@
                     "magiclist": [],
                     "itemlist": [
                         {
+                            "name": "",
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger",
+                            "subcategory": "Starting Dagger",
                             "distance": 0,
                             "skill": {
                                 "movement": 0,
@@ -1175,12 +1202,13 @@
                             ],
                             "magiclist": [],
                             "price": 0,
-                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back. "
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
                         },
                         {
+                            "name": "",
                             "source": "Core Rules",
                             "category": "Missile Weapon",
-                            "name": "Long Bow",
+                            "subcategory": "Long Bow",
                             "distance": 0,
                             "skill": {
                                 "movement": 0,
@@ -1197,13 +1225,13 @@
                             "abilitylist": [],
                             "magiclist": [],
                             "price": 15,
-                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy. "
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
                         }
                     ],
                     "experience": 0,
                     "price": 30,
                     "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships. "
+                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
                 }
             ]
         }

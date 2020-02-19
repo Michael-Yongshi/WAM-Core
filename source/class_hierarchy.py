@@ -118,8 +118,13 @@ class Warband(object):
 
         rulelist = []
         for ruledict in data[race][source][warband]["rulelist"]:
-            ruleobject = Rule(name = ruledict["name"], description = ruledict["description"])
+            ruleobject = Rule.from_dict(ruledict)
             rulelist.append(ruleobject)
+
+        itemlist = []
+        for itemdict in data[race][source][warband]["itemlist"]:
+            itemobject = Item.from_dict(itemdict)
+            itemlist.append(itemobject)
 
         treasury=Treasury(
             gold = data[race][source][warband]["start_gold"],
@@ -201,9 +206,9 @@ class Squad(object):
             henchmanlist = []
             )
 
-        for _ in range(0, number):
+        for i in range(0, number):
             newhenchman = Henchman.create_character(
-                name = name,
+                name = name + str(i),
                 race = race,
                 source = source,
                 warband = warband,
@@ -215,9 +220,12 @@ class Squad(object):
 
     def change_henchman_count(self, deltasize):
         if deltasize > 0:
+            i = self.get_totalhenchman
             
             for _ in range(0, deltasize):
+                i += 1
                 newhenchman = copy.deepcopy(self.henchmanlist[0])
+                newhenchman.name = self.name + str(i)
                 self.henchmanlist.append(newhenchman)
 
         if deltasize < 0:
@@ -225,14 +233,14 @@ class Squad(object):
             for _ in range(0, 0 - deltasize):
                 self.henchmanlist.pop(-1)
 
-    def equip_squad(self, source, category, name):
+    def equip_squad(self, source, category, subcategory):
         """Basically runs a create item method for every henchman in this squad"""
 
         for henchman in self.henchmanlist:
             newitem = Item.create_item(
                 source = source,
                 category = category,
-                name = name,
+                subcategory = subcategory,
                 )
             henchman.itemlist.append(newitem)
 
@@ -306,40 +314,55 @@ class Character(object):
         
         if create == True:
             name = ""
+        
+            abilitylist = []
+            for abilitydict in datadict["abilitylist"]:
+                abilityref = get_abilityref(
+                    source=abilitydict["source"], 
+                    category=abilitydict["category"], 
+                    name=abilitydict["name"], 
+                )
+                abilitylist += [Ability.from_dict(abilityref)]
+
+            magiclist = []
+            for magicdict in datadict["magiclist"]:
+                magicref = get_magicref(
+                    source=magicdict["source"], 
+                    category=magicdict["category"], 
+                    name=magicdict["name"], 
+                )
+                magiclist += [Magic.from_dict(magicref)]
+            
+            itemlist = []
+            for itemdict in datadict["itemlist"]:
+                itemref = Item.create_item(
+                    source=itemdict["source"], 
+                    category=itemdict["category"], 
+                    subcategory=itemdict["subcategory"], 
+                    )
+                itemlist += [itemref]
+
             # events = ""
+
         else:
             name = datadict["name"]
+
+            abilitylist = []
+            for abilitydict in datadict["abilitylist"]:
+                abilitylist += [Ability.from_dict(abilitydict)]
+
+            magiclist = []
+            for magicdict in datadict["magiclist"]:
+                magiclist += [Magic.from_dict(magicdict)]
+
+            itemlist = []
+            for itemdict in datadict["itemlist"]:
+                itemlist += [Item.from_dict(itemdict)]
+
             # events = datadict["events"]
 
         skilldict = datadict["skill"]
         skill = Skill.from_dict(skilldict)
-
-        abilitylist = []
-        for abilitydict in datadict["abilitylist"]:
-            abilityref = get_abilityref(
-                source=abilitydict["source"], 
-                category=abilitydict["category"], 
-                name=abilitydict["name"], 
-            )
-            abilitylist += [Ability.from_dict(abilityref)]
-
-        magiclist = []
-        for magicdict in datadict["magiclist"]:
-            magicref = get_magicref(
-                source=magicdict["source"], 
-                category=magicdict["category"], 
-                name=magicdict["name"], 
-            )
-            magiclist += [Magic.from_dict(magicref)]
-
-        itemlist = []
-        for itemdict in datadict["itemlist"]:
-            itemref = get_itemref(
-                source=itemdict["source"], 
-                category=itemdict["category"], 
-                name=itemdict["name"], 
-            )
-            itemlist += [Item.from_dict(itemref)]
 
         data = Character(
             name = name,
@@ -366,8 +389,6 @@ class Character(object):
         data = open_json("database/references/characters_ref.json")
         datadict = data[race][source][warband][category]
 
-# change from_dict_template to be able to load a reference and a real instance of a character with extra filled fields
-
         new_character = Character.from_dict(datadict = datadict, create = True)
         new_character.name = name
 
@@ -386,7 +407,7 @@ class Hero(Character):
         # open reference data json file
         data = open_json("database/references/characters_ref.json")
 
-        if data[race][source][warband][category].get("ishero") == False:
+        if data[race][source][warband][category]["ishero"] == False:
             print("Henchmen can't be added outside a squad")
         else:
             newhero = Character.create_character(name, race, source, warband, category)
@@ -398,7 +419,7 @@ class Henchman(Character):
         # open reference data json file
         data = open_json("database/references/characters_ref.json")
 
-        if data[race][source][warband][category].get("ishero") == True:
+        if data[race][source][warband][category]["ishero"] == True:
             print("Heroes can't be added to a squad")
         else:
             newhenchman = Character.create_character(name, race, source, warband, category)

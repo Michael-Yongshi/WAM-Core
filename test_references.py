@@ -25,18 +25,19 @@ if __name__ == "__main__":
         source = "Core Rules",
         name = "Reikland",
         rulelist = [
-            {"name": "Excellent Leadership", "description": "Reikland Mercenaries are accustomed to the demands of military discipline and have a strongly developed loyalty between officers and men. To represent this, fighters may use their Captain’s Leadership if within 12 inch rather than the usual 6 inch. "}, 
-            {"name": "Trained Marksmen", "description": "A strong tradition of martial training is also responsible for the high standards of archery amongst the people of Reikland. All Marksmen therefore start with 4 of Ballistic Skill instead of the normal 3, whether they are recruited when the warband is first formed or added later. "}, 
+            {"name": "Excellent Leadership", "description": "Reikland Mercenaries are accustomed to the demands of military discipline and have a strongly developed loyalty between officers and men. To represent this, fighters may use their Captain’s Leadership if within 12 inch rather than the usual 6 inch."}, 
+            {"name": "Trained Marksmen", "description": "A strong tradition of martial training is also responsible for the high standards of archery amongst the people of Reikland. All Marksmen therefore start with 4 of Ballistic Skill instead of the normal 3, whether they are recruited when the warband is first formed or added later."}, 
         ],
+        itemlist = [],
         start_gold = 500,
         description = (
-            "This is a time of unremitting war, civil strife, violence and famine. A time of orphan children and wanton slaughter. For warriors these are good times! Since the discovery of wyrdstone Mordheim has become a magnet for fighting men from all over the Empire. Nobles, merchants, and the Temple of Sigmar itself offer rich rewards for shards of the mysterious stone. "
-            "Foremost amongst the patrons of mercenary warriors are the three most powerful contenders for the Emperor’s throne: the Grand Prince of Reikland, the Count of Middenheim, and Lady Magritta of Marienburg – favourite of the merchant guilds. As a mercenary warband you must decide which of the three contenders for Sigmar’s throne you are fighting for. "
-            "Warbands from different places will vary in many respects, offering different benefits as well as having a unique appearance and character. "
-            "Reikland lies at the heart of the Empire and its greatest city is Altdorf, home of the Grand Theogonist and seat of the Temple of Sigmar. Reiklanders are devout followers of Sigmar, the founder, first Emperor, and patron god of the Empire. "
-            "The Grand Prince of Reikland (as Siegfried, the ruler of Reikland, styles himself) is supported in his claim to the throne by the Grand Theogonist and opposed most strongly by the Count of Middenheim and the Priests of Ulric. "
-            "Throughout the Empire Reiklanders are commonly supposed to embody the discipline and loyalty of the professional warrior. Brave and well-versed in the arts of war, Reiklanders disdain fashionable clothing in favour of well-made and practical wargear. " 
-            "In battle they often wear coloured ribbons as marks of identification or authority. They are justly proud of their dynamic and ambitious Grand Prince and contemptuous of other claimants to the throne, especially the Count of Middenheim, Mannfred Todbringer, whom they sneeringly call the ‘lap-dog of Ulric’. "
+            "This is a time of unremitting war, civil strife, violence and famine. A time of orphan children and wanton slaughter. For warriors these are good times! Since the discovery of wyrdstone Mordheim has become a magnet for fighting men from all over the Empire. Nobles, merchants, and the Temple of Sigmar itself offer rich rewards for shards of the mysterious stone."
+            "Foremost amongst the patrons of mercenary warriors are the three most powerful contenders for the Emperor’s throne: the Grand Prince of Reikland, the Count of Middenheim, and Lady Magritta of Marienburg – favourite of the merchant guilds. As a mercenary warband you must decide which of the three contenders for Sigmar’s throne you are fighting for."
+            "Warbands from different places will vary in many respects, offering different benefits as well as having a unique appearance and character."
+            "Reikland lies at the heart of the Empire and its greatest city is Altdorf, home of the Grand Theogonist and seat of the Temple of Sigmar. Reiklanders are devout followers of Sigmar, the founder, first Emperor, and patron god of the Empire."
+            "The Grand Prince of Reikland (as Siegfried, the ruler of Reikland, styles himself) is supported in his claim to the throne by the Grand Theogonist and opposed most strongly by the Count of Middenheim and the Priests of Ulric."
+            "Throughout the Empire Reiklanders are commonly supposed to embody the discipline and loyalty of the professional warrior. Brave and well-versed in the arts of war, Reiklanders disdain fashionable clothing in favour of well-made and practical wargear." 
+            "In battle they often wear coloured ribbons as marks of identification or authority. They are justly proud of their dynamic and ambitious Grand Prince and contemptuous of other claimants to the throne, especially the Count of Middenheim, Mannfred Todbringer, whom they sneeringly call the ‘lap-dog of Ulric’."
             "<i>-Ah, Reiklanders, the finest of men! Disciplined, magnificent archers and good, solid warriors! Reiklanders need the best leaders, so you’d better shape up boy! For these warriors are good at almost all the skills of war, and they are more likely to hold their nerve than others in Mordheim.-</i>"
         ),
     )
@@ -45,17 +46,18 @@ if __name__ == "__main__":
         source = "Core Rules",
         name = "Middenheim",
         rulelist = [
-            {"name": "Body Builders", "description": "The men of Middenheim are famous for their physical prowess. To represent their advantage in size and bulk, the Champions and Captains of a Middenheim warband start with Strength 4 instead of 3. "}, 
+            {"name": "Body Builders", "description": "The men of Middenheim are famous for their physical prowess. To represent their advantage in size and bulk, the Champions and Captains of a Middenheim warband start with Strength 4 instead of 3."}, 
         ],
+        itemlist = [],
         start_gold = 500,
         description = (
-            "This is a time of unremitting war, civil strife, violence and famine. A time of orphan children and wanton slaughter. For warriors these are good times! Since the discovery of wyrdstone Mordheim has become a magnet for fighting men from all over the Empire. Nobles, merchants, and the Temple of Sigmar itself offer rich rewards for shards of the mysterious stone. "
-            "Foremost amongst the patrons of mercenary warriors are the three most powerful contenders for the Emperor’s throne: the Grand Prince of Reikland, the Count of Middenheim, and Lady Magritta of Marienburg – favourite of the merchant guilds. As a mercenary warband you must decide which of the three contenders for Sigmar’s throne you are fighting for. "
-            "Warbands from different places will vary in many respects, offering different benefits as well as having a unique appearance and character. "
-            "Middenheim stands on a mountain pinnacle surrounded by dark forest in the centre of Middenland, and is also known as the City of the White Wolf after Ulric, the old god of wolves and winter. The Priesthood of Ulric is still strong in Middenheim where Ulric is venerated as the patron of the city. "
-            "The tradition of rivalry between Middenheim and Reikland goes back hundreds of years, and the Count of Middenheim, Mannfred Todbringer, is one of the chief contenders for the Emperor’s throne. As a result there has always been a great deal of friction between Middenheimers and the Temple of Sigmar. "
-            "Middenheimers are typically large, strongly built men with a well deserved reputation for ferocity. Many wear wolf pelts which custom decrees to be the mark of those who have slain a wolf with their own hands. These grim warriors are famously contemptuous of danger. "
-            "They frequently go into battle bare-headed, scoffing at those who choose, for reasons of good sense, to wear helmets. As Middenheimers favour long hair and beards their lack of headgear makes them look especially fierce when they charge upon their enemies howling their brutal battle-cries. "
+            "This is a time of unremitting war, civil strife, violence and famine. A time of orphan children and wanton slaughter. For warriors these are good times! Since the discovery of wyrdstone Mordheim has become a magnet for fighting men from all over the Empire. Nobles, merchants, and the Temple of Sigmar itself offer rich rewards for shards of the mysterious stone."
+            "Foremost amongst the patrons of mercenary warriors are the three most powerful contenders for the Emperor’s throne: the Grand Prince of Reikland, the Count of Middenheim, and Lady Magritta of Marienburg – favourite of the merchant guilds. As a mercenary warband you must decide which of the three contenders for Sigmar’s throne you are fighting for."
+            "Warbands from different places will vary in many respects, offering different benefits as well as having a unique appearance and character."
+            "Middenheim stands on a mountain pinnacle surrounded by dark forest in the centre of Middenland, and is also known as the City of the White Wolf after Ulric, the old god of wolves and winter. The Priesthood of Ulric is still strong in Middenheim where Ulric is venerated as the patron of the city."
+            "The tradition of rivalry between Middenheim and Reikland goes back hundreds of years, and the Count of Middenheim, Mannfred Todbringer, is one of the chief contenders for the Emperor’s throne. As a result there has always been a great deal of friction between Middenheimers and the Temple of Sigmar."
+            "Middenheimers are typically large, strongly built men with a well deserved reputation for ferocity. Many wear wolf pelts which custom decrees to be the mark of those who have slain a wolf with their own hands. These grim warriors are famously contemptuous of danger."
+            "They frequently go into battle bare-headed, scoffing at those who choose, for reasons of good sense, to wear helmets. As Middenheimers favour long hair and beards their lack of headgear makes them look especially fierce when they charge upon their enemies howling their brutal battle-cries."
             "<i>-These Northerners are nutters, madmen, berserkers! They are as strong as Ogres and meaner than Orcs. Watch out for them in close quarters – the chances are they’ll crush your skull with a hammer or behead you with one of those hefty axes they carry around with them.-</i>"
         ),
     )
@@ -64,19 +66,20 @@ if __name__ == "__main__":
         source = "Core Rules",
         name = "Marienburg",
         rulelist = [
-            {"name": "Natural Traders", "description": "As natural traders with contacts in the merchant guilds Marienburg warbands receive a +1 bonus when attempting to find rare items (see the Trading section for rules). To reflect their enormous wealth Marienburgers start off with an extra 100 gold crowns (600 in total) when fighting in a campaign. In a one-off game they are permitted an extra 20 percent gold crowns when recruiting a warband. For example, in a 1,000 gold crown game a Marienburger warband will have 1,200gc. "}, 
+            {"name": "Natural Traders", "description": "As natural traders with contacts in the merchant guilds Marienburg warbands receive a +1 bonus when attempting to find rare items (see the Trading section for rules). To reflect their enormous wealth Marienburgers start off with an extra 100 gold crowns (600 in total) when fighting in a campaign. In a one-off game they are permitted an extra 20 percent gold crowns when recruiting a warband. For example, in a 1,000 gold crown game a Marienburger warband will have 1,200gc."}, 
         ],
+        itemlist = [],
         start_gold = 600,
         description = (
-            "This is a time of unremitting war, civil strife, violence and famine. A time of orphan children and wanton slaughter. For warriors these are good times! Since the discovery of wyrdstone Mordheim has become a magnet for fighting men from all over the Empire. Nobles, merchants, and the Temple of Sigmar itself offer rich rewards for shards of the mysterious stone. "
-            "Foremost amongst the patrons of mercenary warriors are the three most powerful contenders for the Emperor’s throne: the Grand Prince of Reikland, the Count of Middenheim, and Lady Magritta of Marienburg – favourite of the merchant guilds. As a mercenary warband you must decide which of the three contenders for Sigmar’s throne you are fighting for. "
-            "Warbands from different places will vary in many respects, offering different benefits as well as having a unique appearance and character. "
-            "Marienburg is the largest and most prosperous trading city in the Old World. Many call it the City of Gold which alone conveys a good idea of the wealth of this sprawling cosmopolitan city. "
-            "Nowhere else can be found the vast array of shops selling goods from as far away as the Elven kingdoms of Ulthuan in the west and distant Cathay in the east. The city’s craftsmen represent every skill known to man, and a few others beside, so that it is said in Marienburg there is no activity that cannot be quickly turned to profit. "
-            "Many mercantile guilds have their headquarters in Marienburg, most important of all the secretive High Order of Honourable Freetraders which represents the elite amongst mercantile society. This large, rich, and ambitious body of men feel themselves shackled by the old order and are eager to seize power for themselves. "
-            "Their champion for the Emperor’s throne is the Lady Magritta. Thanks to the unseen influence of Freetraders throughout the Empire all the minor Electors were persuaded to support the Lady Magritta’s claim. It was only the Grand Theogonist’s refusal to crown her that denied Marienburg the throne driving a wedge between the City of Gold and the Temple of Sigmar. "
-            "Warbands sent to Mordheim are sumptuously dressed and armed. Though Marienburgers are often ridiculed as foppish and effete, their skill at arms and complete ruthlessness has earned them grudging respect. Their chief skills lie in duelling and in the use of poisons and other clandestine fighting methods. Richer individuals dress flamboyantly and wear jewellery. "
-            "However, the bulk of most warbands are recruited from the dockland thugs, ships’ crews, and stevedores who favour a simpler appearance: leather coats, bandanas and short swords that are easy to conceal. "
+            "This is a time of unremitting war, civil strife, violence and famine. A time of orphan children and wanton slaughter. For warriors these are good times! Since the discovery of wyrdstone Mordheim has become a magnet for fighting men from all over the Empire. Nobles, merchants, and the Temple of Sigmar itself offer rich rewards for shards of the mysterious stone."
+            "Foremost amongst the patrons of mercenary warriors are the three most powerful contenders for the Emperor’s throne: the Grand Prince of Reikland, the Count of Middenheim, and Lady Magritta of Marienburg – favourite of the merchant guilds. As a mercenary warband you must decide which of the three contenders for Sigmar’s throne you are fighting for."
+            "Warbands from different places will vary in many respects, offering different benefits as well as having a unique appearance and character."
+            "Marienburg is the largest and most prosperous trading city in the Old World. Many call it the City of Gold which alone conveys a good idea of the wealth of this sprawling cosmopolitan city."
+            "Nowhere else can be found the vast array of shops selling goods from as far away as the Elven kingdoms of Ulthuan in the west and distant Cathay in the east. The city’s craftsmen represent every skill known to man, and a few others beside, so that it is said in Marienburg there is no activity that cannot be quickly turned to profit."
+            "Many mercantile guilds have their headquarters in Marienburg, most important of all the secretive High Order of Honourable Freetraders which represents the elite amongst mercantile society. This large, rich, and ambitious body of men feel themselves shackled by the old order and are eager to seize power for themselves."
+            "Their champion for the Emperor’s throne is the Lady Magritta. Thanks to the unseen influence of Freetraders throughout the Empire all the minor Electors were persuaded to support the Lady Magritta’s claim. It was only the Grand Theogonist’s refusal to crown her that denied Marienburg the throne driving a wedge between the City of Gold and the Temple of Sigmar."
+            "Warbands sent to Mordheim are sumptuously dressed and armed. Though Marienburgers are often ridiculed as foppish and effete, their skill at arms and complete ruthlessness has earned them grudging respect. Their chief skills lie in duelling and in the use of poisons and other clandestine fighting methods. Richer individuals dress flamboyantly and wear jewellery."
+            "However, the bulk of most warbands are recruited from the dockland thugs, ships’ crews, and stevedores who favour a simpler appearance: leather coats, bandanas and short swords that are easy to conceal."
             "<i>-Don’t let their fancy clothes and flash jewellery fool you, though. They’re not wearing those weapons just for show, they know how to use them as well!-</i>"
         ),
     )
@@ -85,17 +88,18 @@ if __name__ == "__main__":
         source = "Core Rules",
         name = "The Cult of the Possessed",
         rulelist = [],
+        itemlist = [],
         start_gold = 500,
         description = (
             "There is never any shortage of men willing to risk their lives for a chance of real power: men whose ambitions lie beyond the scope of their birthright, or whose sorcerous skills or physical deformities place them in constant danger of persecution. What do such men have to lose if they pledge their souls to the dark gods of Chaos!"
-            "In the aftermath of the destruction of Mordheim all manner of mutants have appeared whilst many hitherto unblemished folk feel the stirring of strange powers, the first awakenings of magical gifts destined to bring them to a fiery death at the hands of the Witch Hunters. Now a leader has appeared, a new Dark Emperor, who claims lordship of the City of the Damned. "
-            "He is called the Shadowlord, Master of the Possessed, and followers of the cults of Chaos gather from all over the Empire to pledge their souls to him. Though none know whether he is man or Daemon all proclaim him their saviour and eagerly seek to do his bidding. As all students of the dark arts know, it is by the power of magic that creatures such as Daemons and spirits are able to stalk the mortal world. "
-            "The wyrdstone that proliferates in Mordheim grants unnatural life to many vile things that by all natural rights should never exist. The Possessed were once men but by surrendering themselves wholly to the dark gods they have allowed Daemons to possess their bodies. Their appearance is horrific – corrupted from within, their flesh is twisted into a new and monstrous form. "
-            "With the power of the Possessed behind them the followers of the Shadowlord have grown powerful in Mordheim. In the Massacre of Silver Street the Cult of the Possessed ambushed and destroyed a large force sent in to hunt them down. Now the streets of Mordheim belong to the Shadowlord and his servants. The contaminated air does not affect them at all or, more likely, it nourishes their inner corruption. "
-            "Men who venture into Mordheim alone are hunted down and sacrificed to the dark gods. All warbands of the Possessed gather wyrdstone for the Shadowlord who remains hidden in the Pit where he is said to be guarded by titanic Possessed the size of houses. A few shards of the precious stone are kept by the warbands and used to create more of the Possessed. Cult of the possessed. "
+            "In the aftermath of the destruction of Mordheim all manner of mutants have appeared whilst many hitherto unblemished folk feel the stirring of strange powers, the first awakenings of magical gifts destined to bring them to a fiery death at the hands of the Witch Hunters. Now a leader has appeared, a new Dark Emperor, who claims lordship of the City of the Damned."
+            "He is called the Shadowlord, Master of the Possessed, and followers of the cults of Chaos gather from all over the Empire to pledge their souls to him. Though none know whether he is man or Daemon all proclaim him their saviour and eagerly seek to do his bidding. As all students of the dark arts know, it is by the power of magic that creatures such as Daemons and spirits are able to stalk the mortal world."
+            "The wyrdstone that proliferates in Mordheim grants unnatural life to many vile things that by all natural rights should never exist. The Possessed were once men but by surrendering themselves wholly to the dark gods they have allowed Daemons to possess their bodies. Their appearance is horrific – corrupted from within, their flesh is twisted into a new and monstrous form."
+            "With the power of the Possessed behind them the followers of the Shadowlord have grown powerful in Mordheim. In the Massacre of Silver Street the Cult of the Possessed ambushed and destroyed a large force sent in to hunt them down. Now the streets of Mordheim belong to the Shadowlord and his servants. The contaminated air does not affect them at all or, more likely, it nourishes their inner corruption."
+            "Men who venture into Mordheim alone are hunted down and sacrificed to the dark gods. All warbands of the Possessed gather wyrdstone for the Shadowlord who remains hidden in the Pit where he is said to be guarded by titanic Possessed the size of houses. A few shards of the precious stone are kept by the warbands and used to create more of the Possessed. Cult of the possessed."
             "The leaders of cult warbands are called Magisters and each leads a group of cultists: minions of the dark gods of Chaos. These are men whose hunger for power knows no bounds, who willingly give their bodies over to possession. All take part in the blood sacrifices, dark rituals, and worship of Daemons – nothing is too base for them!"
-            "These degenerate humans are joined by other creatures as vile as they – things half-man half-beast that call themselves Gors, and which men refer to as Beastmen. There are few sights as horrific as a cult warband. Deranged warriors smeared with blood and dirt wave jagged weapons and chant blasphemous rites as they throw themselves upon their foes. "
-            "Many are hardly recognisable as human, their bodies are so scarred and disfigured. The stigmata of mutation is borne by most, but the most unsettling of all are the Possessed themselves – melded flesh made of men, beasts, and metal driven by the implacable will of a Daemon. "
+            "These degenerate humans are joined by other creatures as vile as they – things half-man half-beast that call themselves Gors, and which men refer to as Beastmen. There are few sights as horrific as a cult warband. Deranged warriors smeared with blood and dirt wave jagged weapons and chant blasphemous rites as they throw themselves upon their foes."
+            "Many are hardly recognisable as human, their bodies are so scarred and disfigured. The stigmata of mutation is borne by most, but the most unsettling of all are the Possessed themselves – melded flesh made of men, beasts, and metal driven by the implacable will of a Daemon."
             "<i>-The Possessed. The Damned. The bogeymen. These scum are the worst of the worst. They are dangerous creatures, perhaps more so than any other group in the entire city. This Chaos-worshipping scum consists of mutants, Beastmen and cultists, and even worse things called the Possessed. If you ever let them get close to you, you’ll be in big trouble – there are few who are a match for this scum in close quarters.-</i>"
         ),
     )
@@ -104,15 +108,16 @@ if __name__ == "__main__":
         source = "Core Rules",
         name = "Witch Hunters",
         rulelist = [],
+        itemlist = [],
         start_gold = 500,
         description = (
-            "The Order of the Templars of Sigmar, universally known as the Witch Hunters, is an organisation dedicated to the eradication of heretics, be they warlocks, witches, sorcerers, fortune-tellers, necromancers, worshippers of the dark gods, deviants, mutants, blasphemers, sinners, utterers of profanities, servants of Daemons, or composers of corrupting music. "
-            "Indeed, there are few who altogether escape the suspicions of the Witch Hunters with the possible exception of other Witch Hunters. It is wise to remember that the practice of magic in all its forms is deemed a most heinous crime in the Empire. Death by fire is the proscribed punishment for this particular heresy. Many of the Witch Hunters’ victims treacherously avoid their fate by perishing under torture before making a full confession. "
+            "The Order of the Templars of Sigmar, universally known as the Witch Hunters, is an organisation dedicated to the eradication of heretics, be they warlocks, witches, sorcerers, fortune-tellers, necromancers, worshippers of the dark gods, deviants, mutants, blasphemers, sinners, utterers of profanities, servants of Daemons, or composers of corrupting music."
+            "Indeed, there are few who altogether escape the suspicions of the Witch Hunters with the possible exception of other Witch Hunters. It is wise to remember that the practice of magic in all its forms is deemed a most heinous crime in the Empire. Death by fire is the proscribed punishment for this particular heresy. Many of the Witch Hunters’ victims treacherously avoid their fate by perishing under torture before making a full confession."
             "In these troubled times the Witch Hunters are kept busy as more and more men turn to the dark arts. The most dangerous of all these heretics are the followers of the Chaos gods. These depraved individuals practise Daemon worship and (it is claimed) even offer human sacrifices in the name of their vile masters. Of all the enemies of Sigmar they are the most abhorrent! "
-            "The destruction of Mordheim has fired the Witch Hunters with a new and irresistible sense of purpose. In the light of events the Grand Theogonist has proclaimed Sigmar’s punishment on the City of the Damned. The Witch Hunters rejoice that their crusade against widespread corruption has been vindicated. Now they are ready to complete Sigmar’s holy purpose by destroying his enemies within the ruins of the city itself. "
-            "The Grand Theogonist has commanded the Witch Hunters to go unto that place and recover the wyrdstone for Sigmar’s temple. Their crusade also pits them into the same arena as their old enemies the so-called Sisters of Sigmar – those loathsome Daemon-worshipping she-heretics whose very existence is a vile affront to the majesty of Sigmar. Witch Hunters are charismatic rabble-rousers who can soon turn a crowd to their own ends. "
-            "They are universally dreaded, for everyone has something or someone to hide, and there are countless individuals who would willingly and enthusiastically hunt down and burn their own kin were a Witch Hunter to command them to do so. Bands of Witch Hunters are often accompanied by zealous citizens, Flagellants, and even holy Priests of Sigmar as well as the huge vicious warhounds which the Witch Hunters employ to track and bring down fugitives. "
-            "As men accustomed to fighting Witch Hunters are well-armed and sturdy individuals. They favour hooded cloaks and headgear which conceal their appearance from the overly curious. Some wear chains about their throats to remind them of fallen comrades and old rivalries and also, so it is said, so that the iron might serve as protection against witchcraft. "
+            "The destruction of Mordheim has fired the Witch Hunters with a new and irresistible sense of purpose. In the light of events the Grand Theogonist has proclaimed Sigmar’s punishment on the City of the Damned. The Witch Hunters rejoice that their crusade against widespread corruption has been vindicated. Now they are ready to complete Sigmar’s holy purpose by destroying his enemies within the ruins of the city itself."
+            "The Grand Theogonist has commanded the Witch Hunters to go unto that place and recover the wyrdstone for Sigmar’s temple. Their crusade also pits them into the same arena as their old enemies the so-called Sisters of Sigmar – those loathsome Daemon-worshipping she-heretics whose very existence is a vile affront to the majesty of Sigmar. Witch Hunters are charismatic rabble-rousers who can soon turn a crowd to their own ends."
+            "They are universally dreaded, for everyone has something or someone to hide, and there are countless individuals who would willingly and enthusiastically hunt down and burn their own kin were a Witch Hunter to command them to do so. Bands of Witch Hunters are often accompanied by zealous citizens, Flagellants, and even holy Priests of Sigmar as well as the huge vicious warhounds which the Witch Hunters employ to track and bring down fugitives."
+            "As men accustomed to fighting Witch Hunters are well-armed and sturdy individuals. They favour hooded cloaks and headgear which conceal their appearance from the overly curious. Some wear chains about their throats to remind them of fallen comrades and old rivalries and also, so it is said, so that the iron might serve as protection against witchcraft."
             "The followers of the Witch Hunters, the rabble that accompany  them to Mordheim, are a far more dire sight indeed – crazed and self-mutilated men who have lost or surrendered all their worldly goods and, most likely, their reason as well."
             "<i>-Witch Hunters will burn you and your warband if you give them the slightest reason. They are well armed and equipped, and show no mercy to anyone who dares to stand in their way. They are followed everywhere in Mordheim by a rabble of fanatics and those crazed Flagellants. One word from a Witch Hunter and they’ll tear you apart, burn you, decapitate you and excommunicate you from the grace of Sigmar.-</i>"
         ),
@@ -122,17 +127,18 @@ if __name__ == "__main__":
         source = "Core Rules",
         name = "Sisters of Sigmar",
         rulelist = [],
+        itemlist = [],
         start_gold = 500,
         description = (
-            "For centuries the nobility of the Empire has sent its wayward or troublesome daughters to the Holy Convent of the Order of Merciful Sisters of Sigmar in Mordheim to be initiated into the only order of priestesses dedicated to the Empire’s patron god. The Sisters of Sigmar, as they are commonly called, have traditionally travelled the Empire administering to the sick and poor, tending to the needs of orphans, curing the diseased and mending broken bodies. "
-            "As well as the healing arts, which they practise with expert knowledge of herb-lore and prayer, their advice is frequently sought by those about to make an important decision, for the Sisters of Sigmar are famed for their ability to predict the fickle course of fate. Though once much loved by the common people, the Sisters have seen their popularity wane in recent years. "
-            "Rabble-rousing Witch Hunters have denounced them as witches and heretics, so that even in the countryside they are attacked and driven away by the very peasants they seek to help. Many of Sigmar’s priests wish to disband the order altogether, claiming that women have no right to teach the holy word of Sigmar. "
-            "Even the Grand Theogonist, ostensibly the chief authority over the order, has cooled towards the sisterhood, denying the throne to Magritta of Marienburg who was brought up by the Sisters and said to be sympathetic to their cause. These days the Sisters of Sigmar have retreated to their convent situated high on the craggy island of Sigmar’s Rock in the river Stir in Mordheim. "
-            "Of all the inhabitants of Mordheim only the Sisters of Sigmar were prepared for its destruction. Seeress Cassandora foretold of the disaster and at their nightly vigil the Maidens of Sigmar heard the voice of Sigmar speaking in their dreaming minds. "
-            "Thus they knew that they would be safe in their fortress high above the city, raised as it is above the polluted vapours, if only they were prepared to survive the fire of Sigmar’s Fury. While the rest of Mordheim fell under a spell of madness the Sisters of Sigmar offered prayer after prayer, scourging themselves to drive out all thoughts of sin, fervently accepting a punishing penitential regime to harden their minds against the wantonness running rampant outside their walls. "
-            "When the blow finally came the Sisters gathered beneath the great temple dome of their convent which, well built and fortified as it was by the prayers of the Sisters, protected them from the fire and heat of their master’s ire. "
-            "The Sisters believe they have a holy mission, a task that they have been set by Sigmar himself and to which they must submit themselves body and soul. Their sacred duty is to gather up the shards of wyrdstone and hide it deep beneath Sigmar’s Rock in the vaults of their convent where, shielded by a great depth of solid granite and guarded by the eternal prayers of the sisterhood, it will cause no harm to Sigmar’s people. "
-            "It is a nigh hopeless task, for there are few Sisters and countless shards of stone. Worse still, there are many who want the stone for themselves, to take it from Mordheim and spread its contagion amongst the cities of the Empire.  The warbands of the sisterhood are led by tough Matriarchs, each accompanied by a body of warrior sisters. "
+            "For centuries the nobility of the Empire has sent its wayward or troublesome daughters to the Holy Convent of the Order of Merciful Sisters of Sigmar in Mordheim to be initiated into the only order of priestesses dedicated to the Empire’s patron god. The Sisters of Sigmar, as they are commonly called, have traditionally travelled the Empire administering to the sick and poor, tending to the needs of orphans, curing the diseased and mending broken bodies."
+            "As well as the healing arts, which they practise with expert knowledge of herb-lore and prayer, their advice is frequently sought by those about to make an important decision, for the Sisters of Sigmar are famed for their ability to predict the fickle course of fate. Though once much loved by the common people, the Sisters have seen their popularity wane in recent years."
+            "Rabble-rousing Witch Hunters have denounced them as witches and heretics, so that even in the countryside they are attacked and driven away by the very peasants they seek to help. Many of Sigmar’s priests wish to disband the order altogether, claiming that women have no right to teach the holy word of Sigmar."
+            "Even the Grand Theogonist, ostensibly the chief authority over the order, has cooled towards the sisterhood, denying the throne to Magritta of Marienburg who was brought up by the Sisters and said to be sympathetic to their cause. These days the Sisters of Sigmar have retreated to their convent situated high on the craggy island of Sigmar’s Rock in the river Stir in Mordheim."
+            "Of all the inhabitants of Mordheim only the Sisters of Sigmar were prepared for its destruction. Seeress Cassandora foretold of the disaster and at their nightly vigil the Maidens of Sigmar heard the voice of Sigmar speaking in their dreaming minds."
+            "Thus they knew that they would be safe in their fortress high above the city, raised as it is above the polluted vapours, if only they were prepared to survive the fire of Sigmar’s Fury. While the rest of Mordheim fell under a spell of madness the Sisters of Sigmar offered prayer after prayer, scourging themselves to drive out all thoughts of sin, fervently accepting a punishing penitential regime to harden their minds against the wantonness running rampant outside their walls."
+            "When the blow finally came the Sisters gathered beneath the great temple dome of their convent which, well built and fortified as it was by the prayers of the Sisters, protected them from the fire and heat of their master’s ire."
+            "The Sisters believe they have a holy mission, a task that they have been set by Sigmar himself and to which they must submit themselves body and soul. Their sacred duty is to gather up the shards of wyrdstone and hide it deep beneath Sigmar’s Rock in the vaults of their convent where, shielded by a great depth of solid granite and guarded by the eternal prayers of the sisterhood, it will cause no harm to Sigmar’s people."
+            "It is a nigh hopeless task, for there are few Sisters and countless shards of stone. Worse still, there are many who want the stone for themselves, to take it from Mordheim and spread its contagion amongst the cities of the Empire.  The warbands of the sisterhood are led by tough Matriarchs, each accompanied by a body of warrior sisters."
             "The training and harsh discipline of the convent includes mastery of martial as well as ecclesiastic skills, for mastery of the body is but the first step towards the mastery of the soul. Their favoured weapon is the warhammer, the instrument of Sigmar, seen as his holy symbol, alongside the twintailed comet."
             "<i>-Don’t believe everything those Witch Hunters say about the Sisters. They’re no more heretics than I am and I’ll skewer any man that says different. Not that the Sisters need looking after – they’re mean fighters and you gotta be tough just to live like they do in that big fortress in the middle of Mordheim.-</i>"
         ),
@@ -142,14 +148,15 @@ if __name__ == "__main__":
         source = "Core Rules",
         name = "The Undead",
         rulelist = [],
+        itemlist = [],
         start_gold = 500,
         description = (
-            "Count Vlad von Carstein and his wife Isabella have ruled the province of Sylvania for as long as anyone can remember – peasants whisper of some dark secret, Witch Hunters revile them, and the Priests of Sigmar shun their court. Indeed, Sylvania has the most dire reputation of all the provinces of the Empire. "
-            "Few men sent to spy on the rulers of Sylvania have ever returned from those dark Sylvanian forests, and then rarely with their sanity intact. In the dimly-lit chamber of the Drakenhof castle, on a throne of black obsidian, sits Vlad von Carstein, the ruler of Sylvania. He waits in shadows, having set himself apart from the politics and bickering of the Empire. "
-            "For he holds a terrible secret: he, and all the ruling aristocracy of his province are Vampires, undying monsters from beyond the grave. Here he patiently waits, drinking the blood of maidens from gold goblets. For many long years Vlad has gathered his strength and mustered his Undead legions in secrecy. "
-            "One day soon he will march from the forests of Sylvania at the head of an army of restless dead. The pieces of magic stone that lie scattered among the ruins of Mordheim can give the Count the power to challenge the nobles of the Empire and enslave the men of the Old World. "
-            "Wyrdstone holds enough captured magical energy to unleash a great spell of doom to rival that of Nagash the Black. If the Count is successful, he will raise all the dead between the Worlds Edge Mountains and the borders of Stirland, and go to war against the divided rulers of the Empire. "
-            "His plans laid out, Vlad sends his thralls, the immortal Vampires, to do his bidding. During dark, moonless nights, black coaches arrive at the gates of Mordheim carrying coffins. Ghouls scuttle from their hiding places to greet them, and corpses are stirred by a command which the living cannot hear. Following the commands of the Vampire, they hunt for shards of wyrdstone. The night belongs to the Undead, and in Mordheim it is always night. "
+            "Count Vlad von Carstein and his wife Isabella have ruled the province of Sylvania for as long as anyone can remember – peasants whisper of some dark secret, Witch Hunters revile them, and the Priests of Sigmar shun their court. Indeed, Sylvania has the most dire reputation of all the provinces of the Empire."
+            "Few men sent to spy on the rulers of Sylvania have ever returned from those dark Sylvanian forests, and then rarely with their sanity intact. In the dimly-lit chamber of the Drakenhof castle, on a throne of black obsidian, sits Vlad von Carstein, the ruler of Sylvania. He waits in shadows, having set himself apart from the politics and bickering of the Empire."
+            "For he holds a terrible secret: he, and all the ruling aristocracy of his province are Vampires, undying monsters from beyond the grave. Here he patiently waits, drinking the blood of maidens from gold goblets. For many long years Vlad has gathered his strength and mustered his Undead legions in secrecy."
+            "One day soon he will march from the forests of Sylvania at the head of an army of restless dead. The pieces of magic stone that lie scattered among the ruins of Mordheim can give the Count the power to challenge the nobles of the Empire and enslave the men of the Old World."
+            "Wyrdstone holds enough captured magical energy to unleash a great spell of doom to rival that of Nagash the Black. If the Count is successful, he will raise all the dead between the Worlds Edge Mountains and the borders of Stirland, and go to war against the divided rulers of the Empire."
+            "His plans laid out, Vlad sends his thralls, the immortal Vampires, to do his bidding. During dark, moonless nights, black coaches arrive at the gates of Mordheim carrying coffins. Ghouls scuttle from their hiding places to greet them, and corpses are stirred by a command which the living cannot hear. Following the commands of the Vampire, they hunt for shards of wyrdstone. The night belongs to the Undead, and in Mordheim it is always night."
             "<i>-The Restless Dead plague Mordheim. Zombies, Ghouls and huge hellhounds prowl the streets, and woe to anyone caught by them. He’ll be eaten alive, or end up as one of the walking corpses himself. I lost my eye to one of the fanged horrors who leads the Undead. Let me tell you, that thing was not human. I put my sword through it and it still kept coming.-</i>"
         ),
     )
@@ -158,15 +165,16 @@ if __name__ == "__main__":
         source = "Core Rules",
         name = "Skaven",
         rulelist = [],
+        itemlist = [],
         start_gold = 500,
         description = (
-            "Unbeknownst to man, for thousands of years he has shared his world with another and altogether different race. There have always been signs for those who cared to see them: a scurrying black shadow, an inhuman scream from the sewer, scuttling shapes at the back of the cellar. All these years these creatures have worked away in secret, burrowing beneath the world of man, undermining his great cities, infiltrating his sewers and cellars, and joining all up into a vast worldspanning labyrinth of tunnels and nests. "
-            "These creatures call themselves Skaven and they are ratmen, the mutant spawn of an older age of chaos and mutation. Doubtless one day the Skaven will be ready to emerge from their tunnels and wage open war upon mankind. For centuries they have been content to feed upon his ruins, to seed plague in his cities, and spread contagion amongst his lands. At least they were content to wait and watch, for now everything has suddenly changed. "
-            "Now the destruction of Mordheim has created new opportunities in the secret war against mankind. Since ancient times the Skaven have searched the world for the stones of power that men in their ignorance call wyrdstone but which Skaven have long since known as warpstone, blackstone, or seerstone. "
-            "It was as a result of gnawing upon this magic stone in ages past that commonplace rats began the slow process of mutation that spawned the Skaven race. Wyrdstone is quite literally in their blood, for they feed upon it and make use of it in their foul sorceries. "
-            "Until now the ratmen’s search for wyrdstone has been difficult and time-consuming as the stone has grown increasingly rare, but now a new and abundant source has appeared – a dark blessing from the skies! For the Skaven of Clan Eshin, this is an especially opportune time for such a thing to happen, for, just as the Empire is divided, so the Skaven race is divided amongst itself. "
-            "Clan fights clan the world over, each struggling for domination of the Council of Thirteen whose masters rule the Skaven race. Mordheim’s secret is not yet revealed to all the clans, or else the City of the Damned would already be overrun with ratmen. The Nightmaster of Clan Eshin is keen to guard this secret, and for this reason has not sent his multitudinous armies into Mordheim. "
-            "Instead, he has sent small warbands of Skaven skittering through secret tunnels into the city to gather up the shining stones and bring them back to the clan nests. The Skaven of Clan Eshin are supremely adapted to their task. Masters of the art of bringing silent death to their foes, they are skilled in the use of poison and trained in the thousand secrets of the assassin. "
+            "Unbeknownst to man, for thousands of years he has shared his world with another and altogether different race. There have always been signs for those who cared to see them: a scurrying black shadow, an inhuman scream from the sewer, scuttling shapes at the back of the cellar. All these years these creatures have worked away in secret, burrowing beneath the world of man, undermining his great cities, infiltrating his sewers and cellars, and joining all up into a vast worldspanning labyrinth of tunnels and nests."
+            "These creatures call themselves Skaven and they are ratmen, the mutant spawn of an older age of chaos and mutation. Doubtless one day the Skaven will be ready to emerge from their tunnels and wage open war upon mankind. For centuries they have been content to feed upon his ruins, to seed plague in his cities, and spread contagion amongst his lands. At least they were content to wait and watch, for now everything has suddenly changed."
+            "Now the destruction of Mordheim has created new opportunities in the secret war against mankind. Since ancient times the Skaven have searched the world for the stones of power that men in their ignorance call wyrdstone but which Skaven have long since known as warpstone, blackstone, or seerstone."
+            "It was as a result of gnawing upon this magic stone in ages past that commonplace rats began the slow process of mutation that spawned the Skaven race. Wyrdstone is quite literally in their blood, for they feed upon it and make use of it in their foul sorceries."
+            "Until now the ratmen’s search for wyrdstone has been difficult and time-consuming as the stone has grown increasingly rare, but now a new and abundant source has appeared – a dark blessing from the skies! For the Skaven of Clan Eshin, this is an especially opportune time for such a thing to happen, for, just as the Empire is divided, so the Skaven race is divided amongst itself."
+            "Clan fights clan the world over, each struggling for domination of the Council of Thirteen whose masters rule the Skaven race. Mordheim’s secret is not yet revealed to all the clans, or else the City of the Damned would already be overrun with ratmen. The Nightmaster of Clan Eshin is keen to guard this secret, and for this reason has not sent his multitudinous armies into Mordheim."
+            "Instead, he has sent small warbands of Skaven skittering through secret tunnels into the city to gather up the shining stones and bring them back to the clan nests. The Skaven of Clan Eshin are supremely adapted to their task. Masters of the art of bringing silent death to their foes, they are skilled in the use of poison and trained in the thousand secrets of the assassin."
             "Since birth Skaven warriors practise martial crafts in the ruinous temples of the Horned Rat, their everhungering and hideous god. There are none better amongst their verminous kind to gather up the treasure of Mordheim, but they must be silent, swift and efficient. Were rival Skaven clans to discover the secret of Mordheim there would come not hundreds, not thousands, but millions upon millions to contend for the wyrdstone in the City of the Damned."
             "<i>-These are no ordinary vermin - big as a man, fast on their feet, and smart too, not like common rats. The whole city’s full of ’em and the worse of it is they’re waitin’ in the old drains and sewers, watchin’ for a chance to catch you on your own. Let ’em and you’re a dead man.-</i>"
         ),
@@ -182,11 +190,12 @@ if __name__ == "__main__":
             {"name": "The Old Ways", "description": "The High Elves may never use black powder weapons of any sort. This goes against their ancestors and the traditions of the Old Ways."},
             {"name": "Resolve", "description": "The High Elves have been fighting the Dark Elves for countless centuries. When fighting their dark kin the High Elves are driven by unwavering determination. They are considered to have a Leadership of 10 when taking Rout Tests against the Dark Elves. In addition, High Elves can never choose to voluntarily Rout as they must stop their evil kin at any cost."},
         ],
+        itemlist = [],
         start_gold = 500,
         description = (
-            "The Citadel of Dusk was built for the dual purpose of guarding the seaways off the east coast of Lustria against incursions from the rest of the world, and as a staging post from which the High Elves could watch the movements of the Lizardmen and their Slann masters. Despite the High Elves’ best efforts to keep Lustria free of human adventurers, the people of the Old World have been dogged in their attempts to penetrate Ulthuan’s extensive naval web and explore the jungle continent. "
-            "So far the mighty Slann Mages have not appeared unduly concerned by the constant incursions onto their lands by the greedy peoples of the Old World and Naggaroth, and appear to have done little to prevent these predatory races from returning. Yet the High Elves know that despite the Slann`s relative calm in the face of these constant raids, the patience of ancient Mage-Priests is not limitless. "
-            "The Elves fear that the Slann might one day rouse themselves from their century-long meditations to make a concerted effort to end any and all threats to the continuation of their culture as the inheritors of the Old Ones. If the Slann were to throw all their intellect and resources into total war, they could conceivably wipe out whole nations before they could be stopped, such is their awesome power. "
+            "The Citadel of Dusk was built for the dual purpose of guarding the seaways off the east coast of Lustria against incursions from the rest of the world, and as a staging post from which the High Elves could watch the movements of the Lizardmen and their Slann masters. Despite the High Elves’ best efforts to keep Lustria free of human adventurers, the people of the Old World have been dogged in their attempts to penetrate Ulthuan’s extensive naval web and explore the jungle continent."
+            "So far the mighty Slann Mages have not appeared unduly concerned by the constant incursions onto their lands by the greedy peoples of the Old World and Naggaroth, and appear to have done little to prevent these predatory races from returning. Yet the High Elves know that despite the Slann`s relative calm in the face of these constant raids, the patience of ancient Mage-Priests is not limitless."
+            "The Elves fear that the Slann might one day rouse themselves from their century-long meditations to make a concerted effort to end any and all threats to the continuation of their culture as the inheritors of the Old Ones. If the Slann were to throw all their intellect and resources into total war, they could conceivably wipe out whole nations before they could be stopped, such is their awesome power."
             "Fearing for their own survival as much as anything else, the High Elves have taken it upon themselves to keep Lustria secure from the predations of all other races, and protect the ancient secrets left behind by the Old Ones that the Slann safeguard. The High Elves` cause has not been helped by the many fantastic stories that persist throughout the Old World; stories of lost cities made entirely of gold lying hidden within its dense foliage, just waiting to be discovered and plundered."
         ),
     )
@@ -200,6 +209,9 @@ if __name__ == "__main__":
             {"name": "Honourable", "description": "High Elves can never use poison or drugs of any kind no matter what the circumstance."},
             {"name": "The Old Ways", "description": "The High Elves may never use black powder weapons of any sort. This goes against their ancestors and the traditions of the Old Ways."},
             {"name": "Resolve", "description": "The High Elves have been fighting the Dark Elves for countless centuries. When fighting their dark kin the High Elves are driven by unwavering determination. They are considered to have a Leadership of 10 when taking Rout Tests against the Dark Elves. In addition, High Elves can never choose to voluntarily Rout as they must stop their evil kin at any cost."},
+        ],
+        itemlist = [
+            {"source": "Broheim", "category": "Other", "name": "Wyrdbreaker"},
         ],
         start_gold = 500,
         description = (
@@ -235,12 +247,12 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 20,
         price = 60,
         maxcount = 1,
-        description = "A Mercenary Captain is a tough professional warrior, a man who will fight for anyone or against anything so long as the price is right. Mordheim offers such a man the chance to become rich beyond his dreams, though at great risk. But as ruthlessness and lack of mercy and pity are the hallmarks of a successful Mercenary Captain, it is no wonder that they flock to Mordheim. "
+        description = "A Mercenary Captain is a tough professional warrior, a man who will fight for anyone or against anything so long as the price is right. Mordheim offers such a man the chance to become rich beyond his dreams, though at great risk. But as ruthlessness and lack of mercy and pity are the hallmarks of a successful Mercenary Captain, it is no wonder that they flock to Mordheim."
         )
     add_characterref(
         race = "Human",
@@ -252,12 +264,12 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 8,
         price = 35,
         maxcount = 2,
-        description = "In any Mercenary warband there is one warrior who is bigger, stronger (and often uglier) than his comrades. These men are called Champions (or berserkers, first swordsmen and various other names). Champions are amongst the toughest and the best fighters in the warband. They often answer challenges issued to the warband and, after the Captain, they get the pick of any equipment and loot. "
+        description = "In any Mercenary warband there is one warrior who is bigger, stronger (and often uglier) than his comrades. These men are called Champions (or berserkers, first swordsmen and various other names). Champions are amongst the toughest and the best fighters in the warband. They often answer challenges issued to the warband and, after the Captain, they get the pick of any equipment and loot."
         )
     add_characterref(
         race = "Human",
@@ -269,12 +281,12 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 15,
         maxcount = 2,
-        description = "These are young fighters who are still inexperienced, but eager to win their spurs in the savage fighting in and around the ruins of Mordheim. "
+        description = "These are young fighters who are still inexperienced, but eager to win their spurs in the savage fighting in and around the ruins of Mordheim."
         )
     add_characterref(
         race = "Human",
@@ -286,12 +298,12 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 25,
         maxcount = 0,
-        description = "These dogs of war are grim, seasoned fighters, fearing no man as long as they have their weapons and armour. They form the core of any Mercenary warband. "
+        description = "These dogs of war are grim, seasoned fighters, fearing no man as long as they have their weapons and armour. They form the core of any Mercenary warband."
         )
     add_characterref(
         race = "Human",
@@ -303,12 +315,12 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 25,
         maxcount = 7,
-        description = "The archers and hunters of the Old World are famed for their skill, and it is said that they can hit a coin from 300 paces with a long bow. In the savage street fights of Mordheim they snipe at the enemy from the windows of ruined buildings and pick out enemy leaders with their arrows. "
+        description = "The archers and hunters of the Old World are famed for their skill, and it is said that they can hit a coin from 300 paces with a long bow. In the savage street fights of Mordheim they snipe at the enemy from the windows of ruined buildings and pick out enemy leaders with their arrows."
         )
     add_characterref(
         race = "Human",
@@ -322,12 +334,12 @@ if __name__ == "__main__":
             ],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 35,
         maxcount = 5,
-        description = "Swordsmen are professional warriors, experts at taking on and beating several opponents at once. They are much sought after by warband leaders, as their skills are ideally suited for fighting in Mordheim. "
+        description = "Swordsmen are professional warriors, experts at taking on and beating several opponents at once. They are much sought after by warband leaders, as their skills are ideally suited for fighting in Mordheim."
         )
 
     # Add Middenheim characters
@@ -343,12 +355,12 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 20,
         price = 60,
         maxcount = 1,
-        description = "A Mercenary Captain is a tough professional warrior, a man who will fight for anyone or against anything so long as the price is right. Mordheim offers such a man the chance to become rich beyond his dreams, though at great risk. But as ruthlessness and lack of mercy and pity are the hallmarks of a successful Mercenary Captain, it is no wonder that they flock to Mordheim. "
+        description = "A Mercenary Captain is a tough professional warrior, a man who will fight for anyone or against anything so long as the price is right. Mordheim offers such a man the chance to become rich beyond his dreams, though at great risk. But as ruthlessness and lack of mercy and pity are the hallmarks of a successful Mercenary Captain, it is no wonder that they flock to Mordheim."
         )
     add_characterref(
         race = "Human",
@@ -360,12 +372,12 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 8,
         price = 35,
         maxcount = 2,
-        description = "In any Mercenary warband there is one warrior who is bigger, stronger (and often uglier) than his comrades. These men are called Champions (or berserkers, first swordsmen and various other names). Champions are amongst the toughest and the best fighters in the warband. They often answer challenges issued to the warband and, after the Captain, they get the pick of any equipment and loot. "
+        description = "In any Mercenary warband there is one warrior who is bigger, stronger (and often uglier) than his comrades. These men are called Champions (or berserkers, first swordsmen and various other names). Champions are amongst the toughest and the best fighters in the warband. They often answer challenges issued to the warband and, after the Captain, they get the pick of any equipment and loot."
         )
     add_characterref(
         race = "Human",
@@ -377,12 +389,12 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 15,
         maxcount = 2,
-        description = "These are young fighters who are still inexperienced, but eager to win their spurs in the savage fighting in and around the ruins of Mordheim. "
+        description = "These are young fighters who are still inexperienced, but eager to win their spurs in the savage fighting in and around the ruins of Mordheim."
         )
     add_characterref(
         race = "Human",
@@ -394,12 +406,12 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 25,
         maxcount = 0,
-        description = "These dogs of war are grim, seasoned fighters, fearing no man as long as they have their weapons and armour. They form the core of any Mercenary warband. "
+        description = "These dogs of war are grim, seasoned fighters, fearing no man as long as they have their weapons and armour. They form the core of any Mercenary warband."
         )
     add_characterref(
         race = "Human",
@@ -411,12 +423,12 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 25,
         maxcount = 7,
-        description = "The archers and hunters of the Old World are famed for their skill, and it is said that they can hit a coin from 300 paces with a long bow. In the savage street fights of Mordheim they snipe at the enemy from the windows of ruined buildings and pick out enemy leaders with their arrows. "
+        description = "The archers and hunters of the Old World are famed for their skill, and it is said that they can hit a coin from 300 paces with a long bow. In the savage street fights of Mordheim they snipe at the enemy from the windows of ruined buildings and pick out enemy leaders with their arrows."
         )
     add_characterref(
         race = "Human",
@@ -430,12 +442,12 @@ if __name__ == "__main__":
             ],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 35,
         maxcount = 5,
-        description = "Swordsmen are professional warriors, experts at taking on and beating several opponents at once. They are much sought after by warband leaders, as their skills are ideally suited for fighting in Mordheim. "
+        description = "Swordsmen are professional warriors, experts at taking on and beating several opponents at once. They are much sought after by warband leaders, as their skills are ideally suited for fighting in Mordheim."
         )
 
     # Add Marienburg characters
@@ -451,12 +463,12 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 20,
         price = 60,
         maxcount = 1,
-        description = "A Mercenary Captain is a tough professional warrior, a man who will fight for anyone or against anything so long as the price is right. Mordheim offers such a man the chance to become rich beyond his dreams, though at great risk. But as ruthlessness and lack of mercy and pity are the hallmarks of a successful Mercenary Captain, it is no wonder that they flock to Mordheim. "
+        description = "A Mercenary Captain is a tough professional warrior, a man who will fight for anyone or against anything so long as the price is right. Mordheim offers such a man the chance to become rich beyond his dreams, though at great risk. But as ruthlessness and lack of mercy and pity are the hallmarks of a successful Mercenary Captain, it is no wonder that they flock to Mordheim."
         )
     add_characterref(
         race = "Human",
@@ -468,12 +480,12 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 8,
         price = 35,
         maxcount = 2,
-        description = "In any Mercenary warband there is one warrior who is bigger, stronger (and often uglier) than his comrades. These men are called Champions (or berserkers, first swordsmen and various other names). Champions are amongst the toughest and the best fighters in the warband. They often answer challenges issued to the warband and, after the Captain, they get the pick of any equipment and loot. "
+        description = "In any Mercenary warband there is one warrior who is bigger, stronger (and often uglier) than his comrades. These men are called Champions (or berserkers, first swordsmen and various other names). Champions are amongst the toughest and the best fighters in the warband. They often answer challenges issued to the warband and, after the Captain, they get the pick of any equipment and loot."
         )
     add_characterref(
         race = "Human",
@@ -485,12 +497,12 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 15,
         maxcount = 2,
-        description = "These are young fighters who are still inexperienced, but eager to win their spurs in the savage fighting in and around the ruins of Mordheim. "
+        description = "These are young fighters who are still inexperienced, but eager to win their spurs in the savage fighting in and around the ruins of Mordheim."
         )
     add_characterref(
         race = "Human",
@@ -502,12 +514,12 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 25,
         maxcount = 0,
-        description = "These dogs of war are grim, seasoned fighters, fearing no man as long as they have their weapons and armour. They form the core of any Mercenary warband. "
+        description = "These dogs of war are grim, seasoned fighters, fearing no man as long as they have their weapons and armour. They form the core of any Mercenary warband."
         )
     add_characterref(
         race = "Human",
@@ -519,12 +531,12 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 25,
         maxcount = 7,
-        description = "The archers and hunters of the Old World are famed for their skill, and it is said that they can hit a coin from 300 paces with a long bow. In the savage street fights of Mordheim they snipe at the enemy from the windows of ruined buildings and pick out enemy leaders with their arrows. "
+        description = "The archers and hunters of the Old World are famed for their skill, and it is said that they can hit a coin from 300 paces with a long bow. In the savage street fights of Mordheim they snipe at the enemy from the windows of ruined buildings and pick out enemy leaders with their arrows."
         )
     add_characterref(
         race = "Human",
@@ -538,12 +550,12 @@ if __name__ == "__main__":
             ],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 35,
         maxcount = 5,
-        description = "Swordsmen are professional warriors, experts at taking on and beating several opponents at once. They are much sought after by warband leaders, as their skills are ideally suited for fighting in Mordheim. "
+        description = "Swordsmen are professional warriors, experts at taking on and beating several opponents at once. They are much sought after by warband leaders, as their skills are ideally suited for fighting in Mordheim."
         )
     
     # Add the possessed
@@ -560,12 +572,12 @@ if __name__ == "__main__":
             ],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 20,
         price = 70,
         maxcount = 1,
-        description = "Magisters lead the covens of the Possessed. They have been granted magical powers by their patron gods. They are fanatical followers of the Dark gods, utterly dedicated to bringing Chaos to the world. "
+        description = "Magisters lead the covens of the Possessed. They have been granted magical powers by their patron gods. They are fanatical followers of the Dark gods, utterly dedicated to bringing Chaos to the world."
         )
     add_characterref(
         race = "Chaos Human",
@@ -584,8 +596,8 @@ if __name__ == "__main__":
         experience = 8,
         price = 90,
         maxcount = 2,
-        description = "The Possessed have committed the greatest of heresies: they have given their bodies to Daemons. As a result, they are nightmarish creatures, a melding of flesh, metal and black magic. Inside them lives a supernatural thing of evil, a Daemon from the dark reaches of the Realm of Chaos. "
-        "The powerful spirit of a Daemon can meld several creatures together, be they men or animals, into a multi-faceted horror. These monstrous Possessed are perhaps the most dangerous of the creatures of Mordheim, and certainly the most loathsome and dreadful. "
+        description = "The Possessed have committed the greatest of heresies: they have given their bodies to Daemons. As a result, they are nightmarish creatures, a melding of flesh, metal and black magic. Inside them lives a supernatural thing of evil, a Daemon from the dark reaches of the Realm of Chaos."
+        "The powerful spirit of a Daemon can meld several creatures together, be they men or animals, into a multi-faceted horror. These monstrous Possessed are perhaps the most dangerous of the creatures of Mordheim, and certainly the most loathsome and dreadful."
         )
     add_characterref(
         race = "Chaos Human",
@@ -599,12 +611,12 @@ if __name__ == "__main__":
             ],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 25,
         maxcount = 2,
-        description = "Mutants are revered as the favoured ones of the Dark gods, their physical disfigurements marking out the vileness of their soul. They come in many shapes and sizes, each more bizarre than the next. "
+        description = "Mutants are revered as the favoured ones of the Dark gods, their physical disfigurements marking out the vileness of their soul. They come in many shapes and sizes, each more bizarre than the next."
         )
     add_characterref(
         race = "Chaos Human",
@@ -618,12 +630,12 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 35,
         maxcount = 5,
-        description = "Darksouls are men who have been driven insane by the daemonic possession which became all too common after the destruction of Mordheim. The Daemons have left the bodies of these men, but their minds have been scarred by the horror of the experience. Their insane strength makes Darksouls dangerous fighters. The Cultists regard them as holy men, and let them work out their unreasoning rage in battle. In their tortured minds the Darksouls believe themselves to be Daemons. They wear leering daemonic masks and garb themselves in armour and clothing resembling the scaled skin of Daemons. "
+        description = "Darksouls are men who have been driven insane by the daemonic possession which became all too common after the destruction of Mordheim. The Daemons have left the bodies of these men, but their minds have been scarred by the horror of the experience. Their insane strength makes Darksouls dangerous fighters. The Cultists regard them as holy men, and let them work out their unreasoning rage in battle. In their tortured minds the Darksouls believe themselves to be Daemons. They wear leering daemonic masks and garb themselves in armour and clothing resembling the scaled skin of Daemons."
         )
     add_characterref(
         race = "Chaos Human",
@@ -635,12 +647,12 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 25,
         maxcount = 0,
-        description = "Brethren are the crazed human followers of the cults of the dark gods, eager to descend into damnation. Their vile deeds and unspeakable acts have driven them to the brink of insanity. "
+        description = "Brethren are the crazed human followers of the cults of the dark gods, eager to descend into damnation. Their vile deeds and unspeakable acts have driven them to the brink of insanity."
         )
     add_characterref(
         race = "Chaos Human",
@@ -652,12 +664,12 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 45,
         maxcount = 3,
-        description = "Beastmen are mutated monstrosities that infest the forests of the Empire: massive horned creatures with an inhuman resistance to pain. The destruction of Mordheim brought many Beastmen into the ruined city to prey upon the survivors. They readily ally with the Magisters of the Possessed warbands. "
+        description = "Beastmen are mutated monstrosities that infest the forests of the Empire: massive horned creatures with an inhuman resistance to pain. The destruction of Mordheim brought many Beastmen into the ruined city to prey upon the survivors. They readily ally with the Magisters of the Possessed warbands."
         )
 
     # With hunter characters
@@ -674,7 +686,7 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 20,
         price = 60,
@@ -693,7 +705,7 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 12,
         price = 40,
@@ -712,7 +724,7 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 8,
         price = 25,
@@ -729,7 +741,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 20,
@@ -788,7 +800,7 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 20,
         price = 70,
@@ -805,7 +817,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 8,
         price = 35,
@@ -825,7 +837,7 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 25,
@@ -842,7 +854,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 15,
@@ -859,7 +871,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 25,
@@ -884,7 +896,7 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 20,
         price = 110,
@@ -903,7 +915,7 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 8,
         price = 35,
@@ -920,12 +932,12 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 20,
         maxcount = 3,
-        description = ("Dregs are the most miserable human survivors of the demise of Mordheim. They are deformed and rejected individuals, shunned even by the other men and women who still live in the ruins and catacombs of the city. Vampires often recruit Dregs as their servants and treat them with surprising kindness. "
+        description = ("Dregs are the most miserable human survivors of the demise of Mordheim. They are deformed and rejected individuals, shunned even by the other men and women who still live in the ruins and catacombs of the city. Vampires often recruit Dregs as their servants and treat them with surprising kindness."
             "As a result, Dregs are often fanatically loyal to their Undead overlords and will do anything to protect and serve them. Dregs are very useful to their masters as they can be sent to buy equipment, weapons and supplies from the settlements around Mordheim which would often not welcome Necromancers or where Vampires would fall under the suspicion of the Witch Hunters. They can also do the bidding of their vampiric master during daylight, when the Vampires must rest in their coffins."
         ),
     )
@@ -965,12 +977,12 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 40,
         maxcount = 0,
-        description = ("Ghouls are the descendants of evil and insane men who ate the flesh of the dead. When the lean and hungry times of famine come upon the Old World, the most depraved and destitute took to feasting on corpses to survive. Driven by their unspeakable craving for the meat of their fellow men, these creatures have given up their human life and dwell near graveyards, crypts and tombs, digging up the rotting corpses of the recently buried and consuming the cold flesh with their bare teeth and claws. "
+        description = ("Ghouls are the descendants of evil and insane men who ate the flesh of the dead. When the lean and hungry times of famine come upon the Old World, the most depraved and destitute took to feasting on corpses to survive. Driven by their unspeakable craving for the meat of their fellow men, these creatures have given up their human life and dwell near graveyards, crypts and tombs, digging up the rotting corpses of the recently buried and consuming the cold flesh with their bare teeth and claws."
         "The destruction of Mordheim attracted many Ghoul clans from the north, and now they have taken up permanent residence in the crypts and cemeteries of the ruined city."
         ),
     )
@@ -1013,7 +1025,7 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 20,
         price = 60,
@@ -1032,7 +1044,7 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 8,
         price = 0,
@@ -1049,7 +1061,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 8,
         price = 40,
@@ -1066,7 +1078,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 20,
@@ -1083,7 +1095,7 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 20,
@@ -1145,13 +1157,12 @@ if __name__ == "__main__":
             ],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
-            {"source": "Broheim", "category": "Other", "name": "Wyrdbreaker"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 20,
         price = 80,
         maxcount = 1,
-        description = "Loremasters are the most powerful mages in the entire Warhammer world. Their knowledge of the arcane arts and their intensive training at the Tower of Hoeth makes them perfect for leading expeditions into Lustria. They are capable and efficient with years of extensive training and skill at their disposal. Loremasters alone command magic powerful enough to match the might of the mysterious Slann. They delve into the temple cities of the Lizardmen in search of any remaining artifacts of the Old Ones power. "
+        description = "Loremasters are the most powerful mages in the entire Warhammer world. Their knowledge of the arcane arts and their intensive training at the Tower of Hoeth makes them perfect for leading expeditions into Lustria. They are capable and efficient with years of extensive training and skill at their disposal. Loremasters alone command magic powerful enough to match the might of the mysterious Slann. They delve into the temple cities of the Lizardmen in search of any remaining artifacts of the Old Ones power."
     )
     add_characterref(
         race = "High Elf",
@@ -1163,12 +1174,12 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 8,
         price = 45,
         maxcount = 2,
-        description = "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again. "
+        description = "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again."
     )
     add_characterref(
         race = "High Elf",
@@ -1180,12 +1191,12 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 11,
         price = 50,
         maxcount = 2,
-        description = "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster’s personal attendants and protectors. "
+        description = "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster’s personal attendants and protectors."
     )
     add_characterref(
         race = "High Elf",
@@ -1197,12 +1208,12 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 35,
         maxcount = 0,
-        description = "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops. "
+        description = "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops."
     )
     add_characterref(
         race = "High Elf",
@@ -1214,12 +1225,12 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 30,
         maxcount = 5,
-        description = "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships. "
+        description = "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
     )
     
     # Wyrdbreakers characters from the Broheim website with lore from killershrike website
@@ -1236,13 +1247,12 @@ if __name__ == "__main__":
             ],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
-            {"source": "Broheim", "category": "Other", "name": "Wyrdbreaker"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 20,
         price = 80,
         maxcount = 1,
-        description = "Loremasters are the most powerful mages in the entire Warhammer world. Their knowledge of the arcane arts and their intensive training at the Tower of Hoeth makes them perfect for leading expeditions into Lustria. They are capable and efficient with years of extensive training and skill at their disposal. Loremasters alone command magic powerful enough to match the might of the mysterious Slann. They delve into the temple cities of the Lizardmen in search of any remaining artifacts of the Old Ones power. "
+        description = "Loremasters are the most powerful mages in the entire Warhammer world. Their knowledge of the arcane arts and their intensive training at the Tower of Hoeth makes them perfect for leading expeditions into Lustria. They are capable and efficient with years of extensive training and skill at their disposal. Loremasters alone command magic powerful enough to match the might of the mysterious Slann. They delve into the temple cities of the Lizardmen in search of any remaining artifacts of the Old Ones power."
     )
     add_characterref(
         race = "High Elf",
@@ -1254,12 +1264,12 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 8,
         price = 45,
         maxcount = 2,
-        description = "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again. "
+        description = "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again."
     )
     add_characterref(
         race = "High Elf",
@@ -1271,12 +1281,12 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 11,
         price = 50,
         maxcount = 2,
-        description = "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster’s personal attendants and protectors. "
+        description = "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster’s personal attendants and protectors."
     )
     add_characterref(
         race = "High Elf",
@@ -1288,12 +1298,12 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 35,
         maxcount = 0,
-        description = "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops. "
+        description = "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops."
     )
     add_characterref(
         race = "High Elf",
@@ -1305,12 +1315,12 @@ if __name__ == "__main__":
         abilitylist = [],
         magiclist = [],
         itemlist = [
-            {"source": "Core Rules", "category": "Melee Weapon", "name": "Starting Dagger"},
+            {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
         experience = 0,
         price = 30,
         maxcount = 5,
-        description = "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships. "
+        description = "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
     )
 
     get_characterref(
@@ -1325,7 +1335,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
-        name = "Starting Dagger",
+        subcategory = "Starting Dagger",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1333,12 +1343,12 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         price = 0,
-        description = "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back. "
+        description = "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
         )
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
-        name = "Extra Dagger",
+        subcategory = "Extra Dagger",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1346,12 +1356,12 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         price = 2,
-        description = "A extra dagger. For units that want to dual wield daggers. "
+        description = "A extra dagger. For units that want to dual wield daggers."
         )
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
-        name = "Club",
+        subcategory = "Club",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1359,12 +1369,12 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         price = 3,
-        description = "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious. "
+        description = "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious."
         )
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
-        name = "Mace",
+        subcategory = "Mace",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1372,12 +1382,12 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         price = 3,
-        description = "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious. "
+        description = "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious."
         )
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
-        name = "Hammer",
+        subcategory = "Hammer",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1385,12 +1395,12 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         price = 3,
-        description = "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious. "
+        description = "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious."
         )
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
-        name = "Axe",
+        subcategory = "Axe",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1398,12 +1408,12 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         price = 5,
-        description = "The axe is the traditional weapon of Empire woodsmen, and is also used as a weapon in poorer rural areas. Axes have a heavy blade and, if swung by a strong man, can cause a lot of damage. The blade of an axe can easily cut through armor, though it requires considerable strength from the wielder. Of all the warriors in the Old World, Dwarfs are the most adept at making axes. Their axes are invaluable to the warriors of the Old World and are some of the most sought after weapons. "
+        description = "The axe is the traditional weapon of Empire woodsmen, and is also used as a weapon in poorer rural areas. Axes have a heavy blade and, if swung by a strong man, can cause a lot of damage. The blade of an axe can easily cut through armor, though it requires considerable strength from the wielder. Of all the warriors in the Old World, Dwarfs are the most adept at making axes. Their axes are invaluable to the warriors of the Old World and are some of the most sought after weapons."
         )
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
-        name = "Sword",
+        subcategory = "Sword",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1416,7 +1426,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
-        name = "Spear",
+        subcategory = "Spear",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1426,12 +1436,12 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         price = 10,
-        description = "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves. "
+        description = "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
         )
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
-        name = "Halberd",
+        subcategory = "Halberd",
         distance = 0,
         skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1443,7 +1453,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
-        name = "Steel Whip",
+        subcategory = "Steel Whip",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1452,12 +1462,12 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         price = 10,
-        description = "The halberd’s heavy blade is mounted upon a sturdy shaft of oak or steel and has a point like a spear and a cutting edge like an axe. Since it can be used to chop as well as thrust, it is an adaptable weapon, but is difficult to use inside buildings. "
+        description = "The halberd’s heavy blade is mounted upon a sturdy shaft of oak or steel and has a point like a spear and a cutting edge like an axe. Since it can be used to chop as well as thrust, it is an adaptable weapon, but is difficult to use inside buildings."
         )
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
-        name = "Great Sword",
+        subcategory = "Great Sword",
         distance = 0,
         skill = [0, 0, 0, 2, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1466,12 +1476,12 @@ if __name__ == "__main__":
             ],
         magiclist = [],
         price = 15,
-        description = "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively. "
+        description = "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively."
         )
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
-        name = "Great Axe",
+        subcategory = "Great Axe",
         distance = 0,
         skill = [0, 0, 0, 2, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1480,12 +1490,12 @@ if __name__ == "__main__":
             ],
         magiclist = [],
         price = 15,
-        description = "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively. "
+        description = "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively."
         )
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
-        name = "Flail",
+        subcategory = "Flail",
         distance = 0,
         skill = [0, 0, 0, 2, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1494,12 +1504,12 @@ if __name__ == "__main__":
             ],
         magiclist = [],
         price = 15,
-        description = "The flail is a heavy weapon wielded with both hands. It normally consists of heavy weights, often spiked, attached to a pole or handle by means of heavy chains. Flails drain the user’s stamina quickly, but are awesomely destructive in the hands of a skilled (or unhinged) warrior. "
+        description = "The flail is a heavy weapon wielded with both hands. It normally consists of heavy weights, often spiked, attached to a pole or handle by means of heavy chains. Flails drain the user’s stamina quickly, but are awesomely destructive in the hands of a skilled (or unhinged) warrior."
         )
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
-        name = "Morning Star",
+        subcategory = "Morning Star",
         distance = 0,
         skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1508,12 +1518,12 @@ if __name__ == "__main__":
             ],
         magiclist = [],
         price = 15,
-        description = "The flail is a heavy weapon wielded with both hands. It normally consists of heavy weights, often spiked, attached to a pole or handle by means of heavy chains. Flails drain the user’s stamina quickly, but are awesomely destructive in the hands of a skilled (or unhinged) warrior. "
+        description = "The flail is a heavy weapon wielded with both hands. It normally consists of heavy weights, often spiked, attached to a pole or handle by means of heavy chains. Flails drain the user’s stamina quickly, but are awesomely destructive in the hands of a skilled (or unhinged) warrior."
         )
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
-        name = "Sigmarite Warhammer",
+        subcategory = "Sigmarite Warhammer",
         distance = 0,
         skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1527,7 +1537,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
-        name = "Fighting Claws",
+        subcategory = "Fighting Claws",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1544,7 +1554,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
-        name = "Lance",
+        subcategory = "Lance",
         distance = 0,
         skill = [0, 0, 0, 2, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1559,7 +1569,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Melee Weapon",
-        name = "Weeping Blades",
+        subcategory = "Weeping Blades",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1576,7 +1586,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Missile Weapon",
-        name = "Sling",
+        subcategory = "Sling",
         distance = 18,
         skill = [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1589,7 +1599,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Missile Weapon",
-        name = "Short Bow",
+        subcategory = "Short Bow",
         distance = 16,
         skill = [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
         abilitylist = [],
@@ -1600,29 +1610,29 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Missile Weapon",
-        name = "Bow",
+        subcategory = "Bow",
         distance = 24,
         skill = [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
         abilitylist = [],
         magiclist = [],
         price = 10,
-        description = "The bow is carried by most races and used extensively in warfare. It is a compact yet powerful weapon, that is cheap to make and easy to maintain. "
+        description = "The bow is carried by most races and used extensively in warfare. It is a compact yet powerful weapon, that is cheap to make and easy to maintain."
     )  
     add_itemref(
         source = "Core Rules",
         category = "Missile Weapon",
-        name = "Long Bow",
+        subcategory = "Long Bow",
         distance = 30,
         skill = [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
         abilitylist = [],
         magiclist = [],
         price = 15,
-        description = "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy. "
+        description = "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
     )
     add_itemref(
         source = "Core Rules",
         category = "Missile Weapon",
-        name = "Trowing Knives",
+        subcategory = "Trowing Knives",
         distance = 6,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1635,7 +1645,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Missile Weapon",
-        name = "Trowing Stars",
+        subcategory = "Trowing Stars",
         distance = 6,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1648,7 +1658,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Missile Weapon",
-        name = "Blowpipe",
+        subcategory = "Blowpipe",
         distance = 8,
         skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1663,7 +1673,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Missile Weapon",
-        name = "Crossbow",
+        subcategory = "Crossbow",
         distance = 30,
         skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1676,7 +1686,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Missile Weapon",
-        name = "Elf Bow",
+        subcategory = "Elf Bow",
         distance = 36,
         skill = [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1689,7 +1699,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Missile Weapon",
-        name = "Crossbow Pistol",
+        subcategory = "Crossbow Pistol",
         distance = 10,
         skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1702,7 +1712,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Missile Weapon",
-        name = "Repeater Crossbow",
+        subcategory = "Repeater Crossbow",
         distance = 24,
         skill = [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1717,7 +1727,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Blackpowder Weapon",
-        name = "Pistol",
+        subcategory = "Pistol",
         distance = 6,
         skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
         abilitylist = [            
@@ -1733,7 +1743,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Blackpowder Weapon",
-        name = "Pistol Brace",
+        subcategory = "Pistol Brace",
         distance = 6,
         skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
         abilitylist = [            
@@ -1749,7 +1759,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Blackpowder Weapon",
-        name = "Blunderbuss",
+        subcategory = "Blunderbuss",
         distance = 16,
         skill = [0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1762,7 +1772,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Blackpowder Weapon",
-        name = "Dueling Pistol",
+        subcategory = "Dueling Pistol",
         distance = 10,
         skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1779,7 +1789,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Blackpowder Weapon",
-        name = "Dueling Pistol Brace",
+        subcategory = "Dueling Pistol Brace",
         distance = 10,
         skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1795,7 +1805,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Blackpowder Weapon",
-        name = "Handgun",
+        subcategory = "Handgun",
         distance = 24,
         skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1811,7 +1821,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Blackpowder Weapon",
-        name = "Warplock Pistol",
+        subcategory = "Warplock Pistol",
         distance = 8,
         skill = [0, 0, 0, 5, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1827,7 +1837,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Blackpowder Weapon",
-        name = "Warplock Pistol Brace",
+        subcategory = "Warplock Pistol Brace",
         distance = 8,
         skill = [0, 0, 0, 5, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1842,7 +1852,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Blackpowder Weapon",
-        name = "Hochland Long Hunting Rifle",
+        subcategory = "Hochland Long Hunting Rifle",
         distance = 48,
         skill = [0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1860,18 +1870,18 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Armour & Protection",
-        name = "Light Armour",
+        subcategory = "Light Armour",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
         abilitylist = [],
         magiclist = [],
         price = 20,
-        description = "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement. "
+        description = "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
     )
     add_itemref(
         source = "Core Rules",
         category = "Armour & Protection",
-        name = "Heavy Armour",
+        subcategory = "Heavy Armour",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 2],
         abilitylist = [
@@ -1879,12 +1889,12 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         price = 50,
-        description = "Typical heavy armor is made from metal links and is called chain mail. Forging chain mail is a laborious and time consuming process, as the blacksmith must put together hundreds, sometimes thousands, of metal links. This makes chain mail expensive, but this type of armor provides excellent protection for anyone who can afford it. There are other types of heavy armor as well, of which the best known are the steel breastplates and greaves worn by the foot knights of the Templar orders. "
+        description = "Typical heavy armor is made from metal links and is called chain mail. Forging chain mail is a laborious and time consuming process, as the blacksmith must put together hundreds, sometimes thousands, of metal links. This makes chain mail expensive, but this type of armor provides excellent protection for anyone who can afford it. There are other types of heavy armor as well, of which the best known are the steel breastplates and greaves worn by the foot knights of the Templar orders."
     )
     add_itemref(
         source = "Core Rules",
         category = "Armour & Protection",
-        name = "Cathayan Silk Clothes",
+        subcategory = "Cathayan Silk Clothes",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1898,7 +1908,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Armour & Protection",
-        name = "Ithilmar Armour",
+        subcategory = "Ithilmar Armour",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 2],
         abilitylist = [],
@@ -1909,7 +1919,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Armour & Protection",
-        name = "Elven Cloak",
+        subcategory = "Elven Cloak",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1922,7 +1932,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Armour & Protection",
-        name = "Gromril Armour",
+        subcategory = "Gromril Armour",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 2],
         abilitylist = [],
@@ -1933,7 +1943,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Armour & Protection",
-        name = "Helmet",
+        subcategory = "Helmet",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1941,23 +1951,23 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         price = 10,
-        description = "From the shining steel helmets of Bretonnian knights to the leather caps of the Skaven, all sensible warriors try to protect the most vulnerable part of their body – their head. Even the most vain fighters still use a helmet, as it can be festooned with plumes, horns and other decorations. Helmets come in varying shapes and sizes, but their basic function remains the same. "
+        description = "From the shining steel helmets of Bretonnian knights to the leather caps of the Skaven, all sensible warriors try to protect the most vulnerable part of their body – their head. Even the most vain fighters still use a helmet, as it can be festooned with plumes, horns and other decorations. Helmets come in varying shapes and sizes, but their basic function remains the same."
     )    
     add_itemref(
         source = "Core Rules",
         category = "Armour & Protection",
-        name = "Buckler",
+        subcategory = "Buckler",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [{"source": "Core Rules", "category": "Item", "name": "Parry"}],
         magiclist = [],
         price = 5,
-        description = "Bucklers are small, round shields designed for parrying or deflecting blows. They are usually made of steel for they need to be tremendously durable to survive the brutal blows of hand-to-hand combat. Using a buckler requires great skill, but a nimble warrior can protect himself from blows which would otherwise cripple him. "
+        description = "Bucklers are small, round shields designed for parrying or deflecting blows. They are usually made of steel for they need to be tremendously durable to survive the brutal blows of hand-to-hand combat. Using a buckler requires great skill, but a nimble warrior can protect himself from blows which would otherwise cripple him."
     )
     add_itemref(
         source = "Core Rules",
         category = "Armour & Protection",
-        name = "Shield",
+        subcategory = "Shield",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
         abilitylist = [
@@ -1965,14 +1975,14 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         price = 5,
-        description = "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user’s life as his enemy’s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner. "
+        description = "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user’s life as his enemy’s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner."
     )
 
     # Consumables
     add_itemref(
         source = "Core Rules",
         category = "Consumables",
-        name = "Garlic",
+        subcategory = "Garlic",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1985,7 +1995,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Consumables",
-        name = "Black Lotus",
+        subcategory = "Black Lotus",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -1998,7 +2008,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Consumables",
-        name = "Dark Venom",
+        subcategory = "Dark Venom",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -2011,7 +2021,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Consumables",
-        name = "Crimson Shade",
+        subcategory = "Crimson Shade",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -2025,7 +2035,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Consumables",
-        name = "Blessed Water",
+        subcategory = "Blessed Water",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [],
@@ -2036,7 +2046,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Consumables",
-        name = "Bugman`s Ale",
+        subcategory = "Bugman`s Ale",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -2049,104 +2059,104 @@ if __name__ == "__main__":
     add_itemref(
         source = "Core Rules",
         category = "Consumables",
-        name = "Elven Wine",
+        subcategory = "Elven Wine",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Item", "name": "Fearless", "description": "An elven warband that drinks Elven Wine before a battle will be immune to Fear for the whole of the battle. "}
+            {"source": "Core Rules", "category": "Item", "name": "Fearless", "description": "An elven warband that drinks Elven Wine before a battle will be immune to Fear for the whole of the battle."}
         ],
         magiclist = [],
         price = 50,
-        description = "High Elven wines are well known to be the best in the world, and some are even rumored to have magical qualities. A fine Elven Wine can cast out doubt and fear and leave a general feeling of wellbeing in a warrior. "
+        description = "High Elven wines are well known to be the best in the world, and some are even rumored to have magical qualities. A fine Elven Wine can cast out doubt and fear and leave a general feeling of wellbeing in a warrior."
     )
 
     # Other items
     add_itemref(
         source = "Core Rules",
         category = "Other",
-        name = "Mordheim Map",
+        subcategory = "Mordheim Map",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [],
         magiclist = [],
         price = 20,
-        description = "Temporary item, When you buy a map, roll a D6. Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot. "
+        description = "Temporary item, When you buy a map, roll a D6. Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
     )
     add_itemref(
         source = "Core Rules",
         category = "Other",
-        name = "Fake Mordheim Map",
+        subcategory = "Fake Mordheim Map",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Item", "name": "Fake Mordheim Map", "description": "The map is a fake, and is completely worthless. It leads you on a fool’s errand. Your opponent may automatically choose the next scenario you play. "}
+            {"source": "Core Rules", "category": "Item", "name": "Fake Mordheim Map", "description": "The map is a fake, and is completely worthless. It leads you on a fool’s errand. Your opponent may automatically choose the next scenario you play."}
         ],
         magiclist = [],
         price = 20,
-        description = "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot. "
+        description = "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
     )
     add_itemref(
         source = "Core Rules",
         category = "Other",
-        name = "Vague Mordheim Map",
+        subcategory = "Vague Mordheim Map",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Item", "name": "Vague Mordheim Map", "description": "Though crude, the map is generally accurate (well… parts of it are… perhaps!). You may re-roll any one dice during the next exploration phase if you wish but you must accept the result of the second roll. "}
+            {"source": "Core Rules", "category": "Item", "name": "Vague Mordheim Map", "description": "Though crude, the map is generally accurate (well… parts of it are… perhaps!). You may re-roll any one dice during the next exploration phase if you wish but you must accept the result of the second roll."}
         ],
         magiclist = [],
         price = 20,
-        description = "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot. "
+        description = "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
     )
     add_itemref(
         source = "Core Rules",
         category = "Other",
-        name = "Catacomb Mordheim Map",
+        subcategory = "Catacomb Mordheim Map",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Item", "name": "Catacomb Mordheim Map", "description": "The map shows a way through the catacombs into the city. You may automatically choose the scenario next time you fight a battle. "}
+            {"source": "Core Rules", "category": "Item", "name": "Catacomb Mordheim Map", "description": "The map shows a way through the catacombs into the city. You may automatically choose the scenario next time you fight a battle."}
         ],
         magiclist = [],
         price = 20,
-        description = "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot. "
+        description = "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
     )
     add_itemref(
         source = "Core Rules",
         category = "Other",
-        name = "Accurate Mordheim Map",
+        subcategory = "Accurate Mordheim Map",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Item", "name": "Accurate Mordheim Map", "description": "The map is recently made and very detailed. You may re-roll up to three dice during the next exploration phase if you wish. You must accept the result of the second roll. "}
+            {"source": "Core Rules", "category": "Item", "name": "Accurate Mordheim Map", "description": "The map is recently made and very detailed. You may re-roll up to three dice during the next exploration phase if you wish. You must accept the result of the second roll."}
         ],
         magiclist = [],
         price = 20,
-        description = "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot. "
+        description = "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
     )
     add_itemref(
         source = "Core Rules",
         category = "Other",
-        name = "Master Mordheim Map",
+        subcategory = "Master Mordheim Map",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Item", "name": "Master Mordheim Map", "description": "This is one of the twelve master maps of Mordheim made for Count von Steinhardt of Ostermark. From now on you may always re-roll one dice when rolling on the Exploration chart as long as the Hero who possesses this map was not taken out of action in the battle. "}
+            {"source": "Core Rules", "category": "Item", "name": "Master Mordheim Map", "description": "This is one of the twelve master maps of Mordheim made for Count von Steinhardt of Ostermark. From now on you may always re-roll one dice when rolling on the Exploration chart as long as the Hero who possesses this map was not taken out of action in the battle."}
         ],
         magiclist = [],
         price = 20,
-        description = "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot. "
+        description = "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
     )
 
     #  Specific Broheim items
     add_itemref(
         source = "Broheim",
         category = "Melee Weapon",
-        name = "Mage Wand",
+        subcategory = "Mage Wand",
         distance = 0,
         skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Item", "name": "Concussion", "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model’s injuries. "}
+            {"source": "Core Rules", "category": "Item", "name": "Concussion", "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model’s injuries."}
             ],
         magiclist = [],
         price = 20,
@@ -2155,7 +2165,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Broheim",
         category = "Melee Weapon",
-        name = "Mage Quarter Staff",
+        subcategory = "Mage Quarter Staff",
         distance = 0,
         skill = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
         abilitylist = [
@@ -2171,7 +2181,7 @@ if __name__ == "__main__":
     add_itemref(
         source = "Broheim",
         category = "Other",
-        name = "Wyrdbreaker",
+        subcategory = "Wyrdbreaker",
         distance = 0,
         skill = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         abilitylist = [],
@@ -2183,7 +2193,7 @@ if __name__ == "__main__":
     get_itemref(
         source = "Core Rules", 
         category = "Melee Weapon",
-        name = "Starting Dagger",
+        subcategory = "Starting Dagger",
     )
 
 # (re-)creating an abilities-ref json file
@@ -2654,42 +2664,42 @@ if __name__ == "__main__":
         category = "High Elven Magic",
         name = "Word of Power",
         difficulty = 8,
-        description = "The Elven Mage utters the True Name of Asuryan, the lord of the Elf gods. Shaken by his awesome power, the enemies of the Elves become weak and ineffective. Any enemies within 8 inch of the Mage suffer a -3 Weaponskill penalty, down to a minimum of one. Lasts until the beginning of the next High Elf turn. "
+        description = "The Elven Mage utters the True Name of Asuryan, the lord of the Elf gods. Shaken by his awesome power, the enemies of the Elves become weak and ineffective. Any enemies within 8 inch of the Mage suffer a -3 Weaponskill penalty, down to a minimum of one. Lasts until the beginning of the next High Elf turn."
     )
     add_magicref(
         source = "Broheim", 
         category = "High Elven Magic",
         name = "Fiery Wrath",
         difficulty = 8,
-        description = "With one delicate movement the Elven Mage traces an intricate Sigil of Flame in the air. Range 12 inch. May be cast on any model within range. The target is hit with Strength 4. Any models within 3 inch of the target model suffer a Strength 3 hit on a D6 roll of 4+. Take armour saves as normal. "
+        description = "With one delicate movement the Elven Mage traces an intricate Sigil of Flame in the air. Range 12 inch. May be cast on any model within range. The target is hit with Strength 4. Any models within 3 inch of the target model suffer a Strength 3 hit on a D6 roll of 4+. Take armour saves as normal."
     )
     add_magicref(
         source = "Broheim", 
         category = "High Elven Magic",
         name = "The Phoenix Crown",
         difficulty = 9,
-        description = "A crown of white flames appears above the head of the Elf Mage, enveloping him within a glorious array of flames. The Elf Mage has an armour save of 2+ that replaces his normal armour save. In addition, he gains a +2 to his Weaponskill and a +1 to his Strength. Roll at the beginning of each turn in the recovery phase. On a D6 roll of 1 or 2 the Phoenix Crown disappears. "
+        description = "A crown of white flames appears above the head of the Elf Mage, enveloping him within a glorious array of flames. The Elf Mage has an armour save of 2+ that replaces his normal armour save. In addition, he gains a +2 to his Weaponskill and a +1 to his Strength. Roll at the beginning of each turn in the recovery phase. On a D6 roll of 1 or 2 the Phoenix Crown disappears."
     )
     add_magicref(
         source = "Broheim", 
         category = "High Elven Magic",
         name = "Roar of the Dragon",
         difficulty = 8,
-        description = "A shadow of a wrathful Dragon strikes out from the outstretched hand of the mage, and speeds forward roaring its anger. The roar of the Dragon has a range of 12 inch and it is absolutely straight. Any model in its path must roll equal or under its Strength or be Knocked Down. If the spell hits a building it stops. "
+        description = "A shadow of a wrathful Dragon strikes out from the outstretched hand of the mage, and speeds forward roaring its anger. The roar of the Dragon has a range of 12 inch and it is absolutely straight. Any model in its path must roll equal or under its Strength or be Knocked Down. If the spell hits a building it stops."
     )
     add_magicref(
         source = "Broheim", 
         category = "High Elven Magic",
         name = "The Anger of the Earth",
         difficulty = 10,
-        description = "At the command of the Elven Mage, the very earth raises up against the enemies of the Elves. Draw a 12 inch direct line from the mage in any direction. The line is 1 inch wide and absolutely straight. Any model in its path suffers a single S5 hit. "
+        description = "At the command of the Elven Mage, the very earth raises up against the enemies of the Elves. Draw a 12 inch direct line from the mage in any direction. The line is 1 inch wide and absolutely straight. Any model in its path suffers a single S5 hit."
     )
     add_magicref(
         source = "Broheim", 
         category = "High Elven Magic",
         name = "The Light of Glory",
         difficulty = 8,
-        description = "A radiant white light emerges from the mage`s hand, banishing all fear and doubt in his comrades. Any friendly models within 8 inch of the Elven mage are immune to psychology and will never break from combat. This spell lasts until the mage suffers a wound. If the mage suffers a wound then the enchanted Elves become startled and uneasy. All models with 8 inch must take a Leadership test. If any fail, they are treated as if they had failed an All Alone test. "
+        description = "A radiant white light emerges from the mage`s hand, banishing all fear and doubt in his comrades. Any friendly models within 8 inch of the Elven mage are immune to psychology and will never break from combat. This spell lasts until the mage suffers a wound. If the mage suffers a wound then the enchanted Elves become startled and uneasy. All models with 8 inch must take a Leadership test. If any fail, they are treated as if they had failed an All Alone test."
     )
     get_magicref(
         source = "Broheim", 

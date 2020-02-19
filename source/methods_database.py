@@ -15,7 +15,7 @@ def create_warbandref():
     print(f"Created warbandfile")
     save_json(data, filepath)
 
-def add_warbandref(race, source, name, rulelist, start_gold, description):
+def add_warbandref(race, source, name, rulelist, itemlist, start_gold, description):
     # Paths
     folderpath = "database/references/"
     filepath = folderpath + "warbands_ref.json"
@@ -40,6 +40,7 @@ def add_warbandref(race, source, name, rulelist, start_gold, description):
         'source': source,
         'name': name,
         'rulelist': rulelist,
+        'itemlist': itemlist,
         'start_gold': start_gold,
         'description': description,
     }
@@ -183,7 +184,7 @@ def create_itemref():
     save_json(data, filepath)
 
 
-def add_itemref(source, category, name, distance, skill, abilitylist, magiclist, price, description):
+def add_itemref(source, category, subcategory, distance, skill, abilitylist, magiclist, price, description):
     # Paths
     folderpath = "database/references/"
     filepath = folderpath + "items_ref.json"
@@ -217,10 +218,10 @@ def add_itemref(source, category, name, distance, skill, abilitylist, magiclist,
         },
 
     # Add data
-    data[source][category][name]={
+    data[source][category][subcategory]={
         'source': source,
         'category': category,
-        'name': name,
+        'subcategory': subcategory,
         'distance': distance,
         'skill': skilldict[0],
         'abilitylist': abilitylist,
@@ -229,11 +230,11 @@ def add_itemref(source, category, name, distance, skill, abilitylist, magiclist,
         'description': description
     }
    
-    print(f"Added item: {name}")
+    print(f"Added item: {subcategory}")
     save_json(data, filepath)
 
 
-def get_itemref(source, category, name):
+def get_itemref(source, category, subcategory):
     # Paths
     folderpath = "database/references/"
     filepath = folderpath + "items_ref.json"
@@ -246,13 +247,13 @@ def get_itemref(source, category, name):
         # Second check if category exists
         if category in data[source]:
             # Third check if item exists
-            if name in data[source][category]: 
+            if subcategory in data[source][category]: 
 
-                itemdict = data[source][category][name]
+                itemdict = data[source][category][subcategory]
                 return itemdict
 
             else:
-                print(f"Item:{name} does not exist")
+                print(f"Item:{subcategory} does not exist")
         else:
             print(f"Category {category} does not exist")
     else:

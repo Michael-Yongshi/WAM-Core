@@ -40,7 +40,7 @@ def test_createWarband(name, race, source, warband):
 
     # Manually adding an item
     wbid.itemlist=[
-        Item(source = "Broheim", category="Other", name="Wyrdbreaker")
+        Item.create_item(source = "Broheim", category="Other", subcategory="Wyrdbreaker")
         ]
     
     # Creating heroes
@@ -55,7 +55,7 @@ def test_createWarband(name, race, source, warband):
 
     # Adding items to heroes
     hero1.itemlist = [
-        Item.create_item(name = "Mage Quarter Staff", category = "Melee Weapon", source = "Broheim")
+        Item.create_item(subcategory = "Mage Quarter Staff", category = "Melee Weapon", source = "Broheim")
         ]
     print("hero1 item succesfull")
 
@@ -87,10 +87,10 @@ def test_createWarband(name, race, source, warband):
     print("squad2 create succesfull")
 
     # Adding items to the squads
-    squad1.equip_squad(name = "Spear", category = "Melee Weapon", source = "Core Rules")
+    squad1.equip_squad(subcategory = "Spear", category = "Melee Weapon", source = "Core Rules")
     print("squad1 item succesfull")
 
-    squad2.equip_squad(name = "Great Sword", category = "Melee Weapon", source = "Core Rules")
+    squad2.equip_squad(subcategory = "Great Sword", category = "Melee Weapon", source = "Core Rules")
     print("squad2 item succesfull")
 
     # adding the squads to the squadlist
@@ -161,30 +161,30 @@ def test_updateWarband():
     print("hero5 creation succesful")
     # Add items for new hero
     newhero.itemlist = [
-        Item.create_item(name = "Sword", category = "Melee Weapon", source = "Core Rules"),
-        Item.create_item(name = "Light Armour", category = "Armour & Protection", source = "Core Rules"),
-        Item.create_item(name = "Shield", category = "Armour & Protection", source = "Core Rules")
+        Item.create_item(subcategory = "Sword", category = "Melee Weapon", source = "Core Rules"),
+        Item.create_item(subcategory = "Light Armour", category = "Armour & Protection", source = "Core Rules"),
+        Item.create_item(subcategory = "Shield", category = "Armour & Protection", source = "Core Rules")
         ]
     print("newhero1 item succesfull")
     newhero2.itemlist = [
-        Item.create_item(name = "Sword", category = "Melee Weapon", source = "Core Rules"),
-        Item.create_item(name = "Light Armour", category = "Armour & Protection", source = "Core Rules"),
-        Item.create_item(name = "Shield", category = "Armour & Protection", source = "Core Rules")
+        Item.create_item(subcategory = "Sword", category = "Melee Weapon", source = "Core Rules"),
+        Item.create_item(subcategory = "Light Armour", category = "Armour & Protection", source = "Core Rules"),
+        Item.create_item(subcategory = "Shield", category = "Armour & Protection", source = "Core Rules")
         ]
     print("newhero2 item succesfull")
     newhero3.itemlist = [
-        Item.create_item(name = "Long Bow", category = "Missile Weapon", source = "Core Rules"),
-        Item.create_item(name = "Light Armour", category = "Armour & Protection", source = "Core Rules"),
+        Item.create_item(subcategory = "Long Bow", category = "Missile Weapon", source = "Core Rules"),
+        Item.create_item(subcategory = "Light Armour", category = "Armour & Protection", source = "Core Rules"),
         ]
     print("newhero3 item succesfull")
     newhero4.itemlist = [
-        Item.create_item(name = "Long Bow", category = "Missile Weapon", source = "Core Rules"),
-        Item.create_item(name = "Light Armour", category = "Armour & Protection", source = "Core Rules"),
+        Item.create_item(subcategory = "Long Bow", category = "Missile Weapon", source = "Core Rules"),
+        Item.create_item(subcategory = "Light Armour", category = "Armour & Protection", source = "Core Rules"),
         ]
     print("newhero4 item succesfull")
     newhero5.itemlist = [
-        Item.create_item(name = "Long Bow", category = "Missile Weapon", source = "Core Rules"),
-        Item.create_item(name = "Light Armour", category = "Armour & Protection", source = "Core Rules"),
+        Item.create_item(subcategory = "Long Bow", category = "Missile Weapon", source = "Core Rules"),
+        Item.create_item(subcategory = "Light Armour", category = "Armour & Protection", source = "Core Rules"),
         ]
     print("newhero5 item succesfull")
 
@@ -235,10 +235,10 @@ def test_updateWarband():
     print("squad4 creation succesful")
     
     # Adding items to the squads
-    newsquad.equip_squad(name = "Long Bow", category = "Missile Weapon", source = "Core Rules")
-    newsquad2.equip_squad(name = "Long Bow", category = "Missile Weapon", source = "Core Rules")
-    newsquad3.equip_squad(name = "Long Bow", category = "Missile Weapon", source = "Core Rules")
-    newsquad4.equip_squad(name = "Long Bow", category = "Missile Weapon", source = "Core Rules")
+    newsquad.equip_squad(subcategory = "Long Bow", category = "Missile Weapon", source = "Core Rules")
+    newsquad2.equip_squad(subcategory = "Long Bow", category = "Missile Weapon", source = "Core Rules")
+    newsquad3.equip_squad(subcategory = "Long Bow", category = "Missile Weapon", source = "Core Rules")
+    newsquad4.equip_squad(subcategory = "Long Bow", category = "Missile Weapon", source = "Core Rules")
     print("squad equipment creation succesful")
     
     # adding the squads to the squadlist

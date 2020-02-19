@@ -32,13 +32,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 20,
                     "price": 60,
                     "maxcount": 1,
-                    "description": "A Mercenary Captain is a tough professional warrior, a man who will fight for anyone or against anything so long as the price is right. Mordheim offers such a man the chance to become rich beyond his dreams, though at great risk. But as ruthlessness and lack of mercy and pity are the hallmarks of a successful Mercenary Captain, it is no wonder that they flock to Mordheim. "
+                    "description": "A Mercenary Captain is a tough professional warrior, a man who will fight for anyone or against anything so long as the price is right. Mordheim offers such a man the chance to become rich beyond his dreams, though at great risk. But as ruthlessness and lack of mercy and pity are the hallmarks of a successful Mercenary Captain, it is no wonder that they flock to Mordheim."
                 },
                 "Champion": {
                     "race": "Human",
@@ -64,13 +64,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 8,
                     "price": 35,
                     "maxcount": 2,
-                    "description": "In any Mercenary warband there is one warrior who is bigger, stronger (and often uglier) than his comrades. These men are called Champions (or berserkers, first swordsmen and various other names). Champions are amongst the toughest and the best fighters in the warband. They often answer challenges issued to the warband and, after the Captain, they get the pick of any equipment and loot. "
+                    "description": "In any Mercenary warband there is one warrior who is bigger, stronger (and often uglier) than his comrades. These men are called Champions (or berserkers, first swordsmen and various other names). Champions are amongst the toughest and the best fighters in the warband. They often answer challenges issued to the warband and, after the Captain, they get the pick of any equipment and loot."
                 },
                 "Youngblood": {
                     "race": "Human",
@@ -96,13 +96,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
                     "price": 15,
                     "maxcount": 2,
-                    "description": "These are young fighters who are still inexperienced, but eager to win their spurs in the savage fighting in and around the ruins of Mordheim. "
+                    "description": "These are young fighters who are still inexperienced, but eager to win their spurs in the savage fighting in and around the ruins of Mordheim."
                 },
                 "Warrior": {
                     "race": "Human",
@@ -128,13 +128,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
                     "price": 25,
                     "maxcount": 0,
-                    "description": "These dogs of war are grim, seasoned fighters, fearing no man as long as they have their weapons and armour. They form the core of any Mercenary warband. "
+                    "description": "These dogs of war are grim, seasoned fighters, fearing no man as long as they have their weapons and armour. They form the core of any Mercenary warband."
                 },
                 "Marksman": {
                     "race": "Human",
@@ -160,13 +160,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
                     "price": 25,
                     "maxcount": 7,
-                    "description": "The archers and hunters of the Old World are famed for their skill, and it is said that they can hit a coin from 300 paces with a long bow. In the savage street fights of Mordheim they snipe at the enemy from the windows of ruined buildings and pick out enemy leaders with their arrows. "
+                    "description": "The archers and hunters of the Old World are famed for their skill, and it is said that they can hit a coin from 300 paces with a long bow. In the savage street fights of Mordheim they snipe at the enemy from the windows of ruined buildings and pick out enemy leaders with their arrows."
                 },
                 "Swordsman": {
                     "race": "Human",
@@ -198,13 +198,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
                     "price": 35,
                     "maxcount": 5,
-                    "description": "Swordsmen are professional warriors, experts at taking on and beating several opponents at once. They are much sought after by warband leaders, as their skills are ideally suited for fighting in Mordheim. "
+                    "description": "Swordsmen are professional warriors, experts at taking on and beating several opponents at once. They are much sought after by warband leaders, as their skills are ideally suited for fighting in Mordheim."
                 }
             },
             "Middenheim": {
@@ -238,13 +238,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 20,
                     "price": 60,
                     "maxcount": 1,
-                    "description": "A Mercenary Captain is a tough professional warrior, a man who will fight for anyone or against anything so long as the price is right. Mordheim offers such a man the chance to become rich beyond his dreams, though at great risk. But as ruthlessness and lack of mercy and pity are the hallmarks of a successful Mercenary Captain, it is no wonder that they flock to Mordheim. "
+                    "description": "A Mercenary Captain is a tough professional warrior, a man who will fight for anyone or against anything so long as the price is right. Mordheim offers such a man the chance to become rich beyond his dreams, though at great risk. But as ruthlessness and lack of mercy and pity are the hallmarks of a successful Mercenary Captain, it is no wonder that they flock to Mordheim."
                 },
                 "Champion": {
                     "race": "Human",
@@ -270,13 +270,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 8,
                     "price": 35,
                     "maxcount": 2,
-                    "description": "In any Mercenary warband there is one warrior who is bigger, stronger (and often uglier) than his comrades. These men are called Champions (or berserkers, first swordsmen and various other names). Champions are amongst the toughest and the best fighters in the warband. They often answer challenges issued to the warband and, after the Captain, they get the pick of any equipment and loot. "
+                    "description": "In any Mercenary warband there is one warrior who is bigger, stronger (and often uglier) than his comrades. These men are called Champions (or berserkers, first swordsmen and various other names). Champions are amongst the toughest and the best fighters in the warband. They often answer challenges issued to the warband and, after the Captain, they get the pick of any equipment and loot."
                 },
                 "Youngblood": {
                     "race": "Human",
@@ -302,13 +302,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
                     "price": 15,
                     "maxcount": 2,
-                    "description": "These are young fighters who are still inexperienced, but eager to win their spurs in the savage fighting in and around the ruins of Mordheim. "
+                    "description": "These are young fighters who are still inexperienced, but eager to win their spurs in the savage fighting in and around the ruins of Mordheim."
                 },
                 "Warrior": {
                     "race": "Human",
@@ -334,13 +334,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
                     "price": 25,
                     "maxcount": 0,
-                    "description": "These dogs of war are grim, seasoned fighters, fearing no man as long as they have their weapons and armour. They form the core of any Mercenary warband. "
+                    "description": "These dogs of war are grim, seasoned fighters, fearing no man as long as they have their weapons and armour. They form the core of any Mercenary warband."
                 },
                 "Marksman": {
                     "race": "Human",
@@ -366,13 +366,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
                     "price": 25,
                     "maxcount": 7,
-                    "description": "The archers and hunters of the Old World are famed for their skill, and it is said that they can hit a coin from 300 paces with a long bow. In the savage street fights of Mordheim they snipe at the enemy from the windows of ruined buildings and pick out enemy leaders with their arrows. "
+                    "description": "The archers and hunters of the Old World are famed for their skill, and it is said that they can hit a coin from 300 paces with a long bow. In the savage street fights of Mordheim they snipe at the enemy from the windows of ruined buildings and pick out enemy leaders with their arrows."
                 },
                 "Swordsman": {
                     "race": "Human",
@@ -404,13 +404,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
                     "price": 35,
                     "maxcount": 5,
-                    "description": "Swordsmen are professional warriors, experts at taking on and beating several opponents at once. They are much sought after by warband leaders, as their skills are ideally suited for fighting in Mordheim. "
+                    "description": "Swordsmen are professional warriors, experts at taking on and beating several opponents at once. They are much sought after by warband leaders, as their skills are ideally suited for fighting in Mordheim."
                 }
             },
             "Marienburg": {
@@ -444,13 +444,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 20,
                     "price": 60,
                     "maxcount": 1,
-                    "description": "A Mercenary Captain is a tough professional warrior, a man who will fight for anyone or against anything so long as the price is right. Mordheim offers such a man the chance to become rich beyond his dreams, though at great risk. But as ruthlessness and lack of mercy and pity are the hallmarks of a successful Mercenary Captain, it is no wonder that they flock to Mordheim. "
+                    "description": "A Mercenary Captain is a tough professional warrior, a man who will fight for anyone or against anything so long as the price is right. Mordheim offers such a man the chance to become rich beyond his dreams, though at great risk. But as ruthlessness and lack of mercy and pity are the hallmarks of a successful Mercenary Captain, it is no wonder that they flock to Mordheim."
                 },
                 "Champion": {
                     "race": "Human",
@@ -476,13 +476,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 8,
                     "price": 35,
                     "maxcount": 2,
-                    "description": "In any Mercenary warband there is one warrior who is bigger, stronger (and often uglier) than his comrades. These men are called Champions (or berserkers, first swordsmen and various other names). Champions are amongst the toughest and the best fighters in the warband. They often answer challenges issued to the warband and, after the Captain, they get the pick of any equipment and loot. "
+                    "description": "In any Mercenary warband there is one warrior who is bigger, stronger (and often uglier) than his comrades. These men are called Champions (or berserkers, first swordsmen and various other names). Champions are amongst the toughest and the best fighters in the warband. They often answer challenges issued to the warband and, after the Captain, they get the pick of any equipment and loot."
                 },
                 "Youngblood": {
                     "race": "Human",
@@ -508,13 +508,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
                     "price": 15,
                     "maxcount": 2,
-                    "description": "These are young fighters who are still inexperienced, but eager to win their spurs in the savage fighting in and around the ruins of Mordheim. "
+                    "description": "These are young fighters who are still inexperienced, but eager to win their spurs in the savage fighting in and around the ruins of Mordheim."
                 },
                 "Warrior": {
                     "race": "Human",
@@ -540,13 +540,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
                     "price": 25,
                     "maxcount": 0,
-                    "description": "These dogs of war are grim, seasoned fighters, fearing no man as long as they have their weapons and armour. They form the core of any Mercenary warband. "
+                    "description": "These dogs of war are grim, seasoned fighters, fearing no man as long as they have their weapons and armour. They form the core of any Mercenary warband."
                 },
                 "Marksman": {
                     "race": "Human",
@@ -572,13 +572,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
                     "price": 25,
                     "maxcount": 7,
-                    "description": "The archers and hunters of the Old World are famed for their skill, and it is said that they can hit a coin from 300 paces with a long bow. In the savage street fights of Mordheim they snipe at the enemy from the windows of ruined buildings and pick out enemy leaders with their arrows. "
+                    "description": "The archers and hunters of the Old World are famed for their skill, and it is said that they can hit a coin from 300 paces with a long bow. In the savage street fights of Mordheim they snipe at the enemy from the windows of ruined buildings and pick out enemy leaders with their arrows."
                 },
                 "Swordsman": {
                     "race": "Human",
@@ -610,13 +610,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
                     "price": 35,
                     "maxcount": 5,
-                    "description": "Swordsmen are professional warriors, experts at taking on and beating several opponents at once. They are much sought after by warband leaders, as their skills are ideally suited for fighting in Mordheim. "
+                    "description": "Swordsmen are professional warriors, experts at taking on and beating several opponents at once. They are much sought after by warband leaders, as their skills are ideally suited for fighting in Mordheim."
                 }
             },
             "Witch Hunters": {
@@ -655,7 +655,7 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 20,
@@ -693,7 +693,7 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 12,
@@ -731,7 +731,7 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 8,
@@ -763,7 +763,7 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -887,7 +887,7 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 20,
@@ -919,7 +919,7 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 8,
@@ -962,7 +962,7 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -994,7 +994,7 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -1026,7 +1026,7 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -1075,13 +1075,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 20,
                     "price": 70,
                     "maxcount": 1,
-                    "description": "Magisters lead the covens of the Possessed. They have been granted magical powers by their patron gods. They are fanatical followers of the Dark gods, utterly dedicated to bringing Chaos to the world. "
+                    "description": "Magisters lead the covens of the Possessed. They have been granted magical powers by their patron gods. They are fanatical followers of the Dark gods, utterly dedicated to bringing Chaos to the world."
                 },
                 "Possessed": {
                     "race": "Chaos Human",
@@ -1123,7 +1123,7 @@
                     "experience": 8,
                     "price": 90,
                     "maxcount": 2,
-                    "description": "The Possessed have committed the greatest of heresies: they have given their bodies to Daemons. As a result, they are nightmarish creatures, a melding of flesh, metal and black magic. Inside them lives a supernatural thing of evil, a Daemon from the dark reaches of the Realm of Chaos. The powerful spirit of a Daemon can meld several creatures together, be they men or animals, into a multi-faceted horror. These monstrous Possessed are perhaps the most dangerous of the creatures of Mordheim, and certainly the most loathsome and dreadful. "
+                    "description": "The Possessed have committed the greatest of heresies: they have given their bodies to Daemons. As a result, they are nightmarish creatures, a melding of flesh, metal and black magic. Inside them lives a supernatural thing of evil, a Daemon from the dark reaches of the Realm of Chaos.The powerful spirit of a Daemon can meld several creatures together, be they men or animals, into a multi-faceted horror. These monstrous Possessed are perhaps the most dangerous of the creatures of Mordheim, and certainly the most loathsome and dreadful."
                 },
                 "Mutant": {
                     "race": "Chaos Human",
@@ -1155,13 +1155,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
                     "price": 25,
                     "maxcount": 2,
-                    "description": "Mutants are revered as the favoured ones of the Dark gods, their physical disfigurements marking out the vileness of their soul. They come in many shapes and sizes, each more bizarre than the next. "
+                    "description": "Mutants are revered as the favoured ones of the Dark gods, their physical disfigurements marking out the vileness of their soul. They come in many shapes and sizes, each more bizarre than the next."
                 },
                 "Darksoul": {
                     "race": "Chaos Human",
@@ -1193,13 +1193,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
                     "price": 35,
                     "maxcount": 5,
-                    "description": "Darksouls are men who have been driven insane by the daemonic possession which became all too common after the destruction of Mordheim. The Daemons have left the bodies of these men, but their minds have been scarred by the horror of the experience. Their insane strength makes Darksouls dangerous fighters. The Cultists regard them as holy men, and let them work out their unreasoning rage in battle. In their tortured minds the Darksouls believe themselves to be Daemons. They wear leering daemonic masks and garb themselves in armour and clothing resembling the scaled skin of Daemons. "
+                    "description": "Darksouls are men who have been driven insane by the daemonic possession which became all too common after the destruction of Mordheim. The Daemons have left the bodies of these men, but their minds have been scarred by the horror of the experience. Their insane strength makes Darksouls dangerous fighters. The Cultists regard them as holy men, and let them work out their unreasoning rage in battle. In their tortured minds the Darksouls believe themselves to be Daemons. They wear leering daemonic masks and garb themselves in armour and clothing resembling the scaled skin of Daemons."
                 },
                 "Brethren": {
                     "race": "Chaos Human",
@@ -1225,13 +1225,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
                     "price": 25,
                     "maxcount": 0,
-                    "description": "Brethren are the crazed human followers of the cults of the dark gods, eager to descend into damnation. Their vile deeds and unspeakable acts have driven them to the brink of insanity. "
+                    "description": "Brethren are the crazed human followers of the cults of the dark gods, eager to descend into damnation. Their vile deeds and unspeakable acts have driven them to the brink of insanity."
                 },
                 "Beastman": {
                     "race": "Chaos Human",
@@ -1257,13 +1257,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
                     "price": 45,
                     "maxcount": 3,
-                    "description": "Beastmen are mutated monstrosities that infest the forests of the Empire: massive horned creatures with an inhuman resistance to pain. The destruction of Mordheim brought many Beastmen into the ruined city to prey upon the survivors. They readily ally with the Magisters of the Possessed warbands. "
+                    "description": "Beastmen are mutated monstrosities that infest the forests of the Empire: massive horned creatures with an inhuman resistance to pain. The destruction of Mordheim brought many Beastmen into the ruined city to prey upon the survivors. They readily ally with the Magisters of the Possessed warbands."
                 }
             }
         }
@@ -1321,7 +1321,7 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 20,
@@ -1359,7 +1359,7 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 8,
@@ -1391,13 +1391,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
                     "price": 20,
                     "maxcount": 3,
-                    "description": "Dregs are the most miserable human survivors of the demise of Mordheim. They are deformed and rejected individuals, shunned even by the other men and women who still live in the ruins and catacombs of the city. Vampires often recruit Dregs as their servants and treat them with surprising kindness. As a result, Dregs are often fanatically loyal to their Undead overlords and will do anything to protect and serve them. Dregs are very useful to their masters as they can be sent to buy equipment, weapons and supplies from the settlements around Mordheim which would often not welcome Necromancers or where Vampires would fall under the suspicion of the Witch Hunters. They can also do the bidding of their vampiric master during daylight, when the Vampires must rest in their coffins."
+                    "description": "Dregs are the most miserable human survivors of the demise of Mordheim. They are deformed and rejected individuals, shunned even by the other men and women who still live in the ruins and catacombs of the city. Vampires often recruit Dregs as their servants and treat them with surprising kindness.As a result, Dregs are often fanatically loyal to their Undead overlords and will do anything to protect and serve them. Dregs are very useful to their masters as they can be sent to buy equipment, weapons and supplies from the settlements around Mordheim which would often not welcome Necromancers or where Vampires would fall under the suspicion of the Witch Hunters. They can also do the bidding of their vampiric master during daylight, when the Vampires must rest in their coffins."
                 },
                 "Zombie": {
                     "race": "Undead / Vampires",
@@ -1496,13 +1496,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
                     "price": 40,
                     "maxcount": 0,
-                    "description": "Ghouls are the descendants of evil and insane men who ate the flesh of the dead. When the lean and hungry times of famine come upon the Old World, the most depraved and destitute took to feasting on corpses to survive. Driven by their unspeakable craving for the meat of their fellow men, these creatures have given up their human life and dwell near graveyards, crypts and tombs, digging up the rotting corpses of the recently buried and consuming the cold flesh with their bare teeth and claws. The destruction of Mordheim attracted many Ghoul clans from the north, and now they have taken up permanent residence in the crypts and cemeteries of the ruined city."
+                    "description": "Ghouls are the descendants of evil and insane men who ate the flesh of the dead. When the lean and hungry times of famine come upon the Old World, the most depraved and destitute took to feasting on corpses to survive. Driven by their unspeakable craving for the meat of their fellow men, these creatures have given up their human life and dwell near graveyards, crypts and tombs, digging up the rotting corpses of the recently buried and consuming the cold flesh with their bare teeth and claws.The destruction of Mordheim attracted many Ghoul clans from the north, and now they have taken up permanent residence in the crypts and cemeteries of the ruined city."
                 },
                 "Dire Wolf": {
                     "race": "Undead / Vampires",
@@ -1612,7 +1612,7 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 20,
@@ -1650,7 +1650,7 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 8,
@@ -1682,7 +1682,7 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 8,
@@ -1714,7 +1714,7 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -1746,7 +1746,7 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
@@ -1891,18 +1891,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
-                        },
-                        {
-                            "source": "Broheim",
-                            "category": "Other",
-                            "name": "Wyrdbreaker"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 20,
                     "price": 80,
                     "maxcount": 1,
-                    "description": "Loremasters are the most powerful mages in the entire Warhammer world. Their knowledge of the arcane arts and their intensive training at the Tower of Hoeth makes them perfect for leading expeditions into Lustria. They are capable and efficient with years of extensive training and skill at their disposal. Loremasters alone command magic powerful enough to match the might of the mysterious Slann. They delve into the temple cities of the Lizardmen in search of any remaining artifacts of the Old Ones power. "
+                    "description": "Loremasters are the most powerful mages in the entire Warhammer world. Their knowledge of the arcane arts and their intensive training at the Tower of Hoeth makes them perfect for leading expeditions into Lustria. They are capable and efficient with years of extensive training and skill at their disposal. Loremasters alone command magic powerful enough to match the might of the mysterious Slann. They delve into the temple cities of the Lizardmen in search of any remaining artifacts of the Old Ones power."
                 },
                 "Ranger": {
                     "race": "High Elf",
@@ -1928,13 +1923,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 8,
                     "price": 45,
                     "maxcount": 2,
-                    "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again. "
+                    "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again."
                 },
                 "Sword Warden": {
                     "race": "High Elf",
@@ -1960,13 +1955,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 11,
                     "price": 50,
                     "maxcount": 2,
-                    "description": "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster\u2019s personal attendants and protectors. "
+                    "description": "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster\u2019s personal attendants and protectors."
                 },
                 "Seaguard": {
                     "race": "High Elf",
@@ -1992,13 +1987,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
                     "price": 35,
                     "maxcount": 0,
-                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops. "
+                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops."
                 },
                 "Cadet": {
                     "race": "High Elf",
@@ -2024,13 +2019,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
                     "price": 30,
                     "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships. "
+                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
                 }
             }
         },
@@ -2071,18 +2066,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
-                        },
-                        {
-                            "source": "Broheim",
-                            "category": "Other",
-                            "name": "Wyrdbreaker"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 20,
                     "price": 80,
                     "maxcount": 1,
-                    "description": "Loremasters are the most powerful mages in the entire Warhammer world. Their knowledge of the arcane arts and their intensive training at the Tower of Hoeth makes them perfect for leading expeditions into Lustria. They are capable and efficient with years of extensive training and skill at their disposal. Loremasters alone command magic powerful enough to match the might of the mysterious Slann. They delve into the temple cities of the Lizardmen in search of any remaining artifacts of the Old Ones power. "
+                    "description": "Loremasters are the most powerful mages in the entire Warhammer world. Their knowledge of the arcane arts and their intensive training at the Tower of Hoeth makes them perfect for leading expeditions into Lustria. They are capable and efficient with years of extensive training and skill at their disposal. Loremasters alone command magic powerful enough to match the might of the mysterious Slann. They delve into the temple cities of the Lizardmen in search of any remaining artifacts of the Old Ones power."
                 },
                 "Ranger": {
                     "race": "High Elf",
@@ -2108,13 +2098,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 8,
                     "price": 45,
                     "maxcount": 2,
-                    "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again. "
+                    "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again."
                 },
                 "Sword Warden": {
                     "race": "High Elf",
@@ -2140,13 +2130,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 11,
                     "price": 50,
                     "maxcount": 2,
-                    "description": "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster\u2019s personal attendants and protectors. "
+                    "description": "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster\u2019s personal attendants and protectors."
                 },
                 "Seaguard": {
                     "race": "High Elf",
@@ -2172,13 +2162,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
                     "price": 35,
                     "maxcount": 0,
-                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops. "
+                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops."
                 },
                 "Cadet": {
                     "race": "High Elf",
@@ -2204,13 +2194,13 @@
                         {
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "name": "Starting Dagger"
+                            "subcategory": "Starting Dagger"
                         }
                     ],
                     "experience": 0,
                     "price": 30,
                     "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships. "
+                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
                 }
             }
         }

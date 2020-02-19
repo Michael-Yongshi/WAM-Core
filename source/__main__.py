@@ -243,8 +243,8 @@ class WarbandOverview(QMainWindow):
 
         for item in self.wbid.itemlist:
             label = QLabel()
-            label.setText(str(item.name))
-            label.setToolTip(f"<font><b>{item.name}</b> <br/> category: {item.category} <br/> distance: {item.distance} <br/> <nobr>{item.skill.to_string()}</nobr> <br/> price: {item.price} <br/> {item.description}</font>")
+            label.setText(str(item.subcategory))
+            label.setToolTip(f"<font><b>{item.subcategory} </b>{item.name} <br/> category: {item.category} <br/> distance: {item.distance} <br/> <nobr>{item.skill.to_string()}</nobr> <br/> price: {item.price} <br/> {item.description}</font>")
             itemwrap = QVBoxLayout()
             itemwrap.addWidget(label)
             itemwidget = QInteractiveWidget()
@@ -465,8 +465,8 @@ class WarbandOverview(QMainWindow):
 
         for item in self.currentunit.itemlist:
             label = QLabel()
-            label.setText(str(item.name))
-            label.setToolTip(f"<font><b>{item.name}</b> <br/> category: {item.category} <br/> distance: {item.distance} <br/> <nobr>{item.skill.to_string()}</nobr> <br/> price: {item.price} <br/> {item.description}</font>")
+            label.setText(str(item.subcategory + " " + item.name))
+            label.setToolTip(f"<font><b>{item.subcategory}</b> {item.name} <br/> category: {item.category} <br/> distance: {item.distance} <br/> <nobr>{item.skill.to_string()}</nobr> <br/> price: {item.price} <br/> {item.description}</font>")
             itemwrap = QVBoxLayout()
             itemwrap.addWidget(label)
             itemwidget = QInteractiveWidget()
@@ -479,14 +479,14 @@ class WarbandOverview(QMainWindow):
 
             for ability in item.abilitylist:
                 label = QLabel()
-                label.setText(f"{ability.name} (source: {item.name})")
-                label.setToolTip(f"<font><b>{ability.name}</b> <br/>(source: {item.name}) <br/><br/>{ability.description}</font>")
+                label.setText(f"{ability.name} (source: {item.subcategory})")
+                label.setToolTip(f"<font><b>{ability.name}</b> <br/>(source: {item.subcategory}) <br/><br/>{ability.description}</font>")
                 abilitybox.addWidget(label) #adds the ability to a label and at it to the vertical ability layout
         
             for magic in item.magiclist:
                 label = QLabel()
-                label.setText(f"{magic.name} (source: {item.name})")
-                label.setToolTip(f"<font><b>{magic.name}</b> <br/>(source: {item.name} <br/>Difficulty: {magic.difficulty}<br/><br/>{magic.description}</font>")
+                label.setText(f"{magic.name} (source: {item.subcategory})")
+                label.setToolTip(f"<font><b>{magic.name}</b> <br/>(source: {item.subcategory}) <br/>Difficulty: {magic.difficulty}<br/><br/>{magic.description}</font>")
                 magicbox.addWidget(label) #adds the magic to a label and at it to the vertical magic layout
 
         #show skills at bottom left
@@ -704,7 +704,7 @@ class WarbandOverview(QMainWindow):
                         for hero in self.wbid.herolist:
                             if hero == self.currentunit:
                                 for i in hero.itemlist:
-                                    if i.name == item.name:
+                                    if i.name == item.name and i.subcategory == item.subcategory:
                                         if process_gold == QMessageBox.No:
                                             itemprice += item.price
                                         index = hero.itemlist.index(i)
@@ -716,7 +716,7 @@ class WarbandOverview(QMainWindow):
                             if squad.henchmanlist[0] == self.currentunit:
                                 for h in squad.henchmanlist:
                                     for i in h.itemlist:
-                                        if i.name == item.name:
+                                        if i.name == item.name and i.subcategory == item.subcategory:
                                             if process_gold == QMessageBox.No:
                                                 itemprice += item.price
                                             index = h.itemlist.index(i)
@@ -1017,15 +1017,15 @@ class WarbandOverview(QMainWindow):
             category, okPressed = QInputDialog.getItem(self, "Create", "Choose a category", categories, 0, False)
             if okPressed and category:
             
-                # items
-                items = []
+                # subcategories
+                subcategories = []
                 for key in itemdict[source][category]:
-                    items.append(key)
+                    subcategories.append(key)
 
-                item, okPressed = QInputDialog.getItem(self, "Create", "Choose an item", items, 0, False)
-                if okPressed and item:
+                subcategory, okPressed = QInputDialog.getItem(self, "Create", "Choose an item", subcategories, 0, False)
+                if okPressed and subcategory:
                     new_item = Item.create_item(
-                        name = item,
+                        subcategory = subcategory,
                         category = category,
                         source = source,
                     )

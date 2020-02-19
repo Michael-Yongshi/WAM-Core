@@ -105,8 +105,10 @@ Character.prototype.createRandomCharacter = function() {
     var that = this;
 
     // Get input values
-    var identifier = $("#create-identifier").val();
-    // var unit = $("#create-unit").val();
+    var name = $("#create-name").val();
+    var unit = $("#create-unit").val();
+    var race = $("#create-race").val();
+    var identifier = name.concat(unit, race);
 
     // Validate identifier < 20 chars
     if(identifier.length > 20) {
@@ -123,13 +125,15 @@ Character.prototype.createRandomCharacter = function() {
     $("#button-create").attr('disabled', true);
 
 
-    this.instance.methods.createRandomCharacter(identifier).send({from: window.top.web3.eth.accounts[0]}).then( function(txHash) {
+    this.instance.methods.createRandomCharacter(identifier, name, unit, race).send({from: window.top.web3.eth.accounts[0]}).then( function(txHash) {
                 showStatus("Creating character");
                 that.waitForReceipt(txHash.transactionHash, function(receipt) {
                     if(receipt.blockNumber > 0) {
                         showStatus("Creation successful");
-                        $("#create-identifier").val("");
-                        $("#create-tab .character-container .ingredients").html('');
+                        $("#create-name").val("");
+                        $("#create-unit").val("");
+                        $("#create-race").val("");
+                        // $("#create-tab .character-container .ingredients").html('');
                         $("#button-create").attr('disabled', false);
                         that.loadInventory();
                     }
@@ -155,11 +159,13 @@ Character.prototype.loadInventory = function() {
                         that.instance.methods.characters(characterIds[i]).call().then( function(character) {
                             var realIndex = characterIds[i];
                             var characterName = character[0];
+                            // var characterUnit = character[2];
+                            // var characterRace = character[3];
                             var characterId = character[1];
                             var character = that.generateCharacterImage(character[1]);
                             var actionButtons = '<div class="action-buttons">\
-                            \<button class="btn button-gift" id="'+realIndex+'">Gift</button>\
-                            \<button class="btn button-eat" id="'+realIndex+'">Eat</button>\
+                            \<button class="btn button-gift" id="'+realIndex+'">Transfer</button>\
+                            \<button class="btn button-eat" id="'+realIndex+'">KIA</button>\
                             </div>';
 
                             $(".inventory-list").append('<div id="character-'+realIndex+'" class="col-lg-6">\
@@ -189,7 +195,7 @@ Character.prototype.loadInventory = function() {
 
 // Update container of Create new Character
 Character.prototype.updateCreateContainer = function() {
-    var characterName = $("#create-identifier").val();
+    var characterName = $("#create-name").val();
     var that = this;
 
     // Disallow negative numbers
@@ -335,7 +341,7 @@ Character.prototype.bindInputs = function() {
     var that = this;
     var timeout = null; // Set timeout to every input so it doesn't fire too often
 
-    $(document).on("change textInput input", "#create-identifier", function() {
+    $(document).on("change textInput input", "#create-name", function() {
         clearTimeout(timeout);
         timeout = setTimeout(function() {
             that.updateCreateContainer();

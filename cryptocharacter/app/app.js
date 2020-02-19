@@ -171,7 +171,7 @@ Character.prototype.loadInventory = function() {
 
                             $(".inventory-list").append('<div id="character-'+realIndex+'" class="col-lg-6">\
                             \<div class="character-container">\
-                            \<p><span style="float: left;">'+characterName+'</span><span id="'+characterUnit+'" class="characterDna" style="float: right;">#'+characterRace+'</span></p>\
+                            \<p><span style="float: left;">'+characterName+'</span><span style="float: middle;">'+characterUnit+'</span><span style="float: right;">'+characterRace+'</span></p>\
                             \<div class="character-inner-container">\
                             <div class="ingredients">\
                             '+character+'\

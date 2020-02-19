@@ -56,7 +56,7 @@
     ],
     "herolist": [
         {
-            "name": "Loremaster",
+            "name": "Hero A",
             "race": "High Elf",
             "source": "Broheim",
             "warband": "High Elves",
@@ -577,7 +577,7 @@
             "name": "Spearguard",
             "henchmanlist": [
                 {
-                    "name": "Seaguard",
+                    "name": "Spearguard",
                     "race": "High Elf",
                     "source": "Broheim",
                     "warband": "High Elves",
@@ -675,7 +675,7 @@
                     "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops. "
                 },
                 {
-                    "name": "Seaguard",
+                    "name": "Spearguard",
                     "race": "High Elf",
                     "source": "Broheim",
                     "warband": "High Elves",
@@ -778,7 +778,7 @@
             "name": "Bladeguard",
             "henchmanlist": [
                 {
-                    "name": "Seaguard",
+                    "name": "Bladeguard",
                     "race": "High Elf",
                     "source": "Broheim",
                     "warband": "High Elves",

@@ -75,7 +75,7 @@ class Warband(object):
     @staticmethod
     def from_dict(datadict):
         """ Create an object, and all nested objects, out of a warband dictionary in order to enable updates to that data."""
-        
+
         treasury = Treasury.from_dict(datadict["treasury"])
 
         rulelist = []
@@ -109,18 +109,20 @@ class Warband(object):
 
         return wbid
     
-    def create_warband(name, race, source, warband, gold=500):
+    @staticmethod
+    def create_warband(name, race, source, warband):
         """Create a new warband based on the given parameters"""
+        
         # open reference data json file
         data = open_json("database/references/warbands_ref.json")
 
         rulelist = []
-        for ruledict in data[race][source][warband].get("rulelist"):
+        for ruledict in data[race][source][warband]["rulelist"]:
             ruleobject = Rule(name = ruledict["name"], description = ruledict["description"])
             rulelist.append(ruleobject)
 
         treasury=Treasury(
-            gold = gold,
+            gold = data[race][source][warband]["start_gold"],
         )
         
         # create new basic warband object
@@ -131,13 +133,13 @@ class Warband(object):
             warband = warband, 
             treasury = treasury,
             rulelist = rulelist,
-            description = data[race][source][warband].get("description")  
+            description = data[race][source][warband]["description"],  
         )      
                 
         return new_warband
 
     def get_price(self):
-        """ Temporary function, should be split in seperate functions to adjust gold baded on single events of buying equipment or getting loot"""
+        """ -- Can this be deleted? -- Get the worth of your warband"""
         
         wbinvprice = 0
         if self.itemlist:
@@ -247,19 +249,7 @@ class Squad(object):
 
         return squadprice
 
-    def add_henchman(self):
-        """adds another henchman character to the squad
-        for a new squad checks if character is a henchman sub-class"""
-        # Create a character with the create character method based on the squads characteristics. 
-        # Create a duplicate character if the squad is len(1>)
-
-        NotImplemented
-
-    def remove_henchman(self):
-        """removes a specific henchman character in this squad, by default this is on FIFO basis"""
-        NotImplemented
-
-       
+     
 class Character(object):
     def __init__(self, name, race, source, warband, category, ishero, skill, abilitylist=[], magiclist=[], itemlist=[], experience=0, price=0, maxcount=0, description=None):
         self.name = name
@@ -312,8 +302,15 @@ class Character(object):
         return data
 
     @staticmethod
-    def from_dict(datadict):
+    def from_dict(datadict, create = False):
         
+        if create == True:
+            name = ""
+            # events = ""
+        else:
+            name = datadict["name"]
+            # events = datadict["events"]
+
         skilldict = datadict["skill"]
         skill = Skill.from_dict(skilldict)
 
@@ -345,7 +342,7 @@ class Character(object):
             itemlist += [Item.from_dict(itemref)]
 
         data = Character(
-            name = datadict["category"], # needs to be fixed, split form_dict of character (maybe of all classes, in get from reference and get from save file)
+            name = name,
             race = datadict["race"],
             source = datadict["source"],
             warband = datadict["warband"],
@@ -369,7 +366,9 @@ class Character(object):
         data = open_json("database/references/characters_ref.json")
         datadict = data[race][source][warband][category]
 
-        new_character = Character.from_dict(datadict)
+# change from_dict_template to be able to load a reference and a real instance of a character with extra filled fields
+
+        new_character = Character.from_dict(datadict = datadict, create = True)
         new_character.name = name
 
         return new_character

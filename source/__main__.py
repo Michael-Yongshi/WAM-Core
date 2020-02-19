@@ -902,7 +902,7 @@ class WarbandOverview(QMainWindow):
 
                     warband, okPressed = QInputDialog.getItem(self, "Create", "Choose a warband", warbands, 0, False)
                     if okPressed and warband:
-                        self.wbid = Warband.create_warband(name=name, race=race, source=source, warband=warband, gold=500)
+                        self.wbid = Warband.create_warband(name=name, race=race, source=source, warband=warband)
                         self.currentunit = self.create_template_char()
                         self.initUI()
 

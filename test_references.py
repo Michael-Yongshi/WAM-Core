@@ -28,6 +28,7 @@ if __name__ == "__main__":
             {"name": "Excellent Leadership", "description": "Reikland Mercenaries are accustomed to the demands of military discipline and have a strongly developed loyalty between officers and men. To represent this, fighters may use their Captain’s Leadership if within 12 inch rather than the usual 6 inch. "}, 
             {"name": "Trained Marksmen", "description": "A strong tradition of martial training is also responsible for the high standards of archery amongst the people of Reikland. All Marksmen therefore start with 4 of Ballistic Skill instead of the normal 3, whether they are recruited when the warband is first formed or added later. "}, 
         ],
+        start_gold = 500,
         description = (
             "This is a time of unremitting war, civil strife, violence and famine. A time of orphan children and wanton slaughter. For warriors these are good times! Since the discovery of wyrdstone Mordheim has become a magnet for fighting men from all over the Empire. Nobles, merchants, and the Temple of Sigmar itself offer rich rewards for shards of the mysterious stone. "
             "Foremost amongst the patrons of mercenary warriors are the three most powerful contenders for the Emperor’s throne: the Grand Prince of Reikland, the Count of Middenheim, and Lady Magritta of Marienburg – favourite of the merchant guilds. As a mercenary warband you must decide which of the three contenders for Sigmar’s throne you are fighting for. "
@@ -46,6 +47,7 @@ if __name__ == "__main__":
         rulelist = [
             {"name": "Body Builders", "description": "The men of Middenheim are famous for their physical prowess. To represent their advantage in size and bulk, the Champions and Captains of a Middenheim warband start with Strength 4 instead of 3. "}, 
         ],
+        start_gold = 500,
         description = (
             "This is a time of unremitting war, civil strife, violence and famine. A time of orphan children and wanton slaughter. For warriors these are good times! Since the discovery of wyrdstone Mordheim has become a magnet for fighting men from all over the Empire. Nobles, merchants, and the Temple of Sigmar itself offer rich rewards for shards of the mysterious stone. "
             "Foremost amongst the patrons of mercenary warriors are the three most powerful contenders for the Emperor’s throne: the Grand Prince of Reikland, the Count of Middenheim, and Lady Magritta of Marienburg – favourite of the merchant guilds. As a mercenary warband you must decide which of the three contenders for Sigmar’s throne you are fighting for. "
@@ -64,6 +66,7 @@ if __name__ == "__main__":
         rulelist = [
             {"name": "Natural Traders", "description": "As natural traders with contacts in the merchant guilds Marienburg warbands receive a +1 bonus when attempting to find rare items (see the Trading section for rules). To reflect their enormous wealth Marienburgers start off with an extra 100 gold crowns (600 in total) when fighting in a campaign. In a one-off game they are permitted an extra 20 percent gold crowns when recruiting a warband. For example, in a 1,000 gold crown game a Marienburger warband will have 1,200gc. "}, 
         ],
+        start_gold = 600,
         description = (
             "This is a time of unremitting war, civil strife, violence and famine. A time of orphan children and wanton slaughter. For warriors these are good times! Since the discovery of wyrdstone Mordheim has become a magnet for fighting men from all over the Empire. Nobles, merchants, and the Temple of Sigmar itself offer rich rewards for shards of the mysterious stone. "
             "Foremost amongst the patrons of mercenary warriors are the three most powerful contenders for the Emperor’s throne: the Grand Prince of Reikland, the Count of Middenheim, and Lady Magritta of Marienburg – favourite of the merchant guilds. As a mercenary warband you must decide which of the three contenders for Sigmar’s throne you are fighting for. "
@@ -82,6 +85,7 @@ if __name__ == "__main__":
         source = "Core Rules",
         name = "The Cult of the Possessed",
         rulelist = [],
+        start_gold = 500,
         description = (
             "There is never any shortage of men willing to risk their lives for a chance of real power: men whose ambitions lie beyond the scope of their birthright, or whose sorcerous skills or physical deformities place them in constant danger of persecution. What do such men have to lose if they pledge their souls to the dark gods of Chaos!"
             "In the aftermath of the destruction of Mordheim all manner of mutants have appeared whilst many hitherto unblemished folk feel the stirring of strange powers, the first awakenings of magical gifts destined to bring them to a fiery death at the hands of the Witch Hunters. Now a leader has appeared, a new Dark Emperor, who claims lordship of the City of the Damned. "
@@ -100,6 +104,7 @@ if __name__ == "__main__":
         source = "Core Rules",
         name = "Witch Hunters",
         rulelist = [],
+        start_gold = 500,
         description = (
             "The Order of the Templars of Sigmar, universally known as the Witch Hunters, is an organisation dedicated to the eradication of heretics, be they warlocks, witches, sorcerers, fortune-tellers, necromancers, worshippers of the dark gods, deviants, mutants, blasphemers, sinners, utterers of profanities, servants of Daemons, or composers of corrupting music. "
             "Indeed, there are few who altogether escape the suspicions of the Witch Hunters with the possible exception of other Witch Hunters. It is wise to remember that the practice of magic in all its forms is deemed a most heinous crime in the Empire. Death by fire is the proscribed punishment for this particular heresy. Many of the Witch Hunters’ victims treacherously avoid their fate by perishing under torture before making a full confession. "
@@ -117,6 +122,7 @@ if __name__ == "__main__":
         source = "Core Rules",
         name = "Sisters of Sigmar",
         rulelist = [],
+        start_gold = 500,
         description = (
             "For centuries the nobility of the Empire has sent its wayward or troublesome daughters to the Holy Convent of the Order of Merciful Sisters of Sigmar in Mordheim to be initiated into the only order of priestesses dedicated to the Empire’s patron god. The Sisters of Sigmar, as they are commonly called, have traditionally travelled the Empire administering to the sick and poor, tending to the needs of orphans, curing the diseased and mending broken bodies. "
             "As well as the healing arts, which they practise with expert knowledge of herb-lore and prayer, their advice is frequently sought by those about to make an important decision, for the Sisters of Sigmar are famed for their ability to predict the fickle course of fate. Though once much loved by the common people, the Sisters have seen their popularity wane in recent years. "
@@ -136,6 +142,7 @@ if __name__ == "__main__":
         source = "Core Rules",
         name = "The Undead",
         rulelist = [],
+        start_gold = 500,
         description = (
             "Count Vlad von Carstein and his wife Isabella have ruled the province of Sylvania for as long as anyone can remember – peasants whisper of some dark secret, Witch Hunters revile them, and the Priests of Sigmar shun their court. Indeed, Sylvania has the most dire reputation of all the provinces of the Empire. "
             "Few men sent to spy on the rulers of Sylvania have ever returned from those dark Sylvanian forests, and then rarely with their sanity intact. In the dimly-lit chamber of the Drakenhof castle, on a throne of black obsidian, sits Vlad von Carstein, the ruler of Sylvania. He waits in shadows, having set himself apart from the politics and bickering of the Empire. "
@@ -151,6 +158,7 @@ if __name__ == "__main__":
         source = "Core Rules",
         name = "Skaven",
         rulelist = [],
+        start_gold = 500,
         description = (
             "Unbeknownst to man, for thousands of years he has shared his world with another and altogether different race. There have always been signs for those who cared to see them: a scurrying black shadow, an inhuman scream from the sewer, scuttling shapes at the back of the cellar. All these years these creatures have worked away in secret, burrowing beneath the world of man, undermining his great cities, infiltrating his sewers and cellars, and joining all up into a vast worldspanning labyrinth of tunnels and nests. "
             "These creatures call themselves Skaven and they are ratmen, the mutant spawn of an older age of chaos and mutation. Doubtless one day the Skaven will be ready to emerge from their tunnels and wage open war upon mankind. For centuries they have been content to feed upon his ruins, to seed plague in his cities, and spread contagion amongst his lands. At least they were content to wait and watch, for now everything has suddenly changed. "
@@ -174,6 +182,7 @@ if __name__ == "__main__":
             {"name": "The Old Ways", "description": "The High Elves may never use black powder weapons of any sort. This goes against their ancestors and the traditions of the Old Ways."},
             {"name": "Resolve", "description": "The High Elves have been fighting the Dark Elves for countless centuries. When fighting their dark kin the High Elves are driven by unwavering determination. They are considered to have a Leadership of 10 when taking Rout Tests against the Dark Elves. In addition, High Elves can never choose to voluntarily Rout as they must stop their evil kin at any cost."},
         ],
+        start_gold = 500,
         description = (
             "The Citadel of Dusk was built for the dual purpose of guarding the seaways off the east coast of Lustria against incursions from the rest of the world, and as a staging post from which the High Elves could watch the movements of the Lizardmen and their Slann masters. Despite the High Elves’ best efforts to keep Lustria free of human adventurers, the people of the Old World have been dogged in their attempts to penetrate Ulthuan’s extensive naval web and explore the jungle continent. "
             "So far the mighty Slann Mages have not appeared unduly concerned by the constant incursions onto their lands by the greedy peoples of the Old World and Naggaroth, and appear to have done little to prevent these predatory races from returning. Yet the High Elves know that despite the Slann`s relative calm in the face of these constant raids, the patience of ancient Mage-Priests is not limitless. "
@@ -192,6 +201,7 @@ if __name__ == "__main__":
             {"name": "The Old Ways", "description": "The High Elves may never use black powder weapons of any sort. This goes against their ancestors and the traditions of the Old Ways."},
             {"name": "Resolve", "description": "The High Elves have been fighting the Dark Elves for countless centuries. When fighting their dark kin the High Elves are driven by unwavering determination. They are considered to have a Leadership of 10 when taking Rout Tests against the Dark Elves. In addition, High Elves can never choose to voluntarily Rout as they must stop their evil kin at any cost."},
         ],
+        start_gold = 500,
         description = (
             "High Elves originate from the island kingdom of Ulthuan far to the west of the Empire, which is belaugered continuously by raids from their hated Dark Elven brethren, the fearless Norscans, and the incursions of Chaos which rack all civilized lands. \n"
             "The fair elven folk learn how to fight from childhood, and thanks to their extremely long lifespans they often grow in skill to become unrivaled in their prowess by other mortals. Despite their individual ability, their numbers are few compared to their co-inhabitants of the Old World and they are always in search of some edge with which to gain an advantage over their foes. /n"

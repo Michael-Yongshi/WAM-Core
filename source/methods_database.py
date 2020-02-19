@@ -15,7 +15,7 @@ def create_warbandref():
     print(f"Created warbandfile")
     save_json(data, filepath)
 
-def add_warbandref(race, source, name, rulelist, description):
+def add_warbandref(race, source, name, rulelist, start_gold, description):
     # Paths
     folderpath = "database/references/"
     filepath = folderpath + "warbands_ref.json"
@@ -40,6 +40,7 @@ def add_warbandref(race, source, name, rulelist, description):
         'source': source,
         'name': name,
         'rulelist': rulelist,
+        'start_gold': start_gold,
         'description': description,
     }
 

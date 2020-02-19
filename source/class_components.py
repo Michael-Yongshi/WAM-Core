@@ -103,7 +103,17 @@ class Item(object):
         return data
 
     @staticmethod
-    def from_dict(datadict):
+    def from_dict(datadict, create = False):
+        
+        if create == True:
+            pass
+            # decorative name = "",
+            # events = "",
+        else:
+            pass
+            # decorative name = datadict["dec_name"],
+            # events = datadict["events"],
+        
         skilldict = datadict["skill"]
         skill = Skill.from_dict(skilldict)
 
@@ -144,7 +154,7 @@ class Item(object):
         data = open_json("database/references/items_ref.json")
         datadict = data[source][category][name]
 
-        new_item = Item.from_dict(datadict)
+        new_item = Item.from_dict(datadict = datadict, create = True)
 
         return new_item
 

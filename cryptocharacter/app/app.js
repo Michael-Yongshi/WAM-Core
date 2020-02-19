@@ -110,9 +110,9 @@ Character.prototype.createRandomCharacter = function() {
     var race = $("#create-race").val();
     var identifier = name.concat(unit, race);
 
-    // Validate identifier < 20 chars
-    if(identifier.length > 20) {
-        showStatus("Please identify your Character with less than 32 characters");
+    // Validate identifier < 40 chars
+    if(identifier.length > 40) {
+        showStatus("Please identify your Character with less than 64 characters");
         return;
     }
 

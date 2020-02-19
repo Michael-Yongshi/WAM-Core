@@ -150,6 +150,7 @@ Character.prototype.createRandomCharacter = function() {
 }
 
 // Load all Characters owned by user
+
 Character.prototype.loadInventory = function() {
     var that = this;
     this.instance.methods.getCharactersByOwner( window.top.web3.eth.accounts[0]).call().then(function( characterIds) {
@@ -158,10 +159,10 @@ Character.prototype.loadInventory = function() {
                          $(".inventory-list").html('');
                         that.instance.methods.characters(characterIds[i]).call().then( function(character) {
                             var realIndex = characterIds[i];
-                            var characterName = character[0];
-                            // var characterUnit = character[2];
-                            // var characterRace = character[3];
-                            var characterId = character[1];
+                            var characterName = character[1];
+                            var characterUnit = character[2];
+                            var characterRace = character[3];
+                            var characterId = character[0];
                             var character = that.generateCharacterImage(character[1]);
                             var actionButtons = '<div class="action-buttons">\
                             \<button class="btn button-gift" id="'+realIndex+'">Transfer</button>\
@@ -170,7 +171,7 @@ Character.prototype.loadInventory = function() {
 
                             $(".inventory-list").append('<div id="character-'+realIndex+'" class="col-lg-6">\
                             \<div class="character-container">\
-                            \<p><span style="float: left;">'+characterName+'</span><span id="'+characterId+'" class="characterDna" style="float: right;">#'+characterId+'</span></p>\
+                            \<p><span style="float: left;">'+characterName+'</span><span id="'+characterUnit+'" class="characterDna" style="float: right;">#'+characterRace+'</span></p>\
                             \<div class="character-inner-container">\
                             <div class="ingredients">\
                             '+character+'\

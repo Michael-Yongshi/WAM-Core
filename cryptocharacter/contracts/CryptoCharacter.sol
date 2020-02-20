@@ -30,7 +30,7 @@ contract CryptoCharacter is IERC721, ERC165 {
         string name;
         string unit;
         string race;
-        string[] events;
+        mapping (uint => string) events;
         uint dna;
     }
 
@@ -54,7 +54,6 @@ contract CryptoCharacter is IERC721, ERC165 {
         string memory _name,
         string memory _unit,
         string memory _race,
-        string[] memory _events,
         uint _dna
         )
         internal
@@ -84,7 +83,6 @@ contract CryptoCharacter is IERC721, ERC165 {
         string memory _name,
         string memory _unit,
         string memory _race,
-        string[] memory _events,
         )
         public
     {
@@ -94,7 +92,6 @@ contract CryptoCharacter is IERC721, ERC165 {
             _name,
             _unit,
             _race,
-            _events,
             randDna
             );
     }

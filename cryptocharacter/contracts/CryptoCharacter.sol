@@ -30,6 +30,7 @@ contract CryptoCharacter is IERC721, ERC165 {
         string name;
         string unit;
         string race;
+        string[] events;
         uint dna;
     }
 
@@ -48,12 +49,29 @@ contract CryptoCharacter is IERC721, ERC165 {
     mapping (address => mapping (address => bool)) private operatorApprovals;
 
     // Create random Character from string (name) and DNA
-    function _createCharacter(string memory _identifier, string memory _name, string memory _unit, string memory _race, uint _dna)
+    function _createCharacter(
+        string memory _identifier,
+        string memory _name,
+        string memory _unit,
+        string memory _race,
+        string[] memory _events,
+        uint _dna
+        )
         internal
         isUnique(_identifier, _dna)
     {
         // Add Character to array and get id
-        uint id = SafeMath.sub(characters.push(Character(_identifier, _name, _unit, _race, _dna)), 1);
+        uint id = SafeMath.sub(
+            characters.push(
+                Character(
+                    _identifier,
+                    _name,
+                    _unit,
+                    _race,
+                    _dna
+                    )
+                ),
+            1);
         // Map owner to id of Character
         assert(characterToOwner[id] == address(0));
         characterToOwner[id] = msg.sender;
@@ -61,11 +79,24 @@ contract CryptoCharacter is IERC721, ERC165 {
     }
 
     // Creates random Character from string (identifier)
-    function createRandomCharacter(string memory _identifier, string memory _name, string memory _unit, string memory _race)
+    function createRandomCharacter(
+        string memory _identifier,
+        string memory _name,
+        string memory _unit,
+        string memory _race,
+        string[] memory _events,
+        )
         public
     {
         uint randDna = generateRandomDna(_identifier, msg.sender);
-        _createCharacter(_identifier, _name, _unit, _race, randDna);
+        _createCharacter(
+            _identifier,
+            _name,
+            _unit,
+            _race,
+            _events,
+            randDna
+            );
     }
 
     // Generate random DNA from string (identifier) and address of the owner (creator)

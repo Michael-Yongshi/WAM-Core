@@ -68,57 +68,9 @@ from source.class_hierarchy import (
     Magic,
     )
 
+from source.widget_system import WidgetSystem
+from source.gui_template import *
 
-class QBorderedWidget(QWidget):
-    """A widget which is the default, but with some different stylesheet details (borders)"""
-    def __init__(self, *args):
-        super().__init__(*args)
-
-        self.setStyleSheet("border: 1px solid rgb(100, 100, 100)")
-
-class QUnBorderedWidget(QWidget):
-    """A widget which is the default, but with some different stylesheet details (borders)"""
-    def __init__(self, *args):
-        super().__init__(*args)
-
-        self.setStyleSheet("border: 0px")
-
-class QInteractiveWidget(QBorderedWidget):
-    """A bordered widget, but which is clickable"""
-    def __init__(self, *args):
-        super().__init__(*args)
-
-    clicked = pyqtSignal()
-
-    def mousePressEvent(self, ev):
-        if app.mouseButtons() & Qt.LeftButton:
-            self.clicked.emit()
-
-# class QHighlightedWidget(QInteractiveWidget):
-#     """A widget which is the default, but with some different stylesheet details (highlights)"""
-#     def __init__(self, *args):
-#         super().__init__(*args)
-
-#         self.setPalette(QPalette())
-
-class QDarkPalette(QPalette):
-    """A Dark palette meant to be used with the Fusion theme."""
-    def __init__(self, *__args):
-        super().__init__(*__args)
-        
-        self.setColor(QPalette.Window, QColor(53, 53, 53))          #dark grey
-        self.setColor(QPalette.WindowText, QColor(255, 255, 255))   #white
-        self.setColor(QPalette.Base, QColor(25, 25, 25))            #darker grey
-        self.setColor(QPalette.AlternateBase, QColor(53, 53, 53))   #dark grey
-        self.setColor(QPalette.ToolTipBase, QColor(255, 255, 255))  #white
-        self.setColor(QPalette.ToolTipText, QColor(255, 255, 255))  #white
-        self.setColor(QPalette.Text, QColor(255, 255, 255))         #white
-        self.setColor(QPalette.Button, QColor(53, 53, 53))          #dark grey
-        self.setColor(QPalette.ButtonText, QColor(255, 255, 255))   #white
-        self.setColor(QPalette.BrightText, QColor(255, 0, 0))       #red
-        self.setColor(QPalette.Link, QColor(42, 130, 218))          #blue
-        self.setColor(QPalette.Highlight, QColor(42, 130, 218))     #blue
-        self.setColor(QPalette.HighlightedText, QColor(0, 0, 0))    #black
 
 class QMainApplication(QApplication):
     """A Dark styled application."""
@@ -175,7 +127,7 @@ class WarbandOverview(QMainWindow):
         topbox = QHBoxLayout()
         topbox.addWidget(self.set_wbname())
         topbox.addWidget(self.set_wbinvbox())
-        topbox.addWidget(self.set_systembox())
+        topbox.addWidget(WidgetSystem())
         topboxwidget = QBorderedWidget()
         topboxwidget.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
         topboxwidget.setLayout(topbox)
@@ -193,36 +145,6 @@ class WarbandOverview(QMainWindow):
         botboxwidget.setLayout(botbox)
 
         return botboxwidget
-
-    def set_systembox(self):
-        # buttons for interaction     
-        btnchoose = QPushButton('Choose Warband', self)
-        btnchoose.setToolTip('Choose an existing <b>Warband</b>')
-        btnchoose.clicked.connect(self.choose_warband)
-
-        btncreate = QPushButton('Create Warband', self)
-        btncreate.setToolTip('Create a new <b>Warband</b>')
-        btncreate.clicked.connect(self.create_warband)
-        
-        btnsave = QPushButton('Save Warband', self)
-        btnsave.setShortcut("Ctrl+S")
-        btnsave.setToolTip('Save current <b>Warband</b>')
-        btnsave.clicked.connect(self.save_warband)
-
-        btnquit = QPushButton('Quit', self)
-        btnquit.setToolTip('Quit the program')
-        btnquit.clicked.connect(QApplication.instance().quit)
-
-        # top right
-        sysbox = QGridLayout()
-        sysbox.addWidget(btncreate, 0, 0)
-        sysbox.addWidget(btnsave, 0, 1)
-        sysbox.addWidget(btnchoose, 1, 0)
-        sysbox.addWidget(btnquit, 1, 1)
-        sysboxwidget = QBorderedWidget()
-        sysboxwidget.setLayout(sysbox)
-
-        return sysboxwidget
 
     def set_wbinvbox(self):
         # Top middle
@@ -309,10 +231,11 @@ class WarbandOverview(QMainWindow):
 
         return wbboxwidget
 
-    def set_herobox(self):
+    def set_herobox(self, currentbox):
         # left bottom heroes
         herobox = QVBoxLayout() # To show all heroes below each other dynamically (based on actual number of heroes)
         h = 0
+        currentbox.set_currenther(hero)
         for hero in self.wbid.herolist:
             h += 1
             herogrid = QGridLayout() # create a grid layout to position all information more accurately
@@ -571,21 +494,6 @@ class WarbandOverview(QMainWindow):
         currentboxwidget.setLayout(currentbox)
 
         return currentboxwidget
-
-    def choose_warband(self):
-        """Choose a warband to be loaded into cache and then shown on screen"""
-        warbands = show_saved_warbands()                                                                            # get list of save files
-        wbname, okPressed = QInputDialog.getItem(self, "Choose", "Choose your warband", warbands, 0, False)         # Let user choose out of save files
-        if okPressed and wbname:
-            self.wbid = load_warband(wbname)                                                                        # set warband object based on save file
-            self.currentunit = self.create_template_char()                                                          # set empty current unit
-            self.initUI()                                                                                           # Restart the window to force changes
-
-    def save_warband(self):
-        """Save warband to cache and then to saves"""
-        save_warband(self.wbid)                # save wbid to json
-        cache_warband(self.wbid)                #set to run next time at stsrtup
-        message = QMessageBox.information(self, "Saved", "Save successful!", QMessageBox.Ok)
 
     def dialog_treasury(self):
         
@@ -879,38 +787,6 @@ class WarbandOverview(QMainWindow):
         )
         return template_char
 
-    def create_warband(self):
-        """Create a new warband and store it in cache"""
-        name, okPressed = QInputDialog.getText(self, "Create", "Name your warband:")
-        if okPressed and name:
-            
-            # get all races in references
-            chardict = open_json("database/references/warbands_ref.json")
-
-            races = []
-            for key in chardict:
-                races.append(key)
-
-            race, okPressed = QInputDialog.getItem(self, "Create", "Choose a race", races, 0, False)
-            if okPressed and race:
-
-                sources = []
-                for key in chardict[race]:
-                    sources.append(key)
-
-                source, okPressed = QInputDialog.getItem(self, "Create", "Choose a source", sources, 0, False)
-                if okPressed and source:
-
-                    warbands = []
-                    for key in chardict[race][source]:
-                        warbands.append(key)
-
-                    warband, okPressed = QInputDialog.getItem(self, "Create", "Choose a warband", warbands, 0, False)
-                    if okPressed and warband:
-                        self.wbid = Warband.create_warband(name=name, race=race, source=source, warband=warband)
-                        self.currentunit = self.create_template_char()
-                        self.initUI()
-
     def create_new_hero(self):
 
         """Create a new hero and store it in this warband"""
@@ -944,6 +820,7 @@ class WarbandOverview(QMainWindow):
                     self.wbid.treasury.gold = wbidgold - heroprice
                     self.wbid.herolist.append(new_hero)
                     self.currentunit = new_hero
+                    
                     self.initUI()
                 else:
                     print("can't add new hero, lack of funds")

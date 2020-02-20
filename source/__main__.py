@@ -33,6 +33,7 @@ from PyQt5.QtWidgets import (
 from PyQt5.QtGui import (
     QColor,
     QFont,
+    QFontDatabase,
     QIcon,
     QPalette,
     )
@@ -67,6 +68,7 @@ from source.class_hierarchy import (
     Magic,
     )
 
+
 class QBorderedWidget(QWidget):
     """A widget which is the default, but with some different stylesheet details (borders)"""
     def __init__(self, *args):
@@ -92,18 +94,18 @@ class QInteractiveWidget(QBorderedWidget):
         if app.mouseButtons() & Qt.LeftButton:
             self.clicked.emit()
 
-class QHighlightedWidget(QInteractiveWidget):
-    """A widget which is the default, but with some different stylesheet details (highlights)"""
-    def __init__(self, *args):
-        super().__init__(*args)
+# class QHighlightedWidget(QInteractiveWidget):
+#     """A widget which is the default, but with some different stylesheet details (highlights)"""
+#     def __init__(self, *args):
+#         super().__init__(*args)
 
-        self.setPalette(QPalette())
+#         self.setPalette(QPalette())
 
 class QDarkPalette(QPalette):
     """A Dark palette meant to be used with the Fusion theme."""
     def __init__(self, *__args):
         super().__init__(*__args)
-
+        
         self.setColor(QPalette.Window, QColor(53, 53, 53))          #dark grey
         self.setColor(QPalette.WindowText, QColor(255, 255, 255))   #white
         self.setColor(QPalette.Base, QColor(25, 25, 25))            #darker grey
@@ -122,8 +124,11 @@ class QMainApplication(QApplication):
     """A Dark styled application."""
     def __init__(self, *__args):
         super().__init__(*__args)
+        
+        QFontDatabase.addApplicationFont("source/schoensperger.otf")
         self.setStyle("Fusion")
         self.setPalette(QDarkPalette())
+        # self.setFont(QFont("schoensperger", 20))
         self.setStyleSheet("QToolTip { color: #ffffff; background-color: grey; border: 1px solid white; }")
         
 class WarbandOverview(QMainWindow):

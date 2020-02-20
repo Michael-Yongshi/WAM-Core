@@ -40,6 +40,9 @@ create from spec with
         python -m PyInstaller WAM.spec
         <!-- python -m PyInstaller WAM_OF.spec -->
 
+Dist location:
+        https://www.jottacloud.com/s/13030f55cae66fb428698777e670d3a052a
+
 - Solidity stuff
         metamask network vincent: http://51.105.171.12
         https://ethereum.org/python/

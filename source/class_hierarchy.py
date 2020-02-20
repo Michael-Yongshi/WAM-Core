@@ -191,8 +191,8 @@ class Squad(object):
             henchmanlist += [Character.from_dict(henchman)]
 
         squad = Squad(
-            name=datadict["name"],
-            henchmanlist=henchmanlist,
+            name = datadict["name"],
+            henchmanlist = henchmanlist,
             )
 
         return squad
@@ -318,27 +318,27 @@ class Character(object):
             abilitylist = []
             for abilitydict in datadict["abilitylist"]:
                 abilityref = get_abilityref(
-                    source=abilitydict["source"], 
-                    category=abilitydict["category"], 
-                    name=abilitydict["name"], 
+                    source = abilitydict["source"], 
+                    category = abilitydict["category"], 
+                    name = abilitydict["name"], 
                 )
                 abilitylist += [Ability.from_dict(abilityref)]
 
             magiclist = []
             for magicdict in datadict["magiclist"]:
                 magicref = get_magicref(
-                    source=magicdict["source"], 
-                    category=magicdict["category"], 
-                    name=magicdict["name"], 
+                    source = magicdict["source"], 
+                    category = magicdict["category"], 
+                    name = magicdict["name"], 
                 )
                 magiclist += [Magic.from_dict(magicref)]
             
             itemlist = []
             for itemdict in datadict["itemlist"]:
                 itemref = Item.create_item(
-                    source=itemdict["source"], 
-                    category=itemdict["category"], 
-                    subcategory=itemdict["subcategory"], 
+                    source = itemdict["source"], 
+                    category = itemdict["category"], 
+                    subcategory = itemdict["subcategory"], 
                     )
                 itemlist += [itemref]
 

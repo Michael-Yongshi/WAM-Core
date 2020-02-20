@@ -1131,7 +1131,7 @@ if __name__ == "__main__":
         abilitylist = [
             {"source": "Core Rules", "category": "Character", "name": "Unarmed and Unarmoured"},
             {"source": "Core Rules", "category": "Character", "name": "Cause Fear"},
-            {"source": "Core Rules", "category": "Character", "name": "Stupidity"},
+            {"source": "Core Rules", "category": "Character", "name": "Leaderless Stupidity"},
             {"source": "Core Rules", "category": "Character", "name": "Animal"},
             {"source": "Core Rules", "category": "Character", "name": "Large Target"},
         ],
@@ -2246,7 +2246,13 @@ if __name__ == "__main__":
         source = "Core Rules", 
         category = "Character",
         name = "Cause Fear",
-        description = "This character is terrifying and therefore instill fear in their enemies. See the Psychology section for details.",
+        description = (
+            "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters."
+            "<br/><br/>"
+            "- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6’s to score hits on the first round of combat."
+            "<br/>"
+            "- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+        ),
     )
     add_abilityref(
         source = "Core Rules", 
@@ -2270,7 +2276,13 @@ if __name__ == "__main__":
         source = "Core Rules", 
         category = "Character",
         name = "Burn the Witch!",
-        description = "This character hates all models who can cast spells.",
+        description = (
+            "This character hates all models who can cast spells."
+            "<br/><br/>"
+            "Hatred is a very powerful emotion, and during this era of strife and war, bitter rivalry is commonplace."
+            "<br/>"
+            "Warriors who fight enemies they hate in hand-to-hand combat may re-roll any misses when they attack in the first turn of each hand-to-hand combat. This bonus applies only in the first turn of each combat and represents the warrior venting his pent-up hatred on his foe. After the initial round of hand-to-hand combat he loses some impetus and subsequently fights as normal for the rest of the combat"
+        ),
     )
     add_abilityref(
         source = "Core Rules", 
@@ -2365,8 +2377,18 @@ if __name__ == "__main__":
     add_abilityref(
         source = "Core Rules", 
         category = "Character",
-        name = "Stupidity",
-        description = "This character is subject to stupidity unless a Hero is within 6 inch of it.",
+        name = "Leaderless Stupidity",
+        description = (
+            "Many large and powerful creatures, as well as some of the more unhinged individuals in Mordheim, are unfortunately rather stupid. This character is subject to stupidity unless a Hero is within 6 inch of it."
+            "<br/><br/>"
+            "Models that are stupid test at the start of their turn to see if they overcome their stupidity. Make a test for each model affected by stupidity. If you pass the test by rolling their Leadership value or less on 2D6 then all is well – the creatures behave reasonably intelligently and the player may move and fight with them as normal."
+            "<br/>"
+            "If the test is failed all is not well. If the model is in combat it will not strike any blows during this turn of hand-to-hand combat. If he is a spell caster then he may not cast any spells this turn. If a model who fails a Stupidity test is not in hand-tohand combat, roll a D6." 
+            "<br/>"
+            "1-3 The warrior moves directly forward at half speed in a shambling manner. He will not charge an enemy (stop his movement 1 inch away from any enemy he would have come into contact with). He can fall down from the edge of a sheer drop (see the Falling rules) or hit an obstacle, in which case he stops. The model will not shoot this turn."
+            "<br/>"
+            "4-6 The warrior stands inactive and drools a bit during this turn. He may do nothing else, as drooling is so demanding."
+        ),
     )
     add_abilityref(
         source = "Core Rules", 
@@ -2382,6 +2404,18 @@ if __name__ == "__main__":
     )
 
     # Add abilities of items
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Cloth is Armour",
+        description = "This weapon is not the best weapon to use for penetrating an enemy model’s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Item",
+        name = "Concussion",
+        description = "This weapon is excellent to use for striking your enemy senseless. When using this weapon, a roll of 2-4 is treated as stunned when rolling to see the extent of a model’s injuries."
+    )
     add_abilityref(
         source = "Core Rules", 
         category = "Item",
@@ -2603,22 +2637,118 @@ if __name__ == "__main__":
     add_abilityref(
         source = "Core Rules", 
         category = "Injury",
-        name = "Scarred",
-        description = "Feared"
+        name = "Stupidity",
+        description = (
+            "Many large and powerful creatures, as well as some of the more unhinged individuals in Mordheim, are unfortunately rather stupid. Due to an injury to the head, this character became one of them."
+            "<br/><br/>"
+            "Models that are stupid test at the start of their turn to see if they overcome their stupidity. Make a test for each model affected by stupidity. If you pass the test by rolling their Leadership value or less on 2D6 then all is well – the creatures behave reasonably intelligently and the player may move and fight with them as normal."
+            "<br/>"
+            "If the test is failed all is not well. If the model is in combat it will not strike any blows during this turn of hand-to-hand combat. If he is a spell caster then he may not cast any spells this turn. If a model who fails a Stupidity test is not in hand-tohand combat, roll a D6." 
+            "<br/>"
+            "1-3 The warrior moves directly forward at half speed in a shambling manner. He will not charge an enemy (stop his movement 1 inch away from any enemy he would have come into contact with). He can fall down from the edge of a sheer drop (see the Falling rules) or hit an obstacle, in which case he stops. The model will not shoot this turn."
+            "<br/>"
+            "4-6 The warrior stands inactive and drools a bit during this turn. He may do nothing else, as drooling is so demanding."
+        ),
     )
-
-    # Core rules Injuries
     add_abilityref(
         source = "Core Rules", 
-        category = "Item",
-        name = "Cloth is Armour",
-        description = "This weapon is not the best weapon to use for penetrating an enemy model’s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+        category = "Injury",
+        name = "Frenzy",
+        description = (
+            "Some warriors can work themselves into a berserk state of fury, a whirlwind of destruction in which all concern for their own personal safety is ignored in favour of mindless violence. These warriors are described as being frenzied."
+            "<br/>"
+            "Frenzied models must always charge if there are any enemy models within charge range (check after charges have been declared). The player has no choice in this matter – the warrior will automatically declare a charge."
+            "<br/>"
+            "Frenzied warriors fight with double their Attacks characteristic in hand-to-hand combat. Warriors with 1 Attack therefore have 2 Attacks, warriors with 2 Attacks have 4, etc. If a warrior is carrying a weapon in each hand, he receives +1 Attack for this as normal. This extra Attack is not doubled."
+            "<br/>"
+            "Once they are within charge range, frenzied warriors are immune to all other psychology, such as fear and don’t have to take these tests as long as they remain within charge range."
+            "<br/>"
+            "If a frenzied model is knocked down or stunned, he is no longer frenzied. He continues to fight as normal for the rest of the battle."
+        ),
     )
     add_abilityref(
         source = "Core Rules", 
-        category = "Item",
-        name = "Concussion",
-        description = "This weapon is excellent to use for striking your enemy senseless. When using this weapon, a roll of 2-4 is treated as stunned when rolling to see the extent of a model’s injuries."
+        category = "Injury",
+        name = "Horrible Scars",
+        description = (
+            "Due to its disfigurement the character causes fear from now on. In turn this character is immune to other fear causing characters."
+            "<br/><br/>"
+            "- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6’s to score hits on the first round of combat."
+            "<br/>"
+            "- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+        ),
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Injury",
+        name = "Hardened",
+        description = "The warrior survives and becomes inured to the horrors of Mordheim. From now on he is immune to fear.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Injury",
+        name = "Nervous Condition",
+        description = "The warrior’s nervous system has been damaged. His Initiative is permanently reduced by -1.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Injury",
+        name = "Blinded in One Eye",
+        description = "The warrior survives but loses the sight in one eye; randomly determine which. A character that loses an eye has his Ballistic Skill reduced by -1. If the warrior is subsequently blinded in his remaining good eye he must retire from the warband.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Injury",
+        name = "Hand Injury",
+        description = "The warrior’s hand is badly injured. His Weapon Skill is permanently reduced by -1."
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Injury",
+        name = "Lost Arm",
+        description = "The character suffers a severe arm wound. The arm must be amputated. The warrior may only use a single onehanded weapon from now on without an additional buckler or shield. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Injury",
+        name = "Smashed Leg",
+        description = "The warrior may not run any more but he may still charge.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Injury",
+        name = "Deep Wound",
+        description = "The warrior has suffered a serious wound and must miss the next D3 games while he is recovering. He may do nothing at all while recovering.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Injury",
+        name = "Hatred",
+        description = (
+            "The character has a native hatred towards a particular character, warband or race."
+            "<br/><br/>"
+            "Hatred is a very powerful emotion, and during this era of strife and war, bitter rivalry is commonplace."
+            "<br/>"
+            "Warriors who fight enemies they hate in hand-to-hand combat may re-roll any misses when they attack in the first turn of each hand-to-hand combat. This bonus applies only in the first turn of each combat and represents the warrior venting his pent-up hatred on his foe. After the initial round of hand-to-hand combat he loses some impetus and subsequently fights as normal for the rest of the combat"
+        ),
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Injury",
+        name = "Broken Leg",
+        description = "The warrior’s leg is broken. He suffers a -1 Movement characteristic penalty from now on.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Injury",
+        name = "Chest Wound",
+        description = "The warrior has been badly wounded in the chest. He recovers but is weakened by the injury so his Toughness is reduced by -1.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Injury",
+        name = "Old Battle Wound",
+        description = "The warrior survives, but his wound will prevent him from fighting if you roll a 1 on a D6 at the start of any battle. Roll at the start of each battle from now on.",
     )
 
     # Broheim added abilities (high elves)

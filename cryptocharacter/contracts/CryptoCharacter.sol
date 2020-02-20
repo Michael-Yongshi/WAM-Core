@@ -1,5 +1,4 @@
 // metamask network vincent: http://51.105.171.12
-
 pragma solidity ^0.5.10;
 
 import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/IERC721.sol";
@@ -35,11 +34,20 @@ contract CryptoCharacter is IERC721, ERC165 {
 
     Character[] public characters;
 
+    // A public array of different events that are stored as string
+    string[] public events;
+
     // Mapping from owner to id of Character
     mapping (uint => address) public characterToOwner;
 
+    // Mapping from id of Character to id of Event
+    mapping (uint => uint) public eventToCharacter;
+
     // Mapping from owner to number of owned token
     mapping (address => uint) public ownerCharacterCount;
+
+    // Mapping from owner to number of owned token
+    mapping (uint => uint) public characterEventCount;
 
     // Mapping from token ID to approved address
     mapping (uint => address) characterApprovals;
@@ -48,24 +56,67 @@ contract CryptoCharacter is IERC721, ERC165 {
     mapping (address => mapping (address => bool)) private operatorApprovals;
 
     // Create random Character from string (name) and DNA
-    function _createCharacter(string memory _identifier, string memory _name, string memory _unit, string memory _race, uint _dna)
+    function _createCharacter(
+        string memory _identifier,
+        string memory _name,
+        string memory _unit,
+        string memory _race,
+        uint _dna
+        )
         internal
         isUnique(_identifier, _dna)
     {
         // Add Character to array and get id
-        uint id = SafeMath.sub(characters.push(Character(_identifier, _name, _unit, _race, _dna)), 1);
+        uint id = SafeMath.sub(
+            characters.push(
+                Character(
+                    _identifier,
+                    _name,
+                    _unit,
+                    _race,
+                    _dna
+                    )
+                ),
+            1);
         // Map owner to id of Character
         assert(characterToOwner[id] == address(0));
         characterToOwner[id] = msg.sender;
         ownerCharacterCount[msg.sender] = SafeMath.add(ownerCharacterCount[msg.sender], 1);
     }
 
+    // Create Event from string
+    function _createEvent(
+        uint256 _characterId,
+        string memory _event
+        )
+        internal
+    {
+        // Add event to array and get id
+        uint id = SafeMath.sub(events.push(_event),1);
+
+        // Map id of Character to id of Event
+        assert(eventToCharacter[id] == uint(0));
+        eventToCharacter[id] = _characterId;
+        characterEventCount[_characterId] = SafeMath.add(characterEventCount[_characterId], 1);
+    }
+
     // Creates random Character from string (identifier)
-    function createRandomCharacter(string memory _identifier, string memory _name, string memory _unit, string memory _race)
+    function createRandomCharacter(
+        string memory _identifier,
+        string memory _name,
+        string memory _unit,
+        string memory _race
+        )
         public
     {
         uint randDna = generateRandomDna(_identifier, msg.sender);
-        _createCharacter(_identifier, _name, _unit, _race, randDna);
+        _createCharacter(
+            _identifier,
+            _name,
+            _unit,
+            _race,
+            randDna
+            );
     }
 
     // Generate random DNA from string (identifier) and address of the owner (creator)
@@ -93,6 +144,21 @@ contract CryptoCharacter is IERC721, ERC165 {
                 result[counter] = i;
                 counter++;
             }
+        }
+        return result;
+    }
+
+    // Returns array of Events found by characterId
+    function getEventsByCharacter(uint256 _characterId)
+        public
+        view
+        returns(uint[] memory)
+    {
+        uint[] memory result = new uint[](characterEventCount[_characterId]);
+        uint counter = 0;
+        for (uint i = 0; i < events.length; i++) {
+            result[counter] = i;
+            counter++;
         }
         return result;
     }
@@ -163,6 +229,7 @@ contract CryptoCharacter is IERC721, ERC165 {
         require(msg.sender != address(0));
         require(_exists(_characterId));
         require(_isApprovedOrOwner(msg.sender, _characterId));
+
         ownerCharacterCount[msg.sender] = SafeMath.sub(ownerCharacterCount[msg.sender], 1);
         characterToOwner[_characterId] = address(0);
     }

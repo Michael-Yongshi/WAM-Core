@@ -59,6 +59,18 @@ def test_createWarband(name, race, source, warband):
         ]
     print("hero1 item succesfull")
 
+    # Adding abilities to heroes
+    hero1.abilitylist = [
+        Ability.create_ability(source = "Core Rules", category = "Injury", name = "Horrible Scars")
+        ]
+    print("hero1 ability succesfull")
+
+    # Adding magic to heroes
+    hero1.magiclist = [
+        Magic.create_magic(source = "Broheim", category = "High Elven Magic", name = "The Light of Glory")
+        ]
+    print("hero1 magic succesfull")
+
     # adding the heroes to the warband hero list
     wbid.herolist = [
         hero1

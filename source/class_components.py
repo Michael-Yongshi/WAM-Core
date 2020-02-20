@@ -37,11 +37,21 @@ class Rule(object):
     def from_dict(datadict):
         
         data = Rule(
-            name=datadict["name"],
-            description=datadict["description"]
+            name = datadict["name"],
+            description = datadict["description"]
             )
 
         return data
+
+    # @staticmethod
+    # def create_rule(name, description):
+
+    #     new_rule = Rule(
+    #         name = name,
+    #         description = description,
+    #     )
+        
+    #     return new_rule
 
 class Treasury(object):
     def __init__(self, gold=0, wyrd=0):
@@ -59,8 +69,8 @@ class Treasury(object):
     @staticmethod
     def from_dict(datadict):
         data = Treasury(
-            gold=datadict["gold"],
-            wyrd=datadict["wyrd"]
+            gold = datadict["gold"],
+            wyrd = datadict["wyrd"]
             )
         
         return data
@@ -114,18 +124,18 @@ class Item(object):
             abilitylist = []
             for abilitydict in datadict["abilitylist"]:
                 abilityref = get_abilityref(
-                    source=abilitydict["source"], 
-                    category=abilitydict["category"], 
-                    name=abilitydict["name"], 
+                    source = abilitydict["source"], 
+                    category = abilitydict["category"], 
+                    name = abilitydict["name"], 
                 )
                 abilitylist += [Ability.from_dict(abilityref)]
 
             magiclist = []
             for magicdict in datadict["magiclist"]:
                 magicref = get_magicref(
-                    source=magicdict["source"], 
-                    category=magicdict["category"], 
-                    name=magicdict["name"], 
+                    source = magicdict["source"], 
+                    category = magicdict["category"], 
+                    name = magicdict["name"], 
                 )
                 magiclist += [Magic.from_dict(magicref)]
             
@@ -145,15 +155,15 @@ class Item(object):
         skill = Skill.from_dict(skilldict)
 
         data = Item(
-            name=name,
-            subcategory=datadict["subcategory"],
-            source=datadict["source"],
-            category=datadict["category"],
-            skill=skill,
-            abilitylist=abilitylist,
-            magiclist=magiclist,
-            price=datadict["price"],
-            description=datadict["description"]
+            name = name,
+            subcategory = datadict["subcategory"],
+            source = datadict["source"],
+            category = datadict["category"],
+            skill = skill,
+            abilitylist = abilitylist,
+            magiclist = magiclist,
+            price = datadict["price"],
+            description = datadict["description"]
             )
         
         return data
@@ -205,16 +215,16 @@ class Skill(object):
     def from_dict(datadict):
 
         skill = Skill(
-            movement=datadict["movement"],
-            weapon=datadict["weapon"],
-            ballistic=datadict["ballistic"],
-            strength=datadict["strength"],
-            toughness=datadict["toughness"],
-            wounds=datadict["wounds"],
-            initiative=datadict["initiative"],
-            actions=datadict["actions"],
-            leadership=datadict["leadership"],
-            armoursave=datadict["armoursave"]
+            movement = datadict["movement"],
+            weapon = datadict["weapon"],
+            ballistic = datadict["ballistic"],
+            strength = datadict["strength"],
+            toughness = datadict["toughness"],
+            wounds = datadict["wounds"],
+            initiative = datadict["initiative"],
+            actions = datadict["actions"],
+            leadership = datadict["leadership"],
+            armoursave = datadict["armoursave"]
             )
 
         return skill
@@ -239,16 +249,16 @@ class Skill(object):
     def from_list(datalist):
 
         skill = Skill(
-            movement=datalist[0],
-            weapon=datalist[1],
-            ballistic=datalist[2],
-            strength=datalist[3],
-            toughness=datalist[4],
-            wounds=datalist[5],
-            initiative=datalist[6],
-            actions=datalist[7],
-            leadership=datalist[8],
-            armoursave=datalist[9],
+            movement = datalist[0],
+            weapon = datalist[1],
+            ballistic = datalist[2],
+            strength = datalist[3],
+            toughness = datalist[4],
+            wounds = datalist[5],
+            initiative = datalist[6],
+            actions = datalist[7],
+            leadership = datalist[8],
+            armoursave = datalist[9],
             )
 
         return skill
@@ -282,10 +292,10 @@ class Ability(object):
     def from_dict(datadict):
 
         data = Ability(
-            source=datadict["source"],
-            category=datadict["category"],
-            name=datadict["name"],
-            description=datadict["description"],
+            source = datadict["source"],
+            category = datadict["category"],
+            name = datadict["name"],
+            description = datadict["description"],
             )
 
         return data
@@ -302,10 +312,11 @@ class Ability(object):
 
 class Magic(object):
     """Default object to assign ablities as a basis for character and item abilities"""
-    def __init__(self, source, category, name, difficulty, description=""):
+    def __init__(self, source, category, name, group, difficulty, description=""):
         self.source = source
         self.category = category
         self.name = name
+        self.group = group
         self.difficulty = difficulty
         self.description = description
 
@@ -317,6 +328,7 @@ class Magic(object):
             'source': self.source,
             'category': self.category,
             'name': self.name,
+            'group': self.group,
             'difficulty': self.difficulty,
             'description': self.description
         }
@@ -328,10 +340,11 @@ class Magic(object):
         
         data = Magic(
             source = datadict["source"],
-            category=datadict["category"],
-            name=datadict["name"],
-            difficulty=datadict["difficulty"],
-            description=datadict["description"],
+            category = datadict["category"],
+            name = datadict["name"],
+            group = datadict["group"],
+            difficulty = datadict["difficulty"],
+            description = datadict["description"],
             )
 
         return data

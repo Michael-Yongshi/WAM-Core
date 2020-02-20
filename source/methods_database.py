@@ -315,6 +315,7 @@ def get_abilityref(source, category, name):
 
     # First check if source exists
     if source in data:
+        # second check if category exists
         if category in data[source]:
             # Third check if ability exists
             if name in data[source][category]: 
@@ -343,7 +344,7 @@ def create_magicref():
     save_json(data, filepath)
 
 
-def add_magicref(source, category, name, difficulty, description):
+def add_magicref(source, category, name, group, difficulty, description):
     # Paths
     folderpath = "database/references/"
     filepath = folderpath + "magic_ref.json"
@@ -368,8 +369,9 @@ def add_magicref(source, category, name, difficulty, description):
         'source': source,
         'category': category,
         'name': name,
+        'group': group,
         'difficulty': difficulty,
-        'description': description
+        'description': description,
     }
    
     print(f"Added magic: {name}")

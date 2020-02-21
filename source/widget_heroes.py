@@ -145,6 +145,33 @@ class WidgetHeroes(QBorderedWidget):
 
         return focus_unit
 
+    def create_method_remove(self, hero): 
+        """This method is used in order to create a new method that holds a reference to a passed attribute,
+        this is used when a widget needs to be clickable but the signal needs to carry information other than the signal itself.
+        This one specifically gets a current hero and then creates a window based on the attribute"""
+
+        def remove():
+
+            remove = QMessageBox.question(self, 'Remove hero', f"Do you want to remove this hero?", QMessageBox.Yes | QMessageBox.No)
+            if remove == QMessageBox.Yes:
+                process_gold = QMessageBox.question(self, "Process gold", "Is change due to an event?", QMessageBox.Yes | QMessageBox.No)
+                heroprice = 0
+
+                for hero in self.mainwindow.wbid.herolist:
+                    if hero == self.mainwindow.scurrentunit:
+                        if process_gold == QMessageBox.No:
+                            heroprice += hero.price
+                            for item in hero.itemlist:
+                                heroprice += item.price
+                        index = self.mainwindow.wbid.herolist.index(hero)
+                        self.mainwindow.wbid.herolist.pop(index)
+                        break
+
+                self.mainwindow.wbid.treasury.gold += heroprice
+                self.mainwindow.initUI()
+        
+        return remove
+
     def create_new(self):
         
         """Create a new hero, store it in the warband object and set to currentunit"""
@@ -182,29 +209,3 @@ class WidgetHeroes(QBorderedWidget):
                 else:
                     print("can't add new hero, lack of funds")
 
-    def create_method_remove(self, hero): 
-        """This method is used in order to create a new method that holds a reference to a passed attribute,
-        this is used when a widget needs to be clickable but the signal needs to carry information other than the signal itself.
-        This one specifically gets a current hero and then creates a window based on the attribute"""
-
-        def remove():
-
-            remove = QMessageBox.question(self, 'Remove hero', f"Do you want to remove this hero?", QMessageBox.Yes | QMessageBox.No)
-            if remove == QMessageBox.Yes:
-                process_gold = QMessageBox.question(self, "Process gold", "Is change due to an event?", QMessageBox.Yes | QMessageBox.No)
-                heroprice = 0
-
-                for hero in self.mainwindow.wbid.herolist:
-                    if hero == self.mainwindow.scurrentunit:
-                        if process_gold == QMessageBox.No:
-                            heroprice += hero.price
-                            for item in hero.itemlist:
-                                heroprice += item.price
-                        index = self.mainwindow.wbid.herolist.index(hero)
-                        self.mainwindow.wbid.herolist.pop(index)
-                        break
-
-                self.mainwindow.wbid.treasury.gold += heroprice
-                self.mainwindow.initUI()
-        
-        return remove

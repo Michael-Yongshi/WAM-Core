@@ -88,7 +88,7 @@ class WidgetItemsWarband(QBorderedWidget):
             itemwrap.addWidget(label)
             itemwidget = QInteractiveWidget()
             itemwidget.setLayout(itemwrap)
-            itemwidget.clicked.connect(self.create_method_remove_item(warband = self.mainwindow.wbid, item = item))
+            itemwidget.clicked.connect(self.create_method_remove(warband = self.mainwindow.wbid, item = item))
             itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
             
         self.setLayout(itembox)
@@ -99,29 +99,29 @@ class WidgetItemsWarband(QBorderedWidget):
         itemwrap.addWidget(label)
         itemwidget = QInteractiveWidget()
         itemwidget.setLayout(itemwrap)
-        itemwidget.clicked.connect(self.create_new_item)
+        itemwidget.clicked.connect(self.create_new)
         itembox.addWidget(itemwidget) #adds the new item to a label and at it to the vertical item layout
 
         self.setToolTip("These are your warbands items.")
         self.setLayout(itembox)
         
-    def create_new_item(self):
+    def create_new(self):
 
         """Create a new item and store it in this warband"""
-        new_item = self.dialog_choose_item()
+        new_item = dialog_choose_item(self)
         if new_item != "Cancel":
-            wbidgold = self.wbid.treasury.gold
+            wbidgold = self.mainwindow.wbid.treasury.gold
             itemprice = new_item.price
             if wbidgold >= itemprice:
-                self.wbid.treasury.gold = wbidgold - itemprice
-                self.wbid.itemlist.append(new_item)
-                self.initUI()
+                self.mainwindow.wbid.treasury.gold = wbidgold - itemprice
+                self.mainwindow.wbid.itemlist.append(new_item)
+                self.mainwindow.initUI()
             else:
                 print("can't add new item, lack of funds")
 
-    def create_method_remove_item(self, warband, item):          
+    def create_method_remove(self, warband, item):          
 
-        def remove_item():
+        def remove():
 
             remove = QMessageBox.question(self, 'Remove item', f"Do you want to remove this item?", QMessageBox.Yes | QMessageBox.No)
             if remove == QMessageBox.Yes:
@@ -139,7 +139,7 @@ class WidgetItemsWarband(QBorderedWidget):
                 self.mainwindow.wbid.treasury.gold += itemprice
                 self.mainwindow.initUI()
         
-        return remove_item
+        return remove
 
 
 
@@ -160,42 +160,42 @@ class WidgetItemsHero(QBorderedWidget):
             itemwrap.addWidget(label)
             itemwidget = QInteractiveWidget()
             itemwidget.setLayout(itemwrap)
-            itemwidget.clicked.connect(self.create_method_remove_item_hero(hero = hero, item = item))
+            itemwidget.clicked.connect(self.create_method_remove(hero = hero, item = item))
             itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
             
         self.setLayout(itembox)
 
-    def create_method_new_item(self, unit):
+    def create_method_new(self, unit):
         """Method for creating a new item and receiving as attribute the unit it should be added to."""
         
-        def create_item_for_unit():
-            new_item = self.dialog_choose_item()
+        def create_new():
+            new_item = dialog_choose_item(self)
             if new_item != "Cancel":
                 itemprice = new_item.price
-                if self.wbid.treasury.gold >= itemprice:
+                if self.mainwindow.wbid.treasury.gold >= itemprice:
                     
-                    for hero in self.wbid.herolist:
+                    for hero in self.mainwindow.wbid.herolist:
                         if unit.name == hero.name:
                             hero.itemlist.append(new_item)
-                            self.wbid.treasury.gold -= itemprice
-                            self.initUI()
+                            self.mainwindow.wbid.treasury.gold -= itemprice
+                            self.mainwindow.initUI()
                                 
                 else:
                     message = QMessageBox.information(self, 'Lack of funds!', "Can't add new item, lack of funds", QMessageBox.Ok)
             
-        return create_item_for_unit
+        return create_new
 
-    def create_method_remove_item_hero(self, hero, item):          
+    def create_method_remove(self, hero, item):          
         """ """
 
-        def remove_item():
+        def remove():
 
             remove = QMessageBox.question(self, 'Remove item', f"Do you want to remove this item?", QMessageBox.Yes | QMessageBox.No)
             if remove == QMessageBox.Yes:
                 process_gold = QMessageBox.question(self, "Process gold", "Do you want to process an exchange for gold?", QMessageBox.Yes | QMessageBox.No)
                 itemprice = 0
 
-                for hero in self.wbid.herolist:
+                for hero in self.mainwindow.wbid.herolist:
                     for i in hero.itemlist:
                         if i.name == item.name and i.subcategory == item.subcategory:
                             if process_gold == QMessageBox.Yes:
@@ -207,7 +207,7 @@ class WidgetItemsHero(QBorderedWidget):
                 self.mainwindow.wbid.treasury.gold += itemprice
                 self.mainwindow.initUI()
         
-        return remove_item
+        return remove
 
 
 class WidgetItemsSquad(QBorderedWidget):
@@ -227,16 +227,16 @@ class WidgetItemsSquad(QBorderedWidget):
             itemwrap.addWidget(label)
             itemwidget = QInteractiveWidget()
             itemwidget.setLayout(itemwrap)
-            itemwidget.clicked.connect(self.create_method_remove_item_squad(squad = squad, item = item))
+            itemwidget.clicked.connect(self.create_method_remove(squad = squad, item = item))
             itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
             
         self.setLayout(itembox)
 
-    def create_method_new_item(self, unit):
+    def create_method_new(self, unit):
         """Method for creating a new item and receiving as attribute the unit it should be added to."""
 
-        def create_item_for_unit():
-            new_item = self.dialog_choose_item()
+        def create_new():
+            new_item = dialog_choose_item(self)
             if new_item != "Cancel":
                 itemprice = new_item.price
                 if self.wbid.treasury.gold >= itemprice:
@@ -251,27 +251,27 @@ class WidgetItemsSquad(QBorderedWidget):
                 else:
                     message = QMessageBox.information(self, 'Lack of funds!', "Can't add new item, lack of funds", QMessageBox.Ok)
             
-        return create_item_for_unit
+        return create_new
 
-    def create_method_remove_item_squad(self, squad, item):          
+    def create_method_remove(self, squad, item):          
 
-        def remove_item():
+        def remove():
 
             remove = QMessageBox.question(self, 'Remove item', f"Do you want to remove this item?", QMessageBox.Yes | QMessageBox.No)
             if remove == QMessageBox.Yes:
                 process_gold = QMessageBox.question(self, "Process gold", "Do you want to process an exchange for gold?", QMessageBox.Yes | QMessageBox.No)
                 itemprice = 0
 
-                for h in squad.henchmanlist:
-                    for i in h.itemlist:
+                for henchman in squad.henchmanlist:
+                    for i in henchman.itemlist:
                         if i.name == item.name and i.subcategory == item.subcategory:
                             if process_gold == QMessageBox.Yes:
                                 itemprice += item.price
-                            index = h.itemlist.index(i)
-                            h.itemlist.pop(index)
+                            index = henchman.itemlist.index(i)
+                            henchman.itemlist.pop(index)
                             break
 
-        return remove_item
+        return remove
 
 
 def dialog_choose_item(self):

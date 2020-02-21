@@ -114,7 +114,7 @@ class WidgetSquads(QBorderedWidget):
             squadwidget = QInteractiveWidget()
             squadwidget.setLayout(squadgrid)
             
-            squadwidget.clicked.connect(self.create_method_focus(squad=squad.henchmanlist[0]))
+            squadwidget.clicked.connect(self.create_method_focus(squad=squad))
             squadbox.addWidget(squadwidget)
 
         if s <= 5:
@@ -136,47 +136,6 @@ class WidgetSquads(QBorderedWidget):
 
         self.setToolTip('These are your <b>squads</b>')
         self.setLayout(squadbox)
-
-    def create_new(self):
-        """Create a new squad and store it in this warband"""
-
-        name, okPressed = QInputDialog.getText(self, "Create", "Name your squad:")
-        if okPressed and name:
-            
-            # get all categories in references
-            wbrace = self.wbid.race
-            wbsource = self.wbid.source
-            wbwarband = self.wbid.warband
-            catdict = open_json("database/references/characters_ref.json")
-            categories = []
-            
-            for key in catdict[wbrace][wbsource][wbwarband]:
-                if catdict[wbrace][wbsource][wbwarband][key]["ishero"] == False:
-                    categories.append(key)
-
-            category, okPressed = QInputDialog.getItem(self, "Create", "Choose a category", categories, 0, False)
-            if okPressed and category:
-                new_squad = Squad.create_squad(
-                    name=name,
-                    race=wbrace,
-                    source=wbsource,
-                    warband=wbwarband,
-                    category=category,
-                )
-
-                if new_squad.henchmanlist[0] != None:
-
-                    wbidgold = self.wbid.treasury.gold
-                    squadprice = catdict[wbrace][wbsource][wbwarband][category]["price"]
-                    if wbidgold >= squadprice:
-                        self.wbid.treasury.gold = wbidgold - squadprice
-                        self.wbid.squadlist.append(new_squad)
-                        self.currentunit = new_squad.henchmanlist[0]
-                        self.initUI()
-                    else:
-                        message = QMessageBox.information(self, "Can't add squad!", "Lack of funds!", QMessageBox.Ok)
-                else:
-                    message = QMessageBox.information(self, "Can't add squad!", "Heroes can't be added to a squad!", QMessageBox.Ok)
 
     def create_method_focus(self, squad):          
         """This method is used in order to create a new method that holds a reference to a passed attribute,
@@ -249,3 +208,44 @@ class WidgetSquads(QBorderedWidget):
                 self.mainwindow.initUI()
         
         return remove
+
+    def create_new(self):
+        """Create a new squad and store it in this warband"""
+
+        name, okPressed = QInputDialog.getText(self, "Create", "Name your squad:")
+        if okPressed and name:
+            
+            # get all categories in references
+            wbrace = self.wbid.race
+            wbsource = self.wbid.source
+            wbwarband = self.wbid.warband
+            catdict = open_json("database/references/characters_ref.json")
+            categories = []
+            
+            for key in catdict[wbrace][wbsource][wbwarband]:
+                if catdict[wbrace][wbsource][wbwarband][key]["ishero"] == False:
+                    categories.append(key)
+
+            category, okPressed = QInputDialog.getItem(self, "Create", "Choose a category", categories, 0, False)
+            if okPressed and category:
+                new_squad = Squad.create_squad(
+                    name=name,
+                    race=wbrace,
+                    source=wbsource,
+                    warband=wbwarband,
+                    category=category,
+                )
+
+                if new_squad.henchmanlist[0] != None:
+
+                    wbidgold = self.wbid.treasury.gold
+                    squadprice = catdict[wbrace][wbsource][wbwarband][category]["price"]
+                    if wbidgold >= squadprice:
+                        self.wbid.treasury.gold = wbidgold - squadprice
+                        self.wbid.squadlist.append(new_squad)
+                        self.currentunit = new_squad.henchmanlist[0]
+                        self.initUI()
+                    else:
+                        message = QMessageBox.information(self, "Can't add squad!", "Lack of funds!", QMessageBox.Ok)
+                else:
+                    message = QMessageBox.information(self, "Can't add squad!", "Heroes can't be added to a squad!", QMessageBox.Ok)

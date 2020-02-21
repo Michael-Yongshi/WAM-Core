@@ -267,6 +267,9 @@ def test_updateWarband():
     save_warband(wbid)
     print("Update completed")
 
+    print(newhero.itemlist[2].subcategory)
+    print(newhero.get_total_skilldict())
+
 if __name__ == "__main__":
     name = "Full WB test"
     race = "High Elf"

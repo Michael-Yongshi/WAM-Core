@@ -383,6 +383,45 @@ class Character(object):
         
         return data
     
+    def get_total_skilldict(self):
+
+        baseskill = self.skill.to_list()
+        totalskills = baseskill
+
+        for item in self.itemlist:
+            totalskills = [sum(pair) for pair in zip(totalskills, item.skill.to_list())]
+            
+        skillobject = Skill.from_list(totalskills)
+        skilldict = skillobject.to_dict()
+            
+        return skilldict
+
+    def get_total_abilitylist(self):
+        
+        totalabilitylist = []
+
+        for ability in self.abilitylist:
+            totalabilitylist += [ability]
+
+        for item in self.itemlist:
+            for ability in item.abilitylist:
+                ability.name = (ability.name + f"\n(source: {item.name})")
+                totalabilitylist += [ability]
+    
+    def get_total_magiclist(self):
+        
+        totalmagiclist = []
+
+        for magic in self.magiclist:
+            totalmagiclist += [magic]
+
+        for item in self.itemlist:
+            for magic in item.magiclist:
+                magic.name = (magic.name + f"\n(source: {item.name})")
+                totalmagiclist += [magic]
+        
+        return totalmagiclist
+
     @staticmethod
     def create_character(name, race, source, warband, category):
         # open reference data json file

@@ -82,135 +82,11 @@ class WidgetCurrent(QBorderedWidget):
         super().__init__()
 
         self.mainwindow = mainwindow
-        
-        # get all items for the unit
-        # get all skills for the unit and add the skills of the items
-        # get all abilities for the unit and add the abilities of the items
-        # get all magic for the unit and add the magic of the items
-
-        #show abilities
-        abilitybox = QVBoxLayout() # create a vertical layout to show them in a neat line
-
-        for ability in self.mainwindow.currentunit.abilitylist:
-            label = QLabel()
-            label.setText(str(ability.name))
-            label.setToolTip(f"<font><b>{ability.name}</b> <br/><br/> {ability.description}</font>")
-            abilitybox.addWidget(label) #adds the ability to a label and at it to the vertical ability layout
-        # Wait for item abilities to add new ability and add it to the bot widget.
-
-        #show magic
-        magicbox = QVBoxLayout() # create a vertical layout to show them in a neat line
-
-        for magic in self.mainwindow.currentunit.magiclist:
-            label = QLabel()
-            label.setText(str(magic.name))
-            label.setToolTip(f"<font><b>{magic.name}</b> <br/>Difficulty: {magic.difficulty} <br/><br/> {magic.description}</font>")
-            magicbox.addWidget(label) #adds the magic to a label and at it to the vertical magic layout
-        # Wait for item magic to add new ability and add it to the bot widget.
-
-        #add items
-        itembox = QVBoxLayout() # create a vertical layout to show them in a neat line
-        
-        totalskills = self.mainwindow.currentunit.skill.to_list()
-
-        for item in self.mainwindow.currentunit.itemlist:
-            label = QLabel()
-            label.setText(str(item.subcategory + " " + item.name))
-            label.setToolTip(f"<font><b>{item.subcategory}</b> {item.name} <br/> category: {item.category} <br/> distance: {item.distance} <br/> <nobr>{item.skill.to_string()}</nobr> <br/> price: {item.price} <br/> {item.description}</font>")
-            itemwrap = QVBoxLayout()
-            itemwrap.addWidget(label)
-            itemwidget = QInteractiveWidget()
-            itemwidget.setLayout(itemwrap)
-            # itemwidget.clicked.connect(create_method_remove_item(item=item))
-            itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
-
-            pairskills = [sum(pair) for pair in zip(totalskills, item.skill.to_list())]
-            totalskills = pairskills
-
-            for ability in item.abilitylist:
-                label = QLabel()
-                label.setText(f"{ability.name} \n(source: {item.subcategory})")
-                label.setToolTip(f"<font><b>{ability.name}</b> <br/>(source: {item.subcategory}) <br/><br/>{ability.description}</font>")
-                abilitybox.addWidget(label) #adds the ability to a label and at it to the vertical ability layout
-        
-            for magic in item.magiclist:
-                label = QLabel()
-                label.setText(f"{magic.name} \n(source: {item.subcategory})")
-                label.setToolTip(f"<font><b>{magic.name}</b> <br/>(source: {item.subcategory}) <br/>Difficulty: {magic.difficulty}<br/><br/>{magic.description}</font>")
-                magicbox.addWidget(label) #adds the magic to a label and at it to the vertical magic layout
-
-        #show skills in middle
-        skillbox = QHBoxLayout() # create a horizontal layout to show the skills in a neat line
-        
-        skillobject = Skill.from_list(totalskills)
-        skilldict = skillobject.to_dict()
-
-        # print(skilldict)
-        for key in skilldict:
-            label = QLabel()
-            label.setText(key[:2] + "\n" + str(skilldict[key]))  
-            label.setToolTip(f"The total <b>{key}</b> skill, <br/>including both base model scores and item influences.")
-            skillbox.addWidget(label)
-
-        skillwidget = QBorderedWidget()
-        skillwidget.setLayout(skillbox)
-
-        # add new item widget
-        label = QLabel()
-        label.setText("New Item")
-        itemwrap = QVBoxLayout()
-        itemwrap.addWidget(label)
-        itemwidget = QInteractiveWidget()
-        itemwidget.setLayout(itemwrap)
-        itemwidget.setToolTip(f"Buy a new item for this unit.")
-        # itemwidget.clicked.connect(self.create_method_new_item(unit=self.mainwindow.currentunit))
-        itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
-
-        itemboxwidget = QBorderedWidget()
-        itemboxwidget.setLayout(itembox)
-        itemboxwidget.setToolTip("These are your units items.")
-
-        # add new ability widget
-        label = QLabel()
-        label.setText("New Ability")
-        abilitywrap = QVBoxLayout()
-        abilitywrap.addWidget(label)
-        abilitywidget = QInteractiveWidget()
-        abilitywidget.setLayout(abilitywrap)
-        abilitywidget.setToolTip(f"Add manually a new ability for this unit.")
-        abilitywidget.clicked.connect(self.create_method_new_ability(unit=self.mainwindow.currentunit))
-        abilitybox.addWidget(abilitywidget) #adds the ability to a label and at it to the vertical item layout
-
-        abilitywidget = QInteractiveWidget()
-        abilitywidget.setLayout(abilitybox)
-        
-        # add new magic widget
-        label = QLabel()
-        label.setText("New Magic")
-        magicwrap = QVBoxLayout()
-        magicwrap.addWidget(label)
-        magicwidget = QInteractiveWidget()
-        magicwidget.setLayout(magicwrap)
-        magicwidget.setToolTip(f"Add manually a new magic skill for this unit.")
-        magicwidget.clicked.connect(self.create_method_new_magic(unit=self.mainwindow.currentunit))
-        magicbox.addWidget(magicwidget) #adds the magic to a label and at it to the vertical item layout
-
-        magicwidget = QInteractiveWidget()
-        magicwidget.setLayout(magicbox)
-        
-        # Add abilities, items and magic to the listbox
-        listbox = QHBoxLayout()
-        listbox.addWidget(itemboxwidget) # adds the item layout to the grid
-        listbox.addWidget(abilitywidget) # adds the ability layout to the grid
-        listbox.addWidget(magicwidget) # adds the magic layout to the grid
-
-        listwidget = QInteractiveWidget()
-        listwidget.setLayout(listbox)
 
         currentbox = QGridLayout()
         currentbox.addWidget(self.set_namebox(), 0, 0, 1, 1)
-        currentbox.addWidget(skillwidget, 1, 0, 1, 1)
-        currentbox.addWidget(listwidget, 2, 0, 2, 1)
+        currentbox.addWidget(self.set_skillbox(), 1, 0, 1, 1)
+        currentbox.addWidget(self.set_listbox(), 2, 0, 2, 1)
 
         self.setToolTip("This is the currently selected unit")
         self.setLayout(currentbox)
@@ -241,6 +117,124 @@ class WidgetCurrent(QBorderedWidget):
         namewidget.setLayout(namebox)
         
         return namewidget
+
+    def set_skillbox(self):
+        #show skills in middle
+        skillbox = QHBoxLayout() # create a horizontal layout to show the skills in a neat line
+        
+        skilldict = self.mainwindow.currentunit.get_total_skilldict()
+        for key in skilldict:
+            label = QLabel()
+            label.setText(key[:2] + "\n" + str(skilldict[key]))  
+            label.setToolTip(f"The total <b>{key}</b> skill, <br/>including both base model scores and item influences.")
+            skillbox.addWidget(label)
+
+        skillwidget = QBorderedWidget()
+        skillwidget.setLayout(skillbox)
+
+        return skillwidget
+
+    def set_listbox(self):
+        
+        listbox = QHBoxLayout()
+
+        # Add abilities, items and magic to the listbox
+        listbox = QHBoxLayout()
+        listbox.addWidget(self.set_itemwidget()) # adds the item layout to the grid
+        listbox.addWidget(self.set_abilitywidget()) # adds the ability layout to the grid
+        listbox.addWidget(self.set_magicwidget()) # adds the magic layout to the grid
+
+        listwidget = QInteractiveWidget()
+        listwidget.setLayout(listbox)
+
+        return listwidget
+
+    def set_itemwidget(self):
+
+        #add items left bottom
+        itembox = QVBoxLayout() # create a vertical layout to show them in a neat line
+
+        for item in self.itemlist:
+            label = QLabel()
+            label.setText(str(item.subcategory + " " + item.name))
+            label.setToolTip(f"<font><b>{item.subcategory}</b> {item.name} <br/> category: {item.category} <br/> distance: {item.distance} <br/> <nobr>{item.skill.to_string()}</nobr> <br/> price: {item.price} <br/> {item.description}</font>")
+            itemwrap = QVBoxLayout()
+            itemwrap.addWidget(label)
+            itemwidget = QInteractiveWidget()
+            itemwidget.setLayout(itemwrap)
+            # itemwidget.clicked.connect(create_method_remove_item(item=item))
+            itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
+
+        # add new item widget
+        label = QLabel()
+        label.setText("New Item")
+        itemwrap = QVBoxLayout()
+        itemwrap.addWidget(label)
+        itemwidget = QInteractiveWidget()
+        itemwidget.setLayout(itemwrap)
+        itemwidget.setToolTip(f"Buy a new item for this unit.")
+        # itemwidget.clicked.connect(self.create_method_new_item(unit=self.mainwindow.currentunit))
+        itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
+
+        itemboxwidget = QBorderedWidget()
+        itemboxwidget.setLayout(itembox)
+        itemboxwidget.setToolTip("These are your units items.")
+        
+        return itemboxwidget
+
+    def set_abilitywidget(self):
+
+        #show abilities
+        abilitybox = QVBoxLayout() # create a vertical layout to show them in a neat line
+
+        for ability in self.mainwindow.currentunit.get_total_abilitylist():
+            label = QLabel()
+            label.setText(str(ability.name))
+            label.setToolTip(f"<font><b>{ability.name}</b> <br/><br/> {ability.description}</font>")
+            abilitybox.addWidget(label) #adds the ability to a label and at it to the vertical ability layout
+        
+        # add new ability widget
+        label = QLabel()
+        label.setText("New Ability")
+        abilitywrap = QVBoxLayout()
+        abilitywrap.addWidget(label)
+        abilitywidget = QInteractiveWidget()
+        abilitywidget.setLayout(abilitywrap)
+        abilitywidget.setToolTip(f"Add manually a new ability for this unit.")
+        abilitywidget.clicked.connect(self.create_method_new_ability(unit=self.mainwindow.currentunit))
+        abilitybox.addWidget(abilitywidget) #adds the ability to a label and at it to the vertical item layout
+
+        abilitywidget = QInteractiveWidget()
+        abilitywidget.setLayout(abilitybox)
+
+        return abilitywidget
+
+    def set_magicwidget(self):
+
+        #show magic
+        magicbox = QVBoxLayout() # create a vertical layout to show them in a neat line
+
+        for magic in self.mainwindow.currentunit.get_total_magiclist():
+            label = QLabel()
+            label.setText(str(magic.name))
+            label.setToolTip(f"<font><b>{magic.name}</b> <br/>Difficulty: {magic.difficulty} <br/><br/> {magic.description}</font>")
+            magicbox.addWidget(label) #adds the magic to a label and at it to the vertical magic layout
+
+        # add new magic widget
+        label = QLabel()
+        label.setText("New Magic")
+        magicwrap = QVBoxLayout()
+        magicwrap.addWidget(label)
+        magicwidget = QInteractiveWidget()
+        magicwidget.setLayout(magicwrap)
+        magicwidget.setToolTip(f"Add manually a new magic skill for this unit.")
+        magicwidget.clicked.connect(self.create_method_new_magic(unit=self.mainwindow.currentunit))
+        magicbox.addWidget(magicwidget) #adds the magic to a label and at it to the vertical item layout
+
+        magicwidget = QInteractiveWidget()
+        magicwidget.setLayout(magicbox)
+
+        return magicwidget
 
     def create_method_new_ability(self, unit):
         """Method for creating a new ability and receiving as attribute the unit it should be added to.

@@ -246,6 +246,9 @@ def test_updateWarband():
         )
     print("squad4 creation succesful")
     
+    newsquad4.change_henchman_count(5)
+    print("squad4 change count succesful")
+    
     # Adding items to the squads
     newsquad.equip_squad(subcategory = "Long Bow", category = "Missile Weapon", source = "Core Rules")
     newsquad2.equip_squad(subcategory = "Long Bow", category = "Missile Weapon", source = "Core Rules")

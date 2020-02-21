@@ -220,7 +220,7 @@ class Squad(object):
 
     def change_henchman_count(self, deltasize):
         if deltasize > 0:
-            i = self.get_totalhenchman
+            i = self.get_totalhenchman()
             
             for _ in range(0, deltasize):
                 i += 1

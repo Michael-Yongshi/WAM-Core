@@ -163,19 +163,16 @@ Character.prototype.loadInventory = function() {
                             var characterUnit = character[2];
                             var characterRace = character[3];
                             var characterId = character[0];
-                            var character = that.generateCharacterImage(character[1]);
-                            var actionButtons = '<div class="action-buttons">\
-                            \<button class="btn button-gift" id="'+realIndex+'">Transfer</button>\
-                            \<button class="btn button-eat" id="'+realIndex+'">KIA</button>\
+                            var actionButtons = '<div>\
+                            \<button id="'+realIndex+'">Gift</button>\
+                            \<button id="'+realIndex+'">Eat</button>\
+                            \<button id="'+realIndex+'">Event</button>\
                             </div>';
 
                             $(".inventory-list").append('<div id="character-'+realIndex+'" class="col-lg-6">\
                             \<div class="character-container">\
                             \<p><span style="float: left;">'+characterName+'</span><span style="float: middle;">'+characterUnit+'</span><span style="float: right;">'+characterRace+'</span></p>\
-                            \<div class="character-inner-container">\
-                            <div class="ingredients">\
-                            '+character+'\
-                            </div></div>'+actionButtons+'</div></div>');
+                            '+actionButtons);
 
                             $(".inventory-list").append('</div>');
                             $(".inventory-list").append('</div>');
@@ -254,7 +251,7 @@ Character.prototype.giftCharacter = function(characterId, cb) {
         return;
     }
 
-    $(".button-gift, .button-eat").attr("disabled", true);
+    $(".button-gift, .button-eat, .button-event").attr("disabled", true);
     $('#character-'+characterId).css("opacity", "0.7");
 
     var characterDna = $('#character-'+characterId +' .characterDna').attr('id');
@@ -270,13 +267,13 @@ Character.prototype.giftCharacter = function(characterId, cb) {
                 that.waitForReceipt(txHash.transactionHash, function(receipt) {
                     if(receipt.blockNumber > 0) {
                         $('.inventory-list').html('');
-                        $(".button-gift, .button-eat").attr("disabled", false);
+                        $(".button-gift, .button-eat, .button-event").attr("disabled", false);
                         showStatus("Character sent");
                         that.loadInventory();
                     }
                     else {
                         showStatus("Character was not sent. Please try it again.");
-                        $(".button-gift, .button-eat").attr("disabled", false);
+                        $(".button-gift, .button-eat, .button-event").attr("disabled", false);
                         $('#character-'+characterId).css("opacity", "1");
                     }
                 });
@@ -293,11 +290,11 @@ Character.prototype.giftCharacter = function(characterId, cb) {
 Character.prototype.eatCharacter = function(characterId, cb) {
     var that = this;
 
-    var confirmation = confirm("Are you sure?")
+    var confirmation = confirm("Are you sure you want your character to be eaten?")
 
     if(confirmation) {
 
-        $(".button-gift, .button-eat").attr("disabled", true);
+        $(".button-gift, .button-eat, .button-event").attr("disabled", true);
         $('#character-'+characterId).css("opacity", "0.7");
 
         var characterDna = $('#character-'+characterId +' .characterDna').attr('id');
@@ -313,19 +310,19 @@ Character.prototype.eatCharacter = function(characterId, cb) {
                     that.waitForReceipt(txHash.transactionHash, function(receipt) {
                         if(receipt.blockNumber > 0) {
                             $('.inventory-list').html('');
-                            $(".button-gift, .button-eat").attr("disabled", false);
+                            $(".button-gift, .button-eat, .button-event").attr("disabled", false);
                             showStatus("Character is gone");
                             that.loadInventory();
                         }
                         else {
                             showStatus("Character was not eaten. Please try it again.");
-                            $(".button-gift, .button-eat").attr("disabled", false);
+                            $(".button-gift, .button-eat, .button-event").attr("disabled", false);
                             $('#character-'+characterId).css("opacity", "1");
                         }
                     });
                 } ).catch(function(err){
                  console.error(err);
-                    $(".button-gift, .button-eat").attr("disabled", false);
+                    $(".button-gift, .button-eat, .button-event").attr("disabled", false);
                     $('#character-'+characterId).css("opacity", "1");
                     showStatus("Eating canceled.");
                     return;
@@ -335,6 +332,46 @@ Character.prototype.eatCharacter = function(characterId, cb) {
     } else {
         showStatus("Canceled");
     }
+}
+
+// Add event to Character (based on gift character)
+Character.prototype.addEvent = function(characterId, cb) {
+    var that = this;
+
+    var strEvent = prompt("Enter event description");
+
+        $(".button-gift, .button-eat, .button-event").attr("disabled", true);
+
+        var characterDna = $('#character-'+characterId +' .characterDna').attr('id');
+
+        if(characterDna == 5142446803) {
+            var a = new Audio("https://studio.ethereum.org/static/img/cryptocharacter/3.mp3");
+            a.play();
+        }
+
+        // Gas and gasPrice should be removed for non browser networks
+        this.instance.methods.createEvent(characterId, strEvent).send({ from: window.top.web3.eth.accounts[0], gas: 100000, gasPrice: 1000000000, gasLimit: 100000 }).then( function(txHash) {
+                showStatus("Adding Event...");
+                that.waitForReceipt(txHash.transactionHash, function(receipt) {
+                    if(receipt.blockNumber > 0) {
+                        $('.inventory-list').html('');
+                        $(".button-gift, .button-eat, .button-event").attr("disabled", false);
+                        showStatus("Character sent");
+                        that.loadInventory();
+                    }
+                    else {
+                        showStatus("Character was not sent. Please try it again.");
+                        $(".button-gift, .button-eat, .button-event").attr("disabled", false);
+                        $('#character-'+characterId).css("opacity", "1");
+                    }
+                });
+            }).catch(function(err){
+               console.error(err);
+                showStatus("Sending canceled.");
+                $('#character-'+characterId).css("opacity", "1");
+                return;
+            });
+        
 }
 
 // Bind all inputs and buttons to specific functions
@@ -363,6 +400,11 @@ Character.prototype.bindInputs = function() {
         that.eatCharacter(characterId);
     });
     
+    $(document).on("click", "button.button-event", function() {
+        var characterId = $(this).attr("id");
+        that.addEvent(characterId);
+    });
+
      $(document).on("click", "#button-qr", function() {
         that.generateQrcode();
     });

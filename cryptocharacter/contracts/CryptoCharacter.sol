@@ -89,7 +89,7 @@ contract CryptoCharacter is IERC721, ERC165 {
         uint256 _characterId,
         string memory _event
         )
-        internal
+        public
     {
         // Add event to array and get id
         uint id = SafeMath.sub(events.push(_event),1);

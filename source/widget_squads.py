@@ -162,8 +162,8 @@ class WidgetSquads(QBorderedWidget):
                 if newsize != 0:
                     deltasize = newsize - currentsize
                     squad.change_henchman_count(deltasize)
-                    process_gold = QMessageBox.question(self, "Process gold", "Is change due to an event?", QMessageBox.Yes | QMessageBox.No)
-                    if process_gold == QMessageBox.No:
+                    process_gold = QMessageBox.question(self, "Process gold", "Do you want to process an exchange for gold?", QMessageBox.Yes | QMessageBox.No)
+                    if process_gold == QMessageBox.Yes:
                         deltagold = deltasize * squad.henchmanlist[0].get_price()
                         if deltagold < self.mainwindow.wbid.treasury.gold:
                             self.mainwindow.wbid.treasury.gold -= deltagold
@@ -187,12 +187,12 @@ class WidgetSquads(QBorderedWidget):
 
             remove = QMessageBox.question(self, 'Remove squad', f"Do you want to remove this squad?", QMessageBox.Yes | QMessageBox.No)
             if remove == QMessageBox.Yes:
-                process_gold = QMessageBox.question(self, "Process gold", "Is change due to an event?", QMessageBox.Yes | QMessageBox.No)
+                process_gold = QMessageBox.question(self, "Process gold", "Do you want to process an exchange for gold?", QMessageBox.Yes | QMessageBox.No)
                 squadprice = 0
 
                 for squad in self.mainwindow.wbid.squadlist:
                     if squad.henchmanlist[0] == self.mainwindow.currentunit:
-                        if process_gold == QMessageBox.No:
+                        if process_gold == QMessageBox.Yes:
                             squadsize = len(squad.henchmanlist)
                             henchprice = self.mainwindow.currentunit.price
                             for item in self.mainwindow.currentunit.itemlist:

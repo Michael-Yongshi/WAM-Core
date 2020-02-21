@@ -154,12 +154,12 @@ class WidgetHeroes(QBorderedWidget):
 
             remove = QMessageBox.question(self, 'Remove hero', f"Do you want to remove this hero?", QMessageBox.Yes | QMessageBox.No)
             if remove == QMessageBox.Yes:
-                process_gold = QMessageBox.question(self, "Process gold", "Is change due to an event?", QMessageBox.Yes | QMessageBox.No)
+                process_gold = QMessageBox.question(self, "Process gold", "Do you want to process an exchange for gold?", QMessageBox.Yes | QMessageBox.No)
                 heroprice = 0
 
                 for hero in self.mainwindow.wbid.herolist:
                     if hero == self.mainwindow.scurrentunit:
-                        if process_gold == QMessageBox.No:
+                        if process_gold == QMessageBox.Yes:
                             heroprice += hero.price
                             for item in hero.itemlist:
                                 heroprice += item.price

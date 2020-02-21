@@ -114,7 +114,7 @@ class WidgetSquads(QBorderedWidget):
             squadwidget = QInteractiveWidget()
             squadwidget.setLayout(squadgrid)
             
-            squadwidget.clicked.connect(self.create_method_focus(squad=squad))
+            squadwidget.clicked.connect(self.create_method_focus(squad))
             squadbox.addWidget(squadwidget)
 
         if s <= 5:
@@ -155,28 +155,26 @@ class WidgetSquads(QBorderedWidget):
         This one specifically gets a current item and then creates a window based on the attribute"""
 
         def change_number():
-         
-                self.currentunit = create_template_char()
-                currentsize = squad.get_totalhenchman()
 
-                newsize, okPressed = QInputDialog.getInt(self, 'Squad members', f"Change squad size to:", currentsize, 0, 6, 1)
-                if okPressed:
-                    if newsize != 0:
-                        deltasize = newsize - currentsize
-                        squad.change_henchman_count(deltasize)
-                        process_gold = QMessageBox.question(self, "Process gold", "Is change due to an event?", QMessageBox.Yes | QMessageBox.No)
-                        if process_gold == QMessageBox.No:
-                            deltagold = deltasize * squad.henchmanlist[0].get_price()
-                            if deltagold < self.wbid.treasury.gold:
-                                self.wbid.treasury.gold -= deltagold
-                                self.initUI()
-                            else:
-                                print("Lack of funds")
+            currentsize = squad.get_totalhenchman()
+            newsize, okPressed = QInputDialog.getInt(self, 'Squad members', f"Change squad size to:", currentsize, 0, 6, 1)
+            if okPressed:
+                if newsize != 0:
+                    deltasize = newsize - currentsize
+                    squad.change_henchman_count(deltasize)
+                    process_gold = QMessageBox.question(self, "Process gold", "Is change due to an event?", QMessageBox.Yes | QMessageBox.No)
+                    if process_gold == QMessageBox.No:
+                        deltagold = deltasize * squad.henchmanlist[0].get_price()
+                        if deltagold < self.mainwindow.wbid.treasury.gold:
+                            self.mainwindow.wbid.treasury.gold -= deltagold
+                            self.mainwindow.initUI()
                         else:
-                            self.initUI()
-                        
+                            print("Lack of funds")
                     else:
-                        print("Can't remove the last member, please disband the whole squad")
+                        self.mainwindow.initUI()
+                    
+                else:
+                    print("Can't remove the last member, please disband the whole squad")
 
         return change_number
 
@@ -216,9 +214,9 @@ class WidgetSquads(QBorderedWidget):
         if okPressed and name:
             
             # get all categories in references
-            wbrace = self.wbid.race
-            wbsource = self.wbid.source
-            wbwarband = self.wbid.warband
+            wbrace = self.mainwindow.wbid.race
+            wbsource = self.mainwindow.wbid.source
+            wbwarband = self.mainwindow.wbid.warband
             catdict = open_json("database/references/characters_ref.json")
             categories = []
             
@@ -238,13 +236,13 @@ class WidgetSquads(QBorderedWidget):
 
                 if new_squad.henchmanlist[0] != None:
 
-                    wbidgold = self.wbid.treasury.gold
+                    wbidgold = self.mainwindow.wbid.treasury.gold
                     squadprice = catdict[wbrace][wbsource][wbwarband][category]["price"]
                     if wbidgold >= squadprice:
-                        self.wbid.treasury.gold = wbidgold - squadprice
-                        self.wbid.squadlist.append(new_squad)
-                        self.currentunit = new_squad.henchmanlist[0]
-                        self.initUI()
+                        self.mainwindow.wbid.treasury.gold = wbidgold - squadprice
+                        self.mainwindow.wbid.squadlist.append(new_squad)
+                        self.mainwindow.currentunit = new_squad.henchmanlist[0]
+                        self.mainwindow.initUI()
                     else:
                         message = QMessageBox.information(self, "Can't add squad!", "Lack of funds!", QMessageBox.Ok)
                 else:

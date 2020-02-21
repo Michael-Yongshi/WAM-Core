@@ -26,9 +26,10 @@ set git credentials by entering credentials in popup
 set git name with git --global user.email ""
 set git email with git --global user.name ""
 
-pip3 install --user requests
+pip3 install --user flake8 (dev)
+pip3 install --user requests (unused)
 pip3 install --user pyqt5
-pip3 install --user pyinstaller
+pip3 install --user pyinstaller (dev)
 
 create normal distribution manually with 
         python -m PyInstaller cli.py --add-data "database/saves/cache.json";"database/saves/" --add-data "database/references/*.json";"database/references/" --icon="source\war_72R_icon.ico" --name WAM

@@ -69,7 +69,7 @@ from source.class_hierarchy import (
     )
 
 from source.widget_system import WidgetSystem
-from source.gui_template import *
+from source.widget_template import *
 
 
 class QMainApplication(QApplication):
@@ -230,12 +230,16 @@ class WarbandOverview(QMainWindow):
         
 
         return wbboxwidget
-
-    def set_herobox(self, currentbox):
+    
+    def set_herobox(self):
+    # def set_herobox(self, currentbox):
         # left bottom heroes
         herobox = QVBoxLayout() # To show all heroes below each other dynamically (based on actual number of heroes)
         h = 0
-        currentbox.set_currenther(hero)
+
+        # as we give this class a reference to currentbox, we can manipulate currentbox from here
+        # currentbox.set_current_hero(hero)
+
         for hero in self.wbid.herolist:
             h += 1
             herogrid = QGridLayout() # create a grid layout to position all information more accurately

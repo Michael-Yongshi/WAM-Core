@@ -68,7 +68,7 @@ from source.class_hierarchy import (
     Magic,
     )
 
-from source.gui_template import *
+from source.widget_template import *
 
 
 class WidgetSystem(QBorderedWidget):

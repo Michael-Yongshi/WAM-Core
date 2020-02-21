@@ -154,7 +154,7 @@ class WidgetCurrent(QBorderedWidget):
         #add items left bottom
         itembox = QVBoxLayout() # create a vertical layout to show them in a neat line
 
-        for item in self.itemlist:
+        for item in self.mainwindow.currentunit.itemlist:
             label = QLabel()
             label.setText(str(item.subcategory + " " + item.name))
             label.setToolTip(f"<font><b>{item.subcategory}</b> {item.name} <br/> category: {item.category} <br/> distance: {item.distance} <br/> <nobr>{item.skill.to_string()}</nobr> <br/> price: {item.price} <br/> {item.description}</font>")

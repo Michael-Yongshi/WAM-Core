@@ -408,6 +408,8 @@ class Character(object):
                 ability.name = (ability.name + f"\n(source: {item.name})")
                 totalabilitylist += [ability]
     
+        return totalabilitylist
+        
     def get_total_magiclist(self):
         
         totalmagiclist = []

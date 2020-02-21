@@ -621,7 +621,6 @@ class WarbandOverview(QMainWindow):
         This one specifically gets a current item and then creates a window based on the attribute"""
         def change_squad_number():
          
-            if squad.henchmanlist[0] == self.currentunit:
                 self.currentunit = self.create_template_char()
                 currentsize = squad.get_totalhenchman()
 

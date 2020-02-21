@@ -49,6 +49,8 @@ from source.methods_engine import (
     cache_warband,
     show_saved_warbands,
     get_current_warband,
+    create_template_wb,
+    create_template_char,
     )
 
 from source.class_hierarchy import (
@@ -72,8 +74,13 @@ from source.widget_template import *
 
 
 class WidgetSystem(QBorderedWidget):
-    def __init__(self):
+    def __init__(self, mainwindow, wbid, currentunit):
         super().__init__()
+        
+        self.mainwindow = mainwindow
+        self.wbid = wbid
+        self.currentunit = currentunit
+
         sysbox = QGridLayout()
         
         # buttons for interaction
@@ -107,9 +114,10 @@ class WidgetSystem(QBorderedWidget):
         wbname, okPressed = QInputDialog.getItem(self, "Choose", "Choose your warband", warbands, 0, False)         # Let user choose out of save files
         if okPressed and wbname:
             self.wbid = load_warband(wbname)                                                                        # set warband object based on save file
-            self.currentunit = self.create_template_char()                                                          # set empty current unit
-            self.initUI()                                                                                           # Restart the window to force changes
-
+            self.currentunit = create_template_char()                                                          # set empty current unit
+            self.mainwindow.wbid = self.wbid                                                                                      # Restart the window to force changes
+            self.mainwindow.initUI()
+            
     def save_warband(self):
         """Save warband to cache and then to saves"""
         save_warband(self.wbid)                # save wbid to json
@@ -145,5 +153,5 @@ class WidgetSystem(QBorderedWidget):
                     warband, okPressed = QInputDialog.getItem(self, "Create", "Choose a warband", warbands, 0, False)
                     if okPressed and warband:
                         self.wbid = Warband.create_warband(name=name, race=race, source=source, warband=warband)
-                        self.currentunit = self.create_template_char()
-                        self.initUI()
+                        self.currentunit = create_template_char()
+                        self.main.initUI() 

@@ -71,7 +71,6 @@ from source.class_hierarchy import (
     )
 
 from source.widget_template import *
-from source.widget_herobox import *
 # from source.widget_currentbox import *
 
 
@@ -81,7 +80,6 @@ class WidgetHeroes(QBorderedWidget):
         # def set_herobox(self, currentbox):
         # as we give this class a reference to currentbox, we can manipulate currentbox from here
         # currentbox.set_current_hero(hero)
-
 
         herobox = QVBoxLayout() # To show all heroes below each other dynamically (based on actual number of heroes)
         
@@ -108,7 +106,7 @@ class WidgetHeroes(QBorderedWidget):
             herowidget.setLayout(herogrid)
 
             # bound a click on the widget to showing details in character view
-            herowidget.clicked.connect(self.create_method_focus(unit=hero))
+            # herowidget.clicked.connect(self.create_method_focus(hero, currentunit))
             herobox.addWidget(herowidget)
 
         if h <= 5: # If there is still room in your warband add a new hero widget
@@ -120,7 +118,7 @@ class WidgetHeroes(QBorderedWidget):
 
             herowidget = QInteractiveWidget()
             herowidget.setLayout(herogrid)
-            herowidget.clicked.connect(self.create_new_hero(wbid, currentunit))
+            # herowidget.clicked.connect(self.create_new_hero(wbid, currentunit))
             herobox.addWidget(herowidget)
         
         while h <= 5: # if there is still room, add some empty widgets to fill up the space
@@ -128,56 +126,62 @@ class WidgetHeroes(QBorderedWidget):
             herowidget = QUnBorderedWidget()
             herobox.addWidget(herowidget)
 
-        heroboxwidget = QBorderedWidget()
-        heroboxwidget.setLayout(herobox)
-        heroboxwidget.setToolTip('These are your <b>heroes</b>')
+        self.setLayout(herobox)
+        self.setToolTip('These are your <b>heroes</b>')
 
-    def create_method_focus(self, unit):          
+    def create_method_focus(self, hero, currentunit):          
         """This method is used in order to create a new method that holds a reference to a passed attribute,
         this is used when a widget needs to be clickable but the signal needs to carry information other than the signal itself.
         This one specifically gets a current unit and then passes it to the currentunit attribute of the main window"""
         def focus_unit():
 
-            if unit == None:
-                currentunit = create_template_char()
-            elif unit != currentunit:
-                currentunit = unit
+            # if unit == None:
+            #     currentunit = create_template_char()
+            # elif unit != currentunit:
+            #     currentunit = unit
+            
+            currentunit = unit
 
         return focus_unit
 
     def create_new_hero(self, wbid, currentunit):
-
-        """Create a new hero, store it in the warband object and set to currentunit"""
-        name, okPressed = QInputDialog.getText(self, "Create", "Name your hero:")
-        if okPressed and name:
+        
+        def create_new_hero():
             
-            # get all categories in references
-            wbrace = wbid.race
-            wbsource = wbid.source
-            wbwarband = wbid.warband
-            catdict = open_json("database/references/characters_ref.json")
-            categories = []
-            
-            for key in catdict[wbrace][wbsource][wbwarband]:
-                if catdict[wbrace][wbsource][wbwarband][key]["ishero"] == True:
-                    categories.append(key)
+            """Create a new hero, store it in the warband object and set to currentunit"""
+            name, okPressed = QInputDialog.getText(self, "Create", "Name your hero:")
+            if okPressed and name:
+                
+                # get all categories in references
+                wbrace = wbid.race
+                wbsource = wbid.source
+                wbwarband = wbid.warband
+                catdict = open_json("database/references/characters_ref.json")
+                categories = []
+                
+                for key in catdict[wbrace][wbsource][wbwarband]:
+                    if catdict[wbrace][wbsource][wbwarband][key]["ishero"] == True:
+                        categories.append(key)
 
-            category, okPressed = QInputDialog.getItem(self, "Create", "Choose a category", categories, 0, False)
-            if okPressed and category:
-                new_hero = Hero.create_character(
-                    name=name,
-                    race=wbrace,
-                    source=wbsource,
-                    warband=wbwarband,
-                    category=category,
-                )
+                category, okPressed = QInputDialog.getItem(self, "Create", "Choose a category", categories, 0, False)
+                if okPressed and category:
+                    new_hero = Hero.create_character(
+                        name=name,
+                        race=wbrace,
+                        source=wbsource,
+                        warband=wbwarband,
+                        category=category,
+                    )
 
-                wbidgold = wbid.treasury.gold
-                heroprice = catdict[wbrace][wbsource][wbwarband][category]["price"]
-                if wbidgold >= heroprice:
-                    wbid.treasury.gold = wbidgold - heroprice
-                    wbid.herolist.append(new_hero)
-                    currentunit = new_hero
-                    
-                else:
-                    print("can't add new hero, lack of funds")
+                    wbidgold = wbid.treasury.gold
+                    heroprice = catdict[wbrace][wbsource][wbwarband][category]["price"]
+                    if wbidgold >= heroprice:
+                        wbid.treasury.gold = wbidgold - heroprice
+                        wbid.herolist.append(new_hero)
+                        currentunit = new_hero
+                        
+                    else:
+                        print("can't add new hero, lack of funds")
+
+        return create_new_hero
+        

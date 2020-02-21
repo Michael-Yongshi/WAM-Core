@@ -90,14 +90,13 @@ class WarbandOverview(QMainWindow):
     """The main window that everything runs in"""
     def __init__(self):
         super().__init__()
-
         self.wbid = create_template_wb()
         self.currentunit = create_template_char()
         self.currentthing = None
         self.initUI()
 
     def initUI(self):
-        
+       
         # Some window settings
         self.setWindowTitle('WAM')
         self.setToolTip('Warhammer Army Manager')
@@ -130,7 +129,7 @@ class WarbandOverview(QMainWindow):
         topbox = QHBoxLayout()
         topbox.addWidget(self.set_wbname())
         topbox.addWidget(self.set_wbinvbox())
-        topbox.addWidget(WidgetSystem())
+        topbox.addWidget(WidgetSystem(self, self.wbid, self.currentunit))
         topboxwidget = QBorderedWidget()
         topboxwidget.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
         topboxwidget.setLayout(topbox)

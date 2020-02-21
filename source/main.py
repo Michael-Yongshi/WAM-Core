@@ -49,6 +49,8 @@ from source.methods_engine import (
     cache_warband,
     show_saved_warbands,
     get_current_warband,
+    create_template_wb,
+    create_template_char,
     )
 
 from source.class_hierarchy import (
@@ -69,6 +71,7 @@ from source.class_hierarchy import (
     )
 
 from source.widget_system import WidgetSystem
+from source.widget_herobox import WidgetHeroes
 from source.widget_template import *
 
 
@@ -88,8 +91,8 @@ class WarbandOverview(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.wbid = self.create_template_wb()
-        self.currentunit = self.create_template_char()
+        self.wbid = create_template_wb()
+        self.currentunit = create_template_char()
         self.currentthing = None
         self.initUI()
 
@@ -137,7 +140,7 @@ class WarbandOverview(QMainWindow):
     def set_botbox(self):
         # wrapping heroes, squads and extra details in the bottom horizontal layout
         botbox = QHBoxLayout()
-        botbox.addWidget(self.set_herobox())
+        botbox.addWidget(WidgetHeroes(self.wbid, self.currentunit))
         botbox.addWidget(self.set_squadbox())
         botbox.addWidget(self.set_currentbox())
         botboxwidget = QInteractiveWidget()
@@ -230,63 +233,6 @@ class WarbandOverview(QMainWindow):
         
 
         return wbboxwidget
-    
-    def set_herobox(self):
-    # def set_herobox(self, currentbox):
-        # left bottom heroes
-        herobox = QVBoxLayout() # To show all heroes below each other dynamically (based on actual number of heroes)
-        h = 0
-
-        # as we give this class a reference to currentbox, we can manipulate currentbox from here
-        # currentbox.set_current_hero(hero)
-
-        for hero in self.wbid.herolist:
-            h += 1
-            herogrid = QGridLayout() # create a grid layout to position all information more accurately
-            
-            namelabel = QLabel()
-            if hero == self.currentunit:
-                namelabel.setText(hero.name + " (selected)")
-            else:
-                namelabel.setText(hero.name)
-            namelabel.setToolTip(f"This is your hero`s name")
-            herogrid.addWidget(namelabel, 0, 0) # add the name and category box to the herogrid
-            
-            catlabel = QLabel()
-            catlabel.setText(hero.category)
-            catlabel.setToolTip(f"This is your hero`s unit type. The unit type determines what the heroes abilities are, what kind of items it can carry and how expensive it is to replace.")
-            herogrid.addWidget(catlabel, 0, 1) # add the cat and category box to the herogrid
-
-            # sets the complete hero grid layout to a herowidget in order to add to the vertical list of heroes
-            herowidget = QInteractiveWidget()
-            herowidget.setLayout(herogrid)
-
-            # bound a click on the widget to showing details in character view
-            herowidget.clicked.connect(self.create_method_focus(unit=hero))
-            herobox.addWidget(herowidget)
-
-        if h <= 5:
-            h += 1
-            herogrid = QGridLayout()
-            namelabel = QLabel()
-            namelabel.setText("Add New Hero")
-            herogrid.addWidget(namelabel, 0, 0)
-
-            herowidget = QInteractiveWidget()
-            herowidget.setLayout(herogrid)
-            herowidget.clicked.connect(self.create_new_hero)
-            herobox.addWidget(herowidget)
-        
-        while h <= 5:
-            h += 1
-            herowidget = QUnBorderedWidget()
-            herobox.addWidget(herowidget)
-
-        heroboxwidget = QBorderedWidget()
-        heroboxwidget.setLayout(herobox)
-        heroboxwidget.setToolTip('These are your <b>heroes</b>')
-
-        return heroboxwidget
 
     def set_squadbox(self):
         # right bottom squads
@@ -519,7 +465,7 @@ class WarbandOverview(QMainWindow):
         def focus_unit():
 
             if unit == None:
-                self.currentunit = self.create_template_char()
+                self.currentunit = create_template_char()
                 self.initUI()
             elif unit != self.currentunit:
                 self.currentunit = unit
@@ -533,7 +479,7 @@ class WarbandOverview(QMainWindow):
         This one specifically gets a current item and then creates a window based on the attribute"""
         def change_squad_number():
          
-                self.currentunit = self.create_template_char()
+                self.currentunit = create_template_char()
                 currentsize = squad.get_totalhenchman()
 
                 newsize, okPressed = QInputDialog.getInt(self, 'Squad members', f"Change squad size to:", currentsize, 0, 6, 1)
@@ -768,65 +714,6 @@ class WarbandOverview(QMainWindow):
                                     self.initUI()
 
         return create_magic_for_unit
-
-    def create_template_wb(self):
-        template_wb = Warband(
-            name="",
-            race="", 
-            source="", 
-            warband="",
-        )
-        return template_wb
-
-    def create_template_char(self):
-        template_char = Character(
-            name="",
-            race="", 
-            source="", 
-            warband="",
-            skill=Skill("","","","","","","","","","",), 
-            category="", 
-            ishero=""
-        )
-        return template_char
-
-    def create_new_hero(self):
-
-        """Create a new hero and store it in this warband"""
-        name, okPressed = QInputDialog.getText(self, "Create", "Name your hero:")
-        if okPressed and name:
-            
-            # get all categories in references
-            wbrace = self.wbid.race
-            wbsource = self.wbid.source
-            wbwarband = self.wbid.warband
-            catdict = open_json("database/references/characters_ref.json")
-            categories = []
-            
-            for key in catdict[wbrace][wbsource][wbwarband]:
-                if catdict[wbrace][wbsource][wbwarband][key]["ishero"] == True:
-                    categories.append(key)
-
-            category, okPressed = QInputDialog.getItem(self, "Create", "Choose a category", categories, 0, False)
-            if okPressed and category:
-                new_hero = Hero.create_character(
-                    name=name,
-                    race=wbrace,
-                    source=wbsource,
-                    warband=wbwarband,
-                    category=category,
-                )
-
-                wbidgold = self.wbid.treasury.gold
-                heroprice = catdict[wbrace][wbsource][wbwarband][category]["price"]
-                if wbidgold >= heroprice:
-                    self.wbid.treasury.gold = wbidgold - heroprice
-                    self.wbid.herolist.append(new_hero)
-                    self.currentunit = new_hero
-                    
-                    self.initUI()
-                else:
-                    print("can't add new hero, lack of funds")
 
     def create_new_squad(self):
 

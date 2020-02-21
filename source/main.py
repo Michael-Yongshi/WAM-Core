@@ -75,6 +75,7 @@ from source.widget_items import WidgetItemsWarband
 from source.widget_system import WidgetSystem
 from source.widget_heroes import WidgetHeroes
 from source.widget_squads import WidgetSquads
+from source.widget_current import WidgetCurrent
 
 
 class QMainApplication(QApplication):

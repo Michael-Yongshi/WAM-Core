@@ -83,10 +83,15 @@ class WidgetCurrent(QBorderedWidget):
 
         self.mainwindow = mainwindow
         
+        # get all items for the unit
+        # get all skills for the unit and add the skills of the items
+        # get all abilities for the unit and add the abilities of the items
+        # get all magic for the unit and add the magic of the items
+
         #show abilities
         abilitybox = QVBoxLayout() # create a vertical layout to show them in a neat line
 
-        for ability in self.currentunit.abilitylist:
+        for ability in self.mainwindow.currentunit.abilitylist:
             label = QLabel()
             label.setText(str(ability.name))
             label.setToolTip(f"<font><b>{ability.name}</b> <br/><br/> {ability.description}</font>")
@@ -96,7 +101,7 @@ class WidgetCurrent(QBorderedWidget):
         #show magic
         magicbox = QVBoxLayout() # create a vertical layout to show them in a neat line
 
-        for magic in self.currentunit.magiclist:
+        for magic in self.mainwindow.currentunit.magiclist:
             label = QLabel()
             label.setText(str(magic.name))
             label.setToolTip(f"<font><b>{magic.name}</b> <br/>Difficulty: {magic.difficulty} <br/><br/> {magic.description}</font>")
@@ -106,9 +111,9 @@ class WidgetCurrent(QBorderedWidget):
         #add items
         itembox = QVBoxLayout() # create a vertical layout to show them in a neat line
         
-        totalskills = self.currentunit.skill.to_list()
+        totalskills = self.mainwindow.currentunit.skill.to_list()
 
-        for item in self.currentunit.itemlist:
+        for item in self.mainwindow.currentunit.itemlist:
             label = QLabel()
             label.setText(str(item.subcategory + " " + item.name))
             label.setToolTip(f"<font><b>{item.subcategory}</b> {item.name} <br/> category: {item.category} <br/> distance: {item.distance} <br/> <nobr>{item.skill.to_string()}</nobr> <br/> price: {item.price} <br/> {item.description}</font>")
@@ -158,7 +163,7 @@ class WidgetCurrent(QBorderedWidget):
         itemwidget = QInteractiveWidget()
         itemwidget.setLayout(itemwrap)
         itemwidget.setToolTip(f"Buy a new item for this unit.")
-        # itemwidget.clicked.connect(self.create_method_new_item(unit=self.currentunit))
+        # itemwidget.clicked.connect(self.create_method_new_item(unit=self.mainwindow.currentunit))
         itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
 
         itemboxwidget = QBorderedWidget()
@@ -173,7 +178,7 @@ class WidgetCurrent(QBorderedWidget):
         abilitywidget = QInteractiveWidget()
         abilitywidget.setLayout(abilitywrap)
         abilitywidget.setToolTip(f"Add manually a new ability for this unit.")
-        abilitywidget.clicked.connect(self.create_method_new_ability(unit=self.currentunit))
+        abilitywidget.clicked.connect(self.create_method_new_ability(unit=self.mainwindow.currentunit))
         abilitybox.addWidget(abilitywidget) #adds the ability to a label and at it to the vertical item layout
 
         abilitywidget = QInteractiveWidget()
@@ -187,7 +192,7 @@ class WidgetCurrent(QBorderedWidget):
         magicwidget = QInteractiveWidget()
         magicwidget.setLayout(magicwrap)
         magicwidget.setToolTip(f"Add manually a new magic skill for this unit.")
-        magicwidget.clicked.connect(self.create_method_new_magic(unit=self.currentunit))
+        magicwidget.clicked.connect(self.create_method_new_magic(unit=self.mainwindow.currentunit))
         magicbox.addWidget(magicwidget) #adds the magic to a label and at it to the vertical item layout
 
         magicwidget = QInteractiveWidget()
@@ -214,26 +219,28 @@ class WidgetCurrent(QBorderedWidget):
     def set_namebox(self):
         namebox = QGridLayout()
         
+        print(self.mainwindow.currentunit.name)
         namelabel = QLabel()
-        namelabel.setText(self.currentunit.name)    
+        namelabel.setText(self.mainwindow.currentunit.name)    
         namebox.addWidget(namelabel, 0, 0)
 
         catlabel = QLabel()
-        catlabel.setText(self.currentunit.category)
+        catlabel.setText(self.mainwindow.currentunit.category)
         namebox.addWidget(catlabel, 1, 0,)
 
         herolabel = QLabel()
-        herolabel.setText(str(self.currentunit.ishero))
+        herolabel.setText(str(self.mainwindow.currentunit.ishero))
         namebox.addWidget(herolabel, 1, 1)
 
         # btnremove = QPushButton('Remove Unit', self)
         # btnremove.setToolTip('Remove current unit')
-        # btnremove.clicked.connect(self.create_method_remove_squad(self.currentunit))
+        # btnremove.clicked.connect(self.create_method_remove_squad(self.mainwindow.currentunit))
         # namebox.addWidget(btnremove, 0, 1)
 
         namewidget = QBorderedWidget()
         namewidget.setLayout(namebox)
-
+        
+        return namewidget
 
     def create_method_new_ability(self, unit):
         """Method for creating a new ability and receiving as attribute the unit it should be added to.
@@ -270,17 +277,17 @@ class WidgetCurrent(QBorderedWidget):
                         )
                         
                         if unit.ishero == True:
-                            for hero in self.wbid.herolist:
+                            for hero in self.mainwindow.wbid.herolist:
                                 if unit.name == hero.name:
                                     hero.abilitylist.append(new_ability)
-                                    self.initUI()
+                                    self.mainwindow.initUI()
                                     
                         else:
-                            for s in self.wbid.squadlist:
+                            for s in self.mainwindow.wbid.squadlist:
                                 if unit.name == s.name:
                                     for henchman in s.henchmanlist:
                                         henchman.abilitylist.append(new_ability)
-                                    self.initUI()
+                                    self.mainwindow.initUI()
 
         return create_ability_for_unit
 
@@ -318,16 +325,16 @@ class WidgetCurrent(QBorderedWidget):
                         )
                         
                         if unit.ishero == True:
-                            for hero in self.wbid.herolist:
+                            for hero in self.mainwindow.wbid.herolist:
                                 if unit.name == hero.name:
                                     hero.magiclist.append(new_magic)
-                                    self.initUI()
+                                    self.mainwindow.initUI()
                                     
                         else:
-                            for s in self.wbid.squadlist:
+                            for s in self.mainwindow.wbid.squadlist:
                                 if unit.name == s.name:
                                     for henchman in s.henchmanlist:
                                         henchman.magiclist.append(new_magic)
-                                    self.initUI()
+                                    self.mainwindow.initUI()
 
         return create_magic_for_unit

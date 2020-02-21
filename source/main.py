@@ -129,7 +129,7 @@ class WarbandOverview(QMainWindow):
         topbox = QHBoxLayout()
         topbox.addWidget(self.set_wbname())
         topbox.addWidget(self.set_wbinvbox())
-        topbox.addWidget(WidgetSystem(self, self.wbid, self.currentunit))
+        topbox.addWidget(WidgetSystem(self))
         topboxwidget = QBorderedWidget()
         topboxwidget.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
         topboxwidget.setLayout(topbox)
@@ -139,7 +139,7 @@ class WarbandOverview(QMainWindow):
     def set_botbox(self):
         # wrapping heroes, squads and extra details in the bottom horizontal layout
         botbox = QHBoxLayout()
-        botbox.addWidget(WidgetHeroes(self.wbid, self.currentunit))
+        botbox.addWidget(WidgetHeroes(self))
         botbox.addWidget(self.set_squadbox())
         botbox.addWidget(self.set_currentbox())
         botboxwidget = QInteractiveWidget()

@@ -74,13 +74,11 @@ from source.widget_template import *
 
 
 class WidgetSystem(QBorderedWidget):
-    def __init__(self, mainwindow, wbid, currentunit):
+    def __init__(self, mainwindow):
         super().__init__()
         
         self.mainwindow = mainwindow
-        self.wbid = wbid
-        self.currentunit = currentunit
-
+        
         sysbox = QGridLayout()
         
         # buttons for interaction
@@ -113,15 +111,14 @@ class WidgetSystem(QBorderedWidget):
         warbands = show_saved_warbands()                                                                            # get list of save files
         wbname, okPressed = QInputDialog.getItem(self, "Choose", "Choose your warband", warbands, 0, False)         # Let user choose out of save files
         if okPressed and wbname:
-            self.wbid = load_warband(wbname)                                                                        # set warband object based on save file
-            self.currentunit = create_template_char()                                                          # set empty current unit
-            self.mainwindow.wbid = self.wbid                                                                                      # Restart the window to force changes
-            self.mainwindow.initUI()
+            self.mainwindow.wbid = load_warband(wbname)                                                             # Load warband object to main window 
+            self.mainwindow.currentunit = create_template_char()                                                    # set empty current unit to main window
+            self.mainwindow.initUI()                                                                                # Restart the main window to force changes
             
     def save_warband(self):
         """Save warband to cache and then to saves"""
-        save_warband(self.wbid)                # save wbid to json
-        cache_warband(self.wbid)                #set to run next time at stsrtup
+        save_warband(self.mainwindow.wbid)                                                                                     # save wbid to json
+        cache_warband(self.mainwindow.wbid)                                                                                    #set to run next time at stsrtup
         message = QMessageBox.information(self, "Saved", "Save successful!", QMessageBox.Ok)
 
     def create_warband(self):
@@ -152,6 +149,6 @@ class WidgetSystem(QBorderedWidget):
 
                     warband, okPressed = QInputDialog.getItem(self, "Create", "Choose a warband", warbands, 0, False)
                     if okPressed and warband:
-                        self.wbid = Warband.create_warband(name=name, race=race, source=source, warband=warband)
-                        self.currentunit = create_template_char()
-                        self.main.initUI() 
+                        self.mainwindow.wbid = Warband.create_warband(name=name, race=race, source=source, warband=warband)     # Load warband object to main window 
+                        self.mainwindow.currentunit = create_template_char()                                                    # set empty current unit to main window
+                        self.mainwindow.initUI()                                                                                # Restart the main window to force changes

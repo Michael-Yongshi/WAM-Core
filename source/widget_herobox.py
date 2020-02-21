@@ -75,8 +75,11 @@ from source.widget_template import *
 
 
 class WidgetHeroes(QBorderedWidget):
-    def __init__(self, wbid, currentunit):
+    def __init__(self, mainwindow):
         super().__init__()
+
+        self.mainwindow = mainwindow
+
         # def set_herobox(self, currentbox):
         # as we give this class a reference to currentbox, we can manipulate currentbox from here
         # currentbox.set_current_hero(hero)
@@ -84,12 +87,12 @@ class WidgetHeroes(QBorderedWidget):
         herobox = QVBoxLayout() # To show all heroes below each other dynamically (based on actual number of heroes)
         
         h = 0
-        for hero in wbid.herolist: # First iterate over the heroes in your warband
+        for hero in self.mainwindow.wbid.herolist: # First iterate over the heroes in your warband
             h += 1
             herogrid = QGridLayout() # create a grid layout to position all information more accurately
             
             namelabel = QLabel()
-            if hero == currentunit:
+            if hero == self.mainwindow.currentunit:
                 namelabel.setText(hero.name + " (selected)")
             else:
                 namelabel.setText(hero.name)
@@ -106,7 +109,7 @@ class WidgetHeroes(QBorderedWidget):
             herowidget.setLayout(herogrid)
 
             # bound a click on the widget to showing details in character view
-            # herowidget.clicked.connect(self.create_method_focus(hero, currentunit))
+            herowidget.clicked.connect(self.create_method_focus_hero(hero))
             herobox.addWidget(herowidget)
 
         if h <= 5: # If there is still room in your warband add a new hero widget
@@ -118,7 +121,7 @@ class WidgetHeroes(QBorderedWidget):
 
             herowidget = QInteractiveWidget()
             herowidget.setLayout(herogrid)
-            # herowidget.clicked.connect(self.create_new_hero(wbid, currentunit))
+            herowidget.clicked.connect(self.create_new_hero)
             herobox.addWidget(herowidget)
         
         while h <= 5: # if there is still room, add some empty widgets to fill up the space
@@ -129,7 +132,7 @@ class WidgetHeroes(QBorderedWidget):
         self.setLayout(herobox)
         self.setToolTip('These are your <b>heroes</b>')
 
-    def create_method_focus(self, hero, currentunit):          
+    def create_method_focus_hero(self, hero):          
         """This method is used in order to create a new method that holds a reference to a passed attribute,
         this is used when a widget needs to be clickable but the signal needs to carry information other than the signal itself.
         This one specifically gets a current unit and then passes it to the currentunit attribute of the main window"""
@@ -140,48 +143,45 @@ class WidgetHeroes(QBorderedWidget):
             # elif unit != currentunit:
             #     currentunit = unit
             
-            currentunit = unit
+            self.mainwindow.currentunit = hero
+            self.mainwindow.initUI()
 
         return focus_unit
 
-    def create_new_hero(self, wbid, currentunit):
+    def create_new_hero(self):
         
-        def create_new_hero():
+        """Create a new hero, store it in the warband object and set to currentunit"""
+        name, okPressed = QInputDialog.getText(self, "Create", "Name your hero:")
+        if okPressed and name:
             
-            """Create a new hero, store it in the warband object and set to currentunit"""
-            name, okPressed = QInputDialog.getText(self, "Create", "Name your hero:")
-            if okPressed and name:
-                
-                # get all categories in references
-                wbrace = wbid.race
-                wbsource = wbid.source
-                wbwarband = wbid.warband
-                catdict = open_json("database/references/characters_ref.json")
-                categories = []
-                
-                for key in catdict[wbrace][wbsource][wbwarband]:
-                    if catdict[wbrace][wbsource][wbwarband][key]["ishero"] == True:
-                        categories.append(key)
+            # get all categories in references
+            wbrace = self.mainwindow.wbid.race
+            wbsource = self.mainwindow.wbid.source
+            wbwarband = self.mainwindow.wbid.warband
+            catdict = open_json("database/references/characters_ref.json")
+            categories = []
+            
+            for key in catdict[wbrace][wbsource][wbwarband]:
+                if catdict[wbrace][wbsource][wbwarband][key]["ishero"] == True:
+                    categories.append(key)
 
-                category, okPressed = QInputDialog.getItem(self, "Create", "Choose a category", categories, 0, False)
-                if okPressed and category:
-                    new_hero = Hero.create_character(
-                        name=name,
-                        race=wbrace,
-                        source=wbsource,
-                        warband=wbwarband,
-                        category=category,
-                    )
+            category, okPressed = QInputDialog.getItem(self, "Create", "Choose a category", categories, 0, False)
+            if okPressed and category:
+                new_hero = Hero.create_character(
+                    name=name,
+                    race=wbrace,
+                    source=wbsource,
+                    warband=wbwarband,
+                    category=category,
+                )
 
-                    wbidgold = wbid.treasury.gold
-                    heroprice = catdict[wbrace][wbsource][wbwarband][category]["price"]
-                    if wbidgold >= heroprice:
-                        wbid.treasury.gold = wbidgold - heroprice
-                        wbid.herolist.append(new_hero)
-                        currentunit = new_hero
-                        
-                    else:
-                        print("can't add new hero, lack of funds")
-
-        return create_new_hero
+                wbidgold = self.mainwindow.wbid.treasury.gold
+                heroprice = catdict[wbrace][wbsource][wbwarband][category]["price"]
+                if wbidgold >= heroprice:
+                    self.mainwindow.wbid.treasury.gold = wbidgold - heroprice
+                    self.mainwindow.wbid.herolist.append(new_hero)
+                    self.mainwindow.currentunit = new_hero
+                    self.mainwindow.initUI()
+                else:
+                    print("can't add new hero, lack of funds")
         

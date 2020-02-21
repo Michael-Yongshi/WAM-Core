@@ -8,7 +8,7 @@ from PyQt5.QtCore import (
 
 from PyQt5.QtWidgets import (
     # QAction,
-    # QApplication,
+    QApplication,
     # QDesktopWidget,
     # QInputDialog,
     # QLabel,
@@ -62,7 +62,7 @@ class QInteractiveWidget(QBorderedWidget):
     clicked = pyqtSignal()
 
     def mousePressEvent(self, ev):
-        if app.mouseButtons() & Qt.LeftButton:
+        if QApplication.mouseButtons() & Qt.LeftButton:
             self.clicked.emit()
 
 # class QHighlightedWidget(QInteractiveWidget):

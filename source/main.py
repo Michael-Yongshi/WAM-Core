@@ -85,7 +85,8 @@ class QMainApplication(QApplication):
         self.setPalette(QDarkPalette())
         # self.setFont(QFont("schoensperger", 20))
         self.setStyleSheet("QToolTip { color: #ffffff; background-color: grey; border: 1px solid white; }")
-        
+    
+
 class WarbandOverview(QMainWindow):
     """The main window that everything runs in"""
     def __init__(self):
@@ -111,7 +112,7 @@ class WarbandOverview(QMainWindow):
     def set_nested_widget(self):
         # build top part
         topboxwidget = self.set_topbox()
-        topboxwidget.setSizePolicy
+
         # build bot part
         botboxwidget = self.set_botbox()
 
@@ -138,10 +139,10 @@ class WarbandOverview(QMainWindow):
 
     def set_botbox(self):
         # wrapping heroes, squads and extra details in the bottom horizontal layout
-        botbox = QHBoxLayout()
-        botbox.addWidget(WidgetHeroes(self))
-        botbox.addWidget(self.set_squadbox())
-        botbox.addWidget(self.set_currentbox())
+        botbox = QGridLayout()
+        botbox.addWidget(WidgetHeroes(self), 0, 0)
+        botbox.addWidget(self.set_squadbox(), 0, 1)
+        botbox.addWidget(self.set_currentbox(), 0, 2, 1, 2)
         botboxwidget = QInteractiveWidget()
         botboxwidget.clicked.connect(self.create_method_focus(unit=None))
         botboxwidget.setLayout(botbox)
@@ -356,13 +357,13 @@ class WarbandOverview(QMainWindow):
 
             for ability in item.abilitylist:
                 label = QLabel()
-                label.setText(f"{ability.name} (source: {item.subcategory})")
+                label.setText(f"{ability.name} \n(source: {item.subcategory})")
                 label.setToolTip(f"<font><b>{ability.name}</b> <br/>(source: {item.subcategory}) <br/><br/>{ability.description}</font>")
                 abilitybox.addWidget(label) #adds the ability to a label and at it to the vertical ability layout
         
             for magic in item.magiclist:
                 label = QLabel()
-                label.setText(f"{magic.name} (source: {item.subcategory})")
+                label.setText(f"{magic.name} \n(source: {item.subcategory})")
                 label.setToolTip(f"<font><b>{magic.name}</b> <br/>(source: {item.subcategory}) <br/>Difficulty: {magic.difficulty}<br/><br/>{magic.description}</font>")
                 magicbox.addWidget(label) #adds the magic to a label and at it to the vertical magic layout
 

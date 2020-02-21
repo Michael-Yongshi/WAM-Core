@@ -82,7 +82,7 @@ contract CryptoCharacter is IERC721, ERC165 {
         string memory _identifier,
         string memory _name,
         string memory _unit,
-        string memory _race,
+        string memory _race
         )
         public
     {

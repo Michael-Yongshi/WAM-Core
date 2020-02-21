@@ -71,6 +71,7 @@ from source.class_hierarchy import (
     )
 
 from source.widget_template import *
+from source.widget_items import WidgetItemsHero
 # from source.widget_currentbox import *
 
 
@@ -109,7 +110,7 @@ class WidgetHeroes(QBorderedWidget):
             herowidget.setLayout(herogrid)
 
             # bound a click on the widget to showing details in character view
-            herowidget.clicked.connect(self.create_method_focus_hero(hero))
+            herowidget.clicked.connect(self.create_method_focus(hero))
             herobox.addWidget(herowidget)
 
         if h <= 5: # If there is still room in your warband add a new hero widget
@@ -121,7 +122,7 @@ class WidgetHeroes(QBorderedWidget):
 
             herowidget = QInteractiveWidget()
             herowidget.setLayout(herogrid)
-            herowidget.clicked.connect(self.create_new_hero)
+            herowidget.clicked.connect(self.create_new)
             herobox.addWidget(herowidget)
         
         while h <= 5: # if there is still room, add some empty widgets to fill up the space
@@ -129,26 +130,22 @@ class WidgetHeroes(QBorderedWidget):
             herowidget = QUnBorderedWidget()
             herobox.addWidget(herowidget)
 
-        self.setLayout(herobox)
         self.setToolTip('These are your <b>heroes</b>')
-
-    def create_method_focus_hero(self, hero):          
+        self.setLayout(herobox)
+        
+    def create_method_focus(self, hero):          
         """This method is used in order to create a new method that holds a reference to a passed attribute,
         this is used when a widget needs to be clickable but the signal needs to carry information other than the signal itself.
         This one specifically gets a current unit and then passes it to the currentunit attribute of the main window"""
+        
         def focus_unit():
-
-            # if unit == None:
-            #     currentunit = create_template_char()
-            # elif unit != currentunit:
-            #     currentunit = unit
             
             self.mainwindow.currentunit = hero
             self.mainwindow.initUI()
 
         return focus_unit
 
-    def create_new_hero(self):
+    def create_new(self):
         
         """Create a new hero, store it in the warband object and set to currentunit"""
         name, okPressed = QInputDialog.getText(self, "Create", "Name your hero:")
@@ -184,4 +181,30 @@ class WidgetHeroes(QBorderedWidget):
                     self.mainwindow.initUI()
                 else:
                     print("can't add new hero, lack of funds")
+
+    def create_method_remove(self, hero): 
+        """This method is used in order to create a new method that holds a reference to a passed attribute,
+        this is used when a widget needs to be clickable but the signal needs to carry information other than the signal itself.
+        This one specifically gets a current hero and then creates a window based on the attribute"""
+
+        def remove():
+
+            remove = QMessageBox.question(self, 'Remove hero', f"Do you want to remove this hero?", QMessageBox.Yes | QMessageBox.No)
+            if remove == QMessageBox.Yes:
+                process_gold = QMessageBox.question(self, "Process gold", "Is change due to an event?", QMessageBox.Yes | QMessageBox.No)
+                heroprice = 0
+
+                for hero in self.mainwindow.wbid.herolist:
+                    if hero == self.mainwindow.scurrentunit:
+                        if process_gold == QMessageBox.No:
+                            heroprice += hero.price
+                            for item in hero.itemlist:
+                                heroprice += item.price
+                        index = self.mainwindow.wbid.herolist.index(hero)
+                        self.mainwindow.wbid.herolist.pop(index)
+                        break
+
+                self.mainwindow.wbid.treasury.gold += heroprice
+                self.mainwindow.initUI()
         
+        return remove

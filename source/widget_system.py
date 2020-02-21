@@ -104,6 +104,7 @@ class WidgetSystem(QBorderedWidget):
         sysbox.addWidget(btnchoose, 1, 0)
         # sysbox.addWidget(btnquit, 1, 1)
 
+        self.setToolTip("Create a new warband, load a warband from memory or save current warband.")
         self.setLayout(sysbox)
 
     def choose_warband(self):

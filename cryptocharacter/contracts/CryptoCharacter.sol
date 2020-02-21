@@ -29,6 +29,7 @@ contract CryptoCharacter is IERC721, ERC165 {
         string name;
         string unit;
         string race;
+        mapping (uint => string) events;
         uint dna;
     }
 

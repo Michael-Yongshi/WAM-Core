@@ -95,19 +95,19 @@ class WidgetCurrent(QBorderedWidget):
         namebox = QGridLayout()
         
         namelabel = QLabel()
-        namelabel.setText(self.mainwindow.currentunit.name)    
+        namelabel.setText(f"Name: <b>{self.mainwindow.currentunit.name}</b>")    
         namebox.addWidget(namelabel, 0, 0)
 
         catlabel = QLabel()
-        catlabel.setText(self.mainwindow.currentunit.category)
+        catlabel.setText(f"Category: <b>{self.mainwindow.currentunit.category}</b>")
         namebox.addWidget(catlabel, 1, 0,)
 
         pricelabel = QLabel()
-        pricelabel.setText(str(self.mainwindow.currentunit.price) + " gold")
+        pricelabel.setText(f"Replacement Cost: <b>{self.mainwindow.currentunit.price}</b>")
         namebox.addWidget(pricelabel, 0, 1)
 
         maxlabel = QLabel()
-        maxlabel.setText(str(self.mainwindow.currentunit.maxcount) + " max units")
+        maxlabel.setText(f"Max Units: <b>{self.mainwindow.currentunit.maxcount}</b>")
         namebox.addWidget(maxlabel, 1, 1)
 
         # btnremove = QPushButton('Remove Unit', self)
@@ -143,15 +143,19 @@ class WidgetCurrent(QBorderedWidget):
         # Add abilities, items and magic to the listbox
         listbox = QHBoxLayout()
         listbox.addWidget(WidgetItemsUnit(self.mainwindow)) # adds the item layout to the grid
-        listbox.addWidget(self.set_abilitywidget()) # adds the ability layout to the grid
-        listbox.addWidget(self.set_magicwidget()) # adds the magic layout to the grid
+        listbox.addWidget(WidgetAbility(self.mainwindow)) # adds the ability layout to the grid
+        listbox.addWidget(WidgetMagic(self.mainwindow)) # adds the magic layout to the grid
 
         listwidget = QInteractiveWidget()
         listwidget.setLayout(listbox)
 
         return listwidget
 
-    def set_abilitywidget(self):
+class WidgetAbility(QInteractiveWidget):
+    def __init__(self, mainwindow):
+        super().__init__()
+
+        self.mainwindow = mainwindow
 
         #show abilities
         abilitybox = QVBoxLayout() # create a vertical layout to show them in a neat line
@@ -173,38 +177,7 @@ class WidgetCurrent(QBorderedWidget):
         abilitywidget.clicked.connect(self.create_method_new_ability(unit=self.mainwindow.currentunit))
         abilitybox.addWidget(abilitywidget) #adds the ability to a label and at it to the vertical item layout
 
-        abilitywidget = QInteractiveWidget()
-        abilitywidget.setLayout(abilitybox)
-
-        return abilitywidget
-
-    def set_magicwidget(self):
-
-        #show magic
-        magicbox = QVBoxLayout() # create a vertical layout to show them in a neat line
-
-        for magic in self.mainwindow.currentunit.get_total_magiclist():
-            label = QLabel()
-            label.setText(str(magic.name))
-            label.setToolTip(f"<font><b>{magic.name}</b> <br/>Difficulty: {magic.difficulty} <br/><br/> {magic.description}</font>")
-            magicbox.addWidget(label) #adds the magic to a label and at it to the vertical magic layout
-
-        # add new magic widget
-        label = QLabel()
-        label.setText("New Magic")
-        magicwrap = QVBoxLayout()
-        magicwrap.addWidget(label)
-        magicwidget = QInteractiveWidget()
-        magicwidget.setLayout(magicwrap)
-        magicwidget.setToolTip(f"Add manually a new magic skill for this unit.")
-        magicwidget.clicked.connect(self.create_method_new_magic(unit=self.mainwindow.currentunit))
-        magicbox.addWidget(magicwidget) #adds the magic to a label and at it to the vertical item layout
-
-        magicwidget = QInteractiveWidget()
-        magicwidget.setLayout(magicbox)
-
-        return magicwidget
-
+        self.setLayout(abilitybox)
     def create_method_new_ability(self, unit):
         """Method for creating a new ability and receiving as attribute the unit it should be added to.
                     """
@@ -253,6 +226,34 @@ class WidgetCurrent(QBorderedWidget):
                                     self.mainwindow.initUI()
 
         return create_ability_for_unit
+
+class WidgetMagic(QInteractiveWidget):
+    def __init__(self, mainwindow):
+        super().__init__()
+
+        self.mainwindow = mainwindow
+
+        #show magic
+        magicbox = QVBoxLayout() # create a vertical layout to show them in a neat line
+
+        for magic in self.mainwindow.currentunit.get_total_magiclist():
+            label = QLabel()
+            label.setText(str(magic.name))
+            label.setToolTip(f"<font><b>{magic.name}</b> <br/>Difficulty: {magic.difficulty} <br/><br/> {magic.description}</font>")
+            magicbox.addWidget(label) #adds the magic to a label and at it to the vertical magic layout
+
+        # add new magic widget
+        label = QLabel()
+        label.setText("New Magic")
+        magicwrap = QVBoxLayout()
+        magicwrap.addWidget(label)
+        magicwidget = QInteractiveWidget()
+        magicwidget.setLayout(magicwrap)
+        magicwidget.setToolTip(f"Add manually a new magic skill for this unit.")
+        magicwidget.clicked.connect(self.create_method_new_magic(unit=self.mainwindow.currentunit))
+        magicbox.addWidget(magicwidget) #adds the magic to a label and at it to the vertical item layout
+
+        self.setLayout(magicbox)
 
     def create_method_new_magic(self, unit):
         """Method for creating a new magic and receiving as attribute the unit it should be added to.

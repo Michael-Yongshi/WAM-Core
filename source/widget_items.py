@@ -132,7 +132,7 @@ class WidgetItemsWarband(QBorderedWidget):
                     if item.name == item.name and item.subcategory == item.subcategory:
                         if process_gold == QMessageBox.Yes:
                             itemprice += item.price
-                        index = warband.itemlist.index(i)
+                        index = warband.itemlist.index(item)
                         warband.itemlist.pop(index)
                         break
 
@@ -222,7 +222,7 @@ class WidgetItemsUnit(QBorderedWidget):
                             if item.name == item.name and item.subcategory == item.subcategory:
                                 if process_gold == QMessageBox.Yes:
                                     itemprice += item.price
-                                index = hero.itemlist.index(i)
+                                index = hero.itemlist.index(item)
                                 hero.itemlist.pop(index)
                                 break
 

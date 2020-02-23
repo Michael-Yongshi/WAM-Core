@@ -102,36 +102,6 @@
             "itemlist": [
                 {
                     "name": "",
-                    "source": "Core Rules",
-                    "category": "Melee Weapon",
-                    "subcategory": "Starting Dagger",
-                    "distance": 0,
-                    "skill": {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    },
-                    "abilitylist": [
-                        {
-                            "source": "Core Rules",
-                            "category": "Item",
-                            "name": "Cloth is Armour",
-                            "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
-                        }
-                    ],
-                    "magiclist": [],
-                    "price": 0,
-                    "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
-                },
-                {
-                    "name": "",
                     "source": "Broheim",
                     "category": "Melee Weapon",
                     "subcategory": "Mage Quarter Staff",
@@ -194,36 +164,6 @@
             "abilitylist": [],
             "magiclist": [],
             "itemlist": [
-                {
-                    "name": "",
-                    "source": "Core Rules",
-                    "category": "Melee Weapon",
-                    "subcategory": "Starting Dagger",
-                    "distance": 0,
-                    "skill": {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    },
-                    "abilitylist": [
-                        {
-                            "source": "Core Rules",
-                            "category": "Item",
-                            "name": "Cloth is Armour",
-                            "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
-                        }
-                    ],
-                    "magiclist": [],
-                    "price": 0,
-                    "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
-                },
                 {
                     "name": "",
                     "source": "Core Rules",
@@ -335,36 +275,6 @@
             "abilitylist": [],
             "magiclist": [],
             "itemlist": [
-                {
-                    "name": "",
-                    "source": "Core Rules",
-                    "category": "Melee Weapon",
-                    "subcategory": "Starting Dagger",
-                    "distance": 0,
-                    "skill": {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    },
-                    "abilitylist": [
-                        {
-                            "source": "Core Rules",
-                            "category": "Item",
-                            "name": "Cloth is Armour",
-                            "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
-                        }
-                    ],
-                    "magiclist": [],
-                    "price": 0,
-                    "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
-                },
                 {
                     "name": "",
                     "source": "Core Rules",

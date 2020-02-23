@@ -81,6 +81,12 @@
                     "category": "Injury",
                     "name": "Horrible Scars",
                     "description": "Due to its disfigurement the character causes fear from now on. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                },
+                {
+                    "source": "Core Rules",
+                    "category": "Character",
+                    "name": "Leader",
+                    "description": "Nearby units (6 inch) can use this characters leader skill."
                 }
             ],
             "magiclist": [
@@ -91,6 +97,14 @@
                     "group": "Spells",
                     "difficulty": 8,
                     "description": "<i>A radiant white light emerges from the mage`s hand, banishing all fear and doubt in his comrades.</i><br/><br/>Any friendly models within 8 inch of the Elven mage are immune to psychology and will never break from combat. This spell lasts until the mage suffers a wound. If the mage suffers a wound then the enchanted Elves become startled and uneasy. All models with 8 inch must take a Leadership test. If any fail, they are treated as if they had failed an All Alone test."
+                },
+                {
+                    "source": "Core Rules",
+                    "category": "Prayers of Sigmar",
+                    "name": "The Hammer of Sigmar",
+                    "group": "Prayers",
+                    "difficulty": 7,
+                    "description": "<i>This weapon of the faithful glows with a golden light, imbued as it is with the righteous power of Sigmar.</i><br/><br/>The wielder gains +2 Strength in hand-to-hand combat and all hits he inflicts cause double damage (eg, 2 wounds instead of 1). The Priest must test each shooting phase he wants to use the Hammer."
                 }
             ],
             "itemlist": [
@@ -138,6 +152,36 @@
                     ],
                     "price": 20,
                     "description": "A Mage Staff used two handed."
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Melee Weapon",
+                    "subcategory": "Starting Dagger",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Item",
+                            "name": "Cloth is Armour",
+                            "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                        }
+                    ],
+                    "magiclist": [],
+                    "price": 0,
+                    "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
                 }
             ],
             "experience": 20,

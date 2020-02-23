@@ -159,6 +159,7 @@ class Item(object):
             subcategory = datadict["subcategory"],
             source = datadict["source"],
             category = datadict["category"],
+            distance = datadict["distance"],
             skill = skill,
             abilitylist = abilitylist,
             magiclist = magiclist,

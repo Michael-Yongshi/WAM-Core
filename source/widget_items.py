@@ -117,7 +117,7 @@ class WidgetItemsWarband(QBorderedWidget):
                 self.mainwindow.wbid.itemlist.append(new_item)
                 self.mainwindow.initUI()
             else:
-                print("can't add new item, lack of funds")
+                message = QMessageBox.information(self, 'Lack of funds!', "Can't add new item, lack of funds", QMessageBox.Ok)
 
     def create_method_remove(self, warband, item):          
 

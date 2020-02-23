@@ -94,7 +94,6 @@ class WidgetCurrent(QBorderedWidget):
     def set_namebox(self):
         namebox = QGridLayout()
         
-        print(self.mainwindow.currentunit.name)
         namelabel = QLabel()
         namelabel.setText(self.mainwindow.currentunit.name)    
         namebox.addWidget(namelabel, 0, 0)

@@ -206,5 +206,5 @@ class WidgetHeroes(QBorderedWidget):
                     self.mainwindow.currentunit = new_hero
                     self.mainwindow.initUI()
                 else:
-                    print("can't add new hero, lack of funds")
+                    message = QMessageBox.information(self, 'Lack of funds!', "Can't add new hero, lack of funds", QMessageBox.Ok)
 

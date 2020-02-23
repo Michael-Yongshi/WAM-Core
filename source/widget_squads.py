@@ -168,7 +168,7 @@ class WidgetSquads(QBorderedWidget):
                             self.mainwindow.wbid.treasury.gold -= deltagold
                             self.mainwindow.initUI()
                         else:
-                            print("Lack of funds")
+                            message = QMessageBox.information(self, 'Lack of funds!', "Can't add new unit, lack of funds", QMessageBox.Ok)
                     else:
                         self.mainwindow.initUI()
                     

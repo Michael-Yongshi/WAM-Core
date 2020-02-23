@@ -5,7 +5,7 @@
     "warband": "Wyrdbreakers",
     "description": "High Elves originate from the island kingdom of Ulthuan far to the west of the Empire, which is belaugered continuously by raids from their hated Dark Elven brethren, the fearless Norscans, and the incursions of Chaos which rack all civilized lands. \nThe fair elven folk learn how to fight from childhood, and thanks to their extremely long lifespans they often grow in skill to become unrivaled in their prowess by other mortals. Despite their individual ability, their numbers are few compared to their co-inhabitants of the Old World and they are always in search of some edge with which to gain an advantage over their foes. /nThus the High Elves are unrivaled practitioners of the arcane arts and their specialized school of Spell craft is so highly regarded it is referred to simply as the High Magic by other Wizards. The Elven Mages are very proficient at many aspects of Magic, including astrology and the prediction of what is to come. So it was that the coming of the comet known in the Empire as the Hammer of Sigmar was not a suprise to the inhabitants of Ulthuan. \nThe Loremasters foretold the great power it would bring in the form of wyrdstone, but also the danger as they knew the substance was riddled with the Chaos taint and would spread the evils of corruption to all new levels. Therefore the Pheonix King, advised by the Loremasters, issued a decree: Wyrdstone must be destroyed whenever possible, and any brave enough to undertake the hardships of travel across the lands of the Humans and to bear the dangers of the Damned city to seek out and destroy the Chaos-tainted stones would be forever honored in the lands of the Elves. \nFrom across the provinces bands of young would-be heroes volunteered to pledge their blades to the Kings edict, and the Loremasters dispatched many apprentices to accompany them in their journey and lead them to the fell substance. Furthermore the Loremasters crafted magical devices called Wyrd-breakers to counter the Chaos taint of the wyrdstone and render the substance into more mundane gemstones thereby effectively destroying the wyrdstone but still allowing the Elves a source of revenue. Each of the young mages was given one and sent forth to rid the world of the taint of wyrdstone. \n------------------------------\nBased on the premise of the high elves seeing wyrdstones as chaos instruments. However as Mordheim lays in outside territory and wanting to avoid full scale war, Tyrion together with Teclis ordered their generals to organise small autonomous and selfsufficient companies. These small companies could travel on unofficial grounds, protecting elven world from warring with the Empire. \n These companies will act without any link to the elven homeworld and such are not able to get more support from the elven lands beside a starting supply. The companies are given a wyrdstone breaker to turn wyrdstone in mere gems to sell off. These companies are not trusting anyone except the ones from true high elf origin. \n loremaster, in the noble high elves kingdom of asuryan. These warbands of high elves dress to move under cover and not get too much notice in the chaotic region of mordheim, as high elves are not generally liked and allies are slim. Although their many high elves traits like their fair skin or the light weapons and armour they carry do not make that easy. \n ",
     "treasury": {
-        "gold": 220,
+        "gold": 70,
         "wyrd": 0
     },
     "rulelist": [
@@ -129,6 +129,42 @@
                     "magiclist": [],
                     "price": 0,
                     "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                },
+                {
+                    "name": "",
+                    "source": "Broheim",
+                    "category": "Melee Weapon",
+                    "subcategory": "Mage Quarter Staff",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 1,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Item",
+                            "name": "Concussion",
+                            "description": "This weapon is excellent to use for striking your enemy senseless. When using this weapon, a roll of 2-4 is treated as stunned when rolling to see the extent of a model\u2019s injuries."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Item",
+                            "name": "Two Handed",
+                            "description": "A model armed with this weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."
+                        }
+                    ],
+                    "magiclist": [],
+                    "price": 20,
+                    "description": "A Mage Staff used two handed."
                 }
             ],
             "experience": 20,
@@ -187,6 +223,89 @@
                     "magiclist": [],
                     "price": 0,
                     "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Melee Weapon",
+                    "subcategory": "Sword",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Item",
+                            "name": "Parry",
+                            "description": "This weapon offers an excellent balance of defense and offence. A model armed with this weapon may parry blows. When his opponent rolls to hit, the model armed with this weapon may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength \u2013 they are simply too powerful to be stopped. The character may reroll a failed parry attempt for every extra item that allows for Parrying."
+                        }
+                    ],
+                    "magiclist": [],
+                    "price": 10,
+                    "description": "The sword is often referred to as the \u2018king of weapons\u2019. The most common sword available, the broadsword of the Empire, is a masterpiece by the standards of any smith: four full feet of gleaming steel, double-edged and razor-sharp. Swords are much more effective weapons than crude clubs and axes, though learning to use a sword is a long and difficult process. It takes years to truly master this weapon \u2013 most warriors in Mordheim die long before they get this far!"
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Shield",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Item",
+                            "name": "Encumbered 2 of 2",
+                            "description": "A warrior that is armed with both heavy armor and a shield suffers a -1 Movement penalty."
+                        }
+                    ],
+                    "magiclist": [],
+                    "price": 5,
+                    "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner."
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Light Armour",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 20,
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
                 }
             ],
             "experience": 11,
@@ -245,6 +364,29 @@
                     "magiclist": [],
                     "price": 0,
                     "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Missile Weapon",
+                    "subcategory": "Long Bow",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 3,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 15,
+                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
                 }
             ],
             "experience": 8,
@@ -283,13 +425,13 @@
                             "name": "",
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "subcategory": "Starting Dagger",
+                            "subcategory": "Great Sword",
                             "distance": 0,
                             "skill": {
                                 "movement": 0,
                                 "weapon": 0,
                                 "ballistic": 0,
-                                "strength": 0,
+                                "strength": 2,
                                 "toughness": 0,
                                 "wounds": 0,
                                 "initiative": 0,
@@ -301,13 +443,42 @@
                                 {
                                     "source": "Core Rules",
                                     "category": "Item",
-                                    "name": "Cloth is Armour",
-                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                                    "name": "Two Handed",
+                                    "description": "A model armed with this weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Last Strike",
+                                    "description": "This weapon is so heavy that the model using it always strikes last, even when charging."
                                 }
                             ],
                             "magiclist": [],
-                            "price": 0,
-                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                            "price": 15,
+                            "description": "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively."
+                        },
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
                         }
                     ],
                     "experience": 0,
@@ -346,7 +517,7 @@
                             "name": "",
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "subcategory": "Starting Dagger",
+                            "subcategory": "Spear",
                             "distance": 0,
                             "skill": {
                                 "movement": 0,
@@ -364,13 +535,48 @@
                                 {
                                     "source": "Core Rules",
                                     "category": "Item",
-                                    "name": "Cloth is Armour",
-                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                                    "name": "First Strike",
+                                    "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Unwieldy",
+                                    "description": "A model armed with this weapon may only use a shield or a buckler in his other hand. He may not use a second weapon, because it requires all his skill to wield it."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cavalry Charge Bonus",
+                                    "description": "If using the rules for mounted models, a mounted warrior armed with this weapon receives a +1 Strength bonus when he charges. This bonus only applies for that turn."
                                 }
                             ],
                             "magiclist": [],
-                            "price": 0,
-                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                            "price": 10,
+                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
+                        },
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
                         }
                     ],
                     "experience": 0,
@@ -404,7 +610,7 @@
                             "name": "",
                             "source": "Core Rules",
                             "category": "Melee Weapon",
-                            "subcategory": "Starting Dagger",
+                            "subcategory": "Spear",
                             "distance": 0,
                             "skill": {
                                 "movement": 0,
@@ -422,13 +628,48 @@
                                 {
                                     "source": "Core Rules",
                                     "category": "Item",
-                                    "name": "Cloth is Armour",
-                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                                    "name": "First Strike",
+                                    "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Unwieldy",
+                                    "description": "A model armed with this weapon may only use a shield or a buckler in his other hand. He may not use a second weapon, because it requires all his skill to wield it."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cavalry Charge Bonus",
+                                    "description": "If using the rules for mounted models, a mounted warrior armed with this weapon receives a +1 Strength bonus when he charges. This bonus only applies for that turn."
                                 }
                             ],
                             "magiclist": [],
-                            "price": 0,
-                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                            "price": 10,
+                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
+                        },
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
                         }
                     ],
                     "experience": 0,

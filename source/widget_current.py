@@ -71,8 +71,7 @@ from source.class_hierarchy import (
     )
 
 from source.widget_template import *
-from source.widget_items import WidgetItemsHero
-from source.widget_items import WidgetItemsSquad
+from source.widget_items import WidgetItemsUnit
 
 # from source.widget_currentbox import *
 
@@ -151,36 +150,39 @@ class WidgetCurrent(QBorderedWidget):
 
     def set_itemwidget(self):
 
-        #add items left bottom
-        itembox = QVBoxLayout() # create a vertical layout to show them in a neat line
+        itemwidget = WidgetItemsUnit(self.mainwindow)
 
-        for item in self.mainwindow.currentunit.itemlist:
-            label = QLabel()
-            label.setText(str(item.subcategory + " " + item.name))
-            label.setToolTip(f"<font><b>{item.subcategory}</b> {item.name} <br/> category: {item.category} <br/> distance: {item.distance} <br/> <nobr>{item.skill.to_string()}</nobr> <br/> price: {item.price} <br/> {item.description}</font>")
-            itemwrap = QVBoxLayout()
-            itemwrap.addWidget(label)
-            itemwidget = QInteractiveWidget()
-            itemwidget.setLayout(itemwrap)
-            # itemwidget.clicked.connect(create_method_remove_item(item=item))
-            itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
+        return itemwidget
 
-        # add new item widget
-        label = QLabel()
-        label.setText("New Item")
-        itemwrap = QVBoxLayout()
-        itemwrap.addWidget(label)
-        itemwidget = QInteractiveWidget()
-        itemwidget.setLayout(itemwrap)
-        itemwidget.setToolTip(f"Buy a new item for this unit.")
-        # itemwidget.clicked.connect(self.create_method_new_item(unit=self.mainwindow.currentunit))
-        itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
+        # itembox = QVBoxLayout() # create a vertical layout to show them in a neat line
 
-        itemboxwidget = QBorderedWidget()
-        itemboxwidget.setLayout(itembox)
-        itemboxwidget.setToolTip("These are your units items.")
+        # for item in self.mainwindow.currentunit.itemlist:
+        #     label = QLabel()
+        #     label.setText(str(item.subcategory + " " + item.name))
+        #     label.setToolTip(f"<font><b>{item.subcategory}</b> {item.name} <br/> category: {item.category} <br/> distance: {item.distance} <br/> <nobr>{item.skill.to_string()}</nobr> <br/> price: {item.price} <br/> {item.description}</font>")
+        #     itemwrap = QVBoxLayout()
+        #     itemwrap.addWidget(label)
+        #     itemwidget = QInteractiveWidget()
+        #     itemwidget.setLayout(itemwrap)
+        #     itemwidget.clicked.connect(create_method_remove(item=item))
+        #     itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
+
+        # # add new item widget
+        # label = QLabel()
+        # label.setText("New Item")
+        # itemwrap = QVBoxLayout()
+        # itemwrap.addWidget(label)
+        # itemwidget = QInteractiveWidget()
+        # itemwidget.setLayout(itemwrap)
+        # itemwidget.setToolTip(f"Buy a new item for this unit.")
+        # itemwidget.clicked.connect(self.create_method_new(unit=self.mainwindow.currentunit))
+        # itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
+
+        # itemboxwidget = QBorderedWidget()
+        # itemboxwidget.setLayout(itembox)
+        # itemboxwidget.setToolTip("These are your units items.")
         
-        return itemboxwidget
+        # return itemboxwidget
 
     def set_abilitywidget(self):
 

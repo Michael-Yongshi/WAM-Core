@@ -71,7 +71,6 @@ from source.class_hierarchy import (
     )
 
 from source.widget_template import *
-from source.widget_items import WidgetItemsHero
 # from source.widget_currentbox import *
 
 

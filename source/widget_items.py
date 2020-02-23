@@ -128,8 +128,8 @@ class WidgetItemsWarband(QBorderedWidget):
                 process_gold = QMessageBox.question(self, "Process gold", "Do you want to process an exchange for gold?", QMessageBox.Yes | QMessageBox.No)
                 itemprice = 0
 
-                for i in warband.itemlist:
-                    if i.name == item.name and i.subcategory == item.subcategory:
+                for item in warband.itemlist:
+                    if item.name == item.name and item.subcategory == item.subcategory:
                         if process_gold == QMessageBox.Yes:
                             itemprice += item.price
                         index = warband.itemlist.index(i)
@@ -143,27 +143,39 @@ class WidgetItemsWarband(QBorderedWidget):
 
 
 
-class WidgetItemsHero(QBorderedWidget):
-    def __init__(self, mainwindow, hero):
+class WidgetItemsUnit(QBorderedWidget):
+    def __init__(self, mainwindow):
         super().__init__()
 
         self.mainwindow = mainwindow
-        self.hero = hero
+        unit = self.mainwindow.currentunit
 
         itembox = QVBoxLayout() # create a vertical layout to show them in a neat line
 
-        for item in hero.itemlist:
+        for item in unit.itemlist:
             label = QLabel()
-            label.setText(str(item.subcategory))
+            label.setText(str(item.subcategory + " " + item.name))
             label.setToolTip(f"<font><b>{item.subcategory} </b>{item.name} <br/> category: {item.category} <br/> distance: {item.distance} <br/> <nobr>{item.skill.to_string()}</nobr> <br/> price: {item.price} <br/> {item.description}</font>")
             itemwrap = QVBoxLayout()
             itemwrap.addWidget(label)
             itemwidget = QInteractiveWidget()
             itemwidget.setLayout(itemwrap)
-            itemwidget.clicked.connect(self.create_method_remove(hero = hero, item = item))
+            itemwidget.clicked.connect(self.create_method_remove(unit = unit, item = item))
             itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
-            
+
+        # add new item widget
+        label = QLabel()
+        label.setText("New Item")
+        itemwrap = QVBoxLayout()
+        itemwrap.addWidget(label)
+        itemwidget = QInteractiveWidget()
+        itemwidget.setLayout(itemwrap)
+        itemwidget.setToolTip(f"Buy a new item for this unit.")
+        itemwidget.clicked.connect(self.create_method_new(unit=unit))
+        itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
+
         self.setLayout(itembox)
+        self.setToolTip("These are your units items.")
 
     def create_method_new(self, unit):
         """Method for creating a new item and receiving as attribute the unit it should be added to."""
@@ -174,18 +186,27 @@ class WidgetItemsHero(QBorderedWidget):
                 itemprice = new_item.price
                 if self.mainwindow.wbid.treasury.gold >= itemprice:
                     
-                    for hero in self.mainwindow.wbid.herolist:
-                        if unit.name == hero.name:
-                            hero.itemlist.append(new_item)
-                            self.mainwindow.wbid.treasury.gold -= itemprice
-                            self.mainwindow.initUI()
-                                
+                    if unit.ishero == True:
+                        for hero in self.mainwindow.wbid.herolist:
+                            if unit.name == hero.name:
+                                hero.itemlist.append(new_item)
+                                self.mainwindow.wbid.treasury.gold -= itemprice
+                                self.mainwindow.initUI()
+
+                    if unit.ishero == False:
+                        for squad in self.mainwindow.wbid.squadlist:
+                            if unit.name == squad.henchmanlist[0].name:
+                                for henchman in squad.henchmanlist:
+                                    henchman.itemlist.append(new_item)
+                                    self.mainwindow.wbid.treasury.gold -= itemprice
+                                self.mainwindow.initUI()
+
                 else:
                     message = QMessageBox.information(self, 'Lack of funds!', "Can't add new item, lack of funds", QMessageBox.Ok)
             
         return create_new
 
-    def create_method_remove(self, hero, item):          
+    def create_method_remove(self, unit, item):          
         """ """
 
         def remove():
@@ -195,82 +216,31 @@ class WidgetItemsHero(QBorderedWidget):
                 process_gold = QMessageBox.question(self, "Process gold", "Do you want to process an exchange for gold?", QMessageBox.Yes | QMessageBox.No)
                 itemprice = 0
 
-                for hero in self.mainwindow.wbid.herolist:
-                    for i in hero.itemlist:
-                        if i.name == item.name and i.subcategory == item.subcategory:
-                            if process_gold == QMessageBox.Yes:
-                                itemprice += item.price
-                            index = hero.itemlist.index(i)
-                            hero.itemlist.pop(index)
-                            break
+                if unit.ishero == True:
+                    for hero in self.mainwindow.wbid.herolist:
+                        for item in hero.itemlist:
+                            if item.name == item.name and item.subcategory == item.subcategory:
+                                if process_gold == QMessageBox.Yes:
+                                    itemprice += item.price
+                                index = hero.itemlist.index(i)
+                                hero.itemlist.pop(index)
+                                break
+
+                elif unit.ishero == False:
+                    for squad in self.mainwindow.wbid.squadlist:
+                        if unit.name == squad.henchmanlist[0].name:
+                            for henchman in squad.henchmanlist:
+                                for item in henchman.itemlist:
+                                    if item.name == item.name and item.subcategory == item.subcategory:
+                                        if process_gold == QMessageBox.Yes:
+                                            itemprice += item.price
+                                        index = henchman.itemlist.index(item)
+                                        henchman.itemlist.pop(index)
+                                        break
 
                 self.mainwindow.wbid.treasury.gold += itemprice
                 self.mainwindow.initUI()
         
-        return remove
-
-
-class WidgetItemsSquad(QBorderedWidget):
-    def __init__(self, mainwindow, squad):
-        super().__init__()
-
-        self.mainwindow = mainwindow
-        self.squad = squad
-
-        itembox = QVBoxLayout() # create a vertical layout to show them in a neat line
-
-        for item in squad.henchmanlist[0].itemlist:
-            label = QLabel()
-            label.setText(str(item.subcategory))
-            label.setToolTip(f"<font><b>{item.subcategory} </b>{item.name} <br/> category: {item.category} <br/> distance: {item.distance} <br/> <nobr>{item.skill.to_string()}</nobr> <br/> price: {item.price} <br/> {item.description}</font>")
-            itemwrap = QVBoxLayout()
-            itemwrap.addWidget(label)
-            itemwidget = QInteractiveWidget()
-            itemwidget.setLayout(itemwrap)
-            itemwidget.clicked.connect(self.create_method_remove(squad = squad, item = item))
-            itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
-            
-        self.setLayout(itembox)
-
-    def create_method_new(self, unit):
-        """Method for creating a new item and receiving as attribute the unit it should be added to."""
-
-        def create_new():
-            new_item = dialog_choose_item(self)
-            if new_item != "Cancel":
-                itemprice = new_item.price
-                if self.wbid.treasury.gold >= itemprice:
-                    
-                    for s in self.wbid.squadlist:
-                        if unit.name == s.name:
-                            for henchman in s.henchmanlist:
-                                henchman.itemlist.append(new_item)
-                                self.wbid.treasury.gold -= itemprice
-                            self.initUI()
-
-                else:
-                    message = QMessageBox.information(self, 'Lack of funds!', "Can't add new item, lack of funds", QMessageBox.Ok)
-            
-        return create_new
-
-    def create_method_remove(self, squad, item):          
-
-        def remove():
-
-            remove = QMessageBox.question(self, 'Remove item', f"Do you want to remove this item?", QMessageBox.Yes | QMessageBox.No)
-            if remove == QMessageBox.Yes:
-                process_gold = QMessageBox.question(self, "Process gold", "Do you want to process an exchange for gold?", QMessageBox.Yes | QMessageBox.No)
-                itemprice = 0
-
-                for henchman in squad.henchmanlist:
-                    for i in henchman.itemlist:
-                        if i.name == item.name and i.subcategory == item.subcategory:
-                            if process_gold == QMessageBox.Yes:
-                                itemprice += item.price
-                            index = henchman.itemlist.index(i)
-                            henchman.itemlist.pop(index)
-                            break
-
         return remove
 
 

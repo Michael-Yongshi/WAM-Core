@@ -102,9 +102,13 @@ class WidgetCurrent(QBorderedWidget):
         catlabel.setText(self.mainwindow.currentunit.category)
         namebox.addWidget(catlabel, 1, 0,)
 
-        herolabel = QLabel()
-        herolabel.setText(str(self.mainwindow.currentunit.ishero))
-        namebox.addWidget(herolabel, 1, 1)
+        pricelabel = QLabel()
+        pricelabel.setText(str(self.mainwindow.currentunit.price) + " gold")
+        namebox.addWidget(pricelabel, 0, 1)
+
+        maxlabel = QLabel()
+        maxlabel.setText(str(self.mainwindow.currentunit.maxcount) + " max units")
+        namebox.addWidget(maxlabel, 1, 1)
 
         # btnremove = QPushButton('Remove Unit', self)
         # btnremove.setToolTip('Remove current unit')
@@ -138,7 +142,7 @@ class WidgetCurrent(QBorderedWidget):
 
         # Add abilities, items and magic to the listbox
         listbox = QHBoxLayout()
-        listbox.addWidget(self.set_itemwidget()) # adds the item layout to the grid
+        listbox.addWidget(WidgetItemsUnit(self.mainwindow)) # adds the item layout to the grid
         listbox.addWidget(self.set_abilitywidget()) # adds the ability layout to the grid
         listbox.addWidget(self.set_magicwidget()) # adds the magic layout to the grid
 
@@ -146,42 +150,6 @@ class WidgetCurrent(QBorderedWidget):
         listwidget.setLayout(listbox)
 
         return listwidget
-
-    def set_itemwidget(self):
-
-        itemwidget = WidgetItemsUnit(self.mainwindow)
-
-        return itemwidget
-
-        # itembox = QVBoxLayout() # create a vertical layout to show them in a neat line
-
-        # for item in self.mainwindow.currentunit.itemlist:
-        #     label = QLabel()
-        #     label.setText(str(item.subcategory + " " + item.name))
-        #     label.setToolTip(f"<font><b>{item.subcategory}</b> {item.name} <br/> category: {item.category} <br/> distance: {item.distance} <br/> <nobr>{item.skill.to_string()}</nobr> <br/> price: {item.price} <br/> {item.description}</font>")
-        #     itemwrap = QVBoxLayout()
-        #     itemwrap.addWidget(label)
-        #     itemwidget = QInteractiveWidget()
-        #     itemwidget.setLayout(itemwrap)
-        #     itemwidget.clicked.connect(create_method_remove(item=item))
-        #     itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
-
-        # # add new item widget
-        # label = QLabel()
-        # label.setText("New Item")
-        # itemwrap = QVBoxLayout()
-        # itemwrap.addWidget(label)
-        # itemwidget = QInteractiveWidget()
-        # itemwidget.setLayout(itemwrap)
-        # itemwidget.setToolTip(f"Buy a new item for this unit.")
-        # itemwidget.clicked.connect(self.create_method_new(unit=self.mainwindow.currentunit))
-        # itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
-
-        # itemboxwidget = QBorderedWidget()
-        # itemboxwidget.setLayout(itembox)
-        # itemboxwidget.setToolTip("These are your units items.")
-        
-        # return itemboxwidget
 
     def set_abilitywidget(self):
 

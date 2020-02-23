@@ -93,7 +93,7 @@ class WidgetHeroes(QBorderedWidget):
             
             namelabel = QLabel()
             if hero == self.mainwindow.currentunit:
-                namelabel.setText(hero.name + " (selected)")
+                namelabel.setText(hero.name + "\n(selected)")
             else:
                 namelabel.setText(hero.name)
             namelabel.setToolTip(f"This is your hero`s name")

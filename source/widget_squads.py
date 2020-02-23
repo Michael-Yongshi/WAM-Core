@@ -99,7 +99,7 @@ class WidgetSquads(QBorderedWidget):
 
             namelabel = QLabel()
             if squad.henchmanlist[0] == self.mainwindow.currentunit:
-                namelabel.setText(squad.name + " (selected)")
+                namelabel.setText(squad.name + "\n(selected)")
             else:
                 namelabel.setText(squad.name)
             squadgrid.addWidget(namelabel, 0, 1, 1, 3)

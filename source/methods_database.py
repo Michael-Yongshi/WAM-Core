@@ -15,7 +15,7 @@ def create_warbandref():
     print(f"Created warbandfile")
     save_json(data, filepath)
 
-def add_warbandref(race, source, name, rulelist, itemlist, start_gold, description):
+def add_warbandref(race, source, warband, rulelist, itemlist, start_gold, description):
     # Paths
     folderpath = "database/references/"
     filepath = folderpath + "warbands_ref.json"
@@ -35,20 +35,20 @@ def add_warbandref(race, source, name, rulelist, itemlist, start_gold, descripti
     else:
         data[race][source] = {}
 
-    data[race][source][name]={
+    data[race][source][warband]={
         'race': race,
         'source': source,
-        'name': name,
+        'warband': warband,
         'rulelist': rulelist,
         'itemlist': itemlist,
         'start_gold': start_gold,
         'description': description,
     }
 
-    print(f"Added warband: {name}")
+    print(f"Added warband: {warband}")
     save_json(data, filepath)
 
-def get_warbandref(race, source, name):
+def get_warbandref(race, source, warband):
     # Paths
     folderpath = "database/references/"
     filepath = folderpath + "warbands_ref.json"
@@ -61,7 +61,7 @@ def get_warbandref(race, source, name):
         # Second check if source exists
         if source in data[race]:
             
-            warbanddict = data[race][source][name]
+            warbanddict = data[race][source][warband]
             return warbanddict
 
         else:

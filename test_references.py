@@ -23,7 +23,7 @@ if __name__ == "__main__":
     add_warbandref(
         race = "Human",
         source = "Core Rules",
-        name = "Reikland",
+        warband = "Reikland",
         rulelist = [
             {"name": "Excellent Leadership", "description": "Reikland Mercenaries are accustomed to the demands of military discipline and have a strongly developed loyalty between officers and men. To represent this, fighters may use their Captain’s Leadership if within 12 inch rather than the usual 6 inch."}, 
             {"name": "Trained Marksmen", "description": "A strong tradition of martial training is also responsible for the high standards of archery amongst the people of Reikland. All Marksmen therefore start with 4 of Ballistic Skill instead of the normal 3, whether they are recruited when the warband is first formed or added later."}, 
@@ -44,7 +44,7 @@ if __name__ == "__main__":
     add_warbandref(
         race = "Human",
         source = "Core Rules",
-        name = "Middenheim",
+        warband = "Middenheim",
         rulelist = [
             {"name": "Body Builders", "description": "The men of Middenheim are famous for their physical prowess. To represent their advantage in size and bulk, the Champions and Captains of a Middenheim warband start with Strength 4 instead of 3."}, 
         ],
@@ -64,7 +64,7 @@ if __name__ == "__main__":
     add_warbandref(
         race = "Human",
         source = "Core Rules",
-        name = "Marienburg",
+        warband = "Marienburg",
         rulelist = [
             {"name": "Natural Traders", "description": "As natural traders with contacts in the merchant guilds Marienburg warbands receive a +1 bonus when attempting to find rare items (see the Trading section for rules). To reflect their enormous wealth Marienburgers start off with an extra 100 gold crowns (600 in total) when fighting in a campaign. In a one-off game they are permitted an extra 20 percent gold crowns when recruiting a warband. For example, in a 1,000 gold crown game a Marienburger warband will have 1,200gc."}, 
         ],
@@ -86,7 +86,7 @@ if __name__ == "__main__":
     add_warbandref(
         race = "Chaos Human",
         source = "Core Rules",
-        name = "The Cult of the Possessed",
+        warband = "The Cult of the Possessed",
         rulelist = [],
         itemlist = [],
         start_gold = 500,
@@ -106,7 +106,7 @@ if __name__ == "__main__":
     add_warbandref(
         race = "Human",
         source = "Core Rules",
-        name = "Witch Hunters",
+        warband = "Witch Hunters",
         rulelist = [],
         itemlist = [],
         start_gold = 500,
@@ -125,7 +125,7 @@ if __name__ == "__main__":
     add_warbandref(
         race = "Human",
         source = "Core Rules",
-        name = "Sisters of Sigmar",
+        warband = "Sisters of Sigmar",
         rulelist = [],
         itemlist = [],
         start_gold = 500,
@@ -146,7 +146,7 @@ if __name__ == "__main__":
     add_warbandref(
         race = "Undead / Vampires",
         source = "Core Rules",
-        name = "The Undead",
+        warband = "The Undead",
         rulelist = [],
         itemlist = [],
         start_gold = 500,
@@ -163,7 +163,7 @@ if __name__ == "__main__":
     add_warbandref(
         race = "Skaven",
         source = "Core Rules",
-        name = "Skaven",
+        warband = "Skaven",
         rulelist = [],
         itemlist = [],
         start_gold = 500,
@@ -182,7 +182,7 @@ if __name__ == "__main__":
     add_warbandref(
         race = "High Elf",
         source = "Broheim",
-        name = "High Elves",
+        warband = "High Elves",
         rulelist = [
             {"name": "Excellent Sight", "description": "Elves have eyesight unmatched by mere humans. Elves spot Hidden enemies from two times as far away as other warriors (ie, twice their Initiative value in inches)."}, 
             {"name": "Haughty", "description": "The High Elves are a very proud and noble race. A High Elf Warband may never include hired swords that are not of High Elven blood, nor can they use any equipment of Dwarf origin. This includes Gromril weapons and armour."},
@@ -202,7 +202,7 @@ if __name__ == "__main__":
     add_warbandref(
         race = "High Elf",
         source = "Broheim - Killershrike",
-        name = "Wyrdbreakers",
+        warband = "Wyrdbreakers",
         rulelist = [
             {"name": "Excellent Sight", "description": "Elves have eyesight unmatched by mere humans. Elves spot Hidden enemies from two times as far away as other warriors (ie, twice their Initiative value in inches)."}, 
             {"name": "Haughty", "description": "The High Elves are a very proud and noble race. A High Elf Warband may never include hired swords that are not of High Elven blood, nor can they use any equipment of Dwarf origin. This includes Gromril weapons and armour."},
@@ -211,7 +211,7 @@ if __name__ == "__main__":
             {"name": "Resolve", "description": "The High Elves have been fighting the Dark Elves for countless centuries. When fighting their dark kin the High Elves are driven by unwavering determination. They are considered to have a Leadership of 10 when taking Rout Tests against the Dark Elves. In addition, High Elves can never choose to voluntarily Rout as they must stop their evil kin at any cost."},
         ],
         itemlist = [
-            {"source": "Broheim", "category": "Other", "name": "Wyrdbreaker"},
+            {"source": "Broheim", "category": "Other", "subcategory": "Wyrdbreaker"},
         ],
         start_gold = 500,
         description = (
@@ -230,7 +230,7 @@ if __name__ == "__main__":
     get_warbandref(
         race = "Human",
         source = "Core Rules",
-        name = "Reikland",
+        warband = "Reikland",
     )
 
     create_characterref()
@@ -2172,9 +2172,7 @@ if __name__ == "__main__":
             {"source": "Core Rules", "category": "Item", "name": "Concussion"}, 
             {"source": "Core Rules", "category": "Item", "name": "Two Handed"}, 
             ],
-        magiclist = [
-            {"source": "Broheim", "category": "High Elven Magic", "name": "Word of Power"}
-        ],
+        magiclist = [],
         price = 20,
         description = "A Mage Staff used two handed."
         )

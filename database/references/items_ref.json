@@ -1941,13 +1941,7 @@
                         "name": "Two Handed"
                     }
                 ],
-                "magiclist": [
-                    {
-                        "source": "Broheim",
-                        "category": "High Elven Magic",
-                        "name": "Word of Power"
-                    }
-                ],
+                "magiclist": [],
                 "price": 20,
                 "description": "A Mage Staff used two handed."
             }

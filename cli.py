@@ -1,4 +1,4 @@
-from source.__main__ import (
+from source.main import (
     run,
 )
 

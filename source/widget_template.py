@@ -1,32 +1,32 @@
-import sys
+# import sys
 
 from PyQt5.QtCore import (
-    QRect,
+    # QRect,
     Qt,
     pyqtSignal,
     )
 
 from PyQt5.QtWidgets import (
-    QAction,
+    # QAction,
     QApplication,
-    QDesktopWidget,
-    QInputDialog,
-    QLabel,
-    QGridLayout,
-    QVBoxLayout,
-    QHBoxLayout,
-    QLineEdit,
-    QListWidget,
-    QListWidgetItem,
-    QMainWindow,
-    QMessageBox,
+    # QDesktopWidget,
+    # QInputDialog,
+    # QLabel,
+    # QGridLayout,
+    # QVBoxLayout,
+    # QHBoxLayout,
+    # QLineEdit,
+    # QListWidget,
+    # QListWidgetItem,
+    # QMainWindow,
+    # QMessageBox,
     QPushButton, 
-    QSizePolicy,
-    QTableWidget,
-    QTableWidgetItem,
-    QTextEdit,
+    # QSizePolicy,
+    # QTableWidget,
+    # QTableWidgetItem,
+    # QTextEdit,
     QToolTip, 
-    QVBoxLayout,
+    # QVBoxLayout,
     QWidget, 
     )
 
@@ -38,35 +38,7 @@ from PyQt5.QtGui import (
     QPalette,
     )
 
-from source.methods_json import (
-    open_json,
-    save_json,
-    )
 
-from source.methods_engine import (
-    save_warband,
-    load_warband,
-    cache_warband,
-    show_saved_warbands,
-    get_current_warband,
-    )
-
-from source.class_hierarchy import (
-    Warband,
-    Squad,
-    Character,
-    Hero,
-    Henchman,
-    )
-
-from source.class_hierarchy import (
-    Rule,
-    Treasury,
-    Item,
-    Skill,
-    Ability,
-    Magic,
-    )
 
 class QBorderedWidget(QWidget):
     """A widget which is the default, but with some different stylesheet details (borders)"""
@@ -90,7 +62,7 @@ class QInteractiveWidget(QBorderedWidget):
     clicked = pyqtSignal()
 
     def mousePressEvent(self, ev):
-        if app.mouseButtons() & Qt.LeftButton:
+        if QApplication.mouseButtons() & Qt.LeftButton:
             self.clicked.emit()
 
 # class QHighlightedWidget(QInteractiveWidget):

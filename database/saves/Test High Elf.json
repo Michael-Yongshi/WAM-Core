@@ -1,5 +1,5 @@
 {
-    "name": "Full WB test",
+    "name": "Test High Elf",
     "race": "High Elf",
     "source": "Broheim",
     "warband": "High Elves",
@@ -126,16 +126,7 @@
                             "description": "A model armed with this weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."
                         }
                     ],
-                    "magiclist": [
-                        {
-                            "source": "Broheim",
-                            "category": "High Elven Magic",
-                            "name": "Word of Power",
-                            "group": "Spells",
-                            "difficulty": 8,
-                            "description": "<i>The Elven Mage utters the True Name of Asuryan, the lord of the Elf gods. Shaken by his awesome power, the enemies of the Elves become weak and ineffective.</i><br/><br/>Any enemies within 8 inch of the Mage suffer a -3 Weaponskill penalty, down to a minimum of one. Lasts until the beginning of the next High Elf turn."
-                        }
-                    ],
+                    "magiclist": [],
                     "price": 20,
                     "description": "A Mage Staff used two handed."
                 }

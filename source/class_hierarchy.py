@@ -72,30 +72,109 @@ class Warband(object):
 
         return data
     
-    @staticmethod
-    def from_dict(datadict):
-        """ Create an object, and all nested objects, out of a warband dictionary in order to enable updates to that data."""
+    # @staticmethod
+    # def from_dict(datadict):
+    #     """ Create an object, and all nested objects, out of a warband dictionary in order to enable updates to that data."""
 
-        treasury = Treasury.from_dict(datadict["treasury"])
+    #     treasury = Treasury.from_dict(datadict["treasury"])
+
+    #     rulelist = []
+    #     for rule in datadict["rulelist"]:
+    #         rulelist += [Rule.from_dict(rule)]
+
+    #     itemlist = []
+    #     for item in datadict["itemlist"]:
+    #         itemlist += [Item.from_dict(item)]
+
+    #     herolist = []
+    #     for hero in datadict["herolist"]:
+    #         herolist += [Character.from_dict(hero)]
+
+    #     squadlist = []
+    #     for squad in datadict["squadlist"]:
+    #         squadlist += [Squad.from_dict(squad)]
+
+    #     wbid = Warband(
+    #         name = datadict["name"],
+    #         race = datadict["race"],
+    #         source = datadict["source"],
+    #         warband = datadict["warband"],
+    #         description = datadict["description"],
+    #         treasury = treasury,
+    #         rulelist = rulelist,
+    #         itemlist = itemlist,
+    #         herolist = herolist,
+    #         squadlist = squadlist,
+    #         )
+
+    #     return wbid
+
+    @staticmethod
+    def from_dict(datadict, create = False):
+        """ Create an object, and all nested objects, out of a warband dictionary in order to enable updates to that data."""
+        
+        if create == True:
+            name = ""
+            # events = ""
+            treasury=Treasury(
+                gold = datadict["start_gold"],
+            )
+
+            herolist = []
+            # for herodict in datadict["herolist"]:
+            #     heroref = Character.create_character(
+            #         name = "",
+            #         race = herodict["race"], 
+            #         source = herodict["source"], 
+            #         warband = herodict["warband"], 
+            #         category = herodict["category"],
+            #         )
+            #     herolist += [heroref]
+
+            squadlist = []
+            # for squad in datadict["squadlist"]:
+            #     squadref = Squad.create_squad(
+            #         race = squaddict["race"], 
+            #         source = squaddict["source"], 
+            #         warband = squaddict["warband"], 
+            #         category = squaddict["category"], 
+            #         name = "",
+            #         number=1,
+            #         )
+            #     squadlist += [squadref]
+
+            itemlist = []
+            for itemdict in datadict["itemlist"]:
+                itemref = Item.create_item(
+                    source = itemdict["source"], 
+                    category = itemdict["category"], 
+                    subcategory = itemdict["subcategory"], 
+                    )
+                itemlist += [itemref]
+
+        else:
+            name = datadict["name"]
+            # events = datadict["events"]
+            treasury = Treasury.from_dict(datadict["treasury"])
+
+            herolist = []
+            for herodict in datadict["herolist"]:
+                herolist += [Character.from_dict(herodict)]
+
+            squadlist = []
+            for squaddict in datadict["squadlist"]:
+                squadlist += [Squad.from_dict(squaddict)]
+
+            itemlist = []
+            for itemdict in datadict["itemlist"]:
+                itemlist += [Item.from_dict(itemdict)]
 
         rulelist = []
-        for rule in datadict["rulelist"]:
-            rulelist += [Rule.from_dict(rule)]
+        for ruledict in datadict["rulelist"]:
+            rulelist += [Rule.from_dict(ruledict)]
 
-        itemlist = []
-        for item in datadict["itemlist"]:
-            itemlist += [Item.from_dict(item)]
-
-        herolist = []
-        for hero in datadict["herolist"]:
-            herolist += [Character.from_dict(hero)]
-
-        squadlist = []
-        for squad in datadict["squadlist"]:
-            squadlist += [Squad.from_dict(squad)]
-
-        wbid = Warband(
-            name = datadict["name"],
+        data = Warband(
+            name = name,
             race = datadict["race"],
             source = datadict["source"],
             warband = datadict["warband"],
@@ -106,41 +185,20 @@ class Warband(object):
             herolist = herolist,
             squadlist = squadlist,
             )
+        
+        return data
 
-        return wbid
-    
     @staticmethod
     def create_warband(name, race, source, warband):
         """Create a new warband based on the given parameters"""
         
         # open reference data json file
         data = open_json("database/references/warbands_ref.json")
+        datadict = data[race][source][warband]
 
-        rulelist = []
-        for ruledict in data[race][source][warband]["rulelist"]:
-            ruleobject = Rule.from_dict(ruledict)
-            rulelist.append(ruleobject)
+        new_warband = Warband.from_dict(datadict = datadict, create = True)
+        new_warband.name = name
 
-        itemlist = []
-        for itemdict in data[race][source][warband]["itemlist"]:
-            itemobject = Item.from_dict(itemdict)
-            itemlist.append(itemobject)
-
-        treasury=Treasury(
-            gold = data[race][source][warband]["start_gold"],
-        )
-        
-        # create new basic warband object
-        new_warband = Warband(
-            name = name, 
-            race = race, 
-            source = source, 
-            warband = warband, 
-            treasury = treasury,
-            rulelist = rulelist,
-            description = data[race][source][warband]["description"],  
-        )      
-                
         return new_warband
 
     def get_price(self):
@@ -220,7 +278,7 @@ class Squad(object):
 
     def change_henchman_count(self, deltasize):
         if deltasize > 0:
-            i = self.get_totalhenchman
+            i = self.get_totalhenchman()
             
             for _ in range(0, deltasize):
                 i += 1
@@ -383,6 +441,47 @@ class Character(object):
         
         return data
     
+    def get_total_skilldict(self):
+
+        baseskill = self.skill.to_list()
+        totalskills = baseskill
+
+        for item in self.itemlist:
+            totalskills = [sum(pair) for pair in zip(totalskills, item.skill.to_list())]
+            
+        skillobject = Skill.from_list(totalskills)
+        skilldict = skillobject.to_dict()
+            
+        return skilldict
+
+    def get_total_abilitylist(self):
+        
+        totalabilitylist = []
+
+        for ability in self.abilitylist:
+            totalabilitylist += [ability]
+
+        for item in self.itemlist:
+            for ability in item.abilitylist:
+                # ability.name = (ability.name + f"\n(source: {item.name})")
+                totalabilitylist += [ability]
+    
+        return totalabilitylist
+        
+    def get_total_magiclist(self):
+        
+        totalmagiclist = []
+
+        for magic in self.magiclist:
+            totalmagiclist += [magic]
+
+        for item in self.itemlist:
+            for magic in item.magiclist:
+                # magic.name = (magic.name + f"\n(source: {item.name})")
+                totalmagiclist += [magic]
+        
+        return totalmagiclist
+
     @staticmethod
     def create_character(name, race, source, warband, category):
         # open reference data json file

@@ -613,7 +613,7 @@
                 ],
                 "magiclist": [],
                 "price": 2,
-                "description": "Short bows are small, short-ranged bows that are cheap and require little strength to use. Some cavalry carry a shortened bow which is easier to shoot from horseback than a larger bow. Halflings also use short bows, as they lack the strength and height required to use a long bow."
+                "description": "Slings are rarely used, mainly because they are no more powerful than bows and have a shorter range. A sling is little more than a looped strip of cloth or leather into which a stone is placed. The sling is whirled about the slinger\u2019s head and the sling stone is then released towards the target. While this weapon is looked down upon by most archers, a skilled slinger can slay a man from a considerable distance, and the ammunition is easy to find: rocks are everywhere and free!"
             },
             "Short Bow": {
                 "source": "Core Rules",
@@ -1941,13 +1941,7 @@
                         "name": "Two Handed"
                     }
                 ],
-                "magiclist": [
-                    {
-                        "source": "Broheim",
-                        "category": "High Elven Magic",
-                        "name": "Word of Power"
-                    }
-                ],
+                "magiclist": [],
                 "price": 20,
                 "description": "A Mage Staff used two handed."
             }

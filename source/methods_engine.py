@@ -83,3 +83,24 @@ def get_current_warband():
     wbid = Warband.from_dict(datadict)
 
     return wbid
+
+def create_template_wb():
+    template_wb = Warband(
+        name="",
+        race="", 
+        source="", 
+        warband="",
+    )
+    return template_wb
+
+def create_template_char():
+    template_char = Character(
+        name="",
+        race="", 
+        source="", 
+        warband="",
+        skill=Skill("","","","","","","","","","",), 
+        category="", 
+        ishero=""
+    )
+    return template_char

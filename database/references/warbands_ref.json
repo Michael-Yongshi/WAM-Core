@@ -4,7 +4,7 @@
             "Reikland": {
                 "race": "Human",
                 "source": "Core Rules",
-                "name": "Reikland",
+                "warband": "Reikland",
                 "rulelist": [
                     {
                         "name": "Excellent Leadership",
@@ -22,7 +22,7 @@
             "Middenheim": {
                 "race": "Human",
                 "source": "Core Rules",
-                "name": "Middenheim",
+                "warband": "Middenheim",
                 "rulelist": [
                     {
                         "name": "Body Builders",
@@ -36,7 +36,7 @@
             "Marienburg": {
                 "race": "Human",
                 "source": "Core Rules",
-                "name": "Marienburg",
+                "warband": "Marienburg",
                 "rulelist": [
                     {
                         "name": "Natural Traders",
@@ -50,7 +50,7 @@
             "Witch Hunters": {
                 "race": "Human",
                 "source": "Core Rules",
-                "name": "Witch Hunters",
+                "warband": "Witch Hunters",
                 "rulelist": [],
                 "itemlist": [],
                 "start_gold": 500,
@@ -59,7 +59,7 @@
             "Sisters of Sigmar": {
                 "race": "Human",
                 "source": "Core Rules",
-                "name": "Sisters of Sigmar",
+                "warband": "Sisters of Sigmar",
                 "rulelist": [],
                 "itemlist": [],
                 "start_gold": 500,
@@ -72,7 +72,7 @@
             "The Cult of the Possessed": {
                 "race": "Chaos Human",
                 "source": "Core Rules",
-                "name": "The Cult of the Possessed",
+                "warband": "The Cult of the Possessed",
                 "rulelist": [],
                 "itemlist": [],
                 "start_gold": 500,
@@ -85,7 +85,7 @@
             "The Undead": {
                 "race": "Undead / Vampires",
                 "source": "Core Rules",
-                "name": "The Undead",
+                "warband": "The Undead",
                 "rulelist": [],
                 "itemlist": [],
                 "start_gold": 500,
@@ -98,7 +98,7 @@
             "Skaven": {
                 "race": "Skaven",
                 "source": "Core Rules",
-                "name": "Skaven",
+                "warband": "Skaven",
                 "rulelist": [],
                 "itemlist": [],
                 "start_gold": 500,
@@ -111,7 +111,7 @@
             "High Elves": {
                 "race": "High Elf",
                 "source": "Broheim",
-                "name": "High Elves",
+                "warband": "High Elves",
                 "rulelist": [
                     {
                         "name": "Excellent Sight",
@@ -143,7 +143,7 @@
             "Wyrdbreakers": {
                 "race": "High Elf",
                 "source": "Broheim - Killershrike",
-                "name": "Wyrdbreakers",
+                "warband": "Wyrdbreakers",
                 "rulelist": [
                     {
                         "name": "Excellent Sight",
@@ -170,7 +170,7 @@
                     {
                         "source": "Broheim",
                         "category": "Other",
-                        "name": "Wyrdbreaker"
+                        "subcategory": "Wyrdbreaker"
                     }
                 ],
                 "start_gold": 500,

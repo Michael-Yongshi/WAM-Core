@@ -10,11 +10,11 @@ from PyQt5.QtWidgets import (
     QAction,
     QApplication,
     QDesktopWidget,
+    QFrame,
+    QGridLayout,
+    QHBoxLayout,
     QInputDialog,
     QLabel,
-    QGridLayout,
-    QVBoxLayout,
-    QHBoxLayout,
     QLineEdit,
     QListWidget,
     QListWidgetItem,
@@ -113,44 +113,44 @@ class WarbandOverview(QMainWindow):
         self.showMaximized()
 
     def set_nested_widget(self):
-        # build top part
-        topboxwidget = self.set_topbox()
-
-        # build bot part
-        botboxwidget = self.set_botbox()
 
         # vertical layout for top and char part
         overviewbox = QGridLayout()
-        overviewbox.addWidget(topboxwidget, 0, 0, 1, 3)
-        overviewbox.addWidget(botboxwidget, 1, 0, 3, 3)
-        overviewboxwidget = QBorderedWidget()
-        overviewboxwidget.setLayout(overviewbox)
+        overviewbox.addWidget(self.set_topbox(), 0, 0, 1, 3)
+        overviewbox.addWidget(self.set_botbox(), 1, 0, 3, 3)
 
-        return overviewboxwidget
+        overviewboxframe = QBorderlessFrame()
+        overviewboxframe.setLayout(overviewbox)
+
+        return overviewboxframe
 
     def set_topbox(self):
+        
         # top wrapping warband and system in the top horizontal layout
         topbox = QHBoxLayout()
         topbox.addWidget(self.set_wbname())
         topbox.addWidget(self.set_wbinvbox())
         topbox.addWidget(WidgetSystem(self))
-        topboxwidget = QBorderedWidget()
-        topboxwidget.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
-        topboxwidget.setLayout(topbox)
 
-        return topboxwidget
+        topboxframe = QBorderlessFrame()
+        topboxframe.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        topboxframe.setLayout(topbox)
+
+        return topboxframe
 
     def set_botbox(self):
+
         # wrapping heroes, squads and extra details in the bottom horizontal layout
         botbox = QGridLayout()
         botbox.addWidget(WidgetHeroes(self), 0, 0)
         botbox.addWidget(WidgetSquads(self), 0, 1)
         botbox.addWidget(WidgetCurrent(self), 0, 2, 1, 2)
-        botboxwidget = QInteractiveWidget()
-        botboxwidget.clicked.connect(self.remove_focus)
-        botboxwidget.setLayout(botbox)
 
-        return botboxwidget
+        botboxframe = QBorderlessFrame()
+        botboxframe.clicked.connect(self.remove_focus)
+        botboxframe.setLayout(botbox)
+
+        return botboxframe
 
     def set_wbinvbox(self):
         # Top middle
@@ -166,10 +166,10 @@ class WarbandOverview(QMainWindow):
         wyrdlabel.setToolTip("This is the amount of wyrdstones, or their equivalent, your warband holds.")
         treabox.addWidget(wyrdlabel)
         
-        treaboxwidget = QInteractiveWidget()
-        treaboxwidget.setLayout(treabox)
-        treaboxwidget.clicked.connect(self.dialog_treasury)
-        wbinvbox.addWidget(treaboxwidget)
+        treaboxframe = QRaisedFrame()
+        treaboxframe.setLayout(treabox)
+        treaboxframe.clicked.connect(self.dialog_treasury)
+        wbinvbox.addWidget(treaboxframe)
 
         # add item widget   
         wbinvbox.addWidget(WidgetItemsWarband(self)) # adds the item layout to the grid

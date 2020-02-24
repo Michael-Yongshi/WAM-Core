@@ -7,26 +7,26 @@ from PyQt5.QtCore import (
     )
 
 from PyQt5.QtWidgets import (
-    # QAction,
+    QAction,
     QApplication,
-    # QDesktopWidget,
-    # QInputDialog,
-    # QLabel,
-    # QGridLayout,
-    # QVBoxLayout,
-    # QHBoxLayout,
-    # QLineEdit,
-    # QListWidget,
-    # QListWidgetItem,
-    # QMainWindow,
-    # QMessageBox,
+    QDesktopWidget,
+    QFrame,
+    QGridLayout,
+    QHBoxLayout,
+    QInputDialog,
+    QLabel,
+    QLineEdit,
+    QListWidget,
+    QListWidgetItem,
+    QMainWindow,
+    QMessageBox,
     QPushButton, 
-    # QSizePolicy,
-    # QTableWidget,
-    # QTableWidgetItem,
-    # QTextEdit,
+    QSizePolicy,
+    QTableWidget,
+    QTableWidgetItem,
+    QTextEdit,
     QToolTip, 
-    # QVBoxLayout,
+    QVBoxLayout,
     QWidget, 
     )
 
@@ -39,23 +39,33 @@ from PyQt5.QtGui import (
     )
 
 
+class QClickWidget (QWidget):
+    """A widget which is clickable"""
+    def __init__(self, *args):
+        super().__init__(*args)
+    
+    clicked = pyqtSignal()
 
-class QBorderedWidget(QWidget):
+    def mousePressEvent(self, ev):
+        if QApplication.mouseButtons() & Qt.LeftButton:
+            self.clicked.emit()
+
+class QBorderedWidget(QClickWidget):
     """A widget which is the default, but with some different stylesheet details (borders)"""
     def __init__(self, *args):
         super().__init__(*args)
 
         self.setStyleSheet("border: 1px solid rgb(100, 100, 100)")
 
-class QUnBorderedWidget(QWidget):
+class QUnBorderedWidget(QClickWidget):
     """A widget which is the default, but with some different stylesheet details (borders)"""
     def __init__(self, *args):
         super().__init__(*args)
 
         self.setStyleSheet("border: 0px")
 
-class QInteractiveWidget(QBorderedWidget):
-    """A bordered widget, but which is clickable"""
+class QClickFrame (QFrame):
+    """A frame which is clickable"""
     def __init__(self, *args):
         super().__init__(*args)
 
@@ -65,12 +75,37 @@ class QInteractiveWidget(QBorderedWidget):
         if QApplication.mouseButtons() & Qt.LeftButton:
             self.clicked.emit()
 
-# class QHighlightedWidget(QInteractiveWidget):
-#     """A widget which is the default, but with some different stylesheet details (highlights)"""
-#     def __init__(self, *args):
-#         super().__init__(*args)
+class QFlatFrame (QClickFrame):
+    """A visible frame to hold a layout of widgets."""
+    def __init__(self, *args):
+        super().__init__(*args)
 
-#         self.setPalette(QPalette())
+        self.setFrameStyle(QFrame.Box)
+
+class QBorderlessFrame (QClickFrame):
+    """An invisible frame to hold a layout of widgets."""
+    def __init__(self, *args):
+        super().__init__(*args)
+
+        self.setFrameStyle(QFrame.NoFrame)
+
+class QRaisedFrame (QClickFrame):
+    """A raised frame to hold a layout of widgets."""
+    def __init__(self, *args):
+        super().__init__(*args)
+
+        self.setFrameStyle(QFrame.Panel | QFrame.Raised)
+
+class QClickLabel (QLabel):
+    """A label which is clickable"""
+    def __init__(self, *args):
+        super().__init__(*args)
+
+    clicked = pyqtSignal()
+
+    def mousePressEvent(self, ev):
+        if QApplication.mouseButtons() & Qt.LeftButton:
+            self.clicked.emit()
 
 class QDarkPalette(QPalette):
     """A Dark palette meant to be used with the Fusion theme."""

@@ -10,11 +10,11 @@ from PyQt5.QtWidgets import (
     QAction,
     QApplication,
     QDesktopWidget,
+    QFrame,
+    QGridLayout,
+    QHBoxLayout,
     QInputDialog,
     QLabel,
-    QGridLayout,
-    QVBoxLayout,
-    QHBoxLayout,
     QLineEdit,
     QListWidget,
     QListWidgetItem,
@@ -76,19 +76,20 @@ from source.widget_items import WidgetItemsUnit
 # from source.widget_currentbox import *
 
 
-class WidgetCurrent(QBorderedWidget):
+class WidgetCurrent(QRaisedFrame):
     def __init__(self, mainwindow):
         super().__init__()
 
         self.mainwindow = mainwindow
 
-        currentbox = QGridLayout()
-        currentbox.addWidget(self.set_namebox(), 0, 0, 1, 1)
-        currentbox.addWidget(self.set_skillbox(), 1, 0, 1, 1)
-        currentbox.addWidget(self.set_listbox(), 2, 0, 2, 1)
+        if self.mainwindow.currentunit.ishero != "":
+            currentbox = QGridLayout()
+            currentbox.addWidget(self.set_namebox(), 0, 0, 1, 1)
+            currentbox.addWidget(self.set_skillbox(), 1, 0, 1, 1)
+            currentbox.addWidget(self.set_listbox(), 2, 0, 2, 1)
 
-        self.setToolTip("This is the currently selected unit")
-        self.setLayout(currentbox)
+            self.setToolTip("This is the currently selected unit")
+            self.setLayout(currentbox)
 
 
     def set_namebox(self):
@@ -110,15 +111,10 @@ class WidgetCurrent(QBorderedWidget):
         maxlabel.setText(f"Max Units: <b>{self.mainwindow.currentunit.maxcount}</b>")
         namebox.addWidget(maxlabel, 1, 1)
 
-        # btnremove = QPushButton('Remove Unit', self)
-        # btnremove.setToolTip('Remove current unit')
-        # btnremove.clicked.connect(self.create_method_remove_squad(self.mainwindow.currentunit))
-        # namebox.addWidget(btnremove, 0, 1)
-
-        namewidget = QBorderedWidget()
-        namewidget.setLayout(namebox)
+        nameframe = QBorderlessFrame()
+        nameframe.setLayout(namebox)
         
-        return namewidget
+        return nameframe
 
     def set_skillbox(self):
         #show skills in middle
@@ -127,14 +123,15 @@ class WidgetCurrent(QBorderedWidget):
         skilldict = self.mainwindow.currentunit.get_total_skilldict()
         for key in skilldict:
             label = QLabel()
-            label.setText(key[:2] + "\n" + str(skilldict[key]))  
+            label.setText(f"<b>{key[:2]}<br/>{skilldict[key]}</b>")
             label.setToolTip(f"The total <b>{key}</b> skill, <br/>including both base model scores and item influences.")
+            label.setAlignment(Qt.AlignCenter)
             skillbox.addWidget(label)
 
-        skillwidget = QBorderedWidget()
-        skillwidget.setLayout(skillbox)
+        skillframe = QFrame()
+        skillframe.setLayout(skillbox)
 
-        return skillwidget
+        return skillframe
 
     def set_listbox(self):
         
@@ -146,12 +143,12 @@ class WidgetCurrent(QBorderedWidget):
         listbox.addWidget(WidgetAbility(self.mainwindow)) # adds the ability layout to the grid
         listbox.addWidget(WidgetMagic(self.mainwindow)) # adds the magic layout to the grid
 
-        listwidget = QInteractiveWidget()
-        listwidget.setLayout(listbox)
+        listframe = QBorderlessFrame()
+        listframe.setLayout(listbox)
 
-        return listwidget
+        return listframe
 
-class WidgetAbility(QInteractiveWidget):
+class WidgetAbility(QBorderlessFrame):
     def __init__(self, mainwindow):
         super().__init__()
 
@@ -162,20 +159,17 @@ class WidgetAbility(QInteractiveWidget):
 
         for ability in self.mainwindow.currentunit.get_total_abilitylist():
             label = QLabel()
-            label.setText(str(ability.name))
+            label.setText(f"{ability.name}")
             label.setToolTip(f"<font><b>{ability.name}</b> <br/><br/> {ability.description}</font>")
+            # label.clicked.connect(self.create_method_remove(unit = unit, ability = ability)
             abilitybox.addWidget(label) #adds the ability to a label and at it to the vertical ability layout
         
         # add new ability widget
-        label = QLabel()
+        label = QClickLabel()
         label.setText("New Ability")
-        abilitywrap = QVBoxLayout()
-        abilitywrap.addWidget(label)
-        abilitywidget = QInteractiveWidget()
-        abilitywidget.setLayout(abilitywrap)
-        abilitywidget.setToolTip(f"Add manually a new ability for this unit.")
-        abilitywidget.clicked.connect(self.create_method_new_ability(unit=self.mainwindow.currentunit))
-        abilitybox.addWidget(abilitywidget) #adds the ability to a label and at it to the vertical item layout
+        label.setToolTip(f"Add manually a new ability for this unit.")
+        label.clicked.connect(self.create_method_new_ability(unit=self.mainwindow.currentunit))
+        abilitybox.addWidget(label) #adds the ability to a label and at it to the vertical item layout
 
         self.setLayout(abilitybox)
     def create_method_new_ability(self, unit):
@@ -227,7 +221,7 @@ class WidgetAbility(QInteractiveWidget):
 
         return create_ability_for_unit
 
-class WidgetMagic(QInteractiveWidget):
+class WidgetMagic(QBorderlessFrame):
     def __init__(self, mainwindow):
         super().__init__()
 
@@ -240,18 +234,15 @@ class WidgetMagic(QInteractiveWidget):
             label = QLabel()
             label.setText(str(magic.name))
             label.setToolTip(f"<font><b>{magic.name}</b> <br/>Difficulty: {magic.difficulty} <br/><br/> {magic.description}</font>")
+            # label.clicked.connect(self.create_method_remove(unit = unit, magic = magic)
             magicbox.addWidget(label) #adds the magic to a label and at it to the vertical magic layout
 
         # add new magic widget
-        label = QLabel()
+        label = QClickLabel()
         label.setText("New Magic")
-        magicwrap = QVBoxLayout()
-        magicwrap.addWidget(label)
-        magicwidget = QInteractiveWidget()
-        magicwidget.setLayout(magicwrap)
-        magicwidget.setToolTip(f"Add manually a new magic skill for this unit.")
-        magicwidget.clicked.connect(self.create_method_new_magic(unit=self.mainwindow.currentunit))
-        magicbox.addWidget(magicwidget) #adds the magic to a label and at it to the vertical item layout
+        label.setToolTip(f"Add manually a new magic skill for this unit.")
+        label.clicked.connect(self.create_method_new_magic(unit=self.mainwindow.currentunit))
+        magicbox.addWidget(label) #adds the magic to a label and at it to the vertical item layout
 
         self.setLayout(magicbox)
 

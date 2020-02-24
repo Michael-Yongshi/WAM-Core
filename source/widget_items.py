@@ -10,11 +10,11 @@ from PyQt5.QtWidgets import (
     QAction,
     QApplication,
     QDesktopWidget,
+    QFrame,
+    QGridLayout,
+    QHBoxLayout,
     QInputDialog,
     QLabel,
-    QGridLayout,
-    QVBoxLayout,
-    QHBoxLayout,
     QLineEdit,
     QListWidget,
     QListWidgetItem,
@@ -81,26 +81,18 @@ class WidgetItemsWarband(QBorderedWidget):
 
         itembox = QVBoxLayout() # create a vertical layout to show them in a neat line
         for item in self.mainwindow.wbid.itemlist:
-            label = QLabel()
-            label.setText(str(item.subcategory))
+            label = QClickLabel()
+            label.setText(f"<b>{item.subcategory}<b/>")
             label.setToolTip(f"<font><b>{item.subcategory} </b>{item.name} <br/> category: {item.category} <br/> distance: {item.distance} <br/> <nobr>{item.skill.to_string()}</nobr> <br/> price: {item.price} <br/> {item.description}</font>")
-            itemwrap = QVBoxLayout()
-            itemwrap.addWidget(label)
-            itemwidget = QInteractiveWidget()
-            itemwidget.setLayout(itemwrap)
-            itemwidget.clicked.connect(self.create_method_remove(warband = self.mainwindow.wbid, item = item))
-            itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
+            label.clicked.connect(self.create_method_remove(warband = self.mainwindow.wbid, item = item))
+            itembox.addWidget(label) #adds the item to a label and at it to the vertical item layout
             
         self.setLayout(itembox)
             
-        label = QLabel()
+        label = QClickLabel()
         label.setText("New Item")
-        itemwrap = QVBoxLayout()
-        itemwrap.addWidget(label)
-        itemwidget = QInteractiveWidget()
-        itemwidget.setLayout(itemwrap)
-        itemwidget.clicked.connect(self.create_new)
-        itembox.addWidget(itemwidget) #adds the new item to a label and at it to the vertical item layout
+        label.clicked.connect(self.create_new)
+        itembox.addWidget(label) #adds the new item to a label and at it to the vertical item layout
 
         self.setToolTip("These are your warbands items.")
         self.setLayout(itembox)
@@ -153,26 +145,18 @@ class WidgetItemsUnit(QBorderedWidget):
         itembox = QVBoxLayout() # create a vertical layout to show them in a neat line
 
         for item in unit.itemlist:
-            label = QLabel()
-            label.setText(str(item.subcategory + " " + item.name))
+            label = QClickLabel()
+            label.setText(f"<b>{item.subcategory} - {item.name}<b/>")
             label.setToolTip(f"<font><b>{item.subcategory} </b>{item.name} <br/> category: {item.category} <br/> distance: {item.distance} <br/> <nobr>{item.skill.to_string()}</nobr> <br/> price: {item.price} <br/> {item.description}</font>")
-            itemwrap = QVBoxLayout()
-            itemwrap.addWidget(label)
-            itemwidget = QInteractiveWidget()
-            itemwidget.setLayout(itemwrap)
-            itemwidget.clicked.connect(self.create_method_remove(unit = unit, item = item))
-            itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
+            label.clicked.connect(self.create_method_remove(unit = unit, item = item))
+            itembox.addWidget(label) #adds the item to a label and at it to the vertical item layout
 
         # add new item widget
-        label = QLabel()
-        label.setText("New Item")
-        itemwrap = QVBoxLayout()
-        itemwrap.addWidget(label)
-        itemwidget = QInteractiveWidget()
-        itemwidget.setLayout(itemwrap)
-        itemwidget.setToolTip(f"Buy a new item for this unit.")
-        itemwidget.clicked.connect(self.create_method_new(unit=unit))
-        itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
+        label = QClickLabel()
+        label.setText(f"New Item")
+        label.setToolTip(f"Buy a new item for this unit.")
+        label.clicked.connect(self.create_method_new(unit=unit))
+        itembox.addWidget(label) #adds the item to a label and at it to the vertical item layout
 
         self.setLayout(itembox)
         self.setToolTip("These are your units items.")

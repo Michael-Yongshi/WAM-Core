@@ -86,14 +86,14 @@ class WidgetAbility(QBorderlessFrame):
         abilitybox = QVBoxLayout() # create a vertical layout to show them in a neat line
 
         for ability in abilitylist:
-            label = QLabel()
+            label = QClickLabel()
             label.setText(f"{ability.name}")
             label.setToolTip(f"<font><b>{ability.name}</b> <br/><br/> {ability.description}</font>")
+            label.clicked.connect(self.create_method_remove(unit = self.mainwindow.currentunit, ability = ability))
             box = QVBoxLayout()
             box.addWidget(label)
             frame = QRaisedFrame()
             frame.setLayout(box)
-            # label.clicked.connect(self.create_method_remove(unit = unit, ability = ability)
             abilitybox.addWidget(frame) #adds the ability to a label and at it to the vertical ability layout
         
         # add new ability widget
@@ -142,18 +142,49 @@ class WidgetAbility(QBorderlessFrame):
                         
                         if unit.ishero == True:
                             for hero in self.mainwindow.wbid.herolist:
-                                if unit.name == hero.name:
+                                if unit is hero:
                                     hero.abilitylist.append(new_ability)
                                     self.mainwindow.initUI()
                                     
                         else:
                             for s in self.mainwindow.wbid.squadlist:
-                                if unit.name == s.name:
+                                if unit is s.henchmanlist[0]:
                                     for henchman in s.henchmanlist:
                                         henchman.abilitylist.append(new_ability)
                                     self.mainwindow.initUI()
 
         return create_ability_for_unit
+
+    def create_method_remove(self, unit, ability):          
+        """ """
+
+        def remove():
+
+            remove = QMessageBox.question(self, 'Remove ability', f"Do you want to remove this ability?", QMessageBox.Yes | QMessageBox.No)
+            if remove == QMessageBox.Yes:
+
+                if unit.ishero == True:
+                    for hero in self.mainwindow.wbid.herolist:
+                        if hero is unit:
+                            for a in hero.abilitylist:
+                                if a is ability:
+                                    index = hero.abilitylist.index(ability)
+                                    hero.abilitylist.pop(index)
+                                    break
+
+                elif unit.ishero == False:
+                    for squad in self.mainwindow.wbid.squadlist:
+                        if unit is squad.henchmanlist[0]:
+                            for henchman in squad.henchmanlist:
+                                for a in henchman.abilitylist:
+                                    if a is ability:
+                                        index = henchman.abilitylist.index(ability)
+                                        henchman.abilitylist.pop(index)
+                                        break
+
+                self.mainwindow.initUI()
+        
+        return remove
 
 class WidgetMagic(QBorderlessFrame):
     def __init__(self, mainwindow):
@@ -164,15 +195,15 @@ class WidgetMagic(QBorderlessFrame):
         #show magic
         magicbox = QVBoxLayout() # create a vertical layout to show them in a neat line
 
-        for magic in self.mainwindow.currentunit.get_magiclist():
-            label = QLabel()
+        for magic in self.mainwindow.currentunit.magiclist:
+            label = QClickLabel()
             label.setText(str(magic.name))
             label.setToolTip(f"<font><b>{magic.name}</b> <br/>Difficulty: {magic.difficulty} <br/><br/> {magic.description}</font>")
+            label.clicked.connect(self.create_method_remove(unit = self.mainwindow.currentunit, magic = magic))
             box = QVBoxLayout()
             box.addWidget(label)
             frame = QRaisedFrame()
             frame.setLayout(box)
-            # label.clicked.connect(self.create_method_remove(unit = unit, magic = magic)
             magicbox.addWidget(frame) #adds the magic to a label and at it to the vertical magic layout
 
         # add new magic widget
@@ -219,15 +250,46 @@ class WidgetMagic(QBorderlessFrame):
                         
                         if unit.ishero == True:
                             for hero in self.mainwindow.wbid.herolist:
-                                if unit.name == hero.name:
+                                if unit is hero:
                                     hero.magiclist.append(new_magic)
                                     self.mainwindow.initUI()
                                     
                         else:
                             for s in self.mainwindow.wbid.squadlist:
-                                if unit.name == s.name:
+                                if unit is s.henchmanlist[0]:
                                     for henchman in s.henchmanlist:
                                         henchman.magiclist.append(new_magic)
                                     self.mainwindow.initUI()
 
         return create_magic_for_unit
+
+    def create_method_remove(self, unit, magic):          
+        """ """
+
+        def remove():
+            
+            remove = QMessageBox.question(self, 'Remove magic', f"Do you want to remove this magic?", QMessageBox.Yes | QMessageBox.No)
+            if remove == QMessageBox.Yes:
+
+                if unit.ishero == True:
+                    for hero in self.mainwindow.wbid.herolist:
+                        if hero is unit:
+                            for m in hero.magiclist:
+                                if m is magic:
+                                    index = hero.magiclist.index(m)
+                                    hero.magiclist.pop(index)
+                                    break
+
+                elif unit.ishero == False:
+                    for squad in self.mainwindow.wbid.squadlist:
+                        if unit is squad.henchmanlist[0]:
+                            for henchman in squad.henchmanlist:
+                                for m in henchman.magiclist:
+                                    if m is magic:
+                                        index = henchman.magiclist.index(magic)
+                                        henchman.magiclist.pop(index)
+                                        break
+
+                self.mainwindow.initUI()
+        
+        return remove

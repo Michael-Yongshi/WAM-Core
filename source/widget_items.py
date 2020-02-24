@@ -154,12 +154,12 @@ class WidgetItemsUnit(QBorderlessFrame):
             label = QClickLabel()
             label.setText(f"<b>{item.subcategory}<b/>") # label.setText(f"<b>{item.subcategory} - {item.name}<b/>")
             label.setToolTip(f"<font><b>{item.subcategory} </b>{item.name} <br/> category: {item.category} <br/> distance: {item.distance} <br/> <nobr>{item.skill.to_string()}</nobr> <br/> price: {item.price} <br/> {item.description}</font>")
+            label.clicked.connect(self.create_method_remove(unit = unit, item = item))
             itembox.addWidget(label)
             itembox.addWidget(WidgetAbility(self.mainwindow, abilitylist = item.abilitylist, skip = True)) # adds the ability layout to the grid
 
             frame = QRaisedFrame()
             frame.setLayout(itembox)
-            frame.clicked.connect(self.create_method_remove(unit = unit, item = item))
             itemlistbox.addWidget(frame) #adds the item to a label and at it to the vertical item layout
 
         # add new item widget
@@ -183,14 +183,14 @@ class WidgetItemsUnit(QBorderlessFrame):
                     
                     if unit.ishero == True:
                         for hero in self.mainwindow.wbid.herolist:
-                            if unit.name == hero.name:
+                            if unit is hero:
                                 hero.itemlist.append(new_item)
                                 self.mainwindow.wbid.treasury.gold -= itemprice
                                 self.mainwindow.initUI()
 
                     if unit.ishero == False:
                         for squad in self.mainwindow.wbid.squadlist:
-                            if unit.name == squad.henchmanlist[0].name:
+                            if unit is squad.henchmanlist[0]:
                                 for henchman in squad.henchmanlist:
                                     henchman.itemlist.append(new_item)
                                     self.mainwindow.wbid.treasury.gold -= itemprice
@@ -213,20 +213,21 @@ class WidgetItemsUnit(QBorderlessFrame):
 
                 if unit.ishero == True:
                     for hero in self.mainwindow.wbid.herolist:
-                        for item in hero.itemlist:
-                            if item.name == item.name and item.subcategory == item.subcategory:
-                                if process_gold == QMessageBox.Yes:
-                                    itemprice += item.price
-                                index = hero.itemlist.index(item)
-                                hero.itemlist.pop(index)
-                                break
+                        if unit is hero:
+                            for i in hero.itemlist:
+                                if i is item:
+                                    if process_gold == QMessageBox.Yes:
+                                        itemprice += item.price
+                                    index = hero.itemlist.index(item)
+                                    hero.itemlist.pop(index)
+                                    break
 
                 elif unit.ishero == False:
                     for squad in self.mainwindow.wbid.squadlist:
-                        if unit.name == squad.henchmanlist[0].name:
+                        if unit is squad.henchmanlist[0]:
                             for henchman in squad.henchmanlist:
-                                for item in henchman.itemlist:
-                                    if item.name == item.name and item.subcategory == item.subcategory:
+                                for i in henchman.itemlist:
+                                    if i is item:
                                         if process_gold == QMessageBox.Yes:
                                             itemprice += item.price
                                         index = henchman.itemlist.index(item)

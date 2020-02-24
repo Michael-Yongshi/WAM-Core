@@ -102,8 +102,7 @@ class WarbandOverview(QMainWindow):
     def initUI(self):
        
         # Some window settings
-        self.setWindowTitle('WAM')
-        self.setToolTip('Warhammer Army Manager')
+        self.setWindowTitle('Warhammer Army Manager')
         self.setWindowIcon(QIcon('war_72R_icon.ico'))     
 
         # build overview
@@ -128,8 +127,7 @@ class WarbandOverview(QMainWindow):
         
         # top wrapping warband and system in the top horizontal layout
         topbox = QHBoxLayout()
-        topbox.addWidget(self.set_wbname())
-        topbox.addWidget(self.set_wbinvbox())
+        topbox.addWidget(self.set_wbbox())
         topbox.addWidget(WidgetSystem(self))
 
         topboxframe = QBorderlessFrame()
@@ -152,64 +150,60 @@ class WarbandOverview(QMainWindow):
 
         return botboxframe
 
-    def set_wbinvbox(self):
+    def set_wbbox(self):
+        # top left warband info
+        wbbox = QHBoxLayout()
+        
+        wbdetail = QVBoxLayout()
+        
+        wbnamelabel = QLabel()
+        wbnamelabel.setText(f"Name: <b>{self.wbid.name}<b/>")
+        wbracelabel = QLabel()
+        wbracelabel.setText(f"Race: <b>{self.wbid.race}<b/>")
+        wbsrclabel = QLabel()
+        wbsrclabel.setText(f"Source: <b>{self.wbid.source}<b/>")
+        wbtypelabel = QLabel()
+        wbtypelabel.setText(f"Type: <b>{self.wbid.warband}<b/>")
+
+        wbdetail.addWidget(wbnamelabel)
+        wbdetail.addWidget(wbracelabel)
+        wbdetail.addWidget(wbsrclabel)
+        wbdetail.addWidget(wbtypelabel)
+
+        printablerules = []
+        for r in self.wbid.rulelist:
+            printablerules += [r.name]
+
+        wbdetailframe = QRaisedFrame()
+        wbdetailframe.setLayout(wbdetail)
+        wbdetailframe.setToolTip(f"Special Rules: {printablerules}\n\n{self.wbid.description}")
+
+        wbbox.addWidget(wbdetailframe)
+
         # Top middle
-        wbinvbox = QHBoxLayout()
         treabox = QVBoxLayout()
 
         goldlabel = QLabel()
-        goldlabel.setText("Gold: " + str(self.wbid.treasury.gold))
+        goldlabel.setText(f"Gold: <b>{self.wbid.treasury.gold}<b/>")
         goldlabel.setToolTip("This is the amount of gold your warband holds.")
         treabox.addWidget(goldlabel)
         wyrdlabel = QLabel()
-        wyrdlabel.setText("Wyrdstones: " + str(self.wbid.treasury.wyrd))
+        wyrdlabel.setText(f"Wyrdstones: <b>{self.wbid.treasury.wyrd}<b/>")
         wyrdlabel.setToolTip("This is the amount of wyrdstones, or their equivalent, your warband holds.")
         treabox.addWidget(wyrdlabel)
         
         treaboxframe = QRaisedFrame()
         treaboxframe.setLayout(treabox)
         treaboxframe.clicked.connect(self.dialog_treasury)
-        wbinvbox.addWidget(treaboxframe)
+        wbbox.addWidget(treaboxframe)
 
         # add item widget   
-        wbinvbox.addWidget(WidgetItemsWarband(self)) # adds the item layout to the grid
+        wbbox.addWidget(WidgetItemsWarband(self)) # adds the item layout to the grid
 
-        wbinvboxwidget = QBorderedWidget()
-        wbinvboxwidget.setLayout(wbinvbox)
+        wbboxframe = QBorderlessFrame()
+        wbboxframe.setLayout(wbbox)
 
-        return wbinvboxwidget
-
-    def set_wbname(self):
-        # top left warband info
-        wbnamelabel = QLabel()
-        wbnamelabel.setText("Name: " + self.wbid.name)
-        wbracelabel = QLabel()
-        wbracelabel.setText("Race: " + self.wbid.race)
-        wbsrclabel = QLabel()
-        wbsrclabel.setText("Source: " + self.wbid.source)
-        wbtypelabel = QLabel()
-        wbtypelabel.setText("Type: " + self.wbid.warband)
-
-        wbbox = QVBoxLayout()
-        wbbox.addWidget(wbnamelabel)
-        wbbox.addWidget(wbracelabel)
-        wbbox.addWidget(wbsrclabel)
-        wbbox.addWidget(wbtypelabel)
-
-        wbboxwidget = QBorderedWidget()
-        wbboxwidget.setLayout(wbbox)
-        
-        # make rules printable for tooltip
-        printablerules = []
-        for r in self.wbid.rulelist:
-            printablerules += [r.name]
-    
-        wbboxwidget.setToolTip(f"Special Rules: {printablerules}\n\n{self.wbid.description}")
-
-        # update wb info
-        
-
-        return wbboxwidget
+        return wbboxframe
 
     def dialog_treasury(self):
         

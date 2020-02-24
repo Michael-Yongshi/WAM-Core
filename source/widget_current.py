@@ -72,6 +72,7 @@ from source.class_hierarchy import (
 
 from source.widget_template import *
 from source.widget_items import WidgetItemsUnit
+from source.widget_abilitymagic import WidgetAbility, WidgetMagic
 
 # from source.widget_currentbox import *
 
@@ -86,7 +87,7 @@ class WidgetCurrent(QRaisedFrame):
             currentbox = QGridLayout()
             currentbox.addWidget(self.set_namebox(), 0, 0, 1, 1)
             currentbox.addWidget(self.set_skillbox(), 1, 0, 1, 1)
-            currentbox.addWidget(self.set_listbox(), 2, 0, 2, 1)
+            currentbox.addWidget(self.set_listbox(), 2, 0, 4, 1)
 
             self.setToolTip("This is the currently selected unit")
             self.setLayout(currentbox)
@@ -126,170 +127,29 @@ class WidgetCurrent(QRaisedFrame):
             label.setText(f"<b>{key[:2]}<br/>{skilldict[key]}</b>")
             label.setToolTip(f"The total <b>{key}</b> skill, <br/>including both base model scores and item influences.")
             label.setAlignment(Qt.AlignCenter)
-            skillbox.addWidget(label)
+            box = QVBoxLayout()
+            box.addWidget(label)
+            frame = QFlatFrame()
+            frame.setLayout(box)
+            skillbox.addWidget(frame)
 
-        skillframe = QFrame()
+        skillframe = QBorderlessFrame()
         skillframe.setLayout(skillbox)
 
         return skillframe
 
     def set_listbox(self):
         
-        listbox = QHBoxLayout()
+        listbox = QGridLayout()
 
-        # Add abilities, items and magic to the listbox
-        listbox = QHBoxLayout()
-        listbox.addWidget(WidgetItemsUnit(self.mainwindow)) # adds the item layout to the grid
-        listbox.addWidget(WidgetAbility(self.mainwindow)) # adds the ability layout to the grid
-        listbox.addWidget(WidgetMagic(self.mainwindow)) # adds the magic layout to the grid
+        # for character
+        listbox.addWidget(WidgetAbility(self.mainwindow, abilitylist = self.mainwindow.currentunit.abilitylist, skip = False), 0, 0) # adds the ability layout to the grid
+        listbox.addWidget(WidgetMagic(self.mainwindow), 1, 0) # adds the magic layout to the grid
 
+        # now for every item repeated
+        listbox.addWidget(WidgetItemsUnit(self.mainwindow), 0, 1, 2, 2)
+        
         listframe = QBorderlessFrame()
         listframe.setLayout(listbox)
-
-        return listframe
-
-class WidgetAbility(QBorderlessFrame):
-    def __init__(self, mainwindow):
-        super().__init__()
-
-        self.mainwindow = mainwindow
-
-        #show abilities
-        abilitybox = QVBoxLayout() # create a vertical layout to show them in a neat line
-
-        for ability in self.mainwindow.currentunit.get_total_abilitylist():
-            label = QLabel()
-            label.setText(f"{ability.name}")
-            label.setToolTip(f"<font><b>{ability.name}</b> <br/><br/> {ability.description}</font>")
-            # label.clicked.connect(self.create_method_remove(unit = unit, ability = ability)
-            abilitybox.addWidget(label) #adds the ability to a label and at it to the vertical ability layout
         
-        # add new ability widget
-        label = QClickLabel()
-        label.setText("New Ability")
-        label.setToolTip(f"Add manually a new ability for this unit.")
-        label.clicked.connect(self.create_method_new_ability(unit=self.mainwindow.currentunit))
-        abilitybox.addWidget(label) #adds the ability to a label and at it to the vertical item layout
-
-        self.setLayout(abilitybox)
-    def create_method_new_ability(self, unit):
-        """Method for creating a new ability and receiving as attribute the unit it should be added to.
-                    """
-        def create_ability_for_unit():
-            abilitydict = open_json("database/references/abilities_ref.json")
-            sources = []
-            for key in abilitydict:
-                sources.append(key)
-
-            source, okPressed = QInputDialog.getItem(self, "Select source", "Choose a source", sources, 0, False)
-            if okPressed and source:
-            
-                # get all available categories
-                categories = []
-                for key in abilitydict[source]:
-                    categories.append(key)
-
-                category, okPressed = QInputDialog.getItem(self, "Select category", "Choose a category", categories, 0, False)
-                if okPressed and category:
-
-                    # get all available abilities
-                    abilities = []
-                    for key in abilitydict[source][category]:
-                        abilities.append(key)
-
-                    ability, okPressed = QInputDialog.getItem(self, "Create", "Choose an ability", abilities, 0, False)
-                    if okPressed and ability:
-                        new_ability = Ability(
-                            source = source,
-                            category = category,
-                            name = ability,
-                            description = abilitydict[source][category][ability]["description"],
-                        )
-                        
-                        if unit.ishero == True:
-                            for hero in self.mainwindow.wbid.herolist:
-                                if unit.name == hero.name:
-                                    hero.abilitylist.append(new_ability)
-                                    self.mainwindow.initUI()
-                                    
-                        else:
-                            for s in self.mainwindow.wbid.squadlist:
-                                if unit.name == s.name:
-                                    for henchman in s.henchmanlist:
-                                        henchman.abilitylist.append(new_ability)
-                                    self.mainwindow.initUI()
-
-        return create_ability_for_unit
-
-class WidgetMagic(QBorderlessFrame):
-    def __init__(self, mainwindow):
-        super().__init__()
-
-        self.mainwindow = mainwindow
-
-        #show magic
-        magicbox = QVBoxLayout() # create a vertical layout to show them in a neat line
-
-        for magic in self.mainwindow.currentunit.get_total_magiclist():
-            label = QLabel()
-            label.setText(str(magic.name))
-            label.setToolTip(f"<font><b>{magic.name}</b> <br/>Difficulty: {magic.difficulty} <br/><br/> {magic.description}</font>")
-            # label.clicked.connect(self.create_method_remove(unit = unit, magic = magic)
-            magicbox.addWidget(label) #adds the magic to a label and at it to the vertical magic layout
-
-        # add new magic widget
-        label = QClickLabel()
-        label.setText("New Magic")
-        label.setToolTip(f"Add manually a new magic skill for this unit.")
-        label.clicked.connect(self.create_method_new_magic(unit=self.mainwindow.currentunit))
-        magicbox.addWidget(label) #adds the magic to a label and at it to the vertical item layout
-
-        self.setLayout(magicbox)
-
-    def create_method_new_magic(self, unit):
-        """Method for creating a new magic and receiving as attribute the unit it should be added to.
-                    """
-        def create_magic_for_unit():
-            magicdict = open_json("database/references/magic_ref.json")
-            sources = []
-            for key in magicdict:
-                sources.append(key)
-
-            source, okPressed = QInputDialog.getItem(self, "Select source", "Choose a source", sources, 0, False)
-            if okPressed and source:
-            
-                # get all available categories
-                categories = []
-                for key in magicdict[source]:
-                    categories.append(key)
-
-                category, okPressed = QInputDialog.getItem(self, "Create", "Choose a category", categories, 0, False)
-                if okPressed and category:
-
-                    # get all available magic
-                    magics = []
-                    for key in magicdict[source][category]:
-                        magics.append(key)
-
-                    magic, okPressed = QInputDialog.getItem(self, "Create", "Choose magic", magics, 0, False)
-                    if okPressed and magic:
-                        new_magic = Magic.create_magic(
-                            name = magic,
-                            category = category,
-                            source = source,
-                        )
-                        
-                        if unit.ishero == True:
-                            for hero in self.mainwindow.wbid.herolist:
-                                if unit.name == hero.name:
-                                    hero.magiclist.append(new_magic)
-                                    self.mainwindow.initUI()
-                                    
-                        else:
-                            for s in self.mainwindow.wbid.squadlist:
-                                if unit.name == s.name:
-                                    for henchman in s.henchmanlist:
-                                        henchman.magiclist.append(new_magic)
-                                    self.mainwindow.initUI()
-
-        return create_magic_for_unit
+        return listframe

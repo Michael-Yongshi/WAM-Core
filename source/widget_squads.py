@@ -91,19 +91,19 @@ class WidgetSquads(QWidget):
             numlabel = QClickLabel()
             numlabel.setText(f"<b># {squad.get_totalhenchman()}<b/>")
             numlabel.clicked.connect(self.create_method_change_number(squad))
-            squadgrid.addWidget(numlabel, 0, 0, 1, 1)
+            squadgrid.addWidget(numlabel, 0, 4, 1, 1)
 
             namelabel = QLabel()
             if squad.henchmanlist[0] == self.mainwindow.currentunit:
                 namelabel.setText(f"<b>{squad.name}<br/>(selected)<b/>")
             else:
                 namelabel.setText(f"<b>{squad.name}<b/>")
-            squadgrid.addWidget(namelabel, 0, 1, 1, 3)
+            squadgrid.addWidget(namelabel, 0, 0, 1, 3)
             
             catlabel = QLabel()
             catlabel.setText(f"<b>{squad.henchmanlist[0].category}<b/>")
             catlabel.setToolTip(f"This is your squad`s unit type. The unit type determines what the squads abilities are, what kind of items it can carry and how expensive it is to replace.")
-            squadgrid.addWidget(catlabel, 0, 4, 1, 3) 
+            squadgrid.addWidget(catlabel, 0, 2, 1, 3) 
             
             # sets the complete squad grid layout to a squad Frame in order to add to the vertical list
             squadframe = QRaisedFrame()

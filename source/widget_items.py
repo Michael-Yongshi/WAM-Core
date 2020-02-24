@@ -71,31 +71,35 @@ from source.class_hierarchy import (
     )
 
 from source.widget_template import *
+from source.widget_abilitymagic import WidgetAbility
 
-
-class WidgetItemsWarband(QBorderedWidget):
+class WidgetItemsWarband(QBorderlessFrame):
     def __init__(self, mainwindow):
         super().__init__()
 
         self.mainwindow = mainwindow
 
-        itembox = QVBoxLayout() # create a vertical layout to show them in a neat line
+        itemlistbox = QVBoxLayout() # create a vertical layout to show them in a neat line
         for item in self.mainwindow.wbid.itemlist:
             label = QClickLabel()
             label.setText(f"<b>{item.subcategory}<b/>")
             label.setToolTip(f"<font><b>{item.subcategory} </b>{item.name} <br/> category: {item.category} <br/> distance: {item.distance} <br/> <nobr>{item.skill.to_string()}</nobr> <br/> price: {item.price} <br/> {item.description}</font>")
-            label.clicked.connect(self.create_method_remove(warband = self.mainwindow.wbid, item = item))
-            itembox.addWidget(label) #adds the item to a label and at it to the vertical item layout
+            box = QVBoxLayout()
+            box.addWidget(label)
+            frame = QRaisedFrame()
+            frame.setLayout(box)
+            frame.clicked.connect(self.create_method_remove(warband = self.mainwindow.wbid, item = item))
+            itemlistbox.addWidget(frame) #adds the item to a label and at it to the vertical item layout
             
-        self.setLayout(itembox)
+        self.setLayout(itemlistbox)
             
         label = QClickLabel()
-        label.setText("New Item")
+        label.setText(f"<font>New Item<font/>")
         label.clicked.connect(self.create_new)
-        itembox.addWidget(label) #adds the new item to a label and at it to the vertical item layout
+        itemlistbox.addWidget(label) #adds the new item to a label and at it to the vertical item layout
 
         self.setToolTip("These are your warbands items.")
-        self.setLayout(itembox)
+        self.setLayout(itemlistbox)
         
     def create_new(self):
 
@@ -135,30 +139,37 @@ class WidgetItemsWarband(QBorderedWidget):
 
 
 
-class WidgetItemsUnit(QBorderedWidget):
+class WidgetItemsUnit(QBorderlessFrame):
     def __init__(self, mainwindow):
         super().__init__()
 
         self.mainwindow = mainwindow
         unit = self.mainwindow.currentunit
 
-        itembox = QVBoxLayout() # create a vertical layout to show them in a neat line
+        itemlistbox = QVBoxLayout() # create a vertical layout to show them in a neat line
 
         for item in unit.itemlist:
+            itembox = QHBoxLayout()
+
             label = QClickLabel()
-            label.setText(f"<b>{item.subcategory} - {item.name}<b/>")
+            label.setText(f"<b>{item.subcategory}<b/>") # label.setText(f"<b>{item.subcategory} - {item.name}<b/>")
             label.setToolTip(f"<font><b>{item.subcategory} </b>{item.name} <br/> category: {item.category} <br/> distance: {item.distance} <br/> <nobr>{item.skill.to_string()}</nobr> <br/> price: {item.price} <br/> {item.description}</font>")
-            label.clicked.connect(self.create_method_remove(unit = unit, item = item))
-            itembox.addWidget(label) #adds the item to a label and at it to the vertical item layout
+            itembox.addWidget(label)
+            itembox.addWidget(WidgetAbility(self.mainwindow, abilitylist = item.abilitylist, skip = True)) # adds the ability layout to the grid
+
+            frame = QRaisedFrame()
+            frame.setLayout(itembox)
+            frame.clicked.connect(self.create_method_remove(unit = unit, item = item))
+            itemlistbox.addWidget(frame) #adds the item to a label and at it to the vertical item layout
 
         # add new item widget
         label = QClickLabel()
-        label.setText(f"New Item")
+        label.setText(f"<font>New Item<font/>")
         label.setToolTip(f"Buy a new item for this unit.")
         label.clicked.connect(self.create_method_new(unit=unit))
-        itembox.addWidget(label) #adds the item to a label and at it to the vertical item layout
+        itemlistbox.addWidget(label) #adds the item to a label and at it to the vertical item layout
 
-        self.setLayout(itembox)
+        self.setLayout(itemlistbox)
         self.setToolTip("These are your units items.")
 
     def create_method_new(self, unit):

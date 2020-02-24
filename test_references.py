@@ -567,8 +567,8 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 4, 4, 3, 3, 1, 3, 1, 8, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Character", "name": "Leader"},
             {"source": "Core Rules", "category": "Character", "name": "Chaos Ritualist"},
+            {"source": "Core Rules", "category": "Character", "name": "Leader"},
             ],
         magiclist = [],
         itemlist = [
@@ -681,8 +681,8 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 4, 4, 3, 3, 1, 4, 1, 8, 0],
         abilitylist = [            
-            {"source": "Core Rules", "category": "Character", "name": "Leader"},
             {"source": "Core Rules", "category": "Character", "name": "Burn the Witch!"},
+            {"source": "Core Rules", "category": "Character", "name": "Leader"},
         ],
         magiclist = [],
         itemlist = [
@@ -795,8 +795,8 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 4, 4, 3, 3, 1, 4, 1, 8, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Character", "name": "Leader"},
             {"source": "Core Rules", "category": "Character", "name": "Prayers of Sigmar"},
+            {"source": "Core Rules", "category": "Character", "name": "Leader"},
         ],
         magiclist = [],
         itemlist = [
@@ -888,11 +888,11 @@ if __name__ == "__main__":
         ishero = True,
         skill = [6, 4, 4, 4, 4, 2, 5, 2, 8, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Character", "name": "Leader"},
             {"source": "Core Rules", "category": "Character", "name": "Cause Fear"},
             {"source": "Core Rules", "category": "Character", "name": "Immune to Psychology"},
             {"source": "Core Rules", "category": "Character", "name": "Immune to Poison"},
             {"source": "Core Rules", "category": "Character", "name": "Immune to Pain"},
+            {"source": "Core Rules", "category": "Character", "name": "Leader"},
         ],
         magiclist = [],
         itemlist = [
@@ -1020,8 +1020,8 @@ if __name__ == "__main__":
         ishero = True,
         skill = [6, 4, 4, 4, 3, 1, 5, 1, 7, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Character", "name": "Leader"},
             {"source": "Core Rules", "category": "Character", "name": "Armour Piercing"},
+            {"source": "Core Rules", "category": "Character", "name": "Leader"},
         ],
         magiclist = [],
         itemlist = [
@@ -1152,8 +1152,8 @@ if __name__ == "__main__":
         ishero = True,
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 9, 0],
         abilitylist = [
+            {"source": "Broheim", "category": "Character", "name": "High Elven Magician"},
             {"source": "Core Rules", "category": "Character", "name": "Leader"},
-            {"source": "Broheim", "category": "Character", "name": "High Elven Magician"}
             ],
         magiclist = [],
         itemlist = [
@@ -1242,8 +1242,8 @@ if __name__ == "__main__":
         ishero = True,
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 9, 0],
         abilitylist = [
+            {"source": "Broheim", "category": "Character", "name": "High Elven Magician"},
             {"source": "Core Rules", "category": "Character", "name": "Leader"},
-            {"source": "Broheim", "category": "Character", "name": "High Elven Magician"}
             ],
         magiclist = [],
         itemlist = [

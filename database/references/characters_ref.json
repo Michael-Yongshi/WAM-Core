@@ -642,12 +642,12 @@
                         {
                             "source": "Core Rules",
                             "category": "Character",
-                            "name": "Leader"
+                            "name": "Burn the Witch!"
                         },
                         {
                             "source": "Core Rules",
                             "category": "Character",
-                            "name": "Burn the Witch!"
+                            "name": "Leader"
                         }
                     ],
                     "magiclist": [],
@@ -874,12 +874,12 @@
                         {
                             "source": "Core Rules",
                             "category": "Character",
-                            "name": "Leader"
+                            "name": "Prayers of Sigmar"
                         },
                         {
                             "source": "Core Rules",
                             "category": "Character",
-                            "name": "Prayers of Sigmar"
+                            "name": "Leader"
                         }
                     ],
                     "magiclist": [],
@@ -1062,12 +1062,12 @@
                         {
                             "source": "Core Rules",
                             "category": "Character",
-                            "name": "Leader"
+                            "name": "Chaos Ritualist"
                         },
                         {
                             "source": "Core Rules",
                             "category": "Character",
-                            "name": "Chaos Ritualist"
+                            "name": "Leader"
                         }
                     ],
                     "magiclist": [],
@@ -1293,11 +1293,6 @@
                         {
                             "source": "Core Rules",
                             "category": "Character",
-                            "name": "Leader"
-                        },
-                        {
-                            "source": "Core Rules",
-                            "category": "Character",
                             "name": "Cause Fear"
                         },
                         {
@@ -1314,6 +1309,11 @@
                             "source": "Core Rules",
                             "category": "Character",
                             "name": "Immune to Pain"
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Leader"
                         }
                     ],
                     "magiclist": [],
@@ -1599,12 +1599,12 @@
                         {
                             "source": "Core Rules",
                             "category": "Character",
-                            "name": "Leader"
+                            "name": "Armour Piercing"
                         },
                         {
                             "source": "Core Rules",
                             "category": "Character",
-                            "name": "Armour Piercing"
+                            "name": "Leader"
                         }
                     ],
                     "magiclist": [],
@@ -1876,14 +1876,14 @@
                     },
                     "abilitylist": [
                         {
-                            "source": "Core Rules",
-                            "category": "Character",
-                            "name": "Leader"
-                        },
-                        {
                             "source": "Broheim",
                             "category": "Character",
                             "name": "High Elven Magician"
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Leader"
                         }
                     ],
                     "magiclist": [],
@@ -2051,14 +2051,14 @@
                     },
                     "abilitylist": [
                         {
-                            "source": "Core Rules",
-                            "category": "Character",
-                            "name": "Leader"
-                        },
-                        {
                             "source": "Broheim",
                             "category": "Character",
                             "name": "High Elven Magician"
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Leader"
                         }
                     ],
                     "magiclist": [],

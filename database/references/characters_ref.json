@@ -1451,7 +1451,7 @@
                         {
                             "source": "Core Rules",
                             "category": "Character",
-                            "name": "May not Run"
+                            "name": "May Not Run"
                         }
                     ],
                     "magiclist": [],
@@ -1556,7 +1556,7 @@
                         {
                             "source": "Core Rules",
                             "category": "Character",
-                            "name": "May not Run"
+                            "name": "May Not Run"
                         },
                         {
                             "source": "Core Rules",
@@ -1753,13 +1753,11 @@
                     "price": 20,
                     "maxcount": 0,
                     "description": "Verminkin are the Clanrats of Clan Eshin. The strongest amongst them are initiated into the secrets of the clans and begin their training to become Assassins, the most feared warriors of the Skaven warbands. All the Clanrats of Clan Eshin dream of rising to the status of an Assassin one day."
-                }
-            },
-            "The Skaven": {
+                },
                 "Giant Rats": {
                     "race": "Skaven",
                     "source": "Core Rules",
-                    "warband": "The Skaven",
+                    "warband": "Skaven",
                     "category": "Giant Rats",
                     "ishero": false,
                     "skill": {
@@ -1783,7 +1781,7 @@
                         {
                             "source": "Core Rules",
                             "category": "Character",
-                            "name": "Pack size"
+                            "name": "Pack Size"
                         },
                         {
                             "source": "Core Rules",
@@ -1801,7 +1799,7 @@
                 "Rat Ogre": {
                     "race": "Skaven",
                     "source": "Core Rules",
-                    "warband": "The Skaven",
+                    "warband": "Skaven",
                     "category": "Rat Ogre",
                     "ishero": false,
                     "skill": {

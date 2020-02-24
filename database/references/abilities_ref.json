@@ -137,7 +137,7 @@
                 "source": "Core Rules",
                 "category": "Character",
                 "name": "May Not Run",
-                "description": "This character may not run (but may charge normally)."
+                "description": "This character May Not Run (but may charge normally)."
             },
             "Double Charge": {
                 "source": "Core Rules",
@@ -459,7 +459,7 @@
                 "source": "Core Rules",
                 "category": "Injury",
                 "name": "Smashed Leg",
-                "description": "The warrior may not run any more but he may still charge."
+                "description": "The warrior May Not Run any more but he may still charge."
             },
             "Deep Wound": {
                 "source": "Core Rules",

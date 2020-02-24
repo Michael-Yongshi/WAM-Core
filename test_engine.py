@@ -34,42 +34,38 @@ def test_ReiklandWarband():
     # create_warband
     wbid = Warband.create_warband(
         name = "Test Reikland",
-        race = "High Elf",
-        source = "Broheim",
-        warband= "High Elves",
+        race = "Human",
+        source = "Core Rules",
+        warband= "Reikland",
         )
 
     # Manually adding an item
-    wbid.itemlist=[
-        Item.create_item(source = "Broheim", category="Other", subcategory="Wyrdbreaker")
-        ]
+    wbid.itemlist=[]
     
     # Creating heroes
     hero1 = Hero.create_character(
-        name="Hero A", 
-        race="High Elf", 
-        source="Broheim",
-        warband="High Elves",
-        category="Loremaster",
+        name="Anado", 
+        race="Human", 
+        source="Core Rules",
+        warband="Reikland",
+        category="Mercenary Captain",
         )
     print("hero1 create succesfull")
 
     # Adding items to heroes
     hero1.itemlist = [
-        Item.create_item(subcategory = "Mage Quarter Staff", category = "Melee Weapon", source = "Broheim")
+        Item.create_item(subcategory = "Halberd", category = "Melee Weapon", source = "Core Rules")
         ]
     print("hero1 item succesfull")
 
     # Adding abilities to heroes
     hero1.abilitylist = [
-        Ability.create_ability(source = "Core Rules", category = "Injury", name = "Horrible Scars")
+        Ability.create_ability(source = "Core Rules", category = "Injury", name = "Hardened")
         ]
     print("hero1 ability succesfull")
 
     # Adding magic to heroes
-    hero1.magiclist = [
-        Magic.create_magic(source = "Broheim", category = "High Elven Magic", name = "The Light of Glory")
-        ]
+    hero1.magiclist = []
     print("hero1 magic succesfull")
 
     # adding the heroes to the warband hero list
@@ -80,21 +76,21 @@ def test_ReiklandWarband():
 
     # Create Squads and the henchmen within
     squad1 = Squad.create_squad(
-        name = "Spearguard",
-        race = "High Elf",
-        source = "Broheim",
-        warband = "High Elves",
-        category = "Seaguard",
-        number = 2
+        name = "Swordsmen",
+        race = "Human",
+        source = "Core Rules",
+        warband = "Reikland",
+        category = "Swordsman",
+        number = 3
         )
     print("squad1 create succesfull")
 
     squad2 = Squad.create_squad(
-        name = "Bladeguard",
-        race = "High Elf",
-        source = "Broheim",
-        warband = "High Elves",
-        category = "Seaguard",
+        name = "Marksmen",
+        race = "Human",
+        source = "Core Rules",
+        warband = "Reikland",
+        category = "Marksman",
         number = 1
         )
     print("squad2 create succesfull")
@@ -113,16 +109,12 @@ def test_ReiklandWarband():
         ]
 
     print("squad 12 assign succesfull")
-    # Current gold minus cost of the warband
-    startgold = 500
-    wbid.treasury.gold = startgold - wbid.get_price()
     
     # Push new warband to JSON cache
     # To do: write to global variable
     cache_warband(wbid)
     print("Create Completed")
 
-def test_updateWarband():
     # Open cached warband
     filepath = "database/saves/cache.json"
     datadict = open_json(filepath)
@@ -133,43 +125,43 @@ def test_updateWarband():
 
     # Add another hero
     newhero = Hero.create_character(
-        name="Bearand", 
-        race="High Elf", 
-        source = "Broheim",
-        warband = "High Elves",
-        category="Sword Warden"
+        name="Barend", 
+        race="Human", 
+        source = "Core Rules",
+        warband = "Reikland",
+        category="Champion"
         )
     print("hero1 creation succesful")
     newhero2 = Hero.create_character(
-        name="Crypton", 
-        race="High Elf", 
-        source = "Broheim",
-        warband = "High Elves",
-        category="Sword Warden"
+        name="Ceasar", 
+        race="Human", 
+        source = "Core Rules",
+        warband = "Reikland",
+        category="Champion"
         )
     print("hero2 creation succesful")
     newhero3 = Hero.create_character(
-        name="Danan", 
-        race="High Elf", 
-        source = "Broheim",
-        warband = "High Elves",
-        category="Ranger"
+        name="Dan", 
+        race="Human", 
+        source = "Core Rules",
+        warband = "Reikland",
+        category="Champion"
         )
     print("hero3 creation succesful")
     newhero4 = Hero.create_character(
-        name="Everia", 
-        race="High Elf", 
-        source = "Broheim",
-        warband = "High Elves",
-        category="Ranger"
+        name="Everest", 
+        race="Human", 
+        source = "Core Rules",
+        warband = "Reikland",
+        category="Champion"
         )
     print("hero4 creation succesful")
     newhero5 = Hero.create_character(
-        name="Felicia", 
-        race="High Elf", 
-        source = "Broheim",
-        warband = "High Elves",
-        category="Ranger"
+        name="Frederik", 
+        race="Human", 
+        source = "Core Rules",
+        warband = "Reikland",
+        category="Youngblood"
         )
     print("hero5 creation succesful")
     # Add items for new hero
@@ -211,38 +203,38 @@ def test_updateWarband():
 
     # Create Squads and the henchmen within
     newsquad = Squad.create_squad(
-        name = "Cadet",
-        race = "High Elf",
-        source = "Broheim",
-        warband = "High Elves",
-        category = "Cadet",
+        name = "Warrior",
+        race = "Human",
+        source = "Core Rules",
+        warband = "Reikland",
+        category = "Warrior",
         number = 1
         )
     print("squad1 creation succesful")
     newsquad2 = Squad.create_squad(
-        name = "Cadet2",
-        race = "High Elf",
-        source = "Broheim",
-        warband = "High Elves",
-        category = "Cadet",
+        name = "Warrior2",
+        race = "Human",
+        source = "Core Rules",
+        warband = "Reikland",
+        category = "Warrior",
         number = 1
         )
     print("squad2 creation succesful")
     newsquad3 = Squad.create_squad(
-        name = "Cadet3",
-        race = "High Elf",
-        source = "Broheim",
-        warband = "High Elves",
-        category = "Cadet",
+        name = "Marksmen3",
+        race = "Human",
+        source = "Core Rules",
+        warband = "Reikland",
+        category = "Marksman",
         number = 1
         )
     print("squad3 creation succesful")
     newsquad4 = Squad.create_squad(
-        name = "Cadet4",
-        race = "High Elf",
-        source = "Broheim",
-        warband = "High Elves",
-        category = "Cadet",
+        name = "Marksmen4",
+        race = "Human",
+        source = "Core Rules",
+        warband = "Reikland",
+        category = "Marksman",
         number = 1
         )
     print("squad4 creation succesful")

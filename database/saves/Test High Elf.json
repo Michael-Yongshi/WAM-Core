@@ -385,7 +385,7 @@
                     "source": "Core Rules",
                     "category": "Missile Weapon",
                     "subcategory": "Long Bow",
-                    "distance": 0,
+                    "distance": 30,
                     "skill": {
                         "movement": 0,
                         "weapon": 0,
@@ -459,7 +459,7 @@
                     "source": "Core Rules",
                     "category": "Missile Weapon",
                     "subcategory": "Long Bow",
-                    "distance": 0,
+                    "distance": 30,
                     "skill": {
                         "movement": 0,
                         "weapon": 0,
@@ -533,7 +533,7 @@
                     "source": "Core Rules",
                     "category": "Missile Weapon",
                     "subcategory": "Long Bow",
-                    "distance": 0,
+                    "distance": 30,
                     "skill": {
                         "movement": 0,
                         "weapon": 0,
@@ -946,7 +946,7 @@
                             "source": "Core Rules",
                             "category": "Missile Weapon",
                             "subcategory": "Long Bow",
-                            "distance": 0,
+                            "distance": 30,
                             "skill": {
                                 "movement": 0,
                                 "weapon": 0,
@@ -1032,7 +1032,7 @@
                             "source": "Core Rules",
                             "category": "Missile Weapon",
                             "subcategory": "Long Bow",
-                            "distance": 0,
+                            "distance": 30,
                             "skill": {
                                 "movement": 0,
                                 "weapon": 0,
@@ -1118,7 +1118,7 @@
                             "source": "Core Rules",
                             "category": "Missile Weapon",
                             "subcategory": "Long Bow",
-                            "distance": 0,
+                            "distance": 30,
                             "skill": {
                                 "movement": 0,
                                 "weapon": 0,
@@ -1204,7 +1204,7 @@
                             "source": "Core Rules",
                             "category": "Missile Weapon",
                             "subcategory": "Long Bow",
-                            "distance": 0,
+                            "distance": 30,
                             "skill": {
                                 "movement": 0,
                                 "weapon": 0,
@@ -1285,7 +1285,7 @@
                             "source": "Core Rules",
                             "category": "Missile Weapon",
                             "subcategory": "Long Bow",
-                            "distance": 0,
+                            "distance": 30,
                             "skill": {
                                 "movement": 0,
                                 "weapon": 0,
@@ -1366,7 +1366,7 @@
                             "source": "Core Rules",
                             "category": "Missile Weapon",
                             "subcategory": "Long Bow",
-                            "distance": 0,
+                            "distance": 30,
                             "skill": {
                                 "movement": 0,
                                 "weapon": 0,
@@ -1447,7 +1447,7 @@
                             "source": "Core Rules",
                             "category": "Missile Weapon",
                             "subcategory": "Long Bow",
-                            "distance": 0,
+                            "distance": 30,
                             "skill": {
                                 "movement": 0,
                                 "weapon": 0,
@@ -1528,7 +1528,7 @@
                             "source": "Core Rules",
                             "category": "Missile Weapon",
                             "subcategory": "Long Bow",
-                            "distance": 0,
+                            "distance": 30,
                             "skill": {
                                 "movement": 0,
                                 "weapon": 0,
@@ -1609,7 +1609,7 @@
                             "source": "Core Rules",
                             "category": "Missile Weapon",
                             "subcategory": "Long Bow",
-                            "distance": 0,
+                            "distance": 30,
                             "skill": {
                                 "movement": 0,
                                 "weapon": 0,

@@ -26,7 +26,9 @@ install vscode - python extension
 ```
 
 set git repository by entering "git clone"
+
 set git url in the pop up
+
 set git credentials by entering credentials in popup
 
 set git name with 

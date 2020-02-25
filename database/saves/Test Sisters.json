@@ -1,0 +1,1701 @@
+{
+    "name": "Test Sisters",
+    "race": "Human",
+    "source": "Core Rules",
+    "warband": "Sisters of Sigmar",
+    "description": "For centuries the nobility of the Empire has sent its wayward or troublesome daughters to the Holy Convent of the Order of Merciful Sisters of Sigmar in Mordheim to be initiated into the only order of priestesses dedicated to the Empire\u2019s patron god. The Sisters of Sigmar, as they are commonly called, have traditionally travelled the Empire administering to the sick and poor, tending to the needs of orphans, curing the diseased and mending broken bodies.As well as the healing arts, which they practise with expert knowledge of herb-lore and prayer, their advice is frequently sought by those about to make an important decision, for the Sisters of Sigmar are famed for their ability to predict the fickle course of fate. Though once much loved by the common people, the Sisters have seen their popularity wane in recent years.Rabble-rousing Witch Hunters have denounced them as witches and heretics, so that even in the countryside they are attacked and driven away by the very peasants they seek to help. Many of Sigmar\u2019s priests wish to disband the order altogether, claiming that women have no right to teach the holy word of Sigmar.Even the Grand Theogonist, ostensibly the chief authority over the order, has cooled towards the sisterhood, denying the throne to Magritta of Marienburg who was brought up by the Sisters and said to be sympathetic to their cause. These days the Sisters of Sigmar have retreated to their convent situated high on the craggy island of Sigmar\u2019s Rock in the river Stir in Mordheim.Of all the inhabitants of Mordheim only the Sisters of Sigmar were prepared for its destruction. Seeress Cassandora foretold of the disaster and at their nightly vigil the Maidens of Sigmar heard the voice of Sigmar speaking in their dreaming minds.Thus they knew that they would be safe in their fortress high above the city, raised as it is above the polluted vapours, if only they were prepared to survive the fire of Sigmar\u2019s Fury. While the rest of Mordheim fell under a spell of madness the Sisters of Sigmar offered prayer after prayer, scourging themselves to drive out all thoughts of sin, fervently accepting a punishing penitential regime to harden their minds against the wantonness running rampant outside their walls.When the blow finally came the Sisters gathered beneath the great temple dome of their convent which, well built and fortified as it was by the prayers of the Sisters, protected them from the fire and heat of their master\u2019s ire.The Sisters believe they have a holy mission, a task that they have been set by Sigmar himself and to which they must submit themselves body and soul. Their sacred duty is to gather up the shards of wyrdstone and hide it deep beneath Sigmar\u2019s Rock in the vaults of their convent where, shielded by a great depth of solid granite and guarded by the eternal prayers of the sisterhood, it will cause no harm to Sigmar\u2019s people.It is a nigh hopeless task, for there are few Sisters and countless shards of stone. Worse still, there are many who want the stone for themselves, to take it from Mordheim and spread its contagion amongst the cities of the Empire.  The warbands of the sisterhood are led by tough Matriarchs, each accompanied by a body of warrior sisters.The training and harsh discipline of the convent includes mastery of martial as well as ecclesiastic skills, for mastery of the body is but the first step towards the mastery of the soul. Their favoured weapon is the warhammer, the instrument of Sigmar, seen as his holy symbol, alongside the twintailed comet.<i>-Don\u2019t believe everything those Witch Hunters say about the Sisters. They\u2019re no more heretics than I am and I\u2019ll skewer any man that says different. Not that the Sisters need looking after \u2013 they\u2019re mean fighters and you gotta be tough just to live like they do in that big fortress in the middle of Mordheim.-</i>",
+    "treasury": {
+        "gold": 500,
+        "wyrd": 0
+    },
+    "rulelist": [],
+    "itemlist": [],
+    "herolist": [
+        {
+            "name": "Anado",
+            "race": "Human",
+            "source": "Core Rules",
+            "warband": "Sisters of Sigmar",
+            "category": "Sigmarite Matriarch",
+            "ishero": true,
+            "skill": {
+                "movement": 4,
+                "weapon": 4,
+                "ballistic": 4,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 4,
+                "actions": 1,
+                "leadership": 8,
+                "armoursave": 0
+            },
+            "abilitylist": [
+                {
+                    "source": "Core Rules",
+                    "category": "Injury",
+                    "name": "Hardened",
+                    "description": "The warrior survives and becomes inured to the horrors of Mordheim. From now on he is immune to fear."
+                }
+            ],
+            "magiclist": [
+                {
+                    "source": "Core Rules",
+                    "category": "Prayers of Sigmar",
+                    "name": "Soulfire",
+                    "group": "Prayers",
+                    "difficulty": 9,
+                    "description": "<i>The wrath of Sigmar comes to earth. Purifying flames surround the Priest and wipe out those who resist the righteous fury of the God-Emperor!</i><br/><br/>All enemy models within 4 inch of the servant of Sigmar suffer a Strength 3 hit. No armour saves are allowed. The servants of darkness and Chaos are especially susceptible to Sigmar\u2019s holy power. Undead and Possessed models in range suffer a Strength 5 hit instead."
+                }
+            ],
+            "itemlist": [
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Melee Weapon",
+                    "subcategory": "Halberd",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 1,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Item",
+                            "name": "Two Handed",
+                            "description": "A model armed with this weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."
+                        }
+                    ],
+                    "magiclist": [],
+                    "price": 10,
+                    "description": "The halberd\u2019s heavy blade is mounted upon a sturdy shaft of oak or steel and has a point like a spear and a cutting edge like an axe. Since it can be used to chop as well as thrust, it is an adaptable weapon, but is difficult to use inside buildings."
+                }
+            ],
+            "experience": 20,
+            "price": 70,
+            "maxcount": 1,
+            "description": "The Sigmarite Matriarchs, of whom there is an inner circle of twelve, are answerable to the High Matriarch of the temple. Each must lead a warband of Sisters in frequent searches of the city in order to purge the ruins. Matriarchs are driven by a zealous devotion to the Cult of Sigmar and a relentless determination to redeem the Sisterhood in His eyes."
+        },
+        {
+            "name": "Barend",
+            "race": "Human",
+            "source": "Core Rules",
+            "warband": "Sisters of Sigmar",
+            "category": "Sister Superior",
+            "ishero": true,
+            "skill": {
+                "movement": 4,
+                "weapon": 4,
+                "ballistic": 3,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 3,
+                "actions": 1,
+                "leadership": 7,
+                "armoursave": 0
+            },
+            "abilitylist": [],
+            "magiclist": [],
+            "itemlist": [
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Melee Weapon",
+                    "subcategory": "Sword",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Item",
+                            "name": "Parry",
+                            "description": "This weapon offers an excellent balance of defense and offence. A model armed with this weapon may parry blows. When his opponent rolls to hit, the model armed with this weapon may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength \u2013 they are simply too powerful to be stopped. The character may reroll a failed parry attempt for every extra item that allows for Parrying."
+                        }
+                    ],
+                    "magiclist": [],
+                    "price": 10,
+                    "description": "The sword is often referred to as the \u2018king of weapons\u2019. The most common sword available, the broadsword of the Empire, is a masterpiece by the standards of any smith: four full feet of gleaming steel, double-edged and razor-sharp. Swords are much more effective weapons than crude clubs and axes, though learning to use a sword is a long and difficult process. It takes years to truly master this weapon \u2013 most warriors in Mordheim die long before they get this far!"
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Light Armour",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 20,
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Shield",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Item",
+                            "name": "Encumbered 2 of 2",
+                            "description": "A warrior that is armed with both heavy armor and a shield suffers a -1 Movement penalty."
+                        }
+                    ],
+                    "magiclist": [],
+                    "price": 5,
+                    "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner."
+                }
+            ],
+            "experience": 8,
+            "price": 35,
+            "maxcount": 3,
+            "description": "Each of the Sisters Superior is a long-serving priestess of the Cult of Sigmar, well versed in the rituals of the temple and an example to the younger Sisters and Novices. The Sisters Superior are entrusted with maintaining the faith and fervour of the order. Any peril or foe that may lurk in the ruins of Mordheim is as nothing compared to the wrath of a Sister Superior."
+        },
+        {
+            "name": "Ceasar",
+            "race": "Human",
+            "source": "Core Rules",
+            "warband": "Sisters of Sigmar",
+            "category": "Sister Superior",
+            "ishero": true,
+            "skill": {
+                "movement": 4,
+                "weapon": 4,
+                "ballistic": 3,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 3,
+                "actions": 1,
+                "leadership": 7,
+                "armoursave": 0
+            },
+            "abilitylist": [],
+            "magiclist": [],
+            "itemlist": [
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Melee Weapon",
+                    "subcategory": "Sword",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Item",
+                            "name": "Parry",
+                            "description": "This weapon offers an excellent balance of defense and offence. A model armed with this weapon may parry blows. When his opponent rolls to hit, the model armed with this weapon may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength \u2013 they are simply too powerful to be stopped. The character may reroll a failed parry attempt for every extra item that allows for Parrying."
+                        }
+                    ],
+                    "magiclist": [],
+                    "price": 10,
+                    "description": "The sword is often referred to as the \u2018king of weapons\u2019. The most common sword available, the broadsword of the Empire, is a masterpiece by the standards of any smith: four full feet of gleaming steel, double-edged and razor-sharp. Swords are much more effective weapons than crude clubs and axes, though learning to use a sword is a long and difficult process. It takes years to truly master this weapon \u2013 most warriors in Mordheim die long before they get this far!"
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Light Armour",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 20,
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Shield",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Item",
+                            "name": "Encumbered 2 of 2",
+                            "description": "A warrior that is armed with both heavy armor and a shield suffers a -1 Movement penalty."
+                        }
+                    ],
+                    "magiclist": [],
+                    "price": 5,
+                    "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner."
+                }
+            ],
+            "experience": 8,
+            "price": 35,
+            "maxcount": 3,
+            "description": "Each of the Sisters Superior is a long-serving priestess of the Cult of Sigmar, well versed in the rituals of the temple and an example to the younger Sisters and Novices. The Sisters Superior are entrusted with maintaining the faith and fervour of the order. Any peril or foe that may lurk in the ruins of Mordheim is as nothing compared to the wrath of a Sister Superior."
+        },
+        {
+            "name": "Dan",
+            "race": "Human",
+            "source": "Core Rules",
+            "warband": "Sisters of Sigmar",
+            "category": "Sister Superior",
+            "ishero": true,
+            "skill": {
+                "movement": 4,
+                "weapon": 4,
+                "ballistic": 3,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 3,
+                "actions": 1,
+                "leadership": 7,
+                "armoursave": 0
+            },
+            "abilitylist": [],
+            "magiclist": [],
+            "itemlist": [
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Missile Weapon",
+                    "subcategory": "Long Bow",
+                    "distance": 30,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 3,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 15,
+                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Light Armour",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 20,
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                }
+            ],
+            "experience": 8,
+            "price": 35,
+            "maxcount": 3,
+            "description": "Each of the Sisters Superior is a long-serving priestess of the Cult of Sigmar, well versed in the rituals of the temple and an example to the younger Sisters and Novices. The Sisters Superior are entrusted with maintaining the faith and fervour of the order. Any peril or foe that may lurk in the ruins of Mordheim is as nothing compared to the wrath of a Sister Superior."
+        },
+        {
+            "name": "Everest",
+            "race": "Human",
+            "source": "Core Rules",
+            "warband": "Sisters of Sigmar",
+            "category": "Sister Superior",
+            "ishero": true,
+            "skill": {
+                "movement": 4,
+                "weapon": 4,
+                "ballistic": 3,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 3,
+                "actions": 1,
+                "leadership": 7,
+                "armoursave": 0
+            },
+            "abilitylist": [],
+            "magiclist": [],
+            "itemlist": [
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Missile Weapon",
+                    "subcategory": "Long Bow",
+                    "distance": 30,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 3,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 15,
+                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Light Armour",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 20,
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                }
+            ],
+            "experience": 8,
+            "price": 35,
+            "maxcount": 3,
+            "description": "Each of the Sisters Superior is a long-serving priestess of the Cult of Sigmar, well versed in the rituals of the temple and an example to the younger Sisters and Novices. The Sisters Superior are entrusted with maintaining the faith and fervour of the order. Any peril or foe that may lurk in the ruins of Mordheim is as nothing compared to the wrath of a Sister Superior."
+        },
+        {
+            "name": "Frederik",
+            "race": "Human",
+            "source": "Core Rules",
+            "warband": "Sisters of Sigmar",
+            "category": "Augur",
+            "ishero": true,
+            "skill": {
+                "movement": 4,
+                "weapon": 2,
+                "ballistic": 2,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 3,
+                "actions": 1,
+                "leadership": 7,
+                "armoursave": 0
+            },
+            "abilitylist": [
+                {
+                    "source": "Core Rules",
+                    "category": "Character",
+                    "name": "Unarmoured",
+                    "description": "This character is unable to wear armour."
+                },
+                {
+                    "source": "Core Rules",
+                    "category": "Character",
+                    "name": "Blessed Sight",
+                    "description": "This character can re-roll any failed characteristic tests (climbing, resisting spells or any other reason), and any rolls to hit in close combat or shooting. You must accept the second result. In addition, this character can use its Blessed Sight to help the warband when they are searching the city for wyrdstone. If the character is not put out of action in the battle, you may roll two dice for it in the exploration phase and pick either dice as the result."
+                }
+            ],
+            "magiclist": [],
+            "itemlist": [
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Missile Weapon",
+                    "subcategory": "Long Bow",
+                    "distance": 30,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 3,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 15,
+                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Light Armour",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 20,
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                }
+            ],
+            "experience": 0,
+            "price": 25,
+            "maxcount": 1,
+            "description": "The blind Augurs of the Sisterhood are blessed beyond their comrades. By giving up their sight they have gained something far more, second sight \u2013 a gift from their patron god. Only a very few are marked this way, and they are greatly revered by the Sisterhood. Unlike the rest of the priestesses, they shave their heads, save for a single long braid."
+        }
+    ],
+    "squadlist": [
+        {
+            "name": "Swordsmen",
+            "henchmanlist": [
+                {
+                    "name": "Swordsmen0",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Sisters of Sigmar",
+                    "category": "Sister",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Starting Dagger",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cloth is Armour",
+                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 0,
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                        },
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Spear",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "First Strike",
+                                    "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Unwieldy",
+                                    "description": "A model armed with this weapon may only use a shield or a buckler in his other hand. He may not use a second weapon, because it requires all his skill to wield it."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cavalry Charge Bonus",
+                                    "description": "If using the rules for mounted models, a mounted warrior armed with this weapon receives a +1 Strength bonus when he charges. This bonus only applies for that turn."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 10,
+                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 25,
+                    "maxcount": 0,
+                    "description": "Sigmarite Sisters know that their entire order is shamed in the eyes of their Lord Sigmar. Every one of them is sworn upon His altar to pacify the city and thereby redeem themselves. Whatever the perils and horrors that stand in their way, they will be overcome!"
+                },
+                {
+                    "name": "Swordsmen1",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Sisters of Sigmar",
+                    "category": "Sister",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Starting Dagger",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cloth is Armour",
+                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 0,
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                        },
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Spear",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "First Strike",
+                                    "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Unwieldy",
+                                    "description": "A model armed with this weapon may only use a shield or a buckler in his other hand. He may not use a second weapon, because it requires all his skill to wield it."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cavalry Charge Bonus",
+                                    "description": "If using the rules for mounted models, a mounted warrior armed with this weapon receives a +1 Strength bonus when he charges. This bonus only applies for that turn."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 10,
+                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 25,
+                    "maxcount": 0,
+                    "description": "Sigmarite Sisters know that their entire order is shamed in the eyes of their Lord Sigmar. Every one of them is sworn upon His altar to pacify the city and thereby redeem themselves. Whatever the perils and horrors that stand in their way, they will be overcome!"
+                },
+                {
+                    "name": "Swordsmen2",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Sisters of Sigmar",
+                    "category": "Sister",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Starting Dagger",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cloth is Armour",
+                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 0,
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                        },
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Spear",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "First Strike",
+                                    "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Unwieldy",
+                                    "description": "A model armed with this weapon may only use a shield or a buckler in his other hand. He may not use a second weapon, because it requires all his skill to wield it."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cavalry Charge Bonus",
+                                    "description": "If using the rules for mounted models, a mounted warrior armed with this weapon receives a +1 Strength bonus when he charges. This bonus only applies for that turn."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 10,
+                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 25,
+                    "maxcount": 0,
+                    "description": "Sigmarite Sisters know that their entire order is shamed in the eyes of their Lord Sigmar. Every one of them is sworn upon His altar to pacify the city and thereby redeem themselves. Whatever the perils and horrors that stand in their way, they will be overcome!"
+                }
+            ]
+        },
+        {
+            "name": "Marksmen",
+            "henchmanlist": [
+                {
+                    "name": "Marksmen0",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Sisters of Sigmar",
+                    "category": "Novice",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 6,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Starting Dagger",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cloth is Armour",
+                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 0,
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                        },
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Great Sword",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 2,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Two Handed",
+                                    "description": "A model armed with this weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Last Strike",
+                                    "description": "This weapon is so heavy that the model using it always strikes last, even when charging."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 15,
+                    "maxcount": 10,
+                    "description": "By tradition, the Sisters draw their recruits only from the most noble houses of the Empire, and families consider it a great honour to have their daughter accepted into the order. Only maidens of noble lineage can be relied upon to have the devotion to duty and innate sense of honour. Few though the recruits may be, they must endure several years as Novices during which time their devotion will be tested to the full. All are eager to prove themselves worthy to be the handmaidens of Sigmar."
+                }
+            ]
+        },
+        {
+            "name": "Warrior",
+            "henchmanlist": [
+                {
+                    "name": "Warrior0",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Sisters of Sigmar",
+                    "category": "Sister",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Starting Dagger",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cloth is Armour",
+                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 0,
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                        },
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 25,
+                    "maxcount": 0,
+                    "description": "Sigmarite Sisters know that their entire order is shamed in the eyes of their Lord Sigmar. Every one of them is sworn upon His altar to pacify the city and thereby redeem themselves. Whatever the perils and horrors that stand in their way, they will be overcome!"
+                }
+            ]
+        },
+        {
+            "name": "Warrior2",
+            "henchmanlist": [
+                {
+                    "name": "Warrior20",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Sisters of Sigmar",
+                    "category": "Sister",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Starting Dagger",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cloth is Armour",
+                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 0,
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                        },
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 25,
+                    "maxcount": 0,
+                    "description": "Sigmarite Sisters know that their entire order is shamed in the eyes of their Lord Sigmar. Every one of them is sworn upon His altar to pacify the city and thereby redeem themselves. Whatever the perils and horrors that stand in their way, they will be overcome!"
+                }
+            ]
+        },
+        {
+            "name": "Marksmen3",
+            "henchmanlist": [
+                {
+                    "name": "Marksmen30",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Sisters of Sigmar",
+                    "category": "Novice",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 6,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Starting Dagger",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cloth is Armour",
+                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 0,
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                        },
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 15,
+                    "maxcount": 10,
+                    "description": "By tradition, the Sisters draw their recruits only from the most noble houses of the Empire, and families consider it a great honour to have their daughter accepted into the order. Only maidens of noble lineage can be relied upon to have the devotion to duty and innate sense of honour. Few though the recruits may be, they must endure several years as Novices during which time their devotion will be tested to the full. All are eager to prove themselves worthy to be the handmaidens of Sigmar."
+                }
+            ]
+        },
+        {
+            "name": "Marksmen4",
+            "henchmanlist": [
+                {
+                    "name": "Marksmen40",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Sisters of Sigmar",
+                    "category": "Novice",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 6,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Starting Dagger",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cloth is Armour",
+                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 0,
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                        },
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 15,
+                    "maxcount": 10,
+                    "description": "By tradition, the Sisters draw their recruits only from the most noble houses of the Empire, and families consider it a great honour to have their daughter accepted into the order. Only maidens of noble lineage can be relied upon to have the devotion to duty and innate sense of honour. Few though the recruits may be, they must endure several years as Novices during which time their devotion will be tested to the full. All are eager to prove themselves worthy to be the handmaidens of Sigmar."
+                },
+                {
+                    "name": "Marksmen42",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Sisters of Sigmar",
+                    "category": "Novice",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 6,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Starting Dagger",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cloth is Armour",
+                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 0,
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                        },
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 15,
+                    "maxcount": 10,
+                    "description": "By tradition, the Sisters draw their recruits only from the most noble houses of the Empire, and families consider it a great honour to have their daughter accepted into the order. Only maidens of noble lineage can be relied upon to have the devotion to duty and innate sense of honour. Few though the recruits may be, they must endure several years as Novices during which time their devotion will be tested to the full. All are eager to prove themselves worthy to be the handmaidens of Sigmar."
+                },
+                {
+                    "name": "Marksmen43",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Sisters of Sigmar",
+                    "category": "Novice",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 6,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Starting Dagger",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cloth is Armour",
+                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 0,
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                        },
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 15,
+                    "maxcount": 10,
+                    "description": "By tradition, the Sisters draw their recruits only from the most noble houses of the Empire, and families consider it a great honour to have their daughter accepted into the order. Only maidens of noble lineage can be relied upon to have the devotion to duty and innate sense of honour. Few though the recruits may be, they must endure several years as Novices during which time their devotion will be tested to the full. All are eager to prove themselves worthy to be the handmaidens of Sigmar."
+                },
+                {
+                    "name": "Marksmen44",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Sisters of Sigmar",
+                    "category": "Novice",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 6,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Starting Dagger",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cloth is Armour",
+                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 0,
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                        },
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 15,
+                    "maxcount": 10,
+                    "description": "By tradition, the Sisters draw their recruits only from the most noble houses of the Empire, and families consider it a great honour to have their daughter accepted into the order. Only maidens of noble lineage can be relied upon to have the devotion to duty and innate sense of honour. Few though the recruits may be, they must endure several years as Novices during which time their devotion will be tested to the full. All are eager to prove themselves worthy to be the handmaidens of Sigmar."
+                },
+                {
+                    "name": "Marksmen45",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Sisters of Sigmar",
+                    "category": "Novice",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 6,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Starting Dagger",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cloth is Armour",
+                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 0,
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                        },
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 15,
+                    "maxcount": 10,
+                    "description": "By tradition, the Sisters draw their recruits only from the most noble houses of the Empire, and families consider it a great honour to have their daughter accepted into the order. Only maidens of noble lineage can be relied upon to have the devotion to duty and innate sense of honour. Few though the recruits may be, they must endure several years as Novices during which time their devotion will be tested to the full. All are eager to prove themselves worthy to be the handmaidens of Sigmar."
+                },
+                {
+                    "name": "Marksmen46",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Sisters of Sigmar",
+                    "category": "Novice",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 6,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Starting Dagger",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cloth is Armour",
+                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 0,
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                        },
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 15,
+                    "maxcount": 10,
+                    "description": "By tradition, the Sisters draw their recruits only from the most noble houses of the Empire, and families consider it a great honour to have their daughter accepted into the order. Only maidens of noble lineage can be relied upon to have the devotion to duty and innate sense of honour. Few though the recruits may be, they must endure several years as Novices during which time their devotion will be tested to the full. All are eager to prove themselves worthy to be the handmaidens of Sigmar."
+                }
+            ]
+        }
+    ]
+}

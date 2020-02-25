@@ -456,29 +456,35 @@ class Character(object):
 
     def get_total_abilitylist(self):
         
-        totalabilitylist = []
+        totalabilitylist = self.get_char_abilitylist() + self.get_item_abilitylist()
+
+        return totalabilitylist
+
+    def get_char_abilitylist(self):
+        
+        charabilitylist = []
 
         for ability in self.abilitylist:
-            totalabilitylist += [ability]
+            charabilitylist += [ability]
+    
+        return charabilitylist
+        
+    def get_item_abilitylist(self):
+        
+        itemabilitylist = []
 
         for item in self.itemlist:
             for ability in item.abilitylist:
-                # ability.name = (ability.name + f"\n(source: {item.name})")
-                totalabilitylist += [ability]
+                itemabilitylist += [ability]
     
-        return totalabilitylist
-        
-    def get_total_magiclist(self):
+        return itemabilitylist
+
+    def get_magiclist(self):
         
         totalmagiclist = []
 
         for magic in self.magiclist:
             totalmagiclist += [magic]
-
-        for item in self.itemlist:
-            for magic in item.magiclist:
-                # magic.name = (magic.name + f"\n(source: {item.name})")
-                totalmagiclist += [magic]
         
         return totalmagiclist
 

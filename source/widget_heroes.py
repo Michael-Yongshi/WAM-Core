@@ -10,11 +10,11 @@ from PyQt5.QtWidgets import (
     QAction,
     QApplication,
     QDesktopWidget,
+    QFrame,
+    QGridLayout,
+    QHBoxLayout,
     QInputDialog,
     QLabel,
-    QGridLayout,
-    QVBoxLayout,
-    QHBoxLayout,
     QLineEdit,
     QListWidget,
     QListWidgetItem,
@@ -74,7 +74,7 @@ from source.widget_template import *
 # from source.widget_currentbox import *
 
 
-class WidgetHeroes(QBorderedWidget):
+class WidgetHeroes(QWidget):
     def __init__(self, mainwindow):
         super().__init__()
 
@@ -89,28 +89,28 @@ class WidgetHeroes(QBorderedWidget):
         h = 0
         for hero in self.mainwindow.wbid.herolist: # First iterate over the heroes in your warband
             h += 1
+            
             herogrid = QGridLayout() # create a grid layout to position all information more accurately
             
             namelabel = QLabel()
             if hero == self.mainwindow.currentunit:
-                namelabel.setText(hero.name + "\n(selected)")
+                namelabel.setText(f"<b>{hero.name}<br/>(selected)<b/>")
             else:
-                namelabel.setText(hero.name)
+                namelabel.setText(f"<b>{hero.name}<b/>")
             namelabel.setToolTip(f"This is your hero`s name")
             herogrid.addWidget(namelabel, 0, 0) # add the name and category box to the herogrid
             
             catlabel = QLabel()
-            catlabel.setText(hero.category)
+            catlabel.setText(f"<b>{hero.category}<b/>")
             catlabel.setToolTip(f"This is your hero`s unit type. The unit type determines what the heroes abilities are, what kind of items it can carry and how expensive it is to replace.")
             herogrid.addWidget(catlabel, 0, 1) # add the cat and category box to the herogrid
 
-            # sets the complete hero grid layout to a herowidget in order to add to the vertical list of heroes
-            herowidget = QInteractiveWidget()
-            herowidget.setLayout(herogrid)
-
-            # bound a click on the widget to showing details in character view
-            herowidget.clicked.connect(self.create_method_focus(hero))
-            herobox.addWidget(herowidget)
+            # bound a click on the hero to show details in character view
+            heroframe = QRaisedFrame()
+            heroframe.setLayout(herogrid)
+            heroframe.clicked.connect(self.create_method_focus(hero))
+            
+            herobox.addWidget(heroframe)
 
         if h <= 5: # If there is still room in your warband add a new hero widget
             h += 1
@@ -119,15 +119,15 @@ class WidgetHeroes(QBorderedWidget):
             namelabel.setText("Add New Hero")
             herogrid.addWidget(namelabel, 0, 0)
 
-            herowidget = QInteractiveWidget()
-            herowidget.setLayout(herogrid)
-            herowidget.clicked.connect(self.create_new)
-            herobox.addWidget(herowidget)
+            heroframe = QRaisedFrame()
+            heroframe.setLayout(herogrid)
+            heroframe.clicked.connect(self.create_new)
+            herobox.addWidget(heroframe)
         
         while h <= 5: # if there is still room, add some empty widgets to fill up the space
             h += 1
-            herowidget = QUnBorderedWidget()
-            herobox.addWidget(herowidget)
+            heroframe = QBorderlessFrame()
+            herobox.addWidget(heroframe)
 
         self.setToolTip('These are your <b>heroes</b>')
         self.setLayout(herobox)

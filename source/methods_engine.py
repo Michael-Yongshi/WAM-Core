@@ -101,6 +101,6 @@ def create_template_char():
         warband="",
         skill=Skill("","","","","","","","","","",), 
         category="", 
-        ishero=""
+        ishero="",
     )
     return template_char

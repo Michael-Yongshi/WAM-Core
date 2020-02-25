@@ -10,11 +10,11 @@ from PyQt5.QtWidgets import (
     QAction,
     QApplication,
     QDesktopWidget,
+    QFrame,
+    QGridLayout,
+    QHBoxLayout,
     QInputDialog,
     QLabel,
-    QGridLayout,
-    QVBoxLayout,
-    QHBoxLayout,
     QLineEdit,
     QListWidget,
     QListWidgetItem,
@@ -75,7 +75,7 @@ from source.widget_template import *
 
 
 
-class WidgetSquads(QBorderedWidget):
+class WidgetSquads(QWidget):
     def __init__(self, mainwindow):
         super().__init__()
 
@@ -88,33 +88,29 @@ class WidgetSquads(QBorderedWidget):
             s += 1
             squadgrid = QGridLayout()
             
-            numlabel = QLabel()
-            numlabel.setText(str(squad.get_totalhenchman()))
-            numbox = QVBoxLayout()
-            numbox.addWidget(numlabel)
-            numwidget = QInteractiveWidget()
-            numwidget.setLayout(numbox)
-            numwidget.clicked.connect(self.create_method_change_number(squad))
-            squadgrid.addWidget(numwidget, 0, 0, 1, 1)
+            numlabel = QClickLabel()
+            numlabel.setText(f"<b># {squad.get_totalhenchman()}<b/>")
+            numlabel.clicked.connect(self.create_method_change_number(squad))
+            squadgrid.addWidget(numlabel, 0, 4, 1, 1)
 
             namelabel = QLabel()
             if squad.henchmanlist[0] == self.mainwindow.currentunit:
-                namelabel.setText(squad.name + "\n(selected)")
+                namelabel.setText(f"<b>{squad.name}<br/>(selected)<b/>")
             else:
-                namelabel.setText(squad.name)
-            squadgrid.addWidget(namelabel, 0, 1, 1, 3)
+                namelabel.setText(f"<b>{squad.name}<b/>")
+            squadgrid.addWidget(namelabel, 0, 0, 1, 3)
             
             catlabel = QLabel()
-            catlabel.setText(squad.henchmanlist[0].category)
+            catlabel.setText(f"<b>{squad.henchmanlist[0].category}<b/>")
             catlabel.setToolTip(f"This is your squad`s unit type. The unit type determines what the squads abilities are, what kind of items it can carry and how expensive it is to replace.")
-            squadgrid.addWidget(catlabel, 0, 4, 1, 3) 
+            squadgrid.addWidget(catlabel, 0, 2, 1, 3) 
             
-            # sets the complete squad grid layout to a squadwidget in order to add to the vertical list
-            squadwidget = QInteractiveWidget()
-            squadwidget.setLayout(squadgrid)
+            # sets the complete squad grid layout to a squad Frame in order to add to the vertical list
+            squadframe = QRaisedFrame()
+            squadframe.setLayout(squadgrid)
             
-            squadwidget.clicked.connect(self.create_method_focus(squad))
-            squadbox.addWidget(squadwidget)
+            squadframe.clicked.connect(self.create_method_focus(squad))
+            squadbox.addWidget(squadframe)
 
         if s <= 5:
             s += 1
@@ -123,15 +119,15 @@ class WidgetSquads(QBorderedWidget):
             namelabel.setText("Add New Squad")
             squadgrid.addWidget(namelabel, 0, 0)
 
-            squadwidget = QInteractiveWidget()
-            squadwidget.setLayout(squadgrid)
-            squadwidget.clicked.connect(self.create_new)
-            squadbox.addWidget(squadwidget)
+            squadframe = QRaisedFrame()
+            squadframe.setLayout(squadgrid)
+            squadframe.clicked.connect(self.create_new)
+            squadbox.addWidget(squadframe)
 
         while s <= 5:
             s += 1
-            squadwidget = QUnBorderedWidget()
-            squadbox.addWidget(squadwidget)
+            squadframe = QBorderlessFrame()
+            squadbox.addWidget(squadframe)
 
         self.setToolTip('These are your <b>squads</b>')
         self.setLayout(squadbox)

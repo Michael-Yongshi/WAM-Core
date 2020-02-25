@@ -1,104 +1,59 @@
 {
-    "name": "Test High Elf",
-    "race": "High Elf",
-    "source": "Broheim",
-    "warband": "High Elves",
-    "description": "The Citadel of Dusk was built for the dual purpose of guarding the seaways off the east coast of Lustria against incursions from the rest of the world, and as a staging post from which the High Elves could watch the movements of the Lizardmen and their Slann masters. Despite the High Elves\u2019 best efforts to keep Lustria free of human adventurers, the people of the Old World have been dogged in their attempts to penetrate Ulthuan\u2019s extensive naval web and explore the jungle continent.So far the mighty Slann Mages have not appeared unduly concerned by the constant incursions onto their lands by the greedy peoples of the Old World and Naggaroth, and appear to have done little to prevent these predatory races from returning. Yet the High Elves know that despite the Slann`s relative calm in the face of these constant raids, the patience of ancient Mage-Priests is not limitless.The Elves fear that the Slann might one day rouse themselves from their century-long meditations to make a concerted effort to end any and all threats to the continuation of their culture as the inheritors of the Old Ones. If the Slann were to throw all their intellect and resources into total war, they could conceivably wipe out whole nations before they could be stopped, such is their awesome power.Fearing for their own survival as much as anything else, the High Elves have taken it upon themselves to keep Lustria secure from the predations of all other races, and protect the ancient secrets left behind by the Old Ones that the Slann safeguard. The High Elves` cause has not been helped by the many fantastic stories that persist throughout the Old World; stories of lost cities made entirely of gold lying hidden within its dense foliage, just waiting to be discovered and plundered.",
+    "name": "Test Cult",
+    "race": "Chaos Human",
+    "source": "Core Rules",
+    "warband": "The Cult of the Possessed",
+    "description": "There is never any shortage of men willing to risk their lives for a chance of real power: men whose ambitions lie beyond the scope of their birthright, or whose sorcerous skills or physical deformities place them in constant danger of persecution. What do such men have to lose if they pledge their souls to the dark gods of Chaos!In the aftermath of the destruction of Mordheim all manner of mutants have appeared whilst many hitherto unblemished folk feel the stirring of strange powers, the first awakenings of magical gifts destined to bring them to a fiery death at the hands of the Witch Hunters. Now a leader has appeared, a new Dark Emperor, who claims lordship of the City of the Damned.He is called the Shadowlord, Master of the Possessed, and followers of the cults of Chaos gather from all over the Empire to pledge their souls to him. Though none know whether he is man or Daemon all proclaim him their saviour and eagerly seek to do his bidding. As all students of the dark arts know, it is by the power of magic that creatures such as Daemons and spirits are able to stalk the mortal world.The wyrdstone that proliferates in Mordheim grants unnatural life to many vile things that by all natural rights should never exist. The Possessed were once men but by surrendering themselves wholly to the dark gods they have allowed Daemons to possess their bodies. Their appearance is horrific \u2013 corrupted from within, their flesh is twisted into a new and monstrous form.With the power of the Possessed behind them the followers of the Shadowlord have grown powerful in Mordheim. In the Massacre of Silver Street the Cult of the Possessed ambushed and destroyed a large force sent in to hunt them down. Now the streets of Mordheim belong to the Shadowlord and his servants. The contaminated air does not affect them at all or, more likely, it nourishes their inner corruption.Men who venture into Mordheim alone are hunted down and sacrificed to the dark gods. All warbands of the Possessed gather wyrdstone for the Shadowlord who remains hidden in the Pit where he is said to be guarded by titanic Possessed the size of houses. A few shards of the precious stone are kept by the warbands and used to create more of the Possessed. Cult of the possessed.The leaders of cult warbands are called Magisters and each leads a group of cultists: minions of the dark gods of Chaos. These are men whose hunger for power knows no bounds, who willingly give their bodies over to possession. All take part in the blood sacrifices, dark rituals, and worship of Daemons \u2013 nothing is too base for them!These degenerate humans are joined by other creatures as vile as they \u2013 things half-man half-beast that call themselves Gors, and which men refer to as Beastmen. There are few sights as horrific as a cult warband. Deranged warriors smeared with blood and dirt wave jagged weapons and chant blasphemous rites as they throw themselves upon their foes.Many are hardly recognisable as human, their bodies are so scarred and disfigured. The stigmata of mutation is borne by most, but the most unsettling of all are the Possessed themselves \u2013 melded flesh made of men, beasts, and metal driven by the implacable will of a Daemon.<i>-The Possessed. The Damned. The bogeymen. These scum are the worst of the worst. They are dangerous creatures, perhaps more so than any other group in the entire city. This Chaos-worshipping scum consists of mutants, Beastmen and cultists, and even worse things called the Possessed. If you ever let them get close to you, you\u2019ll be in big trouble \u2013 there are few who are a match for this scum in close quarters.-</i>",
     "treasury": {
-        "gold": 260,
+        "gold": 500,
         "wyrd": 0
     },
-    "rulelist": [
-        {
-            "name": "Excellent Sight",
-            "description": "Elves have eyesight unmatched by mere humans. Elves spot Hidden enemies from two times as far away as other warriors (ie, twice their Initiative value in inches)."
-        },
-        {
-            "name": "Haughty",
-            "description": "The High Elves are a very proud and noble race. A High Elf Warband may never include hired swords that are not of High Elven blood, nor can they use any equipment of Dwarf origin. This includes Gromril weapons and armour."
-        },
-        {
-            "name": "Honourable",
-            "description": "High Elves can never use poison or drugs of any kind no matter what the circumstance."
-        },
-        {
-            "name": "The Old Ways",
-            "description": "The High Elves may never use black powder weapons of any sort. This goes against their ancestors and the traditions of the Old Ways."
-        },
-        {
-            "name": "Resolve",
-            "description": "The High Elves have been fighting the Dark Elves for countless centuries. When fighting their dark kin the High Elves are driven by unwavering determination. They are considered to have a Leadership of 10 when taking Rout Tests against the Dark Elves. In addition, High Elves can never choose to voluntarily Rout as they must stop their evil kin at any cost."
-        }
-    ],
-    "itemlist": [
-        {
-            "name": "",
-            "source": "Broheim",
-            "category": "Other",
-            "subcategory": "Wyrdbreaker",
-            "distance": 0,
-            "skill": {
-                "movement": 0,
-                "weapon": 0,
-                "ballistic": 0,
-                "strength": 0,
-                "toughness": 0,
-                "wounds": 0,
-                "initiative": 0,
-                "actions": 0,
-                "leadership": 0,
-                "armoursave": 0
-            },
-            "abilitylist": [],
-            "magiclist": [],
-            "price": 0,
-            "description": "An item given by the loremaster council for warbands of high elves to nullify the chaos magic in wyrdstones and turn it into regular gems. This provides High Elf warbands with the necessary income to sustain themselves."
-        }
-    ],
+    "rulelist": [],
+    "itemlist": [],
     "herolist": [
         {
-            "name": "Hero A",
-            "race": "High Elf",
-            "source": "Broheim",
-            "warband": "High Elves",
-            "category": "Loremaster",
+            "name": "Anado",
+            "race": "Chaos Human",
+            "source": "Core Rules",
+            "warband": "The Cult of the Possessed",
+            "category": "Magister",
             "ishero": true,
             "skill": {
-                "movement": 5,
+                "movement": 4,
                 "weapon": 4,
                 "ballistic": 4,
                 "strength": 3,
                 "toughness": 3,
                 "wounds": 1,
-                "initiative": 6,
+                "initiative": 3,
                 "actions": 1,
-                "leadership": 9,
+                "leadership": 8,
                 "armoursave": 0
             },
             "abilitylist": [
                 {
                     "source": "Core Rules",
                     "category": "Injury",
-                    "name": "Horrible Scars",
-                    "description": "Due to its disfigurement the character causes fear from now on. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                    "name": "Hardened",
+                    "description": "The warrior survives and becomes inured to the horrors of Mordheim. From now on he is immune to fear."
                 }
             ],
             "magiclist": [
                 {
-                    "source": "Broheim",
-                    "category": "High Elven Magic",
-                    "name": "The Light of Glory",
+                    "source": "Core Rules",
+                    "category": "Chaos Rituals",
+                    "name": "Lure of Chaos",
                     "group": "Spells",
-                    "difficulty": 8,
-                    "description": "<i>A radiant white light emerges from the mage`s hand, banishing all fear and doubt in his comrades.</i><br/><br/>Any friendly models within 8 inch of the Elven mage are immune to psychology and will never break from combat. This spell lasts until the mage suffers a wound. If the mage suffers a wound then the enchanted Elves become startled and uneasy. All models with 8 inch must take a Leadership test. If any fail, they are treated as if they had failed an All Alone test."
+                    "difficulty": 9,
+                    "description": "<i>The Chaos Mage calls upon the taint of chaos which exists in the inner soul of all living beings.</i><br/><br/>The spell has a range of 12 inch and must be cast on the closest enemy model. Roll a D6 and add the Chaos Mage\u2019s Leadership to the score. Then roll a D6 and add the target\u2019s Leadership to the score. If the Chaos Mage beats his opponent\u2019s score he gains control of the model until the model passes a Leadership test in his own recovery phase. The model may not commit suicide, but can attack models on his own side, and will not fight warriors from the Chaos Mage\u2019s warband. If he was engaged in hand-to-hand combat with any warriors of the Chaos Mage\u2019s warband, they will immediately move 1 inch apart."
                 }
             ],
             "itemlist": [
                 {
                     "name": "",
-                    "source": "Broheim",
+                    "source": "Core Rules",
                     "category": "Melee Weapon",
-                    "subcategory": "Mage Quarter Staff",
+                    "subcategory": "Halberd",
                     "distance": 0,
                     "skill": {
                         "movement": 0,
@@ -116,46 +71,59 @@
                         {
                             "source": "Core Rules",
                             "category": "Item",
-                            "name": "Concussion",
-                            "description": "This weapon is excellent to use for striking your enemy senseless. When using this weapon, a roll of 2-4 is treated as stunned when rolling to see the extent of a model\u2019s injuries."
-                        },
-                        {
-                            "source": "Core Rules",
-                            "category": "Item",
                             "name": "Two Handed",
                             "description": "A model armed with this weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."
                         }
                     ],
                     "magiclist": [],
-                    "price": 20,
-                    "description": "A Mage Staff used two handed."
+                    "price": 10,
+                    "description": "The halberd\u2019s heavy blade is mounted upon a sturdy shaft of oak or steel and has a point like a spear and a cutting edge like an axe. Since it can be used to chop as well as thrust, it is an adaptable weapon, but is difficult to use inside buildings."
                 }
             ],
             "experience": 20,
-            "price": 80,
+            "price": 70,
             "maxcount": 1,
-            "description": "Loremasters are the most powerful mages in the entire Warhammer world. Their knowledge of the arcane arts and their intensive training at the Tower of Hoeth makes them perfect for leading expeditions into Lustria. They are capable and efficient with years of extensive training and skill at their disposal. Loremasters alone command magic powerful enough to match the might of the mysterious Slann. They delve into the temple cities of the Lizardmen in search of any remaining artifacts of the Old Ones power."
+            "description": "Magisters lead the covens of the Possessed. They have been granted magical powers by their patron gods. They are fanatical followers of the Dark gods, utterly dedicated to bringing Chaos to the world."
         },
         {
-            "name": "Bearand",
-            "race": "High Elf",
-            "source": "Broheim",
-            "warband": "High Elves",
-            "category": "Sword Warden",
+            "name": "Barend",
+            "race": "Chaos Human",
+            "source": "Core Rules",
+            "warband": "The Cult of the Possessed",
+            "category": "Possessed",
             "ishero": true,
             "skill": {
                 "movement": 5,
-                "weapon": 5,
-                "ballistic": 4,
-                "strength": 3,
-                "toughness": 3,
-                "wounds": 1,
-                "initiative": 6,
-                "actions": 1,
-                "leadership": 8,
+                "weapon": 4,
+                "ballistic": 0,
+                "strength": 4,
+                "toughness": 4,
+                "wounds": 2,
+                "initiative": 4,
+                "actions": 2,
+                "leadership": 7,
                 "armoursave": 0
             },
-            "abilitylist": [],
+            "abilitylist": [
+                {
+                    "source": "Core Rules",
+                    "category": "Character",
+                    "name": "Unarmed and Unarmoured",
+                    "description": "This character is unable to use any weapons or armour."
+                },
+                {
+                    "source": "Core Rules",
+                    "category": "Character",
+                    "name": "Cause Fear",
+                    "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                },
+                {
+                    "source": "Core Rules",
+                    "category": "Character",
+                    "name": "Can Mutate",
+                    "description": "This character is able to mutate and may start the game with one or more mutations. See the Mutations list over the page for costs."
+                }
+            ],
             "magiclist": [],
             "itemlist": [
                 {
@@ -242,31 +210,38 @@
                     "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner."
                 }
             ],
-            "experience": 11,
-            "price": 50,
+            "experience": 8,
+            "price": 90,
             "maxcount": 2,
-            "description": "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster\u2019s personal attendants and protectors."
+            "description": "The Possessed have committed the greatest of heresies: they have given their bodies to Daemons. As a result, they are nightmarish creatures, a melding of flesh, metal and black magic. Inside them lives a supernatural thing of evil, a Daemon from the dark reaches of the Realm of Chaos.The powerful spirit of a Daemon can meld several creatures together, be they men or animals, into a multi-faceted horror. These monstrous Possessed are perhaps the most dangerous of the creatures of Mordheim, and certainly the most loathsome and dreadful."
         },
         {
-            "name": "Crypton",
-            "race": "High Elf",
-            "source": "Broheim",
-            "warband": "High Elves",
-            "category": "Sword Warden",
+            "name": "Ceasar",
+            "race": "Chaos Human",
+            "source": "Core Rules",
+            "warband": "The Cult of the Possessed",
+            "category": "Mutant",
             "ishero": true,
             "skill": {
-                "movement": 5,
-                "weapon": 5,
-                "ballistic": 4,
+                "movement": 4,
+                "weapon": 3,
+                "ballistic": 3,
                 "strength": 3,
                 "toughness": 3,
                 "wounds": 1,
-                "initiative": 6,
+                "initiative": 3,
                 "actions": 1,
-                "leadership": 8,
+                "leadership": 7,
                 "armoursave": 0
             },
-            "abilitylist": [],
+            "abilitylist": [
+                {
+                    "source": "Core Rules",
+                    "category": "Character",
+                    "name": "Mutated",
+                    "description": "This character is a mutated being and must start the game with at least one or more mutations. See the Mutations list over the page for costs."
+                }
+            ],
             "magiclist": [],
             "itemlist": [
                 {
@@ -353,31 +328,212 @@
                     "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner."
                 }
             ],
-            "experience": 11,
-            "price": 50,
+            "experience": 0,
+            "price": 25,
             "maxcount": 2,
-            "description": "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster\u2019s personal attendants and protectors."
+            "description": "Mutants are revered as the favoured ones of the Dark gods, their physical disfigurements marking out the vileness of their soul. They come in many shapes and sizes, each more bizarre than the next."
         },
         {
-            "name": "Danan",
-            "race": "High Elf",
-            "source": "Broheim",
-            "warband": "High Elves",
-            "category": "Ranger",
+            "name": "Dan",
+            "race": "Chaos Human",
+            "source": "Core Rules",
+            "warband": "The Cult of the Possessed",
+            "category": "Mutant",
+            "ishero": true,
+            "skill": {
+                "movement": 4,
+                "weapon": 3,
+                "ballistic": 3,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 3,
+                "actions": 1,
+                "leadership": 7,
+                "armoursave": 0
+            },
+            "abilitylist": [
+                {
+                    "source": "Core Rules",
+                    "category": "Character",
+                    "name": "Mutated",
+                    "description": "This character is a mutated being and must start the game with at least one or more mutations. See the Mutations list over the page for costs."
+                }
+            ],
+            "magiclist": [],
+            "itemlist": [
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Missile Weapon",
+                    "subcategory": "Long Bow",
+                    "distance": 30,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 3,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 15,
+                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Light Armour",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 20,
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                }
+            ],
+            "experience": 0,
+            "price": 25,
+            "maxcount": 2,
+            "description": "Mutants are revered as the favoured ones of the Dark gods, their physical disfigurements marking out the vileness of their soul. They come in many shapes and sizes, each more bizarre than the next."
+        },
+        {
+            "name": "Everest",
+            "race": "Chaos Human",
+            "source": "Core Rules",
+            "warband": "The Cult of the Possessed",
+            "category": "Mutant",
+            "ishero": true,
+            "skill": {
+                "movement": 4,
+                "weapon": 3,
+                "ballistic": 3,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 3,
+                "actions": 1,
+                "leadership": 7,
+                "armoursave": 0
+            },
+            "abilitylist": [
+                {
+                    "source": "Core Rules",
+                    "category": "Character",
+                    "name": "Mutated",
+                    "description": "This character is a mutated being and must start the game with at least one or more mutations. See the Mutations list over the page for costs."
+                }
+            ],
+            "magiclist": [],
+            "itemlist": [
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Missile Weapon",
+                    "subcategory": "Long Bow",
+                    "distance": 30,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 3,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 15,
+                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Light Armour",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 20,
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                }
+            ],
+            "experience": 0,
+            "price": 25,
+            "maxcount": 2,
+            "description": "Mutants are revered as the favoured ones of the Dark gods, their physical disfigurements marking out the vileness of their soul. They come in many shapes and sizes, each more bizarre than the next."
+        },
+        {
+            "name": "Frederik",
+            "race": "Chaos Human",
+            "source": "Core Rules",
+            "warband": "The Cult of the Possessed",
+            "category": "Possessed",
             "ishero": true,
             "skill": {
                 "movement": 5,
                 "weapon": 4,
-                "ballistic": 4,
-                "strength": 3,
-                "toughness": 3,
-                "wounds": 1,
-                "initiative": 6,
-                "actions": 1,
-                "leadership": 8,
+                "ballistic": 0,
+                "strength": 4,
+                "toughness": 4,
+                "wounds": 2,
+                "initiative": 4,
+                "actions": 2,
+                "leadership": 7,
                 "armoursave": 0
             },
-            "abilitylist": [],
+            "abilitylist": [
+                {
+                    "source": "Core Rules",
+                    "category": "Character",
+                    "name": "Unarmed and Unarmoured",
+                    "description": "This character is unable to use any weapons or armour."
+                },
+                {
+                    "source": "Core Rules",
+                    "category": "Character",
+                    "name": "Cause Fear",
+                    "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                },
+                {
+                    "source": "Core Rules",
+                    "category": "Character",
+                    "name": "Can Mutate",
+                    "description": "This character is able to mutate and may start the game with one or more mutations. See the Mutations list over the page for costs."
+                }
+            ],
             "magiclist": [],
             "itemlist": [
                 {
@@ -428,183 +584,42 @@
                 }
             ],
             "experience": 8,
-            "price": 45,
+            "price": 90,
             "maxcount": 2,
-            "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again."
-        },
-        {
-            "name": "Everia",
-            "race": "High Elf",
-            "source": "Broheim",
-            "warband": "High Elves",
-            "category": "Ranger",
-            "ishero": true,
-            "skill": {
-                "movement": 5,
-                "weapon": 4,
-                "ballistic": 4,
-                "strength": 3,
-                "toughness": 3,
-                "wounds": 1,
-                "initiative": 6,
-                "actions": 1,
-                "leadership": 8,
-                "armoursave": 0
-            },
-            "abilitylist": [],
-            "magiclist": [],
-            "itemlist": [
-                {
-                    "name": "",
-                    "source": "Core Rules",
-                    "category": "Missile Weapon",
-                    "subcategory": "Long Bow",
-                    "distance": 30,
-                    "skill": {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 3,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    },
-                    "abilitylist": [],
-                    "magiclist": [],
-                    "price": 15,
-                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
-                },
-                {
-                    "name": "",
-                    "source": "Core Rules",
-                    "category": "Armour & Protection",
-                    "subcategory": "Light Armour",
-                    "distance": 0,
-                    "skill": {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 1
-                    },
-                    "abilitylist": [],
-                    "magiclist": [],
-                    "price": 20,
-                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
-                }
-            ],
-            "experience": 8,
-            "price": 45,
-            "maxcount": 2,
-            "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again."
-        },
-        {
-            "name": "Felicia",
-            "race": "High Elf",
-            "source": "Broheim",
-            "warband": "High Elves",
-            "category": "Ranger",
-            "ishero": true,
-            "skill": {
-                "movement": 5,
-                "weapon": 4,
-                "ballistic": 4,
-                "strength": 3,
-                "toughness": 3,
-                "wounds": 1,
-                "initiative": 6,
-                "actions": 1,
-                "leadership": 8,
-                "armoursave": 0
-            },
-            "abilitylist": [],
-            "magiclist": [],
-            "itemlist": [
-                {
-                    "name": "",
-                    "source": "Core Rules",
-                    "category": "Missile Weapon",
-                    "subcategory": "Long Bow",
-                    "distance": 30,
-                    "skill": {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 3,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 0
-                    },
-                    "abilitylist": [],
-                    "magiclist": [],
-                    "price": 15,
-                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
-                },
-                {
-                    "name": "",
-                    "source": "Core Rules",
-                    "category": "Armour & Protection",
-                    "subcategory": "Light Armour",
-                    "distance": 0,
-                    "skill": {
-                        "movement": 0,
-                        "weapon": 0,
-                        "ballistic": 0,
-                        "strength": 0,
-                        "toughness": 0,
-                        "wounds": 0,
-                        "initiative": 0,
-                        "actions": 0,
-                        "leadership": 0,
-                        "armoursave": 1
-                    },
-                    "abilitylist": [],
-                    "magiclist": [],
-                    "price": 20,
-                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
-                }
-            ],
-            "experience": 8,
-            "price": 45,
-            "maxcount": 2,
-            "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again."
+            "description": "The Possessed have committed the greatest of heresies: they have given their bodies to Daemons. As a result, they are nightmarish creatures, a melding of flesh, metal and black magic. Inside them lives a supernatural thing of evil, a Daemon from the dark reaches of the Realm of Chaos.The powerful spirit of a Daemon can meld several creatures together, be they men or animals, into a multi-faceted horror. These monstrous Possessed are perhaps the most dangerous of the creatures of Mordheim, and certainly the most loathsome and dreadful."
         }
     ],
     "squadlist": [
         {
-            "name": "Spearguard",
+            "name": "Swordsmen",
             "henchmanlist": [
                 {
-                    "name": "Spearguard0",
-                    "race": "High Elf",
-                    "source": "Broheim",
-                    "warband": "High Elves",
-                    "category": "Seaguard",
+                    "name": "Swordsmen0",
+                    "race": "Chaos Human",
+                    "source": "Core Rules",
+                    "warband": "The Cult of the Possessed",
+                    "category": "Darksoul",
                     "ishero": false,
                     "skill": {
-                        "movement": 5,
-                        "weapon": 4,
-                        "ballistic": 4,
-                        "strength": 3,
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
+                        "strength": 4,
                         "toughness": 3,
                         "wounds": 1,
-                        "initiative": 6,
+                        "initiative": 3,
                         "actions": 1,
-                        "leadership": 8,
+                        "leadership": 6,
                         "armoursave": 0
                     },
-                    "abilitylist": [],
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Crazed",
+                            "description": "This character has been driven insane by daemonic possession and knows no fear. They automatically pass any Leadership tests they are required to take."
+                        }
+                    ],
                     "magiclist": [],
                     "itemlist": [
                         {
@@ -682,29 +697,36 @@
                     ],
                     "experience": 0,
                     "price": 35,
-                    "maxcount": 0,
-                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops."
+                    "maxcount": 5,
+                    "description": "Darksouls are men who have been driven insane by the daemonic possession which became all too common after the destruction of Mordheim. The Daemons have left the bodies of these men, but their minds have been scarred by the horror of the experience. Their insane strength makes Darksouls dangerous fighters. The Cultists regard them as holy men, and let them work out their unreasoning rage in battle. In their tortured minds the Darksouls believe themselves to be Daemons. They wear leering daemonic masks and garb themselves in armour and clothing resembling the scaled skin of Daemons."
                 },
                 {
-                    "name": "Spearguard1",
-                    "race": "High Elf",
-                    "source": "Broheim",
-                    "warband": "High Elves",
-                    "category": "Seaguard",
+                    "name": "Swordsmen1",
+                    "race": "Chaos Human",
+                    "source": "Core Rules",
+                    "warband": "The Cult of the Possessed",
+                    "category": "Darksoul",
                     "ishero": false,
                     "skill": {
-                        "movement": 5,
-                        "weapon": 4,
-                        "ballistic": 4,
-                        "strength": 3,
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
+                        "strength": 4,
                         "toughness": 3,
                         "wounds": 1,
-                        "initiative": 6,
+                        "initiative": 3,
                         "actions": 1,
-                        "leadership": 8,
+                        "leadership": 6,
                         "armoursave": 0
                     },
-                    "abilitylist": [],
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Crazed",
+                            "description": "This character has been driven insane by daemonic possession and knows no fear. They automatically pass any Leadership tests they are required to take."
+                        }
+                    ],
                     "magiclist": [],
                     "itemlist": [
                         {
@@ -782,31 +804,138 @@
                     ],
                     "experience": 0,
                     "price": 35,
-                    "maxcount": 0,
-                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops."
+                    "maxcount": 5,
+                    "description": "Darksouls are men who have been driven insane by the daemonic possession which became all too common after the destruction of Mordheim. The Daemons have left the bodies of these men, but their minds have been scarred by the horror of the experience. Their insane strength makes Darksouls dangerous fighters. The Cultists regard them as holy men, and let them work out their unreasoning rage in battle. In their tortured minds the Darksouls believe themselves to be Daemons. They wear leering daemonic masks and garb themselves in armour and clothing resembling the scaled skin of Daemons."
+                },
+                {
+                    "name": "Swordsmen2",
+                    "race": "Chaos Human",
+                    "source": "Core Rules",
+                    "warband": "The Cult of the Possessed",
+                    "category": "Darksoul",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
+                        "strength": 4,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 6,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Crazed",
+                            "description": "This character has been driven insane by daemonic possession and knows no fear. They automatically pass any Leadership tests they are required to take."
+                        }
+                    ],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Starting Dagger",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cloth is Armour",
+                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 0,
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                        },
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Spear",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "First Strike",
+                                    "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Unwieldy",
+                                    "description": "A model armed with this weapon may only use a shield or a buckler in his other hand. He may not use a second weapon, because it requires all his skill to wield it."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cavalry Charge Bonus",
+                                    "description": "If using the rules for mounted models, a mounted warrior armed with this weapon receives a +1 Strength bonus when he charges. This bonus only applies for that turn."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 10,
+                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 35,
+                    "maxcount": 5,
+                    "description": "Darksouls are men who have been driven insane by the daemonic possession which became all too common after the destruction of Mordheim. The Daemons have left the bodies of these men, but their minds have been scarred by the horror of the experience. Their insane strength makes Darksouls dangerous fighters. The Cultists regard them as holy men, and let them work out their unreasoning rage in battle. In their tortured minds the Darksouls believe themselves to be Daemons. They wear leering daemonic masks and garb themselves in armour and clothing resembling the scaled skin of Daemons."
                 }
             ]
         },
         {
-            "name": "Bladeguard",
+            "name": "Marksmen",
             "henchmanlist": [
                 {
-                    "name": "Bladeguard0",
-                    "race": "High Elf",
-                    "source": "Broheim",
-                    "warband": "High Elves",
-                    "category": "Seaguard",
+                    "name": "Marksmen0",
+                    "race": "Chaos Human",
+                    "source": "Core Rules",
+                    "warband": "The Cult of the Possessed",
+                    "category": "Brethren",
                     "ishero": false,
                     "skill": {
-                        "movement": 5,
-                        "weapon": 4,
-                        "ballistic": 4,
+                        "movement": 4,
+                        "weapon": 3,
+                        "ballistic": 3,
                         "strength": 3,
                         "toughness": 3,
                         "wounds": 1,
-                        "initiative": 6,
+                        "initiative": 3,
                         "actions": 1,
-                        "leadership": 8,
+                        "leadership": 7,
                         "armoursave": 0
                     },
                     "abilitylist": [],
@@ -880,32 +1009,32 @@
                         }
                     ],
                     "experience": 0,
-                    "price": 35,
+                    "price": 25,
                     "maxcount": 0,
-                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops."
+                    "description": "Brethren are the crazed human followers of the cults of the dark gods, eager to descend into damnation. Their vile deeds and unspeakable acts have driven them to the brink of insanity."
                 }
             ]
         },
         {
-            "name": "Cadet",
+            "name": "Warrior",
             "henchmanlist": [
                 {
-                    "name": "Cadet0",
-                    "race": "High Elf",
-                    "source": "Broheim",
-                    "warband": "High Elves",
-                    "category": "Cadet",
+                    "name": "Warrior0",
+                    "race": "Chaos Human",
+                    "source": "Core Rules",
+                    "warband": "The Cult of the Possessed",
+                    "category": "Beastman",
                     "ishero": false,
                     "skill": {
-                        "movement": 5,
-                        "weapon": 3,
+                        "movement": 4,
+                        "weapon": 4,
                         "ballistic": 3,
                         "strength": 3,
-                        "toughness": 3,
-                        "wounds": 1,
-                        "initiative": 5,
+                        "toughness": 4,
+                        "wounds": 2,
+                        "initiative": 3,
                         "actions": 1,
-                        "leadership": 8,
+                        "leadership": 7,
                         "armoursave": 0
                     },
                     "abilitylist": [],
@@ -966,32 +1095,32 @@
                         }
                     ],
                     "experience": 0,
-                    "price": 30,
-                    "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                    "price": 45,
+                    "maxcount": 3,
+                    "description": "Beastmen are mutated monstrosities that infest the forests of the Empire: massive horned creatures with an inhuman resistance to pain. The destruction of Mordheim brought many Beastmen into the ruined city to prey upon the survivors. They readily ally with the Magisters of the Possessed warbands."
                 }
             ]
         },
         {
-            "name": "Cadet2",
+            "name": "Warrior2",
             "henchmanlist": [
                 {
-                    "name": "Cadet20",
-                    "race": "High Elf",
-                    "source": "Broheim",
-                    "warband": "High Elves",
-                    "category": "Cadet",
+                    "name": "Warrior20",
+                    "race": "Chaos Human",
+                    "source": "Core Rules",
+                    "warband": "The Cult of the Possessed",
+                    "category": "Beastman",
                     "ishero": false,
                     "skill": {
-                        "movement": 5,
-                        "weapon": 3,
+                        "movement": 4,
+                        "weapon": 4,
                         "ballistic": 3,
                         "strength": 3,
-                        "toughness": 3,
-                        "wounds": 1,
-                        "initiative": 5,
+                        "toughness": 4,
+                        "wounds": 2,
+                        "initiative": 3,
                         "actions": 1,
-                        "leadership": 8,
+                        "leadership": 7,
                         "armoursave": 0
                     },
                     "abilitylist": [],
@@ -1052,32 +1181,32 @@
                         }
                     ],
                     "experience": 0,
-                    "price": 30,
-                    "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                    "price": 45,
+                    "maxcount": 3,
+                    "description": "Beastmen are mutated monstrosities that infest the forests of the Empire: massive horned creatures with an inhuman resistance to pain. The destruction of Mordheim brought many Beastmen into the ruined city to prey upon the survivors. They readily ally with the Magisters of the Possessed warbands."
                 }
             ]
         },
         {
-            "name": "Cadet3",
+            "name": "Marksmen3",
             "henchmanlist": [
                 {
-                    "name": "Cadet30",
-                    "race": "High Elf",
-                    "source": "Broheim",
-                    "warband": "High Elves",
-                    "category": "Cadet",
+                    "name": "Marksmen30",
+                    "race": "Chaos Human",
+                    "source": "Core Rules",
+                    "warband": "The Cult of the Possessed",
+                    "category": "Beastman",
                     "ishero": false,
                     "skill": {
-                        "movement": 5,
-                        "weapon": 3,
+                        "movement": 4,
+                        "weapon": 4,
                         "ballistic": 3,
                         "strength": 3,
-                        "toughness": 3,
-                        "wounds": 1,
-                        "initiative": 5,
+                        "toughness": 4,
+                        "wounds": 2,
+                        "initiative": 3,
                         "actions": 1,
-                        "leadership": 8,
+                        "leadership": 7,
                         "armoursave": 0
                     },
                     "abilitylist": [],
@@ -1138,32 +1267,32 @@
                         }
                     ],
                     "experience": 0,
-                    "price": 30,
-                    "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                    "price": 45,
+                    "maxcount": 3,
+                    "description": "Beastmen are mutated monstrosities that infest the forests of the Empire: massive horned creatures with an inhuman resistance to pain. The destruction of Mordheim brought many Beastmen into the ruined city to prey upon the survivors. They readily ally with the Magisters of the Possessed warbands."
                 }
             ]
         },
         {
-            "name": "Cadet4",
+            "name": "Marksmen4",
             "henchmanlist": [
                 {
-                    "name": "Cadet40",
-                    "race": "High Elf",
-                    "source": "Broheim",
-                    "warband": "High Elves",
-                    "category": "Cadet",
+                    "name": "Marksmen40",
+                    "race": "Chaos Human",
+                    "source": "Core Rules",
+                    "warband": "The Cult of the Possessed",
+                    "category": "Beastman",
                     "ishero": false,
                     "skill": {
-                        "movement": 5,
-                        "weapon": 3,
+                        "movement": 4,
+                        "weapon": 4,
                         "ballistic": 3,
                         "strength": 3,
-                        "toughness": 3,
-                        "wounds": 1,
-                        "initiative": 5,
+                        "toughness": 4,
+                        "wounds": 2,
+                        "initiative": 3,
                         "actions": 1,
-                        "leadership": 8,
+                        "leadership": 7,
                         "armoursave": 0
                     },
                     "abilitylist": [],
@@ -1224,27 +1353,27 @@
                         }
                     ],
                     "experience": 0,
-                    "price": 30,
-                    "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                    "price": 45,
+                    "maxcount": 3,
+                    "description": "Beastmen are mutated monstrosities that infest the forests of the Empire: massive horned creatures with an inhuman resistance to pain. The destruction of Mordheim brought many Beastmen into the ruined city to prey upon the survivors. They readily ally with the Magisters of the Possessed warbands."
                 },
                 {
-                    "name": "Cadet42",
-                    "race": "High Elf",
-                    "source": "Broheim",
-                    "warband": "High Elves",
-                    "category": "Cadet",
+                    "name": "Marksmen42",
+                    "race": "Chaos Human",
+                    "source": "Core Rules",
+                    "warband": "The Cult of the Possessed",
+                    "category": "Beastman",
                     "ishero": false,
                     "skill": {
-                        "movement": 5,
-                        "weapon": 3,
+                        "movement": 4,
+                        "weapon": 4,
                         "ballistic": 3,
                         "strength": 3,
-                        "toughness": 3,
-                        "wounds": 1,
-                        "initiative": 5,
+                        "toughness": 4,
+                        "wounds": 2,
+                        "initiative": 3,
                         "actions": 1,
-                        "leadership": 8,
+                        "leadership": 7,
                         "armoursave": 0
                     },
                     "abilitylist": [],
@@ -1305,27 +1434,27 @@
                         }
                     ],
                     "experience": 0,
-                    "price": 30,
-                    "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                    "price": 45,
+                    "maxcount": 3,
+                    "description": "Beastmen are mutated monstrosities that infest the forests of the Empire: massive horned creatures with an inhuman resistance to pain. The destruction of Mordheim brought many Beastmen into the ruined city to prey upon the survivors. They readily ally with the Magisters of the Possessed warbands."
                 },
                 {
-                    "name": "Cadet43",
-                    "race": "High Elf",
-                    "source": "Broheim",
-                    "warband": "High Elves",
-                    "category": "Cadet",
+                    "name": "Marksmen43",
+                    "race": "Chaos Human",
+                    "source": "Core Rules",
+                    "warband": "The Cult of the Possessed",
+                    "category": "Beastman",
                     "ishero": false,
                     "skill": {
-                        "movement": 5,
-                        "weapon": 3,
+                        "movement": 4,
+                        "weapon": 4,
                         "ballistic": 3,
                         "strength": 3,
-                        "toughness": 3,
-                        "wounds": 1,
-                        "initiative": 5,
+                        "toughness": 4,
+                        "wounds": 2,
+                        "initiative": 3,
                         "actions": 1,
-                        "leadership": 8,
+                        "leadership": 7,
                         "armoursave": 0
                     },
                     "abilitylist": [],
@@ -1386,27 +1515,27 @@
                         }
                     ],
                     "experience": 0,
-                    "price": 30,
-                    "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                    "price": 45,
+                    "maxcount": 3,
+                    "description": "Beastmen are mutated monstrosities that infest the forests of the Empire: massive horned creatures with an inhuman resistance to pain. The destruction of Mordheim brought many Beastmen into the ruined city to prey upon the survivors. They readily ally with the Magisters of the Possessed warbands."
                 },
                 {
-                    "name": "Cadet44",
-                    "race": "High Elf",
-                    "source": "Broheim",
-                    "warband": "High Elves",
-                    "category": "Cadet",
+                    "name": "Marksmen44",
+                    "race": "Chaos Human",
+                    "source": "Core Rules",
+                    "warband": "The Cult of the Possessed",
+                    "category": "Beastman",
                     "ishero": false,
                     "skill": {
-                        "movement": 5,
-                        "weapon": 3,
+                        "movement": 4,
+                        "weapon": 4,
                         "ballistic": 3,
                         "strength": 3,
-                        "toughness": 3,
-                        "wounds": 1,
-                        "initiative": 5,
+                        "toughness": 4,
+                        "wounds": 2,
+                        "initiative": 3,
                         "actions": 1,
-                        "leadership": 8,
+                        "leadership": 7,
                         "armoursave": 0
                     },
                     "abilitylist": [],
@@ -1467,27 +1596,27 @@
                         }
                     ],
                     "experience": 0,
-                    "price": 30,
-                    "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                    "price": 45,
+                    "maxcount": 3,
+                    "description": "Beastmen are mutated monstrosities that infest the forests of the Empire: massive horned creatures with an inhuman resistance to pain. The destruction of Mordheim brought many Beastmen into the ruined city to prey upon the survivors. They readily ally with the Magisters of the Possessed warbands."
                 },
                 {
-                    "name": "Cadet45",
-                    "race": "High Elf",
-                    "source": "Broheim",
-                    "warband": "High Elves",
-                    "category": "Cadet",
+                    "name": "Marksmen45",
+                    "race": "Chaos Human",
+                    "source": "Core Rules",
+                    "warband": "The Cult of the Possessed",
+                    "category": "Beastman",
                     "ishero": false,
                     "skill": {
-                        "movement": 5,
-                        "weapon": 3,
+                        "movement": 4,
+                        "weapon": 4,
                         "ballistic": 3,
                         "strength": 3,
-                        "toughness": 3,
-                        "wounds": 1,
-                        "initiative": 5,
+                        "toughness": 4,
+                        "wounds": 2,
+                        "initiative": 3,
                         "actions": 1,
-                        "leadership": 8,
+                        "leadership": 7,
                         "armoursave": 0
                     },
                     "abilitylist": [],
@@ -1548,27 +1677,27 @@
                         }
                     ],
                     "experience": 0,
-                    "price": 30,
-                    "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                    "price": 45,
+                    "maxcount": 3,
+                    "description": "Beastmen are mutated monstrosities that infest the forests of the Empire: massive horned creatures with an inhuman resistance to pain. The destruction of Mordheim brought many Beastmen into the ruined city to prey upon the survivors. They readily ally with the Magisters of the Possessed warbands."
                 },
                 {
-                    "name": "Cadet46",
-                    "race": "High Elf",
-                    "source": "Broheim",
-                    "warband": "High Elves",
-                    "category": "Cadet",
+                    "name": "Marksmen46",
+                    "race": "Chaos Human",
+                    "source": "Core Rules",
+                    "warband": "The Cult of the Possessed",
+                    "category": "Beastman",
                     "ishero": false,
                     "skill": {
-                        "movement": 5,
-                        "weapon": 3,
+                        "movement": 4,
+                        "weapon": 4,
                         "ballistic": 3,
                         "strength": 3,
-                        "toughness": 3,
-                        "wounds": 1,
-                        "initiative": 5,
+                        "toughness": 4,
+                        "wounds": 2,
+                        "initiative": 3,
                         "actions": 1,
-                        "leadership": 8,
+                        "leadership": 7,
                         "armoursave": 0
                     },
                     "abilitylist": [],
@@ -1629,9 +1758,9 @@
                         }
                     ],
                     "experience": 0,
-                    "price": 30,
-                    "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                    "price": 45,
+                    "maxcount": 3,
+                    "description": "Beastmen are mutated monstrosities that infest the forests of the Empire: massive horned creatures with an inhuman resistance to pain. The destruction of Mordheim brought many Beastmen into the ruined city to prey upon the survivors. They readily ally with the Magisters of the Possessed warbands."
                 }
             ]
         }

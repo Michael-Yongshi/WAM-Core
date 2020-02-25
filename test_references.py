@@ -567,8 +567,8 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 4, 4, 3, 3, 1, 3, 1, 8, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Character", "name": "Leader"},
             {"source": "Core Rules", "category": "Character", "name": "Chaos Ritualist"},
+            {"source": "Core Rules", "category": "Character", "name": "Leader"},
             ],
         magiclist = [],
         itemlist = [
@@ -681,8 +681,8 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 4, 4, 3, 3, 1, 4, 1, 8, 0],
         abilitylist = [            
-            {"source": "Core Rules", "category": "Character", "name": "Leader"},
             {"source": "Core Rules", "category": "Character", "name": "Burn the Witch!"},
+            {"source": "Core Rules", "category": "Character", "name": "Leader"},
         ],
         magiclist = [],
         itemlist = [
@@ -795,8 +795,8 @@ if __name__ == "__main__":
         ishero = True,
         skill = [4, 4, 4, 3, 3, 1, 4, 1, 8, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Character", "name": "Leader"},
             {"source": "Core Rules", "category": "Character", "name": "Prayers of Sigmar"},
+            {"source": "Core Rules", "category": "Character", "name": "Leader"},
         ],
         magiclist = [],
         itemlist = [
@@ -888,11 +888,11 @@ if __name__ == "__main__":
         ishero = True,
         skill = [6, 4, 4, 4, 4, 2, 5, 2, 8, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Character", "name": "Leader"},
             {"source": "Core Rules", "category": "Character", "name": "Cause Fear"},
             {"source": "Core Rules", "category": "Character", "name": "Immune to Psychology"},
             {"source": "Core Rules", "category": "Character", "name": "Immune to Poison"},
             {"source": "Core Rules", "category": "Character", "name": "Immune to Pain"},
+            {"source": "Core Rules", "category": "Character", "name": "Leader"},
         ],
         magiclist = [],
         itemlist = [
@@ -955,7 +955,7 @@ if __name__ == "__main__":
             {"source": "Core Rules", "category": "Character", "name": "Immune to Poison"},
             {"source": "Core Rules", "category": "Character", "name": "Immune to Pain"},
             {"source": "Core Rules", "category": "Character", "name": "Animal"},
-            {"source": "Core Rules", "category": "Character", "name": "May not Run"},
+            {"source": "Core Rules", "category": "Character", "name": "May Not Run"},
         ],
         magiclist = [],
         itemlist = [],
@@ -1000,7 +1000,7 @@ if __name__ == "__main__":
             {"source": "Core Rules", "category": "Character", "name": "Immune to Psychology"},
             {"source": "Core Rules", "category": "Character", "name": "Immune to Poison"},
             {"source": "Core Rules", "category": "Character", "name": "Immune to Pain"},
-            {"source": "Core Rules", "category": "Character", "name": "May not Run"},
+            {"source": "Core Rules", "category": "Character", "name": "May Not Run"},
             {"source": "Core Rules", "category": "Character", "name": "Animal"},
         ],
         magiclist = [],
@@ -1020,8 +1020,8 @@ if __name__ == "__main__":
         ishero = True,
         skill = [6, 4, 4, 4, 3, 1, 5, 1, 7, 0],
         abilitylist = [
-            {"source": "Core Rules", "category": "Character", "name": "Leader"},
             {"source": "Core Rules", "category": "Character", "name": "Armour Piercing"},
+            {"source": "Core Rules", "category": "Character", "name": "Leader"},
         ],
         magiclist = [],
         itemlist = [
@@ -1105,13 +1105,13 @@ if __name__ == "__main__":
     add_characterref(
         race = "Skaven",
         source = "Core Rules",
-        warband = "The Skaven",
+        warband = "Skaven",
         category = "Giant Rats",
         ishero = False,
         skill = [6, 4, 4, 4, 4, 2, 5, 2, 8, 0],
         abilitylist = [
             {"source": "Core Rules", "category": "Character", "name": "Unarmed and Unarmoured"},
-            {"source": "Core Rules", "category": "Character", "name": "Pack size"},
+            {"source": "Core Rules", "category": "Character", "name": "Pack Size"},
             {"source": "Core Rules", "category": "Character", "name": "Animal"},
         ],
         magiclist = [],
@@ -1124,7 +1124,7 @@ if __name__ == "__main__":
     add_characterref(
         race = "Skaven",
         source = "Core Rules",
-        warband = "The Skaven",
+        warband = "Skaven",
         category = "Rat Ogre",
         ishero = False,
         skill = [6, 3, 3, 5, 5, 3, 4, 3, 4, 0],
@@ -1152,8 +1152,8 @@ if __name__ == "__main__":
         ishero = True,
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 9, 0],
         abilitylist = [
+            {"source": "Broheim", "category": "Character", "name": "High Elven Magician"},
             {"source": "Core Rules", "category": "Character", "name": "Leader"},
-            {"source": "Broheim", "category": "Character", "name": "High Elven Magician"}
             ],
         magiclist = [],
         itemlist = [
@@ -1242,8 +1242,8 @@ if __name__ == "__main__":
         ishero = True,
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 9, 0],
         abilitylist = [
+            {"source": "Broheim", "category": "Character", "name": "High Elven Magician"},
             {"source": "Core Rules", "category": "Character", "name": "Leader"},
-            {"source": "Broheim", "category": "Character", "name": "High Elven Magician"}
             ],
         magiclist = [],
         itemlist = [
@@ -2346,7 +2346,7 @@ if __name__ == "__main__":
         source = "Core Rules", 
         category = "Character",
         name = "May Not Run",
-        description = "This character may not run (but may charge normally).",
+        description = "This character May Not Run (but may charge normally).",
     )
     add_abilityref(
         source = "Core Rules", 
@@ -2710,7 +2710,7 @@ if __name__ == "__main__":
         source = "Core Rules", 
         category = "Injury",
         name = "Smashed Leg",
-        description = "The warrior may not run any more but he may still charge.",
+        description = "The warrior May Not Run any more but he may still charge.",
     )
     add_abilityref(
         source = "Core Rules", 

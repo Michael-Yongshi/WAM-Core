@@ -1,0 +1,1693 @@
+{
+    "name": "Test Skaven",
+    "race": "Skaven",
+    "source": "Core Rules",
+    "warband": "Skaven",
+    "description": "Unbeknownst to man, for thousands of years he has shared his world with another and altogether different race. There have always been signs for those who cared to see them: a scurrying black shadow, an inhuman scream from the sewer, scuttling shapes at the back of the cellar. All these years these creatures have worked away in secret, burrowing beneath the world of man, undermining his great cities, infiltrating his sewers and cellars, and joining all up into a vast worldspanning labyrinth of tunnels and nests.These creatures call themselves Skaven and they are ratmen, the mutant spawn of an older age of chaos and mutation. Doubtless one day the Skaven will be ready to emerge from their tunnels and wage open war upon mankind. For centuries they have been content to feed upon his ruins, to seed plague in his cities, and spread contagion amongst his lands. At least they were content to wait and watch, for now everything has suddenly changed.Now the destruction of Mordheim has created new opportunities in the secret war against mankind. Since ancient times the Skaven have searched the world for the stones of power that men in their ignorance call wyrdstone but which Skaven have long since known as warpstone, blackstone, or seerstone.It was as a result of gnawing upon this magic stone in ages past that commonplace rats began the slow process of mutation that spawned the Skaven race. Wyrdstone is quite literally in their blood, for they feed upon it and make use of it in their foul sorceries.Until now the ratmen\u2019s search for wyrdstone has been difficult and time-consuming as the stone has grown increasingly rare, but now a new and abundant source has appeared \u2013 a dark blessing from the skies! For the Skaven of Clan Eshin, this is an especially opportune time for such a thing to happen, for, just as the Empire is divided, so the Skaven race is divided amongst itself.Clan fights clan the world over, each struggling for domination of the Council of Thirteen whose masters rule the Skaven race. Mordheim\u2019s secret is not yet revealed to all the clans, or else the City of the Damned would already be overrun with ratmen. The Nightmaster of Clan Eshin is keen to guard this secret, and for this reason has not sent his multitudinous armies into Mordheim.Instead, he has sent small warbands of Skaven skittering through secret tunnels into the city to gather up the shining stones and bring them back to the clan nests. The Skaven of Clan Eshin are supremely adapted to their task. Masters of the art of bringing silent death to their foes, they are skilled in the use of poison and trained in the thousand secrets of the assassin.Since birth Skaven warriors practise martial crafts in the ruinous temples of the Horned Rat, their everhungering and hideous god. There are none better amongst their verminous kind to gather up the treasure of Mordheim, but they must be silent, swift and efficient. Were rival Skaven clans to discover the secret of Mordheim there would come not hundreds, not thousands, but millions upon millions to contend for the wyrdstone in the City of the Damned.<i>-These are no ordinary vermin - big as a man, fast on their feet, and smart too, not like common rats. The whole city\u2019s full of \u2019em and the worse of it is they\u2019re waitin\u2019 in the old drains and sewers, watchin\u2019 for a chance to catch you on your own. Let \u2019em and you\u2019re a dead man.-</i>",
+    "treasury": {
+        "gold": 500,
+        "wyrd": 0
+    },
+    "rulelist": [],
+    "itemlist": [],
+    "herolist": [
+        {
+            "name": "Anado",
+            "race": "Skaven",
+            "source": "Core Rules",
+            "warband": "Skaven",
+            "category": "Assessin Adept",
+            "ishero": true,
+            "skill": {
+                "movement": 6,
+                "weapon": 4,
+                "ballistic": 4,
+                "strength": 4,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 5,
+                "actions": 1,
+                "leadership": 7,
+                "armoursave": 0
+            },
+            "abilitylist": [
+                {
+                    "source": "Core Rules",
+                    "category": "Injury",
+                    "name": "Hardened",
+                    "description": "The warrior survives and becomes inured to the horrors of Mordheim. From now on he is immune to fear."
+                }
+            ],
+            "magiclist": [
+                {
+                    "source": "Core Rules",
+                    "category": "Magic of the Horned Rat",
+                    "name": "Warpfire",
+                    "group": "Spells",
+                    "difficulty": 8,
+                    "description": "<i>A green flame leaps from the outstretched paw of the Sorcerer and burns its victims with indescribable agony.</i><br/><br/>The spell has a range of 8 inch, hitting the first model in its path. The spell causes D3 Strength 4 hits on its target, and one Strength 3 hit on each model within 2 inch of the target."
+                }
+            ],
+            "itemlist": [
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Melee Weapon",
+                    "subcategory": "Halberd",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 1,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Item",
+                            "name": "Two Handed",
+                            "description": "A model armed with this weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."
+                        }
+                    ],
+                    "magiclist": [],
+                    "price": 10,
+                    "description": "The halberd\u2019s heavy blade is mounted upon a sturdy shaft of oak or steel and has a point like a spear and a cutting edge like an axe. Since it can be used to chop as well as thrust, it is an adaptable weapon, but is difficult to use inside buildings."
+                }
+            ],
+            "experience": 20,
+            "price": 60,
+            "maxcount": 1,
+            "description": "The Nightmaster of Clan Eshin has sent the Assassin to collect precious wyrdstone. Success means many breeders, wealth and a better position amongst the clan. Failure, on the other hand, is best not contemplated\u2026"
+        },
+        {
+            "name": "Barend",
+            "race": "Skaven",
+            "source": "Core Rules",
+            "warband": "Skaven",
+            "category": "Eshin Sorcerer",
+            "ishero": true,
+            "skill": {
+                "movement": 5,
+                "weapon": 3,
+                "ballistic": 3,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 4,
+                "actions": 1,
+                "leadership": 6,
+                "armoursave": 0
+            },
+            "abilitylist": [
+                {
+                    "source": "Core Rules",
+                    "category": "Character",
+                    "name": "Horned Rat Sorcerer",
+                    "description": "This character is a wizard and uses the Magic of the Horned Rat. See the Magic section for details."
+                }
+            ],
+            "magiclist": [],
+            "itemlist": [
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Melee Weapon",
+                    "subcategory": "Sword",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Item",
+                            "name": "Parry",
+                            "description": "This weapon offers an excellent balance of defense and offence. A model armed with this weapon may parry blows. When his opponent rolls to hit, the model armed with this weapon may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength \u2013 they are simply too powerful to be stopped. The character may reroll a failed parry attempt for every extra item that allows for Parrying."
+                        }
+                    ],
+                    "magiclist": [],
+                    "price": 10,
+                    "description": "The sword is often referred to as the \u2018king of weapons\u2019. The most common sword available, the broadsword of the Empire, is a masterpiece by the standards of any smith: four full feet of gleaming steel, double-edged and razor-sharp. Swords are much more effective weapons than crude clubs and axes, though learning to use a sword is a long and difficult process. It takes years to truly master this weapon \u2013 most warriors in Mordheim die long before they get this far!"
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Light Armour",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 20,
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Shield",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Item",
+                            "name": "Encumbered 2 of 2",
+                            "description": "A warrior that is armed with both heavy armor and a shield suffers a -1 Movement penalty."
+                        }
+                    ],
+                    "magiclist": [],
+                    "price": 5,
+                    "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner."
+                }
+            ],
+            "experience": 8,
+            "price": 0,
+            "maxcount": 1,
+            "description": "The Sorcerers of Clan Eshin are black magicians who manufacture the enchanted weapons of the Assassins. Though their power is slight compared to the Warlocks of Clan Skryre or the mighty Grey Seer, their black sorcery is still potent."
+        },
+        {
+            "name": "Ceasar",
+            "race": "Skaven",
+            "source": "Core Rules",
+            "warband": "Skaven",
+            "category": "Black Skaven",
+            "ishero": true,
+            "skill": {
+                "movement": 6,
+                "weapon": 4,
+                "ballistic": 3,
+                "strength": 4,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 5,
+                "actions": 1,
+                "leadership": 6,
+                "armoursave": 0
+            },
+            "abilitylist": [],
+            "magiclist": [],
+            "itemlist": [
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Melee Weapon",
+                    "subcategory": "Sword",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Item",
+                            "name": "Parry",
+                            "description": "This weapon offers an excellent balance of defense and offence. A model armed with this weapon may parry blows. When his opponent rolls to hit, the model armed with this weapon may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength \u2013 they are simply too powerful to be stopped. The character may reroll a failed parry attempt for every extra item that allows for Parrying."
+                        }
+                    ],
+                    "magiclist": [],
+                    "price": 10,
+                    "description": "The sword is often referred to as the \u2018king of weapons\u2019. The most common sword available, the broadsword of the Empire, is a masterpiece by the standards of any smith: four full feet of gleaming steel, double-edged and razor-sharp. Swords are much more effective weapons than crude clubs and axes, though learning to use a sword is a long and difficult process. It takes years to truly master this weapon \u2013 most warriors in Mordheim die long before they get this far!"
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Light Armour",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 20,
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Shield",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Item",
+                            "name": "Encumbered 2 of 2",
+                            "description": "A warrior that is armed with both heavy armor and a shield suffers a -1 Movement penalty."
+                        }
+                    ],
+                    "magiclist": [],
+                    "price": 5,
+                    "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner."
+                }
+            ],
+            "experience": 8,
+            "price": 40,
+            "maxcount": 2,
+            "description": "Black Skaven are the most powerful fighters of Clan Eshin: black-furred killers trained in the martial arts of their clan. In Mordheim they excel at ambushing and assassinating man-things."
+        },
+        {
+            "name": "Dan",
+            "race": "Skaven",
+            "source": "Core Rules",
+            "warband": "Skaven",
+            "category": "Night Runner",
+            "ishero": true,
+            "skill": {
+                "movement": 6,
+                "weapon": 2,
+                "ballistic": 3,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 4,
+                "actions": 1,
+                "leadership": 4,
+                "armoursave": 0
+            },
+            "abilitylist": [],
+            "magiclist": [],
+            "itemlist": [
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Missile Weapon",
+                    "subcategory": "Long Bow",
+                    "distance": 30,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 3,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 15,
+                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Light Armour",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 20,
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                }
+            ],
+            "experience": 0,
+            "price": 20,
+            "maxcount": 2,
+            "description": "Night Runners are the young apprentices of Clan Eshin. Recently initiated into the secrets of the clan, they make up for their lack of knowledge with their ambition and energy."
+        },
+        {
+            "name": "Everest",
+            "race": "Skaven",
+            "source": "Core Rules",
+            "warband": "Skaven",
+            "category": "Night Runner",
+            "ishero": true,
+            "skill": {
+                "movement": 6,
+                "weapon": 2,
+                "ballistic": 3,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 4,
+                "actions": 1,
+                "leadership": 4,
+                "armoursave": 0
+            },
+            "abilitylist": [],
+            "magiclist": [],
+            "itemlist": [
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Missile Weapon",
+                    "subcategory": "Long Bow",
+                    "distance": 30,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 3,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 15,
+                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Light Armour",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 20,
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                }
+            ],
+            "experience": 0,
+            "price": 20,
+            "maxcount": 2,
+            "description": "Night Runners are the young apprentices of Clan Eshin. Recently initiated into the secrets of the clan, they make up for their lack of knowledge with their ambition and energy."
+        },
+        {
+            "name": "Frederik",
+            "race": "Skaven",
+            "source": "Core Rules",
+            "warband": "Skaven",
+            "category": "Night Runner",
+            "ishero": true,
+            "skill": {
+                "movement": 6,
+                "weapon": 2,
+                "ballistic": 3,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 4,
+                "actions": 1,
+                "leadership": 4,
+                "armoursave": 0
+            },
+            "abilitylist": [],
+            "magiclist": [],
+            "itemlist": [
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Missile Weapon",
+                    "subcategory": "Long Bow",
+                    "distance": 30,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 3,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 15,
+                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Light Armour",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 20,
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                }
+            ],
+            "experience": 0,
+            "price": 20,
+            "maxcount": 2,
+            "description": "Night Runners are the young apprentices of Clan Eshin. Recently initiated into the secrets of the clan, they make up for their lack of knowledge with their ambition and energy."
+        }
+    ],
+    "squadlist": [
+        {
+            "name": "Swordsmen",
+            "henchmanlist": [
+                {
+                    "name": "Swordsmen0",
+                    "race": "Skaven",
+                    "source": "Core Rules",
+                    "warband": "Skaven",
+                    "category": "Verminkin",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 4,
+                        "actions": 1,
+                        "leadership": 5,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Starting Dagger",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cloth is Armour",
+                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 0,
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                        },
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Spear",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "First Strike",
+                                    "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Unwieldy",
+                                    "description": "A model armed with this weapon may only use a shield or a buckler in his other hand. He may not use a second weapon, because it requires all his skill to wield it."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cavalry Charge Bonus",
+                                    "description": "If using the rules for mounted models, a mounted warrior armed with this weapon receives a +1 Strength bonus when he charges. This bonus only applies for that turn."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 10,
+                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 20,
+                    "maxcount": 0,
+                    "description": "Verminkin are the Clanrats of Clan Eshin. The strongest amongst them are initiated into the secrets of the clans and begin their training to become Assassins, the most feared warriors of the Skaven warbands. All the Clanrats of Clan Eshin dream of rising to the status of an Assassin one day."
+                },
+                {
+                    "name": "Swordsmen1",
+                    "race": "Skaven",
+                    "source": "Core Rules",
+                    "warband": "Skaven",
+                    "category": "Verminkin",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 4,
+                        "actions": 1,
+                        "leadership": 5,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Starting Dagger",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cloth is Armour",
+                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 0,
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                        },
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Spear",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "First Strike",
+                                    "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Unwieldy",
+                                    "description": "A model armed with this weapon may only use a shield or a buckler in his other hand. He may not use a second weapon, because it requires all his skill to wield it."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cavalry Charge Bonus",
+                                    "description": "If using the rules for mounted models, a mounted warrior armed with this weapon receives a +1 Strength bonus when he charges. This bonus only applies for that turn."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 10,
+                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 20,
+                    "maxcount": 0,
+                    "description": "Verminkin are the Clanrats of Clan Eshin. The strongest amongst them are initiated into the secrets of the clans and begin their training to become Assassins, the most feared warriors of the Skaven warbands. All the Clanrats of Clan Eshin dream of rising to the status of an Assassin one day."
+                },
+                {
+                    "name": "Swordsmen2",
+                    "race": "Skaven",
+                    "source": "Core Rules",
+                    "warband": "Skaven",
+                    "category": "Verminkin",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 5,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 4,
+                        "actions": 1,
+                        "leadership": 5,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Starting Dagger",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cloth is Armour",
+                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 0,
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                        },
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Spear",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "First Strike",
+                                    "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Unwieldy",
+                                    "description": "A model armed with this weapon may only use a shield or a buckler in his other hand. He may not use a second weapon, because it requires all his skill to wield it."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cavalry Charge Bonus",
+                                    "description": "If using the rules for mounted models, a mounted warrior armed with this weapon receives a +1 Strength bonus when he charges. This bonus only applies for that turn."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 10,
+                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 20,
+                    "maxcount": 0,
+                    "description": "Verminkin are the Clanrats of Clan Eshin. The strongest amongst them are initiated into the secrets of the clans and begin their training to become Assassins, the most feared warriors of the Skaven warbands. All the Clanrats of Clan Eshin dream of rising to the status of an Assassin one day."
+                }
+            ]
+        },
+        {
+            "name": "Marksmen",
+            "henchmanlist": [
+                {
+                    "name": "Marksmen0",
+                    "race": "Skaven",
+                    "source": "Core Rules",
+                    "warband": "Skaven",
+                    "category": "Giant Rats",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 6,
+                        "weapon": 4,
+                        "ballistic": 4,
+                        "strength": 4,
+                        "toughness": 4,
+                        "wounds": 2,
+                        "initiative": 5,
+                        "actions": 2,
+                        "leadership": 8,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Pack Size",
+                            "description": "You can recruit as many characters of this type as you wish."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        }
+                    ],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Great Sword",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 2,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Two Handed",
+                                    "description": "A model armed with this weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Last Strike",
+                                    "description": "This weapon is so heavy that the model using it always strikes last, even when charging."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 15,
+                    "maxcount": 0,
+                    "description": "Giant Rats are creations of the twisted genius of the Skaven. They are mutated monstrosities the size of dogs. They fight alongside the Skaven, overpowering any opponents by sheer weight of numbers."
+                }
+            ]
+        },
+        {
+            "name": "Warrior",
+            "henchmanlist": [
+                {
+                    "name": "Warrior0",
+                    "race": "Skaven",
+                    "source": "Core Rules",
+                    "warband": "Skaven",
+                    "category": "Rat Ogre",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 6,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 5,
+                        "toughness": 5,
+                        "wounds": 3,
+                        "initiative": 4,
+                        "actions": 3,
+                        "leadership": 4,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Cause Fear",
+                            "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Leaderless Stupidity",
+                            "description": "Many large and powerful creatures, as well as some of the more unhinged individuals in Mordheim, are unfortunately rather stupid. This character is subject to stupidity unless a Hero is within 6 inch of it.<br/><br/>Models that are stupid test at the start of their turn to see if they overcome their stupidity. Make a test for each model affected by stupidity. If you pass the test by rolling their Leadership value or less on 2D6 then all is well \u2013 the creatures behave reasonably intelligently and the player may move and fight with them as normal.<br/>If the test is failed all is not well. If the model is in combat it will not strike any blows during this turn of hand-to-hand combat. If he is a spell caster then he may not cast any spells this turn. If a model who fails a Stupidity test is not in hand-tohand combat, roll a D6.<br/>1-3 The warrior moves directly forward at half speed in a shambling manner. He will not charge an enemy (stop his movement 1 inch away from any enemy he would have come into contact with). He can fall down from the edge of a sheer drop (see the Falling rules) or hit an obstacle, in which case he stops. The model will not shoot this turn.<br/>4-6 The warrior stands inactive and drools a bit during this turn. He may do nothing else, as drooling is so demanding."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Large Target",
+                            "description": "This character is a Large Target as defined in the shooting rules."
+                        }
+                    ],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 210,
+                    "maxcount": 1,
+                    "description": "These horrible monsters are much in demand as bodyguards to important Skaven."
+                }
+            ]
+        },
+        {
+            "name": "Warrior2",
+            "henchmanlist": [
+                {
+                    "name": "Warrior20",
+                    "race": "Skaven",
+                    "source": "Core Rules",
+                    "warband": "Skaven",
+                    "category": "Rat Ogre",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 6,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 5,
+                        "toughness": 5,
+                        "wounds": 3,
+                        "initiative": 4,
+                        "actions": 3,
+                        "leadership": 4,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Cause Fear",
+                            "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Leaderless Stupidity",
+                            "description": "Many large and powerful creatures, as well as some of the more unhinged individuals in Mordheim, are unfortunately rather stupid. This character is subject to stupidity unless a Hero is within 6 inch of it.<br/><br/>Models that are stupid test at the start of their turn to see if they overcome their stupidity. Make a test for each model affected by stupidity. If you pass the test by rolling their Leadership value or less on 2D6 then all is well \u2013 the creatures behave reasonably intelligently and the player may move and fight with them as normal.<br/>If the test is failed all is not well. If the model is in combat it will not strike any blows during this turn of hand-to-hand combat. If he is a spell caster then he may not cast any spells this turn. If a model who fails a Stupidity test is not in hand-tohand combat, roll a D6.<br/>1-3 The warrior moves directly forward at half speed in a shambling manner. He will not charge an enemy (stop his movement 1 inch away from any enemy he would have come into contact with). He can fall down from the edge of a sheer drop (see the Falling rules) or hit an obstacle, in which case he stops. The model will not shoot this turn.<br/>4-6 The warrior stands inactive and drools a bit during this turn. He may do nothing else, as drooling is so demanding."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Large Target",
+                            "description": "This character is a Large Target as defined in the shooting rules."
+                        }
+                    ],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 210,
+                    "maxcount": 1,
+                    "description": "These horrible monsters are much in demand as bodyguards to important Skaven."
+                }
+            ]
+        },
+        {
+            "name": "Marksmen3",
+            "henchmanlist": [
+                {
+                    "name": "Marksmen30",
+                    "race": "Skaven",
+                    "source": "Core Rules",
+                    "warband": "Skaven",
+                    "category": "Rat Ogre",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 6,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 5,
+                        "toughness": 5,
+                        "wounds": 3,
+                        "initiative": 4,
+                        "actions": 3,
+                        "leadership": 4,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Cause Fear",
+                            "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Leaderless Stupidity",
+                            "description": "Many large and powerful creatures, as well as some of the more unhinged individuals in Mordheim, are unfortunately rather stupid. This character is subject to stupidity unless a Hero is within 6 inch of it.<br/><br/>Models that are stupid test at the start of their turn to see if they overcome their stupidity. Make a test for each model affected by stupidity. If you pass the test by rolling their Leadership value or less on 2D6 then all is well \u2013 the creatures behave reasonably intelligently and the player may move and fight with them as normal.<br/>If the test is failed all is not well. If the model is in combat it will not strike any blows during this turn of hand-to-hand combat. If he is a spell caster then he may not cast any spells this turn. If a model who fails a Stupidity test is not in hand-tohand combat, roll a D6.<br/>1-3 The warrior moves directly forward at half speed in a shambling manner. He will not charge an enemy (stop his movement 1 inch away from any enemy he would have come into contact with). He can fall down from the edge of a sheer drop (see the Falling rules) or hit an obstacle, in which case he stops. The model will not shoot this turn.<br/>4-6 The warrior stands inactive and drools a bit during this turn. He may do nothing else, as drooling is so demanding."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Large Target",
+                            "description": "This character is a Large Target as defined in the shooting rules."
+                        }
+                    ],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 210,
+                    "maxcount": 1,
+                    "description": "These horrible monsters are much in demand as bodyguards to important Skaven."
+                }
+            ]
+        },
+        {
+            "name": "Marksmen4",
+            "henchmanlist": [
+                {
+                    "name": "Marksmen40",
+                    "race": "Skaven",
+                    "source": "Core Rules",
+                    "warband": "Skaven",
+                    "category": "Rat Ogre",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 6,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 5,
+                        "toughness": 5,
+                        "wounds": 3,
+                        "initiative": 4,
+                        "actions": 3,
+                        "leadership": 4,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Cause Fear",
+                            "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Leaderless Stupidity",
+                            "description": "Many large and powerful creatures, as well as some of the more unhinged individuals in Mordheim, are unfortunately rather stupid. This character is subject to stupidity unless a Hero is within 6 inch of it.<br/><br/>Models that are stupid test at the start of their turn to see if they overcome their stupidity. Make a test for each model affected by stupidity. If you pass the test by rolling their Leadership value or less on 2D6 then all is well \u2013 the creatures behave reasonably intelligently and the player may move and fight with them as normal.<br/>If the test is failed all is not well. If the model is in combat it will not strike any blows during this turn of hand-to-hand combat. If he is a spell caster then he may not cast any spells this turn. If a model who fails a Stupidity test is not in hand-tohand combat, roll a D6.<br/>1-3 The warrior moves directly forward at half speed in a shambling manner. He will not charge an enemy (stop his movement 1 inch away from any enemy he would have come into contact with). He can fall down from the edge of a sheer drop (see the Falling rules) or hit an obstacle, in which case he stops. The model will not shoot this turn.<br/>4-6 The warrior stands inactive and drools a bit during this turn. He may do nothing else, as drooling is so demanding."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Large Target",
+                            "description": "This character is a Large Target as defined in the shooting rules."
+                        }
+                    ],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 210,
+                    "maxcount": 1,
+                    "description": "These horrible monsters are much in demand as bodyguards to important Skaven."
+                },
+                {
+                    "name": "Marksmen42",
+                    "race": "Skaven",
+                    "source": "Core Rules",
+                    "warband": "Skaven",
+                    "category": "Rat Ogre",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 6,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 5,
+                        "toughness": 5,
+                        "wounds": 3,
+                        "initiative": 4,
+                        "actions": 3,
+                        "leadership": 4,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Cause Fear",
+                            "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Leaderless Stupidity",
+                            "description": "Many large and powerful creatures, as well as some of the more unhinged individuals in Mordheim, are unfortunately rather stupid. This character is subject to stupidity unless a Hero is within 6 inch of it.<br/><br/>Models that are stupid test at the start of their turn to see if they overcome their stupidity. Make a test for each model affected by stupidity. If you pass the test by rolling their Leadership value or less on 2D6 then all is well \u2013 the creatures behave reasonably intelligently and the player may move and fight with them as normal.<br/>If the test is failed all is not well. If the model is in combat it will not strike any blows during this turn of hand-to-hand combat. If he is a spell caster then he may not cast any spells this turn. If a model who fails a Stupidity test is not in hand-tohand combat, roll a D6.<br/>1-3 The warrior moves directly forward at half speed in a shambling manner. He will not charge an enemy (stop his movement 1 inch away from any enemy he would have come into contact with). He can fall down from the edge of a sheer drop (see the Falling rules) or hit an obstacle, in which case he stops. The model will not shoot this turn.<br/>4-6 The warrior stands inactive and drools a bit during this turn. He may do nothing else, as drooling is so demanding."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Large Target",
+                            "description": "This character is a Large Target as defined in the shooting rules."
+                        }
+                    ],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 210,
+                    "maxcount": 1,
+                    "description": "These horrible monsters are much in demand as bodyguards to important Skaven."
+                },
+                {
+                    "name": "Marksmen43",
+                    "race": "Skaven",
+                    "source": "Core Rules",
+                    "warband": "Skaven",
+                    "category": "Rat Ogre",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 6,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 5,
+                        "toughness": 5,
+                        "wounds": 3,
+                        "initiative": 4,
+                        "actions": 3,
+                        "leadership": 4,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Cause Fear",
+                            "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Leaderless Stupidity",
+                            "description": "Many large and powerful creatures, as well as some of the more unhinged individuals in Mordheim, are unfortunately rather stupid. This character is subject to stupidity unless a Hero is within 6 inch of it.<br/><br/>Models that are stupid test at the start of their turn to see if they overcome their stupidity. Make a test for each model affected by stupidity. If you pass the test by rolling their Leadership value or less on 2D6 then all is well \u2013 the creatures behave reasonably intelligently and the player may move and fight with them as normal.<br/>If the test is failed all is not well. If the model is in combat it will not strike any blows during this turn of hand-to-hand combat. If he is a spell caster then he may not cast any spells this turn. If a model who fails a Stupidity test is not in hand-tohand combat, roll a D6.<br/>1-3 The warrior moves directly forward at half speed in a shambling manner. He will not charge an enemy (stop his movement 1 inch away from any enemy he would have come into contact with). He can fall down from the edge of a sheer drop (see the Falling rules) or hit an obstacle, in which case he stops. The model will not shoot this turn.<br/>4-6 The warrior stands inactive and drools a bit during this turn. He may do nothing else, as drooling is so demanding."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Large Target",
+                            "description": "This character is a Large Target as defined in the shooting rules."
+                        }
+                    ],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 210,
+                    "maxcount": 1,
+                    "description": "These horrible monsters are much in demand as bodyguards to important Skaven."
+                },
+                {
+                    "name": "Marksmen44",
+                    "race": "Skaven",
+                    "source": "Core Rules",
+                    "warband": "Skaven",
+                    "category": "Rat Ogre",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 6,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 5,
+                        "toughness": 5,
+                        "wounds": 3,
+                        "initiative": 4,
+                        "actions": 3,
+                        "leadership": 4,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Cause Fear",
+                            "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Leaderless Stupidity",
+                            "description": "Many large and powerful creatures, as well as some of the more unhinged individuals in Mordheim, are unfortunately rather stupid. This character is subject to stupidity unless a Hero is within 6 inch of it.<br/><br/>Models that are stupid test at the start of their turn to see if they overcome their stupidity. Make a test for each model affected by stupidity. If you pass the test by rolling their Leadership value or less on 2D6 then all is well \u2013 the creatures behave reasonably intelligently and the player may move and fight with them as normal.<br/>If the test is failed all is not well. If the model is in combat it will not strike any blows during this turn of hand-to-hand combat. If he is a spell caster then he may not cast any spells this turn. If a model who fails a Stupidity test is not in hand-tohand combat, roll a D6.<br/>1-3 The warrior moves directly forward at half speed in a shambling manner. He will not charge an enemy (stop his movement 1 inch away from any enemy he would have come into contact with). He can fall down from the edge of a sheer drop (see the Falling rules) or hit an obstacle, in which case he stops. The model will not shoot this turn.<br/>4-6 The warrior stands inactive and drools a bit during this turn. He may do nothing else, as drooling is so demanding."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Large Target",
+                            "description": "This character is a Large Target as defined in the shooting rules."
+                        }
+                    ],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 210,
+                    "maxcount": 1,
+                    "description": "These horrible monsters are much in demand as bodyguards to important Skaven."
+                },
+                {
+                    "name": "Marksmen45",
+                    "race": "Skaven",
+                    "source": "Core Rules",
+                    "warband": "Skaven",
+                    "category": "Rat Ogre",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 6,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 5,
+                        "toughness": 5,
+                        "wounds": 3,
+                        "initiative": 4,
+                        "actions": 3,
+                        "leadership": 4,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Cause Fear",
+                            "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Leaderless Stupidity",
+                            "description": "Many large and powerful creatures, as well as some of the more unhinged individuals in Mordheim, are unfortunately rather stupid. This character is subject to stupidity unless a Hero is within 6 inch of it.<br/><br/>Models that are stupid test at the start of their turn to see if they overcome their stupidity. Make a test for each model affected by stupidity. If you pass the test by rolling their Leadership value or less on 2D6 then all is well \u2013 the creatures behave reasonably intelligently and the player may move and fight with them as normal.<br/>If the test is failed all is not well. If the model is in combat it will not strike any blows during this turn of hand-to-hand combat. If he is a spell caster then he may not cast any spells this turn. If a model who fails a Stupidity test is not in hand-tohand combat, roll a D6.<br/>1-3 The warrior moves directly forward at half speed in a shambling manner. He will not charge an enemy (stop his movement 1 inch away from any enemy he would have come into contact with). He can fall down from the edge of a sheer drop (see the Falling rules) or hit an obstacle, in which case he stops. The model will not shoot this turn.<br/>4-6 The warrior stands inactive and drools a bit during this turn. He may do nothing else, as drooling is so demanding."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Large Target",
+                            "description": "This character is a Large Target as defined in the shooting rules."
+                        }
+                    ],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 210,
+                    "maxcount": 1,
+                    "description": "These horrible monsters are much in demand as bodyguards to important Skaven."
+                },
+                {
+                    "name": "Marksmen46",
+                    "race": "Skaven",
+                    "source": "Core Rules",
+                    "warband": "Skaven",
+                    "category": "Rat Ogre",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 6,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 5,
+                        "toughness": 5,
+                        "wounds": 3,
+                        "initiative": 4,
+                        "actions": 3,
+                        "leadership": 4,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Cause Fear",
+                            "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Leaderless Stupidity",
+                            "description": "Many large and powerful creatures, as well as some of the more unhinged individuals in Mordheim, are unfortunately rather stupid. This character is subject to stupidity unless a Hero is within 6 inch of it.<br/><br/>Models that are stupid test at the start of their turn to see if they overcome their stupidity. Make a test for each model affected by stupidity. If you pass the test by rolling their Leadership value or less on 2D6 then all is well \u2013 the creatures behave reasonably intelligently and the player may move and fight with them as normal.<br/>If the test is failed all is not well. If the model is in combat it will not strike any blows during this turn of hand-to-hand combat. If he is a spell caster then he may not cast any spells this turn. If a model who fails a Stupidity test is not in hand-tohand combat, roll a D6.<br/>1-3 The warrior moves directly forward at half speed in a shambling manner. He will not charge an enemy (stop his movement 1 inch away from any enemy he would have come into contact with). He can fall down from the edge of a sheer drop (see the Falling rules) or hit an obstacle, in which case he stops. The model will not shoot this turn.<br/>4-6 The warrior stands inactive and drools a bit during this turn. He may do nothing else, as drooling is so demanding."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Large Target",
+                            "description": "This character is a Large Target as defined in the shooting rules."
+                        }
+                    ],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 210,
+                    "maxcount": 1,
+                    "description": "These horrible monsters are much in demand as bodyguards to important Skaven."
+                }
+            ]
+        }
+    ]
+}

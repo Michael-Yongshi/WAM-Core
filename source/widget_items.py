@@ -10,11 +10,11 @@ from PyQt5.QtWidgets import (
     QAction,
     QApplication,
     QDesktopWidget,
+    QFrame,
+    QGridLayout,
+    QHBoxLayout,
     QInputDialog,
     QLabel,
-    QGridLayout,
-    QVBoxLayout,
-    QHBoxLayout,
     QLineEdit,
     QListWidget,
     QListWidgetItem,
@@ -71,39 +71,35 @@ from source.class_hierarchy import (
     )
 
 from source.widget_template import *
+from source.widget_abilitymagic import WidgetAbility
 
-
-class WidgetItemsWarband(QBorderedWidget):
+class WidgetItemsWarband(QBorderlessFrame):
     def __init__(self, mainwindow):
         super().__init__()
 
         self.mainwindow = mainwindow
 
-        itembox = QVBoxLayout() # create a vertical layout to show them in a neat line
+        itemlistbox = QVBoxLayout() # create a vertical layout to show them in a neat line
         for item in self.mainwindow.wbid.itemlist:
-            label = QLabel()
-            label.setText(str(item.subcategory))
+            label = QClickLabel()
+            label.setText(f"<b>{item.subcategory}<b/>")
             label.setToolTip(f"<font><b>{item.subcategory} </b>{item.name} <br/> category: {item.category} <br/> distance: {item.distance} <br/> <nobr>{item.skill.to_string()}</nobr> <br/> price: {item.price} <br/> {item.description}</font>")
-            itemwrap = QVBoxLayout()
-            itemwrap.addWidget(label)
-            itemwidget = QInteractiveWidget()
-            itemwidget.setLayout(itemwrap)
-            itemwidget.clicked.connect(self.create_method_remove(warband = self.mainwindow.wbid, item = item))
-            itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
+            box = QVBoxLayout()
+            box.addWidget(label)
+            frame = QRaisedFrame()
+            frame.setLayout(box)
+            frame.clicked.connect(self.create_method_remove(warband = self.mainwindow.wbid, item = item))
+            itemlistbox.addWidget(frame) #adds the item to a label and at it to the vertical item layout
             
-        self.setLayout(itembox)
+        self.setLayout(itemlistbox)
             
-        label = QLabel()
-        label.setText("New Item")
-        itemwrap = QVBoxLayout()
-        itemwrap.addWidget(label)
-        itemwidget = QInteractiveWidget()
-        itemwidget.setLayout(itemwrap)
-        itemwidget.clicked.connect(self.create_new)
-        itembox.addWidget(itemwidget) #adds the new item to a label and at it to the vertical item layout
+        label = QClickLabel()
+        label.setText(f"<font>New Item<font/>")
+        label.clicked.connect(self.create_new)
+        itemlistbox.addWidget(label) #adds the new item to a label and at it to the vertical item layout
 
         self.setToolTip("These are your warbands items.")
-        self.setLayout(itembox)
+        self.setLayout(itemlistbox)
         
     def create_new(self):
 
@@ -143,38 +139,37 @@ class WidgetItemsWarband(QBorderedWidget):
 
 
 
-class WidgetItemsUnit(QBorderedWidget):
+class WidgetItemsUnit(QBorderlessFrame):
     def __init__(self, mainwindow):
         super().__init__()
 
         self.mainwindow = mainwindow
         unit = self.mainwindow.currentunit
 
-        itembox = QVBoxLayout() # create a vertical layout to show them in a neat line
+        itemlistbox = QVBoxLayout() # create a vertical layout to show them in a neat line
 
         for item in unit.itemlist:
-            label = QLabel()
-            label.setText(str(item.subcategory + " " + item.name))
+            itembox = QHBoxLayout()
+
+            label = QClickLabel()
+            label.setText(f"<b>{item.subcategory}<b/>") # label.setText(f"<b>{item.subcategory} - {item.name}<b/>")
             label.setToolTip(f"<font><b>{item.subcategory} </b>{item.name} <br/> category: {item.category} <br/> distance: {item.distance} <br/> <nobr>{item.skill.to_string()}</nobr> <br/> price: {item.price} <br/> {item.description}</font>")
-            itemwrap = QVBoxLayout()
-            itemwrap.addWidget(label)
-            itemwidget = QInteractiveWidget()
-            itemwidget.setLayout(itemwrap)
-            itemwidget.clicked.connect(self.create_method_remove(unit = unit, item = item))
-            itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
+            label.clicked.connect(self.create_method_remove(unit = unit, item = item))
+            itembox.addWidget(label)
+            itembox.addWidget(WidgetAbility(self.mainwindow, abilitylist = item.abilitylist, skip = True)) # adds the ability layout to the grid
+
+            frame = QRaisedFrame()
+            frame.setLayout(itembox)
+            itemlistbox.addWidget(frame) #adds the item to a label and at it to the vertical item layout
 
         # add new item widget
-        label = QLabel()
-        label.setText("New Item")
-        itemwrap = QVBoxLayout()
-        itemwrap.addWidget(label)
-        itemwidget = QInteractiveWidget()
-        itemwidget.setLayout(itemwrap)
-        itemwidget.setToolTip(f"Buy a new item for this unit.")
-        itemwidget.clicked.connect(self.create_method_new(unit=unit))
-        itembox.addWidget(itemwidget) #adds the item to a label and at it to the vertical item layout
+        label = QClickLabel()
+        label.setText(f"<font>New Item<font/>")
+        label.setToolTip(f"Buy a new item for this unit.")
+        label.clicked.connect(self.create_method_new(unit=unit))
+        itemlistbox.addWidget(label) #adds the item to a label and at it to the vertical item layout
 
-        self.setLayout(itembox)
+        self.setLayout(itemlistbox)
         self.setToolTip("These are your units items.")
 
     def create_method_new(self, unit):
@@ -188,14 +183,14 @@ class WidgetItemsUnit(QBorderedWidget):
                     
                     if unit.ishero == True:
                         for hero in self.mainwindow.wbid.herolist:
-                            if unit.name == hero.name:
+                            if unit is hero:
                                 hero.itemlist.append(new_item)
                                 self.mainwindow.wbid.treasury.gold -= itemprice
                                 self.mainwindow.initUI()
 
                     if unit.ishero == False:
                         for squad in self.mainwindow.wbid.squadlist:
-                            if unit.name == squad.henchmanlist[0].name:
+                            if unit is squad.henchmanlist[0]:
                                 for henchman in squad.henchmanlist:
                                     henchman.itemlist.append(new_item)
                                     self.mainwindow.wbid.treasury.gold -= itemprice
@@ -218,20 +213,21 @@ class WidgetItemsUnit(QBorderedWidget):
 
                 if unit.ishero == True:
                     for hero in self.mainwindow.wbid.herolist:
-                        for item in hero.itemlist:
-                            if item.name == item.name and item.subcategory == item.subcategory:
-                                if process_gold == QMessageBox.Yes:
-                                    itemprice += item.price
-                                index = hero.itemlist.index(item)
-                                hero.itemlist.pop(index)
-                                break
+                        if unit is hero:
+                            for i in hero.itemlist:
+                                if i is item:
+                                    if process_gold == QMessageBox.Yes:
+                                        itemprice += item.price
+                                    index = hero.itemlist.index(item)
+                                    hero.itemlist.pop(index)
+                                    break
 
                 elif unit.ishero == False:
                     for squad in self.mainwindow.wbid.squadlist:
-                        if unit.name == squad.henchmanlist[0].name:
+                        if unit is squad.henchmanlist[0]:
                             for henchman in squad.henchmanlist:
-                                for item in henchman.itemlist:
-                                    if item.name == item.name and item.subcategory == item.subcategory:
+                                for i in henchman.itemlist:
+                                    if i is item:
                                         if process_gold == QMessageBox.Yes:
                                             itemprice += item.price
                                         index = henchman.itemlist.index(item)

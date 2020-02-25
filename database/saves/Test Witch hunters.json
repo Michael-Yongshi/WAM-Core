@@ -1,104 +1,59 @@
 {
-    "name": "Test High Elf",
-    "race": "High Elf",
-    "source": "Broheim",
-    "warband": "High Elves",
-    "description": "The Citadel of Dusk was built for the dual purpose of guarding the seaways off the east coast of Lustria against incursions from the rest of the world, and as a staging post from which the High Elves could watch the movements of the Lizardmen and their Slann masters. Despite the High Elves\u2019 best efforts to keep Lustria free of human adventurers, the people of the Old World have been dogged in their attempts to penetrate Ulthuan\u2019s extensive naval web and explore the jungle continent.So far the mighty Slann Mages have not appeared unduly concerned by the constant incursions onto their lands by the greedy peoples of the Old World and Naggaroth, and appear to have done little to prevent these predatory races from returning. Yet the High Elves know that despite the Slann`s relative calm in the face of these constant raids, the patience of ancient Mage-Priests is not limitless.The Elves fear that the Slann might one day rouse themselves from their century-long meditations to make a concerted effort to end any and all threats to the continuation of their culture as the inheritors of the Old Ones. If the Slann were to throw all their intellect and resources into total war, they could conceivably wipe out whole nations before they could be stopped, such is their awesome power.Fearing for their own survival as much as anything else, the High Elves have taken it upon themselves to keep Lustria secure from the predations of all other races, and protect the ancient secrets left behind by the Old Ones that the Slann safeguard. The High Elves` cause has not been helped by the many fantastic stories that persist throughout the Old World; stories of lost cities made entirely of gold lying hidden within its dense foliage, just waiting to be discovered and plundered.",
+    "name": "Test Witch hunters",
+    "race": "Human",
+    "source": "Core Rules",
+    "warband": "Witch Hunters",
+    "description": "The Order of the Templars of Sigmar, universally known as the Witch Hunters, is an organisation dedicated to the eradication of heretics, be they warlocks, witches, sorcerers, fortune-tellers, necromancers, worshippers of the dark gods, deviants, mutants, blasphemers, sinners, utterers of profanities, servants of Daemons, or composers of corrupting music.Indeed, there are few who altogether escape the suspicions of the Witch Hunters with the possible exception of other Witch Hunters. It is wise to remember that the practice of magic in all its forms is deemed a most heinous crime in the Empire. Death by fire is the proscribed punishment for this particular heresy. Many of the Witch Hunters\u2019 victims treacherously avoid their fate by perishing under torture before making a full confession.In these troubled times the Witch Hunters are kept busy as more and more men turn to the dark arts. The most dangerous of all these heretics are the followers of the Chaos gods. These depraved individuals practise Daemon worship and (it is claimed) even offer human sacrifices in the name of their vile masters. Of all the enemies of Sigmar they are the most abhorrent! The destruction of Mordheim has fired the Witch Hunters with a new and irresistible sense of purpose. In the light of events the Grand Theogonist has proclaimed Sigmar\u2019s punishment on the City of the Damned. The Witch Hunters rejoice that their crusade against widespread corruption has been vindicated. Now they are ready to complete Sigmar\u2019s holy purpose by destroying his enemies within the ruins of the city itself.The Grand Theogonist has commanded the Witch Hunters to go unto that place and recover the wyrdstone for Sigmar\u2019s temple. Their crusade also pits them into the same arena as their old enemies the so-called Sisters of Sigmar \u2013 those loathsome Daemon-worshipping she-heretics whose very existence is a vile affront to the majesty of Sigmar. Witch Hunters are charismatic rabble-rousers who can soon turn a crowd to their own ends.They are universally dreaded, for everyone has something or someone to hide, and there are countless individuals who would willingly and enthusiastically hunt down and burn their own kin were a Witch Hunter to command them to do so. Bands of Witch Hunters are often accompanied by zealous citizens, Flagellants, and even holy Priests of Sigmar as well as the huge vicious warhounds which the Witch Hunters employ to track and bring down fugitives.As men accustomed to fighting Witch Hunters are well-armed and sturdy individuals. They favour hooded cloaks and headgear which conceal their appearance from the overly curious. Some wear chains about their throats to remind them of fallen comrades and old rivalries and also, so it is said, so that the iron might serve as protection against witchcraft.The followers of the Witch Hunters, the rabble that accompany  them to Mordheim, are a far more dire sight indeed \u2013 crazed and self-mutilated men who have lost or surrendered all their worldly goods and, most likely, their reason as well.<i>-Witch Hunters will burn you and your warband if you give them the slightest reason. They are well armed and equipped, and show no mercy to anyone who dares to stand in their way. They are followed everywhere in Mordheim by a rabble of fanatics and those crazed Flagellants. One word from a Witch Hunter and they\u2019ll tear you apart, burn you, decapitate you and excommunicate you from the grace of Sigmar.-</i>",
     "treasury": {
-        "gold": 260,
+        "gold": 500,
         "wyrd": 0
     },
-    "rulelist": [
-        {
-            "name": "Excellent Sight",
-            "description": "Elves have eyesight unmatched by mere humans. Elves spot Hidden enemies from two times as far away as other warriors (ie, twice their Initiative value in inches)."
-        },
-        {
-            "name": "Haughty",
-            "description": "The High Elves are a very proud and noble race. A High Elf Warband may never include hired swords that are not of High Elven blood, nor can they use any equipment of Dwarf origin. This includes Gromril weapons and armour."
-        },
-        {
-            "name": "Honourable",
-            "description": "High Elves can never use poison or drugs of any kind no matter what the circumstance."
-        },
-        {
-            "name": "The Old Ways",
-            "description": "The High Elves may never use black powder weapons of any sort. This goes against their ancestors and the traditions of the Old Ways."
-        },
-        {
-            "name": "Resolve",
-            "description": "The High Elves have been fighting the Dark Elves for countless centuries. When fighting their dark kin the High Elves are driven by unwavering determination. They are considered to have a Leadership of 10 when taking Rout Tests against the Dark Elves. In addition, High Elves can never choose to voluntarily Rout as they must stop their evil kin at any cost."
-        }
-    ],
-    "itemlist": [
-        {
-            "name": "",
-            "source": "Broheim",
-            "category": "Other",
-            "subcategory": "Wyrdbreaker",
-            "distance": 0,
-            "skill": {
-                "movement": 0,
-                "weapon": 0,
-                "ballistic": 0,
-                "strength": 0,
-                "toughness": 0,
-                "wounds": 0,
-                "initiative": 0,
-                "actions": 0,
-                "leadership": 0,
-                "armoursave": 0
-            },
-            "abilitylist": [],
-            "magiclist": [],
-            "price": 0,
-            "description": "An item given by the loremaster council for warbands of high elves to nullify the chaos magic in wyrdstones and turn it into regular gems. This provides High Elf warbands with the necessary income to sustain themselves."
-        }
-    ],
+    "rulelist": [],
+    "itemlist": [],
     "herolist": [
         {
-            "name": "Hero A",
-            "race": "High Elf",
-            "source": "Broheim",
-            "warband": "High Elves",
-            "category": "Loremaster",
+            "name": "Anado",
+            "race": "Human",
+            "source": "Core Rules",
+            "warband": "Witch Hunters",
+            "category": "Witch Hunter Captain",
             "ishero": true,
             "skill": {
-                "movement": 5,
+                "movement": 4,
                 "weapon": 4,
                 "ballistic": 4,
                 "strength": 3,
                 "toughness": 3,
                 "wounds": 1,
-                "initiative": 6,
+                "initiative": 4,
                 "actions": 1,
-                "leadership": 9,
+                "leadership": 8,
                 "armoursave": 0
             },
             "abilitylist": [
                 {
                     "source": "Core Rules",
                     "category": "Injury",
-                    "name": "Horrible Scars",
-                    "description": "Due to its disfigurement the character causes fear from now on. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                    "name": "Hardened",
+                    "description": "The warrior survives and becomes inured to the horrors of Mordheim. From now on he is immune to fear."
                 }
             ],
             "magiclist": [
                 {
-                    "source": "Broheim",
-                    "category": "High Elven Magic",
-                    "name": "The Light of Glory",
-                    "group": "Spells",
-                    "difficulty": 8,
-                    "description": "<i>A radiant white light emerges from the mage`s hand, banishing all fear and doubt in his comrades.</i><br/><br/>Any friendly models within 8 inch of the Elven mage are immune to psychology and will never break from combat. This spell lasts until the mage suffers a wound. If the mage suffers a wound then the enchanted Elves become startled and uneasy. All models with 8 inch must take a Leadership test. If any fail, they are treated as if they had failed an All Alone test."
+                    "source": "Core Rules",
+                    "category": "Prayers of Sigmar",
+                    "name": "Shield of Faith",
+                    "group": "Prayers",
+                    "difficulty": 6,
+                    "description": "<i>A shield of pure white light appears in front of the Priest. As long as his faith remains strong the shield will protect him.</i><br/><br/>The Priest is immune to all spells. Roll at the beginning of each turn in the recovery phase. On a roll of 1 or 2 the shield disappears."
                 }
             ],
             "itemlist": [
                 {
                     "name": "",
-                    "source": "Broheim",
+                    "source": "Core Rules",
                     "category": "Melee Weapon",
-                    "subcategory": "Mage Quarter Staff",
+                    "subcategory": "Halberd",
                     "distance": 0,
                     "skill": {
                         "movement": 0,
@@ -116,46 +71,47 @@
                         {
                             "source": "Core Rules",
                             "category": "Item",
-                            "name": "Concussion",
-                            "description": "This weapon is excellent to use for striking your enemy senseless. When using this weapon, a roll of 2-4 is treated as stunned when rolling to see the extent of a model\u2019s injuries."
-                        },
-                        {
-                            "source": "Core Rules",
-                            "category": "Item",
                             "name": "Two Handed",
                             "description": "A model armed with this weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."
                         }
                     ],
                     "magiclist": [],
-                    "price": 20,
-                    "description": "A Mage Staff used two handed."
+                    "price": 10,
+                    "description": "The halberd\u2019s heavy blade is mounted upon a sturdy shaft of oak or steel and has a point like a spear and a cutting edge like an axe. Since it can be used to chop as well as thrust, it is an adaptable weapon, but is difficult to use inside buildings."
                 }
             ],
             "experience": 20,
-            "price": 80,
+            "price": 60,
             "maxcount": 1,
-            "description": "Loremasters are the most powerful mages in the entire Warhammer world. Their knowledge of the arcane arts and their intensive training at the Tower of Hoeth makes them perfect for leading expeditions into Lustria. They are capable and efficient with years of extensive training and skill at their disposal. Loremasters alone command magic powerful enough to match the might of the mysterious Slann. They delve into the temple cities of the Lizardmen in search of any remaining artifacts of the Old Ones power."
+            "description": "Driven by fanaticism, Witch Hunter Captains are obsessed with cleansing Mordheim and bringing the justice of Sigmar to all. Carrying the edict of the Grand Theogonist himself, they have the divine right to judge and execute warlocks, witches, Chaos worshippers\u2026 in fact all who dare to oppose them."
         },
         {
-            "name": "Bearand",
-            "race": "High Elf",
-            "source": "Broheim",
-            "warband": "High Elves",
-            "category": "Sword Warden",
+            "name": "Barend",
+            "race": "Human",
+            "source": "Core Rules",
+            "warband": "Witch Hunters",
+            "category": "Warrior Priest",
             "ishero": true,
             "skill": {
-                "movement": 5,
-                "weapon": 5,
-                "ballistic": 4,
+                "movement": 4,
+                "weapon": 3,
+                "ballistic": 3,
                 "strength": 3,
                 "toughness": 3,
                 "wounds": 1,
-                "initiative": 6,
+                "initiative": 3,
                 "actions": 1,
                 "leadership": 8,
                 "armoursave": 0
             },
-            "abilitylist": [],
+            "abilitylist": [
+                {
+                    "source": "Core Rules",
+                    "category": "Character",
+                    "name": "Prayers of Sigmar",
+                    "description": "This character is a servant of Sigmar and may use the Prayers of Sigmar as detailed in the Magic section."
+                }
+            ],
             "magiclist": [],
             "itemlist": [
                 {
@@ -242,31 +198,38 @@
                     "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner."
                 }
             ],
-            "experience": 11,
-            "price": 50,
-            "maxcount": 2,
-            "description": "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster\u2019s personal attendants and protectors."
+            "experience": 12,
+            "price": 40,
+            "maxcount": 1,
+            "description": "Many powerful fighting men have come from the ranks of the faithful. The Priests of Sigmar are no exception, and the military wing of the cult is feared and respected throughout the Empire. The Grand Theogonist himself has granted the Warrior-Priests an edict to cleanse Mordheim of Chaos filth. With fire burning in their eyes, the WarriorPriests stride into battle, chanting aloud the Deus Sigmar, the praise of the patron god of the Empire."
         },
         {
-            "name": "Crypton",
-            "race": "High Elf",
-            "source": "Broheim",
-            "warband": "High Elves",
-            "category": "Sword Warden",
+            "name": "Ceasar",
+            "race": "Human",
+            "source": "Core Rules",
+            "warband": "Witch Hunters",
+            "category": "Witch Hunter",
             "ishero": true,
             "skill": {
-                "movement": 5,
-                "weapon": 5,
-                "ballistic": 4,
+                "movement": 4,
+                "weapon": 3,
+                "ballistic": 3,
                 "strength": 3,
                 "toughness": 3,
                 "wounds": 1,
-                "initiative": 6,
+                "initiative": 3,
                 "actions": 1,
-                "leadership": 8,
+                "leadership": 7,
                 "armoursave": 0
             },
-            "abilitylist": [],
+            "abilitylist": [
+                {
+                    "source": "Core Rules",
+                    "category": "Character",
+                    "name": "Burn the Witch!",
+                    "description": "This character hates all models who can cast spells.<br/><br/>Hatred is a very powerful emotion, and during this era of strife and war, bitter rivalry is commonplace.<br/>Warriors who fight enemies they hate in hand-to-hand combat may re-roll any misses when they attack in the first turn of each hand-to-hand combat. This bonus applies only in the first turn of each combat and represents the warrior venting his pent-up hatred on his foe. After the initial round of hand-to-hand combat he loses some impetus and subsequently fights as normal for the rest of the combat"
+                }
+            ],
             "magiclist": [],
             "itemlist": [
                 {
@@ -353,31 +316,38 @@
                     "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner."
                 }
             ],
-            "experience": 11,
-            "price": 50,
-            "maxcount": 2,
-            "description": "Sword Wardens are young Sword Masters in training recently sent out from the White Tower in order to better hone and refine their martial prowess. Though not as deadly as a full-fledged Sword Master, their skills are still beyond the understanding of ordinary Elves. In battle a Sword Warden wields his trademark Greatsword with effortless grace, dashing aside enemy missiles as he charges into combat. They are the elite warriors of the Warband and their lighting fast strikes have left many enemies lying dead at their feet. Sword Wardens serve as the Loremaster\u2019s personal attendants and protectors."
+            "experience": 8,
+            "price": 25,
+            "maxcount": 3,
+            "description": "Witch Hunters are members of the grim Order of Witch Hunters, dedicated to eradicating Chaos and all its minions. Usually they prowl the Old World individually trying and executing the enemies of Sigmar, but the situation in Mordheim requires them to band together."
         },
         {
-            "name": "Danan",
-            "race": "High Elf",
-            "source": "Broheim",
-            "warband": "High Elves",
-            "category": "Ranger",
+            "name": "Dan",
+            "race": "Human",
+            "source": "Core Rules",
+            "warband": "Witch Hunters",
+            "category": "Witch Hunter",
             "ishero": true,
             "skill": {
-                "movement": 5,
-                "weapon": 4,
-                "ballistic": 4,
+                "movement": 4,
+                "weapon": 3,
+                "ballistic": 3,
                 "strength": 3,
                 "toughness": 3,
                 "wounds": 1,
-                "initiative": 6,
+                "initiative": 3,
                 "actions": 1,
-                "leadership": 8,
+                "leadership": 7,
                 "armoursave": 0
             },
-            "abilitylist": [],
+            "abilitylist": [
+                {
+                    "source": "Core Rules",
+                    "category": "Character",
+                    "name": "Burn the Witch!",
+                    "description": "This character hates all models who can cast spells.<br/><br/>Hatred is a very powerful emotion, and during this era of strife and war, bitter rivalry is commonplace.<br/>Warriors who fight enemies they hate in hand-to-hand combat may re-roll any misses when they attack in the first turn of each hand-to-hand combat. This bonus applies only in the first turn of each combat and represents the warrior venting his pent-up hatred on his foe. After the initial round of hand-to-hand combat he loses some impetus and subsequently fights as normal for the rest of the combat"
+                }
+            ],
             "magiclist": [],
             "itemlist": [
                 {
@@ -428,30 +398,37 @@
                 }
             ],
             "experience": 8,
-            "price": 45,
-            "maxcount": 2,
-            "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again."
+            "price": 25,
+            "maxcount": 3,
+            "description": "Witch Hunters are members of the grim Order of Witch Hunters, dedicated to eradicating Chaos and all its minions. Usually they prowl the Old World individually trying and executing the enemies of Sigmar, but the situation in Mordheim requires them to band together."
         },
         {
-            "name": "Everia",
-            "race": "High Elf",
-            "source": "Broheim",
-            "warband": "High Elves",
-            "category": "Ranger",
+            "name": "Everest",
+            "race": "Human",
+            "source": "Core Rules",
+            "warband": "Witch Hunters",
+            "category": "Witch Hunter",
             "ishero": true,
             "skill": {
-                "movement": 5,
-                "weapon": 4,
-                "ballistic": 4,
+                "movement": 4,
+                "weapon": 3,
+                "ballistic": 3,
                 "strength": 3,
                 "toughness": 3,
                 "wounds": 1,
-                "initiative": 6,
+                "initiative": 3,
                 "actions": 1,
-                "leadership": 8,
+                "leadership": 7,
                 "armoursave": 0
             },
-            "abilitylist": [],
+            "abilitylist": [
+                {
+                    "source": "Core Rules",
+                    "category": "Character",
+                    "name": "Burn the Witch!",
+                    "description": "This character hates all models who can cast spells.<br/><br/>Hatred is a very powerful emotion, and during this era of strife and war, bitter rivalry is commonplace.<br/>Warriors who fight enemies they hate in hand-to-hand combat may re-roll any misses when they attack in the first turn of each hand-to-hand combat. This bonus applies only in the first turn of each combat and represents the warrior venting his pent-up hatred on his foe. After the initial round of hand-to-hand combat he loses some impetus and subsequently fights as normal for the rest of the combat"
+                }
+            ],
             "magiclist": [],
             "itemlist": [
                 {
@@ -502,30 +479,37 @@
                 }
             ],
             "experience": 8,
-            "price": 45,
-            "maxcount": 2,
-            "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again."
+            "price": 25,
+            "maxcount": 3,
+            "description": "Witch Hunters are members of the grim Order of Witch Hunters, dedicated to eradicating Chaos and all its minions. Usually they prowl the Old World individually trying and executing the enemies of Sigmar, but the situation in Mordheim requires them to band together."
         },
         {
-            "name": "Felicia",
-            "race": "High Elf",
-            "source": "Broheim",
-            "warband": "High Elves",
-            "category": "Ranger",
+            "name": "Frederik",
+            "race": "Human",
+            "source": "Core Rules",
+            "warband": "Witch Hunters",
+            "category": "Warrior Priest",
             "ishero": true,
             "skill": {
-                "movement": 5,
-                "weapon": 4,
-                "ballistic": 4,
+                "movement": 4,
+                "weapon": 3,
+                "ballistic": 3,
                 "strength": 3,
                 "toughness": 3,
                 "wounds": 1,
-                "initiative": 6,
+                "initiative": 3,
                 "actions": 1,
                 "leadership": 8,
                 "armoursave": 0
             },
-            "abilitylist": [],
+            "abilitylist": [
+                {
+                    "source": "Core Rules",
+                    "category": "Character",
+                    "name": "Prayers of Sigmar",
+                    "description": "This character is a servant of Sigmar and may use the Prayers of Sigmar as detailed in the Magic section."
+                }
+            ],
             "magiclist": [],
             "itemlist": [
                 {
@@ -575,33 +559,33 @@
                     "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
                 }
             ],
-            "experience": 8,
-            "price": 45,
-            "maxcount": 2,
-            "description": "Elf Rangers are expert trackers and woodsman. Their keen eyesight and excellent archery skills help them to serve as the perfect lookouts. Rangers are more solitary then other High Elves and their quick decisiveness and ability to work on their own makes them invaluable elements of the Warband. Their skills alone have brought many expeditions back from the brink of death. They have saved countless Elven lives and continue to prove their worth in battle time and time again."
+            "experience": 12,
+            "price": 40,
+            "maxcount": 1,
+            "description": "Many powerful fighting men have come from the ranks of the faithful. The Priests of Sigmar are no exception, and the military wing of the cult is feared and respected throughout the Empire. The Grand Theogonist himself has granted the Warrior-Priests an edict to cleanse Mordheim of Chaos filth. With fire burning in their eyes, the WarriorPriests stride into battle, chanting aloud the Deus Sigmar, the praise of the patron god of the Empire."
         }
     ],
     "squadlist": [
         {
-            "name": "Spearguard",
+            "name": "Swordsmen",
             "henchmanlist": [
                 {
-                    "name": "Spearguard0",
-                    "race": "High Elf",
-                    "source": "Broheim",
-                    "warband": "High Elves",
-                    "category": "Seaguard",
+                    "name": "Swordsmen0",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Witch Hunters",
+                    "category": "Zealot",
                     "ishero": false,
                     "skill": {
-                        "movement": 5,
-                        "weapon": 4,
-                        "ballistic": 4,
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
                         "strength": 3,
                         "toughness": 3,
                         "wounds": 1,
-                        "initiative": 6,
+                        "initiative": 3,
                         "actions": 1,
-                        "leadership": 8,
+                        "leadership": 7,
                         "armoursave": 0
                     },
                     "abilitylist": [],
@@ -681,27 +665,27 @@
                         }
                     ],
                     "experience": 0,
-                    "price": 35,
+                    "price": 20,
                     "maxcount": 0,
-                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops."
+                    "description": "When a man loses his family, home and all he cared for, religion is often the last refuge left to him. Such men become wandering pilgrims, bitter and dangerous fanatics who are prepared to avenge their loss at any cost. These men are called Zealots. Zealots have forsaken their former lives and exist only to destroy evil and the minions of Chaos. Whilst they might have been peasants and craftsmen before, and thus may not be as dangerous in a fight as seasoned mercenaries, their determination and fanaticism should not be underestimated. Witch Hunters find ready allies in their ranks, and many a band of Zealots is led by Witch Hunters."
                 },
                 {
-                    "name": "Spearguard1",
-                    "race": "High Elf",
-                    "source": "Broheim",
-                    "warband": "High Elves",
-                    "category": "Seaguard",
+                    "name": "Swordsmen1",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Witch Hunters",
+                    "category": "Zealot",
                     "ishero": false,
                     "skill": {
-                        "movement": 5,
-                        "weapon": 4,
-                        "ballistic": 4,
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
                         "strength": 3,
                         "toughness": 3,
                         "wounds": 1,
-                        "initiative": 6,
+                        "initiative": 3,
                         "actions": 1,
-                        "leadership": 8,
+                        "leadership": 7,
                         "armoursave": 0
                     },
                     "abilitylist": [],
@@ -781,67 +765,156 @@
                         }
                     ],
                     "experience": 0,
-                    "price": 35,
+                    "price": 20,
                     "maxcount": 0,
-                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops."
+                    "description": "When a man loses his family, home and all he cared for, religion is often the last refuge left to him. Such men become wandering pilgrims, bitter and dangerous fanatics who are prepared to avenge their loss at any cost. These men are called Zealots. Zealots have forsaken their former lives and exist only to destroy evil and the minions of Chaos. Whilst they might have been peasants and craftsmen before, and thus may not be as dangerous in a fight as seasoned mercenaries, their determination and fanaticism should not be underestimated. Witch Hunters find ready allies in their ranks, and many a band of Zealots is led by Witch Hunters."
+                },
+                {
+                    "name": "Swordsmen2",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Witch Hunters",
+                    "category": "Zealot",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 1,
+                        "leadership": 7,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Starting Dagger",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cloth is Armour",
+                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 0,
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                        },
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Spear",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "First Strike",
+                                    "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Unwieldy",
+                                    "description": "A model armed with this weapon may only use a shield or a buckler in his other hand. He may not use a second weapon, because it requires all his skill to wield it."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cavalry Charge Bonus",
+                                    "description": "If using the rules for mounted models, a mounted warrior armed with this weapon receives a +1 Strength bonus when he charges. This bonus only applies for that turn."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 10,
+                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 20,
+                    "maxcount": 0,
+                    "description": "When a man loses his family, home and all he cared for, religion is often the last refuge left to him. Such men become wandering pilgrims, bitter and dangerous fanatics who are prepared to avenge their loss at any cost. These men are called Zealots. Zealots have forsaken their former lives and exist only to destroy evil and the minions of Chaos. Whilst they might have been peasants and craftsmen before, and thus may not be as dangerous in a fight as seasoned mercenaries, their determination and fanaticism should not be underestimated. Witch Hunters find ready allies in their ranks, and many a band of Zealots is led by Witch Hunters."
                 }
             ]
         },
         {
-            "name": "Bladeguard",
+            "name": "Marksmen",
             "henchmanlist": [
                 {
-                    "name": "Bladeguard0",
-                    "race": "High Elf",
-                    "source": "Broheim",
-                    "warband": "High Elves",
-                    "category": "Seaguard",
+                    "name": "Marksmen0",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Witch Hunters",
+                    "category": "Flagellant",
                     "ishero": false,
                     "skill": {
-                        "movement": 5,
-                        "weapon": 4,
-                        "ballistic": 4,
-                        "strength": 3,
-                        "toughness": 3,
+                        "movement": 4,
+                        "weapon": 3,
+                        "ballistic": 3,
+                        "strength": 4,
+                        "toughness": 4,
                         "wounds": 1,
-                        "initiative": 6,
+                        "initiative": 3,
                         "actions": 1,
-                        "leadership": 8,
+                        "leadership": 10,
                         "armoursave": 0
                     },
-                    "abilitylist": [],
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Melee Only",
+                            "description": "This character cannot use missile weapons, even if they gain an Advance roll which would otherwise allow them to do so."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "No Leader",
+                            "description": "This character can never become a warband leader."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Fanatical",
+                            "description": "This character automatically passes all Leadership-based tests it is required to take."
+                        }
+                    ],
                     "magiclist": [],
                     "itemlist": [
-                        {
-                            "name": "",
-                            "source": "Core Rules",
-                            "category": "Melee Weapon",
-                            "subcategory": "Starting Dagger",
-                            "distance": 0,
-                            "skill": {
-                                "movement": 0,
-                                "weapon": 0,
-                                "ballistic": 0,
-                                "strength": 0,
-                                "toughness": 0,
-                                "wounds": 0,
-                                "initiative": 0,
-                                "actions": 0,
-                                "leadership": 0,
-                                "armoursave": 0
-                            },
-                            "abilitylist": [
-                                {
-                                    "source": "Core Rules",
-                                    "category": "Item",
-                                    "name": "Cloth is Armour",
-                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
-                                }
-                            ],
-                            "magiclist": [],
-                            "price": 0,
-                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
-                        },
                         {
                             "name": "",
                             "source": "Core Rules",
@@ -880,67 +953,50 @@
                         }
                     ],
                     "experience": 0,
-                    "price": 35,
-                    "maxcount": 0,
-                    "description": "Most Elven soldiery is called to arms only in times of great need, for there are too few Elves to maintain armies at all times. The Seaguard however, are always kept at strength and they retain a full-time contingent of warriors for this purpose. As a result they are better equipped and better trained then Citizen Levy Troops."
+                    "price": 40,
+                    "maxcount": 5,
+                    "description": "Flagellants are fanatics and madmen obsessed with the end of the world. They are often men who have lost their families to war or the ravages of nature, and have also lost their minds. With insane persistence, they travel the length and breadth of the Empire, preaching their view of the end of the world. With their rousing speeches, Witch Hunters can muster these dangerous lunatics to fight in the streets of Mordheim, where no sane man dares tread. Flagellants are convinced that the end of the world is nigh, and nothing in this world holds any terror for them. Flagellants are extremely dangerous opponents in close combat, for they have the strength of madmen, and their bodies have become inured to pain because of self-mutilation."
                 }
             ]
         },
         {
-            "name": "Cadet",
+            "name": "Warrior",
             "henchmanlist": [
                 {
-                    "name": "Cadet0",
-                    "race": "High Elf",
-                    "source": "Broheim",
-                    "warband": "High Elves",
-                    "category": "Cadet",
+                    "name": "Warrior0",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Witch Hunters",
+                    "category": "Warhound",
                     "ishero": false,
                     "skill": {
-                        "movement": 5,
-                        "weapon": 3,
-                        "ballistic": 3,
-                        "strength": 3,
+                        "movement": 6,
+                        "weapon": 4,
+                        "ballistic": 0,
+                        "strength": 4,
                         "toughness": 3,
                         "wounds": 1,
-                        "initiative": 5,
+                        "initiative": 4,
                         "actions": 1,
-                        "leadership": 8,
+                        "leadership": 5,
                         "armoursave": 0
                     },
-                    "abilitylist": [],
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        }
+                    ],
                     "magiclist": [],
                     "itemlist": [
-                        {
-                            "name": "",
-                            "source": "Core Rules",
-                            "category": "Melee Weapon",
-                            "subcategory": "Starting Dagger",
-                            "distance": 0,
-                            "skill": {
-                                "movement": 0,
-                                "weapon": 0,
-                                "ballistic": 0,
-                                "strength": 0,
-                                "toughness": 0,
-                                "wounds": 0,
-                                "initiative": 0,
-                                "actions": 0,
-                                "leadership": 0,
-                                "armoursave": 0
-                            },
-                            "abilitylist": [
-                                {
-                                    "source": "Core Rules",
-                                    "category": "Item",
-                                    "name": "Cloth is Armour",
-                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
-                                }
-                            ],
-                            "magiclist": [],
-                            "price": 0,
-                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
-                        },
                         {
                             "name": "",
                             "source": "Core Rules",
@@ -966,67 +1022,50 @@
                         }
                     ],
                     "experience": 0,
-                    "price": 30,
+                    "price": 0,
                     "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                    "description": "Witch Hunters often keep packs of ferocious hunting dogs. With their huge jaws and powerful bite, they are perfect for hunting down (and tearing apart) any heretics, mutants, deviants and witches."
                 }
             ]
         },
         {
-            "name": "Cadet2",
+            "name": "Warrior2",
             "henchmanlist": [
                 {
-                    "name": "Cadet20",
-                    "race": "High Elf",
-                    "source": "Broheim",
-                    "warband": "High Elves",
-                    "category": "Cadet",
+                    "name": "Warrior20",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Witch Hunters",
+                    "category": "Warhound",
                     "ishero": false,
                     "skill": {
-                        "movement": 5,
-                        "weapon": 3,
-                        "ballistic": 3,
-                        "strength": 3,
+                        "movement": 6,
+                        "weapon": 4,
+                        "ballistic": 0,
+                        "strength": 4,
                         "toughness": 3,
                         "wounds": 1,
-                        "initiative": 5,
+                        "initiative": 4,
                         "actions": 1,
-                        "leadership": 8,
+                        "leadership": 5,
                         "armoursave": 0
                     },
-                    "abilitylist": [],
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        }
+                    ],
                     "magiclist": [],
                     "itemlist": [
-                        {
-                            "name": "",
-                            "source": "Core Rules",
-                            "category": "Melee Weapon",
-                            "subcategory": "Starting Dagger",
-                            "distance": 0,
-                            "skill": {
-                                "movement": 0,
-                                "weapon": 0,
-                                "ballistic": 0,
-                                "strength": 0,
-                                "toughness": 0,
-                                "wounds": 0,
-                                "initiative": 0,
-                                "actions": 0,
-                                "leadership": 0,
-                                "armoursave": 0
-                            },
-                            "abilitylist": [
-                                {
-                                    "source": "Core Rules",
-                                    "category": "Item",
-                                    "name": "Cloth is Armour",
-                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
-                                }
-                            ],
-                            "magiclist": [],
-                            "price": 0,
-                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
-                        },
                         {
                             "name": "",
                             "source": "Core Rules",
@@ -1052,67 +1091,50 @@
                         }
                     ],
                     "experience": 0,
-                    "price": 30,
+                    "price": 0,
                     "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                    "description": "Witch Hunters often keep packs of ferocious hunting dogs. With their huge jaws and powerful bite, they are perfect for hunting down (and tearing apart) any heretics, mutants, deviants and witches."
                 }
             ]
         },
         {
-            "name": "Cadet3",
+            "name": "Marksmen3",
             "henchmanlist": [
                 {
-                    "name": "Cadet30",
-                    "race": "High Elf",
-                    "source": "Broheim",
-                    "warband": "High Elves",
-                    "category": "Cadet",
+                    "name": "Marksmen30",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Witch Hunters",
+                    "category": "Warhound",
                     "ishero": false,
                     "skill": {
-                        "movement": 5,
-                        "weapon": 3,
-                        "ballistic": 3,
-                        "strength": 3,
+                        "movement": 6,
+                        "weapon": 4,
+                        "ballistic": 0,
+                        "strength": 4,
                         "toughness": 3,
                         "wounds": 1,
-                        "initiative": 5,
+                        "initiative": 4,
                         "actions": 1,
-                        "leadership": 8,
+                        "leadership": 5,
                         "armoursave": 0
                     },
-                    "abilitylist": [],
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        }
+                    ],
                     "magiclist": [],
                     "itemlist": [
-                        {
-                            "name": "",
-                            "source": "Core Rules",
-                            "category": "Melee Weapon",
-                            "subcategory": "Starting Dagger",
-                            "distance": 0,
-                            "skill": {
-                                "movement": 0,
-                                "weapon": 0,
-                                "ballistic": 0,
-                                "strength": 0,
-                                "toughness": 0,
-                                "wounds": 0,
-                                "initiative": 0,
-                                "actions": 0,
-                                "leadership": 0,
-                                "armoursave": 0
-                            },
-                            "abilitylist": [
-                                {
-                                    "source": "Core Rules",
-                                    "category": "Item",
-                                    "name": "Cloth is Armour",
-                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
-                                }
-                            ],
-                            "magiclist": [],
-                            "price": 0,
-                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
-                        },
                         {
                             "name": "",
                             "source": "Core Rules",
@@ -1138,67 +1160,50 @@
                         }
                     ],
                     "experience": 0,
-                    "price": 30,
+                    "price": 0,
                     "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                    "description": "Witch Hunters often keep packs of ferocious hunting dogs. With their huge jaws and powerful bite, they are perfect for hunting down (and tearing apart) any heretics, mutants, deviants and witches."
                 }
             ]
         },
         {
-            "name": "Cadet4",
+            "name": "Marksmen4",
             "henchmanlist": [
                 {
-                    "name": "Cadet40",
-                    "race": "High Elf",
-                    "source": "Broheim",
-                    "warband": "High Elves",
-                    "category": "Cadet",
+                    "name": "Marksmen40",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Witch Hunters",
+                    "category": "Warhound",
                     "ishero": false,
                     "skill": {
-                        "movement": 5,
-                        "weapon": 3,
-                        "ballistic": 3,
-                        "strength": 3,
+                        "movement": 6,
+                        "weapon": 4,
+                        "ballistic": 0,
+                        "strength": 4,
                         "toughness": 3,
                         "wounds": 1,
-                        "initiative": 5,
+                        "initiative": 4,
                         "actions": 1,
-                        "leadership": 8,
+                        "leadership": 5,
                         "armoursave": 0
                     },
-                    "abilitylist": [],
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        }
+                    ],
                     "magiclist": [],
                     "itemlist": [
-                        {
-                            "name": "",
-                            "source": "Core Rules",
-                            "category": "Melee Weapon",
-                            "subcategory": "Starting Dagger",
-                            "distance": 0,
-                            "skill": {
-                                "movement": 0,
-                                "weapon": 0,
-                                "ballistic": 0,
-                                "strength": 0,
-                                "toughness": 0,
-                                "wounds": 0,
-                                "initiative": 0,
-                                "actions": 0,
-                                "leadership": 0,
-                                "armoursave": 0
-                            },
-                            "abilitylist": [
-                                {
-                                    "source": "Core Rules",
-                                    "category": "Item",
-                                    "name": "Cloth is Armour",
-                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
-                                }
-                            ],
-                            "magiclist": [],
-                            "price": 0,
-                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
-                        },
                         {
                             "name": "",
                             "source": "Core Rules",
@@ -1224,62 +1229,45 @@
                         }
                     ],
                     "experience": 0,
-                    "price": 30,
+                    "price": 0,
                     "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                    "description": "Witch Hunters often keep packs of ferocious hunting dogs. With their huge jaws and powerful bite, they are perfect for hunting down (and tearing apart) any heretics, mutants, deviants and witches."
                 },
                 {
-                    "name": "Cadet42",
-                    "race": "High Elf",
-                    "source": "Broheim",
-                    "warband": "High Elves",
-                    "category": "Cadet",
+                    "name": "Marksmen42",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Witch Hunters",
+                    "category": "Warhound",
                     "ishero": false,
                     "skill": {
-                        "movement": 5,
-                        "weapon": 3,
-                        "ballistic": 3,
-                        "strength": 3,
+                        "movement": 6,
+                        "weapon": 4,
+                        "ballistic": 0,
+                        "strength": 4,
                         "toughness": 3,
                         "wounds": 1,
-                        "initiative": 5,
+                        "initiative": 4,
                         "actions": 1,
-                        "leadership": 8,
+                        "leadership": 5,
                         "armoursave": 0
                     },
-                    "abilitylist": [],
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        }
+                    ],
                     "magiclist": [],
                     "itemlist": [
-                        {
-                            "name": "",
-                            "source": "Core Rules",
-                            "category": "Melee Weapon",
-                            "subcategory": "Starting Dagger",
-                            "distance": 0,
-                            "skill": {
-                                "movement": 0,
-                                "weapon": 0,
-                                "ballistic": 0,
-                                "strength": 0,
-                                "toughness": 0,
-                                "wounds": 0,
-                                "initiative": 0,
-                                "actions": 0,
-                                "leadership": 0,
-                                "armoursave": 0
-                            },
-                            "abilitylist": [
-                                {
-                                    "source": "Core Rules",
-                                    "category": "Item",
-                                    "name": "Cloth is Armour",
-                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
-                                }
-                            ],
-                            "magiclist": [],
-                            "price": 0,
-                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
-                        },
                         {
                             "name": "",
                             "source": "Core Rules",
@@ -1305,62 +1293,45 @@
                         }
                     ],
                     "experience": 0,
-                    "price": 30,
+                    "price": 0,
                     "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                    "description": "Witch Hunters often keep packs of ferocious hunting dogs. With their huge jaws and powerful bite, they are perfect for hunting down (and tearing apart) any heretics, mutants, deviants and witches."
                 },
                 {
-                    "name": "Cadet43",
-                    "race": "High Elf",
-                    "source": "Broheim",
-                    "warband": "High Elves",
-                    "category": "Cadet",
+                    "name": "Marksmen43",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Witch Hunters",
+                    "category": "Warhound",
                     "ishero": false,
                     "skill": {
-                        "movement": 5,
-                        "weapon": 3,
-                        "ballistic": 3,
-                        "strength": 3,
+                        "movement": 6,
+                        "weapon": 4,
+                        "ballistic": 0,
+                        "strength": 4,
                         "toughness": 3,
                         "wounds": 1,
-                        "initiative": 5,
+                        "initiative": 4,
                         "actions": 1,
-                        "leadership": 8,
+                        "leadership": 5,
                         "armoursave": 0
                     },
-                    "abilitylist": [],
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        }
+                    ],
                     "magiclist": [],
                     "itemlist": [
-                        {
-                            "name": "",
-                            "source": "Core Rules",
-                            "category": "Melee Weapon",
-                            "subcategory": "Starting Dagger",
-                            "distance": 0,
-                            "skill": {
-                                "movement": 0,
-                                "weapon": 0,
-                                "ballistic": 0,
-                                "strength": 0,
-                                "toughness": 0,
-                                "wounds": 0,
-                                "initiative": 0,
-                                "actions": 0,
-                                "leadership": 0,
-                                "armoursave": 0
-                            },
-                            "abilitylist": [
-                                {
-                                    "source": "Core Rules",
-                                    "category": "Item",
-                                    "name": "Cloth is Armour",
-                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
-                                }
-                            ],
-                            "magiclist": [],
-                            "price": 0,
-                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
-                        },
                         {
                             "name": "",
                             "source": "Core Rules",
@@ -1386,62 +1357,45 @@
                         }
                     ],
                     "experience": 0,
-                    "price": 30,
+                    "price": 0,
                     "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                    "description": "Witch Hunters often keep packs of ferocious hunting dogs. With their huge jaws and powerful bite, they are perfect for hunting down (and tearing apart) any heretics, mutants, deviants and witches."
                 },
                 {
-                    "name": "Cadet44",
-                    "race": "High Elf",
-                    "source": "Broheim",
-                    "warband": "High Elves",
-                    "category": "Cadet",
+                    "name": "Marksmen44",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Witch Hunters",
+                    "category": "Warhound",
                     "ishero": false,
                     "skill": {
-                        "movement": 5,
-                        "weapon": 3,
-                        "ballistic": 3,
-                        "strength": 3,
+                        "movement": 6,
+                        "weapon": 4,
+                        "ballistic": 0,
+                        "strength": 4,
                         "toughness": 3,
                         "wounds": 1,
-                        "initiative": 5,
+                        "initiative": 4,
                         "actions": 1,
-                        "leadership": 8,
+                        "leadership": 5,
                         "armoursave": 0
                     },
-                    "abilitylist": [],
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        }
+                    ],
                     "magiclist": [],
                     "itemlist": [
-                        {
-                            "name": "",
-                            "source": "Core Rules",
-                            "category": "Melee Weapon",
-                            "subcategory": "Starting Dagger",
-                            "distance": 0,
-                            "skill": {
-                                "movement": 0,
-                                "weapon": 0,
-                                "ballistic": 0,
-                                "strength": 0,
-                                "toughness": 0,
-                                "wounds": 0,
-                                "initiative": 0,
-                                "actions": 0,
-                                "leadership": 0,
-                                "armoursave": 0
-                            },
-                            "abilitylist": [
-                                {
-                                    "source": "Core Rules",
-                                    "category": "Item",
-                                    "name": "Cloth is Armour",
-                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
-                                }
-                            ],
-                            "magiclist": [],
-                            "price": 0,
-                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
-                        },
                         {
                             "name": "",
                             "source": "Core Rules",
@@ -1467,62 +1421,45 @@
                         }
                     ],
                     "experience": 0,
-                    "price": 30,
+                    "price": 0,
                     "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                    "description": "Witch Hunters often keep packs of ferocious hunting dogs. With their huge jaws and powerful bite, they are perfect for hunting down (and tearing apart) any heretics, mutants, deviants and witches."
                 },
                 {
-                    "name": "Cadet45",
-                    "race": "High Elf",
-                    "source": "Broheim",
-                    "warband": "High Elves",
-                    "category": "Cadet",
+                    "name": "Marksmen45",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Witch Hunters",
+                    "category": "Warhound",
                     "ishero": false,
                     "skill": {
-                        "movement": 5,
-                        "weapon": 3,
-                        "ballistic": 3,
-                        "strength": 3,
+                        "movement": 6,
+                        "weapon": 4,
+                        "ballistic": 0,
+                        "strength": 4,
                         "toughness": 3,
                         "wounds": 1,
-                        "initiative": 5,
+                        "initiative": 4,
                         "actions": 1,
-                        "leadership": 8,
+                        "leadership": 5,
                         "armoursave": 0
                     },
-                    "abilitylist": [],
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        }
+                    ],
                     "magiclist": [],
                     "itemlist": [
-                        {
-                            "name": "",
-                            "source": "Core Rules",
-                            "category": "Melee Weapon",
-                            "subcategory": "Starting Dagger",
-                            "distance": 0,
-                            "skill": {
-                                "movement": 0,
-                                "weapon": 0,
-                                "ballistic": 0,
-                                "strength": 0,
-                                "toughness": 0,
-                                "wounds": 0,
-                                "initiative": 0,
-                                "actions": 0,
-                                "leadership": 0,
-                                "armoursave": 0
-                            },
-                            "abilitylist": [
-                                {
-                                    "source": "Core Rules",
-                                    "category": "Item",
-                                    "name": "Cloth is Armour",
-                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
-                                }
-                            ],
-                            "magiclist": [],
-                            "price": 0,
-                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
-                        },
                         {
                             "name": "",
                             "source": "Core Rules",
@@ -1548,62 +1485,45 @@
                         }
                     ],
                     "experience": 0,
-                    "price": 30,
+                    "price": 0,
                     "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                    "description": "Witch Hunters often keep packs of ferocious hunting dogs. With their huge jaws and powerful bite, they are perfect for hunting down (and tearing apart) any heretics, mutants, deviants and witches."
                 },
                 {
-                    "name": "Cadet46",
-                    "race": "High Elf",
-                    "source": "Broheim",
-                    "warband": "High Elves",
-                    "category": "Cadet",
+                    "name": "Marksmen46",
+                    "race": "Human",
+                    "source": "Core Rules",
+                    "warband": "Witch Hunters",
+                    "category": "Warhound",
                     "ishero": false,
                     "skill": {
-                        "movement": 5,
-                        "weapon": 3,
-                        "ballistic": 3,
-                        "strength": 3,
+                        "movement": 6,
+                        "weapon": 4,
+                        "ballistic": 0,
+                        "strength": 4,
                         "toughness": 3,
                         "wounds": 1,
-                        "initiative": 5,
+                        "initiative": 4,
                         "actions": 1,
-                        "leadership": 8,
+                        "leadership": 5,
                         "armoursave": 0
                     },
-                    "abilitylist": [],
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        }
+                    ],
                     "magiclist": [],
                     "itemlist": [
-                        {
-                            "name": "",
-                            "source": "Core Rules",
-                            "category": "Melee Weapon",
-                            "subcategory": "Starting Dagger",
-                            "distance": 0,
-                            "skill": {
-                                "movement": 0,
-                                "weapon": 0,
-                                "ballistic": 0,
-                                "strength": 0,
-                                "toughness": 0,
-                                "wounds": 0,
-                                "initiative": 0,
-                                "actions": 0,
-                                "leadership": 0,
-                                "armoursave": 0
-                            },
-                            "abilitylist": [
-                                {
-                                    "source": "Core Rules",
-                                    "category": "Item",
-                                    "name": "Cloth is Armour",
-                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
-                                }
-                            ],
-                            "magiclist": [],
-                            "price": 0,
-                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
-                        },
                         {
                             "name": "",
                             "source": "Core Rules",
@@ -1629,9 +1549,9 @@
                         }
                     ],
                     "experience": 0,
-                    "price": 30,
+                    "price": 0,
                     "maxcount": 5,
-                    "description": "Cadets are young Citizen Levy of Ulthuan serving in the High Elf army for the first time. Their skills have yet to fully develop and most of them have yet to see battle. They are expert archers and travel light, thus making the perfect quick striking troops. Cadets are used primarily as scouts and are assigned the less important duties within the Citadel of Dusk and aboard High Elf Dragonships."
+                    "description": "Witch Hunters often keep packs of ferocious hunting dogs. With their huge jaws and powerful bite, they are perfect for hunting down (and tearing apart) any heretics, mutants, deviants and witches."
                 }
             ]
         }

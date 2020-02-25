@@ -10,11 +10,11 @@ from PyQt5.QtWidgets import (
     QAction,
     QApplication,
     QDesktopWidget,
+    QFrame,
+    QGridLayout,
+    QHBoxLayout,
     QInputDialog,
     QLabel,
-    QGridLayout,
-    QVBoxLayout,
-    QHBoxLayout,
     QLineEdit,
     QListWidget,
     QListWidgetItem,
@@ -102,8 +102,7 @@ class WarbandOverview(QMainWindow):
     def initUI(self):
        
         # Some window settings
-        self.setWindowTitle('WAM')
-        self.setToolTip('Warhammer Army Manager')
+        self.setWindowTitle('Warhammer Army Manager')
         self.setWindowIcon(QIcon('war_72R_icon.ico'))     
 
         # build overview
@@ -113,103 +112,98 @@ class WarbandOverview(QMainWindow):
         self.showMaximized()
 
     def set_nested_widget(self):
-        # build top part
-        topboxwidget = self.set_topbox()
-
-        # build bot part
-        botboxwidget = self.set_botbox()
 
         # vertical layout for top and char part
         overviewbox = QGridLayout()
-        overviewbox.addWidget(topboxwidget, 0, 0, 1, 3)
-        overviewbox.addWidget(botboxwidget, 1, 0, 3, 3)
-        overviewboxwidget = QBorderedWidget()
-        overviewboxwidget.setLayout(overviewbox)
+        overviewbox.addWidget(self.set_topbox(), 0, 0, 1, 3)
+        overviewbox.addWidget(self.set_botbox(), 1, 0, 3, 3)
 
-        return overviewboxwidget
+        overviewboxframe = QBorderlessFrame()
+        overviewboxframe.setLayout(overviewbox)
+
+        return overviewboxframe
 
     def set_topbox(self):
+        
         # top wrapping warband and system in the top horizontal layout
         topbox = QHBoxLayout()
-        topbox.addWidget(self.set_wbname())
-        topbox.addWidget(self.set_wbinvbox())
+        topbox.addWidget(self.set_wbbox())
         topbox.addWidget(WidgetSystem(self))
-        topboxwidget = QBorderedWidget()
-        topboxwidget.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
-        topboxwidget.setLayout(topbox)
 
-        return topboxwidget
+        topboxframe = QBorderlessFrame()
+        topboxframe.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        topboxframe.setLayout(topbox)
+
+        return topboxframe
 
     def set_botbox(self):
+
         # wrapping heroes, squads and extra details in the bottom horizontal layout
         botbox = QGridLayout()
         botbox.addWidget(WidgetHeroes(self), 0, 0)
         botbox.addWidget(WidgetSquads(self), 0, 1)
         botbox.addWidget(WidgetCurrent(self), 0, 2, 1, 2)
-        botboxwidget = QInteractiveWidget()
-        botboxwidget.clicked.connect(self.remove_focus)
-        botboxwidget.setLayout(botbox)
 
-        return botboxwidget
+        botboxframe = QBorderlessFrame()
+        botboxframe.clicked.connect(self.remove_focus)
+        botboxframe.setLayout(botbox)
 
-    def set_wbinvbox(self):
-        # Top middle
-        wbinvbox = QHBoxLayout()
-        treabox = QVBoxLayout()
+        return botboxframe
 
-        goldlabel = QLabel()
-        goldlabel.setText("Gold: " + str(self.wbid.treasury.gold))
-        goldlabel.setToolTip("This is the amount of gold your warband holds.")
-        treabox.addWidget(goldlabel)
-        wyrdlabel = QLabel()
-        wyrdlabel.setText("Wyrdstones: " + str(self.wbid.treasury.wyrd))
-        wyrdlabel.setToolTip("This is the amount of wyrdstones, or their equivalent, your warband holds.")
-        treabox.addWidget(wyrdlabel)
-        
-        treaboxwidget = QInteractiveWidget()
-        treaboxwidget.setLayout(treabox)
-        treaboxwidget.clicked.connect(self.dialog_treasury)
-        wbinvbox.addWidget(treaboxwidget)
-
-        # add item widget   
-        wbinvbox.addWidget(WidgetItemsWarband(self)) # adds the item layout to the grid
-
-        wbinvboxwidget = QBorderedWidget()
-        wbinvboxwidget.setLayout(wbinvbox)
-
-        return wbinvboxwidget
-
-    def set_wbname(self):
+    def set_wbbox(self):
         # top left warband info
-        wbnamelabel = QLabel()
-        wbnamelabel.setText("Name: " + self.wbid.name)
-        wbracelabel = QLabel()
-        wbracelabel.setText("Race: " + self.wbid.race)
-        wbsrclabel = QLabel()
-        wbsrclabel.setText("Source: " + self.wbid.source)
-        wbtypelabel = QLabel()
-        wbtypelabel.setText("Type: " + self.wbid.warband)
-
-        wbbox = QVBoxLayout()
-        wbbox.addWidget(wbnamelabel)
-        wbbox.addWidget(wbracelabel)
-        wbbox.addWidget(wbsrclabel)
-        wbbox.addWidget(wbtypelabel)
-
-        wbboxwidget = QBorderedWidget()
-        wbboxwidget.setLayout(wbbox)
+        wbbox = QHBoxLayout()
         
-        # make rules printable for tooltip
+        wbdetail = QVBoxLayout()
+        
+        wbnamelabel = QLabel()
+        wbnamelabel.setText(f"Name: <b>{self.wbid.name}<b/>")
+        wbracelabel = QLabel()
+        wbracelabel.setText(f"Race: <b>{self.wbid.race}<b/>")
+        wbsrclabel = QLabel()
+        wbsrclabel.setText(f"Source: <b>{self.wbid.source}<b/>")
+        wbtypelabel = QLabel()
+        wbtypelabel.setText(f"Type: <b>{self.wbid.warband}<b/>")
+
+        wbdetail.addWidget(wbnamelabel)
+        wbdetail.addWidget(wbracelabel)
+        wbdetail.addWidget(wbsrclabel)
+        wbdetail.addWidget(wbtypelabel)
+
         printablerules = []
         for r in self.wbid.rulelist:
             printablerules += [r.name]
-    
-        wbboxwidget.setToolTip(f"Special Rules: {printablerules}\n\n{self.wbid.description}")
 
-        # update wb info
+        wbdetailframe = QRaisedFrame()
+        wbdetailframe.setLayout(wbdetail)
+        wbdetailframe.setToolTip(f"Special Rules: {printablerules}\n\n{self.wbid.description}")
+
+        wbbox.addWidget(wbdetailframe)
+
+        # Top middle
+        treabox = QVBoxLayout()
+
+        goldlabel = QLabel()
+        goldlabel.setText(f"Gold: <b>{self.wbid.treasury.gold}<b/>")
+        goldlabel.setToolTip("This is the amount of gold your warband holds.")
+        treabox.addWidget(goldlabel)
+        wyrdlabel = QLabel()
+        wyrdlabel.setText(f"Wyrdstones: <b>{self.wbid.treasury.wyrd}<b/>")
+        wyrdlabel.setToolTip("This is the amount of wyrdstones, or their equivalent, your warband holds.")
+        treabox.addWidget(wyrdlabel)
         
+        treaboxframe = QRaisedFrame()
+        treaboxframe.setLayout(treabox)
+        treaboxframe.clicked.connect(self.dialog_treasury)
+        wbbox.addWidget(treaboxframe)
 
-        return wbboxwidget
+        # add item widget   
+        wbbox.addWidget(WidgetItemsWarband(self)) # adds the item layout to the grid
+
+        wbboxframe = QBorderlessFrame()
+        wbboxframe.setLayout(wbbox)
+
+        return wbboxframe
 
     def dialog_treasury(self):
         

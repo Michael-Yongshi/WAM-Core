@@ -642,12 +642,12 @@
                         {
                             "source": "Core Rules",
                             "category": "Character",
-                            "name": "Leader"
+                            "name": "Burn the Witch!"
                         },
                         {
                             "source": "Core Rules",
                             "category": "Character",
-                            "name": "Burn the Witch!"
+                            "name": "Leader"
                         }
                     ],
                     "magiclist": [],
@@ -874,12 +874,12 @@
                         {
                             "source": "Core Rules",
                             "category": "Character",
-                            "name": "Leader"
+                            "name": "Prayers of Sigmar"
                         },
                         {
                             "source": "Core Rules",
                             "category": "Character",
-                            "name": "Prayers of Sigmar"
+                            "name": "Leader"
                         }
                     ],
                     "magiclist": [],
@@ -1062,12 +1062,12 @@
                         {
                             "source": "Core Rules",
                             "category": "Character",
-                            "name": "Leader"
+                            "name": "Chaos Ritualist"
                         },
                         {
                             "source": "Core Rules",
                             "category": "Character",
-                            "name": "Chaos Ritualist"
+                            "name": "Leader"
                         }
                     ],
                     "magiclist": [],
@@ -1293,11 +1293,6 @@
                         {
                             "source": "Core Rules",
                             "category": "Character",
-                            "name": "Leader"
-                        },
-                        {
-                            "source": "Core Rules",
-                            "category": "Character",
                             "name": "Cause Fear"
                         },
                         {
@@ -1314,6 +1309,11 @@
                             "source": "Core Rules",
                             "category": "Character",
                             "name": "Immune to Pain"
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Leader"
                         }
                     ],
                     "magiclist": [],
@@ -1451,7 +1451,7 @@
                         {
                             "source": "Core Rules",
                             "category": "Character",
-                            "name": "May not Run"
+                            "name": "May Not Run"
                         }
                     ],
                     "magiclist": [],
@@ -1556,7 +1556,7 @@
                         {
                             "source": "Core Rules",
                             "category": "Character",
-                            "name": "May not Run"
+                            "name": "May Not Run"
                         },
                         {
                             "source": "Core Rules",
@@ -1599,12 +1599,12 @@
                         {
                             "source": "Core Rules",
                             "category": "Character",
-                            "name": "Leader"
+                            "name": "Armour Piercing"
                         },
                         {
                             "source": "Core Rules",
                             "category": "Character",
-                            "name": "Armour Piercing"
+                            "name": "Leader"
                         }
                     ],
                     "magiclist": [],
@@ -1753,13 +1753,11 @@
                     "price": 20,
                     "maxcount": 0,
                     "description": "Verminkin are the Clanrats of Clan Eshin. The strongest amongst them are initiated into the secrets of the clans and begin their training to become Assassins, the most feared warriors of the Skaven warbands. All the Clanrats of Clan Eshin dream of rising to the status of an Assassin one day."
-                }
-            },
-            "The Skaven": {
+                },
                 "Giant Rats": {
                     "race": "Skaven",
                     "source": "Core Rules",
-                    "warband": "The Skaven",
+                    "warband": "Skaven",
                     "category": "Giant Rats",
                     "ishero": false,
                     "skill": {
@@ -1783,7 +1781,7 @@
                         {
                             "source": "Core Rules",
                             "category": "Character",
-                            "name": "Pack size"
+                            "name": "Pack Size"
                         },
                         {
                             "source": "Core Rules",
@@ -1801,7 +1799,7 @@
                 "Rat Ogre": {
                     "race": "Skaven",
                     "source": "Core Rules",
-                    "warband": "The Skaven",
+                    "warband": "Skaven",
                     "category": "Rat Ogre",
                     "ishero": false,
                     "skill": {
@@ -1876,14 +1874,14 @@
                     },
                     "abilitylist": [
                         {
-                            "source": "Core Rules",
-                            "category": "Character",
-                            "name": "Leader"
-                        },
-                        {
                             "source": "Broheim",
                             "category": "Character",
                             "name": "High Elven Magician"
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Leader"
                         }
                     ],
                     "magiclist": [],
@@ -2051,14 +2049,14 @@
                     },
                     "abilitylist": [
                         {
-                            "source": "Core Rules",
-                            "category": "Character",
-                            "name": "Leader"
-                        },
-                        {
                             "source": "Broheim",
                             "category": "Character",
                             "name": "High Elven Magician"
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Leader"
                         }
                     ],
                     "magiclist": [],

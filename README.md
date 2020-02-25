@@ -40,20 +40,21 @@ set git email with
 git --global user.name ""
 ```
 
+Install some required packages
 ```
-pip3 install --user flake8 (dev)
-pip3 install --user requests (unused)
 pip3 install --user pyqt5
-pip3 install --user pyinstaller (dev)
+pip3 install --user requests    # (unused)
+pip3 install --user flake8      # (dev)
+pip3 install --user pyinstaller # (dev)
 ```
 
-create manually with 
+create a distribution manually: 
 ```
 python -m PyInstaller cli.py --add-data "database/saves/cache.json";"database/saves/" --add-data "database/references/*.json";"database/references/" --icon="source\war_72R_icon.ico" --name WAM
 ```
 <!-- python -m PyInstaller cli.py --add-data "database/saves/cache.json";"database/saves/" --add-data "database/references/*.json";"database/references/" --icon="source\war_72R_icon.ico" --name WAM_OF --onefile -->
 
-create from spec with 
+create a distribution from spec with 
 ```
 python -m PyInstaller WAM.spec
 ```

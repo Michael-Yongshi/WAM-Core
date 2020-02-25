@@ -1,0 +1,1942 @@
+{
+    "name": "Test Undead",
+    "race": "Undead / Vampires",
+    "source": "Core Rules",
+    "warband": "The Undead",
+    "description": "Count Vlad von Carstein and his wife Isabella have ruled the province of Sylvania for as long as anyone can remember \u2013 peasants whisper of some dark secret, Witch Hunters revile them, and the Priests of Sigmar shun their court. Indeed, Sylvania has the most dire reputation of all the provinces of the Empire.Few men sent to spy on the rulers of Sylvania have ever returned from those dark Sylvanian forests, and then rarely with their sanity intact. In the dimly-lit chamber of the Drakenhof castle, on a throne of black obsidian, sits Vlad von Carstein, the ruler of Sylvania. He waits in shadows, having set himself apart from the politics and bickering of the Empire.For he holds a terrible secret: he, and all the ruling aristocracy of his province are Vampires, undying monsters from beyond the grave. Here he patiently waits, drinking the blood of maidens from gold goblets. For many long years Vlad has gathered his strength and mustered his Undead legions in secrecy.One day soon he will march from the forests of Sylvania at the head of an army of restless dead. The pieces of magic stone that lie scattered among the ruins of Mordheim can give the Count the power to challenge the nobles of the Empire and enslave the men of the Old World.Wyrdstone holds enough captured magical energy to unleash a great spell of doom to rival that of Nagash the Black. If the Count is successful, he will raise all the dead between the Worlds Edge Mountains and the borders of Stirland, and go to war against the divided rulers of the Empire.His plans laid out, Vlad sends his thralls, the immortal Vampires, to do his bidding. During dark, moonless nights, black coaches arrive at the gates of Mordheim carrying coffins. Ghouls scuttle from their hiding places to greet them, and corpses are stirred by a command which the living cannot hear. Following the commands of the Vampire, they hunt for shards of wyrdstone. The night belongs to the Undead, and in Mordheim it is always night.<i>-The Restless Dead plague Mordheim. Zombies, Ghouls and huge hellhounds prowl the streets, and woe to anyone caught by them. He\u2019ll be eaten alive, or end up as one of the walking corpses himself. I lost my eye to one of the fanged horrors who leads the Undead. Let me tell you, that thing was not human. I put my sword through it and it still kept coming.-</i>",
+    "treasury": {
+        "gold": 500,
+        "wyrd": 0
+    },
+    "rulelist": [],
+    "itemlist": [],
+    "herolist": [
+        {
+            "name": "Anado",
+            "race": "Undead / Vampires",
+            "source": "Core Rules",
+            "warband": "The Undead",
+            "category": "Necromancer",
+            "ishero": true,
+            "skill": {
+                "movement": 4,
+                "weapon": 3,
+                "ballistic": 3,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 3,
+                "actions": 1,
+                "leadership": 7,
+                "armoursave": 0
+            },
+            "abilitylist": [
+                {
+                    "source": "Core Rules",
+                    "category": "Injury",
+                    "name": "Hardened",
+                    "description": "The warrior survives and becomes inured to the horrors of Mordheim. From now on he is immune to fear."
+                }
+            ],
+            "magiclist": [
+                {
+                    "source": "Core Rules",
+                    "category": "Necromancy",
+                    "name": "Re-animation",
+                    "group": "Spells",
+                    "difficulty": 5,
+                    "description": "<i>At the spoken command of the Necromancer, the dead rise to fight again.</i><br/><br/>One Zombie that went out of action during the last hand-to-hand combat or Shooting phase immediately returns to the battle. Place the model within 6 inch of the Necromancer. The model cannot be placed straight into hand-to-hand combat with an enemy model."
+                }
+            ],
+            "itemlist": [
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Melee Weapon",
+                    "subcategory": "Halberd",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 1,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Item",
+                            "name": "Two Handed",
+                            "description": "A model armed with this weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."
+                        }
+                    ],
+                    "magiclist": [],
+                    "price": 10,
+                    "description": "The halberd\u2019s heavy blade is mounted upon a sturdy shaft of oak or steel and has a point like a spear and a cutting edge like an axe. Since it can be used to chop as well as thrust, it is an adaptable weapon, but is difficult to use inside buildings."
+                }
+            ],
+            "experience": 8,
+            "price": 35,
+            "maxcount": 1,
+            "description": "Necromancers are evil wizards, studying the corrupt art of Necromancy. Many of them are acolytes and servants of Vlad von Carstein, and follow the agents of their master to the city of the Damned. Others are recruited from amongst wizards and warlocks who have come under the suspicion of the various agents of Sigmar and have fled to Mordheim to avoid persecution."
+        },
+        {
+            "name": "Barend",
+            "race": "Undead / Vampires",
+            "source": "Core Rules",
+            "warband": "The Undead",
+            "category": "Vampire",
+            "ishero": true,
+            "skill": {
+                "movement": 6,
+                "weapon": 4,
+                "ballistic": 4,
+                "strength": 4,
+                "toughness": 4,
+                "wounds": 2,
+                "initiative": 5,
+                "actions": 2,
+                "leadership": 8,
+                "armoursave": 0
+            },
+            "abilitylist": [
+                {
+                    "source": "Core Rules",
+                    "category": "Character",
+                    "name": "Cause Fear",
+                    "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                },
+                {
+                    "source": "Core Rules",
+                    "category": "Character",
+                    "name": "Immune to Psychology",
+                    "description": "This character is not affected by psychology (such as fear) and never leaves combat."
+                },
+                {
+                    "source": "Core Rules",
+                    "category": "Character",
+                    "name": "Immune to Poison",
+                    "description": "This character is not affected by any poison."
+                },
+                {
+                    "source": "Core Rules",
+                    "category": "Character",
+                    "name": "Immune to Pain",
+                    "description": "This character is not affected by pain and therefore treats a \u2018stunned\u2019 result on the Injury chart as \u2018knocked down\u2019."
+                },
+                {
+                    "source": "Core Rules",
+                    "category": "Character",
+                    "name": "Leader",
+                    "description": "Nearby units (6 inch) can use this characters leader skill."
+                }
+            ],
+            "magiclist": [],
+            "itemlist": [
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Melee Weapon",
+                    "subcategory": "Sword",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Item",
+                            "name": "Parry",
+                            "description": "This weapon offers an excellent balance of defense and offence. A model armed with this weapon may parry blows. When his opponent rolls to hit, the model armed with this weapon may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength \u2013 they are simply too powerful to be stopped. The character may reroll a failed parry attempt for every extra item that allows for Parrying."
+                        }
+                    ],
+                    "magiclist": [],
+                    "price": 10,
+                    "description": "The sword is often referred to as the \u2018king of weapons\u2019. The most common sword available, the broadsword of the Empire, is a masterpiece by the standards of any smith: four full feet of gleaming steel, double-edged and razor-sharp. Swords are much more effective weapons than crude clubs and axes, though learning to use a sword is a long and difficult process. It takes years to truly master this weapon \u2013 most warriors in Mordheim die long before they get this far!"
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Light Armour",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 20,
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Shield",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Item",
+                            "name": "Encumbered 2 of 2",
+                            "description": "A warrior that is armed with both heavy armor and a shield suffers a -1 Movement penalty."
+                        }
+                    ],
+                    "magiclist": [],
+                    "price": 5,
+                    "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner."
+                }
+            ],
+            "experience": 20,
+            "price": 110,
+            "maxcount": 1,
+            "description": "Vampires lead the Undead in their search for the magical stones that will give their master the power to conquer the Empire. Although but pale shadows when compared to the dread Vampire Lords, the immortal servants of Vlad are still some of the most powerful creatures who fight in Mordheim. Most of them serve the undying count of Sylvania, but some have found the city to their liking, and have become independent."
+        },
+        {
+            "name": "Ceasar",
+            "race": "Undead / Vampires",
+            "source": "Core Rules",
+            "warband": "The Undead",
+            "category": "Dreg",
+            "ishero": true,
+            "skill": {
+                "movement": 4,
+                "weapon": 2,
+                "ballistic": 2,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 3,
+                "actions": 1,
+                "leadership": 7,
+                "armoursave": 0
+            },
+            "abilitylist": [],
+            "magiclist": [],
+            "itemlist": [
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Melee Weapon",
+                    "subcategory": "Sword",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Item",
+                            "name": "Parry",
+                            "description": "This weapon offers an excellent balance of defense and offence. A model armed with this weapon may parry blows. When his opponent rolls to hit, the model armed with this weapon may roll a D6. If the score is greater than the highest to hit score of his opponent, the model has parried the blow, and that attack is discarded. A model may not parry attacks made with double or more its own Strength \u2013 they are simply too powerful to be stopped. The character may reroll a failed parry attempt for every extra item that allows for Parrying."
+                        }
+                    ],
+                    "magiclist": [],
+                    "price": 10,
+                    "description": "The sword is often referred to as the \u2018king of weapons\u2019. The most common sword available, the broadsword of the Empire, is a masterpiece by the standards of any smith: four full feet of gleaming steel, double-edged and razor-sharp. Swords are much more effective weapons than crude clubs and axes, though learning to use a sword is a long and difficult process. It takes years to truly master this weapon \u2013 most warriors in Mordheim die long before they get this far!"
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Light Armour",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 20,
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Shield",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Item",
+                            "name": "Encumbered 2 of 2",
+                            "description": "A warrior that is armed with both heavy armor and a shield suffers a -1 Movement penalty."
+                        }
+                    ],
+                    "magiclist": [],
+                    "price": 5,
+                    "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner."
+                }
+            ],
+            "experience": 0,
+            "price": 20,
+            "maxcount": 3,
+            "description": "Dregs are the most miserable human survivors of the demise of Mordheim. They are deformed and rejected individuals, shunned even by the other men and women who still live in the ruins and catacombs of the city. Vampires often recruit Dregs as their servants and treat them with surprising kindness.As a result, Dregs are often fanatically loyal to their Undead overlords and will do anything to protect and serve them. Dregs are very useful to their masters as they can be sent to buy equipment, weapons and supplies from the settlements around Mordheim which would often not welcome Necromancers or where Vampires would fall under the suspicion of the Witch Hunters. They can also do the bidding of their vampiric master during daylight, when the Vampires must rest in their coffins."
+        },
+        {
+            "name": "Dan",
+            "race": "Undead / Vampires",
+            "source": "Core Rules",
+            "warband": "The Undead",
+            "category": "Dreg",
+            "ishero": true,
+            "skill": {
+                "movement": 4,
+                "weapon": 2,
+                "ballistic": 2,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 3,
+                "actions": 1,
+                "leadership": 7,
+                "armoursave": 0
+            },
+            "abilitylist": [],
+            "magiclist": [],
+            "itemlist": [
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Missile Weapon",
+                    "subcategory": "Long Bow",
+                    "distance": 30,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 3,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 15,
+                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Light Armour",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 20,
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                }
+            ],
+            "experience": 0,
+            "price": 20,
+            "maxcount": 3,
+            "description": "Dregs are the most miserable human survivors of the demise of Mordheim. They are deformed and rejected individuals, shunned even by the other men and women who still live in the ruins and catacombs of the city. Vampires often recruit Dregs as their servants and treat them with surprising kindness.As a result, Dregs are often fanatically loyal to their Undead overlords and will do anything to protect and serve them. Dregs are very useful to their masters as they can be sent to buy equipment, weapons and supplies from the settlements around Mordheim which would often not welcome Necromancers or where Vampires would fall under the suspicion of the Witch Hunters. They can also do the bidding of their vampiric master during daylight, when the Vampires must rest in their coffins."
+        },
+        {
+            "name": "Everest",
+            "race": "Undead / Vampires",
+            "source": "Core Rules",
+            "warband": "The Undead",
+            "category": "Dreg",
+            "ishero": true,
+            "skill": {
+                "movement": 4,
+                "weapon": 2,
+                "ballistic": 2,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 3,
+                "actions": 1,
+                "leadership": 7,
+                "armoursave": 0
+            },
+            "abilitylist": [],
+            "magiclist": [],
+            "itemlist": [
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Missile Weapon",
+                    "subcategory": "Long Bow",
+                    "distance": 30,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 3,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 15,
+                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Light Armour",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 20,
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                }
+            ],
+            "experience": 0,
+            "price": 20,
+            "maxcount": 3,
+            "description": "Dregs are the most miserable human survivors of the demise of Mordheim. They are deformed and rejected individuals, shunned even by the other men and women who still live in the ruins and catacombs of the city. Vampires often recruit Dregs as their servants and treat them with surprising kindness.As a result, Dregs are often fanatically loyal to their Undead overlords and will do anything to protect and serve them. Dregs are very useful to their masters as they can be sent to buy equipment, weapons and supplies from the settlements around Mordheim which would often not welcome Necromancers or where Vampires would fall under the suspicion of the Witch Hunters. They can also do the bidding of their vampiric master during daylight, when the Vampires must rest in their coffins."
+        },
+        {
+            "name": "Frederik",
+            "race": "Undead / Vampires",
+            "source": "Core Rules",
+            "warband": "The Undead",
+            "category": "Dreg",
+            "ishero": true,
+            "skill": {
+                "movement": 4,
+                "weapon": 2,
+                "ballistic": 2,
+                "strength": 3,
+                "toughness": 3,
+                "wounds": 1,
+                "initiative": 3,
+                "actions": 1,
+                "leadership": 7,
+                "armoursave": 0
+            },
+            "abilitylist": [],
+            "magiclist": [],
+            "itemlist": [
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Missile Weapon",
+                    "subcategory": "Long Bow",
+                    "distance": 30,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 3,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 15,
+                    "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                },
+                {
+                    "name": "",
+                    "source": "Core Rules",
+                    "category": "Armour & Protection",
+                    "subcategory": "Light Armour",
+                    "distance": 0,
+                    "skill": {
+                        "movement": 0,
+                        "weapon": 0,
+                        "ballistic": 0,
+                        "strength": 0,
+                        "toughness": 0,
+                        "wounds": 0,
+                        "initiative": 0,
+                        "actions": 0,
+                        "leadership": 0,
+                        "armoursave": 1
+                    },
+                    "abilitylist": [],
+                    "magiclist": [],
+                    "price": 20,
+                    "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+                }
+            ],
+            "experience": 0,
+            "price": 20,
+            "maxcount": 3,
+            "description": "Dregs are the most miserable human survivors of the demise of Mordheim. They are deformed and rejected individuals, shunned even by the other men and women who still live in the ruins and catacombs of the city. Vampires often recruit Dregs as their servants and treat them with surprising kindness.As a result, Dregs are often fanatically loyal to their Undead overlords and will do anything to protect and serve them. Dregs are very useful to their masters as they can be sent to buy equipment, weapons and supplies from the settlements around Mordheim which would often not welcome Necromancers or where Vampires would fall under the suspicion of the Witch Hunters. They can also do the bidding of their vampiric master during daylight, when the Vampires must rest in their coffins."
+        }
+    ],
+    "squadlist": [
+        {
+            "name": "Swordsmen",
+            "henchmanlist": [
+                {
+                    "name": "Swordsmen0",
+                    "race": "Undead / Vampires",
+                    "source": "Core Rules",
+                    "warband": "The Undead",
+                    "category": "Zombie",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 0,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 1,
+                        "actions": 1,
+                        "leadership": 5,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Cause Fear",
+                            "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Psychology",
+                            "description": "This character is not affected by psychology (such as fear) and never leaves combat."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Poison",
+                            "description": "This character is not affected by any poison."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Pain",
+                            "description": "This character is not affected by pain and therefore treats a \u2018stunned\u2019 result on the Injury chart as \u2018knocked down\u2019."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "May Not Run",
+                            "description": "This character May Not Run (but may charge normally)."
+                        }
+                    ],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Spear",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "First Strike",
+                                    "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Unwieldy",
+                                    "description": "A model armed with this weapon may only use a shield or a buckler in his other hand. He may not use a second weapon, because it requires all his skill to wield it."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cavalry Charge Bonus",
+                                    "description": "If using the rules for mounted models, a mounted warrior armed with this weapon receives a +1 Strength bonus when he charges. This bonus only applies for that turn."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 10,
+                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 15,
+                    "maxcount": 0,
+                    "description": "Zombies are the most common of the Undead: creatures animated by the will of their Necromantic masters."
+                },
+                {
+                    "name": "Swordsmen1",
+                    "race": "Undead / Vampires",
+                    "source": "Core Rules",
+                    "warband": "The Undead",
+                    "category": "Zombie",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 0,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 1,
+                        "actions": 1,
+                        "leadership": 5,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Cause Fear",
+                            "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Psychology",
+                            "description": "This character is not affected by psychology (such as fear) and never leaves combat."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Poison",
+                            "description": "This character is not affected by any poison."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Pain",
+                            "description": "This character is not affected by pain and therefore treats a \u2018stunned\u2019 result on the Injury chart as \u2018knocked down\u2019."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "May Not Run",
+                            "description": "This character May Not Run (but may charge normally)."
+                        }
+                    ],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Spear",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "First Strike",
+                                    "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Unwieldy",
+                                    "description": "A model armed with this weapon may only use a shield or a buckler in his other hand. He may not use a second weapon, because it requires all his skill to wield it."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cavalry Charge Bonus",
+                                    "description": "If using the rules for mounted models, a mounted warrior armed with this weapon receives a +1 Strength bonus when he charges. This bonus only applies for that turn."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 10,
+                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 15,
+                    "maxcount": 0,
+                    "description": "Zombies are the most common of the Undead: creatures animated by the will of their Necromantic masters."
+                },
+                {
+                    "name": "Swordsmen2",
+                    "race": "Undead / Vampires",
+                    "source": "Core Rules",
+                    "warband": "The Undead",
+                    "category": "Zombie",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 0,
+                        "strength": 3,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 1,
+                        "actions": 1,
+                        "leadership": 5,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Cause Fear",
+                            "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Psychology",
+                            "description": "This character is not affected by psychology (such as fear) and never leaves combat."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Poison",
+                            "description": "This character is not affected by any poison."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Pain",
+                            "description": "This character is not affected by pain and therefore treats a \u2018stunned\u2019 result on the Injury chart as \u2018knocked down\u2019."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "May Not Run",
+                            "description": "This character May Not Run (but may charge normally)."
+                        }
+                    ],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Spear",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "First Strike",
+                                    "description": "A warrior with a spear strikes first in the first turn of hand-to-hand combat."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Unwieldy",
+                                    "description": "A model armed with this weapon may only use a shield or a buckler in his other hand. He may not use a second weapon, because it requires all his skill to wield it."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cavalry Charge Bonus",
+                                    "description": "If using the rules for mounted models, a mounted warrior armed with this weapon receives a +1 Strength bonus when he charges. This bonus only applies for that turn."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 10,
+                            "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 15,
+                    "maxcount": 0,
+                    "description": "Zombies are the most common of the Undead: creatures animated by the will of their Necromantic masters."
+                }
+            ]
+        },
+        {
+            "name": "Marksmen",
+            "henchmanlist": [
+                {
+                    "name": "Marksmen0",
+                    "race": "Undead / Vampires",
+                    "source": "Core Rules",
+                    "warband": "The Undead",
+                    "category": "Ghoul",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 4,
+                        "weapon": 2,
+                        "ballistic": 2,
+                        "strength": 3,
+                        "toughness": 4,
+                        "wounds": 1,
+                        "initiative": 3,
+                        "actions": 2,
+                        "leadership": 5,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed",
+                            "description": "This character is unable to use any weapons."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Cause Fear",
+                            "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                        }
+                    ],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Starting Dagger",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 0,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Cloth is Armour",
+                                    "description": "This weapon is not the best weapon to use for penetrating an enemy model\u2019s armour. An enemy wounded by it gains a +1 bonus to his armor save, and a 6+ armor save if he has none normally."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 0,
+                            "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+                        },
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Melee Weapon",
+                            "subcategory": "Great Sword",
+                            "distance": 0,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 2,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Two Handed",
+                                    "description": "A model armed with this weapon may not use a shield, buckler or additional weapon in close combat. If the model is equipped with a shield he will still get a +1 bonus to his armor save against shooting."
+                                },
+                                {
+                                    "source": "Core Rules",
+                                    "category": "Item",
+                                    "name": "Last Strike",
+                                    "description": "This weapon is so heavy that the model using it always strikes last, even when charging."
+                                }
+                            ],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 40,
+                    "maxcount": 0,
+                    "description": "Ghouls are the descendants of evil and insane men who ate the flesh of the dead. When the lean and hungry times of famine come upon the Old World, the most depraved and destitute took to feasting on corpses to survive. Driven by their unspeakable craving for the meat of their fellow men, these creatures have given up their human life and dwell near graveyards, crypts and tombs, digging up the rotting corpses of the recently buried and consuming the cold flesh with their bare teeth and claws.The destruction of Mordheim attracted many Ghoul clans from the north, and now they have taken up permanent residence in the crypts and cemeteries of the ruined city."
+                }
+            ]
+        },
+        {
+            "name": "Warrior",
+            "henchmanlist": [
+                {
+                    "name": "Warrior0",
+                    "race": "Undead / Vampires",
+                    "source": "Core Rules",
+                    "warband": "The Undead",
+                    "category": "Dire Wolf",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 9,
+                        "weapon": 3,
+                        "ballistic": 0,
+                        "strength": 4,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 2,
+                        "actions": 1,
+                        "leadership": 4,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Double Charge",
+                            "description": "This character overpowers its opponents when it charges. It fights with 2 attacks instead of 1 during the turn it charges."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Cause Fear",
+                            "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Psychology",
+                            "description": "This character is not affected by psychology (such as fear) and never leaves combat."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Poison",
+                            "description": "This character is not affected by any poison."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Pain",
+                            "description": "This character is not affected by pain and therefore treats a \u2018stunned\u2019 result on the Injury chart as \u2018knocked down\u2019."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "May Not Run",
+                            "description": "This character May Not Run (but may charge normally)."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        }
+                    ],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 50,
+                    "maxcount": 5,
+                    "description": "Dire Wolves are slavering Undead hounds, the animated remains of the giant wolves of the Worlds Edge Mountains. Their chilling howls can strike fear into the hearts of even the bravest warriors or most ruthless Dwarf mercenaries. They prowl the streets of Mordheim like shadows, and many men have died with the cold jaws of a Dire Wolf around their neck."
+                }
+            ]
+        },
+        {
+            "name": "Warrior2",
+            "henchmanlist": [
+                {
+                    "name": "Warrior20",
+                    "race": "Undead / Vampires",
+                    "source": "Core Rules",
+                    "warband": "The Undead",
+                    "category": "Dire Wolf",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 9,
+                        "weapon": 3,
+                        "ballistic": 0,
+                        "strength": 4,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 2,
+                        "actions": 1,
+                        "leadership": 4,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Double Charge",
+                            "description": "This character overpowers its opponents when it charges. It fights with 2 attacks instead of 1 during the turn it charges."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Cause Fear",
+                            "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Psychology",
+                            "description": "This character is not affected by psychology (such as fear) and never leaves combat."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Poison",
+                            "description": "This character is not affected by any poison."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Pain",
+                            "description": "This character is not affected by pain and therefore treats a \u2018stunned\u2019 result on the Injury chart as \u2018knocked down\u2019."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "May Not Run",
+                            "description": "This character May Not Run (but may charge normally)."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        }
+                    ],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 50,
+                    "maxcount": 5,
+                    "description": "Dire Wolves are slavering Undead hounds, the animated remains of the giant wolves of the Worlds Edge Mountains. Their chilling howls can strike fear into the hearts of even the bravest warriors or most ruthless Dwarf mercenaries. They prowl the streets of Mordheim like shadows, and many men have died with the cold jaws of a Dire Wolf around their neck."
+                }
+            ]
+        },
+        {
+            "name": "Marksmen3",
+            "henchmanlist": [
+                {
+                    "name": "Marksmen30",
+                    "race": "Undead / Vampires",
+                    "source": "Core Rules",
+                    "warband": "The Undead",
+                    "category": "Dire Wolf",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 9,
+                        "weapon": 3,
+                        "ballistic": 0,
+                        "strength": 4,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 2,
+                        "actions": 1,
+                        "leadership": 4,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Double Charge",
+                            "description": "This character overpowers its opponents when it charges. It fights with 2 attacks instead of 1 during the turn it charges."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Cause Fear",
+                            "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Psychology",
+                            "description": "This character is not affected by psychology (such as fear) and never leaves combat."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Poison",
+                            "description": "This character is not affected by any poison."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Pain",
+                            "description": "This character is not affected by pain and therefore treats a \u2018stunned\u2019 result on the Injury chart as \u2018knocked down\u2019."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "May Not Run",
+                            "description": "This character May Not Run (but may charge normally)."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        }
+                    ],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 50,
+                    "maxcount": 5,
+                    "description": "Dire Wolves are slavering Undead hounds, the animated remains of the giant wolves of the Worlds Edge Mountains. Their chilling howls can strike fear into the hearts of even the bravest warriors or most ruthless Dwarf mercenaries. They prowl the streets of Mordheim like shadows, and many men have died with the cold jaws of a Dire Wolf around their neck."
+                }
+            ]
+        },
+        {
+            "name": "Marksmen4",
+            "henchmanlist": [
+                {
+                    "name": "Marksmen40",
+                    "race": "Undead / Vampires",
+                    "source": "Core Rules",
+                    "warband": "The Undead",
+                    "category": "Dire Wolf",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 9,
+                        "weapon": 3,
+                        "ballistic": 0,
+                        "strength": 4,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 2,
+                        "actions": 1,
+                        "leadership": 4,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Double Charge",
+                            "description": "This character overpowers its opponents when it charges. It fights with 2 attacks instead of 1 during the turn it charges."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Cause Fear",
+                            "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Psychology",
+                            "description": "This character is not affected by psychology (such as fear) and never leaves combat."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Poison",
+                            "description": "This character is not affected by any poison."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Pain",
+                            "description": "This character is not affected by pain and therefore treats a \u2018stunned\u2019 result on the Injury chart as \u2018knocked down\u2019."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "May Not Run",
+                            "description": "This character May Not Run (but may charge normally)."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        }
+                    ],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 50,
+                    "maxcount": 5,
+                    "description": "Dire Wolves are slavering Undead hounds, the animated remains of the giant wolves of the Worlds Edge Mountains. Their chilling howls can strike fear into the hearts of even the bravest warriors or most ruthless Dwarf mercenaries. They prowl the streets of Mordheim like shadows, and many men have died with the cold jaws of a Dire Wolf around their neck."
+                },
+                {
+                    "name": "Marksmen42",
+                    "race": "Undead / Vampires",
+                    "source": "Core Rules",
+                    "warband": "The Undead",
+                    "category": "Dire Wolf",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 9,
+                        "weapon": 3,
+                        "ballistic": 0,
+                        "strength": 4,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 2,
+                        "actions": 1,
+                        "leadership": 4,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Double Charge",
+                            "description": "This character overpowers its opponents when it charges. It fights with 2 attacks instead of 1 during the turn it charges."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Cause Fear",
+                            "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Psychology",
+                            "description": "This character is not affected by psychology (such as fear) and never leaves combat."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Poison",
+                            "description": "This character is not affected by any poison."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Pain",
+                            "description": "This character is not affected by pain and therefore treats a \u2018stunned\u2019 result on the Injury chart as \u2018knocked down\u2019."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "May Not Run",
+                            "description": "This character May Not Run (but may charge normally)."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        }
+                    ],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 50,
+                    "maxcount": 5,
+                    "description": "Dire Wolves are slavering Undead hounds, the animated remains of the giant wolves of the Worlds Edge Mountains. Their chilling howls can strike fear into the hearts of even the bravest warriors or most ruthless Dwarf mercenaries. They prowl the streets of Mordheim like shadows, and many men have died with the cold jaws of a Dire Wolf around their neck."
+                },
+                {
+                    "name": "Marksmen43",
+                    "race": "Undead / Vampires",
+                    "source": "Core Rules",
+                    "warband": "The Undead",
+                    "category": "Dire Wolf",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 9,
+                        "weapon": 3,
+                        "ballistic": 0,
+                        "strength": 4,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 2,
+                        "actions": 1,
+                        "leadership": 4,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Double Charge",
+                            "description": "This character overpowers its opponents when it charges. It fights with 2 attacks instead of 1 during the turn it charges."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Cause Fear",
+                            "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Psychology",
+                            "description": "This character is not affected by psychology (such as fear) and never leaves combat."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Poison",
+                            "description": "This character is not affected by any poison."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Pain",
+                            "description": "This character is not affected by pain and therefore treats a \u2018stunned\u2019 result on the Injury chart as \u2018knocked down\u2019."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "May Not Run",
+                            "description": "This character May Not Run (but may charge normally)."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        }
+                    ],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 50,
+                    "maxcount": 5,
+                    "description": "Dire Wolves are slavering Undead hounds, the animated remains of the giant wolves of the Worlds Edge Mountains. Their chilling howls can strike fear into the hearts of even the bravest warriors or most ruthless Dwarf mercenaries. They prowl the streets of Mordheim like shadows, and many men have died with the cold jaws of a Dire Wolf around their neck."
+                },
+                {
+                    "name": "Marksmen44",
+                    "race": "Undead / Vampires",
+                    "source": "Core Rules",
+                    "warband": "The Undead",
+                    "category": "Dire Wolf",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 9,
+                        "weapon": 3,
+                        "ballistic": 0,
+                        "strength": 4,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 2,
+                        "actions": 1,
+                        "leadership": 4,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Double Charge",
+                            "description": "This character overpowers its opponents when it charges. It fights with 2 attacks instead of 1 during the turn it charges."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Cause Fear",
+                            "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Psychology",
+                            "description": "This character is not affected by psychology (such as fear) and never leaves combat."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Poison",
+                            "description": "This character is not affected by any poison."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Pain",
+                            "description": "This character is not affected by pain and therefore treats a \u2018stunned\u2019 result on the Injury chart as \u2018knocked down\u2019."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "May Not Run",
+                            "description": "This character May Not Run (but may charge normally)."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        }
+                    ],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 50,
+                    "maxcount": 5,
+                    "description": "Dire Wolves are slavering Undead hounds, the animated remains of the giant wolves of the Worlds Edge Mountains. Their chilling howls can strike fear into the hearts of even the bravest warriors or most ruthless Dwarf mercenaries. They prowl the streets of Mordheim like shadows, and many men have died with the cold jaws of a Dire Wolf around their neck."
+                },
+                {
+                    "name": "Marksmen45",
+                    "race": "Undead / Vampires",
+                    "source": "Core Rules",
+                    "warband": "The Undead",
+                    "category": "Dire Wolf",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 9,
+                        "weapon": 3,
+                        "ballistic": 0,
+                        "strength": 4,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 2,
+                        "actions": 1,
+                        "leadership": 4,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Double Charge",
+                            "description": "This character overpowers its opponents when it charges. It fights with 2 attacks instead of 1 during the turn it charges."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Cause Fear",
+                            "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Psychology",
+                            "description": "This character is not affected by psychology (such as fear) and never leaves combat."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Poison",
+                            "description": "This character is not affected by any poison."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Pain",
+                            "description": "This character is not affected by pain and therefore treats a \u2018stunned\u2019 result on the Injury chart as \u2018knocked down\u2019."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "May Not Run",
+                            "description": "This character May Not Run (but may charge normally)."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        }
+                    ],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 50,
+                    "maxcount": 5,
+                    "description": "Dire Wolves are slavering Undead hounds, the animated remains of the giant wolves of the Worlds Edge Mountains. Their chilling howls can strike fear into the hearts of even the bravest warriors or most ruthless Dwarf mercenaries. They prowl the streets of Mordheim like shadows, and many men have died with the cold jaws of a Dire Wolf around their neck."
+                },
+                {
+                    "name": "Marksmen46",
+                    "race": "Undead / Vampires",
+                    "source": "Core Rules",
+                    "warband": "The Undead",
+                    "category": "Dire Wolf",
+                    "ishero": false,
+                    "skill": {
+                        "movement": 9,
+                        "weapon": 3,
+                        "ballistic": 0,
+                        "strength": 4,
+                        "toughness": 3,
+                        "wounds": 1,
+                        "initiative": 2,
+                        "actions": 1,
+                        "leadership": 4,
+                        "armoursave": 0
+                    },
+                    "abilitylist": [
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Double Charge",
+                            "description": "This character overpowers its opponents when it charges. It fights with 2 attacks instead of 1 during the turn it charges."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Unarmed and Unarmoured",
+                            "description": "This character is unable to use any weapons or armour."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Cause Fear",
+                            "description": "This character is terrifying and therefore instill fear in their enemies. In turn this character is immune to other fear causing characters.<br/><br/>- When this character charges, the enemy character must take a leadership test to overcome his fear. Test when the charge is declared and is determined to be within range. If the test is passed the enemy model may fight as normal. If it is failed the model must roll 6\u2019s to score hits on the first round of combat.<br/>- If this character is charged, the enemy character must take a leadership test to overcome his fear. If it fails the enemy character may not charge and must remain stationary for the turn. Treat this as a failed charge."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Psychology",
+                            "description": "This character is not affected by psychology (such as fear) and never leaves combat."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Poison",
+                            "description": "This character is not affected by any poison."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Immune to Pain",
+                            "description": "This character is not affected by pain and therefore treats a \u2018stunned\u2019 result on the Injury chart as \u2018knocked down\u2019."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "May Not Run",
+                            "description": "This character May Not Run (but may charge normally)."
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Animal",
+                            "description": "This character is an animal and thus cannot gain experience."
+                        }
+                    ],
+                    "magiclist": [],
+                    "itemlist": [
+                        {
+                            "name": "",
+                            "source": "Core Rules",
+                            "category": "Missile Weapon",
+                            "subcategory": "Long Bow",
+                            "distance": 30,
+                            "skill": {
+                                "movement": 0,
+                                "weapon": 0,
+                                "ballistic": 0,
+                                "strength": 3,
+                                "toughness": 0,
+                                "wounds": 0,
+                                "initiative": 0,
+                                "actions": 0,
+                                "leadership": 0,
+                                "armoursave": 0
+                            },
+                            "abilitylist": [],
+                            "magiclist": [],
+                            "price": 15,
+                            "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+                        }
+                    ],
+                    "experience": 0,
+                    "price": 50,
+                    "maxcount": 5,
+                    "description": "Dire Wolves are slavering Undead hounds, the animated remains of the giant wolves of the Worlds Edge Mountains. Their chilling howls can strike fear into the hearts of even the bravest warriors or most ruthless Dwarf mercenaries. They prowl the streets of Mordheim like shadows, and many men have died with the cold jaws of a Dire Wolf around their neck."
+                }
+            ]
+        }
+    ]
+}

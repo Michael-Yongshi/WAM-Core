@@ -12,8 +12,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them:
-Grab the zip folder from: https://www.jottacloud.com/s/13030f55cae66fb428698777e670d3a052a
+Grab the zip folder from: https://www.jottacloud.com/s/13030f55cae66fb428698777e670d3a052a. 
+
 Unzip the folder and run the exe file within.
 
 ### Prerequisites (dev only)

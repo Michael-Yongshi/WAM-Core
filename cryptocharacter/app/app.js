@@ -75,6 +75,8 @@ Character.prototype.getCharactersByOwner = function(address, cb) {
     });
 }
 
+// 
+
 // Waits for receipt from transaction
 Character.prototype.waitForReceipt = function(hash, cb) {
     var that = this;
@@ -97,7 +99,6 @@ Character.prototype.waitForReceipt = function(hash, cb) {
         console.error('waitForReceipt ' + err  )
     });
     
-   
 }
 
 // Create random Character from string (identifier)
@@ -151,29 +152,48 @@ Character.prototype.createRandomCharacter = function() {
 
 // Load all Characters owned by user
 
-Character.prototype.loadInventory = function() {
+Character.prototype.loadInventory = async function() {
     var that = this;
-    this.instance.methods.getCharactersByOwner( window.top.web3.eth.accounts[0]).call().then(function( characterIds) {
+    that.instance.methods.getCharactersByOwner( window.top.web3.eth.accounts[0]).call().then(function( characterIds) {
                 if(characterIds.length > 0) {
                     for(let i = 0; i < characterIds.length; i++) {
-                         $(".inventory-list").html('');
-                        that.instance.methods.characters(characterIds[i]).call().then( function(character) {
+                        $(".inventory-list").html('');
+                        that.instance.methods.characters(characterIds[i]).call().then(async function(character) {
                             var realIndex = characterIds[i];
+                            var characterId = character[0];
                             var characterName = character[1];
                             var characterUnit = character[2];
                             var characterRace = character[3];
-                            var characterId = character[0];
+                            var eventList = []
+                            await that.instance.methods.getEventsByCharacter(characterIds[i]).call().then(async function( eventIds) {
+                                console.log('inv list event ids: ' + eventIds.length)
+                                if(eventIds.length > 0) {
+                                    for(let e = 0; e < eventIds.length; e++) {
+                                        console.log('in for loop')
+                                        await that.instance.methods.events(eventIds[e]).call().then(function(event) {
+                                            eventList.push(event[e])
+                                            console.log('event E: ' + event[e] + ' length: ' + eventList.length)
+                                        })
+                                    }
+                                }
+                            }).catch(function(err){
+                            console.error('events ' + err  )
+                            })
+
+                            console.log('buiten event list:' + eventList.length)
+
                             var actionButtons = '<div>\
-                            \<button id="'+realIndex+'">Gift</button>\
-                            \<button id="'+realIndex+'">Eat</button>\
-                            \<button id="'+realIndex+'">Event</button>\
+                            \<button class="btn button-gift" id="'+realIndex+'">Gift</button>\
+                            \<button class="btn button-eat" id="'+realIndex+'">Eat</button>\
+                            \<button class="btn button-event" id="'+realIndex+'">Event</button>\
                             </div>';
 
                             $(".inventory-list").append('<div id="character-'+realIndex+'" class="col-lg-6">\
                             \<div class="character-container">\
                             \<p><span style="float: left;">'+characterName+'</span><span style="float: middle;">'+characterUnit+'</span><span style="float: right;">'+characterRace+'</span></p>\
+                            \<p><span style="float: middle;">number of events: '+eventList.length+'</span></p>\
+                            \<p><span style="float: middle;">events: '+eventList+'</span></p>\
                             '+actionButtons);
-
                             $(".inventory-list").append('</div>');
                             $(".inventory-list").append('</div>');
                             realIndex++;
@@ -200,10 +220,7 @@ Character.prototype.updateCreateContainer = function() {
     if(characterName.length > 0) {
         var address = window.top.web3.eth.accounts[0];
         this.getRandomDna(characterName, address, function(characterDna) {
-                if(characterDna == 5142446803) {
-                    var a = new Audio("https://studio.ethereum.org/static/img/cryptocharacter/1.mp3");
-                    a.play();
-                }
+
                 var characterImage = that.generateCharacterImage(characterDna);
                 $("#character-create-container .ingredients").html(characterImage);
             
@@ -215,30 +232,30 @@ Character.prototype.updateCreateContainer = function() {
 }
 
 // Generates images from DNA - returns all of them in HTML
-Character.prototype.generateCharacterImage = function(dna) {
-    var url = "https://studio.ethereum.org/static/img/cryptocharacter/";
-    dna = dna.toString();
-    var basis = (dna.substring(0, 2) % 2) + 1;
-    var cheese = (dna.substring(2, 4) % 10) + 1;
-    var meat = (dna.substring(4, 6) % 18) + 1;
-    var spice = (dna.substring(6, 8) % 7) + 1;
-    var veggie = (dna.substring(8, 10) % 22) + 1;
+// Character.prototype.generateCharacterImage = function(dna) {
+//     var url = "https://studio.ethereum.org/static/img/cryptocharacter/";
+//     dna = dna.toString();
+//     var basis = (dna.substring(0, 2) % 2) + 1;
+//     var cheese = (dna.substring(2, 4) % 10) + 1;
+//     var meat = (dna.substring(4, 6) % 18) + 1;
+//     var spice = (dna.substring(6, 8) % 7) + 1;
+//     var veggie = (dna.substring(8, 10) % 22) + 1;
 
-    var image = '';
-    image += '<img src="'+url+'basis/basis-'+basis+'.png"/>';
-    image += '<img src="'+url+'cheeses/cheese-'+cheese+'.png"/>';
-    image += '<img src="'+url+'meats/meat-'+meat+'.png"/>';
-    image += '<img src="'+url+'spices/spice-'+spice+'.png"/>';
-    image += '<img src="'+url+'veggies/veg-'+veggie+'.png"/>';
+//     var image = '';
+//     image += '<img src="'+url+'basis/basis-'+basis+'.png"/>';
+//     image += '<img src="'+url+'cheeses/cheese-'+cheese+'.png"/>';
+//     image += '<img src="'+url+'meats/meat-'+meat+'.png"/>';
+//     image += '<img src="'+url+'spices/spice-'+spice+'.png"/>';
+//     image += '<img src="'+url+'veggies/veg-'+veggie+'.png"/>';
 
-    if(dna == 5142446803) {
-        image = '<img src="https://studio.ethereum.org/static/img/cryptocharacter/basis/basis-2.png"/>\
-                 <img src="https://studio.ethereum.org/static/img/cryptocharacter/meats/meat-13.png"/>\
-                 <img src="https://studio.ethereum.org/static/img/cryptocharacter/8fe918632d847e8ea3ebffbd47bd8ca9.png"/>';
-    }
+//     if(dna == 5142446803) {
+//         image = '<img src="https://studio.ethereum.org/static/img/cryptocharacter/basis/basis-2.png"/>\
+//                  <img src="https://studio.ethereum.org/static/img/cryptocharacter/meats/meat-13.png"/>\
+//                  <img src="https://studio.ethereum.org/static/img/cryptocharacter/8fe918632d847e8ea3ebffbd47bd8ca9.png"/>';
+//     }
 
-    return image;
-}
+//     return image;
+// }
 
 // Gift Character
 Character.prototype.giftCharacter = function(characterId, cb) {
@@ -342,13 +359,6 @@ Character.prototype.addEvent = function(characterId, cb) {
 
         $(".button-gift, .button-eat, .button-event").attr("disabled", true);
 
-        var characterDna = $('#character-'+characterId +' .characterDna').attr('id');
-
-        if(characterDna == 5142446803) {
-            var a = new Audio("https://studio.ethereum.org/static/img/cryptocharacter/3.mp3");
-            a.play();
-        }
-
         // Gas and gasPrice should be removed for non browser networks
         this.instance.methods.createEvent(characterId, strEvent).send({ from: window.top.web3.eth.accounts[0], gas: 100000, gasPrice: 1000000000, gasLimit: 100000 }).then( function(txHash) {
                 showStatus("Adding Event...");
@@ -356,18 +366,18 @@ Character.prototype.addEvent = function(characterId, cb) {
                     if(receipt.blockNumber > 0) {
                         $('.inventory-list').html('');
                         $(".button-gift, .button-eat, .button-event").attr("disabled", false);
-                        showStatus("Character sent");
+                        showStatus("Event Added");
                         that.loadInventory();
                     }
                     else {
-                        showStatus("Character was not sent. Please try it again.");
+                        showStatus("Event was not added. Please try it again.");
                         $(".button-gift, .button-eat, .button-event").attr("disabled", false);
                         $('#character-'+characterId).css("opacity", "1");
                     }
                 });
             }).catch(function(err){
                console.error(err);
-                showStatus("Sending canceled.");
+                showStatus("Adding event canceled.");
                 $('#character-'+characterId).css("opacity", "1");
                 return;
             });

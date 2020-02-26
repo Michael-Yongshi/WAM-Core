@@ -1,4 +1,6 @@
+import os
 import json
+
 
 #  Open Json file/ 
 def open_json(jsonfile):
@@ -6,23 +8,11 @@ def open_json(jsonfile):
         data = json.load(infile)
     return data
 
-
-# finding a specific record
-def find_record(data, key):
-    for record in data:
-        if record[data] == key:
-            return record[data]
-            break
-
 # dumping data to json
 def save_json(data ,jsonfile):
 
     with open(jsonfile, 'w') as outfile:
         json.dump(data, outfile, indent=4)
-
-    # newpath = r(jsonfile) 
-    # if not os.path.exists(newpath):
-    #     os.makedirs(newpath)
 
 # adding a record 
 def append_json(data, datatype, jsonfile):
@@ -30,3 +20,23 @@ def append_json(data, datatype, jsonfile):
         loaddata = json.load(infile)
     loaddata[datatype]=data
     save_json(loaddata, jsonfile)
+
+def save_file(datadict, filename):
+    """Dumps a save file to the documents folder"""
+
+    # set the paths to the users documents folder
+    path = r"~\WAM"
+    user_path = os.path.expanduser(path)
+    print(user_path)
+
+    # check if file already exists, if not create it
+    if not os.path.exists(user_path):
+        os.makedirs(user_path)
+
+    complete_path = os.path.join(user_path, filename + ".json")
+    print(complete_path)
+
+    # open file
+    with open(complete_path, 'w') as savefile:
+        # dump json data in the file
+        json.dump(datadict, savefile, indent=4)

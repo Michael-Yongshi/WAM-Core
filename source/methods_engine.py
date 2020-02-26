@@ -3,6 +3,7 @@ import os
 from source.methods_json import (
     open_json,
     save_json,
+    save_file,
 )
 
 from source.class_hierarchy import (
@@ -31,8 +32,11 @@ def cache_warband(wbid):
 def save_warband(warband):
 
     wbdict = warband.to_dict()
-    filepath = "database/saves/" + warband.name + ".json"
-    save_json(wbdict, filepath)
+    filename = warband.name
+    save_file(wbdict, filename)
+
+    # filepath = "database/saves/" + warband.name + ".json"
+    # save_json(wbdict, filepath)
 
 def save_warband_from_cache(wbname):
        

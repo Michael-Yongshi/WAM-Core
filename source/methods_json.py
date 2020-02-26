@@ -25,16 +25,18 @@ def save_file(datadict, filename):
     """Dumps a save file to the documents folder"""
 
     # set the paths to the users documents folder
-    path = "~\WAM"
+    path = r"~\WAM"
     user_path = os.path.expanduser(path)
-    completepath = os.path.join(user_path, filename + ".json")
-    
+    print(user_path)
+
     # check if file already exists, if not create it
-    if not os.path.exists(completepath):
-        os.makedirs(completepath)
+    if not os.path.exists(user_path):
+        os.makedirs(user_path)
+
+    complete_path = os.path.join(user_path, filename + ".json")
+    print(complete_path)
 
     # open file
-    savefile = open(completepath, 'w')
-
-    # dump json data in the file
-    json.dump(datadict, savefile, indent=4)
+    with open(complete_path, 'w') as savefile:
+        # dump json data in the file
+        json.dump(datadict, savefile, indent=4)

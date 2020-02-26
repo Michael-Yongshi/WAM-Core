@@ -171,8 +171,8 @@ Character.prototype.loadInventory = async function() {
                                     for(let e = 0; e < eventIds.length; e++) {
                                         console.log('in for loop')
                                         await that.instance.methods.events(eventIds[e]).call().then(function(event) {
-                                            eventList.push(event[e])
-                                            console.log('event E: ' + event[e] + ' length: ' + eventList.length)
+                                            eventList.push(event)
+                                            // console.log('event E: ' + event + ' length: ' + eventList.length)
                                         })
                                     }
                                 }
@@ -181,7 +181,7 @@ Character.prototype.loadInventory = async function() {
                             })
 
                             console.log('buiten event list:' + eventList.length)
-
+                            
                             var actionButtons = '<div>\
                             \<button class="btn button-gift" id="'+realIndex+'">Gift</button>\
                             \<button class="btn button-eat" id="'+realIndex+'">Eat</button>\

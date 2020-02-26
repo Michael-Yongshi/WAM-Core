@@ -29,15 +29,22 @@ contract CryptoCharacter is IERC721, ERC165 {
         string name;
         string unit;
         string race;
-        mapping (uint => string) events;
         uint dna;
     }
 
     Character[] public characters;
 
-    // A public array of different events that are stored as string
-    string[] public events;
+    // struct Event {
+    //     string identifier;
+    //     string datetime;
+    //     string type;
+    //     string description;
 
+    // }
+
+    // Event[] public events;
+    string[] public events;
+    
     // Mapping from owner to id of Character
     mapping (uint => address) public characterToOwner;
 
@@ -47,7 +54,7 @@ contract CryptoCharacter is IERC721, ERC165 {
     // Mapping from owner to number of owned token
     mapping (address => uint) public ownerCharacterCount;
 
-    // Mapping from owner to number of owned token
+    // Mapping from character to number of owned events
     mapping (uint => uint) public characterEventCount;
 
     // Mapping from token ID to approved address

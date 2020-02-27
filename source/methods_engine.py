@@ -1,110 +1,71 @@
 import os
 
 from source.methods_json import (
-    open_json,
-    save_json,
     save_file,
+    show_files,
+    load_file,
 )
 
-from source.class_hierarchy import (
-    Warband,
-    Squad,
-    Character,
-    Hero,
-    Henchman,
-    )
+def save_warband(datadict):
+    """Save warband to a save file"""
 
-from source.class_components import (
-    Rule,
-    Treasury,
-    Item,
-    Skill,
-    Ability,
-    Magic,
-    )
-
-# specific methods for application
-def cache_warband(wbid):
+    # set the paths to the users documents folder
+    local_path = r"~\Documents\WAM"
+    path = os.path.expanduser(local_path)
+    print("save_warband: local path" + local_path)
+    print("save_warband: path" + path)
     
-    datadict = wbid.to_dict()
-    save_json(data=datadict, jsonfile="database/saves/cache.json")
+    # set the filename to the warbands name
+    filename = datadict["name"]
 
-def save_warband(warband):
+    # run the json command to save the file as a json file
+    save_file(datadict, path, filename)
 
-    wbdict = warband.to_dict()
-    filename = warband.name
-    save_file(wbdict, filename)
-
-    # filepath = "database/saves/" + warband.name + ".json"
-    # save_json(wbdict, filepath)
-
-def save_warband_from_cache(wbname):
-       
-    # Open data in cache
-    datadict = open_json(jsonfile="database/saves/cache.json")
-
-    # Determine filepath of new save
-    filepath = "database/saves/" + wbname + ".json"
-
-    # Save cache to JSON save file
-    save_json(data=datadict, jsonfile=filepath)
-    print("Save completed")
-
-def load_warband(savename):
-    filepath = "database/saves/" + savename + ".json"
-    datadict = open_json(filepath)
-    wbid = Warband.from_dict(datadict)
-    return wbid
-
-def load_warband_to_cache(savename):
-    # Determine filepath of existing save
-    filepath = "database/saves/" + savename + ".json"
-    datadict = open_json(filepath)
-
-    # Push to JSON cache
-    save_json(data=datadict, jsonfile="database/saves/cache.json")
-    print("Loading completed")
-
-def show_saved_warbands():
+def show_warbands():
     # Folderpath
-    folderpath = "database/saves/"
+    local_path = r"~\Documents\WAM"
+    path = os.path.expanduser(local_path)
 
-    # Iterate over jsons in database/saves/
-    savelist = []
-    for filename in os.listdir(folderpath):
-        if filename.endswith(".json") and not filename == "cache.json": 
-            warbandname = os.path.splitext(filename)[0]
-            # print(os.path.join(folderpath, filename))
-            savelist.append(warbandname)
+    savelist = show_files(path)
 
     return savelist
 
-def get_current_warband():
-    # Open data in cache
-    datadict = open_json(jsonfile="database/saves/cache.json")
+def load_warband(wbname):
+    # set the paths to the users documents folder
+    local_path = r"~\Documents\WAM"
+    path = os.path.expanduser(local_path)
 
-    # from dictionary to objects for manipulation
-    wbid = Warband.from_dict(datadict)
+    # set the filename to the warbands name
+    filename = wbname
 
-    return wbid
+    # run the load json command to open the respective json file
+    datadict = load_file(path, filename)
+    
+    # return the warband dictionary
+    return datadict
 
-def create_template_wb():
-    template_wb = Warband(
-        name="",
-        race="", 
-        source="", 
-        warband="",
-    )
-    return template_wb
+def save_reference(datadict, filename):
+    """Save warband to a save file"""
 
-def create_template_char():
-    template_char = Character(
-        name="",
-        race="", 
-        source="", 
-        warband="",
-        skill=Skill("","","","","","","","","","",), 
-        category="", 
-        ishero="",
-    )
-    return template_char
+    # set the paths to the users documents folder
+    local_path = r"~\Documents\WAM"
+    path = os.path.expanduser(local_path)
+
+    # set the filename to the warbands name
+    filename = datadict["name"]
+
+    # run the json command to save the file as a json file
+    save_file(datadict, path, filename)
+
+def load_reference(reference):
+    # set the paths to the applications database reference files
+    path = "database/references/"
+
+    # set the reference filename to be loaded
+    filename = reference + "_ref"
+
+    # load the file
+    datadict = load_file(path, filename)
+
+    # return the reference dictionary
+    return datadict

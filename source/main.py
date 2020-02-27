@@ -38,19 +38,12 @@ from PyQt5.QtGui import (
     QPalette,
     )
 
-from source.methods_json import (
-    open_json,
-    save_json,
-    )
-
 from source.methods_engine import (
     save_warband,
     load_warband,
-    cache_warband,
-    show_saved_warbands,
-    get_current_warband,
-    create_template_wb,
-    create_template_char,
+    show_warbands,
+    save_reference,
+    load_reference,
     )
 
 from source.class_hierarchy import (
@@ -94,8 +87,8 @@ class WarbandOverview(QMainWindow):
     """The main window that everything runs in"""
     def __init__(self):
         super().__init__()
-        self.wbid = create_template_wb()
-        self.currentunit = create_template_char()
+        self.wbid = Warband.create_template()
+        self.currentunit = Character.create_template()
         self.currentthing = None
         self.initUI()
 

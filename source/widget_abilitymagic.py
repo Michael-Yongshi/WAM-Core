@@ -38,19 +38,12 @@ from PyQt5.QtGui import (
     QPalette,
     )
 
-from source.methods_json import (
-    open_json,
-    save_json,
-    )
-
 from source.methods_engine import (
     save_warband,
     load_warband,
-    cache_warband,
-    show_saved_warbands,
-    get_current_warband,
-    create_template_wb,
-    create_template_char,
+    show_warbands,
+    save_reference,
+    load_reference,
     )
 
 from source.class_hierarchy import (
@@ -110,7 +103,7 @@ class WidgetAbility(QBorderlessFrame):
         """Method for creating a new ability and receiving as attribute the unit it should be added to.
                     """
         def create_ability_for_unit():
-            abilitydict = open_json("database/references/abilities_ref.json")
+            abilitydict = load_reference("abilities")
             sources = []
             for key in abilitydict:
                 sources.append(key)
@@ -219,7 +212,7 @@ class WidgetMagic(QBorderlessFrame):
         """Method for creating a new magic and receiving as attribute the unit it should be added to.
                     """
         def create_magic_for_unit():
-            magicdict = open_json("database/references/magic_ref.json")
+            magicdict = load_reference("magic")
             sources = []
             for key in magicdict:
                 sources.append(key)

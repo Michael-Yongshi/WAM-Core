@@ -1,5 +1,6 @@
-from source.methods_json import (
-    open_json,
+
+from source.methods_engine import (
+    load_reference,
 )
 
 from source.methods_database import(
@@ -172,7 +173,7 @@ class Item(object):
     @staticmethod
     def create_item(source, category, subcategory):
         # open reference data json file
-        data = open_json("database/references/items_ref.json")
+        data = load_reference("items")
         datadict = data[source][category][subcategory]
 
         new_item = Item.from_dict(datadict = datadict, create = True)
@@ -304,7 +305,7 @@ class Ability(object):
     @staticmethod
     def create_ability(source, category, name):
         # open reference data json file
-        data = open_json("database/references/abilities_ref.json")
+        data = load_reference("abilities")
         datadict = data[source][category][name]
 
         new_ability = Ability.from_dict(datadict)
@@ -353,7 +354,7 @@ class Magic(object):
     @staticmethod
     def create_magic(source, category, name):
         # open reference data json file
-        data = open_json("database/references/magic_ref.json")
+        data = load_reference("magic")
         datadict = data[source][category][name]
 
         new_magic = Magic.from_dict(datadict)

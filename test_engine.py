@@ -1,14 +1,7 @@
-from source.methods_json import (
-    open_json,
-    save_json,
-    )
-    
 from source.methods_engine import (
     save_warband,
     load_warband,
-    cache_warband,
-    show_saved_warbands,
-    get_current_warband,
+    show_warbands,
     )
 
 from source.class_hierarchy import (
@@ -110,19 +103,6 @@ def test_ReiklandWarband():
 
     print("squad 12 assign succesfull")
     
-    # Push new warband to JSON cache
-    # To do: write to global variable
-    cache_warband(wbid)
-    print("Create Completed")
-
-    # Open cached warband
-    filepath = "database/saves/cache.json"
-    datadict = open_json(filepath)
-
-    # from dictionary to objects for manipulation
-    wbid = Warband.from_dict(datadict)
-    print("warband extraction succesfull")
-
     # Add another hero
     newhero = Hero.create_character(
         name = "Barend", 
@@ -256,10 +236,12 @@ def test_ReiklandWarband():
     wbid.squadlist.append(newsquad4)
     print("squad assigning succesful")
 
-    cache_warband(wbid)
-    save_warband(wbid)
+    save_warband(wbid.to_dict())
     print("Update completed")
 
+    wbdict = load_warband(wbid.name)
+    # print(wbdict)
+    
 def test_WitchWarband():
     print("---Start Test Witch Hunters")
 
@@ -344,19 +326,6 @@ def test_WitchWarband():
 
     print("squad 12 assign succesfull")
     
-    # Push new warband to JSON cache
-    # To do: write to global variable
-    cache_warband(wbid)
-    print("Create Completed")
-
-    # Open cached warband
-    filepath = "database/saves/cache.json"
-    datadict = open_json(filepath)
-
-    # from dictionary to objects for manipulation
-    wbid = Warband.from_dict(datadict)
-    print("warband extraction succesfull")
-
     # Add another hero
     newhero = Hero.create_character(
         name = "Barend", 
@@ -490,8 +459,7 @@ def test_WitchWarband():
     wbid.squadlist.append(newsquad4)
     print("squad assigning succesful")
 
-    cache_warband(wbid)
-    save_warband(wbid)
+    save_warband(wbid.to_dict())
     print("Update completed")
 
 
@@ -579,19 +547,6 @@ def test_CultWarband():
 
     print("squad 12 assign succesfull")
     
-    # Push new warband to JSON cache
-    # To do: write to global variable
-    cache_warband(wbid)
-    print("Create Completed")
-
-    # Open cached warband
-    filepath = "database/saves/cache.json"
-    datadict = open_json(filepath)
-
-    # from dictionary to objects for manipulation
-    wbid = Warband.from_dict(datadict)
-    print("warband extraction succesfull")
-
     # Add another hero
     newhero = Hero.create_character(
         name = "Barend", 
@@ -725,8 +680,7 @@ def test_CultWarband():
     wbid.squadlist.append(newsquad4)
     print("squad assigning succesful")
 
-    cache_warband(wbid)
-    save_warband(wbid)
+    save_warband(wbid.to_dict())
     print("Update completed")
 
 def test_SistersWarband():
@@ -812,19 +766,6 @@ def test_SistersWarband():
         ]
 
     print("squad 12 assign succesfull")
-    
-    # Push new warband to JSON cache
-    # To do: write to global variable
-    cache_warband(wbid)
-    print("Create Completed")
-
-    # Open cached warband
-    filepath = "database/saves/cache.json"
-    datadict = open_json(filepath)
-
-    # from dictionary to objects for manipulation
-    wbid = Warband.from_dict(datadict)
-    print("warband extraction succesfull")
 
     # Add another hero
     newhero = Hero.create_character(
@@ -959,8 +900,7 @@ def test_SistersWarband():
     wbid.squadlist.append(newsquad4)
     print("squad assigning succesful")
 
-    cache_warband(wbid)
-    save_warband(wbid)
+    save_warband(wbid.to_dict())
     print("Update completed")
 
 def test_UndeadWarband():
@@ -1047,19 +987,6 @@ def test_UndeadWarband():
 
     print("squad 12 assign succesfull")
     
-    # Push new warband to JSON cache
-    # To do: write to global variable
-    cache_warband(wbid)
-    print("Create Completed")
-
-    # Open cached warband
-    filepath = "database/saves/cache.json"
-    datadict = open_json(filepath)
-
-    # from dictionary to objects for manipulation
-    wbid = Warband.from_dict(datadict)
-    print("warband extraction succesfull")
-
     # Add another hero
     newhero = Hero.create_character(
         name = "Barend", 
@@ -1193,8 +1120,7 @@ def test_UndeadWarband():
     wbid.squadlist.append(newsquad4)
     print("squad assigning succesful")
 
-    cache_warband(wbid)
-    save_warband(wbid)
+    save_warband(wbid.to_dict())
     print("Update completed")
 
 
@@ -1282,19 +1208,6 @@ def test_SkavenWarband():
 
     print("squad 12 assign succesfull")
     
-    # Push new warband to JSON cache
-    # To do: write to global variable
-    cache_warband(wbid)
-    print("Create Completed")
-
-    # Open cached warband
-    filepath = "database/saves/cache.json"
-    datadict = open_json(filepath)
-
-    # from dictionary to objects for manipulation
-    wbid = Warband.from_dict(datadict)
-    print("warband extraction succesfull")
-
     # Add another hero
     newhero = Hero.create_character(
         name = "Barend", 
@@ -1428,8 +1341,7 @@ def test_SkavenWarband():
     wbid.squadlist.append(newsquad4)
     print("squad assigning succesful")
 
-    cache_warband(wbid)
-    save_warband(wbid)
+    save_warband(wbid.to_dict())
     print("Update completed")
 
 def test_HighElfWarband():
@@ -1521,19 +1433,6 @@ def test_HighElfWarband():
     startgold = 500
     wbid.treasury.gold = startgold - wbid.get_price()
     
-    # Push new warband to JSON cache
-    # To do: write to global variable
-    cache_warband(wbid)
-    print("Create Completed")
-
-    # Open cached warband
-    filepath = "database/saves/cache.json"
-    datadict = open_json(filepath)
-
-    # from dictionary to objects for manipulation
-    wbid = Warband.from_dict(datadict)
-    print("warband extraction succesfull")
-
     # Add another hero
     newhero = Hero.create_character(
         name = "Bearand", 
@@ -1667,15 +1566,14 @@ def test_HighElfWarband():
     wbid.squadlist.append(newsquad4)
     print("squad assigning succesful")
 
-    cache_warband(wbid)
-    save_warband(wbid)
+    save_warband(wbid.to_dict())
     print("Update completed")
 
 if __name__ == "__main__":
     test_ReiklandWarband()
-    test_WitchWarband()
-    test_SistersWarband()
-    test_CultWarband()
-    test_UndeadWarband()
-    test_SkavenWarband()
-    test_HighElfWarband()
+    # test_WitchWarband()
+    # test_SistersWarband()
+    # test_CultWarband()
+    # test_UndeadWarband()
+    # test_SkavenWarband()
+    # test_HighElfWarband()

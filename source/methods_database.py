@@ -1,41 +1,43 @@
-from source.methods_json import (
-    open_json,
-    save_json,
-)
+from source.methods_engine import (
+    save_reference,
+    load_reference,
+    )
 
 
-def create_warbandref():
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "warbands_ref.json"
+def create_ref_files():
+    # Filename
+    namelist = ["warbands", "characters", "items", "abilities", "magic"]
+    for name in namelist:
+        
+        # create filename
+        filename = name + "_ref"
+        
+        # Create empty dictionary file
+        datadict = {}
+        
+        # call save reference function
+        save_reference(datadict, filename)
 
-    # Create data file
-    data = {}
-
-    print(f"Created warbandfile")
-    save_json(data, filepath)
 
 def add_warbandref(race, source, warband, rulelist, itemlist, start_gold, description):
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "warbands_ref.json"
 
+    filename = "warbands"
     # open ref json
-    data = open_json(filepath)
+    datadict = load_reference(filename)
 
     # First check if race already exists
-    if race in data:
+    if race in datadict:
         pass
     else:
-        data[race] = {}
+        datadict[race] = {}
 
     # Second check if source already exists
-    if source in data[race]:
+    if source in datadict[race]:
         pass
     else:
-        data[race][source] = {}
+        datadict[race][source] = {}
 
-    data[race][source][warband]={
+    datadict[race][source][warband]={
         'race': race,
         'source': source,
         'warband': warband,
@@ -45,23 +47,20 @@ def add_warbandref(race, source, warband, rulelist, itemlist, start_gold, descri
         'description': description,
     }
 
-    print(f"Added warband: {warband}")
-    save_json(data, filepath)
+    save_reference(datadict, filename)
 
 def get_warbandref(race, source, warband):
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "warbands_ref.json"
 
+    filename = "warbands"
     # open ref json
-    data = open_json(filepath)
+    datadict = load_reference(filename)
 
     # First check if race exists
-    if race in data:
+    if race in datadict:
         # Second check if source exists
-        if source in data[race]:
+        if source in datadict[race]:
             
-            warbanddict = data[race][source][warband]
+            warbanddict = datadict[race][source][warband]
             return warbanddict
 
         else:
@@ -69,43 +68,29 @@ def get_warbandref(race, source, warband):
     else:
         print(f"Race {race} does not exist")
 
-
-def create_characterref():
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "characters_ref.json"
-
-    # Create data file
-    data = {}
-
-    print(f"Created characterfile")
-    save_json(data, filepath)
-
 def add_characterref(race, source, warband, category, ishero, skill, abilitylist, magiclist, itemlist, experience, price, maxcount, description):
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "characters_ref.json"
-
+    
+    filename = "characters"
     # open ref json
-    data = open_json(filepath)
+    datadict = load_reference(filename)
 
     # First check if race already exists
-    if race in data:
+    if race in datadict:
         pass
     else:
-        data[race] = {}
+        datadict[race] = {}
 
     # Second check if source already exists
-    if source in data[race]:
+    if source in datadict[race]:
         pass
     else:
-        data[race][source] = {}
+        datadict[race][source] = {}
 
     # Second check if source already exists
-    if warband in data[race][source]:
+    if warband in datadict[race][source]:
         pass
     else:
-        data[race][source][warband] = {}
+        datadict[race][source][warband] = {}
 
     skilldict = {}
     skilldict = {
@@ -121,7 +106,7 @@ def add_characterref(race, source, warband, category, ishero, skill, abilitylist
         "armoursave": skill[9]
         },
 
-    data[race][source][warband][category]={
+    datadict[race][source][warband][category]={
         'race': race,
         'source': source,
         'warband': warband,
@@ -138,27 +123,24 @@ def add_characterref(race, source, warband, category, ishero, skill, abilitylist
     }
 
     print(f"Added character: {category}")
-    save_json(data, filepath)
-
+    save_reference(datadict, filename)
 
 def get_characterref(race, source, warband, category):
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "characters_ref.json"
 
+    filename = "characters"
     # open ref json
-    data = open_json(filepath)
+    datadict = load_reference(filename)
 
     # First check if race exists
-    if race in data:
+    if race in datadict:
         # Second check if source exists
-        if source in data[race]:
+        if source in datadict[race]:
             # Third check if warband exists
-            if warband in data[race][source]: 
+            if warband in datadict[race][source]: 
                 # fourth check if character exists
-                if category in data[race][source][warband]: 
+                if category in datadict[race][source][warband]: 
 
-                    characterdict = data[race][source][warband][category]
+                    characterdict = datadict[race][source][warband][category]
                     return characterdict
                     
                 else:
@@ -170,39 +152,23 @@ def get_characterref(race, source, warband, category):
     else:
         print(f"Race {race} does not exist")
 
-
-def create_itemref():
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "items_ref.json"
-
-    # Create data file
-    data = {}
-    data["Core Rules"] = {}
-
-    print(f"Created itemfile")
-    save_json(data, filepath)
-
-
 def add_itemref(source, category, subcategory, distance, skill, abilitylist, magiclist, price, description):
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "items_ref.json"
-    
-    # open items_ref.json
-    data = open_json(filepath)
+
+    filename = "items"
+    # open ref json
+    datadict = load_reference(filename)
 
     # First check if source already exists
-    if source in data:
+    if source in datadict:
         pass
     else:
-        data[source] = {}
+        datadict[source] = {}
 
     # Second check if category already exists
-    if category in data[source]:
+    if category in datadict[source]:
         pass
     else:
-        data[source][category] = {}
+        datadict[source][category] = {}
 
     skilldict = {
         "movement": skill[0],
@@ -218,7 +184,7 @@ def add_itemref(source, category, subcategory, distance, skill, abilitylist, mag
         },
 
     # Add data
-    data[source][category][subcategory]={
+    datadict[source][category][subcategory]={
         'source': source,
         'category': category,
         'subcategory': subcategory,
@@ -231,25 +197,23 @@ def add_itemref(source, category, subcategory, distance, skill, abilitylist, mag
     }
    
     print(f"Added item: {subcategory}")
-    save_json(data, filepath)
+    save_reference(datadict, filename)
 
 
 def get_itemref(source, category, subcategory):
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "items_ref.json"
-
+    
+    filename = "items"
     # open ref json
-    data = open_json(filepath)
+    datadict = load_reference(filename)
 
     # First check if source exists
-    if source in data:
+    if source in datadict:
         # Second check if category exists
-        if category in data[source]:
+        if category in datadict[source]:
             # Third check if item exists
-            if subcategory in data[source][category]: 
+            if subcategory in datadict[source][category]: 
 
-                itemdict = data[source][category][subcategory]
+                itemdict = datadict[source][category][subcategory]
                 return itemdict
 
             else:
@@ -259,42 +223,26 @@ def get_itemref(source, category, subcategory):
     else:
         print(f"Source {source} does not exist")
 
-
-def create_abilityref():
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "abilities_ref.json"
-
-    # Create data file
-    data = {}
-    data["Core Rules"] = {}
-
-    print(f"Created abilityfile")
-    save_json(data, filepath)
-
-
 def add_abilityref(source, category, name, description):
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "abilities_ref.json"
-    
-    # open abilitys_ref.json
-    data = open_json(filepath)
+
+    filename = "abilities"
+    # open ref json
+    datadict = load_reference(filename)
 
     # First check if source already exists
-    if source in data:
+    if source in datadict:
         pass
     else:
-        data[source] = {}
+        datadict[source] = {}
 
     # Second check if category already exists
-    if category in data[source]:
+    if category in datadict[source]:
         pass
     else:
-        data[source][category] = {}
+        datadict[source][category] = {}
 
     # Add data
-    data[source][category][name]={
+    datadict[source][category][name]={
         'source': source,
         'category': category,
         'name': name,
@@ -302,25 +250,23 @@ def add_abilityref(source, category, name, description):
     }
    
     print(f"Added ability: {name}")
-    save_json(data, filepath)
+    save_reference(datadict, filename)
 
 
 def get_abilityref(source, category, name):
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "abilities_ref.json"
-
+    
+    filename = "abilities"
     # open ref json
-    data = open_json(filepath)
+    datadict = load_reference(filename)
 
     # First check if source exists
-    if source in data:
+    if source in datadict:
         # second check if category exists
-        if category in data[source]:
+        if category in datadict[source]:
             # Third check if ability exists
-            if name in data[source][category]: 
+            if name in datadict[source][category]: 
 
-                abilitydict = data[source][category][name]
+                abilitydict = datadict[source][category][name]
                 return abilitydict
 
             else:
@@ -331,41 +277,26 @@ def get_abilityref(source, category, name):
         print(f"Source {source} does not exist")
 
 
-def create_magicref():
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "magic_ref.json"
-
-    # Create data file
-    data = {}
-    data["Core Rules"] = {}
-
-    print(f"Created magicfile")
-    save_json(data, filepath)
-
-
 def add_magicref(source, category, name, group, difficulty, description):
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "magic_ref.json"
-    
-    # open magics_ref.json
-    data = open_json(filepath)
+
+    filename = "magic"
+    # open ref json
+    datadict = load_reference(filename)
 
     # First check if source already exists
-    if source in data:
+    if source in datadict:
         pass
     else:
-        data[source] = {}
+        datadict[source] = {}
 
     # Second check if category already exists
-    if category in data[source]:
+    if category in datadict[source]:
         pass
     else:
-        data[source][category] = {}
+        datadict[source][category] = {}
 
     # Add data
-    data[source][category][name]={
+    datadict[source][category][name]={
         'source': source,
         'category': category,
         'name': name,
@@ -375,24 +306,22 @@ def add_magicref(source, category, name, group, difficulty, description):
     }
    
     print(f"Added magic: {name}")
-    save_json(data, filepath)
+    save_reference(datadict, filename)
 
 
 def get_magicref(source, category, name):
-    # Paths
-    folderpath = "database/references/"
-    filepath = folderpath + "magic_ref.json"
 
+    filename = "magic"
     # open ref json
-    data = open_json(filepath)
+    datadict = load_reference(filename)
 
     # First check if source exists
-    if source in data:
-        if category in data[source]:
+    if source in datadict:
+        if category in datadict[source]:
             # Third check if magic exists
-            if name in data[source][category]: 
+            if name in datadict[source][category]: 
 
-                magicdict = data[source][category][name]
+                magicdict = datadict[source][category][name]
                 return magicdict
 
             else:

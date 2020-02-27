@@ -1,7 +1,7 @@
 import copy
 
-from source.methods_json import (
-    open_json,
+from source.methods_engine import (
+    load_reference,
 )
 
 from source.methods_database import(
@@ -72,43 +72,6 @@ class Warband(object):
 
         return data
     
-    # @staticmethod
-    # def from_dict(datadict):
-    #     """ Create an object, and all nested objects, out of a warband dictionary in order to enable updates to that data."""
-
-    #     treasury = Treasury.from_dict(datadict["treasury"])
-
-    #     rulelist = []
-    #     for rule in datadict["rulelist"]:
-    #         rulelist += [Rule.from_dict(rule)]
-
-    #     itemlist = []
-    #     for item in datadict["itemlist"]:
-    #         itemlist += [Item.from_dict(item)]
-
-    #     herolist = []
-    #     for hero in datadict["herolist"]:
-    #         herolist += [Character.from_dict(hero)]
-
-    #     squadlist = []
-    #     for squad in datadict["squadlist"]:
-    #         squadlist += [Squad.from_dict(squad)]
-
-    #     wbid = Warband(
-    #         name = datadict["name"],
-    #         race = datadict["race"],
-    #         source = datadict["source"],
-    #         warband = datadict["warband"],
-    #         description = datadict["description"],
-    #         treasury = treasury,
-    #         rulelist = rulelist,
-    #         itemlist = itemlist,
-    #         herolist = herolist,
-    #         squadlist = squadlist,
-    #         )
-
-    #     return wbid
-
     @staticmethod
     def from_dict(datadict, create = False):
         """ Create an object, and all nested objects, out of a warband dictionary in order to enable updates to that data."""
@@ -193,13 +156,23 @@ class Warband(object):
         """Create a new warband based on the given parameters"""
         
         # open reference data json file
-        data = open_json("database/references/warbands_ref.json")
+        data = load_reference("warbands")
         datadict = data[race][source][warband]
 
         new_warband = Warband.from_dict(datadict = datadict, create = True)
         new_warband.name = name
 
         return new_warband
+
+    @staticmethod
+    def create_template():
+        template_wb = Warband(
+            name="",
+            race="", 
+            source="", 
+            warband="",
+        )
+        return template_wb
 
     def get_price(self):
         """ -- Can this be deleted? -- Get the worth of your warband"""
@@ -222,7 +195,6 @@ class Warband(object):
         wbprice = wbinvprice + herolistprice + squadlistprice
         
         return wbprice
-
 
 class Squad(object):
     def __init__(self, name, henchmanlist=[]):
@@ -441,6 +413,37 @@ class Character(object):
         
         return data
     
+    @staticmethod
+    def create_character(name, race, source, warband, category):
+        # open reference data json file
+        data = load_reference("characters")
+        datadict = data[race][source][warband][category]
+
+        new_character = Character.from_dict(datadict = datadict, create = True)
+        new_character.name = name
+
+        return new_character
+
+    @staticmethod
+    def create_template():
+        template_char = Character(
+            name="",
+            race="", 
+            source="", 
+            warband="",
+            skill=Skill("","","","","","","","","","",), 
+            category="", 
+            ishero="",
+        )
+        return template_char
+
+    def get_price(self):
+        charprice = self.price
+        for item in self.itemlist:
+            charprice += item.price
+
+        return charprice
+
     def get_total_skilldict(self):
 
         baseskill = self.skill.to_list()
@@ -488,29 +491,11 @@ class Character(object):
         
         return totalmagiclist
 
-    @staticmethod
-    def create_character(name, race, source, warband, category):
-        # open reference data json file
-        data = open_json("database/references/characters_ref.json")
-        datadict = data[race][source][warband][category]
-
-        new_character = Character.from_dict(datadict = datadict, create = True)
-        new_character.name = name
-
-        return new_character
-
-    def get_price(self):
-        charprice = self.price
-        for item in self.itemlist:
-            charprice += item.price
-
-        return charprice
-
 class Hero(Character):
     @staticmethod
     def create_character(name, race, source, warband, category):
         # open reference data json file
-        data = open_json("database/references/characters_ref.json")
+        data = load_reference("characters")
 
         if data[race][source][warband][category]["ishero"] == False:
             print("Henchmen can't be added outside a squad")
@@ -522,7 +507,7 @@ class Henchman(Character):
     @staticmethod
     def create_character(name, race, source, warband, category):
         # open reference data json file
-        data = open_json("database/references/characters_ref.json")
+        data = load_reference("characters")
 
         if data[race][source][warband][category]["ishero"] == True:
             print("Heroes can't be added to a squad")

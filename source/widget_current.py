@@ -38,19 +38,12 @@ from PyQt5.QtGui import (
     QPalette,
     )
 
-from source.methods_json import (
-    open_json,
-    save_json,
-    )
-
 from source.methods_engine import (
     save_warband,
     load_warband,
-    cache_warband,
-    show_saved_warbands,
-    get_current_warband,
-    create_template_wb,
-    create_template_char,
+    show_warbands,
+    save_reference,
+    load_reference,
     )
 
 from source.class_hierarchy import (

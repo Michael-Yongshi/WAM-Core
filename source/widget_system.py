@@ -38,19 +38,12 @@ from PyQt5.QtGui import (
     QPalette,
     )
 
-from source.methods_json import (
-    open_json,
-    save_json,
-    )
-
 from source.methods_engine import (
     save_warband,
     load_warband,
-    cache_warband,
-    show_saved_warbands,
-    get_current_warband,
-    create_template_wb,
-    create_template_char,
+    show_warbands,
+    save_reference,
+    load_reference,
     )
 
 from source.class_hierarchy import (
@@ -93,7 +86,7 @@ class WidgetSystem(QBorderedWidget):
         btnsave = QPushButton('Save Warband', self)
         btnsave.setShortcut("Ctrl+S")
         btnsave.setToolTip('Save current <b>Warband</b>')
-        btnsave.clicked.connect(self.save_warband)
+        btnsave.clicked.connect(self.call_save_warband)
 
         # btnquit = QPushButton('Quit', self)
         # btnquit.setToolTip('Quit the program')
@@ -107,49 +100,68 @@ class WidgetSystem(QBorderedWidget):
         self.setToolTip("Create a new warband, load a warband from memory or save current warband.")
         self.setLayout(sysbox)
 
-    def choose_warband(self):
-        """Choose a warband to be loaded into cache and then shown on screen"""
-        warbands = show_saved_warbands()                                                                            # get list of save files
-        wbname, okPressed = QInputDialog.getItem(self, "Choose", "Choose your warband", warbands, 0, False)         # Let user choose out of save files
-        if okPressed and wbname:
-            self.mainwindow.wbid = load_warband(wbname)                                                             # Load warband object to main window 
-            self.mainwindow.currentunit = create_template_char()                                                    # set empty current unit to main window
-            self.mainwindow.initUI()                                                                                # Restart the main window to force changes
-            
-    def save_warband(self):
-        """Save warband to cache and then to saves"""
-        save_warband(self.mainwindow.wbid)                                                                                     # save wbid to json
-        cache_warband(self.mainwindow.wbid)                                                                                    #set to run next time at stsrtup
+    def call_save_warband(self):
+        datadict = self.mainwindow.wbid.to_dict()
+        save_warband(datadict)
         message = QMessageBox.information(self, "Saved", "Save successful!", QMessageBox.Ok)
 
+    def choose_warband(self):
+        """Choose a warband to be loaded into cache and then shown on screen"""
+        
+        # get list of save files
+        warbands = show_warbands()
+
+        # Let user choose out of save files
+        wbname, okPressed = QInputDialog.getItem(self, "Choose", "Choose your warband", warbands, 0, False)
+        if okPressed and wbname:
+            # Load warband dictionary 
+            wbdict = load_warband(wbname)
+            # convert warband dict to object
+            wbobj = Warband.from_dict(wbdict)
+            # set chosen warband as object in main window
+            self.mainwindow.wbid = wbobj
+
+            # set empty current unit to main window
+            self.mainwindow.currentunit = Character.create_template()
+
+            # Restart the main window to force changes
+            self.mainwindow.initUI() 
+            
     def create_warband(self):
         """Create a new warband and store it in cache"""
         name, okPressed = QInputDialog.getText(self, "Create", "Name your warband:")
         if okPressed and name:
             
             # get all races in references
-            chardict = open_json("database/references/warbands_ref.json")
+            datadict = load_reference("warbands")
 
             races = []
-            for key in chardict:
+            for key in datadict:
                 races.append(key)
 
             race, okPressed = QInputDialog.getItem(self, "Create", "Choose a race", races, 0, False)
             if okPressed and race:
 
                 sources = []
-                for key in chardict[race]:
+                for key in datadict[race]:
                     sources.append(key)
 
                 source, okPressed = QInputDialog.getItem(self, "Create", "Choose a source", sources, 0, False)
                 if okPressed and source:
 
                     warbands = []
-                    for key in chardict[race][source]:
+                    for key in datadict[race][source]:
                         warbands.append(key)
 
                     warband, okPressed = QInputDialog.getItem(self, "Create", "Choose a warband", warbands, 0, False)
                     if okPressed and warband:
-                        self.mainwindow.wbid = Warband.create_warband(name=name, race=race, source=source, warband=warband)     # Load warband object to main window 
-                        self.mainwindow.currentunit = create_template_char()                                                    # set empty current unit to main window
-                        self.mainwindow.initUI()                                                                                # Restart the main window to force changes
+                        # Create new warband object
+                        wbobj = Warband.create_warband(name=name, race=race, source=source, warband=warband)
+                        # Load warband object to main window
+                        self.mainwindow.wbid = wbobj
+
+                        # set an empty character as currentunit
+                        self.mainwindow.currentunit = Character.create_template()
+                        
+                        # restart ui to force changes
+                        self.mainwindow.initUI()

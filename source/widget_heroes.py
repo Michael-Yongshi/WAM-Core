@@ -38,19 +38,12 @@ from PyQt5.QtGui import (
     QPalette,
     )
 
-from source.methods_json import (
-    open_json,
-    save_json,
-    )
-
 from source.methods_engine import (
     save_warband,
     load_warband,
-    cache_warband,
-    show_saved_warbands,
-    get_current_warband,
-    create_template_wb,
-    create_template_char,
+    show_warbands,
+    save_reference,
+    load_reference,
     )
 
 from source.class_hierarchy import (
@@ -181,11 +174,11 @@ class WidgetHeroes(QWidget):
             wbrace = self.mainwindow.wbid.race
             wbsource = self.mainwindow.wbid.source
             wbwarband = self.mainwindow.wbid.warband
-            catdict = open_json("database/references/characters_ref.json")
+            datadict = load_reference("characters")
             categories = []
             
-            for key in catdict[wbrace][wbsource][wbwarband]:
-                if catdict[wbrace][wbsource][wbwarband][key]["ishero"] == True:
+            for key in datadict[wbrace][wbsource][wbwarband]:
+                if datadict[wbrace][wbsource][wbwarband][key]["ishero"] == True:
                     categories.append(key)
 
             category, okPressed = QInputDialog.getItem(self, "Create", "Choose a category", categories, 0, False)
@@ -199,7 +192,7 @@ class WidgetHeroes(QWidget):
                 )
 
                 wbidgold = self.mainwindow.wbid.treasury.gold
-                heroprice = catdict[wbrace][wbsource][wbwarband][category]["price"]
+                heroprice = datadict[wbrace][wbsource][wbwarband][category]["price"]
                 if wbidgold >= heroprice:
                     self.mainwindow.wbid.treasury.gold = wbidgold - heroprice
                     self.mainwindow.wbid.herolist.append(new_hero)

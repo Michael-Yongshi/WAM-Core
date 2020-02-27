@@ -38,19 +38,12 @@ from PyQt5.QtGui import (
     QPalette,
     )
 
-from source.methods_json import (
-    open_json,
-    save_json,
-    )
-
 from source.methods_engine import (
     save_warband,
     load_warband,
-    cache_warband,
-    show_saved_warbands,
-    get_current_warband,
-    create_template_wb,
-    create_template_char,
+    show_warbands,
+    save_reference,
+    load_reference,
     )
 
 from source.class_hierarchy import (
@@ -242,10 +235,10 @@ class WidgetItemsUnit(QBorderlessFrame):
 
 def dialog_choose_item(self):
     
-    itemdict = open_json("database/references/items_ref.json")
+    datadict = load_reference("items")
     
     sources = []
-    for key in itemdict:
+    for key in datadict:
         sources.append(key)
 
     source, okPressed = QInputDialog.getItem(self, "Select source", "Choose a source", sources, 0, False)
@@ -253,7 +246,7 @@ def dialog_choose_item(self):
     
         # categories
         categories = []
-        for key in itemdict[source]:
+        for key in datadict[source]:
             categories.append(key)
 
         category, okPressed = QInputDialog.getItem(self, "Create", "Choose a category", categories, 0, False)
@@ -261,7 +254,7 @@ def dialog_choose_item(self):
         
             # subcategories
             subcategories = []
-            for key in itemdict[source][category]:
+            for key in datadict[source][category]:
                 subcategories.append(key)
 
             subcategory, okPressed = QInputDialog.getItem(self, "Create", "Choose an item", subcategories, 0, False)

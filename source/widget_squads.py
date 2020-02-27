@@ -87,7 +87,7 @@ class WidgetSquads(QWidget):
             squadgrid.addWidget(numlabel, 0, 4, 1, 1)
 
             namelabel = QLabel()
-            if squad.henchmanlist[0] == self.mainwindow.currentunit:
+            if squad.henchmanlist[0] is self.mainwindow.currentunit:
                 namelabel.setText(f"<b>{squad.name}<br/>(selected)<b/>")
             else:
                 namelabel.setText(f"<b>{squad.name}<b/>")
@@ -179,7 +179,7 @@ class WidgetSquads(QWidget):
                 squadprice = 0
 
                 for squad in self.mainwindow.wbid.squadlist:
-                    if squad.henchmanlist[0] == self.mainwindow.currentunit:
+                    if squad.henchmanlist[0] is self.mainwindow.currentunit:
                         if process_gold == QMessageBox.Yes:
                             squadsize = len(squad.henchmanlist)
                             henchprice = self.mainwindow.currentunit.price

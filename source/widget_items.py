@@ -77,24 +77,24 @@ class WidgetItemsWarband(QBorderlessFrame):
             label = QClickLabel()
             label.setText(f"<b>{item.subcategory}<b/>")
             label.setToolTip(f"<font><b>{item.subcategory} </b>{item.name} <br/> category: {item.category} <br/> distance: {item.distance} <br/> <nobr>{item.skill.to_string()}</nobr> <br/> price: {item.price} <br/> {item.description}</font>")
+            label.clicked.connect(self.create_method_remove(warband = self.mainwindow.wbid, item = item))
             box = QVBoxLayout()
             box.addWidget(label)
             frame = QRaisedFrame()
             frame.setLayout(box)
-            frame.clicked.connect(self.create_method_remove(warband = self.mainwindow.wbid, item = item))
             itemlistbox.addWidget(frame) #adds the item to a label and at it to the vertical item layout
             
         self.setLayout(itemlistbox)
             
         label = QClickLabel()
         label.setText(f"<font>New Item<font/>")
-        label.clicked.connect(self.create_new)
+        label.clicked.connect(self.new)
         itemlistbox.addWidget(label) #adds the new item to a label and at it to the vertical item layout
 
         self.setToolTip("These are your warbands items.")
         self.setLayout(itemlistbox)
         
-    def create_new(self):
+    def new(self):
 
         """Create a new item and store it in this warband"""
         new_item = dialog_choose_item(self)
@@ -117,8 +117,8 @@ class WidgetItemsWarband(QBorderlessFrame):
                 process_gold = QMessageBox.question(self, "Process gold", "Do you want to process an exchange for gold?", QMessageBox.Yes | QMessageBox.No)
                 itemprice = 0
 
-                for item in warband.itemlist:
-                    if item.name == item.name and item.subcategory == item.subcategory:
+                for i in warband.itemlist:
+                    if i is item:
                         if process_gold == QMessageBox.Yes:
                             itemprice += item.price
                         index = warband.itemlist.index(item)
@@ -168,7 +168,7 @@ class WidgetItemsUnit(QBorderlessFrame):
     def create_method_new(self, unit):
         """Method for creating a new item and receiving as attribute the unit it should be added to."""
         
-        def create_new():
+        def new():
             new_item = dialog_choose_item(self)
             if new_item != "Cancel":
                 itemprice = new_item.price
@@ -192,7 +192,7 @@ class WidgetItemsUnit(QBorderlessFrame):
                 else:
                     message = QMessageBox.information(self, 'Lack of funds!', "Can't add new item, lack of funds", QMessageBox.Ok)
             
-        return create_new
+        return new
 
     def create_method_remove(self, unit, item):          
         """ """

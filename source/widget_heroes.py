@@ -86,7 +86,7 @@ class WidgetHeroes(QWidget):
             herogrid = QGridLayout() # create a grid layout to position all information more accurately
             
             namelabel = QLabel()
-            if hero == self.mainwindow.currentunit:
+            if hero is self.mainwindow.currentunit:
                 namelabel.setText(f"<b>{hero.name}<br/>(selected)<b/>")
             else:
                 namelabel.setText(f"<b>{hero.name}<b/>")
@@ -150,7 +150,7 @@ class WidgetHeroes(QWidget):
                 heroprice = 0
 
                 for hero in self.mainwindow.wbid.herolist:
-                    if hero == self.mainwindow.scurrentunit:
+                    if hero is self.mainwindow.scurrentunit:
                         if process_gold == QMessageBox.Yes:
                             heroprice += hero.price
                             for item in hero.itemlist:

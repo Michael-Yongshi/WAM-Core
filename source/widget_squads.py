@@ -84,7 +84,7 @@ class WidgetSquads(QWidget):
             numlabel = QClickLabel()
             numlabel.setText(f"<b># {squad.get_totalhenchman()}<b/>")
             numlabel.clicked.connect(self.create_method_change_number(squad))
-            squadgrid.addWidget(numlabel, 0, 4, 1, 1)
+            squadgrid.addWidget(numlabel, 0, 5, 1, 1)
 
             namelabel = QLabel()
             if squad.henchmanlist[0] is self.mainwindow.currentunit:

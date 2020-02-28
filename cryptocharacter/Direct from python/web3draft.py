@@ -1,6 +1,7 @@
 import time
 
-from web3 import Web3, HTTPProvider
+from web3 import Web3
+
 from solc import compile_files
 
 
@@ -9,9 +10,9 @@ contract_address     = "0x20589989d97b41ea6b9F748CEB4a17527CaA2C1a"             
 wallet_private_key   = "ad5bb5684dbfb337040fb31d76c7b6118e0bb4fed23e940451a43746f93ebb09"     # [YOUR TEST WALLET PRIVATE KEY]
 wallet_address       = "0x980df35116009EB3937B0fD7931E3620114fDb9b"                           # [YOUR WALLET ADDRESS]
 
-w3 = Web3(HTTPProvider("http://51.105.171.12")) # [YOUR NODE URL]
+w3 = Web3(Web3.HTTPProvider("http://51.105.171.12")) # [YOUR NODE URL]
 
-w3.eth.enable_unaudited_features()
+# w3.eth.enable_unaudited_features()
 
 
 # send an example transaction of ether

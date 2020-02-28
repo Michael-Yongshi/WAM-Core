@@ -12,7 +12,9 @@ To use the application see 'Installing'. The rest of these instructions will get
 
 ### Installing
 
-Grab the zip folder from: https://www.jottacloud.com/s/13030f55cae66fb428698777e670d3a052a. 
+Grab the zip folder from: 
+Windows 10 64 bit: https://www.jottacloud.com/s/13030f55cae66fb428698777e670d3a052a. 
+Ubuntu 18 64 bit: https://www.jottacloud.com/s/130ab5742a54b87443a896a37062196affa.
 
 Unzip the folder and run the exe file within.
 

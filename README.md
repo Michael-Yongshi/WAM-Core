@@ -43,16 +43,25 @@ git --global user.name ""
 Install some required packages
 ```
 pip3 install --user pyqt5
-pip3 install --user requests    # (unused)
-pip3 install --user flake8      # (dev)
-pip3 install --user pyinstaller # (dev)
+pip3 install --user requests            # (unused)
+pip3 install --user flake8              # (dev)
+pip3 install --user pyinstaller         # (dev)
 ```
 
-
-- Solidity stuff
+Solidity stuff
 metamask network: http://51.105.171.12
-
 https://ethereum.org/python/
+
+Visual 14 C++ needed for web3
+https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15
+
+```
+pip3 install --user py-solc             # (dev) solidity compiler for python
+pip3 install --user pyethereum          # (dev) Ethereum Virtual Machine for python, to run your own node, but also some handy stuff like calculating address from private key
+pip3 install --user web3                # (dev) brary for interacting with ethereum, setting up connections, i.e. to your wallet in metamask, transferring tokens and interacting with smart contracts
+pip3 install --user flask
+pip3 install --user flask-restful
+pip3 install --user flask-marschmallow
 
 ## Running the tests
 

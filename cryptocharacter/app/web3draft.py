@@ -12,8 +12,7 @@ wallet_address       = "0x980df35116009EB3937B0fD7931E3620114fDb9b"             
 
 w3 = Web3(Web3.HTTPProvider("http://51.105.171.12")) # [YOUR NODE URL]
 
-# w3.eth.enable_unaudited_features()
-
+w3.eth.enable_unaudited_features()
 
 # send an example transaction of ether
 def send_ether_to_contract(amount_in_ether):
@@ -55,6 +54,9 @@ def send_ether_to_contract(amount_in_ether):
         return {'status': 'failed', 'error': 'timeout'}
 
     return {'status': 'added', 'txn_receipt': txn_receipt}
+
+
+
 
 if __name__ == "__main__":
     send_ether_to_contract(0.00005)

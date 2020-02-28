@@ -26,7 +26,7 @@ def create_character(wallet_address, wallet_private_key, name, unit, race):
     nonce = w3.eth.getTransactionCount(wallet_address)
 
     # get identifier for function input
-    identifier = name + unit + race
+    identifier = "1"
 
     # build transaction
     txn_dict = contract.functions.createRandomCharacter(
@@ -36,35 +36,38 @@ def create_character(wallet_address, wallet_private_key, name, unit, race):
         race
         ).buildTransaction({
         'nonce': nonce,        
-        'from': wallet_address,
-        'value': 0,
-        'gas': 100000,
+        'gas': 164890,
         'gasPrice': w3.toWei('1000000000', 'wei'),
         'chainId': 98052,
         })
+    print("build txn dict: " + str(txn_dict))
 
     signed_txn = w3.eth.account.signTransaction(txn_dict, wallet_private_key)
 
     txn_hash = w3.eth.sendRawTransaction(signed_txn.rawTransaction)
-    
+    print("send txn: " + txn_hash.hex())
+
     txn_receipt = None
 
     print("waiting for nodes to handle txn")
     time.sleep(30)
     print("requesting for receipt of txn")
 
-    txn_receipt = w3.eth.getTransactionReceipt(txn_hash.hex())
+    count = 0
+    while txn_receipt is None and (count < 5):
 
-    #     count += 1
+        txn_receipt = w3.eth.getTransactionReceipt(txn_hash.hex())
 
-    #     time.sleep(1)
+        count += 1
+
+        time.sleep(1)
 
     if txn_receipt is None:
         return {'status': 'failed', 'error': 'timeout'}
 
-    # return {'status': 'added', 'txn_receipt': txn_receipt}
+    return {'status': 'added', 'txn_receipt': txn_receipt}
 
-    return str(name + " " + unit + " " + race)
+    # return str(name + " " + unit + " " + race + " " + txn_hash.hex())
 
 def get_characters(wallet_address):
     # print all knwon characters of the given wallet_address
@@ -104,9 +107,9 @@ if __name__ == "__main__":
     newcharacter = create_character(
         wallet_address = wallet_address,
         wallet_private_key = wallet_private_key,
-        name = "Michael", 
-        unit = "Developer", 
-        race = "Pikachu",
+        name = "2", 
+        unit = "3", 
+        race = "4",
     )
     print("New character: " + str(newcharacter))
 

@@ -33,11 +33,11 @@ set git credentials by entering credentials in popup
 
 set git name with 
 ```
-git --global user.email ""
+git config --global user.email ""
 ```
 set git email with 
 ```
-git --global user.name ""
+git config --global user.name ""
 ```
 
 Install some required packages
@@ -70,7 +70,9 @@ https://ethereum.org/python/
 
 create a distribution manually: 
 ```
-python -m PyInstaller cli.py --add-data "database/saves/cache.json";"database/saves/" --add-data "database/references/*.json";"database/references/" --icon="source\war_72R_icon.ico" --name WAM
+python -m PyInstaller cli.py --add-data "database/saves/cache.json";"database/saves/" --add-data "database/references/*.json";"database/references/" --icon="source\war_72R_icon.ico" --name WAM-Win10-64
+
+python -m PyInstaller cli.py --add-data "database/saves/cache.json":"database/saves/" --add-data "database/references/*.json":"database/references/" --icon="source\war_72R_icon.ico" --name WAM-Ubuntu18-64
 ```
 <!-- python -m PyInstaller cli.py --add-data "database/saves/cache.json";"database/saves/" --add-data "database/references/*.json";"database/references/" --icon="source\war_72R_icon.ico" --name WAM_OF --onefile -->
 

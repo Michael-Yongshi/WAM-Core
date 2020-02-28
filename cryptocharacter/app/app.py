@@ -21,8 +21,20 @@ def create_cc(wallet_address, wallet_private_key, name, unit, race):
     contract = w3.eth.contract(address=contract_address, abi = abi)
 
     # print all knwon characters of the given wallet_address
-    print(contract.functions.getCharactersByOwner(wallet_address).call())
-    print(contract.functions)
+
+    characters = contract.functions.getCharactersByOwner(wallet_address).call()
+    print(characters)
+
+    for i in characters:
+        character = contract.functions.characters(i).call()
+        print(character)
+
+        events = contract.functions.getEventsByCharacter(i).call()
+        print(events)
+
+        for e in events:
+            event = contract.functions.events(e).call()
+            print(e)
 
 
         # nonce = w3.eth.getTransactionCount(wallet_address)

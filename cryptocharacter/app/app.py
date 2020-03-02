@@ -5,22 +5,46 @@ from solc import compile_files
 
 from methods_json import load_file
 
-
-# set up w3 connection
+# class CryptoCharacter(object):
+#     """"""
+#     def __init__(self, w3, contract):
+        
+    # set up w3 connection
 w3 = Web3(Web3.HTTPProvider("http://51.105.171.12"))
 
-# the necessary contract address for this contract
-contract_address = "0x20589989d97b41ea6b9F748CEB4a17527CaA2C1a"
-
 # the needed abi functions for this contract
-abi = load_file("cryptocharacter/abi/", "cc_abi")
+abi = load_file("cryptocharacter/build/", "cc_abi")
 
-# set up the contract based on the abi functions and the contract address
-contract = w3.eth.contract(address=contract_address, abi = abi)
+# the needed bytecode of the contract
+with open("cryptocharacter/build/cc_bytecode.bin", mode='r') as binfile: # b is important -> binary
+    bytecode = binfile.read()
+
+# set up the contract based on the bytecode and abi functions
+contract = w3.eth.contract(abi = abi, bytecode = bytecode)
+
+# account to deploy from
+wallet_private_key = "0xad5bb5684dbfb337040fb31d76c7b6118e0bb4fed23e940451a43746f93ebb09"
+account = w3.eth.account.privateKeyToAccount(wallet_private_key)
+
+txn_dict = contract.constructor().buildTransaction({
+        'from': account.address,
+        'nonce': w3.eth.getTransactionCount(account.address),   
+        'gas': 164890,
+        'gasPrice': w3.toWei('1000000000', 'wei'),
+        'chainId': 98052
+        })
+
+signed_txn = account.signTransaction(txn_dict)
+
+txn_receipt = w3.eth.waitForTransactionReceipt(signed_txn.rawTransaction)
+
+# Create contract instance based on the deployed smart contract
+contract = w3.eth.contract(address = txn_receipt.contract_address, abi = abi)
+txn_hash = w3.eth.sendRawTransaction(signed_txn.rawTransaction)
+txn_receipt = w3.eth.getTransactionReceipt(txn_hash.hex())
 
 
-
-def create_character(wallet_address, wallet_private_key, name, unit, race):
+def create_character(name, unit, race):
 
     # get nonce for txn input
     nonce = w3.eth.getTransactionCount(wallet_address)
@@ -101,12 +125,10 @@ def get_characters(wallet_address):
 
 
 if __name__ == "__main__":
-    wallet_address = "0x980df35116009EB3937B0fD7931E3620114fDb9b"
-    wallet_private_key = "0xad5bb5684dbfb337040fb31d76c7b6118e0bb4fed23e940451a43746f93ebb09"
     
+    deploy_contract(wallet_address, wallet_private_key)
+
     newcharacter = create_character(
-        wallet_address = wallet_address,
-        wallet_private_key = wallet_private_key,
         name = "2", 
         unit = "3", 
         race = "4",

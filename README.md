@@ -50,8 +50,9 @@ git config --global user.name ""
 Install some required packages
 ```
 pip3 install --user pyqt5
+apt-get install python3 pyqt5   # if pip3 doesn't work
 pip3 install --user requests    # (unused)
-pip3 install --user flake8      # (dev)
+pip3 install --user flake8      # (unused)
 pip3 install --user pyinstaller # (dev)
 ```
 

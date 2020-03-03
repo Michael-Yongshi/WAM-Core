@@ -1,9 +1,9 @@
 import time
 
 from web3 import Web3
-from solc import compile_files
+from solc import compile_source
 
-from methods_json import load_file
+from source.methods_json import load_file
 
 # class CryptoCharacter(object):
 #     """"""
@@ -12,12 +12,27 @@ from methods_json import load_file
     # set up w3 connection
 w3 = Web3(Web3.HTTPProvider("http://51.105.171.12"))
 
+# https://solidity.readthedocs.io/en/develop/using-the-compiler.html#compiler-input-and-output-json-description
+# JSON input for solidity compiler of smart contract
+# compiled_sol = compile_standard(
+#     {
+#         'language': 'Solidity',
+#         'sources': {
+#             'CryptoCharacter.sol':{
+#                 'urls': ["cryptocharacter/contracts/CryptoCharacter.sol"],
+#             },
+#         },
+#     })
+
 # the needed abi functions for this contract
 abi = load_file("cryptocharacter/build/", "cc_abi")
 
-# the needed bytecode of the contract
+# # the needed bytecode of the contract
 with open("cryptocharacter/build/cc_bytecode.bin", mode='r') as binfile: # b is important -> binary
     bytecode = binfile.read()
+
+with open("cryptocharacter/contracts/CryptoCharacter.sol", mode='r') as contractfile: # b is important -> binary
+    contract_code = contractfile.read()
 
 # set up the contract based on the bytecode and abi functions
 contract = w3.eth.contract(abi = abi, bytecode = bytecode)
@@ -35,7 +50,7 @@ txn_dict = contract.constructor().buildTransaction({
         })
 
 signed_txn = account.signTransaction(txn_dict)
-
+txn_hash = contract.constructor()
 txn_receipt = w3.eth.waitForTransactionReceipt(signed_txn.rawTransaction)
 
 # Create contract instance based on the deployed smart contract

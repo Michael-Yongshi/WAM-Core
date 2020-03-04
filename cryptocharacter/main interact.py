@@ -35,7 +35,7 @@ def create_character(name, unit, race):
         race
         ).buildTransaction({
         'nonce': nonce,        
-        'gas': 164890,
+        'gas': 1648900,
         'gasPrice': w3.toWei('1000000000', 'wei'),
         'chainId': 3,
         })
@@ -49,20 +49,10 @@ def create_character(name, unit, race):
     txn_receipt = None
 
     print("waiting for nodes to handle txn")
-    time.sleep(30)
+    time.sleep(10)
     print("requesting for receipt of txn")
 
-    count = 0
-    while txn_receipt is None and (count < 5):
-
-        txn_receipt = w3.eth.getTransactionReceipt(txn_hash.hex())
-
-        count += 1
-
-        time.sleep(1)
-
-    if txn_receipt is None:
-        return {'status': 'failed', 'error': 'timeout'}
+    txn_receipt = w3.eth.getTransactionReceipt(txn_hash.hex())
 
     return {'status': 'added', 'txn_receipt': txn_receipt}
 

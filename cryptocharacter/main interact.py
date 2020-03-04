@@ -12,12 +12,14 @@ print(w3.isConnected())
 
 # Setting up contract with the needed abi (functions) and the contract address (for instantiation)
 abi = load_file("cryptocharacter/build/", "cc_abi")
-contract_address = "0x4851Ef2081e2C799447017B4205dba0e4C8b0097"
+contract_address = "0x9435cFB566b87e22d9EB08E98EACa95cc2BF1420"
 contract = w3.eth.contract(abi = abi, address = contract_address)
+print(contract.address)
 
 # account to interact from
 wallet_private_key = "0xad5bb5684dbfb337040fb31d76c7b6118e0bb4fed23e940451a43746f93ebb09"
 account = w3.eth.account.privateKeyToAccount(wallet_private_key)
+print(account.address)
 
 def create_character(name, unit, race):
 
@@ -54,13 +56,15 @@ def create_character(name, unit, race):
 
     txn_receipt = w3.eth.getTransactionReceipt(txn_hash.hex())
 
-    newcharacter = "added " + name + " the " + race + " from " + unit
+    newcharacter = "added " + name + " a " + unit + " consist of " + race
     return {'status': newcharacter, 'txn_receipt': txn_receipt}
 
 def get_characters():
     # print all knwon characters of the given wallet_address
     characters = contract.functions.getCharactersByOwner(account.address).call()
-    print("character Ids: " + str(characters))
+    
+    # debug print
+    # print("character Ids: " + str(characters))
 
     characterlist = []
     for i in characters:
@@ -75,9 +79,6 @@ def create_event(characterId, description):
     """create an event for a specific character by sending input to the smart contract of cryptocharacter"""
     # get nonce for txn input
     nonce = w3.eth.getTransactionCount(account.address)
-
-    # get identifier for function input
-
 
     # build transaction
     txn_dict = contract.functions.createEvent(
@@ -110,22 +111,25 @@ def create_event(characterId, description):
 def get_events(characterId):
     """get all events for a specific character by sending input to the smart contract of cryptocharacter"""
 
-    # print all knwon characters of the given wallet_address
+    # get all knwon events of the given character
     events = contract.functions.getEventsByCharacter(characterId).call()
-    print("event Ids: " + str(events))
+    
+    # debug print
+    # print("Get events of character Id: " + str(characterId) + ". event Ids: " + str(events))
 
     history = []
+    history += ["characterId: " + str(characterId)]
     for i in events:
-        history = contract.functions.events(i).call()
+        eventlist = contract.functions.events(i).call()
         idlist = [i]
-        event = idlist + history
+        event = idlist + [eventlist]
         history += [event]
 
     return history
 
 
 if __name__ == "__main__":
-    
+
     # newcharacter = create_character(
     #     name = "Destroyers", 
     #     unit = "Sea Guards", 
@@ -133,15 +137,15 @@ if __name__ == "__main__":
     # )
     # print("New character: " + str(newcharacter))
 
-    # characters = get_characters()
-    # print("Character data: " + str(characters))
+    characters = get_characters()
+    print("Character data: " + str(characters))
 
-    newevent = create_event(
-        characterId = 3,
-        description = "First battle",
-    )
+    # newevent = create_event(
+    #     characterId = 0,
+    #     description = "Victory against 0xd04bAcA7ac336EadE692Fd8EDF1a66e4A7d74919",
+    # )
 
     history = get_events(
-        characterId = 3,
+        characterId = 0,
     )
-    print(history)
+    print("history: " + str(history))

@@ -49,14 +49,13 @@ def create_character(name, unit, race):
     txn_receipt = None
 
     print("waiting for nodes to handle txn")
-    time.sleep(10)
+    time.sleep(30)
     print("requesting for receipt of txn")
 
     txn_receipt = w3.eth.getTransactionReceipt(txn_hash.hex())
 
-    return {'status': 'added', 'txn_receipt': txn_receipt}
-
-    # return str(name + " " + unit + " " + race + " " + txn_hash.hex())
+    newcharacter = "added " + name + " the " + race + " from " + unit
+    return {'status': newcharacter, 'txn_receipt': txn_receipt}
 
 def get_characters():
     # print all knwon characters of the given wallet_address
@@ -91,12 +90,12 @@ def get_events(characterId):
 
 if __name__ == "__main__":
     
-    newcharacter = create_character(
-        name = "Pikachu", 
-        unit = "Joins", 
-        race = "The Fight",
-    )
-    print("New character: " + str(newcharacter))
+    # newcharacter = create_character(
+    #     name = "Destroyers", 
+    #     unit = "Sea Guards", 
+    #     race = "High Elves",
+    # )
+    # print("New character: " + str(newcharacter))
 
     # newevent = create_event(
     #     wallet_address = wallet_address,

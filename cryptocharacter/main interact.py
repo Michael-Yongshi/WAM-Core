@@ -102,9 +102,9 @@ def get_events(characterId):
 if __name__ == "__main__":
     
     newcharacter = create_character(
-        name = "2", 
-        unit = "3", 
-        race = "4",
+        name = "Pikachu", 
+        unit = "Joins", 
+        race = "The Fight",
     )
     print("New character: " + str(newcharacter))
 

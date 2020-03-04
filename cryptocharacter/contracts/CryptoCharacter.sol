@@ -85,11 +85,18 @@ contract CryptoCharacter is IERC721, ERC165 {
         assert(characterToOwner[id] == address(0));
         characterToOwner[id] = msg.sender;
         ownerCharacterCount[msg.sender] = SafeMath.add(ownerCharacterCount[msg.sender], 1);
+    
+        // Add creation event to character
+        // string memory comment = "Character Created";
+        // createEvent(
+        //     id,
+        //     comment
+        //     );
     }
 
     // Create Event from string
     function createEvent(
-        uint256 _characterId,
+        uint _characterId,
         string memory _description
         )
         public

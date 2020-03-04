@@ -165,7 +165,7 @@ contract CryptoCharacter is IERC721, ERC165 {
     }
 
     // Returns array of Events found by characterId
-    function getEventsByCharacter(uint256 _characterId)
+    function getEventsByCharacter(uint _characterId)
         public
         view
         returns(uint[] memory)

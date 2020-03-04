@@ -5,67 +5,27 @@ from solc import compile_source
 
 from source.methods_json import load_file
 
-# class CryptoCharacter(object):
-#     """"""
-#     def __init__(self, w3, contract):
-        
-    # set up w3 connection
-w3 = Web3(Web3.HTTPProvider("http://51.105.171.12"))
+# Connect to specific network
+network_url = "https://ropsten.infura.io/v3/313b66f4d09a48feaa2ad6e73859464e"
+w3 = Web3(Web3.HTTPProvider(network_url))
+print(w3.isConnected())
 
-# https://solidity.readthedocs.io/en/develop/using-the-compiler.html#compiler-input-and-output-json-description
-# JSON input for solidity compiler of smart contract
-# compiled_sol = compile_standard(
-#     {
-#         'language': 'Solidity',
-#         'sources': {
-#             'CryptoCharacter.sol':{
-#                 'urls': ["cryptocharacter/contracts/CryptoCharacter.sol"],
-#             },
-#         },
-#     })
-
-# the needed abi functions for this contract
+# Setting up contract with the needed abi (functions) and the contract address (for instantiation)
 abi = load_file("cryptocharacter/build/", "cc_abi")
+contract_address = "0x4851Ef2081e2C799447017B4205dba0e4C8b0097"
+contract = w3.eth.contract(abi = abi, address = contract_address)
 
-# # the needed bytecode of the contract
-with open("cryptocharacter/build/cc_bytecode.bin", mode='r') as binfile: # b is important -> binary
-    bytecode = binfile.read()
-
-with open("cryptocharacter/contracts/CryptoCharacter.sol", mode='r') as contractfile: # b is important -> binary
-    contract_code = contractfile.read()
-
-# set up the contract based on the bytecode and abi functions
-contract = w3.eth.contract(abi = abi, bytecode = bytecode)
-
-# account to deploy from
+# account to interact from
 wallet_private_key = "0xad5bb5684dbfb337040fb31d76c7b6118e0bb4fed23e940451a43746f93ebb09"
 account = w3.eth.account.privateKeyToAccount(wallet_private_key)
-
-txn_dict = contract.constructor().buildTransaction({
-        'from': account.address,
-        'nonce': w3.eth.getTransactionCount(account.address),   
-        'gas': 164890,
-        'gasPrice': w3.toWei('1000000000', 'wei'),
-        'chainId': 98052
-        })
-
-signed_txn = account.signTransaction(txn_dict)
-txn_hash = contract.constructor()
-txn_receipt = w3.eth.waitForTransactionReceipt(signed_txn.rawTransaction)
-
-# Create contract instance based on the deployed smart contract
-contract = w3.eth.contract(address = txn_receipt.contract_address, abi = abi)
-txn_hash = w3.eth.sendRawTransaction(signed_txn.rawTransaction)
-txn_receipt = w3.eth.getTransactionReceipt(txn_hash.hex())
-
 
 def create_character(name, unit, race):
 
     # get nonce for txn input
-    nonce = w3.eth.getTransactionCount(wallet_address)
+    nonce = w3.eth.getTransactionCount(account.address)
 
     # get identifier for function input
-    identifier = "1"
+    identifier = str(name + unit + race)
 
     # build transaction
     txn_dict = contract.functions.createRandomCharacter(
@@ -77,7 +37,7 @@ def create_character(name, unit, race):
         'nonce': nonce,        
         'gas': 164890,
         'gasPrice': w3.toWei('1000000000', 'wei'),
-        'chainId': 98052,
+        'chainId': 3,
         })
     print("build txn dict: " + str(txn_dict))
 
@@ -108,9 +68,9 @@ def create_character(name, unit, race):
 
     # return str(name + " " + unit + " " + race + " " + txn_hash.hex())
 
-def get_characters(wallet_address):
+def get_characters():
     # print all knwon characters of the given wallet_address
-    characters = contract.functions.getCharactersByOwner(wallet_address).call()
+    characters = contract.functions.getCharactersByOwner(account.address).call()
     print("character Ids: " + str(characters))
 
     characterlist = []
@@ -130,19 +90,17 @@ def get_characters(wallet_address):
         #     event = contract.functions.events(e).call()
         #     print(e)
 
-    def create_event(characterId):
-        """create an event for a specific character by sending input to the smart contract of cryptocharacter"""
-        NotImplemented
+def create_event(characterId):
+    """create an event for a specific character by sending input to the smart contract of cryptocharacter"""
+    NotImplemented
 
-    def get_events(characterId):
-        """get all events for a specific character by sending input to the smart contract of cryptocharacter"""
-        NotImplemented
+def get_events(characterId):
+    """get all events for a specific character by sending input to the smart contract of cryptocharacter"""
+    NotImplemented
 
 
 if __name__ == "__main__":
     
-    deploy_contract(wallet_address, wallet_private_key)
-
     newcharacter = create_character(
         name = "2", 
         unit = "3", 
@@ -157,9 +115,7 @@ if __name__ == "__main__":
     #     description = "Something happened",
     # )
 
-    characters = get_characters(
-        wallet_address = wallet_address,
-    )
+    characters = get_characters()
     print("Character data: " + str(characters))
 
     # events = get_events(

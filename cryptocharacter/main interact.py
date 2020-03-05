@@ -10,7 +10,7 @@ w3 = Web3(Web3.HTTPProvider(network_url))
 print(w3.isConnected())
 
 # Setting up contract with the needed abi (functions) and the contract address (for instantiation)
-abi = load_file("cryptocharacter/build/", "cc_abi")
+abi = load_file("cryptocharacter/contracts/", "cryptocharacter_abi")
 contract_address = "0x9435cFB566b87e22d9EB08E98EACa95cc2BF1420"
 contract = w3.eth.contract(abi = abi, address = contract_address)
 print(contract.address)

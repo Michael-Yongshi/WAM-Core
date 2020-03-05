@@ -7,7 +7,7 @@ from source.methods_json import load_file
 w3 = Web3(Web3.HTTPProvider("https://api.infura.io/v1/jsonrpc/ropsten"))
 
 # the needed abi functions for this contract
-abi = load_file("cryptocharacter/build/", "cc_abi")
+abi = load_file("cryptocharacter/contracts/", "cryptocharacter_abi")
 
 # # the needed bytecode of the contract
 with open("cryptocharacter/build/cc_bytecode.bin", mode='r') as binfile: # b is important -> binary

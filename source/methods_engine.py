@@ -10,7 +10,7 @@ def save_warband(datadict):
     """Save warband to a save file"""
 
     # set the paths to the users documents folder
-    local_path = r"~\Documents\WAM"
+    local_path = os.path.join("~", "Documents", "WAM")
     path = os.path.expanduser(local_path)
     print("save_warband: local path" + local_path)
     print("save_warband: path" + path)

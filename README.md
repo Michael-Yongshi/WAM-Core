@@ -47,29 +47,41 @@ set git email with
 git config --global user.name ""
 ```
 
-Install some required packages
+Install some required packages for the application
 ```
 pip3 install --user pyqt5
-apt-get install python3 pyqt5   # if pip3 doesn't work
-pip3 install --user requests    # (unused)
-pip3 install --user flake8      # (unused)
-pip3 install --user pyinstaller # (dev)
+apt-get install python3 pyqt5   # (prod) if pip3 doesn't work
+
+pip3 install --user requests    # (unused) default api library
+
+pip3 install --user flake8      # (unused) editor support
+
+pip3 install --user pyinstaller # (dev) to create an installer
 ```
 
-Solidity stuff
-metamask network: http://51.105.171.12
-https://ethereum.org/python/
+Solidity specific stuff
 
 Visual 14 C++ needed for web3
 https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15
 
 ```
-pip3 install --user py-solc             # (dev) solidity compiler for python
-pip3 install --user pyethereum          # (dev) Ethereum Virtual Machine for python, to run your own node, but also some handy stuff like calculating address from private key
-pip3 install --user web3                # (dev) brary for interacting with ethereum, setting up connections, i.e. to your wallet in metamask, transferring tokens and interacting with smart contracts
-pip3 install --user flask
-pip3 install --user flask-restful
-pip3 install --user flask-marschmallow
+pip3 install --user py-solc             # (unused) solidity compiler for python
+
+pip3 install --user pyethereum          # (unused) Ethereum Virtual Machine for python, to run your own node, but also some handy stuff like calculating address from private key
+
+pip3 install --user web3                # (prod) library for interacting with ethereum, setting up connections, i.e. to your wallet in metamask, transferring tokens and interacting with smart contracts
+
+pip3 install --user flask               # (unused)
+pip3 install --user flask-restful       # (unused)
+pip3 install --user flask-marschmallow  # (unused)
+```
+
+NFC specific stuff
+```
+pip3 install -U nfcpy                   # (prod) library to interact with nfc devices
+
+```
+
 
 ## Running the tests
 

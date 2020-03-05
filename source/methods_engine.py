@@ -10,10 +10,10 @@ def save_warband(datadict):
     """Save warband to a save file"""
 
     # set the paths to the users documents folder
-    local_path = r"~\Documents\WAM"
+    local_path = os.path.join("~", "Documents", "WAM")
     path = os.path.expanduser(local_path)
-    print("save_warband: local path" + local_path)
-    print("save_warband: path" + path)
+    print("save_warband: local path - " + local_path)
+    print("save_warband: path - " + path)
     
     # set the filename to the warbands name
     filename = datadict["name"]
@@ -23,7 +23,7 @@ def save_warband(datadict):
 
 def show_warbands():
     # Folderpath
-    local_path = r"~\Documents\WAM"
+    local_path = os.path.join("~", "Documents", "WAM")
     path = os.path.expanduser(local_path)
 
     savelist = show_files(path)
@@ -32,7 +32,7 @@ def show_warbands():
 
 def load_warband(wbname):
     # set the paths to the users documents folder
-    local_path = r"~\Documents\WAM"
+    local_path = os.path.join("~", "Documents", "WAM")
     path = os.path.expanduser(local_path)
 
     # set the filename to the warbands name
@@ -45,14 +45,8 @@ def load_warband(wbname):
     return datadict
 
 def save_reference(datadict, filename):
-    """Save warband to a save file"""
-
-    # set the paths to the users documents folder
-    local_path = r"~\Documents\WAM"
-    path = os.path.expanduser(local_path)
-
-    # set the filename to the warbands name
-    filename = datadict["name"]
+    # set the paths to the applications database reference files
+    path = "database/references/"
 
     # run the json command to save the file as a json file
     save_file(datadict, path, filename)

@@ -1,7 +1,6 @@
 import time
 
 from web3 import Web3
-from solc import compile_source
 
 from source.methods_json import load_file
 

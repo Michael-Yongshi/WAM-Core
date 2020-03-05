@@ -6,15 +6,17 @@ from source.methods_json import (
     load_file,
 )
 
-def save_warband(datadict):
-    """Save warband to a save file"""
-
-    # set the paths to the users documents folder
+def get_localpath():
+    """set the paths to the users documents folder"""
     local_path = os.path.join("~", "Documents", "WAM")
     path = os.path.expanduser(local_path)
-    print("save_warband: local path - " + local_path)
+    print("get_localpath: local path - " + local_path)
+
+def save_warband(datadict):
+    """Save warband to a save file"""
+    path = get_localpath()
     print("save_warband: path - " + path)
-    
+
     # set the filename to the warbands name
     filename = datadict["name"]
 
@@ -23,17 +25,13 @@ def save_warband(datadict):
 
 def show_warbands():
     # Folderpath
-    local_path = os.path.join("~", "Documents", "WAM")
-    path = os.path.expanduser(local_path)
-
+    path = get_localpath()
     savelist = show_files(path)
 
     return savelist
 
 def load_warband(wbname):
-    # set the paths to the users documents folder
-    local_path = os.path.join("~", "Documents", "WAM")
-    path = os.path.expanduser(local_path)
+    path = get_localpath()
 
     # set the filename to the warbands name
     filename = wbname

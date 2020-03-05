@@ -166,12 +166,13 @@ Character.prototype.loadInventory = async function() {
                             var characterRace = character[3];
                             var eventList = []
                             await that.instance.methods.getEventsByCharacter(characterIds[i]).call().then(async function( eventIds) {
-                                console.log('inv list event ids: ' + eventIds.length)
+                                console.log('Before fact: ' + eventIds.length)
                                 if(eventIds.length > 0) {
                                     for(let e = 0; e < eventIds.length; e++) {
-                                        console.log('in for loop')
+                                        console.log('for loop: ' + e)
                                         await that.instance.methods.events(eventIds[e]).call().then(function(event) {
-                                            eventList.push(event)
+                                            eventcomplete = "(" + e + ": " + event + ")"
+                                            eventList.push(eventcomplete)
                                             // console.log('event E: ' + event + ' length: ' + eventList.length)
                                         })
                                     }
@@ -180,7 +181,7 @@ Character.prototype.loadInventory = async function() {
                             console.error('events ' + err  )
                             })
 
-                            console.log('buiten event list:' + eventList.length)
+                            console.log('After fact:' + eventList.length)
                             
                             var actionButtons = '<div>\
                             \<button class="btn button-gift" id="'+realIndex+'">Gift</button>\
@@ -191,8 +192,7 @@ Character.prototype.loadInventory = async function() {
                             $(".inventory-list").append('<div id="character-'+realIndex+'" class="col-lg-6">\
                             \<div class="character-container">\
                             \<p><span style="float: left;">'+characterName+'</span><span style="float: middle;">'+characterUnit+'</span><span style="float: right;">'+characterRace+'</span></p>\
-                            \<p><span style="float: middle;">number of events: '+eventList.length+'</span></p>\
-                            \<p><span style="float: middle;">events: '+eventList+'</span></p>\
+                            \<p><span style="float: middle;">'+eventList+'</span></p>\
                             '+actionButtons);
                             $(".inventory-list").append('</div>');
                             $(".inventory-list").append('</div>');
@@ -211,25 +211,25 @@ Character.prototype.loadInventory = async function() {
             });
 }
 
-// Update container of Create new Character
-Character.prototype.updateCreateContainer = function() {
-    var characterName = $("#create-name").val();
-    var that = this;
+// // Update container of Create new Character
+// Character.prototype.updateCreateContainer = function() {
+//     var characterName = $("#create-name").val();
+//     var that = this;
 
-    // Disallow negative numbers
-    if(characterName.length > 0) {
-        var address = window.top.web3.eth.accounts[0];
-        this.getRandomDna(characterName, address, function(characterDna) {
+//     // Disallow negative numbers
+//     if(characterName.length > 0) {
+//         var address = window.top.web3.eth.accounts[0];
+//         this.getRandomDna(characterName, address, function(characterDna) {
 
-                var characterImage = that.generateCharacterImage(characterDna);
-                $("#character-create-container .ingredients").html(characterImage);
+//                 var characterImage = that.generateCharacterImage(characterDna);
+//                 $("#character-create-container .ingredients").html(characterImage);
             
-        })
-    }
-    else {
-        $("#character-create-container .ingredients").html('');
-    }
-}
+//         })
+//     }
+//     else {
+//         $("#character-create-container .ingredients").html('');
+//     }
+// }
 
 // Generates images from DNA - returns all of them in HTML
 // Character.prototype.generateCharacterImage = function(dna) {
@@ -392,7 +392,7 @@ Character.prototype.bindInputs = function() {
     $(document).on("change textInput input", "#create-name", function() {
         clearTimeout(timeout);
         timeout = setTimeout(function() {
-            that.updateCreateContainer();
+            // that.updateCreateContainer();
         }, 250);
     });
 

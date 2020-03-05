@@ -1,10 +1,13 @@
 # Warhammer Army Manager (WAM)
 
-An application in order to create, update, view and save your warband details for use, including but not limited to, Mordheim and Killteam boardgames. Using this application there is no need anymore for manually calculating skills or looking up your warbands details, including references to all item, spells, abilities, etc. that are ingame.
-
-In addition you can add your own warbands, items, rules, etc. for use in more custom made games.
+An application in order to create, update, view and save your warband details for use in the Mordheim Warhammer world. Using this application there is no need anymore for manually calculating skills or looking up your warbands details, including references to all item, spells, abilities, etc. that are ingame and the rules governing engagements.
 
 ## Roadmap
+- Adding experience and skill tables for leveling up heroes and henchmen groups
+- Adding calculation tables for use in battles, like hit tables, wound tables and injury tables
+- Adding your own warband rules, items, abilities, etc. for use in more custom made games.
+- Adding events to warbands, characters and items, to individualize and decorate the achievements or special happening, including who you fought, who killed that huge rat ogre, etc.
+- Add Killteam rules and mechanics
 
 ## Getting Started
 
@@ -12,7 +15,11 @@ To use the application see 'Installing'. The rest of these instructions will get
 
 ### Installing
 
-Grab the zip folder from: https://www.jottacloud.com/s/13030f55cae66fb428698777e670d3a052a. 
+Grab the zip folder from:
+
+<b>Windows 10 64 bit</b>: https://www.jottacloud.com/s/13030f55cae66fb428698777e670d3a052a. 
+
+<b>Ubuntu 18 64 bit</b>: https://www.jottacloud.com/s/130ab5742a54b87443a896a37062196affa.
 
 Unzip the folder and run the exe file within.
 
@@ -33,19 +40,20 @@ set git credentials by entering credentials in popup
 
 set git name with 
 ```
-git --global user.email ""
+git config --global user.email ""
 ```
 set git email with 
 ```
-git --global user.name ""
+git config --global user.name ""
 ```
 
 Install some required packages
 ```
 pip3 install --user pyqt5
-pip3 install --user requests            # (unused)
-pip3 install --user flake8              # (dev)
-pip3 install --user pyinstaller         # (dev)
+apt-get install python3 pyqt5   # if pip3 doesn't work
+pip3 install --user requests    # (unused)
+pip3 install --user flake8      # (unused)
+pip3 install --user pyinstaller # (dev)
 ```
 
 Solidity stuff
@@ -79,7 +87,9 @@ pip3 install --user flask-marschmallow
 
 create a distribution manually: 
 ```
-python -m PyInstaller cli.py --add-data "database/saves/cache.json";"database/saves/" --add-data "database/references/*.json";"database/references/" --icon="source\war_72R_icon.ico" --name WAM
+python -m PyInstaller cli.py --add-data "database/saves/cache.json";"database/saves/" --add-data "database/references/*.json";"database/references/" --icon="source\war_72R_icon.ico" --name WAM-Win10-64
+
+python -m PyInstaller cli.py --add-data "database/saves/cache.json":"database/saves/" --add-data "database/references/*.json":"database/references/" --icon="source\war_72R_icon.ico" --name WAM-Ubuntu18-64
 ```
 <!-- python -m PyInstaller cli.py --add-data "database/saves/cache.json";"database/saves/" --add-data "database/references/*.json";"database/references/" --icon="source\war_72R_icon.ico" --name WAM_OF --onefile -->
 

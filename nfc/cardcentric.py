@@ -2,7 +2,7 @@
 # Sample script for the card centric approach
 from __future__ import print_function
 from smartcard.ATR import ATR
-from smartcard.CardType import ATRCardType
+from smartcard.CardType import ATRCardType, AnyCardType
 from smartcard.CardRequest import CardRequest
 from smartcard.util import toHexString, toBytes
 
@@ -25,6 +25,7 @@ print('T0  supported: ', atr.isT0Supported())
 print('T1  supported: ', atr.isT1Supported())
 print('T15 supported: ', atr.isT15Supported())
 
+# cardtype = AnyCardType()
 cardtype = ATRCardType(mycardbytes)
 cardrequest = CardRequest( timeout=1, cardType=cardtype )
 
@@ -32,9 +33,12 @@ print("Waiting for card")
 cardservice = cardrequest.waitforcard()
 print("Card connected")
 
+# connecting to card
 cardservice.connection.connect()
 print("connected to reader: " + str(cardservice.connection.getReader()))
-print("connected to card: " + str(toHexString(cardservice.connection.getATR())))
+print("connected to card (in bytes): " + str(cardservice.connection.getATR()))
+print("connected to card (in hex): " + str(toHexString(cardservice.connection.getATR())))
+print("this is my card") if cardservice.connection.getATR() == mycardbytes else print("this is not my card")
 
 # SELECT = [0xA0, 0xA4, 0x00, 0x00, 0x02]
 # DF_TELECOM = [0x7F, 0x10]

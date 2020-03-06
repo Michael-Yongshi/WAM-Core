@@ -81,9 +81,9 @@ pip3 install --user flask-restful       # (unused)
 pip3 install --user flask-marschmallow  # (unused)
 ```
 
-### NFC requisites
+### NFC through nfcpy
 
-with nfcpy (obsolete, this library tries to go around the current drivers, we dont want that)
+with nfcpy (this library tries to go around the current drivers, we dont want that)
 ```
 pip3 install -U nfcpy                   # (prod) library to interact with nfc devices
 apt install neard-tools                 # nfc toolbox
@@ -94,11 +94,12 @@ python3 -m nfc                          # (dev) searching for nfc devices
 sudo python3 -m nfc                     # code to free up a nfc device from driver
 ```
 
-with pyscard
-http://www.swig.org/download.html # prerequisite for installing pyscard
-```
-pip3 install pyscard
-```
+### NFC through pyscard
+Can only be used with version 3.6.8 of python (as of moment of writing). Thus we have to switch for this application to this python version in order to use this NFC library.
+Downloaded pyscard executable for windows from 
+
+https://sourceforge.net/projects/pyscard/
+
 
 ### Authentication requisites
 https://realpython.com/token-based-authentication-with-flask/

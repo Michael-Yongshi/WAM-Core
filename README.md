@@ -11,19 +11,19 @@ An application in order to create, update, view and save your warband details fo
 
 ## Getting Started
 
-To use the application see 'Installing'. The rest of these instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Installing
-
-Grab the zip folder from:
+To install a working application grab the zip folder from:
 
 <b>Windows 10 64 bit</b>: https://www.jottacloud.com/s/13030f55cae66fb428698777e670d3a052a. 
 
 <b>Ubuntu 18 64 bit</b>: https://www.jottacloud.com/s/130ab5742a54b87443a896a37062196affa.
 
-Unzip the folder and run the exe file within.
+Unzip the folder and run the exe / app file within.
 
-### Prerequisites (dev only)
+## Development
+
+The rest of these instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Python, IDE & Git
 
 ```
 install vscode
@@ -47,11 +47,9 @@ set git email with
 git config --global user.name ""
 ```
 
-Install some required packages for the application
-```
-pip3 install --user pyqt5
-apt-get install python3 pyqt5   # (prod) if pip3 doesn't work
+### Basic application requisites
 
+```
 pip3 install --user requests    # (unused) default api library
 
 pip3 install --user flake8      # (unused) editor support
@@ -59,7 +57,14 @@ pip3 install --user flake8      # (unused) editor support
 pip3 install --user pyinstaller # (dev) to create an installer
 ```
 
-Solidity specific stuff
+### GUI requisites
+
+```
+pip3 install --user pyqt5
+apt-get install python3 pyqt5   # (prod) if pip3 doesn't work
+```
+
+### Solidity requisites
 
 Visual 14 C++ needed for web3
 https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15
@@ -76,11 +81,27 @@ pip3 install --user flask-restful       # (unused)
 pip3 install --user flask-marschmallow  # (unused)
 ```
 
-NFC specific stuff
+### NFC requisites
+
+with nfcpy (obsolete, this library tries to go around the current drivers, we dont want that)
 ```
 pip3 install -U nfcpy                   # (prod) library to interact with nfc devices
-
+apt install neard-tools                 # nfc toolbox
 ```
+testing nfc hardware
+```
+python3 -m nfc                          # (dev) searching for nfc devices
+sudo python3 -m nfc                     # code to free up a nfc device from driver
+```
+
+with pyscard
+http://www.swig.org/download.html # prerequisite for installing pyscard
+```
+pip3 install pyscard
+```
+
+### Authentication requisites
+https://realpython.com/token-based-authentication-with-flask/
 
 
 ## Running the tests

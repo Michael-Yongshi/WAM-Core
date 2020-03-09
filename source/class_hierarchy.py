@@ -84,27 +84,8 @@ class Warband(object):
             )
 
             herolist = []
-            # for herodict in datadict["herolist"]:
-            #     heroref = Character.create_character(
-            #         name = "",
-            #         race = herodict["race"], 
-            #         source = herodict["source"], 
-            #         warband = herodict["warband"], 
-            #         category = herodict["category"],
-            #         )
-            #     herolist += [heroref]
 
             squadlist = []
-            # for squad in datadict["squadlist"]:
-            #     squadref = Squad.create_squad(
-            #         race = squaddict["race"], 
-            #         source = squaddict["source"], 
-            #         warband = squaddict["warband"], 
-            #         category = squaddict["category"], 
-            #         name = "",
-            #         number=1,
-            #         )
-            #     squadlist += [squadref]
 
             itemlist = []
             for itemdict in datadict["itemlist"]:
@@ -195,6 +176,14 @@ class Warband(object):
         wbprice = wbinvprice + herolistprice + squadlistprice
         
         return wbprice
+
+    def get_rulelist(self):
+        rulelist = []
+        
+        for r in self.rulelist:
+            rulelist += [r.name]
+        
+        return rulelist
 
 class Squad(object):
     def __init__(self, name, henchmanlist=[]):

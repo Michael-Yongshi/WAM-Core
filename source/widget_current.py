@@ -78,11 +78,11 @@ class WidgetCurrent(QRaisedFrame):
 
         self.configfile = {
             'namebox': {'row': 0, 'column': 0, 'width': 1, 'height': 1, 'children': {
-                'namelabel': {'row': 0, 'column': 0, 'width': 1, 'height': 1, 'text': f"Name: <b>{self.mainwindow.currentunit.name}</b>", 'tooltip': "Name",},
-                'catlabel': {'row': 1, 'column': 0, 'width': 1, 'height': 1, 'text': f"Category: <b>{self.mainwindow.currentunit.category}</b>", 'tooltip': "Category",},
-                'pricelabel': {'row': 2, 'column': 0, 'width': 1, 'height': 1, 'text': f"Price: <b>{self.mainwindow.currentunit.price}</b>", 'tooltip': "Price",},
-                'maxlabel': {'row': 2, 'column': 1, 'width': 1, 'height': 1, 'text': f"Maximum: <b>{self.mainwindow.currentunit.maxcount}</b>", 'tooltip': "Maximum",},
-                'explabel': {'row': 0, 'column': 1, 'width': 1, 'height': 1, 'text': f"Experience: <b>{self.mainwindow.currentunit.experience}</b>", 'tooltip': f"Next Advance at experience: <b> 8 </b>",},
+                'namelabel': {'row': 0, 'column': 0, 'width': 1, 'height': 1, 'text': f"Name: <b>{self.mainwindow.currentunit.name}</b>", 'tooltip': "Name", 'connect': self.create_method_change_name(self.mainwindow.currentunit.name)},
+                'catlabel': {'row': 1, 'column': 0, 'width': 1, 'height': 1, 'text': f"Category: <b>{self.mainwindow.currentunit.category}</b>", 'tooltip': "Category", 'connect': ""},
+                'pricelabel': {'row': 2, 'column': 0, 'width': 1, 'height': 1, 'text': f"Price: <b>{self.mainwindow.currentunit.price}</b>", 'tooltip': "Price", 'connect': "",},
+                'maxlabel': {'row': 2, 'column': 1, 'width': 1, 'height': 1, 'text': f"Maximum: <b>{self.mainwindow.currentunit.maxcount}</b>", 'tooltip': "Maximum", 'connect': "",},
+                'explabel': {'row': 0, 'column': 1, 'width': 1, 'height': 1, 'text': f"Experience: <b>{self.mainwindow.currentunit.experience}</b>", 'tooltip': f"Next Advance at experience: <b> 8 </b>", 'connect': self.create_method_change_experience(self.mainwindow.currentunit.experience),},
                 }
             },
             'skillbox': {'row': 1, 'column': 0, 'width': 1, 'height': 1,
@@ -114,9 +114,11 @@ class WidgetCurrent(QRaisedFrame):
         
         for key in children:
             config = children[key]
-            label = QLabel()
+            label = QClickLabel()
             label.setText(config['text'])
             label.setToolTip(config['tooltip'])
+            if config['connect'] != "":
+                label.clicked.connect(config['connect'])
             namebox.addWidget(label, config['row'], config['column'], config['width'], config['height'])
 
         nameframe = QBorderlessFrame()
@@ -160,3 +162,23 @@ class WidgetCurrent(QRaisedFrame):
         listframe.setLayout(listbox)
         
         return listframe
+
+    def create_method_change_name(self, name):
+        
+        def change_name():
+            new_name = "changed name"
+        
+            self.mainwindow.currentunit.name = new_name
+            self.mainwindow.initUI()
+        
+        return change_name
+
+    def create_method_change_experience(self, experience):
+        
+        def change_experience():
+            new_experience = 99
+        
+            self.mainwindow.currentunit.experience = new_experience
+            self.mainwindow.initUI()
+        
+        return change_experience

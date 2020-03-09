@@ -85,8 +85,6 @@ class WidgetWarband(QRaisedFrame):
             'wbitembox': {'row': 0, 'column': 1, 'width': 1, 'height': 1,},
         }
 
-        print(self.configfile)
-
         wbbox = QGridLayout()
         config =self.configfile['wbdetail']
         wbbox.addWidget(self.set_detailbox(), config['row'], config['column'], config['width'], config['height'])

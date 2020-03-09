@@ -66,9 +66,6 @@ from source.class_hierarchy import (
 from source.widget_template import *
 from source.widget_items import WidgetItemsWarband
 
-# from source.widget_currentbox import *
-
-
 class WidgetWarband(QRaisedFrame):
     def __init__(self, mainwindow, configfile = {}):
         super().__init__()
@@ -117,7 +114,7 @@ class WidgetWarband(QRaisedFrame):
         for r in self.mainwindow.wbid.rulelist:
             printablerules += [r.name]
 
-        wbdetailframe = QRaisedFrame()
+        wbdetailframe = QBorderlessFrame()
         wbdetailframe.setLayout(wbdetail)
         wbdetailframe.setToolTip(f"Special Rules: {printablerules}\n\n{self.mainwindow.wbid.description}")
 

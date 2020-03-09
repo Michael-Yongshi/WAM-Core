@@ -120,9 +120,9 @@ class WarbandOverview(QMainWindow):
     def set_topbox(self):
         
         # top wrapping warband and system in the top horizontal layout
-        topbox = QHBoxLayout()
-        topbox.addWidget(WidgetWarband(self))
-        topbox.addWidget(WidgetSystem(self))
+        topbox = QGridLayout()
+        topbox.addWidget(WidgetWarband(self), 0, 0, 1, 4)
+        topbox.addWidget(WidgetSystem(self), 0, 4, 1, 1)
 
         topboxframe = QBorderlessFrame()
         topboxframe.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)

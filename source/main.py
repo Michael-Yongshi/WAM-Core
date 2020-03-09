@@ -64,6 +64,7 @@ from source.class_hierarchy import (
     )
 
 from source.widget_template import *
+from source.widget_warband import WidgetWarband
 from source.widget_items import WidgetItemsWarband
 from source.widget_system import WidgetSystem
 from source.widget_heroes import WidgetHeroes
@@ -120,7 +121,7 @@ class WarbandOverview(QMainWindow):
         
         # top wrapping warband and system in the top horizontal layout
         topbox = QHBoxLayout()
-        topbox.addWidget(self.set_wbbox())
+        topbox.addWidget(WidgetWarband(self))
         topbox.addWidget(WidgetSystem(self))
 
         topboxframe = QBorderlessFrame()
@@ -142,74 +143,6 @@ class WarbandOverview(QMainWindow):
         botboxframe.setLayout(botbox)
 
         return botboxframe
-
-    def set_wbbox(self):
-        # top left warband info
-        wbbox = QHBoxLayout()
-        
-        wbdetail = QVBoxLayout()
-        
-        wbnamelabel = QLabel()
-        wbnamelabel.setText(f"Name: <b>{self.wbid.name}<b/>")
-        wbracelabel = QLabel()
-        wbracelabel.setText(f"Race: <b>{self.wbid.race}<b/>")
-        wbsrclabel = QLabel()
-        wbsrclabel.setText(f"Source: <b>{self.wbid.source}<b/>")
-        wbtypelabel = QLabel()
-        wbtypelabel.setText(f"Type: <b>{self.wbid.warband}<b/>")
-
-        wbdetail.addWidget(wbnamelabel)
-        wbdetail.addWidget(wbracelabel)
-        wbdetail.addWidget(wbsrclabel)
-        wbdetail.addWidget(wbtypelabel)
-
-        printablerules = []
-        for r in self.wbid.rulelist:
-            printablerules += [r.name]
-
-        wbdetailframe = QRaisedFrame()
-        wbdetailframe.setLayout(wbdetail)
-        wbdetailframe.setToolTip(f"Special Rules: {printablerules}\n\n{self.wbid.description}")
-
-        wbbox.addWidget(wbdetailframe)
-
-        # Top middle
-        treabox = QVBoxLayout()
-
-        goldlabel = QLabel()
-        goldlabel.setText(f"Gold: <b>{self.wbid.treasury.gold}<b/>")
-        goldlabel.setToolTip("This is the amount of gold your warband holds.")
-        treabox.addWidget(goldlabel)
-        wyrdlabel = QLabel()
-        wyrdlabel.setText(f"Wyrdstones: <b>{self.wbid.treasury.wyrd}<b/>")
-        wyrdlabel.setToolTip("This is the amount of wyrdstones, or their equivalent, your warband holds.")
-        treabox.addWidget(wyrdlabel)
-        
-        treaboxframe = QRaisedFrame()
-        treaboxframe.setLayout(treabox)
-        treaboxframe.clicked.connect(self.dialog_treasury)
-        wbbox.addWidget(treaboxframe)
-
-        # add item widget   
-        wbbox.addWidget(WidgetItemsWarband(self)) # adds the item layout to the grid
-
-        wbboxframe = QBorderlessFrame()
-        wbboxframe.setLayout(wbbox)
-
-        return wbboxframe
-
-    def dialog_treasury(self):
-        
-        newgold, okPressed = QInputDialog.getInt(self, 'Gold change', f"Change gold amount to:", self.wbid.treasury.gold, 0, 99999, 1)
-        if okPressed:
-            self.wbid.treasury.gold = newgold
-
-        newwyrd, okPressed = QInputDialog.getInt(self, 'Wyrd change', f"Change wyrd amount to:", self.wbid.treasury.wyrd, 0, 99999, 1)
-        if okPressed:
-            self.wbid.treasury.wyrd = newwyrd
-
-        # relaunch ui to process changes in ui
-        self.initUI()
 
     def remove_focus(self):
         self.currentunit = None

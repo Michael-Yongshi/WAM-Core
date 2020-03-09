@@ -106,15 +106,14 @@ class WidgetCurrent(QRaisedFrame):
             self.setToolTip("This is the currently selected unit")
             self.setLayout(currentbox)
 
-
     def set_namebox(self):
         namebox = QGridLayout()
         
-        # Todo: create a table with the settings for these widgets and then use a for loop to generate the labels and put them in the box
-        # after that, create a generic function that uses a conf file and loop over it generating gui. then we could replace the entire code here with just a call to this function.
-        children = self.configfile['namebox']['children']
-        for child in children:
-            config = self.configfile['namebox']['children'][child]
+        config = self.configfile['namebox']
+        children = config['children']
+        
+        for key in children:
+            config = children[key]
             label = QLabel()
             label.setText(config['text'])
             label.setToolTip(config['tooltip'])

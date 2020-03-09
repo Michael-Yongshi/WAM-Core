@@ -5,16 +5,13 @@ import json
 def save_json(datadict, path, filename):
     """Dumps a dictionary to a json file in the documents folder"""
 
-    print("save_json path:" + path)
     # check if directory already exists, if not create it
     if not os.path.exists(path):
         os.makedirs(path)
 
-    filename = datadict["name"]
-    print(path + filename)
-    complete_path = os.path.join(path, filename + ".json")
+    filename = filename
 
-    print(complete_path)
+    complete_path = os.path.join(path, filename + ".json")
 
     # open file and write json to it
     with open(complete_path, 'w') as savefile:

@@ -48,6 +48,9 @@ def save_reference(datadict, filename):
     # set the paths to the applications database reference files
     path = "database/references/"
 
+    # set the reference filename to be loaded
+    filename = filename + "_ref"
+
     # run the json command to save the file as a json file
     save_json(datadict, path, filename)
 

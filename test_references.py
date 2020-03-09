@@ -1,9 +1,5 @@
 from source.methods_database import (
-    create_warbandref,
-    create_characterref,
-    create_itemref,
-    create_abilityref,
-    create_magicref,
+    create_ref_files,
     add_warbandref,
     add_characterref,
     add_itemref,
@@ -18,7 +14,7 @@ from source.methods_database import (
 
 
 if __name__ == "__main__":
-    create_warbandref()
+    create_ref_files()
     
     add_warbandref(
         race = "Human",
@@ -233,7 +229,6 @@ if __name__ == "__main__":
         warband = "Reikland",
     )
 
-    create_characterref()
     # Add Reikland characters
     add_characterref(
         race = "Human",
@@ -1153,6 +1148,7 @@ if __name__ == "__main__":
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 9, 0],
         abilitylist = [
             {"source": "Broheim", "category": "Character", "name": "High Elven Magician"},
+            {"source": "Core Rules", "category": "Character", "name": "Lesser Sorcerer"},
             {"source": "Core Rules", "category": "Character", "name": "Leader"},
             ],
         magiclist = [],
@@ -1243,6 +1239,7 @@ if __name__ == "__main__":
         skill = [5, 4, 4, 3, 3, 1, 6, 1, 9, 0],
         abilitylist = [
             {"source": "Broheim", "category": "Character", "name": "High Elven Magician"},
+            {"source": "Core Rules", "category": "Character", "name": "Lesser Sorcerer"},
             {"source": "Core Rules", "category": "Character", "name": "Leader"},
             ],
         magiclist = [],
@@ -1330,7 +1327,6 @@ if __name__ == "__main__":
         category = "Loremaster",
     )
 
-    create_itemref()
     # Melee items
     add_itemref(
         source = "Core Rules",
@@ -2194,9 +2190,6 @@ if __name__ == "__main__":
         subcategory = "Starting Dagger",
     )
 
-# (re-)creating an abilities-ref json file
-    create_abilityref()
-
     # Core rules Abilities
     add_abilityref(
         source = "Core Rules", 
@@ -2393,6 +2386,12 @@ if __name__ == "__main__":
         category = "Character",
         name = "Large Target",
         description = "This character is a Large Target as defined in the shooting rules.",
+    )
+    add_abilityref(
+        source = "Core Rules", 
+        category = "Character",
+        name = "Lesser Sorcerer",
+        description = "This character knows the art of magic to a lesser extent. See the Magic section for details.",
     )
     add_abilityref(
         source = "Broheim", 
@@ -2786,7 +2785,6 @@ if __name__ == "__main__":
         name = "Fey Quickness",
     )
 
-    create_magicref()
     # Add core rules magic
     add_magicref(
         source = "Core Rules", 

@@ -166,19 +166,20 @@ class WidgetCurrent(QRaisedFrame):
     def create_method_change_name(self, name):
         
         def change_name():
-            new_name = "changed name"
-        
-            self.mainwindow.currentunit.name = new_name
-            self.mainwindow.initUI()
+            new_name, okPressed = QInputDialog.getText(self, "Choose a name", "Name your unit:", text="default")
+            if okPressed and new_name:
+                self.mainwindow.currentunit.name = new_name
+                self.mainwindow.initUI()
         
         return change_name
 
     def create_method_change_experience(self, experience):
         
         def change_experience():
-            new_experience = 99
-        
-            self.mainwindow.currentunit.experience = new_experience
-            self.mainwindow.initUI()
+            change_experience, okPressed = QInputDialog.getInt(self, "Change Experience", "How much to increase or decrease the experience?", 0, -99, 99, 1)
+            if okPressed and change_experience:
+                new_experience = self.mainwindow.currentunit.experience + change_experience
+                self.mainwindow.currentunit.experience = new_experience
+                self.mainwindow.initUI()
         
         return change_experience

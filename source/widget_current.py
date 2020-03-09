@@ -71,16 +71,37 @@ from source.widget_abilitymagic import WidgetAbility, WidgetMagic
 
 
 class WidgetCurrent(QRaisedFrame):
-    def __init__(self, mainwindow):
+    def __init__(self, mainwindow, configfile = {}):
         super().__init__()
 
         self.mainwindow = mainwindow
 
+        self.configfile = {
+            'namebox': {'row': 0, 'column': 0, 'width': 1, 'height': 1, 'children': {
+                'namelabel': {'row': 0, 'column': 0, 'width': 1, 'height': 1, 'text': f"Name: <b>{self.mainwindow.currentunit.name}</b>", 'tooltip': "Name",},
+                'catlabel': {'row': 1, 'column': 0, 'width': 1, 'height': 1, 'text': f"Category: <b>{self.mainwindow.currentunit.category}</b>", 'tooltip': "Category",},
+                'pricelabel': {'row': 2, 'column': 0, 'width': 1, 'height': 1, 'text': f"Price: <b>{self.mainwindow.currentunit.price}</b>", 'tooltip': "Price",},
+                'maxlabel': {'row': 2, 'column': 1, 'width': 1, 'height': 1, 'text': f"Maximum: <b>{self.mainwindow.currentunit.maxcount}</b>", 'tooltip': "Maximum",},
+                'explabel': {'row': 0, 'column': 1, 'width': 1, 'height': 1, 'text': f"Experience: <b>{self.mainwindow.currentunit.experience}</b>", 'tooltip': f"Next Advance at experience: <b> 8 </b>",},
+                }
+            },
+            'skillbox': {'row': 1, 'column': 0, 'width': 1, 'height': 1,
+            },
+            'listbox': {'row': 2, 'column': 0, 'width': 4, 'height': 1,
+            },
+        }
+
         if self.mainwindow.currentunit.ishero != "":
             currentbox = QGridLayout()
-            currentbox.addWidget(self.set_namebox(), 0, 0, 1, 1)
-            currentbox.addWidget(self.set_skillbox(), 1, 0, 1, 1)
-            currentbox.addWidget(self.set_listbox(), row = 2, column = 0, rowSpan = 4, columnSpan = 1)
+
+            config = self.configfile['namebox']
+            currentbox.addWidget(self.set_namebox(), config['row'], config['column'], config['width'], config['height'])
+
+            config = self.configfile['skillbox']
+            currentbox.addWidget(self.set_skillbox(), config['row'], config['column'], config['width'], config['height'])
+
+            config = self.configfile['listbox']
+            currentbox.addWidget(self.set_listbox(), config['row'], config['column'], config['width'], config['height'])
 
             self.setToolTip("This is the currently selected unit")
             self.setLayout(currentbox)
@@ -91,26 +112,13 @@ class WidgetCurrent(QRaisedFrame):
         
         # Todo: create a table with the settings for these widgets and then use a for loop to generate the labels and put them in the box
         # after that, create a generic function that uses a conf file and loop over it generating gui. then we could replace the entire code here with just a call to this function.
-        namelabel = QLabel()
-        namelabel.setText(f"Name: <b>{self.mainwindow.currentunit.name}</b>")    
-        namebox.addWidget(namelabel, row = 0, column = 0)
-
-        catlabel = QLabel()
-        catlabel.setText(f"Category: <b>{self.mainwindow.currentunit.category}</b>")
-        namebox.addWidget(catlabel, row = 1, column = 0)
-
-        pricelabel = QLabel()
-        pricelabel.setText(f"Replacement Cost: <b>{self.mainwindow.currentunit.price}</b>")
-        namebox.addWidget(pricelabel, row = 2, column = 0)
-
-        maxlabel = QLabel()
-        maxlabel.setText(f"Max Units: <b>{self.mainwindow.currentunit.maxcount}</b>")
-        namebox.addWidget(maxlabel, row = 2, column = 1)
-
-        explabel = QLabel()
-        explabel.setText(f"Experience: <b>{self.mainwindow.currentunit.experience}</b>")
-        explabel.setToolTip(f"Next Advance at experience: <b> 8 </b>")
-        namebox.addWidget(explabel, 0, 1)
+        children = self.configfile['namebox']['children']
+        for child in children:
+            config = self.configfile['namebox']['children'][child]
+            label = QLabel()
+            label.setText(config['text'])
+            label.setToolTip(config['tooltip'])
+            namebox.addWidget(label, config['row'], config['column'], config['width'], config['height'])
 
         nameframe = QBorderlessFrame()
         nameframe.setLayout(namebox)

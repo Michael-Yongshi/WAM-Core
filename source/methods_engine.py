@@ -1,9 +1,9 @@
 import os
 
 from source.methods_json import (
-    save_file,
-    show_files,
-    load_file,
+    save_json,
+    show_json,
+    load_json,
 )
 
 def save_warband(datadict):
@@ -19,14 +19,14 @@ def save_warband(datadict):
     filename = datadict["name"]
 
     # run the json command to save the file as a json file
-    save_file(datadict, path, filename)
+    save_json(datadict, path, filename)
 
 def show_warbands():
     # Folderpath
     local_path = os.path.join("~", "Documents", "WAM")
     path = os.path.expanduser(local_path)
 
-    savelist = show_files(path)
+    savelist = show_json(path)
 
     return savelist
 
@@ -39,7 +39,7 @@ def load_warband(wbname):
     filename = wbname
 
     # run the load json command to open the respective json file
-    datadict = load_file(path, filename)
+    datadict = load_json(path, filename)
     
     # return the warband dictionary
     return datadict
@@ -49,7 +49,7 @@ def save_reference(datadict, filename):
     path = "database/references/"
 
     # run the json command to save the file as a json file
-    save_file(datadict, path, filename)
+    save_json(datadict, path, filename)
 
 def load_reference(reference):
     # set the paths to the applications database reference files
@@ -59,7 +59,7 @@ def load_reference(reference):
     filename = reference + "_ref"
 
     # load the file
-    datadict = load_file(path, filename)
+    datadict = load_json(path, filename)
 
     # return the reference dictionary
     return datadict

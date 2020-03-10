@@ -43,39 +43,42 @@ print("connected to card (in bytes): " + str(cardservice.connection.getATR()))
 print("connected to card (in hex): " + str(toHexString(cardservice.connection.getATR())))
 print("this is my card") if cardservice.connection.getATR() == mycardbytes else print("this is not my card")
 
-# Select determines what kind of card to be selected???
+# message determines what kind of card to be selected???
 # MF card?
-select = [
-    0x00, # CLS ?
-    0xA4, # INS ?
-    0x00, # P1 field?
-    0x00, # P2 field?
-    0x02, # Number of bytes to read
-    0x3F, # File id part 1
-    0x01, # file id part 2
-    ]
+# message = [
+#     0x00, # CLS ?
+#     0xA4, # INS ?
+#     0x00, # P1 field?
+#     0x00, # P2 field?
+#     0x02, # Number of bytes to read
+#     0x3F, # File id part 1
+#     0x01, # file id part 2
+#     ]
+
+reverse = int("FF82000006000000000000", 16)
+print(f"reverse {reverse}")
 
 # read data
-read = [
-    0x00,
-    0xB0,
-    0x00,
-    0x00,
-    0x05,
-]
-
-# write data
-write = [
-    0x00,
-    0xD0,
+message = [
+    0xFF,
+    0x82,
     0x00,
     0x00,
     0x05,
 ]
 
-# in order to log the details of the select variable we translate the bytes to hex so they become human readable
-selecthex = []
-for i in select:
+# # write data
+# message = [
+#     0x00,
+#     0xD0,
+#     0x00,
+#     0x00,
+#     0x05,
+# ]
+
+# in order to log the details of the message variable we translate the bytes to hex so they become human readable
+messagehex = []
+for i in message:
     hexstring = hex(i)
     hexstring12 = hexstring[0] + hexstring[1]
     if len(hexstring) == 3:
@@ -83,26 +86,31 @@ for i in select:
     else:
         hexstring34 = hexstring[2].upper() + hexstring[3].upper()
     hexstring = hexstring12 + hexstring34
-    selecthex += [hexstring]
+    messagehex += [hexstring]
 
-print(f"select hex: {selecthex}")
-print(f"select: {select}")
+print(f"message hex: {messagehex}")
+print(f"message: {message}")
 
 df_telecom = [0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
+
+# in order to log the details of the df_telecom variable we translate the bytes to hex so they become human readable
 df_telecomhex = []
 for i in df_telecom:
-    df_telecomhex += [hex(i)]
+    hexstring = hex(i)
+    hexstring12 = hexstring[0] + hexstring[1]
+    if len(hexstring) == 3:
+        hexstring34 = hexstring[2].upper() + "0"
+    else:
+        hexstring34 = hexstring[2].upper() + hexstring[3].upper()
+    hexstring = hexstring12 + hexstring34
+    df_telecomhex += [hexstring]
+
 print(f"df_telecom hex: {df_telecomhex}")
 print(f"df_telecom: {df_telecom}")
 
-apdu = select + df_telecom
+apdu = message + df_telecom
 print(f"sending {toHexString(apdu)}")
 
 # response, sw1, sw2 = cardservice.connection.transmit( apdu, CardConnection.T1_protocol )
 response, sw1, sw2 = cardservice.connection.transmit( apdu )
 print(f"response: {response} status words: {sw1} {sw2}")
-
-# SELECT = [0xA0, 0xA4, 0x00, 0x00, 0x02]
-# df_telecom = [0x7F, 0x10]
-# data, sw1, sw2 = cardservice.connection.transmit( SELECT + df_telecom )
-# print(sw1, sw2)

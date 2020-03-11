@@ -50,12 +50,14 @@ git config --global user.name ""
 ### Basic application requisites
 
 ```
-pip3 install --user venv        # (unused) virtual environment
-pip3 install --user flake8      # (unused) editor support
+pip3 install --user venv                # (unused) virtual environment
+pip3 install --user flake8              # (unused) editor support
 
-pip3 install --user requests    # (unused) default api library
+pip3 install --user requests            # (unused) default api library
 
-pip3 install --user pyinstaller # (dev) to create an installer
+pip3 install --user pyinstaller         # (dev) to create an installer for desktop OS like windows, ubuntu, ios
+pip3 install --user pymod               # (unused) to create a package for android
+pip3 install --user kivy                # (unused) to create a package for android, ios, mac, windows or linux
 ```
 
 ### GUI requisites
@@ -84,9 +86,7 @@ pip3 install --user flask-marschmallow  # (unused)
 
 ### NFC through pyscard
 Can only be used with version 3.6.8 of python (as of moment of writing). Thus we have to switch for this application to this python version in order to use this NFC library.
-Downloaded pyscard executable for windows from 
-
-https://sourceforge.net/projects/pyscard/
+Downloaded pyscard executable for windows from https://sourceforge.net/projects/pyscard/
 
 
 ### Authentication requisites

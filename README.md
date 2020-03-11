@@ -50,9 +50,10 @@ git config --global user.name ""
 ### Basic application requisites
 
 ```
-pip3 install --user requests    # (unused) default api library
-
+pip3 install --user venv        # (unused) virtual environment
 pip3 install --user flake8      # (unused) editor support
+
+pip3 install --user requests    # (unused) default api library
 
 pip3 install --user pyinstaller # (dev) to create an installer
 ```

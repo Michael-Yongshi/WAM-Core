@@ -49,15 +49,42 @@ git config --global user.name ""
 
 ### Basic application requisites
 
+Building a virtual environment
+https://realpython.com/python-virtual-environments-a-primer/
 ```
 pip3 install --user venv                # (unused) virtual environment
 pip3 install --user flake8              # (unused) editor support
+```
 
-pip3 install --user requests            # (unused) default api library
+### Building an executable file
 
+pyinstaller
+```
 pip3 install --user pyinstaller         # (dev) to create an installer for desktop OS like windows, ubuntu, ios
-pip3 install --user pymod               # (unused) to create a package for android
+```
+
+kivy
+https://realpython.com/mobile-app-kivy-python/
+```
 pip3 install --user kivy                # (unused) to create a package for android, ios, mac, windows or linux
+```
+
+pyqt deploy
+https://pypi.org/project/pyqtdeploy/
+```
+# Requires PyQt5 to be already installed
+pip3 install pyqtdeploy
+```
+
+pymod
+```
+pip3 install --user pymod               # (unused) to create a package for android
+```
+
+### API requisites
+
+```
+pip3 install --user requests            # (unused) default api library
 ```
 
 ### GUI requisites
@@ -87,7 +114,12 @@ pip3 install --user flask-marschmallow  # (unused)
 ### NFC through pyscard
 Can only be used with version 3.6.8 of python (as of moment of writing). Thus we have to switch for this application to this python version in order to use this NFC library.
 Downloaded pyscard executable for windows from https://sourceforge.net/projects/pyscard/
-
+tutorial: https://pyscard.sourceforge.io/user-guide.html
+other info:
+https://stackoverflow.com/questions/56423316/i-can-not-understand-my-symptoms-python-is-using-pyscard
+https://github.com/GPII/linux-rfid-user-listener/blob/master/scriptor.1p
+https://khanhicetea.com/post/reading-nfc-card-id-on-ubuntu/#Source-code
+https://stackoverflow.com/questions/34869625/how-to-read-or-write-smart-card
 
 ### Authentication requisites
 https://realpython.com/token-based-authentication-with-flask/

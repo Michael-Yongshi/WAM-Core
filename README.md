@@ -11,19 +11,19 @@ An application in order to create, update, view and save your warband details fo
 
 ## Getting Started
 
-To use the application see 'Installing'. The rest of these instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Installing
-
-Grab the zip folder from:
+To install a working application grab the zip folder from:
 
 <b>Windows 10 64 bit</b>: https://www.jottacloud.com/s/13030f55cae66fb428698777e670d3a052a. 
 
 <b>Ubuntu 18 64 bit</b>: https://www.jottacloud.com/s/130ab5742a54b87443a896a37062196affa.
 
-Unzip the folder and run the exe file within.
+Unzip the folder and run the exe / app file within.
 
-### Prerequisites (dev only)
+## Development
+
+The rest of these instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Python, IDE & Git
 
 ```
 install vscode
@@ -47,19 +47,54 @@ set git email with
 git config --global user.name ""
 ```
 
-Install some required packages for the application
+### Basic application requisites
+
+Building a virtual environment
+https://realpython.com/python-virtual-environments-a-primer/
+```
+pip3 install --user venv                # (unused) virtual environment
+pip3 install --user flake8              # (unused) editor support
+```
+
+### Building an executable file
+
+pyinstaller
+```
+pip3 install --user pyinstaller         # (dev) to create an installer for desktop OS like windows, ubuntu, ios
+```
+
+kivy
+https://realpython.com/mobile-app-kivy-python/
+```
+pip3 install --user kivy                # (unused) to create a package for android, ios, mac, windows or linux
+```
+
+pyqt deploy
+https://pypi.org/project/pyqtdeploy/
+```
+# Requires PyQt5 to be already installed
+pip3 install pyqtdeploy
+```
+
+pymod
+```
+pip3 install --user pymod               # (unused) to create a package for android
+```
+
+### API requisites
+
+```
+pip3 install --user requests            # (unused) default api library
+```
+
+### GUI requisites
+
 ```
 pip3 install --user pyqt5
 apt-get install python3 pyqt5   # (prod) if pip3 doesn't work
-
-pip3 install --user requests    # (unused) default api library
-
-pip3 install --user flake8      # (unused) editor support
-
-pip3 install --user pyinstaller # (dev) to create an installer
 ```
 
-Solidity specific stuff
+### Solidity requisites
 
 Visual 14 C++ needed for web3
 https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15
@@ -76,11 +111,18 @@ pip3 install --user flask-restful       # (unused)
 pip3 install --user flask-marschmallow  # (unused)
 ```
 
-NFC specific stuff
-```
-pip3 install -U nfcpy                   # (prod) library to interact with nfc devices
+### NFC through pyscard
+Can only be used with version 3.6.8 of python (as of moment of writing). Thus we have to switch for this application to this python version in order to use this NFC library.
+Downloaded pyscard executable for windows from https://sourceforge.net/projects/pyscard/
+tutorial: https://pyscard.sourceforge.io/user-guide.html
+other info:
+https://stackoverflow.com/questions/56423316/i-can-not-understand-my-symptoms-python-is-using-pyscard
+https://github.com/GPII/linux-rfid-user-listener/blob/master/scriptor.1p
+https://khanhicetea.com/post/reading-nfc-card-id-on-ubuntu/#Source-code
+https://stackoverflow.com/questions/34869625/how-to-read-or-write-smart-card
 
-```
+### Authentication requisites
+https://realpython.com/token-based-authentication-with-flask/
 
 
 ## Running the tests

@@ -3,5 +3,5 @@
     "python.linting.enabled": true,
     "git.postCommitCommand": "sync",
     "git.autofetch": true,
-    "python.pythonPath": "C:\\Program Files (x86)\\Python38-32\\python.exe"
+    "python.pythonPath": "C:\\Program Files\\Python36\\python.exe"
 }

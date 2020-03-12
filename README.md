@@ -98,17 +98,11 @@ apt-get install python3 pyqt5   # (prod) if pip3 doesn't work
 
 Visual 14 C++ needed for web3
 https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15
+select visual studio build tools 2017, only the first optional checkbox (windows 10 sdk for desktop c++)
 
+with pip
 ```
-pip3 install --user py-solc             # (unused) solidity compiler for python
-
-pip3 install --user pyethereum          # (unused) Ethereum Virtual Machine for python, to run your own node, but also some handy stuff like calculating address from private key
-
 pip3 install --user web3                # (prod) library for interacting with ethereum, setting up connections, i.e. to your wallet in metamask, transferring tokens and interacting with smart contracts
-
-pip3 install --user flask               # (unused)
-pip3 install --user flask-restful       # (unused)
-pip3 install --user flask-marschmallow  # (unused)
 ```
 
 ### NFC through pyscard

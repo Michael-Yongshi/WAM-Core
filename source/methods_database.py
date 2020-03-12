@@ -10,7 +10,7 @@ def create_ref_files():
     for name in namelist:
         
         # create filename
-        filename = name + "_ref"
+        filename = name
         
         # Create empty dictionary file
         datadict = {}

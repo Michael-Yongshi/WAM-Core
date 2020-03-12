@@ -1881,6 +1881,11 @@
                         {
                             "source": "Core Rules",
                             "category": "Character",
+                            "name": "Lesser Sorcerer"
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
                             "name": "Leader"
                         }
                     ],
@@ -2052,6 +2057,11 @@
                             "source": "Broheim",
                             "category": "Character",
                             "name": "High Elven Magician"
+                        },
+                        {
+                            "source": "Core Rules",
+                            "category": "Character",
+                            "name": "Lesser Sorcerer"
                         },
                         {
                             "source": "Core Rules",

@@ -42,7 +42,7 @@ from PyQt5.QtGui import (
     )
 
 from source.methods_json import (
-    open_json,
+    load_json,
     save_json,
     )
 
@@ -168,11 +168,11 @@ class TableWarband(QTableWidget):
     def __init__(self):
         super().__init__()
 
-        warbandsdict = open_json("database/references/warbands_ref.json")
-        # charactersdict = open_json("database/references/characters_ref.json")
-        # itemsdict = open_json("database/references/items_ref.json")
-        # abilitiesdict = open_json("database/references/abilities_ref.json")
-        # magicsdict = open_json("database/references/magic_ref.json")
+        warbandsdict = load_json("database/references/warbands_ref.json")
+        # charactersdict = load_json("database/references/characters_ref.json")
+        # itemsdict = load_json("database/references/items_ref.json")
+        # abilitiesdict = load_json("database/references/abilities_ref.json")
+        # magicsdict = load_json("database/references/magic_ref.json")
         
         # open tableview of all warbands   
         warbandlist = []

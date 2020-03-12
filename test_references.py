@@ -244,6 +244,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 20,
         price = 60,
         maxcount = 1,
@@ -261,6 +262,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 8,
         price = 35,
         maxcount = 2,
@@ -278,6 +280,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 15,
         maxcount = 2,
@@ -295,6 +298,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 25,
         maxcount = 0,
@@ -312,6 +316,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 25,
         maxcount = 7,
@@ -331,6 +336,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 35,
         maxcount = 5,
@@ -352,6 +358,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 20,
         price = 60,
         maxcount = 1,
@@ -369,6 +376,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 8,
         price = 35,
         maxcount = 2,
@@ -386,6 +394,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 15,
         maxcount = 2,
@@ -403,6 +412,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 25,
         maxcount = 0,
@@ -420,6 +430,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 25,
         maxcount = 7,
@@ -439,6 +450,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 35,
         maxcount = 5,
@@ -460,6 +472,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 20,
         price = 60,
         maxcount = 1,
@@ -477,6 +490,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 8,
         price = 35,
         maxcount = 2,
@@ -494,6 +508,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 15,
         maxcount = 2,
@@ -511,6 +526,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 25,
         maxcount = 0,
@@ -528,6 +544,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 25,
         maxcount = 7,
@@ -547,6 +564,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 35,
         maxcount = 5,
@@ -569,6 +587,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 20,
         price = 70,
         maxcount = 1,
@@ -588,6 +607,7 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         itemlist = [],
+        eventlist = [],
         experience = 8,
         price = 90,
         maxcount = 2,
@@ -608,6 +628,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 25,
         maxcount = 2,
@@ -627,6 +648,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 35,
         maxcount = 5,
@@ -644,6 +666,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 25,
         maxcount = 0,
@@ -661,6 +684,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 45,
         maxcount = 3,
@@ -683,6 +707,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 20,
         price = 60,
         maxcount = 1,
@@ -702,6 +727,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 12,
         price = 40,
         maxcount = 1,
@@ -721,6 +747,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 8,
         price = 25,
         maxcount = 3,
@@ -738,6 +765,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 20,
         maxcount = 0,
@@ -757,6 +785,7 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         itemlist = [],
+        eventlist = [],
         experience = 0,
         price = 40,
         maxcount = 5,
@@ -775,6 +804,7 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         itemlist = [],
+        eventlist = [],
         experience = 0,
         price = 0,
         maxcount = 5,
@@ -797,6 +827,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 20,
         price = 70,
         maxcount = 1,
@@ -814,6 +845,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 8,
         price = 35,
         maxcount = 3,
@@ -834,6 +866,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 25,
         maxcount = 1,
@@ -851,6 +884,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 15,
         maxcount = 10,
@@ -868,6 +902,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 25,
         maxcount = 0,
@@ -893,6 +928,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 20,
         price = 110,
         maxcount = 1,
@@ -912,6 +948,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 8,
         price = 35,
         maxcount = 1,
@@ -929,6 +966,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 20,
         maxcount = 3,
@@ -954,6 +992,7 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         itemlist = [],
+        eventlist = [],
         experience = 0,
         price = 15,
         maxcount = 0,
@@ -974,6 +1013,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 40,
         maxcount = 0,
@@ -1000,6 +1040,7 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         itemlist = [],
+        eventlist = [],
         experience = 0,
         price = 50,
         maxcount = 5,
@@ -1022,6 +1063,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 20,
         price = 60,
         maxcount = 1,
@@ -1041,6 +1083,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 8,
         price = 0,
         maxcount = 1,
@@ -1058,6 +1101,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 8,
         price = 40,
         maxcount = 2,
@@ -1075,6 +1119,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 20,
         maxcount = 2,
@@ -1092,6 +1137,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 20,
         maxcount = 0,
@@ -1111,6 +1157,7 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         itemlist = [],
+        eventlist = [],
         experience = 0,
         price = 15,
         maxcount = 0,
@@ -1132,6 +1179,7 @@ if __name__ == "__main__":
         ],
         magiclist = [],
         itemlist = [],
+        eventlist = [],
         experience = 0,
         price = 210,
         maxcount = 1,
@@ -1155,6 +1203,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 20,
         price = 80,
         maxcount = 1,
@@ -1172,6 +1221,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 8,
         price = 45,
         maxcount = 2,
@@ -1189,6 +1239,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 11,
         price = 50,
         maxcount = 2,
@@ -1206,6 +1257,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 35,
         maxcount = 0,
@@ -1223,6 +1275,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 30,
         maxcount = 5,
@@ -1246,6 +1299,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 20,
         price = 80,
         maxcount = 1,
@@ -1263,6 +1317,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 8,
         price = 45,
         maxcount = 2,
@@ -1280,6 +1335,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 11,
         price = 50,
         maxcount = 2,
@@ -1297,6 +1353,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 35,
         maxcount = 0,
@@ -1314,6 +1371,7 @@ if __name__ == "__main__":
         itemlist = [
             {"source": "Core Rules", "category": "Melee Weapon", "subcategory": "Starting Dagger"},
         ],
+        eventlist = [],
         experience = 0,
         price = 30,
         maxcount = 5,

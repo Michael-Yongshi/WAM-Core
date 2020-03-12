@@ -8,12 +8,16 @@ from source.methods_json import (
 
 def get_localpath():
     """set the paths to the users documents folder"""
+
     local_path = os.path.join("~", "Documents", "WAM")
     path = os.path.expanduser(local_path)
+
     print("get_localpath: local path - " + local_path)
 
 def save_warband(datadict):
     """Save warband to a save file"""
+
+    # Folderpath
     path = get_localpath()
     print("save_warband: path - " + path)
 
@@ -24,13 +28,19 @@ def save_warband(datadict):
     save_file(datadict, path, filename)
 
 def show_warbands():
+    """Show all the warband save files"""
+
     # Folderpath
     path = get_localpath()
+
     savelist = show_files(path)
 
     return savelist
 
 def load_warband(wbname):
+    """Load a specific warband save file"""
+
+    # Folderpath
     path = get_localpath()
 
     # set the filename to the warbands name
@@ -43,6 +53,8 @@ def load_warband(wbname):
     return datadict
 
 def save_reference(datadict, filename):
+    """Save reference data to the fixed location within the application directory"""
+
     # set the paths to the applications database reference files
     path = "database/references/"
 
@@ -50,6 +62,8 @@ def save_reference(datadict, filename):
     save_file(datadict, path, filename)
 
 def load_reference(reference):
+    """Load reference data from the fixed location within the application directory"""
+
     # set the paths to the applications database reference files
     path = "database/references/"
 

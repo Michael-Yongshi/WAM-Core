@@ -211,7 +211,7 @@ class WidgetItemsUnit(QBorderlessFrame):
                                 if i is item:
                                     if process_gold == QMessageBox.Yes:
                                         itemprice += item.price
-                                    index = hero.itemlist.index(item)
+                                    index = hero.itemlist.index(i)
                                     hero.itemlist.pop(index)
                                     break
 
@@ -220,10 +220,10 @@ class WidgetItemsUnit(QBorderlessFrame):
                         if unit is squad.henchmanlist[0]:
                             for henchman in squad.henchmanlist:
                                 for i in henchman.itemlist:
-                                    if i is item:
+                                    if i.subcategory == item.subcategory:
                                         if process_gold == QMessageBox.Yes:
                                             itemprice += item.price
-                                        index = henchman.itemlist.index(item)
+                                        index = henchman.itemlist.index(i)
                                         henchman.itemlist.pop(index)
                                         break
 

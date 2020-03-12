@@ -68,7 +68,7 @@ def get_warbandref(race, source, warband):
     else:
         print(f"Race {race} does not exist")
 
-def add_characterref(race, source, warband, category, ishero, skill, abilitylist, magiclist, itemlist, experience, price, maxcount, description):
+def add_characterref(race, source, warband, category, ishero, skill, abilitylist, magiclist, itemlist, eventlist, experience, price, maxcount, description):
     
     filename = "characters"
     # open ref json
@@ -116,6 +116,7 @@ def add_characterref(race, source, warband, category, ishero, skill, abilitylist
         'abilitylist': abilitylist,
         'magiclist': magiclist,
         'itemlist': itemlist,
+        'eventlist': eventlist,
         'experience': experience,
         'price': price,
         'maxcount': maxcount,

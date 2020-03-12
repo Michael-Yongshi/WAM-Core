@@ -133,8 +133,24 @@ class WidgetCurrent(QRaisedFrame):
         skilldict = self.mainwindow.currentunit.get_total_skilldict()
         for key in skilldict:
             label = QLabel()
-            label.setText(f"<b>{key[:2]}<br/>{skilldict[key]}</b>")
-            label.setToolTip(f"The total <b>{key}</b> skill, <br/>including both base model scores and item influences.")
+            label.setText(f"<b>{key[:2]}<br/>{skilldict[key]['total']}</b>")
+            
+            # build tooltip - base
+            tooltip = f"The total <b>{key}</b> skill of this character<br/><br/>The base {key} of this character is: {skilldict[key]['children']['base']}<br/>"
+            # add events
+            tooltip += "<br/>The change due to events is: <br/>"
+            for key2 in skilldict[key]['children']:
+                if key2 == 'event':
+                    tooltip += f" - {key2}: {skilldict[key]['children'][key2]}<br/"
+            # add items
+            tooltip += "<br/>The change due to items is: <br/>"
+            for key2 in skilldict[key]['children']:
+                if key2[:4] == 'item':
+                    tooltip += f" - {key2[6:]}: {skilldict[key]['children'][key2]}<br/>"
+                    print(tooltip)
+
+            label.setToolTip(tooltip)
+
             label.setAlignment(Qt.AlignCenter)
             box = QVBoxLayout()
             box.addWidget(label)

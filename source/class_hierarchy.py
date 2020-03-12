@@ -278,7 +278,7 @@ class Squad(object):
 
      
 class Character(object):
-    def __init__(self, name, race, source, warband, category, ishero, skill, abilitylist=[], magiclist=[], itemlist=[], experience=0, price=0, maxcount=0, description=None):
+    def __init__(self, name, race, source, warband, category, ishero, skill, abilitylist=[], magiclist=[], itemlist=[], eventlist=[], experience=0, price=0, maxcount=0, description=None):
         self.name = name
         self.race = race
         self.source = source
@@ -289,6 +289,7 @@ class Character(object):
         self.abilitylist = abilitylist
         self.magiclist = magiclist
         self.itemlist = itemlist
+        self.eventlist = eventlist
         self.experience = experience
         self.price = price
         self.maxcount = maxcount
@@ -309,6 +310,10 @@ class Character(object):
         for item in self.itemlist:
             itemlist += [item.to_dict()]
         
+        eventlist = []
+        for event in self.eventlist:
+            eventlist += [event.to_dict()]
+
         data = {
             # 'key': str(self),
             'name': self.name,
@@ -321,6 +326,7 @@ class Character(object):
             'abilitylist': abilitylist,
             'magiclist': magiclist,
             'itemlist': itemlist,
+            'eventlist': eventlist,
             'experience': self.experience,
             'price': self.price,
             'maxcount': self.maxcount,
@@ -361,7 +367,15 @@ class Character(object):
                     )
                 itemlist += [itemref]
 
-            # events = ""
+            
+            eventlist = []
+            for eventdict in datadict["eventlist"]:
+                eventref = Event.create_event(
+                    source = eventdict["source"], 
+                    category = eventdict["category"], 
+                    subcategory = eventdict["subcategory"], 
+                    )
+                eventlist += [eventref]
 
         else:
             name = datadict["name"]
@@ -378,7 +392,9 @@ class Character(object):
             for itemdict in datadict["itemlist"]:
                 itemlist += [Item.from_dict(itemdict)]
 
-            # events = datadict["events"]
+            eventlist = []
+            for eventdict in datadict["eventlist"]:
+                eventlist += [Event.from_dict(eventdict)]
 
         skilldict = datadict["skill"]
         skill = Skill.from_dict(skilldict)
@@ -394,6 +410,7 @@ class Character(object):
             abilitylist = abilitylist,
             magiclist = magiclist,
             itemlist = itemlist,
+            eventlist = eventlist,
             experience = datadict["experience"],
             price = datadict["price"],
             maxcount = datadict["maxcount"],
@@ -435,15 +452,36 @@ class Character(object):
 
     def get_total_skilldict(self):
 
-        baseskill = self.skill.to_list()
-        totalskills = baseskill
+        skilldict = {
+            'movement': {'total': self.skill.movement, 'children': {'base': self.skill.movement}},
+            'weapon': {'total': self.skill.weapon, 'children': {'base': self.skill.weapon}},
+            'ballistic': {'total': self.skill.ballistic, 'children': {'base': self.skill.ballistic}},
+            'strength': {'total': self.skill.strength, 'children': {'base': self.skill.strength}},
+            'toughness': {'total': self.skill.toughness, 'children': {'base': self.skill.toughness}},
+            'wounds': {'total': self.skill.wounds, 'children': {'base': self.skill.wounds}},
+            'initiative': {'total': self.skill.initiative, 'children': {'base': self.skill.initiative}},
+            'actions': {'total': self.skill.actions, 'children': {'base': self.skill.actions}},
+            'leadership': {'total': self.skill.leadership, 'children': {'base': self.skill.leadership}},
+            'armoursave': {'total': self.skill.armoursave, 'children': {'base': self.skill.armoursave}},
+        }
+
+        # for event in self.eventlist:
+        #     eventskills = event.skill.to_dict()
+        #     for key in eventskills:
+        #         if eventskills[key] != 0:
+        #             eventskilldict = {f"event: {event.name}": eventskills[key]}
+        #             skilldict[key]['children'].update(eventskilldict)
+        #             skilldict[key]['total'] += eventskills[key]
 
         for item in self.itemlist:
-            totalskills = [sum(pair) for pair in zip(totalskills, item.skill.to_list())]
-            
-        skillobject = Skill.from_list(totalskills)
-        skilldict = skillobject.to_dict()
-            
+            itemskills = item.skill.to_dict()
+            for key in itemskills:
+                if itemskills[key] != 0:
+                    itemskilldict = {f"item: {item.subcategory}": itemskills[key]}
+                    skilldict[key]['children'].update(itemskilldict)
+                    skilldict[key]['total'] += itemskills[key]
+                    print(skilldict[key])
+
         return skilldict
 
     def get_total_abilitylist(self):

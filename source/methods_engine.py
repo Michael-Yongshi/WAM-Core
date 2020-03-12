@@ -10,16 +10,18 @@ def get_localpath():
     """set the paths to the users documents folder"""
 
     local_path = os.path.join("~", "Documents", "WAM")
-    path = os.path.expanduser(local_path)
-
     print("get_localpath: local path - " + local_path)
+
+    path = os.path.expanduser(local_path)
+    print("get_localpath: path - " + path)
+
+    return path
 
 def save_warband(datadict):
     """Save warband to a save file"""
 
     # Folderpath
     path = get_localpath()
-    print("save_warband: path - " + path)
 
     # set the filename to the warbands name
     filename = datadict["name"]
@@ -33,8 +35,10 @@ def show_warbands():
     # Folderpath
     path = get_localpath()
 
+    # get all the save files
     savelist = show_json(path)
 
+    # return list of save files
     return savelist
 
 def load_warband(wbname):
@@ -46,7 +50,7 @@ def load_warband(wbname):
     # set the filename to the warbands name
     filename = wbname
 
-    # run the load json command to open the respective json file
+    # open the respective save file
     datadict = load_json(path, filename)
     
     # return the warband dictionary

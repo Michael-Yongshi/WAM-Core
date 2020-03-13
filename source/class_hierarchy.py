@@ -38,8 +38,10 @@ class Warband(object):
     def to_dict(self):
         """ Create a dictionary string of a Warband object, including all nested objects, that can be saved to a JSON file for storage."""
 
+        # recursively set some nested objects to a dictionary
         treasury = self.treasury.to_dict()
 
+        # recursively set a list of objects to a list of dictionaries
         rulelist = []
         for rule in self.rulelist:
             rulelist += [rule.to_dict()] 
@@ -56,7 +58,8 @@ class Warband(object):
         for squad in self.squadlist:
             squadlist += [squad.to_dict()]
 
-        data = {
+        # set the object values to a dictionary
+        datadict = {
             # 'key': str(self),
             'name': self.name,
             'race': self.race,
@@ -70,55 +73,37 @@ class Warband(object):
             'squadlist': squadlist,
         }
 
-        return data
+        return datadict
     
     @staticmethod
-    def from_dict(datadict, create = False):
+    def from_dict(datadict):
         """ Create an object, and all nested objects, out of a warband dictionary in order to enable updates to that data."""
         
-        if create == True:
-            name = ""
-            # events = ""
-            treasury=Treasury(
-                gold = datadict["start_gold"],
-            )
+        # recursively set a dictionary to some nested objects
+        treasury = Treasury.from_dict(datadict["treasury"])
 
-            herolist = []
+        # find the reference dictionaries of a set of values to a list of python objects
+        # events = datadict["events"]
+        
+        herolist = []
+        for herodict in datadict["herolist"]:
+            herolist += [Character.from_dict(herodict)]
 
-            squadlist = []
+        squadlist = []
+        for squaddict in datadict["squadlist"]:
+            squadlist += [Squad.from_dict(squaddict)]
 
-            itemlist = []
-            for itemdict in datadict["itemlist"]:
-                itemref = Item.create_item(
-                    source = itemdict["source"], 
-                    category = itemdict["category"], 
-                    subcategory = itemdict["subcategory"], 
-                    )
-                itemlist += [itemref]
-
-        else:
-            name = datadict["name"]
-            # events = datadict["events"]
-            treasury = Treasury.from_dict(datadict["treasury"])
-
-            herolist = []
-            for herodict in datadict["herolist"]:
-                herolist += [Character.from_dict(herodict)]
-
-            squadlist = []
-            for squaddict in datadict["squadlist"]:
-                squadlist += [Squad.from_dict(squaddict)]
-
-            itemlist = []
-            for itemdict in datadict["itemlist"]:
-                itemlist += [Item.from_dict(itemdict)]
+        itemlist = []
+        for itemdict in datadict["itemlist"]:
+            itemlist += [Item.from_dict(itemdict)]
 
         rulelist = []
         for ruledict in datadict["rulelist"]:
             rulelist += [Rule.from_dict(ruledict)]
 
-        data = Warband(
-            name = name,
+        # set the dictionary values to a python object
+        dataobject = Warband(
+            name = datadict["name"],
             race = datadict["race"],
             source = datadict["source"],
             warband = datadict["warband"],
@@ -130,23 +115,65 @@ class Warband(object):
             squadlist = squadlist,
             )
         
-        return data
+        return dataobject
+
+    @staticmethod
+    def from_refdict(datadict):
+        """ Create an object, and all nested objects, out of a warband dictionary in order to enable updates to that data."""
+        
+        # recursively set a dictionary to some nested objects
+        treasury=Treasury(
+            gold = datadict["start_gold"],
+        )
+
+        # find the reference dictionaries of a set of values to a list of python objects
+        # events = ""
+
+        itemlist = []
+        for itemdict in datadict["itemlist"]:
+            itemref = Item.create_item(
+                source = itemdict["source"], 
+                category = itemdict["category"], 
+                subcategory = itemdict["subcategory"], 
+                )
+            itemlist += [itemref]
+
+        rulelist = []
+        for ruledict in datadict["rulelist"]:
+            rulelist += [Rule.from_dict(ruledict)]
+
+        # set the dictionary values to a python object
+        dataobject = Warband(
+            name = "",
+            race = datadict["race"],
+            source = datadict["source"],
+            warband = datadict["warband"],
+            description = datadict["description"],
+            treasury = treasury,
+            rulelist = rulelist,
+            itemlist = itemlist,
+            herolist = [],
+            squadlist = [],
+            )
+        
+        return dataobject
 
     @staticmethod
     def create_warband(name, race, source, warband):
         """Create a new warband based on the given parameters"""
         
         # open reference data json file
-        data = load_reference("warbands")
-        datadict = data[race][source][warband]
+        datadict = load_reference("warbands")
+        wbdict = datadict[race][source][warband]
 
-        new_warband = Warband.from_dict(datadict = datadict, create = True)
-        new_warband.name = name
+        dataobject = Warband.from_refdict(datadict = wbdict)
+        dataobject.name = name
 
-        return new_warband
+        return dataobject
 
     @staticmethod
     def create_template():
+
         template_wb = Warband(
             name="",
             race="", 
@@ -191,36 +218,41 @@ class Squad(object):
         self.henchmanlist = henchmanlist
 
     def to_dict(self):  
+
+        # recursively set a list of objects to a list of dictionaries
         henchmanlist=[] 
         for henchman in self.henchmanlist:
             henchmanlist += [henchman.to_dict()]
         
-        data = {
-            # 'key': str(self),
+        # set the object values to a dictionary
+        datadict = {
             'name': self.name,
             'henchmanlist': henchmanlist
         }
         
-        return data
+        return datadict
 
     @staticmethod
     def from_dict(datadict):
+
+        # find the reference dictionaries of a set of values to a list of python objects
         henchmanlist = []
         for henchman in datadict["henchmanlist"]:
             henchmanlist += [Character.from_dict(henchman)]
 
-        squad = Squad(
+        # set the dictionary values to a python object
+        dataobject = Squad(
             name = datadict["name"],
             henchmanlist = henchmanlist,
             )
 
-        return squad
+        return dataobject
 
     @staticmethod
     def create_squad(race, source, warband, category, name, number=1):
         """Create a new squad with the given parameters and creates the amount of henchman determined by the number parameter"""
         
-        new_squad = Squad(
+        dataobject = Squad(
             name = name,
             henchmanlist = []
             )
@@ -233,9 +265,9 @@ class Squad(object):
                 warband = warband,
                 category = category,  
                 )
-            new_squad.henchmanlist.append(newhenchman)
+            dataobject.henchmanlist.append(newhenchman)
                 
-        return new_squad
+        return dataobject
 
     def change_henchman_count(self, deltasize):
         if deltasize > 0:
@@ -296,8 +328,11 @@ class Character(object):
         self.description = description
     
     def to_dict(self):  
+
+        # recursively set some nested objects to a dictionary
         skill = self.skill.to_dict()
-    
+
+        # recursively set a list of objects to a list of dictionaries
         abilitylist = []
         for ability in self.abilitylist:
             abilitylist += [ability.to_dict()]
@@ -314,8 +349,8 @@ class Character(object):
         for event in self.eventlist:
             eventlist += [event.to_dict()]
 
-        data = {
-            # 'key': str(self),
+        # set the object values to a dictionary
+        datadict = {
             'name': self.name,
             'race': self.race,
             'source': self.source,
@@ -332,75 +367,34 @@ class Character(object):
             'maxcount': self.maxcount,
             'description': self.description
         }
-        return data
+        return datadict
 
     @staticmethod
-    def from_dict(datadict, create = False):
-        
-        if create == True:
-            name = ""
-        
-            abilitylist = []
-            for abilitydict in datadict["abilitylist"]:
-                abilityref = get_abilityref(
-                    source = abilitydict["source"], 
-                    category = abilitydict["category"], 
-                    name = abilitydict["name"], 
-                )
-                abilitylist += [Ability.from_dict(abilityref)]
+    def from_dict(datadict):
 
-            magiclist = []
-            for magicdict in datadict["magiclist"]:
-                magicref = get_magicref(
-                    source = magicdict["source"], 
-                    category = magicdict["category"], 
-                    name = magicdict["name"], 
-                )
-                magiclist += [Magic.from_dict(magicref)]
-            
-            itemlist = []
-            for itemdict in datadict["itemlist"]:
-                itemref = Item.create_item(
-                    source = itemdict["source"], 
-                    category = itemdict["category"], 
-                    subcategory = itemdict["subcategory"], 
-                    )
-                itemlist += [itemref]
+        # recursively set a dictionary to some nested objects
+        skill = Skill.from_dict(datadict["skill"])
 
-            
-            eventlist = []
-            for eventdict in datadict["eventlist"]:
-                eventref = Event.create_event(
-                    source = eventdict["source"], 
-                    category = eventdict["category"], 
-                    subcategory = eventdict["subcategory"], 
-                    )
-                eventlist += [eventref]
+        # find the reference dictionaries of a set of values to a list of python objects
+        abilitylist = []
+        for abilitydict in datadict["abilitylist"]:
+            abilitylist += [Ability.from_dict(abilitydict)]
 
-        else:
-            name = datadict["name"]
+        magiclist = []
+        for magicdict in datadict["magiclist"]:
+            magiclist += [Magic.from_dict(magicdict)]
 
-            abilitylist = []
-            for abilitydict in datadict["abilitylist"]:
-                abilitylist += [Ability.from_dict(abilitydict)]
+        itemlist = []
+        for itemdict in datadict["itemlist"]:
+            itemlist += [Item.from_dict(itemdict)]
 
-            magiclist = []
-            for magicdict in datadict["magiclist"]:
-                magiclist += [Magic.from_dict(magicdict)]
+        eventlist = []
+        for eventdict in datadict["eventlist"]:
+            eventlist += [Event.from_dict(eventdict)]
 
-            itemlist = []
-            for itemdict in datadict["itemlist"]:
-                itemlist += [Item.from_dict(itemdict)]
-
-            eventlist = []
-            for eventdict in datadict["eventlist"]:
-                eventlist += [Event.from_dict(eventdict)]
-
-        skilldict = datadict["skill"]
-        skill = Skill.from_dict(skilldict)
-
-        data = Character(
-            name = name,
+        # set the dictionary values to a python object
+        dataobject = Character(
+            name = datadict["name"],
             race = datadict["race"],
             source = datadict["source"],
             warband = datadict["warband"],
@@ -417,22 +411,86 @@ class Character(object):
             description = datadict["description"]        
             )
         
-        return data
+        return dataobject
     
+    @staticmethod
+    def from_refdict(datadict):
+        
+        # recursively set a dictionary to some nested objects
+        skill = Skill.from_dict(datadict["skill"])
+
+        # find the reference dictionaries of a set of values to a list of python objects
+        abilitylist = []
+        for abilitydict in datadict["abilitylist"]:
+            abilityref = get_abilityref(
+                source = abilitydict["source"], 
+                category = abilitydict["category"], 
+                name = abilitydict["name"], 
+            )
+            abilitylist += [Ability.from_dict(abilityref)]
+
+        magiclist = []
+        for magicdict in datadict["magiclist"]:
+            magicref = get_magicref(
+                source = magicdict["source"], 
+                category = magicdict["category"], 
+                name = magicdict["name"], 
+            )
+            magiclist += [Magic.from_dict(magicref)]
+        
+        itemlist = []
+        for itemdict in datadict["itemlist"]:
+            itemref = Item.create_item(
+                source = itemdict["source"], 
+                category = itemdict["category"], 
+                subcategory = itemdict["subcategory"], 
+                )
+            itemlist += [itemref]
+
+        eventlist = []
+        for eventdict in datadict["eventlist"]:
+            eventref = Event.create_event(
+                source = eventdict["source"], 
+                category = eventdict["category"], 
+                subcategory = eventdict["subcategory"], 
+                )
+            eventlist += [eventref]
+
+        # set the dictionary values to a python object
+        dataobject = Character(
+            name = "",
+            race = datadict["race"],
+            source = datadict["source"],
+            warband = datadict["warband"],
+            category = datadict["category"],
+            ishero = datadict["ishero"],
+            skill = skill,
+            abilitylist = abilitylist,
+            magiclist = magiclist,
+            itemlist = itemlist,
+            eventlist = eventlist,
+            experience = datadict["experience"],
+            price = datadict["price"],
+            maxcount = datadict["maxcount"],
+            description = datadict["description"]        
+            )
+        
+        return dataobject
+
     @staticmethod
     def create_character(name, race, source, warband, category):
         # open reference data json file
-        data = load_reference("characters")
-        datadict = data[race][source][warband][category]
+        datadict = load_reference("characters")
+        chardict = datadict[race][source][warband][category]
 
-        new_character = Character.from_dict(datadict = datadict, create = True)
-        new_character.name = name
+        dataobject = Character.from_refdict(datadict = chardict)
+        dataobject.name = name
 
-        return new_character
+        return dataobject
 
     @staticmethod
     def create_template():
-        template_char = Character(
+        dataobject = Character(
             name="",
             race="", 
             source="", 
@@ -441,7 +499,7 @@ class Character(object):
             category="", 
             ishero="",
         )
-        return template_char
+        return dataobject
 
     def get_price(self):
         charprice = self.price
@@ -522,22 +580,22 @@ class Hero(Character):
     @staticmethod
     def create_character(name, race, source, warband, category):
         # open reference data json file
-        data = load_reference("characters")
+        datadict = load_reference("characters")
 
-        if data[race][source][warband][category]["ishero"] == False:
+        if datadict[race][source][warband][category]["ishero"] == False:
             print("Henchmen can't be added outside a squad")
         else:
-            newhero = Character.create_character(name, race, source, warband, category)
-            return newhero
+            dataobject = Character.create_character(name, race, source, warband, category)
+            return dataobject
 
 class Henchman(Character):
     @staticmethod
     def create_character(name, race, source, warband, category):
         # open reference data json file
-        data = load_reference("characters")
+        datadict = load_reference("characters")
 
-        if data[race][source][warband][category]["ishero"] == True:
+        if datadict[race][source][warband][category]["ishero"] == True:
             print("Heroes can't be added to a squad")
         else:
-            newhenchman = Character.create_character(name, race, source, warband, category)
-            return newhenchman
+            dataobject = Character.create_character(name, race, source, warband, category)
+            return dataobject

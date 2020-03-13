@@ -19,6 +19,7 @@ from source.class_components import (
     Skill,
     Ability,
     Magic,
+    Event,
     )
 
 def test_ReiklandWarband():
@@ -236,12 +237,26 @@ def test_ReiklandWarband():
     wbid.squadlist.append(newsquad4)
     print("squad assigning succesful")
 
+    # adding events to the first hero
+    newevent = Event.create_event(
+        datetime="01-01-2020 17:25:44", 
+        category="Level2", 
+        description="Character went up from level 1 to level 2 and got an increase in movement by 1 as a result", 
+        skill=Skill(1,0,0,0,0,0,0,0,0,0,)
+        )
+    
+    firsthero = wbid.herolist[0]
+    firsthero.eventlist.append(newevent)
+    # print(firsthero.get_total_skilldict())
+    print(firsthero.eventlist[0].to_dict())
+
     save_warband(wbid.to_dict())
+    
     print("Update completed")
 
     wbdict = load_warband(wbid.name)
     # print(wbdict)
-    
+
 def test_WitchWarband():
     print("---Start Test Witch Hunters")
 

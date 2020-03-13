@@ -16,6 +16,7 @@ from source.methods_database import(
 # Items
 # Skills
 # Abilities
+# Events
 
 
 class Rule(object):
@@ -397,19 +398,24 @@ class Magic(object):
 
 class Event(object):
     """Default object to assign events as a basis for warband, character and item events"""
-    def __init__(self, uniquehash, datetime, category, description):
+    def __init__(self, uniquehash, datetime, category, skill, description):
         self.uniquehash = uniquehash
         self.datetime = datetime
         self.category = category
+        self.skill = skill
         self.description = description
 
     def to_dict(self):  
+
+        # recursively set some nested objects to a dictionary
+        skill = self.skill.to_dict()
 
         # set the object values to a dictionary
         datadict = {
             'uniquehash': self.uniquehash,
             'datetime': self.datetime,
             'category': self.category,
+            'skill': skill,
             'description': self.description,
         }
 
@@ -418,24 +424,29 @@ class Event(object):
     @staticmethod
     def from_dict(datadict):
         
+        # recursively set some nested dictionaries to a python object
+        skill = Skill.from_dict(datadict["skill"])
+
         # set the dictionary values to a python object
         dataobject = Event(
             uniquehash = datadict["uniquehash"],
             datetime = datadict["datetime"],
             category = datadict["category"],
+            skill = skill,
             description = datadict["description"],
             )
 
         return dataobject
 
     @staticmethod
-    def create_event(datetime, category, description):
+    def create_event(datetime, category, skill, description):
 
         # create object based on the given parameters
         dataobject = Event(
             uniquehash = hash(str(datetime) + str(category) + str(description)),
             datetime = datetime,
             category = category,
+            skill = skill,
             description = description,
             )
 

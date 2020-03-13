@@ -19,6 +19,7 @@ from source.class_components import (
     Skill,
     Ability,
     Magic,
+    Event,
     )
 
 
@@ -448,13 +449,6 @@ class Character(object):
             itemlist += [itemref]
 
         eventlist = []
-        for eventdict in datadict["eventlist"]:
-            eventref = Event.create_event(
-                source = eventdict["source"], 
-                category = eventdict["category"], 
-                subcategory = eventdict["subcategory"], 
-                )
-            eventlist += [eventref]
 
         # set the dictionary values to a python object
         dataobject = Character(
@@ -523,14 +517,15 @@ class Character(object):
             'armoursave': {'total': self.skill.armoursave, 'children': {'base': self.skill.armoursave}},
         }
 
-        # for event in self.eventlist:
-        #     eventskills = event.skill.to_dict()
-        #     for key in eventskills:
-        #         if eventskills[key] != 0:
-        #             eventskilldict = {f"event: {event.name}": eventskills[key]}
-        #             skilldict[key]['children'].update(eventskilldict)
-        #             skilldict[key]['total'] += eventskills[key]
-
+        for event in self.eventlist:
+            eventskills = event.skill.to_dict()
+            for key in eventskills:
+                if eventskills[key] != 0:
+                    eventskilldict = {f"event: {event.datetime} - {event.category}": eventskills[key]}
+                    skilldict[key]['children'].update(eventskilldict)
+                    skilldict[key]['total'] += eventskills[key]
+                    print(skilldict[key])
+                    
         for item in self.itemlist:
             itemskills = item.skill.to_dict()
             for key in itemskills:

@@ -12,6 +12,10 @@ from source.methods_database import (
     get_magicref,
 )
 
+from source.methods_engine import (
+    save_reference,
+    load_reference,
+)
 
 if __name__ == "__main__":
     create_ref_files()
@@ -3298,9 +3302,45 @@ if __name__ == "__main__":
         name= "The Anger of the Earth"
     )
 
+    # save hero experience table
 
-# with open('database/references/abilities_ref.json', 'w') as outfile:
-#     json.dump(data, outfile, indent=4)
+    expdict = {
+        "Hero": {
+            "Advance 0": 0,
+            "Advance 1": 2,
+            "Advance 2": 4,
+            "Advance 3": 6,
+            "Advance 4": 8,
+            "Advance 5": 11,
+            "Advance 6": 14,
+            "Advance 7": 17,
+            "Advance 8": 20,
+            "Advance 9": 24,
+            "Advance 10": 28,
+            "Advance 11": 32,
+            "Advance 12": 36,
+            "Advance 13": 41,
+            "Advance 14": 46,
+            "Advance 15": 51,
+            "Advance 16": 57,
+            "Advance 17": 63,
+            "Advance 18": 69,
+            "Advance 19": 76,
+            "Advance 20": 83,
+            "Advance 21": 90,
+        },
+        "Squad": {
+            "Advance 0": 0,
+            "Advance 1": 2,
+            "Advance 2": 5,
+            "Advance 3": 9,
+            "Advance 4": 14,
+        }
+    }
+    save_reference(expdict, "experience_table")
+    datadict = load_reference("experience_table")
+    print(datadict)
+
 
 # Special skills The Sisters of Sigmar may use the following skill list instead of the standard skill lists. Sisters of Sigmar
 # Sign of Sigmar The Sister is favoured by the great god Sigmar. Possessed or Undead opponents lose their first attack against the Priestess in the first round of hand-to-hand combat (down to a minimum of 1). Protection of Sigmar The Sister has been blessed by the High Matriarch. Any spell which would affect her is nullified on a D6 roll of 4+. Note that if the spell is nullified it will not affect any other models either. Utter Determination Only the Matriarch may have this skill, which allows her to re-roll any failed Rout tests.

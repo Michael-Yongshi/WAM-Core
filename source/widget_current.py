@@ -194,8 +194,7 @@ class WidgetCurrent(QRaisedFrame):
         def change_experience():
             change_experience, okPressed = QInputDialog.getInt(self, "Change Experience", "How much to increase or decrease the experience?", 0, -99, 99, 1)
             if okPressed and change_experience:
-                new_experience = self.mainwindow.currentunit.experience + change_experience
-                self.mainwindow.currentunit.experience = new_experience
+                self.mainwindow.currentunit.add_experience(change_experience)
                 self.mainwindow.initUI()
         
         return change_experience

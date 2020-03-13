@@ -1,4 +1,5 @@
 import copy
+import datetime
 
 from source.methods_engine import (
     load_reference,
@@ -494,6 +495,50 @@ class Character(object):
             ishero="",
         )
         return dataobject
+
+    def add_experience(self, change_experience):
+        # check for new level up events. check what advance is reached with new experience, compare it to the advance of current experience. add then all the advances in between. Technically (i.e. going from 0 to 4 experience) one can
+        # immediately jump 2 advancements. in that case new advance 2 minus current advance 0 means you plus the current advance and add an event until advance 2 is reached, so advance 0 + 1, still lower, advance 0 + 2, is equal now, so stop hereafter
+
+        current_experience = self.experience
+        self.experience += change_experience
+
+        # get current advance
+        advance = 0
+        currentadvance = 0
+        for event in self.eventlist:
+            if event.category[:-1] == "Advance ":
+                advance = int(event.category[-1:])
+                if advance > currentadvance:
+                    currentadvance = advance
+        print(f"current advance = {currentadvance}")
+        
+        # load exp database
+        datadict = load_reference("experience_table")
+        if self.ishero == True:
+            expdict = datadict["Hero"]
+        else:
+            expdict = datadict["Squad"]
+
+        newadvance = 0
+        for key in expdict:
+            if self.experience >= expdict[key]:
+                newadvance = int(key[-1:])
+        print(f"based on {self.experience} experience, the new advance should be {newadvance}")
+
+        while newadvance > currentadvance:
+            currentadvance += 1
+            newevent = Event.create_event(
+                datetime=datetime.datetime.now(), 
+                category="Advance " + str(currentadvance), 
+                description=f"Character reaches advance {currentadvance}", 
+                # You would have to roll, but lets assume roll determined that movement speed has to increase
+                skill=Skill(1,0,0,0,0,0,0,0,0,0,)
+                )
+            self.eventlist.append(newevent)
+            print(f"new event {newevent.to_dict()} created")
+
+
 
     def get_price(self):
         charprice = self.price

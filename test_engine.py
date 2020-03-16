@@ -248,17 +248,15 @@ def test_ReiklandWarband():
     # add experience
     hero = wbid.herolist[0]
     hero.experience = 0
-    # add in total 7 experience points, should equal to 3 advances
+    # add in total 7 experience points in seperate occasions, should equal to 3 advances
     while hero.experience <= 10:
         hero.add_experience(1)
+    hero.add_experience(10)
 
-    print("print out all events:")
-    for event in hero.eventlist:
-        print(f"events are: {event.to_dict()}")
-
-
-
-
+    print("current advance: " + str(hero.get_advance()))
+    print("Next advance: " + str(hero.get_nextadvance()))
+    print("XP needed for next advance: " + str(hero.get_xpneeded()))
+    print("Check if new advance is reached: " + str(hero.get_newadvancereached()))
 
 
     save_warband(wbid.to_dict())

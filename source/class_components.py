@@ -444,7 +444,7 @@ class Event(object):
         # create object based on the given parameters
         dataobject = Event(
             uniquehash = hash(str(datetime) + str(category) + str(description)),
-            datetime = datetime,
+            datetime = str(datetime),
             category = category,
             skill = skill,
             description = description,

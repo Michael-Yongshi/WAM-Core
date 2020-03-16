@@ -496,6 +496,80 @@ class Character(object):
         )
         return dataobject
 
+    def get_advance(self):
+        """Get advance level of this character"""
+
+        advance = 0
+        current_advance = 0
+        # For every event in eventlist, for every advance event check the number and compare with the previously highest advance number found
+        for event in self.eventlist:
+            if event.category[:-1] == "Advance ":
+                advance = int(event.category[-1:])
+                if advance > current_advance:
+                    current_advance = advance
+                    
+        print(f"current advance = {current_advance}")
+        return current_advance
+
+    def get_nextadvance(self):
+
+        nextadvance = self.get_advance() + 1
+        return nextadvance
+
+    def get_xpneeded(self):
+        """Get experience needed for next advance"""
+
+        # load exp database
+        datadict = load_reference("experience_table")
+        if self.ishero == True:
+            expdict = datadict["Hero"]
+        else:
+            expdict = datadict["Squad"]
+
+        # check when new advance is reached
+        nextadvance = self.get_nextadvance()
+        xpneeded = expdict["Advance " + str(nextadvance)]
+        print(f"experience needed for advance {nextadvance} is {xpneeded}")
+
+        return xpneeded
+
+    def get_newadvancereached(self):
+        """based on characters experience, check if new advance is warranted and return the new advance level"""
+
+        # load exp database
+        datadict = load_reference("experience_table")
+        if self.ishero == True:
+            expdict = datadict["Hero"]
+        else:
+            expdict = datadict["Squad"]
+
+        # check with reference what maximum advance is reached with this characters experience
+        new_advance = 0
+        for key in expdict:
+            if self.experience >= expdict[key]:
+                new_advance = int(key[-1:])
+
+        print(f"based on {self.experience} experience, the new advance should be {new_advance}")
+
+        return new_advance
+
+    def create_advance_events(self, current_advance, new_advance):
+        # Create empty new events based on new experience
+        new_events = []
+        while new_advance > current_advance:
+            current_advance += 1
+            newevent = Event.create_event(
+                datetime=datetime.datetime.now(), 
+                category="Advance " + str(current_advance), 
+                description=f"Character reaches advance {current_advance}, TBD", 
+                skill=Skill(0,0,0,0,0,0,0,0,0,0,)
+                )
+            new_events.append(newevent)
+            print(f"new event {newevent.to_dict()} created")
+
+        # Return the new events
+        return new_events
+
     def add_experience(self, change_experience):
         # check for new level up events. check what advance is reached with new experience, compare it to the advance of current experience. add then all the advances in between. Technically (i.e. going from 0 to 4 experience) one can
         # immediately jump 2 advancements. in that case new advance 2 minus current advance 0 means you plus the current advance and add an event until advance 2 is reached, so advance 0 + 1, still lower, advance 0 + 2, is equal now, so stop hereafter
@@ -504,41 +578,13 @@ class Character(object):
         self.experience += change_experience
 
         # get current advance
-        advance = 0
-        currentadvance = 0
-        for event in self.eventlist:
-            if event.category[:-1] == "Advance ":
-                advance = int(event.category[-1:])
-                if advance > currentadvance:
-                    currentadvance = advance
-        print(f"current advance = {currentadvance}")
+        current_advance = self.get_advance()
+        new_advance = self.get_newadvancereached()
         
-        # load exp database
-        datadict = load_reference("experience_table")
-        if self.ishero == True:
-            expdict = datadict["Hero"]
-        else:
-            expdict = datadict["Squad"]
-
-        newadvance = 0
-        for key in expdict:
-            if self.experience >= expdict[key]:
-                newadvance = int(key[-1:])
-        print(f"based on {self.experience} experience, the new advance should be {newadvance}")
-
-        while newadvance > currentadvance:
-            currentadvance += 1
-            newevent = Event.create_event(
-                datetime=datetime.datetime.now(), 
-                category="Advance " + str(currentadvance), 
-                description=f"Character reaches advance {currentadvance}", 
-                # You would have to roll, but lets assume roll determined that movement speed has to increase
-                skill=Skill(1,0,0,0,0,0,0,0,0,0,)
-                )
-            self.eventlist.append(newevent)
-            print(f"new event {newevent.to_dict()} created")
-
-
+        if new_advance > current_advance:
+            new_events = self.create_advance_events(current_advance, new_advance)
+            for event in new_events:
+                self.eventlist.append(event)
 
     def get_price(self):
         charprice = self.price

@@ -252,12 +252,22 @@ def test_ReiklandWarband():
     while hero.experience <= 10:
         hero.add_experience(1)
     hero.add_experience(10)
+    print(hero.experience)
 
+    unprocessed_advances = hero.check_advance_events()
+    if unprocessed_advances != []:
+        for event in unprocessed_advances:
+            event.set_advance_event(Skill.create_skill_empty(), "Being Awesome")
+            print(f"level up {event.category} processed")
+            print(f"{event.description}")
+
+
+    print("")
     print("current advance: " + str(hero.get_advance()))
     print("Next advance: " + str(hero.get_nextadvance()))
     print("XP needed for next advance: " + str(hero.get_xpneeded()))
     print("Check if new advance is reached: " + str(hero.get_newadvancereached()))
-
+    
 
     save_warband(wbid.to_dict())
     

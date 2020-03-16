@@ -82,8 +82,8 @@ class WidgetCurrent(QRaisedFrame):
                 'catlabel': {'row': 1, 'column': 0, 'width': 1, 'height': 1, 'text': f"Category: <b>{self.mainwindow.currentunit.category}</b>", 'tooltip': "Category", 'connect': ""},
                 'pricelabel': {'row': 2, 'column': 0, 'width': 1, 'height': 1, 'text': f"Price: <b>{self.mainwindow.currentunit.price}</b>", 'tooltip': "Price", 'connect': "",},
                 'maxlabel': {'row': 2, 'column': 1, 'width': 1, 'height': 1, 'text': f"Maximum: <b>{self.mainwindow.currentunit.maxcount}</b>", 'tooltip': "Maximum", 'connect': "",},
-                'explabel': {'row': 1, 'column': 1, 'width': 1, 'height': 1, 'text': f"Experience: <b>{self.mainwindow.currentunit.experience}</b>", 'tooltip': f"This characters current experience", 'connect': self.create_method_change_experience(self.mainwindow.currentunit.experience),},
                 'advlabel': {'row': 0, 'column': 1, 'width': 1, 'height': 1, 'text': f"Advance: <b>{self.mainwindow.currentunit.get_advance()}</b>", 'tooltip': f"Next is Advance <b>{self.mainwindow.currentunit.get_nextadvance()}</b> at experience <b> {self.mainwindow.currentunit.get_xpneeded()} </b>", 'connect': "",},
+                'explabel': {'row': 1, 'column': 1, 'width': 1, 'height': 1, 'text': f"Experience: <b>{self.mainwindow.currentunit.experience}</b>", 'tooltip': f"This characters current experience", 'connect': self.create_method_change_experience(),},
                 }
             },
             'skillbox': {'row': 1, 'column': 0, 'width': 1, 'height': 1,
@@ -190,10 +190,10 @@ class WidgetCurrent(QRaisedFrame):
         
         return change_name
 
-    def create_method_change_experience(self, experience):
+    def create_method_change_experience(self):
         
         def change_experience():
-            change_experience, okPressed = QInputDialog.getInt(self, "Change Experience", "How much to increase or decrease the experience?", 0, -99, 99, 1)
+            change_experience, okPressed = QInputDialog.getInt(self, "Change Experience", "How much to increase the experience?", 0, -99, 99, 1)
             if okPressed and change_experience:
                 self.mainwindow.currentunit.add_experience(change_experience)
                 self.mainwindow.initUI()

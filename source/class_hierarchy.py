@@ -508,7 +508,6 @@ class Character(object):
                 if advance > current_advance:
                     current_advance = advance
                     
-        print(f"current advance = {current_advance}")
         return current_advance
 
     def get_nextadvance(self):
@@ -529,7 +528,6 @@ class Character(object):
         # check when new advance is reached
         nextadvance = self.get_nextadvance()
         xpneeded = expdict["Advance " + str(nextadvance)]
-        print(f"experience needed for advance {nextadvance} is {xpneeded}")
 
         return xpneeded
 
@@ -549,12 +547,13 @@ class Character(object):
             if self.experience >= expdict[key]:
                 new_advance = int(key[-1:])
 
-        print(f"based on {self.experience} experience, the new advance should be {new_advance}")
-
         return new_advance
 
     def create_advance_events(self, current_advance, new_advance):
         # Create empty new events based on new experience
+        if current_advance == new_advance:
+            print("New advance is same as the current advance, not creating any events!")
+        
         new_events = []
         while new_advance > current_advance:
             current_advance += 1
@@ -570,21 +569,34 @@ class Character(object):
         # Return the new events
         return new_events
 
+    def check_advance_events(self):
+        eventlist = []
+        for event in self.eventlist:
+            if event.description[-3:] == "TBD":
+                eventlist += [event]
+
+        return eventlist
+
     def add_experience(self, change_experience):
         # check for new level up events. check what advance is reached with new experience, compare it to the advance of current experience. add then all the advances in between. Technically (i.e. going from 0 to 4 experience) one can
         # immediately jump 2 advancements. in that case new advance 2 minus current advance 0 means you plus the current advance and add an event until advance 2 is reached, so advance 0 + 1, still lower, advance 0 + 2, is equal now, so stop hereafter
 
         current_experience = self.experience
+        current_advance = self.get_advance()
+
+        # add the new experience
         self.experience += change_experience
 
-        # get current advance
-        current_advance = self.get_advance()
+        # check if a new advance has been reached
         new_advance = self.get_newadvancereached()
-        
+        print(self.get_newadvancereached())
+
+        # If new advances has been reached, create empty advance events and add them to the characters event list
         if new_advance > current_advance:
             new_events = self.create_advance_events(current_advance, new_advance)
             for event in new_events:
                 self.eventlist.append(event)
+                print(f"created new advance event: {event.category}")
 
     def get_price(self):
         charprice = self.price
@@ -615,7 +627,6 @@ class Character(object):
                     eventskilldict = {f"event: {event.datetime} - {event.category}": eventskills[key]}
                     skilldict[key]['children'].update(eventskilldict)
                     skilldict[key]['total'] += eventskills[key]
-                    print(skilldict[key])
                     
         for item in self.itemlist:
             itemskills = item.skill.to_dict()
@@ -624,7 +635,6 @@ class Character(object):
                     itemskilldict = {f"item: {item.subcategory}": itemskills[key]}
                     skilldict[key]['children'].update(itemskilldict)
                     skilldict[key]['total'] += itemskills[key]
-                    print(skilldict[key])
 
         return skilldict
 

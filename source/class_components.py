@@ -297,6 +297,13 @@ class Skill(object):
         datastring = f"mo: {self.movement}, we: {self.weapon}, ba: {self.ballistic}, st: {self.strength}, to: {self.toughness}, wo: {self.wounds}, in: {self.initiative}, ac: {self.actions}, le: {self.leadership}, as: {self.armoursave}"
         
         return datastring
+    
+    @staticmethod
+    def create_skill_empty():
+        
+        dataobject = Skill(0,0,0,0,0,0,0,0,0,0,)
+
+        return dataobject
 
 class Ability(object):
     """Default object to assign ablities as a basis for character and item abilities"""
@@ -451,3 +458,14 @@ class Event(object):
             )
 
         return dataobject
+
+    def set_advance_event(self, skill, ability=""):
+        """Set a level up to new advance event. The specific event is given (advance with TBD at the end of the description) """
+        
+        currentdescription = self.description[:-4]
+
+        if skill.to_string() != Skill.create_skill_empty().to_string():
+            for key in skill.to_dict():
+                self.description = f"{currentdescription} character achieved an increase in {key}"
+        else:
+            self.description = f"{currentdescription} character achieved the ability of {ability}"

@@ -47,6 +47,11 @@ set git email with
 git config --global user.name ""
 ```
 
+Remove deleted branches of local vs code instance
+```
+git fetch --prune
+```
+
 ### Basic application requisites
 
 Building a virtual environment

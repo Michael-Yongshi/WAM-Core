@@ -1,7 +1,10 @@
+import datetime
+
 from source.methods_engine import (
     save_warband,
     load_warband,
     show_warbands,
+    load_reference,
     )
 
 from source.class_hierarchy import (
@@ -19,6 +22,7 @@ from source.class_components import (
     Skill,
     Ability,
     Magic,
+    Event,
     )
 
 def test_ReiklandWarband():
@@ -236,12 +240,59 @@ def test_ReiklandWarband():
     wbid.squadlist.append(newsquad4)
     print("squad assigning succesful")
 
+
+
+
+
+
+    # add experience
+    hero = wbid.herolist[0]
+    hero.experience = 0
+
+    # should become level 1 with getting 2 exp
+    hero.add_experience(2) 
+    # check open advances and first one set new ability
+    unprocessed_advances = hero.check_advance_events()
+    if len(unprocessed_advances) == 0:
+        print("No unprocessed advances")
+    else:
+        unprocessed_advances[0].set_advance_event(Skill.create_skill_empty(), "Being Awesome")
+        print(f"level 1: {unprocessed_advances[0].description}")
+        
+    # add another 7 exp making the hero level 3
+    hero.add_experience(5) # should become level 3
+
+    # Check if the expected 2 advances pop up
+    unprocessed_advances = hero.check_advance_events()
+    if len(unprocessed_advances) != 2:
+        print(f"incorrect total advances, expected 2 but got {len(unprocessed_advances)}")
+    else:
+        
+        # Give advance 2 a strength increase
+        unprocessed_advances[0].set_advance_event(Skill(0,0,0,1,0,0,0,0,0,0,), "")
+        print(f"level up {unprocessed_advances[0].category} processed")
+        print(f"{unprocessed_advances[0].description}")
+
+        # Give advance 3 both a wounds increase as an action increase
+        unprocessed_advances[1].set_advance_event(Skill(0,0,0,0,0,1,0,1,0,0,), "")
+        print(f"level up {unprocessed_advances[1].category} processed")
+        print(f"{unprocessed_advances[1].description}")
+
+
+    print("")
+    print("current advance: " + str(hero.get_advance()))
+    print("Next advance: " + str(hero.get_nextadvance()))
+    print("XP needed for next advance: " + str(hero.get_xpneeded()))
+    print("Check if new advance is reached: " + str(hero.check_new_advance()))
+    print(hero.get_historystring())    
+
     save_warband(wbid.to_dict())
+    
     print("Update completed")
 
     wbdict = load_warband(wbid.name)
     # print(wbdict)
-    
+
 def test_WitchWarband():
     print("---Start Test Witch Hunters")
 

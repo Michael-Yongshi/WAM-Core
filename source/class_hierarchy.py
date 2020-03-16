@@ -531,7 +531,7 @@ class Character(object):
 
         return xpneeded
 
-    def get_newadvancereached(self):
+    def check_new_advance(self):
         """based on characters experience, check if new advance is warranted and return the new advance level"""
 
         # load exp database
@@ -564,7 +564,6 @@ class Character(object):
                 skill=Skill(0,0,0,0,0,0,0,0,0,0,)
                 )
             new_events.append(newevent)
-            print(f"new event {newevent.to_dict()} created")
 
         # Return the new events
         return new_events
@@ -581,6 +580,7 @@ class Character(object):
         # check for new level up events. check what advance is reached with new experience, compare it to the advance of current experience. add then all the advances in between. Technically (i.e. going from 0 to 4 experience) one can
         # immediately jump 2 advancements. in that case new advance 2 minus current advance 0 means you plus the current advance and add an event until advance 2 is reached, so advance 0 + 1, still lower, advance 0 + 2, is equal now, so stop hereafter
 
+        print(f"changing experience with: {change_experience}")
         current_experience = self.experience
         current_advance = self.get_advance()
 
@@ -588,8 +588,7 @@ class Character(object):
         self.experience += change_experience
 
         # check if a new advance has been reached
-        new_advance = self.get_newadvancereached()
-        print(self.get_newadvancereached())
+        new_advance = self.check_new_advance()
 
         # If new advances has been reached, create empty advance events and add them to the characters event list
         if new_advance > current_advance:

@@ -221,7 +221,6 @@ class Skill(object):
 
         # set the object values to a dictionary
         datadict = {
-            # 'key': str(self),
             'movement': self.movement,
             'weapon': self.weapon,
             'ballistic': self.ballistic,
@@ -463,9 +462,16 @@ class Event(object):
         """Set a level up to new advance event. The specific event is given (advance with TBD at the end of the description) """
         
         currentdescription = self.description[:-4]
+        self.description = currentdescription
 
+        # check if skill increases or an ability happens
         if skill.to_string() != Skill.create_skill_empty().to_string():
-            for key in skill.to_dict():
-                self.description = f"{currentdescription} character achieved an increase in {key}"
+            self.skill = skill
+
+            # check which of the skills changed and add it to the description
+            skilldict = skill.to_dict()
+            for key in skilldict:
+                if skilldict[key] != 0:
+                    self.description = f"{self.description} \n - character achieved an increase in {key}"
         else:
-            self.description = f"{currentdescription} character achieved the ability of {ability}"
+            self.description = f"{self.description} character achieved the ability of {ability}"

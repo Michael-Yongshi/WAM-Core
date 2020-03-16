@@ -444,6 +444,12 @@ class Event(object):
 
         return dataobject
 
+    def to_string(self):
+        
+        datastring = f"{self.uniquehash} - {self.datetime} - {self.category} - {self.description}"
+
+        return datastring
+
     @staticmethod
     def create_event(datetime, category, skill, description):
 

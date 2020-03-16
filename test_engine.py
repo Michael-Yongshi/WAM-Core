@@ -284,7 +284,7 @@ def test_ReiklandWarband():
     print("Next advance: " + str(hero.get_nextadvance()))
     print("XP needed for next advance: " + str(hero.get_xpneeded()))
     print("Check if new advance is reached: " + str(hero.check_new_advance()))
-    
+    print(hero.get_historystring())    
 
     save_warband(wbid.to_dict())
     

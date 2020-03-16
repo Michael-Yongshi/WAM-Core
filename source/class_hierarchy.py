@@ -605,6 +605,22 @@ class Character(object):
                 self.eventlist.append(event)
                 print(f"created new advance event: {event.category}")
 
+    def get_historydict(self):
+        datadict = {}
+        
+        for event in self.eventlist:
+            datadict[event.category] = event.to_dict()
+        
+        return datadict
+
+    def get_historystring(self):
+        datastring = "This is this characters history: </br>"
+        
+        for event in self.eventlist:
+            datastring += "- " + event.to_string() + "<br/>"
+        
+        return datastring
+
     def get_price(self):
         charprice = self.price
         for item in self.itemlist:

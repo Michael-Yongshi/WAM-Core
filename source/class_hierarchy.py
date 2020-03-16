@@ -549,6 +549,14 @@ class Character(object):
 
         return new_advance
 
+    def show_advance_notification(self):
+        if len(self.check_advance_events()) != 0:
+            notification = f"Process new advances ({len(self.check_advance_events())})"
+        else:
+            notification = f""
+
+        return notification
+
     def create_advance_events(self, current_advance, new_advance):
         # Create empty new events based on new experience
         if current_advance == new_advance:

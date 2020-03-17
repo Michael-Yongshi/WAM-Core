@@ -44,12 +44,12 @@ def test_interact(network_url, wallet_private_key, abi, contract_address):
 def test_read(w3c):
 
     characters = w3c.get_characters()
-    print("Character data: " + str(characters))
+    print(f"Character data: {str(characters)}\n")
 
     history = w3c.get_events(
         characterId = 0,
     )
-    print("history: " + str(history))
+    print(f"history: {str(history)}\n")
 
 def test_write(w3c):
     newcharacter = w3c.create_character(
@@ -57,13 +57,13 @@ def test_write(w3c):
         unit = "Sea Guards", 
         race = "High Elves",
     )
-    print(f"New character: {str(newcharacter)}")
+    print(f"New character created: {newcharacter}\n")
 
     newevent = w3c.create_event(
         characterId = 0,
         description = "Victory against 0xd04bAcA7ac336EadE692Fd8EDF1a66e4A7d74919",
     )
-    print(f"New event: {str(newevent)}")
+    print(f"New event created: {newevent}\n")
 
 if __name__ == '__main__':
     
@@ -76,16 +76,16 @@ if __name__ == '__main__':
     # Contract functions
     abi = load_json("source/", "methods_eth_abi")
 
-    # Known Contract
-    contract_address="0x9435cFB566b87e22d9EB08E98EACa95cc2BF1420"
+    # # Known Contract
+    # contract_address="0x9435cFB566b87e22d9EB08E98EACa95cc2BF1420"
 
-    # Build contract based on solidity
+    # # Build contract based on solidity
     # solidity = "source/methods_eth_contract.sol"
     # contract_address = test_deploy_contract(network_url=network_url, abi=abi, solidity=solidity, wallet_private_key=wallet_private_key)
     
     # Build contract based on bytecode
-    # bytecode = "source/methods_eth_bytecode.txt"
-    # contract_address = test_deploy_bytecode(network_url=network_url, abi=abi, bytecode=bytecode, wallet_private_key=wallet_private_key)
+    bytecode = "source/methods_eth_bytecode.txt"
+    contract_address = test_deploy_bytecode(network_url=network_url, abi=abi, bytecode=bytecode, wallet_private_key=wallet_private_key)
 
     w3c = test_interact(network_url=network_url, abi=abi, contract_address=contract_address, wallet_private_key=wallet_private_key)
 

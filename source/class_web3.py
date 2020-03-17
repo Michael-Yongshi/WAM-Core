@@ -70,7 +70,7 @@ class Web3Connection(object):
             'from': account.address,
             'nonce': w3.eth.getTransactionCount(account.address),
             'gas': 1648900,
-            'gasPrice': w3.toWei('1000000000', 'wei'),
+            'gasPrice': w3.toWei('10000000000', 'wei'),
             'chainId': 3, 
             }
         )
@@ -94,7 +94,7 @@ class Web3Connection(object):
 
         # return new contract address
         new_contract_address = txn_receipt["contractAddress"]
-        print(f"New contract address: {new_contract_address}")
+        print(f"New contract address: {new_contract_address}\n")
 
         return new_contract_address
 
@@ -138,7 +138,8 @@ class Web3Connection(object):
 
         # return creation of character
         newcharacter = f"added {name} a {unit} consist of {race}"
-        return {'status': newcharacter, 'txn_receipt': txn_receipt}
+
+        return newcharacter
 
     def create_event(self, characterId, description):
         """create an event for a specific character by sending input to the smart contract of cryptocharacter"""
@@ -174,8 +175,9 @@ class Web3Connection(object):
         print(f"Requested receipt: {txn_receipt}")
 
         # return created event
-        newevent = f"added {description}"
-        return {'status': newevent, 'txn_receipt': txn_receipt}
+        newevent = f"Added event for {characterId}: {description}"
+
+        return newevent
 
     def get_characters(self):
         # print all knwon characters of the given wallet_address

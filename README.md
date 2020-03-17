@@ -101,13 +101,16 @@ apt-get install python3 pyqt5   # (prod) if pip3 doesn't work
 
 ### Solidity requisites
 
-Visual 14 C++ needed for web3
+WEB3:
+library for interacting with ethereum, setting up connections and interacting with smart contracts
+
+Visual 14 C++ needed
 https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15
 select visual studio build tools 2017, only the first optional checkbox (windows 10 sdk for desktop c++)
 
-with pip
+only then with pip
 ```
-pip3 install --user web3                # (prod) library for interacting with ethereum, setting up connections, i.e. to your wallet in metamask, transferring tokens and interacting with smart contracts
+pip3 install --user web3                # (prod) 
 ```
 
 ### NFC through pyscard

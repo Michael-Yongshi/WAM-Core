@@ -7,16 +7,7 @@ from source.class_web3 import (
 
 if __name__ == '__main__':
 
-    # # the needed bytecode of the contract
-    with open("source/methods_eth_bytecode.txt", mode='r') as infile:
-        bytecode = infile.read()
 
-    w3c = Web3Connection.initialize(
-        network_url="https://ropsten.infura.io/v3/313b66f4d09a48feaa2ad6e73859464e",
-        abi=load_json("source/", "methods_eth_abi"),
-        bytecode = bytecode,
-        wallet_private_key="0xad5bb5684dbfb337040fb31d76c7b6118e0bb4fed23e940451a43746f93ebb09",
-    )
 
     # newcharacter = w3c.create_character(
     #     name = "Destroyers", 

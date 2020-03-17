@@ -29,8 +29,8 @@ class Web3Connection(object):
 
         else:
 
-            # if contract address is empty, create new contract (address) with provided bytecode
             if contract_address == "":
+                # if contract address is empty, create new contract (address) with provided bytecode
                 contract_address = Web3Connection.init_deploy(w3, account, abi, bytecode)
 
             # Setting up contract with the needed abi (functions) and the contract address (for instantiation)
@@ -47,6 +47,11 @@ class Web3Connection(object):
     def init_deploy(w3, account, abi, bytecode):
         """deploying a new contract with abi and bytecode"""
 
+        # getting bytecode by opening the bytecode text file and save it as a string
+        with open(bytecode, mode='r') as infile:
+            bytecode = infile.read()
+
+        # getting contract solidity code by opening the contract sol file and save it as a string
         # with open("cryptocharacter/contracts/CryptoCharacter.sol", mode='r') as contractfile: # b is important -> binary
         #     contract_code = contractfile.read()
 

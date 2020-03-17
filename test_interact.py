@@ -7,7 +7,7 @@ from source.class_web3 import (
 
 if __name__ == '__main__':
 
-    w3c = Web3Connection(
+    w3c = Web3Connection.interact(
         network_url="https://ropsten.infura.io/v3/313b66f4d09a48feaa2ad6e73859464e",
         abi=load_json("source/", "methods_eth_abi"),
         contract_address="0x9435cFB566b87e22d9EB08E98EACa95cc2BF1420",

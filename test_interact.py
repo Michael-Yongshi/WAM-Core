@@ -5,25 +5,38 @@ from source.class_web3 import (
     Web3Connection,
 )
 
-def test_deploy(network_url, abi, bytecode, wallet_private_key):
+def test_deploy_contract(network_url, wallet_private_key, abi, solidity):
 
     # setting up a connection for a new contract:
     w3c = Web3Connection.initialize(
         network_url=network_url,
-        abi=abi,
-        bytecode = bytecode,
         wallet_private_key=wallet_private_key,
+        abi=abi,
+        solidity = solidity,
     )
 
-    return w3c
+    return w3c.contract.address
 
-def test_interact(network_url, abi, contract_address, wallet_private_key):
+def test_deploy_bytecode(network_url, wallet_private_key, abi, bytecode):
+
+    # setting up a connection for a new contract:
+    w3c = Web3Connection.initialize(
+        network_url=network_url,
+        wallet_private_key=wallet_private_key,
+        abi=abi,
+        bytecode = bytecode,
+    )
+
+    return w3c.contract.address
+
+def test_interact(network_url, wallet_private_key, abi, contract_address):
+
     # setting up a connection for an existing contract
     w3c = Web3Connection.initialize(
         network_url=network_url,
+        wallet_private_key=wallet_private_key,
         abi=abi,
         contract_address=contract_address,
-        wallet_private_key=wallet_private_key,
     )
 
     return w3c
@@ -54,17 +67,27 @@ def test_write(w3c):
 
 if __name__ == '__main__':
     
-    # some inputs for testing
+    # Network
     network_url = "https://ropsten.infura.io/v3/313b66f4d09a48feaa2ad6e73859464e"
-    wallet_private_key = "0xad5bb5684dbfb337040fb31d76c7b6118e0bb4fed23e940451a43746f93ebb09"
-    abi = load_json("source/", "methods_eth_abi")
-    contract_address="0x9435cFB566b87e22d9EB08E98EACa95cc2BF1420"
-    bytecode = "source/methods_eth_bytecode.txt"
 
-    # w3c = test_deploy(network_url=network_url, abi=abi, bytecode=bytecode, wallet_private_key=wallet_private_key)
+    # Account
+    wallet_private_key = "0xad5bb5684dbfb337040fb31d76c7b6118e0bb4fed23e940451a43746f93ebb09"
+
+    # Contract functions
+    abi = load_json("source/", "methods_eth_abi")
+
+    # Known Contract
+    contract_address="0x9435cFB566b87e22d9EB08E98EACa95cc2BF1420"
+
+    # Build contract based on solidity
+    # solidity = "source/methods_eth_contract.sol"
+    # contract_address = test_deploy_contract(network_url=network_url, abi=abi, solidity=solidity, wallet_private_key=wallet_private_key)
+    
+    # Build contract based on bytecode
+    # bytecode = "source/methods_eth_bytecode.txt"
+    # contract_address = test_deploy_bytecode(network_url=network_url, abi=abi, bytecode=bytecode, wallet_private_key=wallet_private_key)
+
     w3c = test_interact(network_url=network_url, abi=abi, contract_address=contract_address, wallet_private_key=wallet_private_key)
 
-    # test_write(w3c)
+    test_write(w3c)
     test_read(w3c)
-
-

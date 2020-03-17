@@ -11,9 +11,8 @@ class Web3Connection(object):
         self.contract = contract
         self.account = account
         
-
     @staticmethod
-    def initialize(network_url, wallet_private_key, abi, contract_address="", bytecode=""):
+    def initialize(network_url, wallet_private_key, abi, contract_address="", solidity="", bytecode=""):
         
         # Connect to specific network
         w3 = Web3(Web3.HTTPProvider(network_url))
@@ -23,16 +22,20 @@ class Web3Connection(object):
         account = w3.eth.account.privateKeyToAccount(wallet_private_key)
         print(account.address)
 
-        if bytecode == "" and contract_address == "":
+        if contract_address == "" and bytecode == "" and solidity == "":
 
-            print("provide valid contract address or bytecode to create a new contract!")
+            print("provide valid contract address, solidity contract or bytecode to create a new contract!")
 
         else:
 
-            if contract_address == "":
-                # if contract address is empty, create new contract (address) with provided bytecode
-                contract_address = Web3Connection.init_deploy(w3, account, abi, bytecode)
+            if bytecode != "":
+                # if bytecode is provided, create new contract (address) with provided bytecode
+                contract_address = Web3Connection.init_deploy_bytecode(w3, account, abi, bytecode)
 
+            elif solidity != "":
+                # if solidity contract is provided, create new contract (address) with provided contract
+                contract_address = Web3Connection.init_deploy_solidity(w3, account, abi, solidity)   
+            
             # Setting up contract with the needed abi (functions) and the contract address (for instantiation)
             contract = w3.eth.contract(abi = abi, address = contract_address)
             print(contract.address)
@@ -44,47 +47,56 @@ class Web3Connection(object):
             )
 
     @staticmethod
-    def init_deploy(w3, account, abi, bytecode):
+    def init_deploy_solidity(w3, account, abi, solidity):
+        NotImplemented
+
+        # getting contract solidity code by opening the contract sol file and save it as a string
+        # with open("cryptocharacter/contracts/CryptoCharacter.sol", mode='r') as contractfile: # b is important -> binary
+        #     contract_code = contractfile.read()
+
+    @staticmethod
+    def init_deploy_bytecode(w3, account, abi, bytecode):
         """deploying a new contract with abi and bytecode"""
 
         # getting bytecode by opening the bytecode text file and save it as a string
         with open(bytecode, mode='r') as infile:
             bytecode = infile.read()
 
-        # getting contract solidity code by opening the contract sol file and save it as a string
-        # with open("cryptocharacter/contracts/CryptoCharacter.sol", mode='r') as contractfile: # b is important -> binary
-        #     contract_code = contractfile.read()
-
         # set up the contract based on the bytecode and abi functions
         contract = w3.eth.contract(abi = abi, bytecode = bytecode)
 
-        txn_dict = contract.constructor().buildTransaction({
-                'from': account.address,
-                'nonce': w3.eth.getTransactionCount(account.address),   
-                'gas': 164890,
-                'gasPrice': w3.toWei('1000000000', 'wei'),
-                'chainId': 3, 
-                })
-
-        signed_txn = account.signTransaction(txn_dict)
-        txn_hash = contract.constructor()
-        txn_receipt = w3.eth.waitForTransactionReceipt(signed_txn.rawTransaction)
-
-
-        # txn_hash = w3.eth.sendRawTransaction(signed_txn.rawTransaction)
-        # txn_receipt = w3.eth.getTransactionReceipt(txn_hash.hex())
-            
-
-
-        # Create contract instance based on the just deployed smart contract
-        contract = w3.eth.contract(address = txn_receipt.contract_address, abi = abi)
-        print(contract.address)
-
-        return Web3Connection(
-            w3 = w3,
-            contract = contract,
-            account = account,
+        # construct transaction
+        txn_construct = contract.constructor().buildTransaction({
+            'from': account.address,
+            'nonce': w3.eth.getTransactionCount(account.address),
+            'gas': 1648900,
+            'gasPrice': w3.toWei('1000000000', 'wei'),
+            'chainId': 3, 
+            }
         )
+        # print(f"Constructed transaction: {txn_construct}") # Shows huge bit string
+
+        # sign transaction
+        txn_signed = account.signTransaction(txn_construct)
+        # print(f"Signed transaction: {txn_signed}") # Shows huge bit string
+
+        # send transaction
+        txn_hash = w3.eth.sendRawTransaction(txn_signed.rawTransaction)
+        print(f"Transaction send with hash: {txn_hash.hex()}")
+
+        # wait for processing
+        print("waiting for nodes to handle txn")
+        time.sleep(60)
+
+        # request receipt
+        txn_receipt = w3.eth.getTransactionReceipt(txn_hash.hex())
+        print(f"Requested receipt: {txn_receipt}")
+
+        # return new contract address
+        new_contract_address = txn_receipt["contractAddress"]
+        print(f"New contract address: {new_contract_address}")
+
+        return new_contract_address
 
     def create_character(self, name, unit, race):
 
@@ -92,7 +104,7 @@ class Web3Connection(object):
         nonce = self.w3.eth.getTransactionCount(self.account.address)
 
         # get identifier for function input
-        identifier = str(name + unit + race)
+        identifier = f"{name} - {unit} - {race}"
 
         # build transaction
         txn_dict = self.contract.functions.createRandomCharacter(
@@ -103,26 +115,67 @@ class Web3Connection(object):
             ).buildTransaction({
             'nonce': nonce,        
             'gas': 1648900,
-            'gasPrice': w3.toWei('1000000000', 'wei'),
+            'gasPrice': self.w3.toWei('1000000000', 'wei'),
             'chainId': 3,
             })
         print("build txn dict: " + str(txn_dict))
 
-        signed_txn = self.w3.eth.account.signTransaction(txn_dict, self.wallet_private_key)
+        # sign transaction
+        txn_signed = self.account.signTransaction(txn_dict)
+        # print(f"Signed transaction: {txn_signed}") # Shows huge bit string
 
-        txn_hash = self.w3.eth.sendRawTransaction(signed_txn.rawTransaction)
-        print("send txn: " + txn_hash.hex())
+        # send transaction
+        txn_hash = self.w3.eth.sendRawTransaction(txn_signed.rawTransaction)
+        print(f"Transaction send with hash: {txn_hash.hex()}")
 
-        txn_receipt = None
-
+        # wait for processing
         print("waiting for nodes to handle txn")
-        time.sleep(30)
-        print("requesting for receipt of txn")
+        time.sleep(60)
 
+        # request receipt
         txn_receipt = self.w3.eth.getTransactionReceipt(txn_hash.hex())
+        print(f"Requested receipt: {txn_receipt}")
 
+        # return creation of character
         newcharacter = f"added {name} a {unit} consist of {race}"
         return {'status': newcharacter, 'txn_receipt': txn_receipt}
+
+    def create_event(self, characterId, description):
+        """create an event for a specific character by sending input to the smart contract of cryptocharacter"""
+        # get nonce for txn input
+        nonce = self.w3.eth.getTransactionCount(self.account.address)
+
+        # construct transaction
+        txn_dict = self.contract.functions.createEvent(
+            characterId, 
+            description
+            ).buildTransaction({
+            'nonce': nonce,        
+            'gas': 1648900,
+            'gasPrice': self.w3.toWei('1000000000', 'wei'),
+            'chainId': 3,
+            })
+        # print(f"Constructed transaction: {txn_construct}") # Shows huge bit string
+
+        # sign transaction
+        txn_signed = self.account.signTransaction(txn_dict)
+        # print(f"Signed transaction: {txn_signed}") # Shows huge bit string
+
+        # send transaction
+        txn_hash = self.w3.eth.sendRawTransaction(txn_signed.rawTransaction)
+        print(f"Transaction send with hash: {txn_hash.hex()}")
+
+        # wait for processing
+        print("waiting for nodes to handle txn")
+        time.sleep(60)
+
+        # request receipt
+        txn_receipt = self.w3.eth.getTransactionReceipt(txn_hash.hex())
+        print(f"Requested receipt: {txn_receipt}")
+
+        # return created event
+        newevent = f"added {description}"
+        return {'status': newevent, 'txn_receipt': txn_receipt}
 
     def get_characters(self):
         # print all knwon characters of the given wallet_address
@@ -136,39 +189,6 @@ class Web3Connection(object):
             characterlist += [character]
 
         return characterlist
-
-    def create_event(self, characterId, description):
-        """create an event for a specific character by sending input to the smart contract of cryptocharacter"""
-        # get nonce for txn input
-        nonce = self.w3.eth.getTransactionCount(self.account.address)
-
-        # build transaction
-        txn_dict = self.contract.functions.createEvent(
-            characterId, 
-            description
-            ).buildTransaction({
-            'nonce': nonce,        
-            'gas': 1648900,
-            'gasPrice': w3.toWei('1000000000', 'wei'),
-            'chainId': 3,
-            })
-        print("build txn dict: " + str(txn_dict))
-
-        signed_txn = self.w3.eth.account.signTransaction(txn_dict, self.wallet_private_key)
-
-        txn_hash = self.w3.eth.sendRawTransaction(signed_txn.rawTransaction)
-        print("send txn: " + txn_hash.hex())
-
-        txn_receipt = None
-
-        print("waiting for nodes to handle txn")
-        time.sleep(30)
-        print("requesting for receipt of txn")
-
-        txn_receipt = self.w3.eth.getTransactionReceipt(txn_hash.hex())
-
-        newevent = "added " + description
-        return {'status': newevent, 'txn_receipt': txn_receipt}
 
     def get_events(self, characterId):
         """get all events for a specific character by sending input to the smart contract of cryptocharacter"""

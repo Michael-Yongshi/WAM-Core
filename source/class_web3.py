@@ -69,7 +69,6 @@ class Web3Connection(object):
         txn_construct = contract.constructor().buildTransaction({
             'from': account.address,
             'nonce': w3.eth.getTransactionCount(account.address),
-            'gas': 1648900,
             'gasPrice': w3.toWei('10000000000', 'wei'),
             'chainId': 3, 
             }

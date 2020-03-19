@@ -113,6 +113,18 @@ only then with pip
 pip3 install --user web3                # (prod) 
 ```
 
+solc
+install nodejs and npm open npm command line exe
+```
+npm install -g solc
+```
+
+https://www.codeooze.com/blockchain/solc-hello-world/
+https://github.com/ethereum/solidity/releases/download/v0.6.4/solidity-windows.zip
+
+wrapper
+https://pypi.org/project/py-solc/
+
 ### NFC through pyscard
 Can only be used with version 3.6.8 of python (as of moment of writing). Thus we have to switch for this application to this python version in order to use this NFC library.
 Downloaded pyscard executable for windows from https://sourceforge.net/projects/pyscard/

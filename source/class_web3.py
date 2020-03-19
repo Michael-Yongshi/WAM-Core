@@ -1,12 +1,6 @@
 import os
 import time
 
-from solc import (
-    compile_standard,
-    compile_source,
-    compile_files,
-)
-
 from web3 import Web3
 
 from source.methods_json import load_json
@@ -45,6 +39,7 @@ class Web3Connection(object):
             
             # Setting up contract with the needed abi (functions) and the contract address (for instantiation)
             abi = load_json(abi["path"], abi["file"])
+            print(abi)
             contract = w3.eth.contract(abi = abi, address = contract_address)
             print(contract.address)
 

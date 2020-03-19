@@ -75,7 +75,7 @@ if __name__ == '__main__':
     abi = {"path": "source/", "file": "methods_eth_abi"}
 
     # # Known Contract
-    # contract_address="0x9435cFB566b87e22d9EB08E98EACa95cc2BF1420"
+    contract_address="0x9435cFB566b87e22d9EB08E98EACa95cc2BF1420"
     # contract_address="0xF83BfA44f90a253aeE5B710171e3Ab933ec37B21"
 
     # # Build contract based on solidity

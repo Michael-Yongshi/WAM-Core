@@ -1,0 +1,125 @@
+PragmaDirective
+   Source: "pragma solidity ^0.5.0;"
+ImportDirective "./IERC165.sol"
+   Source: "import \"./IERC165.sol\";"
+ContractDefinition "ERC165"
+   Source: "contract ERC165 is IERC165 {\n    /*\n     * bytes4(keccak256('supportsInterface(bytes4)')) == 0x01ffc9a7\n     */\n    bytes4 private constant _INTERFACE_ID_ERC165 = 0x01ffc9a7;\n\n    /**\n     * @dev Mapping of interface ids to whether or not it's supported.\n     */\n    mapping(bytes4 => bool) private _supportedInterfaces;\n\n    constructor () internal {\n        // Derived contracts need only register support for their own interfaces,\n        // we register support for ERC165 itself here\n        _registerInterface(_INTERFACE_ID_ERC165);\n    }\n\n    /**\n     * @dev See {IERC165-supportsInterface}.\n     *\n     * Time complexity O(1), guaranteed to always use less than 30 000 gas.\n     */\n    function supportsInterface(bytes4 interfaceId) external view returns (bool) {\n        return _supportedInterfaces[interfaceId];\n    }\n\n    /**\n     * @dev Registers the contract as an implementer of the interface defined by\n     * `interfaceId`. Support of the actual ERC165 interface is automatic and\n     * registering its interface id is not required.\n     *\n     * See {IERC165-supportsInterface}.\n     *\n     * Requirements:\n     *\n     * - `interfaceId` cannot be the ERC165 invalid interface (`0xffffffff`).\n     */\n    function _registerInterface(bytes4 interfaceId) internal {\n        require(interfaceId != 0xffffffff, \"ERC165: invalid interface id\");\n        _supportedInterfaces[interfaceId] = true;\n    }\n}"
+  InheritanceSpecifier
+     Source: "IERC165"
+    UserDefinedTypeName "IERC165"
+       Source: "IERC165"
+  VariableDeclaration "_INTERFACE_ID_ERC165"
+     Type: bytes4
+     Source: "bytes4 private constant _INTERFACE_ID_ERC165 = 0x01ffc9a7"
+    ElementaryTypeName bytes4
+       Source: "bytes4"
+    Literal, token: [no token] value: 0x01ffc9a7
+       Type: int_const 33540519
+       Source: "0x01ffc9a7"
+  VariableDeclaration "_supportedInterfaces"
+     Type: mapping(bytes4 => bool)
+     Source: "mapping(bytes4 => bool) private _supportedInterfaces"
+    Mapping
+       Source: "mapping(bytes4 => bool)"
+      ElementaryTypeName bytes4
+         Source: "bytes4"
+      ElementaryTypeName bool
+         Source: "bool"
+  FunctionDefinition ""
+     Source: "constructor () internal {\n        // Derived contracts need only register support for their own interfaces,\n        // we register support for ERC165 itself here\n        _registerInterface(_INTERFACE_ID_ERC165);\n    }"
+    ParameterList
+       Source: "()"
+    ParameterList
+       Source: ""
+    Block
+       Source: "{\n        // Derived contracts need only register support for their own interfaces,\n        // we register support for ERC165 itself here\n        _registerInterface(_INTERFACE_ID_ERC165);\n    }"
+      ExpressionStatement
+         Source: "_registerInterface(_INTERFACE_ID_ERC165)"
+        FunctionCall
+           Type: tuple()
+           Source: "_registerInterface(_INTERFACE_ID_ERC165)"
+          Identifier _registerInterface
+             Type: function (bytes4)
+             Source: "_registerInterface"
+          Identifier _INTERFACE_ID_ERC165
+             Type: bytes4
+             Source: "_INTERFACE_ID_ERC165"
+  FunctionDefinition "supportsInterface" - public - const
+     Source: "function supportsInterface(bytes4 interfaceId) external view returns (bool) {\n        return _supportedInterfaces[interfaceId];\n    }"
+    ParameterList
+       Source: "(bytes4 interfaceId)"
+      VariableDeclaration "interfaceId"
+         Type: bytes4
+         Source: "bytes4 interfaceId"
+        ElementaryTypeName bytes4
+           Source: "bytes4"
+    ParameterList
+       Source: "(bool)"
+      VariableDeclaration ""
+         Type: bool
+         Source: "bool"
+        ElementaryTypeName bool
+           Source: "bool"
+    Block
+       Source: "{\n        return _supportedInterfaces[interfaceId];\n    }"
+      Return
+         Source: "return _supportedInterfaces[interfaceId]"
+        IndexAccess
+           Type: bool
+           Source: "_supportedInterfaces[interfaceId]"
+          Identifier _supportedInterfaces
+             Type: mapping(bytes4 => bool)
+             Source: "_supportedInterfaces"
+          Identifier interfaceId
+             Type: bytes4
+             Source: "interfaceId"
+  FunctionDefinition "_registerInterface"
+     Source: "function _registerInterface(bytes4 interfaceId) internal {\n        require(interfaceId != 0xffffffff, \"ERC165: invalid interface id\");\n        _supportedInterfaces[interfaceId] = true;\n    }"
+    ParameterList
+       Source: "(bytes4 interfaceId)"
+      VariableDeclaration "interfaceId"
+         Type: bytes4
+         Source: "bytes4 interfaceId"
+        ElementaryTypeName bytes4
+           Source: "bytes4"
+    ParameterList
+       Source: ""
+    Block
+       Source: "{\n        require(interfaceId != 0xffffffff, \"ERC165: invalid interface id\");\n        _supportedInterfaces[interfaceId] = true;\n    }"
+      ExpressionStatement
+         Source: "require(interfaceId != 0xffffffff, \"ERC165: invalid interface id\")"
+        FunctionCall
+           Type: tuple()
+           Source: "require(interfaceId != 0xffffffff, \"ERC165: invalid interface id\")"
+          Identifier require
+             Type: function (bool,string memory) pure
+             Source: "require"
+          BinaryOperation using operator !=
+             Type: bool
+             Source: "interfaceId != 0xffffffff"
+            Identifier interfaceId
+               Type: bytes4
+               Source: "interfaceId"
+            Literal, token: [no token] value: 0xffffffff
+               Type: int_const 4294967295
+               Source: "0xffffffff"
+          Literal, token: [no token] value: ERC165: invalid interface id
+             Type: literal_string "ERC165: invalid interface id"
+             Source: "\"ERC165: invalid interface id\""
+      ExpressionStatement
+         Source: "_supportedInterfaces[interfaceId] = true"
+        Assignment using operator =
+           Type: bool
+           Source: "_supportedInterfaces[interfaceId] = true"
+          IndexAccess
+             Type: bool
+             Source: "_supportedInterfaces[interfaceId]"
+            Identifier _supportedInterfaces
+               Type: mapping(bytes4 => bool)
+               Source: "_supportedInterfaces"
+            Identifier interfaceId
+               Type: bytes4
+               Source: "interfaceId"
+          Literal, token: true value: true
+             Type: bool
+             Source: "true"

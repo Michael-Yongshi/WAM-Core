@@ -1,10 +1,10 @@
 // metamask network vincent: http://51.105.171.12
 pragma solidity ^0.5.10;
 
-import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/IERC721.sol";
-import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/IERC721Receiver.sol";
-import "../node_modules/openzeppelin-solidity/contracts/introspection/ERC165.sol";
-import "../node_modules/openzeppelin-solidity/contracts/math/SafeMath.sol";
+import "./openzeppelin-contracts-2.5.0/contracts/token/ERC721/IERC721.sol";
+import "./openzeppelin-contracts-2.5.0/contracts/token/ERC721/IERC721Receiver.sol";
+import "./openzeppelin-contracts-2.5.0/contracts/introspection/ERC165.sol";
+import "./openzeppelin-contracts-2.5.0/contracts/math/SafeMath.sol";
 
 contract CryptoCharacter is IERC721, ERC165 {
 

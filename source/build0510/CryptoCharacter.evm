@@ -1,0 +1,6962 @@
+    /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":390:13112  contract CryptoCharacter is IERC721, ERC165 {... */
+  mstore(0x40, 0x80)
+    /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/introspection/ERC165.sol":718:758  _registerInterface(_INTERFACE_ID_ERC165) */
+  tag_3
+    /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/introspection/ERC165.sol":737:757  _INTERFACE_ID_ERC165 */
+  0x01ffc9a700000000000000000000000000000000000000000000000000000000
+  sub(shl(0xe0, 0x01), 0x01)
+    /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/introspection/ERC165.sol":718:736  _registerInterface */
+  tag_4
+    /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/introspection/ERC165.sol":718:758  _registerInterface(_INTERFACE_ID_ERC165) */
+  and
+  jump	// in
+tag_3:
+    /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":390:13112  contract CryptoCharacter is IERC721, ERC165 {... */
+  jump(tag_5)
+    /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/introspection/ERC165.sol":1442:1632  function _registerInterface(bytes4 interfaceId) internal {... */
+tag_4:
+    /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/introspection/ERC165.sol":1517:1542  interfaceId != 0xffffffff */
+  0xffffffff00000000000000000000000000000000000000000000000000000000
+  dup1
+  dup3
+  and
+  eq
+  iszero
+    /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/introspection/ERC165.sol":1509:1575  require(interfaceId != 0xffffffff, "ERC165: invalid interface id") */
+  tag_7
+  jumpi
+  0x40
+  dup1
+  mload
+  0x08c379a000000000000000000000000000000000000000000000000000000000
+  dup2
+  mstore
+  0x20
+  0x04
+  dup3
+  add
+  mstore
+  0x1c
+  0x24
+  dup3
+  add
+  mstore
+  0x4552433136353a20696e76616c696420696e7465726661636520696400000000
+  0x44
+  dup3
+  add
+  mstore
+  swap1
+  mload
+  swap1
+  dup2
+  swap1
+  sub
+  0x64
+  add
+  swap1
+  revert
+tag_7:
+    /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/introspection/ERC165.sol":1585:1618  _supportedInterfaces[interfaceId] */
+  0xffffffff00000000000000000000000000000000000000000000000000000000
+  and
+    /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/introspection/ERC165.sol":1585:1605  _supportedInterfaces */
+  0x00
+    /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/introspection/ERC165.sol":1585:1618  _supportedInterfaces[interfaceId] */
+  swap1
+  dup2
+  mstore
+  0x20
+  dup2
+  swap1
+  mstore
+  0x40
+  swap1
+  keccak256
+    /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/introspection/ERC165.sol":1585:1625  _supportedInterfaces[interfaceId] = true */
+  dup1
+  sload
+  not(0xff)
+  and
+    /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/introspection/ERC165.sol":1621:1625  true */
+  0x01
+    /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/introspection/ERC165.sol":1585:1625  _supportedInterfaces[interfaceId] = true */
+  or
+  swap1
+  sstore
+    /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/introspection/ERC165.sol":1442:1632  function _registerInterface(bytes4 interfaceId) internal {... */
+  jump	// out
+    /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":390:13112  contract CryptoCharacter is IERC721, ERC165 {... */
+tag_5:
+  dataSize(sub_0)
+  dup1
+  dataOffset(sub_0)
+  0x00
+  codecopy
+  0x00
+  return
+stop
+
+sub_0: assembly {
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":390:13112  contract CryptoCharacter is IERC721, ERC165 {... */
+      mstore(0x40, 0x80)
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_1
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x00
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_1:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":390:13112  contract CryptoCharacter is IERC721, ERC165 {... */
+      pop
+      jumpi(tag_2, lt(calldatasize, 0x04))
+      shr(0xe0, calldataload(0x00))
+      dup1
+      0x6352211e
+      gt
+      tag_26
+      jumpi
+      dup1
+      0xb2e6ceeb
+      gt
+      tag_27
+      jumpi
+      dup1
+      0xb2e6ceeb
+      eq
+      tag_20
+      jumpi
+      dup1
+      0xb39b8677
+      eq
+      tag_21
+      jumpi
+      dup1
+      0xb88d4fde
+      eq
+      tag_22
+      jumpi
+      dup1
+      0xc5bb28f8
+      eq
+      tag_23
+      jumpi
+      dup1
+      0xcc87c40c
+      eq
+      tag_24
+      jumpi
+      dup1
+      0xe985e9c5
+      eq
+      tag_25
+      jumpi
+      jump(tag_2)
+    tag_27:
+      dup1
+      0x6352211e
+      eq
+      tag_14
+      jumpi
+      dup1
+      0x65e5a94b
+      eq
+      tag_15
+      jumpi
+      dup1
+      0x70a08231
+      eq
+      tag_16
+      jumpi
+      dup1
+      0x75857b68
+      eq
+      tag_17
+      jumpi
+      dup1
+      0xa1d255e1
+      eq
+      tag_18
+      jumpi
+      dup1
+      0xa22cb465
+      eq
+      tag_19
+      jumpi
+      jump(tag_2)
+    tag_26:
+      dup1
+      0x19e7ce8b
+      gt
+      tag_28
+      jumpi
+      dup1
+      0x19e7ce8b
+      eq
+      tag_8
+      jumpi
+      dup1
+      0x23b872dd
+      eq
+      tag_9
+      jumpi
+      dup1
+      0x3ac053f9
+      eq
+      tag_10
+      jumpi
+      dup1
+      0x42842e0e
+      eq
+      tag_11
+      jumpi
+      dup1
+      0x42966c68
+      eq
+      tag_12
+      jumpi
+      dup1
+      0x4810bc59
+      eq
+      tag_13
+      jumpi
+      jump(tag_2)
+    tag_28:
+      dup1
+      0x01ffc9a7
+      eq
+      tag_3
+      jumpi
+      dup1
+      0x081812fc
+      eq
+      tag_4
+      jumpi
+      dup1
+      0x095ea7b3
+      eq
+      tag_5
+      jumpi
+      dup1
+      0x0b791430
+      eq
+      tag_6
+      jumpi
+      dup1
+      0x152bca49
+      eq
+      tag_7
+      jumpi
+    tag_2:
+      0x00
+      dup1
+      revert
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/introspection/ERC165.sol":915:1048  function supportsInterface(bytes4 interfaceId) external view returns (bool) {... */
+    tag_3:
+      tag_29
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x20
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_30
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_30:
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/introspection/ERC165.sol":915:1048  function supportsInterface(bytes4 interfaceId) external view returns (bool) {... */
+      calldataload
+      not(sub(shl(0xe0, 0x01), 0x01))
+      and
+      tag_31
+      jump	// in
+    tag_29:
+      0x40
+      dup1
+      mload
+      swap2
+      iszero
+      iszero
+      dup3
+      mstore
+      mload
+      swap1
+      dup2
+      swap1
+      sub
+      0x20
+      add
+      swap1
+      return
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9479:9688  function getApproved(uint256 characterId)... */
+    tag_4:
+      tag_32
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x20
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_33
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_33:
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9479:9688  function getApproved(uint256 characterId)... */
+      calldataload
+      tag_34
+      jump	// in
+    tag_32:
+      0x40
+      dup1
+      mload
+      sub(shl(0xa0, 0x01), 0x01)
+      swap1
+      swap3
+      and
+      dup3
+      mstore
+      mload
+      swap1
+      dup2
+      swap1
+      sub
+      0x20
+      add
+      swap1
+      return
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9167:9416  function approve(address _to, uint256 _characterId)... */
+    tag_5:
+      tag_35
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x40
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_36
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_36:
+      pop
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9167:9416  function approve(address _to, uint256 _characterId)... */
+      dup2
+      calldataload
+      and
+      swap1
+      0x20
+      add
+      calldataload
+      tag_37
+      jump	// in
+    tag_35:
+      stop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":1420:1441  Event[] public events */
+    tag_6:
+      tag_38
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x20
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_39
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_39:
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":1420:1441  Event[] public events */
+      calldataload
+      tag_40
+      jump	// in
+    tag_38:
+      0x40
+      dup1
+      mload
+      0x20
+      dup1
+      dup3
+      mstore
+      dup4
+      mload
+      dup2
+      dup4
+      add
+      mstore
+      dup4
+      mload
+      swap2
+      swap3
+      dup4
+      swap3
+      swap1
+      dup4
+      add
+      swap2
+      dup6
+      add
+      swap1
+      dup1
+      dup4
+      dup4
+      0x00
+        /* "--CODEGEN--":8:108   */
+    tag_41:
+        /* "--CODEGEN--":33:36   */
+      dup4
+        /* "--CODEGEN--":30:31   */
+      dup2
+        /* "--CODEGEN--":27:37   */
+      lt
+        /* "--CODEGEN--":8:108   */
+      iszero
+      tag_43
+      jumpi
+        /* "--CODEGEN--":90:101   */
+      dup2
+      dup2
+      add
+        /* "--CODEGEN--":84:102   */
+      mload
+        /* "--CODEGEN--":71:82   */
+      dup4
+      dup3
+      add
+        /* "--CODEGEN--":64:103   */
+      mstore
+        /* "--CODEGEN--":52:54   */
+      0x20
+        /* "--CODEGEN--":45:55   */
+      add
+        /* "--CODEGEN--":8:108   */
+      jump(tag_41)
+    tag_43:
+        /* "--CODEGEN--":12:26   */
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":1420:1441  Event[] public events */
+      pop
+      pop
+      pop
+      swap1
+      pop
+      swap1
+      dup2
+      add
+      swap1
+      0x1f
+      and
+      dup1
+      iszero
+      tag_44
+      jumpi
+      dup1
+      dup3
+      sub
+      dup1
+      mload
+      0x01
+      dup4
+      0x20
+      sub
+      0x0100
+      exp
+      sub
+      not
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+    tag_44:
+      pop
+      swap3
+      pop
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":1745:1797  mapping (address => uint) public ownerCharacterCount */
+    tag_7:
+      tag_45
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x20
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_46
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_46:
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":1745:1797  mapping (address => uint) public ownerCharacterCount */
+      calldataload
+      sub(shl(0xa0, 0x01), 0x01)
+      and
+      tag_47
+      jump	// in
+    tag_45:
+      0x40
+      dup1
+      mload
+      swap2
+      dup3
+      mstore
+      mload
+      swap1
+      dup2
+      swap1
+      sub
+      0x20
+      add
+      swap1
+      return
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":1528:1577  mapping (uint => address) public characterToOwner */
+    tag_8:
+      tag_32
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x20
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_49
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_49:
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":1528:1577  mapping (uint => address) public characterToOwner */
+      calldataload
+      tag_50
+      jump	// in
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5778:6379  function transferFrom(address _from, address _to, uint256 _characterId)... */
+    tag_9:
+      tag_35
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x60
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_52
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_52:
+      pop
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5778:6379  function transferFrom(address _from, address _to, uint256 _characterId)... */
+      dup2
+      calldataload
+      dup2
+      and
+      swap2
+      0x20
+      dup2
+      add
+      calldataload
+      swap1
+      swap2
+      and
+      swap1
+      0x40
+      add
+      calldataload
+      tag_53
+      jump	// in
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4430:4769  function generateRandomDna(string memory _str, address _owner)... */
+    tag_10:
+      tag_45
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x40
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_55
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_55:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4430:4769  function generateRandomDna(string memory _str, address _owner)... */
+      dup2
+      add
+      swap1
+      0x20
+      dup2
+      add
+      dup2
+      calldataload
+      shl(0x20, 0x01)
+        /* "--CODEGEN--":5:33   */
+      dup2
+      gt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_56
+      jumpi
+        /* "--CODEGEN--":46:47   */
+      0x00
+        /* "--CODEGEN--":43:44   */
+      dup1
+        /* "--CODEGEN--":36:48   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_56:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4430:4769  function generateRandomDna(string memory _str, address _owner)... */
+      dup3
+      add
+        /* "--CODEGEN--":35:44   */
+      dup4
+        /* "--CODEGEN--":28:32   */
+      0x20
+        /* "--CODEGEN--":12:26   */
+      dup3
+        /* "--CODEGEN--":8:33   */
+      add
+        /* "--CODEGEN--":5:45   */
+      gt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_57
+      jumpi
+        /* "--CODEGEN--":58:59   */
+      0x00
+        /* "--CODEGEN--":55:56   */
+      dup1
+        /* "--CODEGEN--":48:60   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_57:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4430:4769  function generateRandomDna(string memory _str, address _owner)... */
+      dup1
+      calldataload
+      swap1
+      0x20
+      add
+      swap2
+        /* "--CODEGEN--":100:109   */
+      dup5
+        /* "--CODEGEN--":95:96   */
+      0x01
+        /* "--CODEGEN--":81:93   */
+      dup4
+        /* "--CODEGEN--":77:97   */
+      mul
+        /* "--CODEGEN--":67:75   */
+      dup5
+        /* "--CODEGEN--":63:98   */
+      add
+        /* "--CODEGEN--":60:110   */
+      gt
+      shl(0x20, 0x01)
+        /* "--CODEGEN--":25:37   */
+      dup4
+        /* "--CODEGEN--":22:51   */
+      gt
+        /* "--CODEGEN--":11:118   */
+      or
+        /* "--CODEGEN--":8:10   */
+      iszero
+      tag_58
+      jumpi
+        /* "--CODEGEN--":131:132   */
+      0x00
+        /* "--CODEGEN--":128:129   */
+      dup1
+        /* "--CODEGEN--":121:133   */
+      revert
+        /* "--CODEGEN--":8:10   */
+    tag_58:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4430:4769  function generateRandomDna(string memory _str, address _owner)... */
+      swap2
+      swap1
+      dup1
+      dup1
+      0x1f
+      add
+      0x20
+      dup1
+      swap2
+      div
+      mul
+      0x20
+      add
+      mload(0x40)
+      swap1
+      dup2
+      add
+      0x40
+      mstore
+      dup1
+      swap4
+      swap3
+      swap2
+      swap1
+      dup2
+      dup2
+      mstore
+      0x20
+      add
+      dup4
+      dup4
+        /* "--CODEGEN--":30:33   */
+      dup1
+        /* "--CODEGEN--":22:28   */
+      dup3
+        /* "--CODEGEN--":14:20   */
+      dup5
+        /* "--CODEGEN--":1:34   */
+      calldatacopy
+        /* "--CODEGEN--":99:100   */
+      0x00
+        /* "--CODEGEN--":81:97   */
+      swap3
+      add
+        /* "--CODEGEN--":74:101   */
+      swap2
+      swap1
+      swap2
+      mstore
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4430:4769  function generateRandomDna(string memory _str, address _owner)... */
+      swap3
+      swap6
+      pop
+      pop
+      pop
+      swap1
+      calldataload
+      sub(shl(0xa0, 0x01), 0x01)
+      and
+      swap2
+      pop
+      tag_59
+      swap1
+      pop
+      jump	// in
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6763:6974  function safeTransferFrom(address from, address to, uint256 characterId)... */
+    tag_11:
+      tag_35
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x60
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_61
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_61:
+      pop
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6763:6974  function safeTransferFrom(address from, address to, uint256 characterId)... */
+      dup2
+      calldataload
+      dup2
+      and
+      swap2
+      0x20
+      dup2
+      add
+      calldataload
+      swap1
+      swap2
+      and
+      swap1
+      0x40
+      add
+      calldataload
+      tag_62
+      jump	// in
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8224:8589  function burn(uint256 _characterId)... */
+    tag_12:
+      tag_35
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x20
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_64
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_64:
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8224:8589  function burn(uint256 _characterId)... */
+      calldataload
+      tag_65
+      jump	// in
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":1324:1353  Character[] public characters */
+    tag_13:
+      tag_66
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x20
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_67
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_67:
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":1324:1353  Character[] public characters */
+      calldataload
+      tag_68
+      jump	// in
+    tag_66:
+      mload(0x40)
+      dup1
+      dup1
+      0x20
+      add
+      dup1
+      0x20
+      add
+      dup1
+      0x20
+      add
+      dup1
+      0x20
+      add
+      dup7
+      dup2
+      mstore
+      0x20
+      add
+      dup6
+      dup2
+      sub
+      dup6
+      mstore
+      dup11
+      dup2
+      dup2
+      mload
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      dup1
+      mload
+      swap1
+      0x20
+      add
+      swap1
+      dup1
+      dup4
+      dup4
+        /* "--CODEGEN--":23:24   */
+      0x00
+        /* "--CODEGEN--":8:108   */
+    tag_69:
+        /* "--CODEGEN--":33:36   */
+      dup4
+        /* "--CODEGEN--":30:31   */
+      dup2
+        /* "--CODEGEN--":27:37   */
+      lt
+        /* "--CODEGEN--":8:108   */
+      iszero
+      tag_71
+      jumpi
+        /* "--CODEGEN--":90:101   */
+      dup2
+      dup2
+      add
+        /* "--CODEGEN--":84:102   */
+      mload
+        /* "--CODEGEN--":71:82   */
+      dup4
+      dup3
+      add
+        /* "--CODEGEN--":64:103   */
+      mstore
+        /* "--CODEGEN--":52:54   */
+      0x20
+        /* "--CODEGEN--":45:55   */
+      add
+        /* "--CODEGEN--":8:108   */
+      jump(tag_69)
+    tag_71:
+        /* "--CODEGEN--":12:26   */
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":1324:1353  Character[] public characters */
+      pop
+      pop
+      pop
+      swap1
+      pop
+      swap1
+      dup2
+      add
+      swap1
+      0x1f
+      and
+      dup1
+      iszero
+      tag_72
+      jumpi
+      dup1
+      dup3
+      sub
+      dup1
+      mload
+      0x01
+      dup4
+      0x20
+      sub
+      0x0100
+      exp
+      sub
+      not
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+    tag_72:
+      pop
+      dup6
+      dup2
+      sub
+      dup5
+      mstore
+      dup10
+      mload
+      dup2
+      mstore
+      dup10
+      mload
+      0x20
+      swap2
+      dup3
+      add
+      swap2
+      dup12
+      add
+      swap1
+      dup1
+      dup4
+      dup4
+        /* "--CODEGEN--":23:24   */
+      0x00
+        /* "--CODEGEN--":8:108   */
+    tag_73:
+        /* "--CODEGEN--":33:36   */
+      dup4
+        /* "--CODEGEN--":30:31   */
+      dup2
+        /* "--CODEGEN--":27:37   */
+      lt
+        /* "--CODEGEN--":8:108   */
+      iszero
+      tag_75
+      jumpi
+        /* "--CODEGEN--":90:101   */
+      dup2
+      dup2
+      add
+        /* "--CODEGEN--":84:102   */
+      mload
+        /* "--CODEGEN--":71:82   */
+      dup4
+      dup3
+      add
+        /* "--CODEGEN--":64:103   */
+      mstore
+        /* "--CODEGEN--":52:54   */
+      0x20
+        /* "--CODEGEN--":45:55   */
+      add
+        /* "--CODEGEN--":8:108   */
+      jump(tag_73)
+    tag_75:
+        /* "--CODEGEN--":12:26   */
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":1324:1353  Character[] public characters */
+      pop
+      pop
+      pop
+      swap1
+      pop
+      swap1
+      dup2
+      add
+      swap1
+      0x1f
+      and
+      dup1
+      iszero
+      tag_76
+      jumpi
+      dup1
+      dup3
+      sub
+      dup1
+      mload
+      0x01
+      dup4
+      0x20
+      sub
+      0x0100
+      exp
+      sub
+      not
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+    tag_76:
+      pop
+      dup6
+      dup2
+      sub
+      dup4
+      mstore
+      dup9
+      mload
+      dup2
+      mstore
+      dup9
+      mload
+      0x20
+      swap2
+      dup3
+      add
+      swap2
+      dup11
+      add
+      swap1
+      dup1
+      dup4
+      dup4
+        /* "--CODEGEN--":23:24   */
+      0x00
+        /* "--CODEGEN--":8:108   */
+    tag_77:
+        /* "--CODEGEN--":33:36   */
+      dup4
+        /* "--CODEGEN--":30:31   */
+      dup2
+        /* "--CODEGEN--":27:37   */
+      lt
+        /* "--CODEGEN--":8:108   */
+      iszero
+      tag_79
+      jumpi
+        /* "--CODEGEN--":90:101   */
+      dup2
+      dup2
+      add
+        /* "--CODEGEN--":84:102   */
+      mload
+        /* "--CODEGEN--":71:82   */
+      dup4
+      dup3
+      add
+        /* "--CODEGEN--":64:103   */
+      mstore
+        /* "--CODEGEN--":52:54   */
+      0x20
+        /* "--CODEGEN--":45:55   */
+      add
+        /* "--CODEGEN--":8:108   */
+      jump(tag_77)
+    tag_79:
+        /* "--CODEGEN--":12:26   */
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":1324:1353  Character[] public characters */
+      pop
+      pop
+      pop
+      swap1
+      pop
+      swap1
+      dup2
+      add
+      swap1
+      0x1f
+      and
+      dup1
+      iszero
+      tag_80
+      jumpi
+      dup1
+      dup3
+      sub
+      dup1
+      mload
+      0x01
+      dup4
+      0x20
+      sub
+      0x0100
+      exp
+      sub
+      not
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+    tag_80:
+      pop
+      dup6
+      dup2
+      sub
+      dup3
+      mstore
+      dup8
+      mload
+      dup2
+      mstore
+      dup8
+      mload
+      0x20
+      swap2
+      dup3
+      add
+      swap2
+      dup10
+      add
+      swap1
+      dup1
+      dup4
+      dup4
+        /* "--CODEGEN--":23:24   */
+      0x00
+        /* "--CODEGEN--":8:108   */
+    tag_81:
+        /* "--CODEGEN--":33:36   */
+      dup4
+        /* "--CODEGEN--":30:31   */
+      dup2
+        /* "--CODEGEN--":27:37   */
+      lt
+        /* "--CODEGEN--":8:108   */
+      iszero
+      tag_83
+      jumpi
+        /* "--CODEGEN--":90:101   */
+      dup2
+      dup2
+      add
+        /* "--CODEGEN--":84:102   */
+      mload
+        /* "--CODEGEN--":71:82   */
+      dup4
+      dup3
+      add
+        /* "--CODEGEN--":64:103   */
+      mstore
+        /* "--CODEGEN--":52:54   */
+      0x20
+        /* "--CODEGEN--":45:55   */
+      add
+        /* "--CODEGEN--":8:108   */
+      jump(tag_81)
+    tag_83:
+        /* "--CODEGEN--":12:26   */
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":1324:1353  Character[] public characters */
+      pop
+      pop
+      pop
+      swap1
+      pop
+      swap1
+      dup2
+      add
+      swap1
+      0x1f
+      and
+      dup1
+      iszero
+      tag_84
+      jumpi
+      dup1
+      dup3
+      sub
+      dup1
+      mload
+      0x01
+      dup4
+      0x20
+      sub
+      0x0100
+      exp
+      sub
+      not
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+    tag_84:
+      pop
+      swap10
+      pop
+      pop
+      pop
+      pop
+      pop
+      pop
+      pop
+      pop
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8861:9095  function ownerOf(uint256 _characterId)... */
+    tag_14:
+      tag_32
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x20
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_86
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_86:
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8861:9095  function ownerOf(uint256 _characterId)... */
+      calldataload
+      tag_87
+      jump	// in
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4828:5271  function getCharactersByOwner(address _owner)... */
+    tag_15:
+      tag_88
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x20
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_89
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_89:
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4828:5271  function getCharactersByOwner(address _owner)... */
+      calldataload
+      sub(shl(0xa0, 0x01), 0x01)
+      and
+      tag_90
+      jump	// in
+    tag_88:
+      0x40
+      dup1
+      mload
+      0x20
+      dup1
+      dup3
+      mstore
+      dup4
+      mload
+      dup2
+      dup4
+      add
+      mstore
+      dup4
+      mload
+      swap2
+      swap3
+      dup4
+      swap3
+      swap1
+      dup4
+      add
+      swap2
+      dup6
+      dup2
+      add
+      swap2
+      mul
+      dup1
+      dup4
+      dup4
+      0x00
+        /* "--CODEGEN--":8:108   */
+    tag_91:
+        /* "--CODEGEN--":33:36   */
+      dup4
+        /* "--CODEGEN--":30:31   */
+      dup2
+        /* "--CODEGEN--":27:37   */
+      lt
+        /* "--CODEGEN--":8:108   */
+      iszero
+      tag_93
+      jumpi
+        /* "--CODEGEN--":90:101   */
+      dup2
+      dup2
+      add
+        /* "--CODEGEN--":84:102   */
+      mload
+        /* "--CODEGEN--":71:82   */
+      dup4
+      dup3
+      add
+        /* "--CODEGEN--":64:103   */
+      mstore
+        /* "--CODEGEN--":52:54   */
+      0x20
+        /* "--CODEGEN--":45:55   */
+      add
+        /* "--CODEGEN--":8:108   */
+      jump(tag_91)
+    tag_93:
+        /* "--CODEGEN--":12:26   */
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4828:5271  function getCharactersByOwner(address _owner)... */
+      pop
+      pop
+      pop
+      swap1
+      pop
+      add
+      swap3
+      pop
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8644:8802  function balanceOf(address _owner)... */
+    tag_16:
+      tag_45
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x20
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_95
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_95:
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8644:8802  function balanceOf(address _owner)... */
+      calldataload
+      sub(shl(0xa0, 0x01), 0x01)
+      and
+      tag_96
+      jump	// in
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3919:4334  function createRandomCharacter(... */
+    tag_17:
+      tag_35
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:16   */
+      0x80
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:17   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_98
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x00
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_98:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3919:4334  function createRandomCharacter(... */
+      dup2
+      add
+      swap1
+      0x20
+      dup2
+      add
+      dup2
+      calldataload
+      shl(0x20, 0x01)
+        /* "--CODEGEN--":5:33   */
+      dup2
+      gt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_99
+      jumpi
+        /* "--CODEGEN--":46:47   */
+      0x00
+        /* "--CODEGEN--":43:44   */
+      dup1
+        /* "--CODEGEN--":36:48   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_99:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3919:4334  function createRandomCharacter(... */
+      dup3
+      add
+        /* "--CODEGEN--":35:44   */
+      dup4
+        /* "--CODEGEN--":28:32   */
+      0x20
+        /* "--CODEGEN--":12:26   */
+      dup3
+        /* "--CODEGEN--":8:33   */
+      add
+        /* "--CODEGEN--":5:45   */
+      gt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_100
+      jumpi
+        /* "--CODEGEN--":58:59   */
+      0x00
+        /* "--CODEGEN--":55:56   */
+      dup1
+        /* "--CODEGEN--":48:60   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_100:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3919:4334  function createRandomCharacter(... */
+      dup1
+      calldataload
+      swap1
+      0x20
+      add
+      swap2
+        /* "--CODEGEN--":100:109   */
+      dup5
+        /* "--CODEGEN--":95:96   */
+      0x01
+        /* "--CODEGEN--":81:93   */
+      dup4
+        /* "--CODEGEN--":77:97   */
+      mul
+        /* "--CODEGEN--":67:75   */
+      dup5
+        /* "--CODEGEN--":63:98   */
+      add
+        /* "--CODEGEN--":60:110   */
+      gt
+      shl(0x20, 0x01)
+        /* "--CODEGEN--":25:37   */
+      dup4
+        /* "--CODEGEN--":22:51   */
+      gt
+        /* "--CODEGEN--":11:118   */
+      or
+        /* "--CODEGEN--":8:10   */
+      iszero
+      tag_101
+      jumpi
+        /* "--CODEGEN--":131:132   */
+      0x00
+        /* "--CODEGEN--":128:129   */
+      dup1
+        /* "--CODEGEN--":121:133   */
+      revert
+        /* "--CODEGEN--":8:10   */
+    tag_101:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3919:4334  function createRandomCharacter(... */
+      swap2
+      swap1
+      dup1
+      dup1
+      0x1f
+      add
+      0x20
+      dup1
+      swap2
+      div
+      mul
+      0x20
+      add
+      mload(0x40)
+      swap1
+      dup2
+      add
+      0x40
+      mstore
+      dup1
+      swap4
+      swap3
+      swap2
+      swap1
+      dup2
+      dup2
+      mstore
+      0x20
+      add
+      dup4
+      dup4
+        /* "--CODEGEN--":30:33   */
+      dup1
+        /* "--CODEGEN--":22:28   */
+      dup3
+        /* "--CODEGEN--":14:20   */
+      dup5
+        /* "--CODEGEN--":1:34   */
+      calldatacopy
+        /* "--CODEGEN--":99:100   */
+      0x00
+        /* "--CODEGEN--":81:97   */
+      swap3
+      add
+        /* "--CODEGEN--":74:101   */
+      swap2
+      swap1
+      swap2
+      mstore
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3919:4334  function createRandomCharacter(... */
+      swap3
+      swap6
+      swap5
+      swap4
+      0x20
+      dup2
+      add
+      swap4
+      pop
+      calldataload
+      swap2
+      pop
+      pop
+      shl(0x20, 0x01)
+        /* "--CODEGEN--":5:33   */
+      dup2
+      gt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_102
+      jumpi
+        /* "--CODEGEN--":46:47   */
+      0x00
+        /* "--CODEGEN--":43:44   */
+      dup1
+        /* "--CODEGEN--":36:48   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_102:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3919:4334  function createRandomCharacter(... */
+      dup3
+      add
+        /* "--CODEGEN--":35:44   */
+      dup4
+        /* "--CODEGEN--":28:32   */
+      0x20
+        /* "--CODEGEN--":12:26   */
+      dup3
+        /* "--CODEGEN--":8:33   */
+      add
+        /* "--CODEGEN--":5:45   */
+      gt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_103
+      jumpi
+        /* "--CODEGEN--":58:59   */
+      0x00
+        /* "--CODEGEN--":55:56   */
+      dup1
+        /* "--CODEGEN--":48:60   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_103:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3919:4334  function createRandomCharacter(... */
+      dup1
+      calldataload
+      swap1
+      0x20
+      add
+      swap2
+        /* "--CODEGEN--":100:109   */
+      dup5
+        /* "--CODEGEN--":95:96   */
+      0x01
+        /* "--CODEGEN--":81:93   */
+      dup4
+        /* "--CODEGEN--":77:97   */
+      mul
+        /* "--CODEGEN--":67:75   */
+      dup5
+        /* "--CODEGEN--":63:98   */
+      add
+        /* "--CODEGEN--":60:110   */
+      gt
+      shl(0x20, 0x01)
+        /* "--CODEGEN--":25:37   */
+      dup4
+        /* "--CODEGEN--":22:51   */
+      gt
+        /* "--CODEGEN--":11:118   */
+      or
+        /* "--CODEGEN--":8:10   */
+      iszero
+      tag_104
+      jumpi
+        /* "--CODEGEN--":131:132   */
+      0x00
+        /* "--CODEGEN--":128:129   */
+      dup1
+        /* "--CODEGEN--":121:133   */
+      revert
+        /* "--CODEGEN--":8:10   */
+    tag_104:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3919:4334  function createRandomCharacter(... */
+      swap2
+      swap1
+      dup1
+      dup1
+      0x1f
+      add
+      0x20
+      dup1
+      swap2
+      div
+      mul
+      0x20
+      add
+      mload(0x40)
+      swap1
+      dup2
+      add
+      0x40
+      mstore
+      dup1
+      swap4
+      swap3
+      swap2
+      swap1
+      dup2
+      dup2
+      mstore
+      0x20
+      add
+      dup4
+      dup4
+        /* "--CODEGEN--":30:33   */
+      dup1
+        /* "--CODEGEN--":22:28   */
+      dup3
+        /* "--CODEGEN--":14:20   */
+      dup5
+        /* "--CODEGEN--":1:34   */
+      calldatacopy
+        /* "--CODEGEN--":99:100   */
+      0x00
+        /* "--CODEGEN--":81:97   */
+      swap3
+      add
+        /* "--CODEGEN--":74:101   */
+      swap2
+      swap1
+      swap2
+      mstore
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3919:4334  function createRandomCharacter(... */
+      swap3
+      swap6
+      swap5
+      swap4
+      0x20
+      dup2
+      add
+      swap4
+      pop
+      calldataload
+      swap2
+      pop
+      pop
+      shl(0x20, 0x01)
+        /* "--CODEGEN--":5:33   */
+      dup2
+      gt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_105
+      jumpi
+        /* "--CODEGEN--":46:47   */
+      0x00
+        /* "--CODEGEN--":43:44   */
+      dup1
+        /* "--CODEGEN--":36:48   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_105:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3919:4334  function createRandomCharacter(... */
+      dup3
+      add
+        /* "--CODEGEN--":35:44   */
+      dup4
+        /* "--CODEGEN--":28:32   */
+      0x20
+        /* "--CODEGEN--":12:26   */
+      dup3
+        /* "--CODEGEN--":8:33   */
+      add
+        /* "--CODEGEN--":5:45   */
+      gt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_106
+      jumpi
+        /* "--CODEGEN--":58:59   */
+      0x00
+        /* "--CODEGEN--":55:56   */
+      dup1
+        /* "--CODEGEN--":48:60   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_106:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3919:4334  function createRandomCharacter(... */
+      dup1
+      calldataload
+      swap1
+      0x20
+      add
+      swap2
+        /* "--CODEGEN--":100:109   */
+      dup5
+        /* "--CODEGEN--":95:96   */
+      0x01
+        /* "--CODEGEN--":81:93   */
+      dup4
+        /* "--CODEGEN--":77:97   */
+      mul
+        /* "--CODEGEN--":67:75   */
+      dup5
+        /* "--CODEGEN--":63:98   */
+      add
+        /* "--CODEGEN--":60:110   */
+      gt
+      shl(0x20, 0x01)
+        /* "--CODEGEN--":25:37   */
+      dup4
+        /* "--CODEGEN--":22:51   */
+      gt
+        /* "--CODEGEN--":11:118   */
+      or
+        /* "--CODEGEN--":8:10   */
+      iszero
+      tag_107
+      jumpi
+        /* "--CODEGEN--":131:132   */
+      0x00
+        /* "--CODEGEN--":128:129   */
+      dup1
+        /* "--CODEGEN--":121:133   */
+      revert
+        /* "--CODEGEN--":8:10   */
+    tag_107:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3919:4334  function createRandomCharacter(... */
+      swap2
+      swap1
+      dup1
+      dup1
+      0x1f
+      add
+      0x20
+      dup1
+      swap2
+      div
+      mul
+      0x20
+      add
+      mload(0x40)
+      swap1
+      dup2
+      add
+      0x40
+      mstore
+      dup1
+      swap4
+      swap3
+      swap2
+      swap1
+      dup2
+      dup2
+      mstore
+      0x20
+      add
+      dup4
+      dup4
+        /* "--CODEGEN--":30:33   */
+      dup1
+        /* "--CODEGEN--":22:28   */
+      dup3
+        /* "--CODEGEN--":14:20   */
+      dup5
+        /* "--CODEGEN--":1:34   */
+      calldatacopy
+        /* "--CODEGEN--":99:100   */
+      0x00
+        /* "--CODEGEN--":81:97   */
+      swap3
+      add
+        /* "--CODEGEN--":74:101   */
+      swap2
+      swap1
+      swap2
+      mstore
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3919:4334  function createRandomCharacter(... */
+      swap3
+      swap6
+      swap5
+      swap4
+      0x20
+      dup2
+      add
+      swap4
+      pop
+      calldataload
+      swap2
+      pop
+      pop
+      shl(0x20, 0x01)
+        /* "--CODEGEN--":5:33   */
+      dup2
+      gt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_108
+      jumpi
+        /* "--CODEGEN--":46:47   */
+      0x00
+        /* "--CODEGEN--":43:44   */
+      dup1
+        /* "--CODEGEN--":36:48   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_108:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3919:4334  function createRandomCharacter(... */
+      dup3
+      add
+        /* "--CODEGEN--":35:44   */
+      dup4
+        /* "--CODEGEN--":28:32   */
+      0x20
+        /* "--CODEGEN--":12:26   */
+      dup3
+        /* "--CODEGEN--":8:33   */
+      add
+        /* "--CODEGEN--":5:45   */
+      gt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_109
+      jumpi
+        /* "--CODEGEN--":58:59   */
+      0x00
+        /* "--CODEGEN--":55:56   */
+      dup1
+        /* "--CODEGEN--":48:60   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_109:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3919:4334  function createRandomCharacter(... */
+      dup1
+      calldataload
+      swap1
+      0x20
+      add
+      swap2
+        /* "--CODEGEN--":100:109   */
+      dup5
+        /* "--CODEGEN--":95:96   */
+      0x01
+        /* "--CODEGEN--":81:93   */
+      dup4
+        /* "--CODEGEN--":77:97   */
+      mul
+        /* "--CODEGEN--":67:75   */
+      dup5
+        /* "--CODEGEN--":63:98   */
+      add
+        /* "--CODEGEN--":60:110   */
+      gt
+      shl(0x20, 0x01)
+        /* "--CODEGEN--":25:37   */
+      dup4
+        /* "--CODEGEN--":22:51   */
+      gt
+        /* "--CODEGEN--":11:118   */
+      or
+        /* "--CODEGEN--":8:10   */
+      iszero
+      tag_110
+      jumpi
+        /* "--CODEGEN--":131:132   */
+      0x00
+        /* "--CODEGEN--":128:129   */
+      dup1
+        /* "--CODEGEN--":121:133   */
+      revert
+        /* "--CODEGEN--":8:10   */
+    tag_110:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3919:4334  function createRandomCharacter(... */
+      swap2
+      swap1
+      dup1
+      dup1
+      0x1f
+      add
+      0x20
+      dup1
+      swap2
+      div
+      mul
+      0x20
+      add
+      mload(0x40)
+      swap1
+      dup2
+      add
+      0x40
+      mstore
+      dup1
+      swap4
+      swap3
+      swap2
+      swap1
+      dup2
+      dup2
+      mstore
+      0x20
+      add
+      dup4
+      dup4
+        /* "--CODEGEN--":30:33   */
+      dup1
+        /* "--CODEGEN--":22:28   */
+      dup3
+        /* "--CODEGEN--":14:20   */
+      dup5
+        /* "--CODEGEN--":1:34   */
+      calldatacopy
+        /* "--CODEGEN--":99:100   */
+      0x00
+        /* "--CODEGEN--":81:97   */
+      swap3
+      add
+        /* "--CODEGEN--":74:101   */
+      swap2
+      swap1
+      swap2
+      mstore
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3919:4334  function createRandomCharacter(... */
+      swap3
+      swap6
+      pop
+      tag_111
+      swap5
+      pop
+      pop
+      pop
+      pop
+      pop
+      jump	// in
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3266:3853  function createEvent(... */
+    tag_18:
+      tag_35
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x40
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_113
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_113:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3266:3853  function createEvent(... */
+      dup2
+      calldataload
+      swap2
+      swap1
+      dup2
+      add
+      swap1
+      0x40
+      dup2
+      add
+      0x20
+      dup3
+      add
+      calldataload
+      shl(0x20, 0x01)
+        /* "--CODEGEN--":5:33   */
+      dup2
+      gt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_114
+      jumpi
+        /* "--CODEGEN--":46:47   */
+      0x00
+        /* "--CODEGEN--":43:44   */
+      dup1
+        /* "--CODEGEN--":36:48   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_114:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3266:3853  function createEvent(... */
+      dup3
+      add
+        /* "--CODEGEN--":35:44   */
+      dup4
+        /* "--CODEGEN--":28:32   */
+      0x20
+        /* "--CODEGEN--":12:26   */
+      dup3
+        /* "--CODEGEN--":8:33   */
+      add
+        /* "--CODEGEN--":5:45   */
+      gt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_115
+      jumpi
+        /* "--CODEGEN--":58:59   */
+      0x00
+        /* "--CODEGEN--":55:56   */
+      dup1
+        /* "--CODEGEN--":48:60   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_115:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3266:3853  function createEvent(... */
+      dup1
+      calldataload
+      swap1
+      0x20
+      add
+      swap2
+        /* "--CODEGEN--":100:109   */
+      dup5
+        /* "--CODEGEN--":95:96   */
+      0x01
+        /* "--CODEGEN--":81:93   */
+      dup4
+        /* "--CODEGEN--":77:97   */
+      mul
+        /* "--CODEGEN--":67:75   */
+      dup5
+        /* "--CODEGEN--":63:98   */
+      add
+        /* "--CODEGEN--":60:110   */
+      gt
+      shl(0x20, 0x01)
+        /* "--CODEGEN--":25:37   */
+      dup4
+        /* "--CODEGEN--":22:51   */
+      gt
+        /* "--CODEGEN--":11:118   */
+      or
+        /* "--CODEGEN--":8:10   */
+      iszero
+      tag_116
+      jumpi
+        /* "--CODEGEN--":131:132   */
+      0x00
+        /* "--CODEGEN--":128:129   */
+      dup1
+        /* "--CODEGEN--":121:133   */
+      revert
+        /* "--CODEGEN--":8:10   */
+    tag_116:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3266:3853  function createEvent(... */
+      swap2
+      swap1
+      dup1
+      dup1
+      0x1f
+      add
+      0x20
+      dup1
+      swap2
+      div
+      mul
+      0x20
+      add
+      mload(0x40)
+      swap1
+      dup2
+      add
+      0x40
+      mstore
+      dup1
+      swap4
+      swap3
+      swap2
+      swap1
+      dup2
+      dup2
+      mstore
+      0x20
+      add
+      dup4
+      dup4
+        /* "--CODEGEN--":30:33   */
+      dup1
+        /* "--CODEGEN--":22:28   */
+      dup3
+        /* "--CODEGEN--":14:20   */
+      dup5
+        /* "--CODEGEN--":1:34   */
+      calldatacopy
+        /* "--CODEGEN--":99:100   */
+      0x00
+        /* "--CODEGEN--":81:97   */
+      swap3
+      add
+        /* "--CODEGEN--":74:101   */
+      swap2
+      swap1
+      swap2
+      mstore
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3266:3853  function createEvent(... */
+      swap3
+      swap6
+      pop
+      tag_117
+      swap5
+      pop
+      pop
+      pop
+      pop
+      pop
+      jump	// in
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10330:10560  function setApprovalForAll(address to, bool approved)... */
+    tag_19:
+      tag_35
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x40
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_119
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_119:
+      pop
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10330:10560  function setApprovalForAll(address to, bool approved)... */
+      dup2
+      calldataload
+      and
+      swap1
+      0x20
+      add
+      calldataload
+      iszero
+      iszero
+      tag_120
+      jump	// in
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10878:11130  function takeOwnership(uint256 _characterId)... */
+    tag_20:
+      tag_35
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x20
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_122
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_122:
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10878:11130  function takeOwnership(uint256 _characterId)... */
+      calldataload
+      tag_123
+      jump	// in
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":1638:1684  mapping (uint => uint) public eventToCharacter */
+    tag_21:
+      tag_45
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x20
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_125
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_125:
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":1638:1684  mapping (uint => uint) public eventToCharacter */
+      calldataload
+      tag_126
+      jump	// in
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7325:7620  function safeTransferFrom(address from, address to, uint256 characterId, bytes memory _data)... */
+    tag_22:
+      tag_35
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:16   */
+      0x80
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:17   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_128
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x00
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_128:
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7325:7620  function safeTransferFrom(address from, address to, uint256 characterId, bytes memory _data)... */
+      dup3
+      calldataload
+      dup2
+      and
+      swap3
+      0x20
+      dup2
+      add
+      calldataload
+      swap1
+      swap2
+      and
+      swap2
+      0x40
+      dup3
+      add
+      calldataload
+      swap2
+      swap1
+      dup2
+      add
+      swap1
+      0x80
+      dup2
+      add
+      0x60
+      dup3
+      add
+      calldataload
+      shl(0x20, 0x01)
+        /* "--CODEGEN--":5:33   */
+      dup2
+      gt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_129
+      jumpi
+        /* "--CODEGEN--":46:47   */
+      0x00
+        /* "--CODEGEN--":43:44   */
+      dup1
+        /* "--CODEGEN--":36:48   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_129:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7325:7620  function safeTransferFrom(address from, address to, uint256 characterId, bytes memory _data)... */
+      dup3
+      add
+        /* "--CODEGEN--":35:44   */
+      dup4
+        /* "--CODEGEN--":28:32   */
+      0x20
+        /* "--CODEGEN--":12:26   */
+      dup3
+        /* "--CODEGEN--":8:33   */
+      add
+        /* "--CODEGEN--":5:45   */
+      gt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_130
+      jumpi
+        /* "--CODEGEN--":58:59   */
+      0x00
+        /* "--CODEGEN--":55:56   */
+      dup1
+        /* "--CODEGEN--":48:60   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_130:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7325:7620  function safeTransferFrom(address from, address to, uint256 characterId, bytes memory _data)... */
+      dup1
+      calldataload
+      swap1
+      0x20
+      add
+      swap2
+        /* "--CODEGEN--":100:109   */
+      dup5
+        /* "--CODEGEN--":95:96   */
+      0x01
+        /* "--CODEGEN--":81:93   */
+      dup4
+        /* "--CODEGEN--":77:97   */
+      mul
+        /* "--CODEGEN--":67:75   */
+      dup5
+        /* "--CODEGEN--":63:98   */
+      add
+        /* "--CODEGEN--":60:110   */
+      gt
+      shl(0x20, 0x01)
+        /* "--CODEGEN--":25:37   */
+      dup4
+        /* "--CODEGEN--":22:51   */
+      gt
+        /* "--CODEGEN--":11:118   */
+      or
+        /* "--CODEGEN--":8:10   */
+      iszero
+      tag_131
+      jumpi
+        /* "--CODEGEN--":131:132   */
+      0x00
+        /* "--CODEGEN--":128:129   */
+      dup1
+        /* "--CODEGEN--":121:133   */
+      revert
+        /* "--CODEGEN--":8:10   */
+    tag_131:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7325:7620  function safeTransferFrom(address from, address to, uint256 characterId, bytes memory _data)... */
+      swap2
+      swap1
+      dup1
+      dup1
+      0x1f
+      add
+      0x20
+      dup1
+      swap2
+      div
+      mul
+      0x20
+      add
+      mload(0x40)
+      swap1
+      dup2
+      add
+      0x40
+      mstore
+      dup1
+      swap4
+      swap3
+      swap2
+      swap1
+      dup2
+      dup2
+      mstore
+      0x20
+      add
+      dup4
+      dup4
+        /* "--CODEGEN--":30:33   */
+      dup1
+        /* "--CODEGEN--":22:28   */
+      dup3
+        /* "--CODEGEN--":14:20   */
+      dup5
+        /* "--CODEGEN--":1:34   */
+      calldatacopy
+        /* "--CODEGEN--":99:100   */
+      0x00
+        /* "--CODEGEN--":81:97   */
+      swap3
+      add
+        /* "--CODEGEN--":74:101   */
+      swap2
+      swap1
+      swap2
+      mstore
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7325:7620  function safeTransferFrom(address from, address to, uint256 characterId, bytes memory _data)... */
+      swap3
+      swap6
+      pop
+      tag_132
+      swap5
+      pop
+      pop
+      pop
+      pop
+      pop
+      jump	// in
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":1863:1912  mapping (uint => uint) public characterEventCount */
+    tag_23:
+      tag_45
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x20
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_134
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_134:
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":1863:1912  mapping (uint => uint) public characterEventCount */
+      calldataload
+      tag_135
+      jump	// in
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5332:5707  function getEventsByCharacter(uint _characterId)... */
+    tag_24:
+      tag_88
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x20
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_137
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_137:
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5332:5707  function getEventsByCharacter(uint _characterId)... */
+      calldataload
+      tag_138
+      jump	// in
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10631:10808  function isApprovedForAll(address owner, address operator)... */
+    tag_25:
+      tag_29
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x40
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_143
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_143:
+      pop
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10631:10808  function isApprovedForAll(address owner, address operator)... */
+      dup2
+      calldataload
+      dup2
+      and
+      swap2
+      0x20
+      add
+      calldataload
+      and
+      tag_144
+      jump	// in
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/introspection/ERC165.sol":915:1048  function supportsInterface(bytes4 interfaceId) external view returns (bool) {... */
+    tag_31:
+      not(sub(shl(0xe0, 0x01), 0x01))
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/introspection/ERC165.sol":1008:1041  _supportedInterfaces[interfaceId] */
+      and
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/introspection/ERC165.sol":985:989  bool */
+      0x00
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/introspection/ERC165.sol":1008:1041  _supportedInterfaces[interfaceId] */
+      swap1
+      dup2
+      mstore
+      0x20
+      dup2
+      swap1
+      mstore
+      0x40
+      swap1
+      keccak256
+      sload
+      0xff
+      and
+      swap1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/introspection/ERC165.sol":915:1048  function supportsInterface(bytes4 interfaceId) external view returns (bool) {... */
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9479:9688  function getApproved(uint256 characterId)... */
+    tag_34:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9568:9584  address operator */
+      0x00
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9610:9630  _exists(characterId) */
+      tag_147
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9618:9629  characterId */
+      dup3
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9610:9617  _exists */
+      tag_148
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9610:9630  _exists(characterId) */
+      jump	// in
+    tag_147:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9602:9631  require(_exists(characterId)) */
+      tag_149
+      jumpi
+      0x00
+      dup1
+      revert
+    tag_149:
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9649:9680  characterApprovals[characterId] */
+      0x00
+      swap1
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9649:9667  characterApprovals */
+      0x07
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9649:9680  characterApprovals[characterId] */
+      0x20
+      mstore
+      0x40
+      swap1
+      keccak256
+      sload
+      sub(shl(0xa0, 0x01), 0x01)
+      and
+      swap1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9479:9688  function getApproved(uint256 characterId)... */
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9167:9416  function approve(address _to, uint256 _characterId)... */
+    tag_37:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9273:9303  characterToOwner[_characterId] */
+      0x00
+      dup2
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9273:9289  characterToOwner */
+      0x03
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9273:9303  characterToOwner[_characterId] */
+      0x20
+      mstore
+      0x40
+      swap1
+      keccak256
+      sload
+      sub(shl(0xa0, 0x01), 0x01)
+      and
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9259:9269  msg.sender */
+      caller
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9259:9303  msg.sender == characterToOwner[_characterId] */
+      eq
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9251:9304  require(msg.sender == characterToOwner[_characterId]) */
+      tag_151
+      jumpi
+      0x00
+      dup1
+      revert
+    tag_151:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9315:9347  characterApprovals[_characterId] */
+      0x00
+      dup2
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9315:9333  characterApprovals */
+      0x07
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9315:9347  characterApprovals[_characterId] */
+      0x20
+      mstore
+      0x40
+      dup1
+      dup3
+      keccak256
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9315:9353  characterApprovals[_characterId] = _to */
+      dup1
+      sload
+      not(sub(shl(0xa0, 0x01), 0x01))
+      and
+      sub(shl(0xa0, 0x01), 0x01)
+      dup7
+      and
+      swap1
+      dup2
+      or
+      swap1
+      swap2
+      sstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9369:9408  Approval(msg.sender, _to, _characterId) */
+      swap1
+      mload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9315:9347  characterApprovals[_characterId] */
+      dup4
+      swap3
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9378:9388  msg.sender */
+      caller
+      swap2
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9369:9408  Approval(msg.sender, _to, _characterId) */
+      0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925
+      swap2
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9315:9347  characterApprovals[_characterId] */
+      swap1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9369:9408  Approval(msg.sender, _to, _characterId) */
+      log4
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9167:9416  function approve(address _to, uint256 _characterId)... */
+      pop
+      pop
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":1420:1441  Event[] public events */
+    tag_40:
+      0x02
+      dup2
+      dup2
+      sload
+      dup2
+      lt
+      tag_152
+      jumpi
+      invalid
+    tag_152:
+      0x00
+      swap2
+      dup3
+      mstore
+      0x20
+      swap2
+      dup3
+      swap1
+      keccak256
+      add
+      dup1
+      sload
+      0x40
+      dup1
+      mload
+      0x02
+      0x01
+      dup5
+      and
+      iszero
+      0x0100
+      mul
+      not(0x00)
+      add
+      swap1
+      swap4
+      and
+      swap3
+      swap1
+      swap3
+      div
+      0x1f
+      dup2
+      add
+      dup6
+      swap1
+      div
+      dup6
+      mul
+      dup4
+      add
+      dup6
+      add
+      swap1
+      swap2
+      mstore
+      dup1
+      dup3
+      mstore
+      swap2
+      swap4
+      pop
+      swap2
+      dup4
+      swap2
+      swap1
+      dup4
+      add
+      dup3
+      dup3
+      dup1
+      iszero
+      tag_154
+      jumpi
+      dup1
+      0x1f
+      lt
+      tag_155
+      jumpi
+      0x0100
+      dup1
+      dup4
+      sload
+      div
+      mul
+      dup4
+      mstore
+      swap2
+      0x20
+      add
+      swap2
+      jump(tag_154)
+    tag_155:
+      dup3
+      add
+      swap2
+      swap1
+      0x00
+      mstore
+      keccak256(0x00, 0x20)
+      swap1
+    tag_156:
+      dup2
+      sload
+      dup2
+      mstore
+      swap1
+      0x01
+      add
+      swap1
+      0x20
+      add
+      dup1
+      dup4
+      gt
+      tag_156
+      jumpi
+      dup3
+      swap1
+      sub
+      0x1f
+      and
+      dup3
+      add
+      swap2
+    tag_154:
+      pop
+      pop
+      pop
+      pop
+      pop
+      swap1
+      pop
+      dup2
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":1745:1797  mapping (address => uint) public ownerCharacterCount */
+    tag_47:
+      mstore(0x20, 0x05)
+      0x00
+      swap1
+      dup2
+      mstore
+      0x40
+      swap1
+      keccak256
+      sload
+      dup2
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":1528:1577  mapping (uint => address) public characterToOwner */
+    tag_50:
+      mstore(0x20, 0x03)
+      0x00
+      swap1
+      dup2
+      mstore
+      0x40
+      swap1
+      keccak256
+      sload
+      sub(shl(0xa0, 0x01), 0x01)
+      and
+      dup2
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5778:6379  function transferFrom(address _from, address _to, uint256 _characterId)... */
+    tag_53:
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5890:5909  _from != address(0) */
+      dup4
+      and
+      iszero
+      dup1
+      iszero
+      swap1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5890:5930  _from != address(0) && _to != address(0) */
+      tag_158
+      jumpi
+      pop
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5913:5930  _to != address(0) */
+      dup3
+      and
+      iszero
+      iszero
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5890:5930  _from != address(0) && _to != address(0) */
+    tag_158:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5882:5931  require(_from != address(0) && _to != address(0)) */
+      tag_159
+      jumpi
+      0x00
+      dup1
+      revert
+    tag_159:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5950:5971  _exists(_characterId) */
+      tag_160
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5958:5970  _characterId */
+      dup2
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5950:5957  _exists */
+      tag_148
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5950:5971  _exists(_characterId) */
+      jump	// in
+    tag_160:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5942:5972  require(_exists(_characterId)) */
+      tag_161
+      jumpi
+      0x00
+      dup1
+      revert
+    tag_161:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6000:6003  _to */
+      dup2
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5991:6003  _from != _to */
+      and
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5991:5996  _from */
+      dup4
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5991:6003  _from != _to */
+      and
+      eq
+      iszero
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5983:6004  require(_from != _to) */
+      tag_162
+      jumpi
+      0x00
+      dup1
+      revert
+    tag_162:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6023:6067  _isApprovedOrOwner(msg.sender, _characterId) */
+      tag_163
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6042:6052  msg.sender */
+      caller
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6054:6066  _characterId */
+      dup3
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6023:6041  _isApprovedOrOwner */
+      tag_164
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6023:6067  _isApprovedOrOwner(msg.sender, _characterId) */
+      jump	// in
+    tag_163:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6015:6068  require(_isApprovedOrOwner(msg.sender, _characterId)) */
+      tag_165
+      jumpi
+      0x00
+      dup1
+      revert
+    tag_165:
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6119:6143  ownerCharacterCount[_to] */
+      dup3
+      and
+      0x00
+      swap1
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6119:6138  ownerCharacterCount */
+      0x05
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6119:6143  ownerCharacterCount[_to] */
+      0x20
+      mstore
+      0x40
+      swap1
+      keccak256
+      sload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6106:6147  SafeMath.add(ownerCharacterCount[_to], 1) */
+      tag_166
+      swap1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6145:6146  1 */
+      0x01
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6106:6118  SafeMath.add */
+      tag_167
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6106:6147  SafeMath.add(ownerCharacterCount[_to], 1) */
+      jump	// in
+    tag_166:
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6079:6103  ownerCharacterCount[_to] */
+      dup1
+      dup5
+      and
+      0x00
+      swap1
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6079:6098  ownerCharacterCount */
+      0x05
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6079:6103  ownerCharacterCount[_to] */
+      0x20
+      mstore
+      0x40
+      dup1
+      dup3
+      keccak256
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6079:6147  ownerCharacterCount[_to] = SafeMath.add(ownerCharacterCount[_to], 1) */
+      swap4
+      swap1
+      swap4
+      sstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6200:6226  ownerCharacterCount[_from] */
+      swap1
+      dup6
+      and
+      dup2
+      mstore
+      keccak256
+      sload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6187:6230  SafeMath.sub(ownerCharacterCount[_from], 1) */
+      tag_168
+      swap1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6228:6229  1 */
+      0x01
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6187:6199  SafeMath.sub */
+      tag_169
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6187:6230  SafeMath.sub(ownerCharacterCount[_from], 1) */
+      jump	// in
+    tag_168:
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6158:6184  ownerCharacterCount[_from] */
+      dup5
+      dup2
+      and
+      0x00
+      dup2
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6158:6177  ownerCharacterCount */
+      0x05
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6158:6184  ownerCharacterCount[_from] */
+      0x20
+      swap1
+      dup2
+      mstore
+      0x40
+      dup1
+      dup4
+      keccak256
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6158:6230  ownerCharacterCount[_from] = SafeMath.sub(ownerCharacterCount[_from], 1) */
+      swap6
+      swap1
+      swap6
+      sstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6241:6271  characterToOwner[_characterId] */
+      dup6
+      dup3
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6241:6257  characterToOwner */
+      0x03
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6241:6271  characterToOwner[_characterId] */
+      swap1
+      mstore
+      dup4
+      dup2
+      keccak256
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6241:6277  characterToOwner[_characterId] = _to */
+      dup1
+      sload
+      not(sub(shl(0xa0, 0x01), 0x01))
+      and
+      swap4
+      dup8
+      and
+      swap4
+      dup5
+      or
+      swap1
+      sstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6293:6327  Transfer(_from, _to, _characterId) */
+      swap3
+      mload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6241:6271  characterToOwner[_characterId] */
+      dup5
+      swap4
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6293:6327  Transfer(_from, _to, _characterId) */
+      0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+      swap2
+      log4
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6338:6371  _clearApproval(_to, _characterId) */
+      tag_170
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6353:6356  _to */
+      dup3
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6358:6370  _characterId */
+      dup3
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6338:6352  _clearApproval */
+      tag_171
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6338:6371  _clearApproval(_to, _characterId) */
+      jump	// in
+    tag_170:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5778:6379  function transferFrom(address _from, address _to, uint256 _characterId)... */
+      pop
+      pop
+      pop
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4430:4769  function generateRandomDna(string memory _str, address _owner)... */
+    tag_59:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4540:4544  uint */
+      0x00
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4638:4647  uint rand */
+      dup1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4697:4703  _owner */
+      dup3
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4692:4704  uint(_owner) */
+      and
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4682:4686  _str */
+      dup5
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4665:4687  abi.encodePacked(_str) */
+      add(0x20, mload(0x40))
+      dup1
+      dup3
+      dup1
+      mload
+      swap1
+      0x20
+      add
+      swap1
+      dup1
+      dup4
+      dup4
+        /* "--CODEGEN--":36:189   */
+    tag_173:
+        /* "--CODEGEN--":66:68   */
+      0x20
+        /* "--CODEGEN--":61:64   */
+      dup4
+        /* "--CODEGEN--":58:69   */
+      lt
+        /* "--CODEGEN--":36:189   */
+      tag_175
+      jumpi
+        /* "--CODEGEN--":176:186   */
+      dup1
+      mload
+        /* "--CODEGEN--":164:187   */
+      dup3
+      mstore
+      not(0x1f)
+        /* "--CODEGEN--":139:151   */
+      swap1
+      swap3
+      add
+      swap2
+        /* "--CODEGEN--":98:100   */
+      0x20
+        /* "--CODEGEN--":89:101   */
+      swap2
+      dup3
+      add
+      swap2
+        /* "--CODEGEN--":114:126   */
+      add
+        /* "--CODEGEN--":36:189   */
+      jump(tag_173)
+    tag_175:
+        /* "--CODEGEN--":274:275   */
+      0x01
+        /* "--CODEGEN--":267:270   */
+      dup4
+        /* "--CODEGEN--":263:265   */
+      0x20
+        /* "--CODEGEN--":259:271   */
+      sub
+        /* "--CODEGEN--":254:257   */
+      0x0100
+        /* "--CODEGEN--":250:272   */
+      exp
+        /* "--CODEGEN--":246:276   */
+      sub
+        /* "--CODEGEN--":315:319   */
+      dup1
+        /* "--CODEGEN--":311:320   */
+      not
+        /* "--CODEGEN--":305:308   */
+      dup3
+        /* "--CODEGEN--":299:309   */
+      mload
+        /* "--CODEGEN--":295:321   */
+      and
+        /* "--CODEGEN--":356:360   */
+      dup2
+        /* "--CODEGEN--":350:353   */
+      dup5
+        /* "--CODEGEN--":344:354   */
+      mload
+        /* "--CODEGEN--":340:361   */
+      and
+        /* "--CODEGEN--":389:396   */
+      dup1
+        /* "--CODEGEN--":380:387   */
+      dup3
+        /* "--CODEGEN--":377:397   */
+      or
+        /* "--CODEGEN--":372:375   */
+      dup6
+        /* "--CODEGEN--":365:398   */
+      mstore
+        /* "--CODEGEN--":3:402   */
+      pop
+      pop
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4665:4687  abi.encodePacked(_str) */
+      pop
+      pop
+      pop
+      swap1
+      pop
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+        /* "--CODEGEN--":49:53   */
+      0x20
+        /* "--CODEGEN--":39:46   */
+      dup2
+        /* "--CODEGEN--":30:37   */
+      dup4
+        /* "--CODEGEN--":26:47   */
+      sub
+        /* "--CODEGEN--":22:54   */
+      sub
+        /* "--CODEGEN--":13:20   */
+      dup2
+        /* "--CODEGEN--":6:55   */
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4665:4687  abi.encodePacked(_str) */
+      swap1
+      0x40
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4655:4688  keccak256(abi.encodePacked(_str)) */
+      dup1
+      mload
+      swap1
+      0x20
+      add
+      keccak256
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4650:4689  uint(keccak256(abi.encodePacked(_str))) */
+      0x00
+      shr
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4650:4704  uint(keccak256(abi.encodePacked(_str))) + uint(_owner) */
+      add
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4638:4704  uint rand = uint(keccak256(abi.encodePacked(_str))) + uint(_owner) */
+      swap1
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":882:884  10 */
+      0x0a
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":918:920  10 */
+      dup1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":918:933  10 ** dnaDigits */
+      exp
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4722:4726  rand */
+      dup2
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4722:4739  rand % dnaModulus */
+      dup2
+      tag_176
+      jumpi
+      invalid
+    tag_176:
+      mod
+      swap5
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4430:4769  function generateRandomDna(string memory _str, address _owner)... */
+      swap4
+      pop
+      pop
+      pop
+      pop
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6763:6974  function safeTransferFrom(address from, address to, uint256 characterId)... */
+    tag_62:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6918:6966  this.safeTransferFrom(from, to, characterId, "") */
+      0x40
+      dup1
+      mload
+      shl(0xe1, 0x5c46a7ef)
+      dup2
+      mstore
+      sub(shl(0xa0, 0x01), 0x01)
+      dup6
+      dup2
+      and
+      0x04
+      dup4
+      add
+      mstore
+      dup5
+      and
+      0x24
+      dup3
+      add
+      mstore
+      0x44
+      dup2
+      add
+      dup4
+      swap1
+      mstore
+      0x80
+      0x64
+      dup3
+      add
+      mstore
+      0x00
+      0x84
+      dup3
+      add
+      dup2
+      swap1
+      mstore
+      swap2
+      mload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6918:6922  this */
+      address
+      swap3
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6918:6939  this.safeTransferFrom */
+      0xb88d4fde
+      swap3
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6918:6966  this.safeTransferFrom(from, to, characterId, "") */
+      0xc4
+      dup1
+      dup3
+      add
+      swap4
+      swap2
+      dup3
+      swap1
+      sub
+      add
+      dup2
+      dup4
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6918:6922  this */
+      dup8
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6918:6966  this.safeTransferFrom(from, to, characterId, "") */
+      dup1
+      extcodesize
+      iszero
+        /* "--CODEGEN--":5:7   */
+      dup1
+      iszero
+      tag_178
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x00
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_178:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6918:6966  this.safeTransferFrom(from, to, characterId, "") */
+      pop
+      gas
+      call
+      iszero
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_179
+      jumpi
+        /* "--CODEGEN--":45:61   */
+      returndatasize
+        /* "--CODEGEN--":42:43   */
+      0x00
+        /* "--CODEGEN--":39:40   */
+      dup1
+        /* "--CODEGEN--":24:62   */
+      returndatacopy
+        /* "--CODEGEN--":77:93   */
+      returndatasize
+        /* "--CODEGEN--":74:75   */
+      0x00
+        /* "--CODEGEN--":67:94   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_179:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6918:6966  this.safeTransferFrom(from, to, characterId, "") */
+      pop
+      pop
+      pop
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":6763:6974  function safeTransferFrom(address from, address to, uint256 characterId)... */
+      pop
+      pop
+      pop
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8224:8589  function burn(uint256 _characterId)... */
+    tag_65:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8302:8312  msg.sender */
+      caller
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8294:8327  require(msg.sender != address(0)) */
+      tag_181
+      jumpi
+      0x00
+      dup1
+      revert
+    tag_181:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8346:8367  _exists(_characterId) */
+      tag_182
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8354:8366  _characterId */
+      dup2
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8346:8353  _exists */
+      tag_148
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8346:8367  _exists(_characterId) */
+      jump	// in
+    tag_182:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8338:8368  require(_exists(_characterId)) */
+      tag_183
+      jumpi
+      0x00
+      dup1
+      revert
+    tag_183:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8387:8431  _isApprovedOrOwner(msg.sender, _characterId) */
+      tag_184
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8406:8416  msg.sender */
+      caller
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8418:8430  _characterId */
+      dup3
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8387:8405  _isApprovedOrOwner */
+      tag_164
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8387:8431  _isApprovedOrOwner(msg.sender, _characterId) */
+      jump	// in
+    tag_184:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8379:8432  require(_isApprovedOrOwner(msg.sender, _characterId)) */
+      tag_185
+      jumpi
+      0x00
+      dup1
+      revert
+    tag_185:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8512:8522  msg.sender */
+      caller
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8492:8523  ownerCharacterCount[msg.sender] */
+      0x00
+      swap1
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8492:8511  ownerCharacterCount */
+      0x05
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8492:8523  ownerCharacterCount[msg.sender] */
+      0x20
+      mstore
+      0x40
+      swap1
+      keccak256
+      sload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8479:8527  SafeMath.sub(ownerCharacterCount[msg.sender], 1) */
+      tag_186
+      swap1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8525:8526  1 */
+      0x01
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8479:8491  SafeMath.sub */
+      tag_169
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8479:8527  SafeMath.sub(ownerCharacterCount[msg.sender], 1) */
+      jump	// in
+    tag_186:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8465:8475  msg.sender */
+      caller
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8445:8476  ownerCharacterCount[msg.sender] */
+      0x00
+      swap1
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8445:8464  ownerCharacterCount */
+      0x05
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8445:8476  ownerCharacterCount[msg.sender] */
+      0x20
+      swap1
+      dup2
+      mstore
+      0x40
+      dup1
+      dup4
+      keccak256
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8445:8527  ownerCharacterCount[msg.sender] = SafeMath.sub(ownerCharacterCount[msg.sender], 1) */
+      swap4
+      swap1
+      swap4
+      sstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8538:8568  characterToOwner[_characterId] */
+      swap3
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8538:8554  characterToOwner */
+      0x03
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8538:8568  characterToOwner[_characterId] */
+      swap1
+      swap3
+      mstore
+      swap1
+      keccak256
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8538:8581  characterToOwner[_characterId] = address(0) */
+      dup1
+      sload
+      not(sub(shl(0xa0, 0x01), 0x01))
+      and
+      swap1
+      sstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8224:8589  function burn(uint256 _characterId)... */
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":1324:1353  Character[] public characters */
+    tag_68:
+      0x01
+      dup2
+      dup2
+      sload
+      dup2
+      lt
+      tag_187
+      jumpi
+      invalid
+    tag_187:
+      0x00
+      swap2
+      dup3
+      mstore
+      0x20
+      swap2
+      dup3
+      swap1
+      keccak256
+      0x05
+      swap2
+      swap1
+      swap2
+      mul
+      add
+      dup1
+      sload
+      0x40
+      dup1
+      mload
+      0x02
+      0x01
+      dup5
+      and
+      iszero
+      0x0100
+      mul
+      not(0x00)
+      add
+      swap1
+      swap4
+      and
+      swap3
+      swap1
+      swap3
+      div
+      0x1f
+      dup2
+      add
+      dup6
+      swap1
+      div
+      dup6
+      mul
+      dup4
+      add
+      dup6
+      add
+      swap1
+      swap2
+      mstore
+      dup1
+      dup3
+      mstore
+      swap2
+      swap4
+      pop
+      swap2
+      dup4
+      swap2
+      swap1
+      dup4
+      add
+      dup3
+      dup3
+      dup1
+      iszero
+      tag_189
+      jumpi
+      dup1
+      0x1f
+      lt
+      tag_190
+      jumpi
+      0x0100
+      dup1
+      dup4
+      sload
+      div
+      mul
+      dup4
+      mstore
+      swap2
+      0x20
+      add
+      swap2
+      jump(tag_189)
+    tag_190:
+      dup3
+      add
+      swap2
+      swap1
+      0x00
+      mstore
+      keccak256(0x00, 0x20)
+      swap1
+    tag_191:
+      dup2
+      sload
+      dup2
+      mstore
+      swap1
+      0x01
+      add
+      swap1
+      0x20
+      add
+      dup1
+      dup4
+      gt
+      tag_191
+      jumpi
+      dup3
+      swap1
+      sub
+      0x1f
+      and
+      dup3
+      add
+      swap2
+    tag_189:
+      pop
+      pop
+      pop
+      pop
+      pop
+      swap1
+      dup1
+      0x01
+      add
+      dup1
+      sload
+      0x01
+      dup2
+      0x01
+      and
+      iszero
+      0x0100
+      mul
+      sub
+      and
+      0x02
+      swap1
+      div
+      dup1
+      0x1f
+      add
+      0x20
+      dup1
+      swap2
+      div
+      mul
+      0x20
+      add
+      mload(0x40)
+      swap1
+      dup2
+      add
+      0x40
+      mstore
+      dup1
+      swap3
+      swap2
+      swap1
+      dup2
+      dup2
+      mstore
+      0x20
+      add
+      dup3
+      dup1
+      sload
+      0x01
+      dup2
+      0x01
+      and
+      iszero
+      0x0100
+      mul
+      sub
+      and
+      0x02
+      swap1
+      div
+      dup1
+      iszero
+      tag_192
+      jumpi
+      dup1
+      0x1f
+      lt
+      tag_193
+      jumpi
+      0x0100
+      dup1
+      dup4
+      sload
+      div
+      mul
+      dup4
+      mstore
+      swap2
+      0x20
+      add
+      swap2
+      jump(tag_192)
+    tag_193:
+      dup3
+      add
+      swap2
+      swap1
+      0x00
+      mstore
+      keccak256(0x00, 0x20)
+      swap1
+    tag_194:
+      dup2
+      sload
+      dup2
+      mstore
+      swap1
+      0x01
+      add
+      swap1
+      0x20
+      add
+      dup1
+      dup4
+      gt
+      tag_194
+      jumpi
+      dup3
+      swap1
+      sub
+      0x1f
+      and
+      dup3
+      add
+      swap2
+    tag_192:
+      pop
+      pop
+      pop
+      0x02
+      dup1
+      dup6
+      add
+      dup1
+      sload
+      0x40
+      dup1
+      mload
+      0x20
+      0x1f
+      not(0x00)
+      0x0100
+      0x01
+      dup8
+      and
+      iszero
+      mul
+      add
+      swap1
+      swap5
+      and
+      swap6
+      swap1
+      swap6
+      div
+      swap3
+      dup4
+      add
+      dup6
+      swap1
+      div
+      dup6
+      mul
+      dup2
+      add
+      dup6
+      add
+      swap1
+      swap2
+      mstore
+      dup2
+      dup2
+      mstore
+      swap6
+      swap7
+      swap6
+      swap5
+      pop
+      swap1
+      swap3
+      pop
+      swap1
+      dup4
+      add
+      dup3
+      dup3
+      dup1
+      iszero
+      tag_195
+      jumpi
+      dup1
+      0x1f
+      lt
+      tag_196
+      jumpi
+      0x0100
+      dup1
+      dup4
+      sload
+      div
+      mul
+      dup4
+      mstore
+      swap2
+      0x20
+      add
+      swap2
+      jump(tag_195)
+    tag_196:
+      dup3
+      add
+      swap2
+      swap1
+      0x00
+      mstore
+      keccak256(0x00, 0x20)
+      swap1
+    tag_197:
+      dup2
+      sload
+      dup2
+      mstore
+      swap1
+      0x01
+      add
+      swap1
+      0x20
+      add
+      dup1
+      dup4
+      gt
+      tag_197
+      jumpi
+      dup3
+      swap1
+      sub
+      0x1f
+      and
+      dup3
+      add
+      swap2
+    tag_195:
+      pop
+      pop
+      pop
+      pop
+      0x03
+      dup4
+      add
+      dup1
+      sload
+      0x40
+      dup1
+      mload
+      0x20
+      0x02
+      0x01
+      dup6
+      and
+      iszero
+      0x0100
+      mul
+      not(0x00)
+      add
+      swap1
+      swap5
+      and
+      swap4
+      swap1
+      swap4
+      div
+      0x1f
+      dup2
+      add
+      dup5
+      swap1
+      div
+      dup5
+      mul
+      dup3
+      add
+      dup5
+      add
+      swap1
+      swap3
+      mstore
+      dup2
+      dup2
+      mstore
+      swap5
+      swap6
+      swap5
+      swap4
+      pop
+      swap1
+      dup4
+      add
+      dup3
+      dup3
+      dup1
+      iszero
+      tag_198
+      jumpi
+      dup1
+      0x1f
+      lt
+      tag_199
+      jumpi
+      0x0100
+      dup1
+      dup4
+      sload
+      div
+      mul
+      dup4
+      mstore
+      swap2
+      0x20
+      add
+      swap2
+      jump(tag_198)
+    tag_199:
+      dup3
+      add
+      swap2
+      swap1
+      0x00
+      mstore
+      keccak256(0x00, 0x20)
+      swap1
+    tag_200:
+      dup2
+      sload
+      dup2
+      mstore
+      swap1
+      0x01
+      add
+      swap1
+      0x20
+      add
+      dup1
+      dup4
+      gt
+      tag_200
+      jumpi
+      dup3
+      swap1
+      sub
+      0x1f
+      and
+      dup3
+      add
+      swap2
+    tag_198:
+      pop
+      pop
+      pop
+      pop
+      pop
+      swap1
+      dup1
+      0x04
+      add
+      sload
+      swap1
+      pop
+      dup6
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8861:9095  function ownerOf(uint256 _characterId)... */
+    tag_87:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8947:8961  address _owner */
+      0x00
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8995:9025  characterToOwner[_characterId] */
+      dup2
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8995:9011  characterToOwner */
+      0x03
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8995:9025  characterToOwner[_characterId] */
+      0x20
+      mstore
+      0x40
+      dup2
+      keccak256
+      sload
+      sub(shl(0xa0, 0x01), 0x01)
+      and
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9044:9063  owner != address(0) */
+      dup1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9036:9064  require(owner != address(0)) */
+      tag_202
+      jumpi
+      0x00
+      dup1
+      revert
+    tag_202:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9082:9087  owner */
+      swap3
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8861:9095  function ownerOf(uint256 _characterId)... */
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4828:5271  function getCharactersByOwner(address _owner)... */
+    tag_90:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4921:4934  uint[] memory */
+      0x60
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4952:4972  uint[] memory result */
+      dup1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4986:5005  ownerCharacterCount */
+      0x05
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4986:5013  ownerCharacterCount[_owner] */
+      0x00
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5006:5012  _owner */
+      dup5
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4986:5013  ownerCharacterCount[_owner] */
+      and
+      sub(shl(0xa0, 0x01), 0x01)
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+      sload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4975:5014  new uint[](ownerCharacterCount[_owner]) */
+      mload(0x40)
+      swap1
+      dup1
+      dup3
+      mstore
+      dup1
+      0x20
+      mul
+      0x20
+      add
+      dup3
+      add
+      0x40
+      mstore
+      dup1
+      iszero
+      tag_204
+      jumpi
+      dup2
+      0x20
+      add
+        /* "--CODEGEN--":29:31   */
+      0x20
+        /* "--CODEGEN--":21:27   */
+      dup3
+        /* "--CODEGEN--":17:32   */
+      mul
+        /* "--CODEGEN--":117:121   */
+      dup1
+        /* "--CODEGEN--":105:115   */
+      codesize
+        /* "--CODEGEN--":97:103   */
+      dup4
+        /* "--CODEGEN--":88:122   */
+      codecopy
+        /* "--CODEGEN--":136:153   */
+      add
+      swap1
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4975:5014  new uint[](ownerCharacterCount[_owner]) */
+    tag_204:
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4952:5014  uint[] memory result = new uint[](ownerCharacterCount[_owner]) */
+      swap1
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5025:5037  uint counter */
+      0x00
+      dup1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5052:5240  for (uint i = 0; i < characters.length; i++) {... */
+    tag_205:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5073:5083  characters */
+      0x01
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5073:5090  characters.length */
+      sload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5069:5090  i < characters.length */
+      dup2
+      lt
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5052:5240  for (uint i = 0; i < characters.length; i++) {... */
+      iszero
+      tag_206
+      jumpi
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5116:5135  characterToOwner[i] */
+      0x00
+      dup2
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5116:5132  characterToOwner */
+      0x03
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5116:5135  characterToOwner[i] */
+      0x20
+      mstore
+      0x40
+      swap1
+      keccak256
+      sload
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5116:5145  characterToOwner[i] == _owner */
+      dup7
+      dup2
+      and
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5116:5135  characterToOwner[i] */
+      swap2
+      and
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5116:5145  characterToOwner[i] == _owner */
+      eq
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5112:5229  if (characterToOwner[i] == _owner) {... */
+      iszero
+      tag_208
+      jumpi
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5184:5185  i */
+      dup1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5166:5172  result */
+      dup4
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5173:5180  counter */
+      dup4
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5166:5181  result[counter] */
+      dup2
+      mload
+      dup2
+      lt
+      tag_209
+      jumpi
+      invalid
+    tag_209:
+      0x20
+      swap1
+      dup2
+      mul
+      swap2
+      swap1
+      swap2
+      add
+      add
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5166:5185  result[counter] = i */
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5204:5213  counter++ */
+      0x01
+      swap1
+      swap2
+      add
+      swap1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5112:5229  if (characterToOwner[i] == _owner) {... */
+    tag_208:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5092:5095  i++ */
+      0x01
+      add
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5052:5240  for (uint i = 0; i < characters.length; i++) {... */
+      jump(tag_205)
+    tag_206:
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5257:5263  result */
+      swap1
+      swap4
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4828:5271  function getCharactersByOwner(address _owner)... */
+      swap3
+      pop
+      pop
+      pop
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8644:8802  function balanceOf(address _owner)... */
+    tag_96:
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8767:8794  ownerCharacterCount[_owner] */
+      and
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8726:8742  uint256 _balance */
+      0x00
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8767:8794  ownerCharacterCount[_owner] */
+      swap1
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8767:8786  ownerCharacterCount */
+      0x05
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8767:8794  ownerCharacterCount[_owner] */
+      0x20
+      mstore
+      0x40
+      swap1
+      keccak256
+      sload
+      swap1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8644:8802  function balanceOf(address _owner)... */
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3919:4334  function createRandomCharacter(... */
+    tag_111:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4119:4131  uint randDna */
+      0x00
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4134:4176  generateRandomDna(_identifier, msg.sender) */
+      tag_212
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4152:4163  _identifier */
+      dup6
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4165:4175  msg.sender */
+      caller
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4134:4151  generateRandomDna */
+      tag_59
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4134:4176  generateRandomDna(_identifier, msg.sender) */
+      jump	// in
+    tag_212:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4119:4176  uint randDna = generateRandomDna(_identifier, msg.sender) */
+      swap1
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4187:4326  _createCharacter(... */
+      tag_213
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4218:4229  _identifier */
+      dup6
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4244:4249  _name */
+      dup6
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4264:4269  _unit */
+      dup6
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4284:4289  _race */
+      dup6
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4304:4311  randDna */
+      dup6
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4187:4203  _createCharacter */
+      tag_214
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":4187:4326  _createCharacter(... */
+      jump	// in
+    tag_213:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3919:4334  function createRandomCharacter(... */
+      pop
+      pop
+      pop
+      pop
+      pop
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3266:3853  function createEvent(... */
+    tag_117:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3504:3567  Event(... */
+      0x40
+      dup1
+      mload
+      0x20
+      dup1
+      dup3
+      add
+      swap1
+      swap3
+      mstore
+      dup3
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3474:3480  events */
+      0x02
+        /* "--CODEGEN--":27:37   */
+      dup1
+      sload
+        /* "--CODEGEN--":39:40   */
+      0x01
+        /* "--CODEGEN--":23:41   */
+      dup2
+      add
+        /* "--CODEGEN--":45:68   */
+      dup1
+      dup4
+      sstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3437:3444  uint id */
+      0x00
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3474:3586  events.push(... */
+      swap3
+      dup4
+      mstore
+      dup4
+      mload
+      dup1
+      mload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3437:3444  uint id */
+      swap4
+      swap6
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3447:3603  SafeMath.sub(... */
+      tag_216
+      swap6
+        /* "--CODEGEN--":23:41   */
+      swap3
+      swap5
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3504:3567  Event(... */
+      swap3
+      swap4
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3474:3586  events.push(... */
+      0x405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace
+      add
+      swap3
+      tag_218
+      swap3
+      dup5
+      swap3
+      add
+      swap1
+      tag_219
+      jump	// in
+    tag_218:
+      pop
+      pop
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3601:3602  1 */
+      0x01
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3447:3459  SafeMath.sub */
+      tag_169
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3447:3603  SafeMath.sub(... */
+      jump	// in
+    tag_216:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3699:3700  0 */
+      0x00
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3670:3690  eventToCharacter[id] */
+      dup2
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3670:3686  eventToCharacter */
+      0x04
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3670:3690  eventToCharacter[id] */
+      0x20
+      mstore
+      0x40
+      swap1
+      keccak256
+      sload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3437:3603  uint id = SafeMath.sub(... */
+      swap1
+      swap2
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3670:3701  eventToCharacter[id] == uint(0) */
+      iszero
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3663:3702  assert(eventToCharacter[id] == uint(0)) */
+      tag_220
+      jumpi
+      invalid
+    tag_220:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3713:3733  eventToCharacter[id] */
+      0x00
+      dup2
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3713:3729  eventToCharacter */
+      0x04
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3713:3733  eventToCharacter[id] */
+      0x20
+      swap1
+      dup2
+      mstore
+      0x40
+      dup1
+      dup4
+      keccak256
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3713:3748  eventToCharacter[id] = _characterId */
+      dup7
+      swap1
+      sstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3808:3841  characterEventCount[_characterId] */
+      dup6
+      dup4
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3808:3827  characterEventCount */
+      0x06
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3808:3841  characterEventCount[_characterId] */
+      swap1
+      swap2
+      mstore
+      swap1
+      keccak256
+      sload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3795:3845  SafeMath.add(characterEventCount[_characterId], 1) */
+      tag_221
+      swap1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3843:3844  1 */
+      0x01
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3795:3807  SafeMath.add */
+      tag_167
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3795:3845  SafeMath.add(characterEventCount[_characterId], 1) */
+      jump	// in
+    tag_221:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3759:3792  characterEventCount[_characterId] */
+      0x00
+      swap4
+      dup5
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3759:3778  characterEventCount */
+      0x06
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3759:3792  characterEventCount[_characterId] */
+      0x20
+      mstore
+      0x40
+      swap1
+      swap4
+      keccak256
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3759:3845  characterEventCount[_characterId] = SafeMath.add(characterEventCount[_characterId], 1) */
+      swap3
+      swap1
+      swap3
+      sstore
+      pop
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":3266:3853  function createEvent(... */
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10330:10560  function setApprovalForAll(address to, bool approved)... */
+    tag_120:
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10424:10440  to != msg.sender */
+      dup3
+      and
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10430:10440  msg.sender */
+      caller
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10424:10440  to != msg.sender */
+      eq
+      iszero
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10416:10441  require(to != msg.sender) */
+      tag_223
+      jumpi
+      0x00
+      dup1
+      revert
+    tag_223:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10470:10480  msg.sender */
+      caller
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10452:10481  operatorApprovals[msg.sender] */
+      0x00
+      dup2
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10452:10469  operatorApprovals */
+      0x08
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10452:10481  operatorApprovals[msg.sender] */
+      0x20
+      swap1
+      dup2
+      mstore
+      0x40
+      dup1
+      dup4
+      keccak256
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10452:10485  operatorApprovals[msg.sender][to] */
+      dup8
+      and
+      dup1
+      dup6
+      mstore
+      swap1
+      dup4
+      mstore
+      swap3
+      dup2
+      swap1
+      keccak256
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10452:10496  operatorApprovals[msg.sender][to] = approved */
+      dup1
+      sload
+      not(0xff)
+      and
+      dup7
+      iszero
+      iszero
+      swap1
+      dup2
+      or
+      swap1
+      swap2
+      sstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10512:10552  ApprovalForAll(msg.sender, to, approved) */
+      dup2
+      mload
+      swap1
+      dup2
+      mstore
+      swap1
+      mload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10452:10485  operatorApprovals[msg.sender][to] */
+      swap3
+      swap4
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10470:10480  msg.sender */
+      swap3
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10512:10552  ApprovalForAll(msg.sender, to, approved) */
+      0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31
+      swap3
+      swap2
+      dup2
+      swap1
+      sub
+      swap1
+      swap2
+      add
+      swap1
+      log3
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10330:10560  function setApprovalForAll(address to, bool approved)... */
+      pop
+      pop
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10878:11130  function takeOwnership(uint256 _characterId)... */
+    tag_123:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10963:11007  _isApprovedOrOwner(msg.sender, _characterId) */
+      tag_225
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10982:10992  msg.sender */
+      caller
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10994:11006  _characterId */
+      dup3
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10963:10981  _isApprovedOrOwner */
+      tag_164
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10963:11007  _isApprovedOrOwner(msg.sender, _characterId) */
+      jump	// in
+    tag_225:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10955:11008  require(_isApprovedOrOwner(msg.sender, _characterId)) */
+      tag_226
+      jumpi
+      0x00
+      dup1
+      revert
+    tag_226:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11019:11032  address owner */
+      0x00
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11035:11039  this */
+      address
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11035:11047  this.ownerOf */
+      and
+      0x6352211e
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11048:11060  _characterId */
+      dup4
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11035:11061  this.ownerOf(_characterId) */
+      mload(0x40)
+      dup3
+      0xffffffff
+      and
+      0xe0
+      shl
+      dup2
+      mstore
+      0x04
+      add
+      dup1
+      dup3
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      0x20
+      mload(0x40)
+      dup1
+      dup4
+      sub
+      dup2
+      dup7
+      dup1
+      extcodesize
+      iszero
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_227
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x00
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_227:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11035:11061  this.ownerOf(_characterId) */
+      pop
+      gas
+      staticcall
+      iszero
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_228
+      jumpi
+        /* "--CODEGEN--":45:61   */
+      returndatasize
+        /* "--CODEGEN--":42:43   */
+      0x00
+        /* "--CODEGEN--":39:40   */
+      dup1
+        /* "--CODEGEN--":24:62   */
+      returndatacopy
+        /* "--CODEGEN--":77:93   */
+      returndatasize
+        /* "--CODEGEN--":74:75   */
+      0x00
+        /* "--CODEGEN--":67:94   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_228:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11035:11061  this.ownerOf(_characterId) */
+      pop
+      pop
+      pop
+      pop
+      mload(0x40)
+      returndatasize
+        /* "--CODEGEN--":13:15   */
+      0x20
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_229
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_229:
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11035:11061  this.ownerOf(_characterId) */
+      mload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11072:11122  this.transferFrom(owner, msg.sender, _characterId) */
+      0x40
+      dup1
+      mload
+      shl(0xe0, 0x23b872dd)
+      dup2
+      mstore
+      sub(shl(0xa0, 0x01), 0x01)
+      dup4
+      and
+      0x04
+      dup3
+      add
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11097:11107  msg.sender */
+      caller
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11072:11122  this.transferFrom(owner, msg.sender, _characterId) */
+      0x24
+      dup3
+      add
+      mstore
+      0x44
+      dup2
+      add
+      dup6
+      swap1
+      mstore
+      swap1
+      mload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11035:11061  this.ownerOf(_characterId) */
+      swap2
+      swap3
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11072:11076  this */
+      address
+      swap2
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11072:11089  this.transferFrom */
+      0x23b872dd
+      swap2
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11072:11122  this.transferFrom(owner, msg.sender, _characterId) */
+      0x64
+      dup1
+      dup3
+      add
+      swap3
+      0x00
+      swap3
+      swap1
+      swap2
+      swap1
+      dup3
+      swap1
+      sub
+      add
+      dup2
+      dup4
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11072:11076  this */
+      dup8
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11072:11122  this.transferFrom(owner, msg.sender, _characterId) */
+      dup1
+      extcodesize
+      iszero
+        /* "--CODEGEN--":5:7   */
+      dup1
+      iszero
+      tag_230
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x00
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_230:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11072:11122  this.transferFrom(owner, msg.sender, _characterId) */
+      pop
+      gas
+      call
+      iszero
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_231
+      jumpi
+        /* "--CODEGEN--":45:61   */
+      returndatasize
+        /* "--CODEGEN--":42:43   */
+      0x00
+        /* "--CODEGEN--":39:40   */
+      dup1
+        /* "--CODEGEN--":24:62   */
+      returndatacopy
+        /* "--CODEGEN--":77:93   */
+      returndatasize
+        /* "--CODEGEN--":74:75   */
+      0x00
+        /* "--CODEGEN--":67:94   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_231:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11072:11122  this.transferFrom(owner, msg.sender, _characterId) */
+      pop
+      pop
+      pop
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10878:11130  function takeOwnership(uint256 _characterId)... */
+      pop
+      pop
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":1638:1684  mapping (uint => uint) public eventToCharacter */
+    tag_126:
+      mstore(0x20, 0x04)
+      0x00
+      swap1
+      dup2
+      mstore
+      0x40
+      swap1
+      keccak256
+      sload
+      dup2
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7325:7620  function safeTransferFrom(address from, address to, uint256 characterId, bytes memory _data)... */
+    tag_132:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7450:7490  this.transferFrom(from, to, characterId) */
+      0x40
+      dup1
+      mload
+      shl(0xe0, 0x23b872dd)
+      dup2
+      mstore
+      sub(shl(0xa0, 0x01), 0x01)
+      dup7
+      dup2
+      and
+      0x04
+      dup4
+      add
+      mstore
+      dup6
+      and
+      0x24
+      dup3
+      add
+      mstore
+      0x44
+      dup2
+      add
+      dup5
+      swap1
+      mstore
+      swap1
+      mload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7450:7454  this */
+      address
+      swap2
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7450:7467  this.transferFrom */
+      0x23b872dd
+      swap2
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7450:7490  this.transferFrom(from, to, characterId) */
+      0x64
+      dup1
+      dup4
+      add
+      swap3
+      0x00
+      swap3
+      swap2
+      swap1
+      dup3
+      swap1
+      sub
+      add
+      dup2
+      dup4
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7450:7454  this */
+      dup8
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7450:7490  this.transferFrom(from, to, characterId) */
+      dup1
+      extcodesize
+      iszero
+        /* "--CODEGEN--":5:7   */
+      dup1
+      iszero
+      tag_233
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x00
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_233:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7450:7490  this.transferFrom(from, to, characterId) */
+      pop
+      gas
+      call
+      iszero
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_234
+      jumpi
+        /* "--CODEGEN--":45:61   */
+      returndatasize
+        /* "--CODEGEN--":42:43   */
+      0x00
+        /* "--CODEGEN--":39:40   */
+      dup1
+        /* "--CODEGEN--":24:62   */
+      returndatacopy
+        /* "--CODEGEN--":77:93   */
+      returndatasize
+        /* "--CODEGEN--":74:75   */
+      0x00
+        /* "--CODEGEN--":67:94   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_234:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7450:7490  this.transferFrom(from, to, characterId) */
+      pop
+      pop
+      pop
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7559:7611  _checkOnERC721Received(from, to, characterId, _data) */
+      tag_235
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7582:7586  from */
+      dup5
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7588:7590  to */
+      dup5
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7592:7603  characterId */
+      dup5
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7605:7610  _data */
+      dup5
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7559:7581  _checkOnERC721Received */
+      tag_236
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7559:7611  _checkOnERC721Received(from, to, characterId, _data) */
+      jump	// in
+    tag_235:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7551:7612  require(_checkOnERC721Received(from, to, characterId, _data)) */
+      tag_237
+      jumpi
+      0x00
+      dup1
+      revert
+    tag_237:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7325:7620  function safeTransferFrom(address from, address to, uint256 characterId, bytes memory _data)... */
+      pop
+      pop
+      pop
+      pop
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":1863:1912  mapping (uint => uint) public characterEventCount */
+    tag_135:
+      mstore(0x20, 0x06)
+      0x00
+      swap1
+      dup2
+      mstore
+      0x40
+      swap1
+      keccak256
+      sload
+      dup2
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5332:5707  function getEventsByCharacter(uint _characterId)... */
+    tag_138:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5428:5441  uint[] memory */
+      0x60
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5459:5479  uint[] memory result */
+      dup1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5493:5512  characterEventCount */
+      0x06
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5493:5526  characterEventCount[_characterId] */
+      0x00
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5513:5525  _characterId */
+      dup5
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5493:5526  characterEventCount[_characterId] */
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+      sload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5482:5527  new uint[](characterEventCount[_characterId]) */
+      mload(0x40)
+      swap1
+      dup1
+      dup3
+      mstore
+      dup1
+      0x20
+      mul
+      0x20
+      add
+      dup3
+      add
+      0x40
+      mstore
+      dup1
+      iszero
+      tag_239
+      jumpi
+      dup2
+      0x20
+      add
+        /* "--CODEGEN--":29:31   */
+      0x20
+        /* "--CODEGEN--":21:27   */
+      dup3
+        /* "--CODEGEN--":17:32   */
+      mul
+        /* "--CODEGEN--":117:121   */
+      dup1
+        /* "--CODEGEN--":105:115   */
+      codesize
+        /* "--CODEGEN--":97:103   */
+      dup4
+        /* "--CODEGEN--":88:122   */
+      codecopy
+        /* "--CODEGEN--":136:153   */
+      add
+      swap1
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5482:5527  new uint[](characterEventCount[_characterId]) */
+    tag_239:
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5459:5527  uint[] memory result = new uint[](characterEventCount[_characterId]) */
+      swap1
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5538:5550  uint counter */
+      0x00
+      dup1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5565:5676  for (uint i = 0; i < events.length; i++) {... */
+    tag_240:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5586:5592  events */
+      0x02
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5586:5599  events.length */
+      sload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5582:5599  i < events.length */
+      dup2
+      lt
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5565:5676  for (uint i = 0; i < events.length; i++) {... */
+      iszero
+      tag_206
+      jumpi
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5639:5640  i */
+      dup1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5621:5627  result */
+      dup4
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5628:5635  counter */
+      dup4
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5621:5636  result[counter] */
+      dup2
+      mload
+      dup2
+      lt
+      tag_243
+      jumpi
+      invalid
+    tag_243:
+      0x20
+      swap1
+      dup2
+      mul
+      swap2
+      swap1
+      swap2
+      add
+      add
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5621:5640  result[counter] = i */
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5655:5664  counter++ */
+      0x01
+      swap2
+      dup3
+      add
+      swap2
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5601:5604  i++ */
+      add
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":5565:5676  for (uint i = 0; i < events.length; i++) {... */
+      jump(tag_240)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10631:10808  function isApprovedForAll(address owner, address operator)... */
+    tag_144:
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10766:10790  operatorApprovals[owner] */
+      swap2
+      dup3
+      and
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10737:10741  bool */
+      0x00
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10766:10790  operatorApprovals[owner] */
+      swap1
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10766:10783  operatorApprovals */
+      0x08
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10766:10790  operatorApprovals[owner] */
+      0x20
+      swap1
+      dup2
+      mstore
+      0x40
+      dup1
+      dup4
+      keccak256
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10766:10800  operatorApprovals[owner][operator] */
+      swap4
+      swap1
+      swap5
+      and
+      dup3
+      mstore
+      swap2
+      swap1
+      swap2
+      mstore
+      keccak256
+      sload
+      0xff
+      and
+      swap1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10631:10808  function isApprovedForAll(address owner, address operator)... */
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11172:11371  function _exists(uint256 characterId)... */
+    tag_148:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11259:11263  bool */
+      0x00
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11297:11326  characterToOwner[characterId] */
+      swap1
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11297:11313  characterToOwner */
+      0x03
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11297:11326  characterToOwner[characterId] */
+      0x20
+      mstore
+      0x40
+      swap1
+      keccak256
+      sload
+      sub(shl(0xa0, 0x01), 0x01)
+      and
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11344:11363  owner != address(0) */
+      iszero
+      iszero
+      swap1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11172:11371  function _exists(uint256 characterId)... */
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11379:11851  function _isApprovedOrOwner(address spender, uint256 characterId)... */
+    tag_164:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11494:11498  bool */
+      0x00
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11532:11561  characterToOwner[characterId] */
+      dup2
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11532:11548  characterToOwner */
+      0x03
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11532:11561  characterToOwner[characterId] */
+      0x20
+      mstore
+      0x40
+      dup2
+      keccak256
+      sload
+      sub(shl(0xa0, 0x01), 0x01)
+      swap1
+      dup2
+      and
+      swap1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11741:11757  spender == owner */
+      dup5
+      and
+      dup2
+      eq
+      dup1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11741:11801  spender == owner || this.getApproved(characterId) == spender */
+      tag_247
+      jumpi
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11794:11801  spender */
+      dup4
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11761:11801  this.getApproved(characterId) == spender */
+      and
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11761:11765  this */
+      address
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11761:11777  this.getApproved */
+      and
+      0x081812fc
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11778:11789  characterId */
+      dup6
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11761:11790  this.getApproved(characterId) */
+      mload(0x40)
+      dup3
+      0xffffffff
+      and
+      0xe0
+      shl
+      dup2
+      mstore
+      0x04
+      add
+      dup1
+      dup3
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      0x20
+      mload(0x40)
+      dup1
+      dup4
+      sub
+      dup2
+      dup7
+      dup1
+      extcodesize
+      iszero
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_248
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x00
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_248:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11761:11790  this.getApproved(characterId) */
+      pop
+      gas
+      staticcall
+      iszero
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_249
+      jumpi
+        /* "--CODEGEN--":45:61   */
+      returndatasize
+        /* "--CODEGEN--":42:43   */
+      0x00
+        /* "--CODEGEN--":39:40   */
+      dup1
+        /* "--CODEGEN--":24:62   */
+      returndatacopy
+        /* "--CODEGEN--":77:93   */
+      returndatasize
+        /* "--CODEGEN--":74:75   */
+      0x00
+        /* "--CODEGEN--":67:94   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_249:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11761:11790  this.getApproved(characterId) */
+      pop
+      pop
+      pop
+      pop
+      mload(0x40)
+      returndatasize
+        /* "--CODEGEN--":13:15   */
+      0x20
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_250
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_250:
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11761:11790  this.getApproved(characterId) */
+      mload
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11761:11801  this.getApproved(characterId) == spender */
+      and
+      eq
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11741:11801  spender == owner || this.getApproved(characterId) == spender */
+    tag_247:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11741:11842  spender == owner || this.getApproved(characterId) == spender || this.isApprovedForAll(owner, spender) */
+      dup1
+      tag_251
+      jumpi
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11805:11842  this.isApprovedForAll(owner, spender) */
+      0x40
+      dup1
+      mload
+      shl(0xe0, 0xe985e9c5)
+      dup2
+      mstore
+      sub(shl(0xa0, 0x01), 0x01)
+      dup4
+      dup2
+      and
+      0x04
+      dup4
+      add
+      mstore
+      dup7
+      and
+      0x24
+      dup3
+      add
+      mstore
+      swap1
+      mload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11805:11809  this */
+      address
+      swap2
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11805:11826  this.isApprovedForAll */
+      0xe985e9c5
+      swap2
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11805:11842  this.isApprovedForAll(owner, spender) */
+      0x44
+      dup1
+      dup4
+      add
+      swap3
+      0x20
+      swap3
+      swap2
+      swap1
+      dup3
+      swap1
+      sub
+      add
+      dup2
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11805:11809  this */
+      dup7
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11805:11842  this.isApprovedForAll(owner, spender) */
+      dup1
+      extcodesize
+      iszero
+        /* "--CODEGEN--":5:7   */
+      dup1
+      iszero
+      tag_252
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x00
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_252:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11805:11842  this.isApprovedForAll(owner, spender) */
+      pop
+      gas
+      staticcall
+      iszero
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_253
+      jumpi
+        /* "--CODEGEN--":45:61   */
+      returndatasize
+        /* "--CODEGEN--":42:43   */
+      0x00
+        /* "--CODEGEN--":39:40   */
+      dup1
+        /* "--CODEGEN--":24:62   */
+      returndatacopy
+        /* "--CODEGEN--":77:93   */
+      returndatasize
+        /* "--CODEGEN--":74:75   */
+      0x00
+        /* "--CODEGEN--":67:94   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_253:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11805:11842  this.isApprovedForAll(owner, spender) */
+      pop
+      pop
+      pop
+      pop
+      mload(0x40)
+      returndatasize
+        /* "--CODEGEN--":13:15   */
+      0x20
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_254
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_254:
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11805:11842  this.isApprovedForAll(owner, spender) */
+      mload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11741:11842  spender == owner || this.getApproved(characterId) == spender || this.isApprovedForAll(owner, spender) */
+    tag_251:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11733:11843  return (spender == owner || this.getApproved(characterId) == spender || this.isApprovedForAll(owner, spender)) */
+      swap5
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11379:11851  function _isApprovedOrOwner(address spender, uint256 characterId)... */
+      swap4
+      pop
+      pop
+      pop
+      pop
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/math/SafeMath.sol":834:1010  function add(uint256 a, uint256 b) internal pure returns (uint256) {... */
+    tag_167:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/math/SafeMath.sol":892:899  uint256 */
+      0x00
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/math/SafeMath.sol":923:928  a + b */
+      dup3
+      dup3
+      add
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/math/SafeMath.sol":946:952  c >= a */
+      dup4
+      dup2
+      lt
+      iszero
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/math/SafeMath.sol":938:984  require(c >= a, "SafeMath: addition overflow") */
+      tag_256
+      jumpi
+      0x40
+      dup1
+      mload
+      shl(0xe5, 0x461bcd)
+      dup2
+      mstore
+      0x20
+      0x04
+      dup3
+      add
+      mstore
+      0x1b
+      0x24
+      dup3
+      add
+      mstore
+      0x536166654d6174683a206164646974696f6e206f766572666c6f770000000000
+      0x44
+      dup3
+      add
+      mstore
+      swap1
+      mload
+      swap1
+      dup2
+      swap1
+      sub
+      0x64
+      add
+      swap1
+      revert
+    tag_256:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/math/SafeMath.sol":1002:1003  c */
+      swap4
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/math/SafeMath.sol":834:1010  function add(uint256 a, uint256 b) internal pure returns (uint256) {... */
+      swap3
+      pop
+      pop
+      pop
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/math/SafeMath.sol":1274:1408  function sub(uint256 a, uint256 b) internal pure returns (uint256) {... */
+    tag_169:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/math/SafeMath.sol":1332:1339  uint256 */
+      0x00
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/math/SafeMath.sol":1358:1401  sub(a, b, "SafeMath: subtraction overflow") */
+      tag_256
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/math/SafeMath.sol":1362:1363  a */
+      dup4
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/math/SafeMath.sol":1365:1366  b */
+      dup4
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/math/SafeMath.sol":1358:1401  sub(a, b, "SafeMath: subtraction overflow") */
+      mload(0x40)
+      dup1
+      0x40
+      add
+      0x40
+      mstore
+      dup1
+      0x1e
+      dup2
+      mstore
+      0x20
+      add
+      0x536166654d6174683a207375627472616374696f6e206f766572666c6f770000
+      dup2
+      mstore
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/math/SafeMath.sol":1358:1361  sub */
+      tag_259
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/math/SafeMath.sol":1358:1401  sub(a, b, "SafeMath: subtraction overflow") */
+      jump	// in
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9859:10165  function _clearApproval(address owner, uint256 characterId) private {... */
+    tag_171:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9946:9975  characterToOwner[characterId] */
+      0x00
+      dup2
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9946:9962  characterToOwner */
+      0x03
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9946:9975  characterToOwner[characterId] */
+      0x20
+      mstore
+      0x40
+      swap1
+      keccak256
+      sload
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9946:9984  characterToOwner[characterId] == owner */
+      dup4
+      dup2
+      and
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9946:9975  characterToOwner[characterId] */
+      swap2
+      and
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9946:9984  characterToOwner[characterId] == owner */
+      eq
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9938:9985  require(characterToOwner[characterId] == owner) */
+      tag_261
+      jumpi
+      0x00
+      dup1
+      revert
+    tag_261:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10004:10024  _exists(characterId) */
+      tag_262
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10012:10023  characterId */
+      dup2
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10004:10011  _exists */
+      tag_148
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10004:10024  _exists(characterId) */
+      jump	// in
+    tag_262:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9996:10025  require(_exists(characterId)) */
+      tag_263
+      jumpi
+      0x00
+      dup1
+      revert
+    tag_263:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10083:10084  0 */
+      0x00
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10040:10071  characterApprovals[characterId] */
+      dup2
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10040:10058  characterApprovals */
+      0x07
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10040:10071  characterApprovals[characterId] */
+      0x20
+      mstore
+      0x40
+      swap1
+      keccak256
+      sload
+      sub(shl(0xa0, 0x01), 0x01)
+      and
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10040:10085  characterApprovals[characterId] != address(0) */
+      iszero
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10036:10158  if (characterApprovals[characterId] != address(0)) {... */
+      tag_264
+      jumpi
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10144:10145  0 */
+      0x00
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10102:10133  characterApprovals[characterId] */
+      dup2
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10102:10120  characterApprovals */
+      0x07
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10102:10133  characterApprovals[characterId] */
+      0x20
+      mstore
+      0x40
+      swap1
+      keccak256
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10102:10146  characterApprovals[characterId] = address(0) */
+      dup1
+      sload
+      not(sub(shl(0xa0, 0x01), 0x01))
+      and
+      swap1
+      sstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":10036:10158  if (characterApprovals[characterId] != address(0)) {... */
+    tag_264:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":9859:10165  function _clearApproval(address owner, uint256 characterId) private {... */
+      pop
+      pop
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2207:3225  function _createCharacter(... */
+    tag_214:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2426:2437  _identifier */
+      dup5
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2439:2443  _dna */
+      dup2
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12002:12006  true */
+      0x01
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":11988:11999  bool result */
+      0x00
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12017:12267  for(uint i = 0; i < characters.length; i++) {... */
+    tag_266:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12037:12047  characters */
+      0x01
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12037:12054  characters.length */
+      sload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12033:12054  i < characters.length */
+      dup2
+      lt
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12017:12267  for(uint i = 0; i < characters.length; i++) {... */
+      iszero
+      tag_267
+      jumpi
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12163:12174  _identifier */
+      dup4
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12146:12175  abi.encodePacked(_identifier) */
+      add(0x20, mload(0x40))
+      dup1
+      dup3
+      dup1
+      mload
+      swap1
+      0x20
+      add
+      swap1
+      dup1
+      dup4
+      dup4
+        /* "--CODEGEN--":36:189   */
+    tag_269:
+        /* "--CODEGEN--":66:68   */
+      0x20
+        /* "--CODEGEN--":61:64   */
+      dup4
+        /* "--CODEGEN--":58:69   */
+      lt
+        /* "--CODEGEN--":36:189   */
+      tag_271
+      jumpi
+        /* "--CODEGEN--":176:186   */
+      dup1
+      mload
+        /* "--CODEGEN--":164:187   */
+      dup3
+      mstore
+      not(0x1f)
+        /* "--CODEGEN--":139:151   */
+      swap1
+      swap3
+      add
+      swap2
+        /* "--CODEGEN--":98:100   */
+      0x20
+        /* "--CODEGEN--":89:101   */
+      swap2
+      dup3
+      add
+      swap2
+        /* "--CODEGEN--":114:126   */
+      add
+        /* "--CODEGEN--":36:189   */
+      jump(tag_269)
+    tag_271:
+        /* "--CODEGEN--":274:275   */
+      0x01
+        /* "--CODEGEN--":267:270   */
+      dup4
+        /* "--CODEGEN--":263:265   */
+      0x20
+        /* "--CODEGEN--":259:271   */
+      sub
+        /* "--CODEGEN--":254:257   */
+      0x0100
+        /* "--CODEGEN--":250:272   */
+      exp
+        /* "--CODEGEN--":246:276   */
+      sub
+        /* "--CODEGEN--":315:319   */
+      dup1
+        /* "--CODEGEN--":311:320   */
+      not
+        /* "--CODEGEN--":305:308   */
+      dup3
+        /* "--CODEGEN--":299:309   */
+      mload
+        /* "--CODEGEN--":295:321   */
+      and
+        /* "--CODEGEN--":356:360   */
+      dup2
+        /* "--CODEGEN--":350:353   */
+      dup5
+        /* "--CODEGEN--":344:354   */
+      mload
+        /* "--CODEGEN--":340:361   */
+      and
+        /* "--CODEGEN--":389:396   */
+      dup1
+        /* "--CODEGEN--":380:387   */
+      dup3
+        /* "--CODEGEN--":377:397   */
+      or
+        /* "--CODEGEN--":372:375   */
+      dup6
+        /* "--CODEGEN--":365:398   */
+      mstore
+        /* "--CODEGEN--":3:402   */
+      pop
+      pop
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12146:12175  abi.encodePacked(_identifier) */
+      pop
+      pop
+      pop
+      swap1
+      pop
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+        /* "--CODEGEN--":49:53   */
+      0x20
+        /* "--CODEGEN--":39:46   */
+      dup2
+        /* "--CODEGEN--":30:37   */
+      dup4
+        /* "--CODEGEN--":26:47   */
+      sub
+        /* "--CODEGEN--":22:54   */
+      sub
+        /* "--CODEGEN--":13:20   */
+      dup2
+        /* "--CODEGEN--":6:55   */
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12146:12175  abi.encodePacked(_identifier) */
+      swap1
+      0x40
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12136:12176  keccak256(abi.encodePacked(_identifier)) */
+      dup1
+      mload
+      swap1
+      0x20
+      add
+      keccak256
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12106:12116  characters */
+      0x01
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12117:12118  i */
+      dup3
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12106:12119  characters[i] */
+      dup2
+      sload
+      dup2
+      lt
+      tag_272
+      jumpi
+      invalid
+    tag_272:
+      swap1
+      0x00
+      mstore
+      keccak256(0x00, 0x20)
+      swap1
+      0x05
+      mul
+      add
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12106:12130  characters[i].identifier */
+      0x00
+      add
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12089:12131  abi.encodePacked(characters[i].identifier) */
+      add(0x20, mload(0x40))
+      dup1
+      dup3
+      dup1
+      sload
+      0x01
+      dup2
+      0x01
+      and
+      iszero
+      0x0100
+      mul
+      sub
+      and
+      0x02
+      swap1
+      div
+      dup1
+      iszero
+      tag_274
+      jumpi
+      dup1
+      0x1f
+      lt
+      tag_275
+      jumpi
+      0x0100
+      dup1
+      dup4
+      sload
+      div
+      mul
+      dup4
+      mstore
+      swap2
+      dup3
+      add
+      swap2
+      jump(tag_274)
+    tag_275:
+      dup3
+      add
+      swap2
+      swap1
+      0x00
+      mstore
+      keccak256(0x00, 0x20)
+      swap1
+    tag_276:
+      dup2
+      sload
+      dup2
+      mstore
+      swap1
+      0x01
+      add
+      swap1
+      0x20
+      add
+      dup1
+      dup4
+      gt
+      tag_276
+      jumpi
+    tag_274:
+      pop
+      pop
+      swap2
+      pop
+      pop
+      mload(0x40)
+        /* "--CODEGEN--":49:53   */
+      0x20
+        /* "--CODEGEN--":39:46   */
+      dup2
+        /* "--CODEGEN--":30:37   */
+      dup4
+        /* "--CODEGEN--":26:47   */
+      sub
+        /* "--CODEGEN--":22:54   */
+      sub
+        /* "--CODEGEN--":13:20   */
+      dup2
+        /* "--CODEGEN--":6:55   */
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12089:12131  abi.encodePacked(characters[i].identifier) */
+      swap1
+      0x40
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12079:12132  keccak256(abi.encodePacked(characters[i].identifier)) */
+      dup1
+      mload
+      swap1
+      0x20
+      add
+      keccak256
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12079:12176  keccak256(abi.encodePacked(characters[i].identifier)) == keccak256(abi.encodePacked(_identifier)) */
+      eq
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12079:12205  keccak256(abi.encodePacked(characters[i].identifier)) == keccak256(abi.encodePacked(_identifier)) && characters[i].dna == _dna */
+      dup1
+      iszero
+      tag_277
+      jumpi
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12201:12205  _dna */
+      dup3
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12180:12190  characters */
+      0x01
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12191:12192  i */
+      dup3
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12180:12193  characters[i] */
+      dup2
+      sload
+      dup2
+      lt
+      tag_278
+      jumpi
+      invalid
+    tag_278:
+      swap1
+      0x00
+      mstore
+      keccak256(0x00, 0x20)
+      swap1
+      0x05
+      mul
+      add
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12180:12197  characters[i].dna */
+      0x04
+      add
+      sload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12180:12205  characters[i].dna == _dna */
+      eq
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12079:12205  keccak256(abi.encodePacked(characters[i].identifier)) == keccak256(abi.encodePacked(_identifier)) && characters[i].dna == _dna */
+    tag_277:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12076:12256  if(keccak256(abi.encodePacked(characters[i].identifier)) == keccak256(abi.encodePacked(_identifier)) && characters[i].dna == _dna) {... */
+      iszero
+      tag_280
+      jumpi
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12235:12240  false */
+      0x00
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12226:12240  result = false */
+      swap2
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12076:12256  if(keccak256(abi.encodePacked(characters[i].identifier)) == keccak256(abi.encodePacked(_identifier)) && characters[i].dna == _dna) {... */
+    tag_280:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12056:12059  i++ */
+      0x01
+      add
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12017:12267  for(uint i = 0; i < characters.length; i++) {... */
+      jump(tag_266)
+    tag_267:
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12285:12291  result */
+      dup1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12277:12358  require(result, "Character with name, unit and race combination already exists.") */
+      tag_281
+      jumpi
+      mload(0x40)
+      shl(0xe5, 0x461bcd)
+      dup2
+      mstore
+      0x04
+      add
+      dup1
+      dup1
+      0x20
+      add
+      dup3
+      dup2
+      sub
+      dup3
+      mstore
+      0x3e
+      dup2
+      mstore
+      0x20
+      add
+      dup1
+      data_3164bca035d88b1fecd5470b4016dc1661607cc15f4f8bd6dcfea0687a71a336
+      0x3e
+      swap2
+      codecopy
+      0x40
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      revert
+    tag_281:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2578:2755  Character(... */
+      0x40
+      dup1
+      mload
+      0xa0
+      dup2
+      add
+      dup3
+      mstore
+      dup10
+      dup2
+      mstore
+      0x20
+      dup1
+      dup3
+      add
+      dup11
+      swap1
+      mstore
+      swap2
+      dup2
+      add
+      dup9
+      swap1
+      mstore
+      0x60
+      dup2
+      add
+      dup8
+      swap1
+      mstore
+      0x80
+      dup2
+      add
+      dup7
+      swap1
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2544:2554  characters */
+      0x01
+        /* "--CODEGEN--":27:37   */
+      dup1
+      sload
+        /* "--CODEGEN--":23:41   */
+      dup1
+      dup3
+      add
+        /* "--CODEGEN--":45:68   */
+      dup1
+      dup4
+      sstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2507:2514  uint id */
+      0x00
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2544:2774  characters.push(... */
+      swap3
+      dup4
+      mstore
+      dup4
+      mload
+      dup1
+      mload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2507:2514  uint id */
+      swap4
+      swap6
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2517:2791  SafeMath.sub(... */
+      tag_283
+      swap6
+        /* "--CODEGEN--":23:41   */
+      swap3
+      swap5
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2578:2755  Character(... */
+      swap3
+      swap4
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2544:2774  characters.push(... */
+      0x05
+      mul
+      0xb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf6
+      add
+      swap3
+      tag_285
+      swap3
+      dup5
+      swap3
+      add
+      swap1
+      tag_219
+      jump	// in
+    tag_285:
+      pop
+      0x20
+      dup3
+      dup2
+      add
+      mload
+      dup1
+      mload
+      tag_286
+      swap3
+      0x01
+      dup6
+      add
+      swap3
+      add
+      swap1
+      tag_219
+      jump	// in
+    tag_286:
+      pop
+      0x40
+      dup3
+      add
+      mload
+      dup1
+      mload
+      tag_287
+      swap2
+      0x02
+      dup5
+      add
+      swap2
+      0x20
+      swap1
+      swap2
+      add
+      swap1
+      tag_219
+      jump	// in
+    tag_287:
+      pop
+      0x60
+      dup3
+      add
+      mload
+      dup1
+      mload
+      tag_288
+      swap2
+      0x03
+      dup5
+      add
+      swap2
+      0x20
+      swap1
+      swap2
+      add
+      swap1
+      tag_219
+      jump	// in
+    tag_288:
+      pop
+      0x80
+      dup3
+      add
+      mload
+      dup2
+      0x04
+      add
+      sstore
+      pop
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2789:2790  1 */
+      0x01
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2517:2529  SafeMath.sub */
+      tag_169
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2517:2791  SafeMath.sub(... */
+      jump	// in
+    tag_283:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2882:2883  0 */
+      0x00
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2850:2870  characterToOwner[id] */
+      dup2
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2850:2866  characterToOwner */
+      0x03
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2850:2870  characterToOwner[id] */
+      0x20
+      mstore
+      0x40
+      swap1
+      keccak256
+      sload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2507:2791  uint id = SafeMath.sub(... */
+      swap1
+      swap2
+      pop
+      sub(shl(0xa0, 0x01), 0x01)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2850:2870  characterToOwner[id] */
+      and
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2850:2884  characterToOwner[id] == address(0) */
+      iszero
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2843:2885  assert(characterToOwner[id] == address(0)) */
+      tag_289
+      jumpi
+      invalid
+    tag_289:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2896:2916  characterToOwner[id] */
+      0x00
+      dup2
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2896:2912  characterToOwner */
+      0x03
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2896:2916  characterToOwner[id] */
+      0x20
+      swap1
+      dup2
+      mstore
+      0x40
+      dup1
+      dup4
+      keccak256
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2896:2929  characterToOwner[id] = msg.sender */
+      dup1
+      sload
+      not(sub(shl(0xa0, 0x01), 0x01))
+      and
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2919:2929  msg.sender */
+      caller
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2896:2929  characterToOwner[id] = msg.sender */
+      swap1
+      dup2
+      or
+      swap1
+      swap2
+      sstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2987:3018  ownerCharacterCount[msg.sender] */
+      dup4
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2987:3006  ownerCharacterCount */
+      0x05
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2987:3018  ownerCharacterCount[msg.sender] */
+      swap1
+      swap2
+      mstore
+      swap1
+      keccak256
+      sload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2974:3022  SafeMath.add(ownerCharacterCount[msg.sender], 1) */
+      tag_290
+      swap1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2896:2929  characterToOwner[id] = msg.sender */
+      0x01
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2974:2986  SafeMath.add */
+      tag_167
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2974:3022  SafeMath.add(ownerCharacterCount[msg.sender], 1) */
+      jump	// in
+    tag_290:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2960:2970  msg.sender */
+      caller
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2940:2971  ownerCharacterCount[msg.sender] */
+      0x00
+      swap1
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2940:2959  ownerCharacterCount */
+      0x05
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2940:2971  ownerCharacterCount[msg.sender] */
+      0x20
+      mstore
+      0x40
+      swap1
+      keccak256
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2940:3022  ownerCharacterCount[msg.sender] = SafeMath.add(ownerCharacterCount[msg.sender], 1) */
+      sstore
+      pop
+      pop
+      pop
+      pop
+      pop
+      pop
+      pop
+      pop
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":2207:3225  function _createCharacter(... */
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7794:8165  function _checkOnERC721Received(address from, address to, uint256 characterId, bytes memory _data)... */
+    tag_236:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7928:7932  bool */
+      0x00
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7955:7969  isContract(to) */
+      tag_292
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7966:7968  to */
+      dup5
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7955:7965  isContract */
+      tag_293
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7955:7969  isContract(to) */
+      jump	// in
+    tag_292:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7950:8009  if (!isContract(to)) {... */
+      tag_294
+      jumpi
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7993:7997  true */
+      0x01
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7986:7997  return true */
+      jump(tag_251)
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7950:8009  if (!isContract(to)) {... */
+    tag_294:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8037:8111  IERC721Receiver(to).onERC721Received(msg.sender, from, characterId, _data) */
+      mload(0x40)
+      shl(0xe1, 0x0a85bd01)
+      dup2
+      mstore
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8074:8084  msg.sender */
+      caller
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8037:8111  IERC721Receiver(to).onERC721Received(msg.sender, from, characterId, _data) */
+      0x04
+      dup3
+      add
+      dup2
+      dup2
+      mstore
+      sub(shl(0xa0, 0x01), 0x01)
+      dup9
+      dup2
+      and
+      0x24
+      dup6
+      add
+      mstore
+      0x44
+      dup5
+      add
+      dup8
+      swap1
+      mstore
+      0x80
+      0x64
+      dup6
+      add
+      swap1
+      dup2
+      mstore
+      dup7
+      mload
+      0x84
+      dup7
+      add
+      mstore
+      dup7
+      mload
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8021:8034  bytes4 retval */
+      0x00
+      swap6
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8037:8073  IERC721Receiver(to).onERC721Received */
+      swap3
+      dup11
+      and
+      swap5
+      0x150b7a02
+      swap5
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8074:8084  msg.sender */
+      swap1
+      swap4
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8086:8090  from */
+      dup13
+      swap4
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8092:8103  characterId */
+      dup12
+      swap4
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8105:8110  _data */
+      dup12
+      swap4
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8037:8111  IERC721Receiver(to).onERC721Received(msg.sender, from, characterId, _data) */
+      swap3
+      0xa4
+      add
+      swap1
+      0x20
+      dup6
+      add
+      swap1
+      dup1
+      dup4
+      dup4
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8021:8034  bytes4 retval */
+      dup15
+        /* "--CODEGEN--":8:108   */
+    tag_295:
+        /* "--CODEGEN--":33:36   */
+      dup4
+        /* "--CODEGEN--":30:31   */
+      dup2
+        /* "--CODEGEN--":27:37   */
+      lt
+        /* "--CODEGEN--":8:108   */
+      iszero
+      tag_297
+      jumpi
+        /* "--CODEGEN--":90:101   */
+      dup2
+      dup2
+      add
+        /* "--CODEGEN--":84:102   */
+      mload
+        /* "--CODEGEN--":71:82   */
+      dup4
+      dup3
+      add
+        /* "--CODEGEN--":64:103   */
+      mstore
+        /* "--CODEGEN--":52:54   */
+      0x20
+        /* "--CODEGEN--":45:55   */
+      add
+        /* "--CODEGEN--":8:108   */
+      jump(tag_295)
+    tag_297:
+        /* "--CODEGEN--":12:26   */
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8037:8111  IERC721Receiver(to).onERC721Received(msg.sender, from, characterId, _data) */
+      pop
+      pop
+      pop
+      swap1
+      pop
+      swap1
+      dup2
+      add
+      swap1
+      0x1f
+      and
+      dup1
+      iszero
+      tag_298
+      jumpi
+      dup1
+      dup3
+      sub
+      dup1
+      mload
+      0x01
+      dup4
+      0x20
+      sub
+      0x0100
+      exp
+      sub
+      not
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+    tag_298:
+      pop
+      swap6
+      pop
+      pop
+      pop
+      pop
+      pop
+      pop
+      0x20
+      mload(0x40)
+      dup1
+      dup4
+      sub
+      dup2
+      0x00
+      dup8
+      dup1
+      extcodesize
+      iszero
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_299
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x00
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_299:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8037:8111  IERC721Receiver(to).onERC721Received(msg.sender, from, characterId, _data) */
+      pop
+      gas
+      call
+      iszero
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_300
+      jumpi
+        /* "--CODEGEN--":45:61   */
+      returndatasize
+        /* "--CODEGEN--":42:43   */
+      0x00
+        /* "--CODEGEN--":39:40   */
+      dup1
+        /* "--CODEGEN--":24:62   */
+      returndatacopy
+        /* "--CODEGEN--":77:93   */
+      returndatasize
+        /* "--CODEGEN--":74:75   */
+      0x00
+        /* "--CODEGEN--":67:94   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_300:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8037:8111  IERC721Receiver(to).onERC721Received(msg.sender, from, characterId, _data) */
+      pop
+      pop
+      pop
+      pop
+      mload(0x40)
+      returndatasize
+        /* "--CODEGEN--":13:15   */
+      0x20
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_301
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_301:
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8037:8111  IERC721Receiver(to).onERC721Received(msg.sender, from, characterId, _data) */
+      mload
+      not(sub(shl(0xe0, 0x01), 0x01))
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":8130:8156  retval == _ERC721_RECEIVED */
+      and
+      shl(0xe1, 0x0a85bd01)
+      eq
+      swap2
+      pop
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":7794:8165  function _checkOnERC721Received(address from, address to, uint256 characterId, bytes memory _data)... */
+      swap5
+      swap4
+      pop
+      pop
+      pop
+      pop
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/math/SafeMath.sol":1732:1919  function sub(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {... */
+    tag_259:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/math/SafeMath.sol":1818:1825  uint256 */
+      0x00
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/math/SafeMath.sol":1853:1865  errorMessage */
+      dup2
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/math/SafeMath.sol":1845:1851  b <= a */
+      dup5
+      dup5
+      gt
+      iszero
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/math/SafeMath.sol":1837:1866  require(b <= a, errorMessage) */
+      tag_303
+      jumpi
+      mload(0x40)
+      shl(0xe5, 0x461bcd)
+      dup2
+      mstore
+      0x04
+      add
+      dup1
+      dup1
+      0x20
+      add
+      dup3
+      dup2
+      sub
+      dup3
+      mstore
+      dup4
+      dup2
+      dup2
+      mload
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      dup1
+      mload
+      swap1
+      0x20
+      add
+      swap1
+      dup1
+      dup4
+      dup4
+        /* "--CODEGEN--":23:24   */
+      0x00
+        /* "--CODEGEN--":8:108   */
+    tag_304:
+        /* "--CODEGEN--":33:36   */
+      dup4
+        /* "--CODEGEN--":30:31   */
+      dup2
+        /* "--CODEGEN--":27:37   */
+      lt
+        /* "--CODEGEN--":8:108   */
+      iszero
+      tag_306
+      jumpi
+        /* "--CODEGEN--":90:101   */
+      dup2
+      dup2
+      add
+        /* "--CODEGEN--":84:102   */
+      mload
+        /* "--CODEGEN--":71:82   */
+      dup4
+      dup3
+      add
+        /* "--CODEGEN--":64:103   */
+      mstore
+        /* "--CODEGEN--":52:54   */
+      0x20
+        /* "--CODEGEN--":45:55   */
+      add
+        /* "--CODEGEN--":8:108   */
+      jump(tag_304)
+    tag_306:
+        /* "--CODEGEN--":12:26   */
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/math/SafeMath.sol":1837:1866  require(b <= a, errorMessage) */
+      pop
+      pop
+      pop
+      swap1
+      pop
+      swap1
+      dup2
+      add
+      swap1
+      0x1f
+      and
+      dup1
+      iszero
+      tag_307
+      jumpi
+      dup1
+      dup3
+      sub
+      dup1
+      mload
+      0x01
+      dup4
+      0x20
+      sub
+      0x0100
+      exp
+      sub
+      not
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+    tag_307:
+      pop
+      swap3
+      pop
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      revert
+    tag_303:
+      pop
+      pop
+      pop
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/math/SafeMath.sol":1888:1893  a - b */
+      swap1
+      sub
+      swap1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/openzeppelin-contracts-2.5.0/contracts/math/SafeMath.sol":1732:1919  function sub(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {... */
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12443:13109  function isContract(address account)... */
+    tag_293:
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":13054:13074  extcodesize(account) */
+      extcodesize
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":13093:13101  size > 0 */
+      iszero
+      iszero
+      swap1
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":12443:13109  function isContract(address account)... */
+      jump	// out
+        /* "C:/Users/mfvan/Documents/Git/Warband_Manager/source/CryptoCharacter0510.sol":390:13112  contract CryptoCharacter is IERC721, ERC165 {... */
+    tag_219:
+      dup3
+      dup1
+      sload
+      0x01
+      dup2
+      0x01
+      and
+      iszero
+      0x0100
+      mul
+      sub
+      and
+      0x02
+      swap1
+      div
+      swap1
+      0x00
+      mstore
+      keccak256(0x00, 0x20)
+      swap1
+      0x1f
+      add
+      0x20
+      swap1
+      div
+      dup2
+      add
+      swap3
+      dup3
+      0x1f
+      lt
+      tag_310
+      jumpi
+      dup1
+      mload
+      not(0xff)
+      and
+      dup4
+      dup1
+      add
+      or
+      dup6
+      sstore
+      jump(tag_312)
+    tag_310:
+      dup3
+      dup1
+      add
+      0x01
+      add
+      dup6
+      sstore
+      dup3
+      iszero
+      tag_312
+      jumpi
+      swap2
+      dup3
+      add
+    tag_311:
+      dup3
+      dup2
+      gt
+      iszero
+      tag_312
+      jumpi
+      dup3
+      mload
+      dup3
+      sstore
+      swap2
+      0x20
+      add
+      swap2
+      swap1
+      0x01
+      add
+      swap1
+      jump(tag_311)
+    tag_312:
+      pop
+      tag_313
+      swap3
+      swap2
+      pop
+      tag_314
+      jump	// in
+    tag_313:
+      pop
+      swap1
+      jump	// out
+    tag_314:
+      tag_315
+      swap2
+      swap1
+    tag_316:
+      dup1
+      dup3
+      gt
+      iszero
+      tag_313
+      jumpi
+      0x00
+      dup2
+      sstore
+      0x01
+      add
+      jump(tag_316)
+    tag_315:
+      swap1
+      jump	// out
+    stop
+    data_3164bca035d88b1fecd5470b4016dc1661607cc15f4f8bd6dcfea0687a71a336 4368617261637465722077697468206e616d652c20756e697420616e64207261636520636f6d62696e6174696f6e20616c7265616479206578697374732e
+
+    auxdata: 0xa265627a7a7230582066b2687c62d1b59739d4eaa407f01bfe327608ca9b1dfe6fe6f0c3da40fc93d464736f6c634300050a0032
+}

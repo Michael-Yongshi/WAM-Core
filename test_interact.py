@@ -1,6 +1,4 @@
-from source.methods_json import (
-    load_json,
-)
+
 from source.class_web3 import (
     Web3Connection,
 )
@@ -74,21 +72,21 @@ if __name__ == '__main__':
     wallet_private_key = "0xad5bb5684dbfb337040fb31d76c7b6118e0bb4fed23e940451a43746f93ebb09"
 
     # Contract functions
-    abi = load_json("source/", "methods_eth_abi")
+    abi = {"path": "source/", "file": "methods_eth_abi"}
 
     # # Known Contract
     # contract_address="0x9435cFB566b87e22d9EB08E98EACa95cc2BF1420"
     # contract_address="0xF83BfA44f90a253aeE5B710171e3Ab933ec37B21"
 
     # # Build contract based on solidity
-    # solidity = "source/methods_eth_contract.sol"
+    # solidity = "methods_eth_contract.sol"
     # contract_address = test_deploy_contract(network_url=network_url, abi=abi, solidity=solidity, wallet_private_key=wallet_private_key)
 
     # Build contract based on bytecode
-    bytecode = "source/methods_eth_bytecode.txt"
-    contract_address = test_deploy_bytecode(network_url=network_url, abi=abi, bytecode=bytecode, wallet_private_key=wallet_private_key)
+    # bytecode = "source/methods_eth_bytecode.txt"
+    # contract_address = test_deploy_bytecode(network_url=network_url, abi=abi, bytecode=bytecode, wallet_private_key=wallet_private_key)
 
     w3c = test_interact(network_url=network_url, abi=abi, contract_address=contract_address, wallet_private_key=wallet_private_key)
 
-    test_write(w3c)
-    test_read(w3c)
+    # test_write(w3c)
+    # test_read(w3c)

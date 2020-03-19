@@ -101,7 +101,7 @@ apt-get install python3 pyqt5   # (prod) if pip3 doesn't work
 
 ### Solidity requisites
 
-WEB3:
+#### WEB3:
 library for interacting with ethereum, setting up connections and interacting with smart contracts
 
 Visual 14 C++ needed
@@ -113,17 +113,62 @@ only then with pip
 pip3 install --user web3                # (prod) 
 ```
 
-solc
+#### Solidity Compiler:
+solidity compiler for windows (solc) - based on https://www.codeooze.com/blockchain/solc-hello-world/
+
+Combinations:
+- (current)             solidity compiler 0.6.2 and Open Zeppelin 3.0.0 Beta
+- (needs adaptation)    solidity compiler 0.5.10 and Open Zeppelin 2.5.0
+
+get windows zip for solidity compiler from:
+https://github.com/ethereum/solidity/releases
+info:
+https://solidity.readthedocs.io/en/v0.6.2/
+https://solidity.readthedocs.io/en/v0.5.10/
+
+get open zeppelin zip release from:
+https://github.com/OpenZeppelin/openzeppelin-contracts/releases/
+for direct lookup of contracts
+https://github.com/OpenZeppelin/openzeppelin-contracts/releases/tag/v3.0.0-beta.0
+https://github.com/OpenZeppelin/openzeppelin-contracts/releases/tag/v2.5.0
+
+Install solidity compiler:
+-extract to any folder, but advised to appdata/roaming/
+
+install open zeppelin release: 
+-extract to any folder
+-copy contracts content
+-paste in contracts folder of git repo/source/contracts
+
+To use
+-cd to folder in cmd
+-compile by running:
+```
+solc -o C:\Users\mfvan\Documents\Git\Warband_Manager\source\build0510\ --optimize --overwrite --bin --ast --asm C:\Users\mfvan\Documents\Git\Warband_Manager\source\CryptoCharacter0510.sol
+solc -o C:\Users\mfvan\Documents\Git\Warband_Manager\source\build062\ --optimize --overwrite --bin --ast-json --asm C:\Users\mfvan\Documents\Git\Warband_Manager\source\CryptoCharacter062.sol
+# I packaged the dependencies (basically all openzeppelin contracts) in the contracts folder in my git.
+```
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+solidity compiler for python on windows (currently not working; file not found error):
 install nodejs and npm open npm command line exe
 ```
 npm install -g solc
 ```
 
-https://www.codeooze.com/blockchain/solc-hello-world/
-https://github.com/ethereum/solidity/releases/download/v0.6.4/solidity-windows.zip
-
 wrapper
 https://pypi.org/project/py-solc/
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+get solidity standards dependencies from openzeppelin:
+https://github.com/OpenZeppelin/openzeppelin-contracts
+Copy the contracts folder in whole, or just the files we are using (retaining the path):
+- contracts/token/ERC721/IERC721.sol
+- contracts/token/ERC721/IERC721Receiver.sol
+- contracts/introspection/ERC165.sol
+- contracts/math/SafeMath.sol
 
 ### NFC through pyscard
 Can only be used with version 3.6.8 of python (as of moment of writing). Thus we have to switch for this application to this python version in order to use this NFC library.

@@ -1,4 +1,11 @@
+import os
 import time
+
+from solc import (
+    compile_standard,
+    compile_source,
+    compile_files,
+)
 
 from web3 import Web3
 
@@ -37,6 +44,7 @@ class Web3Connection(object):
                 contract_address = Web3Connection.init_deploy_solidity(w3, account, abi, solidity)   
             
             # Setting up contract with the needed abi (functions) and the contract address (for instantiation)
+            abi = load_json(abi["path"], abi["file"])
             contract = w3.eth.contract(abi = abi, address = contract_address)
             print(contract.address)
 
@@ -50,9 +58,25 @@ class Web3Connection(object):
     def init_deploy_solidity(w3, account, abi, solidity):
         NotImplemented
 
-        # getting contract solidity code by opening the contract sol file and save it as a string
-        # with open("cryptocharacter/contracts/CryptoCharacter.sol", mode='r') as contractfile: # b is important -> binary
-        #     contract_code = contractfile.read()
+        # relative_path = os.path.join("source", solidity)
+        # current_directory = os.path.dirname(os.path.dirname(__file__))
+        # absolute_path = os.path.join(current_directory, relative_path)
+
+        # print(f"relative path {relative_path}")
+        # print(f"absolute path {absolute_path}")
+
+        # compile standard
+        # compiled_sol = compile_standard(
+        #     {"sources": absolute_path}
+        # )
+
+        # compile directly a sol file
+        # compiled_sol = compile_files(absolute_path)
+
+        # compile solidity source code
+        # with open(relative_path, mode='r') as infile:
+        #     source = infile.read()
+        # compiled_sol = compile_source('pragma solidity ^0.4.0; contract A{ funcion A() public{}}')
 
     @staticmethod
     def init_deploy_bytecode(w3, account, abi, bytecode):

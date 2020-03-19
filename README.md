@@ -144,8 +144,8 @@ To use
 -cd to folder in cmd
 -compile by running:
 ```
-solc -o C:\Users\mfvan\Documents\Git\Warband_Manager\source\build0510\ --optimize --overwrite --bin --ast --asm C:\Users\mfvan\Documents\Git\Warband_Manager\source\CryptoCharacter0510.sol
-solc -o C:\Users\mfvan\Documents\Git\Warband_Manager\source\build062\ --optimize --overwrite --bin --ast-json --asm C:\Users\mfvan\Documents\Git\Warband_Manager\source\CryptoCharacter062.sol
+solc -o C:\Users\mfvan\Documents\Git\Warband_Manager\source\build0510\ --optimize --overwrite --bin --abi --ast --asm C:\Users\mfvan\Documents\Git\Warband_Manager\source\CryptoCharacter0510.sol
+solc -o C:\Users\mfvan\Documents\Git\Warband_Manager\source\build062\ --optimize --overwrite --bin --abi --ast-json --asm C:\Users\mfvan\Documents\Git\Warband_Manager\source\CryptoCharacter062.sol
 # I packaged the dependencies (basically all openzeppelin contracts) in the contracts folder in my git.
 ```
 

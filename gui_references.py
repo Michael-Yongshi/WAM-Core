@@ -47,11 +47,7 @@ from source.methods_json import (
     )
 
 from source.methods_database import (
-    create_warbandref,
-    create_characterref,
-    create_itemref,
-    create_abilityref,
-    create_magicref,
+    create_ref_files,
     add_warbandref,
     add_characterref,
     add_itemref,
@@ -67,11 +63,7 @@ from source.methods_database import (
 from source.methods_engine import (
     save_warband,
     load_warband,
-    cache_warband,
-    show_saved_warbands,
-    get_current_warband,
-    create_template_wb,
-    create_template_char,
+    show_warbands,
     )
 
 from source.class_hierarchy import (
@@ -82,7 +74,7 @@ from source.class_hierarchy import (
     Henchman,
     )
 
-from source.class_hierarchy import (
+from source.class_components import (
     Rule,
     Treasury,
     Item,
@@ -91,13 +83,13 @@ from source.class_hierarchy import (
     Magic,
     )
 
-from source.widget_template import *
+from gui.widget_template import *
 
 class MainReferences(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.warband = create_template_wb()
+        self.warband = Warband.create_template()
         self.initUI()
 
     def initUI(self):
@@ -112,7 +104,7 @@ class MainReferences(QMainWindow):
 
         # addbutton = QPushButton('Add Warband', self)
         # addbutton.setToolTip('Add a new <b>Warband Template</b>')
-        # addbutton.clicked.connect(self.fill_warband_dialog(create_template_wb()))
+        # addbutton.clicked.connect(self.fill_warband_dialog(Warband.create_template()))
 
         box.addWidget(TableWarband())
         box.addWidget(FormWarband(self))
@@ -168,7 +160,7 @@ class TableWarband(QTableWidget):
     def __init__(self):
         super().__init__()
 
-        warbandsdict = load_json("database/references/warbands_ref.json")
+        warbandsdict = load_json("database/references/", "warbands_ref")
         # charactersdict = load_json("database/references/characters_ref.json")
         # itemsdict = load_json("database/references/items_ref.json")
         # abilitiesdict = load_json("database/references/abilities_ref.json")

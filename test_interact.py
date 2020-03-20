@@ -1,5 +1,5 @@
 
-from source.class_web3 import (
+from source.ethereum.class_web3 import (
     Web3Connection,
 )
 
@@ -72,7 +72,7 @@ if __name__ == '__main__':
     wallet_private_key = "0xad5bb5684dbfb337040fb31d76c7b6118e0bb4fed23e940451a43746f93ebb09"
 
     # Contract functions
-    abi = {"path": "source/", "file": "methods_eth_abi"}
+    abi = {"path": "source/ethereum/", "file": "methods_eth_abi"}
 
     # # Known Contract
     contract_address="0x9435cFB566b87e22d9EB08E98EACa95cc2BF1420"

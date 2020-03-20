@@ -39,7 +39,8 @@ class Web3Connection(object):
             
             # Setting up contract with the needed abi (functions) and the contract address (for instantiation)
             abi = load_json(abi["path"], abi["file"])
-            print(abi)
+            # print(abi)
+            
             contract = w3.eth.contract(abi = abi, address = contract_address)
             print(contract.address)
 

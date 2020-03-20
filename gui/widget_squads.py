@@ -63,8 +63,8 @@ from source.class_hierarchy import (
     Magic,
     )
 
-from source.widget_template import *
-# from source.widget_currentbox import *
+from gui.widget_template import *
+# from gui.widget_currentbox import *
 
 
 

@@ -1,4 +1,4 @@
-from source.main import (
+from gui.main import (
     run,
 )
 

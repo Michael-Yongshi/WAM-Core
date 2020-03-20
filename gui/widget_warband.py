@@ -63,8 +63,8 @@ from source.class_hierarchy import (
     Magic,
     )
 
-from source.widget_template import *
-from source.widget_items import WidgetItemsWarband
+from gui.widget_template import *
+from gui.widget_items import WidgetItemsWarband
 
 class WidgetWarband(QRaisedFrame):
     def __init__(self, mainwindow, configfile = {}):

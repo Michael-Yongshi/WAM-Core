@@ -63,13 +63,13 @@ from source.class_hierarchy import (
     Magic,
     )
 
-from source.widget_template import *
-from source.widget_warband import WidgetWarband
-from source.widget_items import WidgetItemsWarband
-from source.widget_system import WidgetSystem
-from source.widget_heroes import WidgetHeroes
-from source.widget_squads import WidgetSquads
-from source.widget_current import WidgetCurrent
+from gui.widget_template import *
+from gui.widget_warband import WidgetWarband
+from gui.widget_items import WidgetItemsWarband
+from gui.widget_system import WidgetSystem
+from gui.widget_heroes import WidgetHeroes
+from gui.widget_squads import WidgetSquads
+from gui.widget_current import WidgetCurrent
 
 
 class QMainApplication(QApplication):

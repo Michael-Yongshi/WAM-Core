@@ -63,11 +63,11 @@ from source.class_hierarchy import (
     Magic,
     )
 
-from source.widget_template import *
-from source.widget_items import WidgetItemsUnit
-from source.widget_abilitymagic import WidgetAbility, WidgetMagic
+from gui.widget_template import *
+from gui.widget_items import WidgetItemsUnit
+from gui.widget_abilitymagic import WidgetAbility, WidgetMagic
 
-# from source.widget_currentbox import *
+# from gui.widget_currentbox import *
 
 
 class WidgetCurrent(QRaisedFrame):

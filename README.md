@@ -149,6 +149,15 @@ solc -o C:\Users\mfvan\Documents\Git\Warband_Manager\source\ethereum\build\build
 # I packaged the dependencies (basically all openzeppelin contracts) in the contracts folder in my git.
 ```
 
+The artifacts are then dropped in a build<version> folder in source\ethereum\build.
+- abi: interface of the specific contract
+- bin: bytecode of the specific contract
+- evm: EVM Assembly / Opcodes
+- sol.ast: 
+
+Solidity Contracts Merger
+We try to combine our contract with all its dependencies using Solidity Contracts Merger
+We need it as the compiler doesn't merge the outputs of the smart contracts to a single bytecode and abi
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 solidity compiler for python on windows (currently not working; file not found error):

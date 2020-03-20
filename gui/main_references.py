@@ -84,6 +84,7 @@ from source.class_components import (
     )
 
 from gui.widget_template import *
+from gui.main import QMainApplication
 
 class MainReferences(QMainWindow):
     def __init__(self):
@@ -202,10 +203,9 @@ class TableWarband(QTableWidget):
         # under the table an add button, which launches the same update warband dialog, but then empty and activated name field, where you can fill in warband details
         # the dialog has a button, add items, for items to launch the update item dialog, where you can choose an item to add to the warband
 
-
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-
+def run():
+    global app
+    app = QMainApplication(sys.argv)
+    global main
     main = MainReferences()
-
     sys.exit(app.exec_())

@@ -144,8 +144,8 @@ To use
 -cd to folder in cmd
 -compile by running:
 ```
-solc -o C:\Users\mfvan\Documents\Git\Warband_Manager\source\ethereum\build0510\ --optimize --overwrite --bin --abi --ast --asm C:\Users\mfvan\Documents\Git\Warband_Manager\source\ethereum\CryptoCharacter0510.sol
-solc -o C:\Users\mfvan\Documents\Git\Warband_Manager\source\ethereum\build062\ --optimize --overwrite --bin --abi --ast-json --asm C:\Users\mfvan\Documents\Git\Warband_Manager\source\ethereum\CryptoCharacter062.sol
+solc -o C:\Users\mfvan\Documents\Git\Warband_Manager\source\ethereum\build\build0510\ --optimize --overwrite --bin --abi --ast --asm C:\Users\mfvan\Documents\Git\Warband_Manager\source\ethereum\CryptoCharacter0510.sol
+solc -o C:\Users\mfvan\Documents\Git\Warband_Manager\source\ethereum\build\build062\ --optimize --overwrite --bin --abi --ast-json --asm C:\Users\mfvan\Documents\Git\Warband_Manager\source\ethereum\CryptoCharacter062.sol
 # I packaged the dependencies (basically all openzeppelin contracts) in the contracts folder in my git.
 ```
 
@@ -180,9 +180,16 @@ https://github.com/GPII/linux-rfid-user-listener/blob/master/scriptor.1p
 https://khanhicetea.com/post/reading-nfc-card-id-on-ubuntu/#Source-code
 https://stackoverflow.com/questions/34869625/how-to-read-or-write-smart-card
 
+### Ethereum node with Raspbian and DappNode
+Install Raspbian instructions (just download the imager):
+https://www.raspberrypi.org/documentation/installation/installing-images/README.md
+
+Install dappnode instructions
+https://github.com/dappnode/DAppNode/wiki/DAppNode-Installation-Guide#installation-via-installer-script
+
+
 ### Authentication requisites
 https://realpython.com/token-based-authentication-with-flask/
-
 
 ## Running the tests
 

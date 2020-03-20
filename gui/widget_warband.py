@@ -10,6 +10,7 @@ from PyQt5.QtWidgets import (
     QAction,
     QApplication,
     QDesktopWidget,
+    QDialog,
     QFrame,
     QGridLayout,
     QHBoxLayout,
@@ -24,6 +25,7 @@ from PyQt5.QtWidgets import (
     QSizePolicy,
     QTableWidget,
     QTableWidgetItem,
+    QTextEdit,
     QTextEdit,
     QToolTip, 
     QVBoxLayout,
@@ -147,11 +149,12 @@ class WidgetWarband(QRaisedFrame):
         self.mainwindow.initUI()
 
     def dialog_desc(self):
+        # Later change this to a seperate dialog class?
+        rich_dialog = QDialog()
+        text_edit = QTextEdit()
+        text_edit.move(50,50)
 
-        newdesc, okPressed = QInputDialog.getText(self, 'Description change', f"Change description to:", text=self.mainwindow.wbid.description)
-        if okPressed and newdesc:
-            self.mainwindow.wbid.description = newdesc
+        rich_dialog.setWindowTitle("Enter or change the description")
+        rich_dialog.setWindowModality(Qt.ApplicationModal)
+        rich_dialog.exec_()
 
-        # relaunch ui to process changes in ui
-        self.mainwindow.initUI()
-    

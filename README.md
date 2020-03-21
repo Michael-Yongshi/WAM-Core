@@ -59,6 +59,7 @@ https://realpython.com/python-virtual-environments-a-primer/
 ```
 pip3 install --user venv                # (unused) virtual environment
 pip3 install --user flake8              # (unused) editor support
+pip3 install --user flask               # (unused) web application development
 ```
 
 ### Building an executable file
@@ -96,7 +97,7 @@ pip3 install --user requests            # (unused) default api library
 
 ```
 pip3 install --user pyqt5
-apt-get install python3 pyqt5   # (prod) if pip3 doesn't work
+apt-get install python3 pyqt5           # (prod) if pip3 doesn't work
 ```
 
 ### Solidity requisites
@@ -191,8 +192,27 @@ https://khanhicetea.com/post/reading-nfc-card-id-on-ubuntu/#Source-code
 https://stackoverflow.com/questions/34869625/how-to-read-or-write-smart-card
 
 ### Ethereum node with Raspbian and DappNode
-Install Raspbian instructions (just download the imager):
+Downlaod SD Formatter and Etcher flasher to format and flash SD drives
+
+Install Raspbian instructions (download raspbian light for terminal version; also preferred for less problems with flashing):
 https://www.raspberrypi.org/documentation/installation/installing-images/README.md
+
+make sure the r-pi is up to date
+```
+sudo apt update
+sudo apt upgrade
+sudo apt dist-upgrade
+sudo reboot
+```
+
+switch to desktop
+```
+sudo apt install xserver-xorg           # Display core for linux
+sudo apt install raspberrypi-ui-mods    # R-pi default, see other here: https://raspberrytips.com/upgrade-raspbian-lite-to-desktop/
+sudo apt install lightdm                # should be installed automatically by the display package, then this code will do nothing
+sudo reboot
+```
+
 
 Install dappnode instructions
 https://github.com/dappnode/DAppNode/wiki/DAppNode-Installation-Guide#installation-via-installer-script

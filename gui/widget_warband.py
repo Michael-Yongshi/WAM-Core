@@ -182,9 +182,7 @@ class DescriptionDialog(QDialog):
     def apply(self):
         self.mainwindow.wbid.description = self.text_edit.toHtml()
         self.mainwindow.initUI()
-        self.accept
-        
+        self.accept()
+
     def cancel(self):
-        self.reject
-
-
+        self.reject()

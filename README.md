@@ -210,12 +210,22 @@ switch to desktop
 sudo apt install xserver-xorg           # Display core for linux
 sudo apt install raspberrypi-ui-mods    # R-pi default, see other here: https://raspberrytips.com/upgrade-raspbian-lite-to-desktop/
 sudo apt install lightdm                # should be installed automatically by the display package, then this code will do nothing
-sudo reboot
+sudo reboot                             # reboot now
+sudo shutdown -h now                    # shutdown now
 ```
 
-
+XXXXXXXXXXXXXXXX
+not working on 32 bit rpi2
 Install dappnode instructions
 https://github.com/dappnode/DAppNode/wiki/DAppNode-Installation-Guide#installation-via-installer-script
+
+```
+wget -qO - https://prerequisites.dappnode.io  | sudo bash   # Download prerequisites
+wget -qO - https://installer.dappnode.io | sudo bash        # install dappnode
+```
+
+use openvpn client to connect to the node remotely:
+https://github.com/dappnode/DAppNode/wiki/OpenVPN-Client-Guide#Windows
 
 
 ### Authentication requisites

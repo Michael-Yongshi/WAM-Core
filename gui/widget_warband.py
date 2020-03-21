@@ -11,6 +11,7 @@ from PyQt5.QtWidgets import (
     QApplication,
     QDesktopWidget,
     QDialog,
+    QDialogButtonBox,
     QFrame,
     QGridLayout,
     QHBoxLayout,
@@ -149,12 +150,41 @@ class WidgetWarband(QRaisedFrame):
         self.mainwindow.initUI()
 
     def dialog_desc(self):
-        # Later change this to a seperate dialog class?
-        rich_dialog = QDialog()
-        text_edit = QTextEdit()
-        text_edit.move(50,50)
 
-        rich_dialog.setWindowTitle("Enter or change the description")
-        rich_dialog.setWindowModality(Qt.ApplicationModal)
-        rich_dialog.exec_()
+        desc_dialog = DescriptionDialog(self.mainwindow)
+
+class DescriptionDialog(QDialog):
+    def __init__(self, mainwindow):
+        super().__init__()
+
+        self.mainwindow = mainwindow
+
+        self.text_edit = QTextEdit()
+        self.text_edit.setText(self.mainwindow.wbid.description)
+
+        self.buttonbox = QDialogButtonBox(self)
+
+        self.buttonbox.addButton("Apply", QDialogButtonBox.AcceptRole)
+        self.buttonbox.accepted.connect(self.apply)
+        self.buttonbox.addButton("Cancel", QDialogButtonBox.RejectRole)
+        self.buttonbox.rejected.connect(self.cancel)
+
+        dialog_layout = QGridLayout()
+        dialog_layout.addWidget(self.text_edit, 0, 0, 9, 1)
+        dialog_layout.addWidget(self.buttonbox, 10, 0, 1, 1)
+        
+        self.setLayout(dialog_layout)
+        self.resize(600, 800)
+        self.setWindowTitle("Enter or change the description")
+        self.setWindowModality(Qt.ApplicationModal)
+        self.exec_()
+
+    def apply(self):
+        self.mainwindow.wbid.description = self.text_edit.toHtml()
+        self.mainwindow.initUI()
+        self.accept
+        
+    def cancel(self):
+        self.reject
+
 

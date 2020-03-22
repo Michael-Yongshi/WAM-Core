@@ -1,0 +1,10 @@
+from source.nfc.class_nfc import (
+    NFCconnection,
+)
+
+if __name__ == '__main__':
+    atr = "3B:8F:80:01:80:4F:0C:A0:00:00:03:06:03:00:01:00:00:00:00:6A"
+    atrhex = [0x3B, 0x8F, 0x80, 0x01, 0x80, 0x4F, 0x0C, 0xA0, 0x00, 0x00, 0x03, 0x06, 0x03, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x6A]
+    
+    nfc_connect = NFCconnection.initialize(atr, atrhex)
+    nfc_connect.read_card()

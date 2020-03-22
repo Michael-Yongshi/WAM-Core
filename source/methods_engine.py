@@ -10,10 +10,7 @@ def get_localpath():
     """set the paths to the users documents folder"""
 
     local_path = os.path.join("~", "Documents", "WAM")
-    print("get_localpath: local path - " + local_path)
-
     path = os.path.expanduser(local_path)
-    print("get_localpath: path - " + path)
 
     return path
 

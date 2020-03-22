@@ -3,7 +3,7 @@ from source.methods_engine import (
     load_reference,
 )
 
-from source.methods_database import(
+from source.methods_database_from import(
     get_abilityref,
     get_characterref,
     get_itemref,
@@ -205,11 +205,12 @@ class Item(object):
 
 class Skill(object):
     """Default object to assign skill values as a basis for character and item skill values"""
-    def __init__(self, movement=0, weapon=0, ballistic=0, strength=0, toughness=0, wounds=0, initiative=0, actions=0, leadership=0, armoursave=0):
+    def __init__(self, movement=0, weapon=0, ballistic=0, strength=0, impact=0, toughness=0, wounds=0, initiative=0, actions=0, leadership=0, armoursave=0):
         self.movement = movement
         self.weapon = weapon
         self.ballistic = ballistic
         self.strength = strength
+        self.impact = impact
         self.toughness = toughness
         self.wounds = wounds
         self.initiative = initiative
@@ -225,12 +226,13 @@ class Skill(object):
             'weapon': self.weapon,
             'ballistic': self.ballistic,
             'strength': self.strength,
+            'impact': self.impact,
             'toughness': self.toughness,
             'wounds': self.wounds,
             'initiative': self.initiative,
             'actions': self.actions,
             'leadership': self.leadership,
-            'armoursave': self.armoursave
+            'armoursave': self.armoursave,
         }
 
         return datadict
@@ -244,6 +246,7 @@ class Skill(object):
             weapon = datadict["weapon"],
             ballistic = datadict["ballistic"],
             strength = datadict["strength"],
+            impact = datadict["impact"],
             toughness = datadict["toughness"],
             wounds = datadict["wounds"],
             initiative = datadict["initiative"],
@@ -262,6 +265,7 @@ class Skill(object):
         datalist.append(self.weapon),
         datalist.append(self.ballistic),
         datalist.append(self.strength),
+        datalist.append(self.impact),
         datalist.append(self.toughness),
         datalist.append(self.wounds),
         datalist.append(self.initiative),
@@ -280,12 +284,13 @@ class Skill(object):
             weapon = datalist[1],
             ballistic = datalist[2],
             strength = datalist[3],
-            toughness = datalist[4],
-            wounds = datalist[5],
-            initiative = datalist[6],
-            actions = datalist[7],
-            leadership = datalist[8],
-            armoursave = datalist[9],
+            impact = datalist[4],
+            toughness = datalist[5],
+            wounds = datalist[6],
+            initiative = datalist[7],
+            actions = datalist[8],
+            leadership = datalist[9],
+            armoursave = datalist[10],
             )
 
         return dataobject
@@ -293,14 +298,14 @@ class Skill(object):
     def to_string(self):
 
         # convert the python object to a string of values
-        datastring = f"mo: {self.movement}, we: {self.weapon}, ba: {self.ballistic}, st: {self.strength}, to: {self.toughness}, wo: {self.wounds}, in: {self.initiative}, ac: {self.actions}, le: {self.leadership}, as: {self.armoursave}"
+        datastring = f"mo: {self.movement}, we: {self.weapon}, ba: {self.ballistic}, st: {self.strength}, im: {self.impact}, to: {self.toughness}, wo: {self.wounds}, in: {self.initiative}, ac: {self.actions}, le: {self.leadership}, as: {self.armoursave}"
         
         return datastring
     
     @staticmethod
     def create_skill_empty():
         
-        dataobject = Skill(0,0,0,0,0,0,0,0,0,0,)
+        dataobject = Skill(0,0,0,0,0,0,0,0,0,0,0,)
 
         return dataobject
 

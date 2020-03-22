@@ -18,7 +18,8 @@
                         "initiative": 4,
                         "actions": 1,
                         "leadership": 8,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -57,7 +58,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 7,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -90,7 +92,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 6,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -123,7 +126,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 7,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -156,7 +160,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 7,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -189,7 +194,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 7,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -230,7 +236,8 @@
                         "initiative": 4,
                         "actions": 1,
                         "leadership": 8,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -269,7 +276,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 7,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -302,7 +310,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 6,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -335,7 +344,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 7,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -368,7 +378,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 7,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -401,7 +412,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 7,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -442,7 +454,8 @@
                         "initiative": 4,
                         "actions": 1,
                         "leadership": 8,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -481,7 +494,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 7,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -514,7 +528,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 6,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -547,7 +562,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 7,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -580,7 +596,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 7,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -613,7 +630,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 7,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -654,7 +672,8 @@
                         "initiative": 4,
                         "actions": 1,
                         "leadership": 8,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -698,7 +717,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 8,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -737,7 +757,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 7,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -776,7 +797,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 7,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -809,7 +831,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 10,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -852,7 +875,8 @@
                         "initiative": 4,
                         "actions": 1,
                         "leadership": 5,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -892,7 +916,8 @@
                         "initiative": 4,
                         "actions": 1,
                         "leadership": 8,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -936,7 +961,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 7,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -969,7 +995,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 7,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -1013,7 +1040,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 6,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -1046,7 +1074,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 7,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -1085,7 +1114,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 8,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -1129,7 +1159,8 @@
                         "initiative": 4,
                         "actions": 2,
                         "leadership": 7,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -1172,7 +1203,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 7,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -1211,7 +1243,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 6,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -1250,7 +1283,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 7,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -1283,7 +1317,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 7,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -1322,7 +1357,8 @@
                         "initiative": 5,
                         "actions": 2,
                         "leadership": 8,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -1381,7 +1417,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 7,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -1420,7 +1457,8 @@
                         "initiative": 3,
                         "actions": 1,
                         "leadership": 7,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -1453,7 +1491,8 @@
                         "initiative": 1,
                         "actions": 1,
                         "leadership": 5,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -1516,7 +1555,8 @@
                         "initiative": 3,
                         "actions": 2,
                         "leadership": 5,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -1560,7 +1600,8 @@
                         "initiative": 2,
                         "actions": 1,
                         "leadership": 4,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -1634,7 +1675,8 @@
                         "initiative": 5,
                         "actions": 1,
                         "leadership": 7,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -1678,7 +1720,8 @@
                         "initiative": 4,
                         "actions": 1,
                         "leadership": 6,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -1717,7 +1760,8 @@
                         "initiative": 5,
                         "actions": 1,
                         "leadership": 6,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -1750,7 +1794,8 @@
                         "initiative": 4,
                         "actions": 1,
                         "leadership": 4,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -1783,7 +1828,8 @@
                         "initiative": 4,
                         "actions": 1,
                         "leadership": 5,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -1816,7 +1862,8 @@
                         "initiative": 5,
                         "actions": 2,
                         "leadership": 8,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -1859,7 +1906,8 @@
                         "initiative": 4,
                         "actions": 3,
                         "leadership": 4,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -1918,7 +1966,8 @@
                         "initiative": 6,
                         "actions": 1,
                         "leadership": 9,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -1967,7 +2016,8 @@
                         "initiative": 6,
                         "actions": 1,
                         "leadership": 8,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -2000,7 +2050,8 @@
                         "initiative": 6,
                         "actions": 1,
                         "leadership": 8,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -2033,7 +2084,8 @@
                         "initiative": 6,
                         "actions": 1,
                         "leadership": 8,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -2066,7 +2118,8 @@
                         "initiative": 5,
                         "actions": 1,
                         "leadership": 8,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -2103,7 +2156,8 @@
                         "initiative": 6,
                         "actions": 1,
                         "leadership": 9,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [
                         {
@@ -2152,7 +2206,8 @@
                         "initiative": 6,
                         "actions": 1,
                         "leadership": 8,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -2185,7 +2240,8 @@
                         "initiative": 6,
                         "actions": 1,
                         "leadership": 8,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -2218,7 +2274,8 @@
                         "initiative": 6,
                         "actions": 1,
                         "leadership": 8,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],
@@ -2251,7 +2308,8 @@
                         "initiative": 5,
                         "actions": 1,
                         "leadership": 8,
-                        "armoursave": 0
+                        "armoursave": 0,
+                        "impact": 0
                     },
                     "abilitylist": [],
                     "magiclist": [],

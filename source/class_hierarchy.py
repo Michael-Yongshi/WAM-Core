@@ -490,7 +490,7 @@ class Character(object):
             race="", 
             source="", 
             warband="",
-            skill=Skill("","","","","","","","","","",), 
+            skill=Skill.create_skill_empty(), 
             category="", 
             ishero="",
         )
@@ -569,7 +569,7 @@ class Character(object):
                 datetime=datetime.datetime.now(), 
                 category="Advance " + str(current_advance), 
                 description=f"Character reaches advance {current_advance}, TBD", 
-                skill=Skill(0,0,0,0,0,0,0,0,0,0,)
+                skill=Skill.create_skill_empty()
                 )
             new_events.append(newevent)
 
@@ -630,36 +630,32 @@ class Character(object):
 
     def get_total_skilldict(self):
 
-        skilldict = {
-            'movement': {'total': self.skill.movement, 'children': {'base': self.skill.movement}},
-            'weapon': {'total': self.skill.weapon, 'children': {'base': self.skill.weapon}},
-            'ballistic': {'total': self.skill.ballistic, 'children': {'base': self.skill.ballistic}},
-            'strength': {'total': self.skill.strength, 'children': {'base': self.skill.strength}},
-            'toughness': {'total': self.skill.toughness, 'children': {'base': self.skill.toughness}},
-            'wounds': {'total': self.skill.wounds, 'children': {'base': self.skill.wounds}},
-            'initiative': {'total': self.skill.initiative, 'children': {'base': self.skill.initiative}},
-            'actions': {'total': self.skill.actions, 'children': {'base': self.skill.actions}},
-            'leadership': {'total': self.skill.leadership, 'children': {'base': self.skill.leadership}},
-            'armoursave': {'total': self.skill.armoursave, 'children': {'base': self.skill.armoursave}},
-        }
+        datadict = {}
+
+        selfdict = self.skill.to_dict()
+        for key in selfdict:
+            skilldict = {
+                key: {'total': selfdict[key], 'children': {'base': selfdict[key]}}
+                }
+            datadict.update(skilldict)
 
         for event in self.eventlist:
             eventskills = event.skill.to_dict()
             for key in eventskills:
                 if eventskills[key] != 0:
-                    eventskilldict = {f"event: {event.datetime} - {event.category}": eventskills[key]}
-                    skilldict[key]['children'].update(eventskilldict)
-                    skilldict[key]['total'] += eventskills[key]
+                    eventdict = {f"event: {event.datetime} - {event.category}": eventskills[key]}
+                    datadict[key]['children'].update(eventdict)
+                    datadict[key]['total'] += eventskills[key]
                     
         for item in self.itemlist:
             itemskills = item.skill.to_dict()
             for key in itemskills:
                 if itemskills[key] != 0:
-                    itemskilldict = {f"item: {item.subcategory}": itemskills[key]}
-                    skilldict[key]['children'].update(itemskilldict)
-                    skilldict[key]['total'] += itemskills[key]
+                    itemdict = {f"item: {item.subcategory}": itemskills[key]}
+                    datadict[key]['children'].update(itemdict)
+                    datadict[key]['total'] += itemskills[key]
 
-        return skilldict
+        return datadict
 
     def get_total_abilitylist(self):
         

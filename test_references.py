@@ -1,10 +1,13 @@
-from source.methods_database import (
+from source.methods_database_to import (
     create_ref_files,
     add_warbandref,
     add_characterref,
     add_itemref,
     add_abilityref,
     add_magicref,
+)
+
+from source.methods_database_from import (
     get_warbandref,
     get_characterref,
     get_itemref,

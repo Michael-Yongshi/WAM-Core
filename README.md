@@ -62,14 +62,24 @@ pip3 install --user flake8              # (unused) editor support
 pip3 install --user flask               # (unused) web application development
 ```
 
-### Building an executable file
+### Deploying
 
-pyinstaller
+#### PyInstaller (deploy cross platform desktop gui)
 ```
 pip3 install --user pyinstaller         # (dev) to create an installer for desktop OS like windows, ubuntu, ios
 ```
 
-kivy
+#### Ionic (design and deploy cross platform mobile gui):
+https://ionicframework.com/getting-started
+
+gui for android and IOS
+```
+npm install -g ionic
+ionic start myApp
+ionic link
+```
+
+#### kivy (too complicated; native code)
 https://realpython.com/mobile-app-kivy-python/
 ```
 pip3 install --user kivy                # (unused) to create a package for android, ios, mac, windows or linux

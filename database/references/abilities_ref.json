@@ -1,6 +1,6 @@
 {
     "Core Rules": {
-        "Character Abilities": {
+        "Character Ability": {
             "Leader": {
                 "source": "Core Rules",
                 "category": "Character Ability",
@@ -182,7 +182,7 @@
                 "description": "This character knows the art of magic to a lesser extent. See the Magic section for details."
             }
         },
-        "Item Abilities": {
+        "Item Ability": {
             "Cloth is Armour": {
                 "source": "Core Rules",
                 "category": "Item Ability",
@@ -498,7 +498,7 @@
                 "description": "The warrior survives, but his wound will prevent him from fighting if you roll a 1 on a D6 at the start of any battle. Roll at the start of each battle from now on."
             }
         },
-        "Combat Abilities": {
+        "Combat Ability": {
             "Strike to Injure": {
                 "source": "Core Rules",
                 "category": "Combat Ability",
@@ -536,7 +536,7 @@
                 "description": "The warrior has a natural ability to avoid injury in combat. Each time he suffers a wound in close combat he may make an additional saving throw of 5+. This save is never modified and is taken after all other armour saves."
             }
         },
-        "Shooting Abilities": {
+        "Shooting Ability": {
             "Quick Shot": {
                 "source": "Core Rules",
                 "category": "Shooting Ability",
@@ -586,7 +586,7 @@
                 "description": "The warrior is an unrivalled expert at using throwing knives and throwing stars. He can throw a maximum of three of these missiles in his shooting phase and may divide his shots between any targets within range as he wishes. Note that this skill cannot be combined with the Quick Shot skill."
             }
         },
-        "Academic Abilities": {
+        "Academic Ability": {
             "Battle Tongue": {
                 "source": "Core Rules",
                 "category": "Academic Ability",
@@ -630,7 +630,7 @@
                 "description": "This skill may only be taken by spellcasters. The mental powers of the wizard allow him to wear armour while casting spells."
             }
         },
-        "Strength Abilities": {
+        "Strength Ability": {
             "Mighty Blow": {
                 "source": "Core Rules",
                 "category": "Strength Ability",
@@ -668,7 +668,7 @@
                 "description": "When he charges, the warrior is almost impossible to halt. He adds +1 to his Weapon Skill when charging."
             }
         },
-        "Speed Abilities": {
+        "Speed Ability": {
             "Leap": {
                 "source": "Core Rules",
                 "category": "Speed Ability",
@@ -712,7 +712,7 @@
                 "description": "A warrior with this skill can scale even the highest wall or fence with ease. He can climb up or down a height equal to twice his normal Movement, and does not need to make Initiative tests when doing so."
             }
         },
-        "Sisters of Sigmar Abilities": {
+        "Sisters of Sigmar Ability": {
             "Sign of Sigmar": {
                 "source": "Core Rules",
                 "category": "Sisters of Sigmar Ability",
@@ -744,7 +744,7 @@
                 "description": "The Sister puts her faith in Sigmar, and faces dangers unflinchingly. She may re-roll any Fear tests and does not have to test if she is fighting alone against several opponents."
             }
         },
-        "Skaven Abilities": {
+        "Skaven Ability": {
             "Black Hunger": {
                 "source": "Core Rules",
                 "category": "Skaven Ability",
@@ -778,7 +778,7 @@
         }
     },
     "Broheim": {
-        "High Elven Abilities": {
+        "High Elven Ability": {
             "High Elven Magician": {
                 "source": "Broheim",
                 "category": "High Elven Ability",

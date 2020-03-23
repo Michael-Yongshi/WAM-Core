@@ -24,7 +24,7 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Excellent Leader"
                         }
                     ],
@@ -200,7 +200,7 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Expert Swordsman"
                         }
                     ],
@@ -242,7 +242,7 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Leader"
                         }
                     ],
@@ -418,7 +418,7 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Expert Swordsman"
                         }
                     ],
@@ -460,7 +460,7 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Leader"
                         }
                     ],
@@ -636,7 +636,7 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Expert Swordsman"
                         }
                     ],
@@ -678,12 +678,12 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Burn the Witch!"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Leader"
                         }
                     ],
@@ -723,7 +723,7 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Prayers of Sigmar"
                         }
                     ],
@@ -763,7 +763,7 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Burn the Witch!"
                         }
                     ],
@@ -837,17 +837,17 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Melee Only"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "No Leader"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Fanatical"
                         }
                     ],
@@ -881,12 +881,12 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Unarmed and Unarmoured"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Animal"
                         }
                     ],
@@ -922,12 +922,12 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Prayers of Sigmar"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Leader"
                         }
                     ],
@@ -1001,12 +1001,12 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Unarmoured"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Blessed Sight"
                         }
                     ],
@@ -1120,12 +1120,12 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Chaos Ritualist"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Leader"
                         }
                     ],
@@ -1165,17 +1165,17 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Unarmed and Unarmoured"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Cause Fear"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Can Mutate"
                         }
                     ],
@@ -1209,7 +1209,7 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Mutated"
                         }
                     ],
@@ -1249,7 +1249,7 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Crazed"
                         }
                     ],
@@ -1363,27 +1363,27 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Cause Fear"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Immune to Psychology"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Immune to Poison"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Immune to Pain"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Leader"
                         }
                     ],
@@ -1423,7 +1423,7 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Necromancer"
                         }
                     ],
@@ -1497,37 +1497,37 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Unarmed and Unarmoured"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Cause Fear"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Immune to Psychology"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Immune to Poison"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Immune to Pain"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Animal"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "May Not Run"
                         }
                     ],
@@ -1561,12 +1561,12 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Unarmed"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Cause Fear"
                         }
                     ],
@@ -1606,42 +1606,42 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Double Charge"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Unarmed and Unarmoured"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Cause Fear"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Immune to Psychology"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Immune to Poison"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Immune to Pain"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "May Not Run"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Animal"
                         }
                     ],
@@ -1681,12 +1681,12 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Armour Piercing"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Leader"
                         }
                     ],
@@ -1726,7 +1726,7 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Horned Rat Sorcerer"
                         }
                     ],
@@ -1868,17 +1868,17 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Unarmed and Unarmoured"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Pack Size"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Animal"
                         }
                     ],
@@ -1912,27 +1912,27 @@
                     "abilitylist": [
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Unarmed and Unarmoured"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Cause Fear"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Leaderless Stupidity"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Animal"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Large Target"
                         }
                     ],
@@ -1972,17 +1972,17 @@
                     "abilitylist": [
                         {
                             "source": "Broheim",
-                            "category": "Character",
+                            "category": "High Elven Ability",
                             "name": "High Elven Magician"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Lesser Sorcerer"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Leader"
                         }
                     ],
@@ -2162,17 +2162,17 @@
                     "abilitylist": [
                         {
                             "source": "Broheim",
-                            "category": "Character",
+                            "category": "High Elven Ability",
                             "name": "High Elven Magician"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Lesser Sorcerer"
                         },
                         {
                             "source": "Core Rules",
-                            "category": "Character",
+                            "category": "Character Ability",
                             "name": "Leader"
                         }
                     ],

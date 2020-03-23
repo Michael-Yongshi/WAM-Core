@@ -137,7 +137,7 @@ def test_ReiklandWarband():
         race = "Human", 
         source = "Core Rules",
         warband = "Reikland",
-        category = "Champion"
+        category = "Youngblood"
         )
     print("hero4 creation succesful")
     newhero5 = Hero.create_character(
@@ -246,7 +246,7 @@ def test_ReiklandWarband():
 
 
     # add experience
-    hero = wbid.herolist[0]
+    hero = wbid.herolist[5]
     hero.experience = 0
 
     # should become level 1 with getting 2 exp

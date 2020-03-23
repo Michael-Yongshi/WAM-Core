@@ -477,10 +477,26 @@ class Character(object):
         # open reference data json file
         datadict = load_reference("characters")
         chardict = datadict[race][source][warband][category]
-
         dataobject = Character.from_refdict(datadict = chardict)
+
         dataobject.name = name
 
+        current_advance = dataobject.get_advance()
+        print(f"current advance is {current_advance}")
+
+        new_advance = dataobject.check_new_advance()
+        print(f"new advance is {new_advance}")
+
+        events = dataobject.create_advance_events(current_advance = current_advance, new_advance = new_advance)
+        dataobject.eventlist += events
+        print(dataobject.eventlist)
+
+        for event in dataobject.eventlist:
+            if event.description[-3:] == "TBD":
+                currentdesc = event.description[:-4]
+                newdesc = " this character started with this advancement"
+                event.description = f"{currentdesc}{newdesc}"
+        
         return dataobject
 
     @staticmethod

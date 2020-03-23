@@ -412,7 +412,7 @@
                 "description": "A Vampire must pass a Leadership test or it will be unable to charge a model carrying a clove of garlic."
             }
         },
-        "Injuries": {
+        "Injury": {
             "Stupidity": {
                 "source": "Core Rules",
                 "category": "Injury",

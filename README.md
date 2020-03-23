@@ -3,21 +3,12 @@
 An application in order to create, update, view and save your warband details for use in the Mordheim Warhammer world. Using this application there is no need anymore for manually calculating skills or looking up your warbands details, including references to all item, spells, abilities, etc. that are ingame and the rules governing engagements.
 
 ## Roadmap
-- Adding experience and skill tables for leveling up heroes and henchmen groups
 - Adding calculation tables for use in battles, like hit tables, wound tables and injury tables
 - Adding your own warband rules, items, abilities, etc. for use in more custom made games.
-- Adding events to warbands, characters and items, to individualize and decorate the achievements or special happening, including who you fought, who killed that huge rat ogre, etc.
+- Adding decorative events to warbands, characters and items, to individualize and decorate the achievements or special happening, including who you fought, who killed that huge rat ogre, etc.
 - Add Killteam rules and mechanics
 
 ## Getting Started
-
-To install a working application grab the zip folder from:
-
-<b>Windows 10 64 bit</b>: https://www.jottacloud.com/s/13030f55cae66fb428698777e670d3a052a. 
-
-<b>Ubuntu 18 64 bit</b>: https://www.jottacloud.com/s/130ab5742a54b87443a896a37062196affa.
-
-Unzip the folder and run the exe / app file within.
 
 ## Development
 
@@ -62,84 +53,10 @@ pip3 install --user flake8              # (unused) editor support
 pip3 install --user flask               # (unused) web application development
 ```
 
-### Deploying
-
-#### PyInstaller (deploy cross platform desktop gui)
-```
-pip3 install --user pyinstaller         # (dev) to create an installer for desktop OS like windows, ubuntu, ios
-```
-
-#### Ionic (design and deploy cross platform mobile gui):
-https://ionicframework.com/getting-started
-
-link to git repos:
-https://ionicframework.com/docs/installation/environment
-
-install
-```
-npm install -g ionic
-ionic start myApp
-ionic link
-```
-set up app with github as repository and vs code as editor
-```
-# cd to somewhere for a temporary folder, i.e.
-cd Documents\WAM-Mobile-TEMP
-ionic start
-# we name it WAM-Mobile
-```
-
-design
-
-linking is basically useless for us, you cant design there, so disregard the following:
-
--Create a new repo in Github with the name of this project (WAM-Mobile) and clone the empty repo to vs code
--Basically this means we have an empty repo with the correct git configuration.
--Now we go to our WAM-Mobile-TEMP folder (our temporary folder) and copy all the files in the WAM-Mobile folder (so our app folder created by ionic)
--place all the inside files, don't let it overwrite, in the repo folder created by vs code / github (Documents\Git\WAM-Mobile)
--Commit the changes to push all the files to github
--Delete the temporary folder
--for ionic cd to our repo folder to continue working linked to our github account.
-
-https://dashboard.ionicframework.com/personal/hub
-
-
-create an ionic app with a python backend using django
-https://www.techiediaries.com/ionic-django-drf-backend/
-
-```
-pip3 install --user django
-django-admin startproject WAM-API
-
-#### kivy (too complicated; native code)
-https://realpython.com/mobile-app-kivy-python/
-```
-pip3 install --user kivy                # (unused) to create a package for android, ios, mac, windows or linux
-```
-
-pyqt deploy
-https://pypi.org/project/pyqtdeploy/
-```
-# Requires PyQt5 to be already installed
-pip3 install pyqtdeploy
-```
-
-pymod
-```
-pip3 install --user pymod               # (unused) to create a package for android
-```
-
 ### API requisites
 
 ```
 pip3 install --user requests            # (unused) default api library
-```
-
-### GUI requisites
-
-```
-pip3 install --user pyqt5
-apt-get install python3 pyqt5           # (prod) if pip3 doesn't work
 ```
 
 ### Solidity requisites
@@ -273,6 +190,7 @@ https://github.com/dappnode/DAppNode/wiki/OpenVPN-Client-Guide#Windows
 ### Authentication requisites
 https://realpython.com/token-based-authentication-with-flask/
 
+
 ## Running the tests
 
 
@@ -287,19 +205,7 @@ https://realpython.com/token-based-authentication-with-flask/
 
 ## Deployment
 
-create a distribution manually: 
-```
-python -m PyInstaller cli.py --add-data "database/saves/cache.json";"database/saves/" --add-data "database/references/*.json";"database/references/" --icon="source\war_72R_icon.ico" --name WAM-Win10-64
 
-python -m PyInstaller cli.py --add-data "database/saves/cache.json":"database/saves/" --add-data "database/references/*.json":"database/references/" --icon="source\war_72R_icon.ico" --name WAM-Ubuntu18-64
-```
-<!-- python -m PyInstaller cli.py --add-data "database/saves/cache.json";"database/saves/" --add-data "database/references/*.json";"database/references/" --icon="source\war_72R_icon.ico" --name WAM_OF --onefile -->
-
-create a distribution from spec with 
-```
-python -m PyInstaller WAM.spec
-```
-<!-- python -m PyInstaller WAM_OF.spec -->
 
 ## Built With
 
@@ -324,6 +230,3 @@ See also the list of [contributors](https://github.com/your/project/contributors
 
 
 ## Acknowledgments
-
-
-

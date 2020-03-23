@@ -92,7 +92,7 @@ ionic start
 -Create a new repo in Github with the name of this project (WAM-Mobile) and clone the empty repo to vs code
 -Basically this means we have an empty repo with the correct git configuration.
 -Now we go to our WAM-Mobile-TEMP folder (our temporary folder) and copy all the files in the WAM-Mobile folder (so our app folder created by ionic)
--place all the inside files in the repo folder created by vs code / github (Documents\Git\WAM-Mobile)
+-place all the inside files, don't let it overwrite, in the repo folder created by vs code / github (Documents\Git\WAM-Mobile)
 -Commit the changes to push all the files to github
 -Delete the temporary folder
 -for ionic cd to our repo folder to continue working linked to our github account.

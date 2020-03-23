@@ -180,7 +180,7 @@ class WidgetCurrent(QRaisedFrame):
             tooltip += "<br/>The change due to events is: <br/>"
             for key2 in skilldict[key]['children']:
                 if key2[:7] == 'Advance' or key2[:5] == 'event':
-                    tooltip += f" - {key2}: {skilldict[key]['children'][key2]}<br/"
+                    tooltip += f" - {key2}: {skilldict[key]['children'][key2]}<br/>"
             # add items
             tooltip += "<br/>The change due to items is: <br/>"
             for key2 in skilldict[key]['children']:

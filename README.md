@@ -72,12 +72,23 @@ pip3 install --user pyinstaller         # (dev) to create an installer for deskt
 #### Ionic (design and deploy cross platform mobile gui):
 https://ionicframework.com/getting-started
 
-gui for android and IOS
+link to git repos:
+https://ionicframework.com/docs/installation/environment
+
+install
 ```
 npm install -g ionic
 ionic start myApp
 ionic link
 ```
+set up app with github as repository and vs code as editor
+```
+# create new folder in your git directory and cd to it, i.e.
+cd Documents\Git\IONIC WAM
+ionic start
+```
+
+
 
 #### kivy (too complicated; native code)
 https://realpython.com/mobile-app-kivy-python/

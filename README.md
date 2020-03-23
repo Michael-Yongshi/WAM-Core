@@ -83,11 +83,20 @@ ionic link
 ```
 set up app with github as repository and vs code as editor
 ```
-# cd to your git folder, i.e.
-cd Documents\Git
+# cd to somewhere for a temporary folder, i.e.
+cd Documents\WAM-Mobile-TEMP
 ionic start
+# we name it WAM-Mobile
 ```
-Just give your app a name and it will create a folder in git with that name
+
+-Create a new repo in Github with the name of this project (WAM-Mobile) and clone the empty repo to vs code
+-Basically this means we have an empty repo with the correct git configuration.
+-Now we go to our WAM-Mobile-TEMP folder (our temporary folder) and copy all the files in the WAM-Mobile folder (so our app folder created by ionic)
+-place all the inside files in the repo folder created by vs code / github (Documents\Git\WAM-Mobile)
+-Commit the changes to push all the files to github
+-Delete the temporary folder
+-for ionic cd to our repo folder to continue working linked to our github account.
+
 
 create an ionic app with a python backend using django
 https://www.techiediaries.com/ionic-django-drf-backend/

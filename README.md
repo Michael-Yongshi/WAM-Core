@@ -89,6 +89,10 @@ ionic start
 # we name it WAM-Mobile
 ```
 
+design
+
+linking is basically useless for us, you cant design there, so disregard the following:
+
 -Create a new repo in Github with the name of this project (WAM-Mobile) and clone the empty repo to vs code
 -Basically this means we have an empty repo with the correct git configuration.
 -Now we go to our WAM-Mobile-TEMP folder (our temporary folder) and copy all the files in the WAM-Mobile folder (so our app folder created by ionic)
@@ -97,9 +101,15 @@ ionic start
 -Delete the temporary folder
 -for ionic cd to our repo folder to continue working linked to our github account.
 
+https://dashboard.ionicframework.com/personal/hub
+
 
 create an ionic app with a python backend using django
 https://www.techiediaries.com/ionic-django-drf-backend/
+
+```
+pip3 install --user django
+django-admin startproject WAM-API
 
 #### kivy (too complicated; native code)
 https://realpython.com/mobile-app-kivy-python/

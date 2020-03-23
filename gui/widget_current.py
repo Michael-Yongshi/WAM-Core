@@ -123,6 +123,28 @@ class WidgetCurrent(QRaisedFrame):
         
         return tooltip
 
+    def set_new_advance(self):
+        pass
+        # input dialog with process and choice add skill or add characteristic
+
+        # input dialog for the process of adding a skill and input items combobox
+        #  adding new abilities: There are several types of skill and each has a separate list. You may not choose the same skill twice for the same warrior. The skills a Hero may have are restricted by the warband he belongs to and what type of Hero he is. To select a new skill for a Hero, pick the type of skill you want from those available, then choose which skill has been learned. 
+
+        # input dialog for the process of adding a characteristic and input items combobox
+        # Characteristics for certain warriors may not be increased beyond the maximum limits shown on the following profiles. If a characteristic is at its maximum, take the other option or roll again if you can only increase one characteristic. If both are already at their racial maximum, you may increase any other (that is not already at its racial maximum) by +1 instead. Note that this is the only way to gain the maximum Movement for some races. Remember that Henchmen can only add +1 to any characteristic.
+        
+        # insert limit of the current race (to be implemented)
+        # HUMAN (Witch Hunters, Flagellants, Mercenaries, Dregs, Freelancers, Warlocks, Pit Fighters, Magisters, Darksouls, Mutants, Brethren, Warrior Priests, Zealots, Sisters of Sigmar, etc.) Profile M WS BS S T W I A Ld Human 4 66443649 
+        # ELF (Elf Ranger Hired Sword) Profile M WS BS S T W I A Ld Elf 5 7 7 4 4 3 9 4 10 
+        # DWARF (Troll Slayer Hired Sword) Profile M WS BS S T W I A Ld Dwarf 3 7 6 4 5 3 5 4 10
+        # OGRE (Ogre Bodyguard Hired Sword) Profile M WS BS S T W I A Ld Ogre 6 65555659 
+        # HALFLING (Halfling Scout Hired Sword) Profile M WS BS S T W I A Ld Halfling 4 5 7 3 3 3 9 4 10 
+        # BEASTMAN Profile M WS BS S T W I A Ld Gor 4 7 6 4 5 4 6 4 9
+        # POSSESSED Profile M WS BS S T W I A Ld Possessed 6 8 0 6 6 4 7 5 10
+        # VAMPIRE Profile M WS BS S T W I A Ld Vampire 6 8 6 7 6 4 9 4 10
+        # SKAVEN Profile M WS BS S T W I A Ld Skaven 6 66443747 
+        # GHOUL Profile M WS BS S T W I A Ld Ghoul 5 52453557
+
     def set_namebox(self):
         namebox = QGridLayout()
         
@@ -157,7 +179,7 @@ class WidgetCurrent(QRaisedFrame):
             # add events
             tooltip += "<br/>The change due to events is: <br/>"
             for key2 in skilldict[key]['children']:
-                if key2 == 'event':
+                if key2[:7] == 'Advance' or key2[:5] == 'event':
                     tooltip += f" - {key2}: {skilldict[key]['children'][key2]}<br/"
             # add items
             tooltip += "<br/>The change due to items is: <br/>"

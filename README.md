@@ -62,14 +62,56 @@ pip3 install --user flake8              # (unused) editor support
 pip3 install --user flask               # (unused) web application development
 ```
 
-### Building an executable file
+### Deploying
 
-pyinstaller
+#### PyInstaller (deploy cross platform desktop gui)
 ```
 pip3 install --user pyinstaller         # (dev) to create an installer for desktop OS like windows, ubuntu, ios
 ```
 
-kivy
+#### Ionic (design and deploy cross platform mobile gui):
+https://ionicframework.com/getting-started
+
+link to git repos:
+https://ionicframework.com/docs/installation/environment
+
+install
+```
+npm install -g ionic
+ionic start myApp
+ionic link
+```
+set up app with github as repository and vs code as editor
+```
+# cd to somewhere for a temporary folder, i.e.
+cd Documents\WAM-Mobile-TEMP
+ionic start
+# we name it WAM-Mobile
+```
+
+design
+
+linking is basically useless for us, you cant design there, so disregard the following:
+
+-Create a new repo in Github with the name of this project (WAM-Mobile) and clone the empty repo to vs code
+-Basically this means we have an empty repo with the correct git configuration.
+-Now we go to our WAM-Mobile-TEMP folder (our temporary folder) and copy all the files in the WAM-Mobile folder (so our app folder created by ionic)
+-place all the inside files, don't let it overwrite, in the repo folder created by vs code / github (Documents\Git\WAM-Mobile)
+-Commit the changes to push all the files to github
+-Delete the temporary folder
+-for ionic cd to our repo folder to continue working linked to our github account.
+
+https://dashboard.ionicframework.com/personal/hub
+
+
+create an ionic app with a python backend using django
+https://www.techiediaries.com/ionic-django-drf-backend/
+
+```
+pip3 install --user django
+django-admin startproject WAM-API
+
+#### kivy (too complicated; native code)
 https://realpython.com/mobile-app-kivy-python/
 ```
 pip3 install --user kivy                # (unused) to create a package for android, ios, mac, windows or linux

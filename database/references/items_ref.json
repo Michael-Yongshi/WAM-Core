@@ -22,7 +22,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Cloth is Armour"
                     }
                 ],
@@ -51,7 +51,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Cloth is Armour"
                     }
                 ],
@@ -80,7 +80,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Concussion"
                     }
                 ],
@@ -109,7 +109,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Concussion"
                     }
                 ],
@@ -138,7 +138,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Concussion"
                     }
                 ],
@@ -167,7 +167,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Cutting Edge"
                     }
                 ],
@@ -196,7 +196,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Parry"
                     }
                 ],
@@ -225,17 +225,17 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "First Strike"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Unwieldy"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Cavalry Charge Bonus"
                     }
                 ],
@@ -264,7 +264,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Two Handed"
                     }
                 ],
@@ -293,12 +293,12 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Cannot be Parried"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Whipcrack"
                     }
                 ],
@@ -327,12 +327,12 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Two Handed"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Last Strike"
                     }
                 ],
@@ -361,12 +361,12 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Two Handed"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Last Strike"
                     }
                 ],
@@ -395,12 +395,12 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Two Handed"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Heavy"
                     }
                 ],
@@ -429,12 +429,12 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Difficult to Use"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Heavy"
                     }
                 ],
@@ -463,12 +463,12 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Concussion"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Holy Weapon"
                     }
                 ],
@@ -497,27 +497,27 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Pair"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Climb"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Parry"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Parry"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Cumbersome"
                     }
                 ],
@@ -546,17 +546,17 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Cavalry Weapon"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Cavalry Charge Bonus"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Cavalry Charge Bonus"
                     }
                 ],
@@ -585,17 +585,17 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Pair"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Venomous"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Parry"
                     }
                 ],
@@ -626,7 +626,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Stationary Fire x2"
                     }
                 ],
@@ -724,7 +724,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Thrown Weapon"
                     }
                 ],
@@ -753,7 +753,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Thrown Weapon"
                     }
                 ],
@@ -782,17 +782,17 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Cloth is Armour"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Poison"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Stealthy"
                     }
                 ],
@@ -821,7 +821,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Stationary Fire"
                     }
                 ],
@@ -850,7 +850,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Armour Piercing"
                     }
                 ],
@@ -879,7 +879,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Fire before Melee"
                     }
                 ],
@@ -908,7 +908,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Fire Twice"
                     }
                 ],
@@ -939,22 +939,22 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Prepare Shot"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Armour Piercing"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Armour Piercing"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Fire during Melee"
                     }
                 ],
@@ -983,22 +983,22 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Armour Piercing"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Armour Piercing"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Fire during Melee"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Fire during Melee"
                     }
                 ],
@@ -1027,7 +1027,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Blunderbuss Shot"
                     }
                 ],
@@ -1056,27 +1056,27 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Accurate"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Prepare Shot"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Armour Piercing"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Armour Piercing"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Fire during Melee"
                     }
                 ],
@@ -1105,22 +1105,22 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Armour Piercing"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Armour Piercing"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Fire during Melee"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Fire during Melee"
                     }
                 ],
@@ -1149,22 +1149,22 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Stationary Fire"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Prepare Shot"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Armour Piercing"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Armour Piercing"
                     }
                 ],
@@ -1193,22 +1193,22 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Prepare Shot"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Armour Piercing"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Armour Piercing"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Armour Piercing"
                     }
                 ],
@@ -1237,17 +1237,17 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Armour Piercing"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Armour Piercing"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Armour Piercing"
                     }
                 ],
@@ -1276,27 +1276,27 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Stationary Fire"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Prepare Shot"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Pick Target"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Armour Piercing"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Armour Piercing"
                     }
                 ],
@@ -1350,7 +1350,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Encumbered 1 of 2"
                     }
                 ],
@@ -1379,12 +1379,12 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Rally!"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Brittle"
                     }
                 ],
@@ -1436,7 +1436,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Camouflage"
                     }
                 ],
@@ -1488,7 +1488,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Hardhead"
                     }
                 ],
@@ -1517,7 +1517,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Parry"
                     }
                 ],
@@ -1546,7 +1546,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Encumbered 2 of 2"
                     }
                 ],
@@ -1577,7 +1577,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Garlic Smell"
                     }
                 ],
@@ -1606,7 +1606,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Black Lotus",
                         "description": "A weapon coated with the sap of the Black Lotus will wound its target automatically if you roll a 6 to hit. Note that you can still roll a dice for every wound inflicted in this way. If you roll a 6, you will inflict a critical hit with that roll. If you do not roll a 6, you will cause a normal wound. Take armor saves as normal."
                     }
@@ -1636,7 +1636,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Dark Venom",
                         "description": "Any hit caused by a weapon coated with Dark Venom counts as having +1 Strength, so, for example, if a warrior with Strength 3 wielding a poisoned sword hits an opponent, he will cause a Strength 4 hit instead. Armor saving throws are modified to take into account the increased Strength of the attack."
                     }
@@ -1666,13 +1666,13 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Crimson Shade",
                         "description": "A model using Crimson Shade has his Initiative increased by +D3 points, and Movement and Strength by +1 (this effect lasts for one game). Crimson Shade has no effect on Undead such as Vampires and Zombies, or the Possessed."
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Side Effects",
                         "description": "After the battle, roll 2D6. On a roll of 2-3, the model becomes addicted and you must try to buy him a new batch of Crimson Shade before every battle from now on. If you fail to buy any, he will leave your warband. On a roll of 12 the model\u2019s Initiative is increased permanently by +1."
                     }
@@ -1725,7 +1725,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Fearless",
                         "description": "A warband that drinks Bugman`s Ale before a battle will be immune to Fear for the whole of the battle."
                     }
@@ -1755,7 +1755,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Fearless",
                         "description": "An elven warband that drinks Elven Wine before a battle will be immune to Fear for the whole of the battle."
                     }
@@ -1810,7 +1810,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Fake Mordheim Map",
                         "description": "The map is a fake, and is completely worthless. It leads you on a fool\u2019s errand. Your opponent may automatically choose the next scenario you play."
                     }
@@ -1840,7 +1840,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Vague Mordheim Map",
                         "description": "Though crude, the map is generally accurate (well\u2026 parts of it are\u2026 perhaps!). You may re-roll any one dice during the next exploration phase if you wish but you must accept the result of the second roll."
                     }
@@ -1870,7 +1870,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Catacomb Mordheim Map",
                         "description": "The map shows a way through the catacombs into the city. You may automatically choose the scenario next time you fight a battle."
                     }
@@ -1900,7 +1900,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Accurate Mordheim Map",
                         "description": "The map is recently made and very detailed. You may re-roll up to three dice during the next exploration phase if you wish. You must accept the result of the second roll."
                     }
@@ -1930,7 +1930,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Master Mordheim Map",
                         "description": "This is one of the twelve master maps of Mordheim made for Count von Steinhardt of Ostermark. From now on you may always re-roll one dice when rolling on the Exploration chart as long as the Hero who possesses this map was not taken out of action in the battle."
                     }
@@ -1964,7 +1964,7 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Concussion",
                         "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model\u2019s injuries."
                     }
@@ -1994,12 +1994,12 @@
                 "abilitylist": [
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Concussion"
                     },
                     {
                         "source": "Core Rules",
-                        "category": "Item",
+                        "category": "Item Ability",
                         "name": "Two Handed"
                     }
                 ],

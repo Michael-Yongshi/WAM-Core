@@ -89,6 +89,8 @@ ionic start
 ```
 Just give your app a name and it will create a folder in git with that name
 
+create an ionic app with a python backend using django
+https://www.techiediaries.com/ionic-django-drf-backend/
 
 #### kivy (too complicated; native code)
 https://realpython.com/mobile-app-kivy-python/

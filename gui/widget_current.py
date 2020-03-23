@@ -247,4 +247,9 @@ class WidgetCurrent(QRaisedFrame):
                 self.mainwindow.wbid.herolist.pop(index)
                 self.mainwindow.initUI()
 
+            # refund money
+
+            # remove squad
+            # refund money
+
         return remove_unit

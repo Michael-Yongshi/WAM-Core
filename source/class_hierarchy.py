@@ -1,11 +1,11 @@
 import copy
 import datetime
 
-from source.methods_engine import (
+from .methods_engine import (
     load_reference,
 )
 
-from source.methods_database_from import(
+from .methods_database_from import(
     get_abilityref,
     get_characterref,
     get_itemref,
@@ -13,7 +13,7 @@ from source.methods_database_from import(
     get_warbandref,
 )
 
-from source.class_components import (
+from .class_components import (
     Rule,
     Treasury,
     Item,

@@ -1,6 +1,6 @@
 import os
 
-from source.methods_json import (
+from .methods_json import (
     save_json,
     show_json,
     load_json,

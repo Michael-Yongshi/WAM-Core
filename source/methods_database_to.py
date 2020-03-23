@@ -1,9 +1,9 @@
-from source.methods_engine import (
+from .methods_engine import (
     save_reference,
     load_reference,
     )
 
-from source.class_components import (
+from .class_components import (
     Skill
 )
 

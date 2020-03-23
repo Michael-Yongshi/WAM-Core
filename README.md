@@ -83,11 +83,11 @@ ionic link
 ```
 set up app with github as repository and vs code as editor
 ```
-# create new folder in your git directory and cd to it, i.e.
-cd Documents\Git\IONIC WAM
+# cd to your git folder, i.e.
+cd Documents\Git
 ionic start
 ```
-
+Just give your app a name and it will create a folder in git with that name
 
 
 #### kivy (too complicated; native code)

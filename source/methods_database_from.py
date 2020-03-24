@@ -71,28 +71,32 @@ def get_itemref(source, category, subcategory):
     else:
         print(f"Category {category} does not exist")
 
-def get_abilityref(source, category, name):
+def get_abilityref(source, main, category, name):
     
     filename = "abilities"
     # open ref json
     datadict = load_reference(filename)
 
-    # First check if category exists
-    if category in datadict:
-        # Second check if source exists
-        if source in datadict[category]:
-            # Third check if ability exists
-            if name in datadict[category][source]: 
+    # Check if main exists
+    if main in datadict:
+        # First check if category exists
+        if category in datadict[main]:
+            # Second check if source exists
+            if source in datadict[main][category]:
+                # Third check if ability exists
+                if name in datadict[main][category][source]: 
 
-                abilitydict = datadict[category][source][name]
-                return abilitydict
+                    abilitydict = datadict[main][category][source][name]
+                    return abilitydict
 
+                else:
+                    print(f"ability:{name} does not exist")
             else:
-                print(f"ability:{name} does not exist")
+                print(f"Source {source} does not exist")
         else:
-            print(f"Source {source} does not exist")
+            print(f"Category: {category} does not exist")
     else:
-        print(f"Category: {category} does not exist")
+        print(f"Main: {main} does not exist")
 
 
 def get_magicref(source, category, name):

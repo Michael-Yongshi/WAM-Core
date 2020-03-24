@@ -160,6 +160,7 @@ class Item(object):
         for abilitydict in datadict["abilitylist"]:
             abilityref = get_abilityref(
                 source = abilitydict["source"], 
+                main = abilitydict["main"],
                 category = abilitydict["category"], 
                 name = abilitydict["name"], 
             )
@@ -313,6 +314,7 @@ class Ability(object):
     """Default object to assign ablities as a basis for character and item abilities"""
     def __init__(self, source, category, name, description=""):
         self.source = source
+        self.main = main
         self.category = category
         self.name = name
         self.description = description
@@ -322,6 +324,7 @@ class Ability(object):
         # set the object values to a dictionary
         datadict = {
             'source': self.source,
+            'main': self.main,
             'category': self.category,
             'name': self.name,
             'description': self.description
@@ -335,6 +338,7 @@ class Ability(object):
         # set the dictionary values to a python object
         dataobject = Ability(
             source = datadict["source"],
+            main = datadict["main"],
             category = datadict["category"],
             name = datadict["name"],
             description = datadict["description"],
@@ -343,12 +347,12 @@ class Ability(object):
         return dataobject
 
     @staticmethod
-    def create_ability(source, category, name):
+    def create_ability(source, main, category, name):
         # open reference data json file
         datadict = load_reference("abilities")
 
         # get specific data
-        abilitydict = datadict[category][source][name]
+        abilitydict = datadict[main][category][source][name]
 
         # create object based on the data
         dataobject = Ability.from_dict(abilitydict)

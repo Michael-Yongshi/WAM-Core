@@ -426,6 +426,7 @@ class Character(object):
         for abilitydict in datadict["abilitylist"]:
             abilityref = get_abilityref(
                 source = abilitydict["source"], 
+                main = abilitydict["main"],
                 category = abilitydict["category"], 
                 name = abilitydict["name"], 
             )

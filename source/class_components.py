@@ -312,7 +312,7 @@ class Skill(object):
 
 class Ability(object):
     """Default object to assign ablities as a basis for character and item abilities"""
-    def __init__(self, source, category, name, description=""):
+    def __init__(self, source, main, category, name, description=""):
         self.source = source
         self.main = main
         self.category = category

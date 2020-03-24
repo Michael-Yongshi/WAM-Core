@@ -1,6 +1,6 @@
 {
-    "Core Rules": {
-        "Character Ability": {
+    "Character Ability": {
+        "Core Rules": {
             "Leader": {
                 "source": "Core Rules",
                 "category": "Character Ability",
@@ -181,8 +181,10 @@
                 "name": "Lesser Sorcerer",
                 "description": "This character knows the art of magic to a lesser extent. See the Magic section for details."
             }
-        },
-        "Item Ability": {
+        }
+    },
+    "Item Ability": {
+        "Core Rules": {
             "Cloth is Armour": {
                 "source": "Core Rules",
                 "category": "Item Ability",
@@ -411,8 +413,10 @@
                 "name": "Garlic Smell",
                 "description": "A Vampire must pass a Leadership test or it will be unable to charge a model carrying a clove of garlic."
             }
-        },
-        "Injury": {
+        }
+    },
+    "Injury": {
+        "Core Rules": {
             "Stupidity": {
                 "source": "Core Rules",
                 "category": "Injury",
@@ -497,8 +501,10 @@
                 "name": "Old Battle Wound",
                 "description": "The warrior survives, but his wound will prevent him from fighting if you roll a 1 on a D6 at the start of any battle. Roll at the start of each battle from now on."
             }
-        },
-        "Combat Ability": {
+        }
+    },
+    "Combat Ability": {
+        "Core Rules": {
             "Strike to Injure": {
                 "source": "Core Rules",
                 "category": "Combat Ability",
@@ -509,7 +515,7 @@
                 "source": "Core Rules",
                 "category": "Combat Ability",
                 "name": "Combat Master",
-                "description": "The warrior is able to take on several opponents at once. If he fights against more than one enemy at a time, he gains an extra Attack in each hand-to-hand combat phase as long as he is fighting two or more enemy models. In addition, the warrior is immune to ‘All Alone’ tests."
+                "description": "The warrior is able to take on several opponents at once. If he fights against more than one enemy at a time, he gains an extra Attack in each hand-to-hand combat phase as long as he is fighting two or more enemy models. In addition, the warrior is immune to \u00e2\u20ac\u02dcAll Alone\u00e2\u20ac\u2122 tests."
             },
             "Weapons Training": {
                 "source": "Core Rules",
@@ -535,8 +541,10 @@
                 "name": "Step Aside",
                 "description": "The warrior has a natural ability to avoid injury in combat. Each time he suffers a wound in close combat he may make an additional saving throw of 5+. This save is never modified and is taken after all other armour saves."
             }
-        },
-        "Shooting Ability": {
+        }
+    },
+    "Shooting Ability": {
+        "Core Rules": {
             "Quick Shot": {
                 "source": "Core Rules",
                 "category": "Shooting Ability",
@@ -553,13 +561,13 @@
                 "source": "Core Rules",
                 "category": "Shooting Ability",
                 "name": "Eagle Eyes",
-                "description": "The warrior’s sight is exceptionally keen. He adds 6 inch to the range of any missile weapon he is using."
+                "description": "The warrior\u00e2\u20ac\u2122s sight is exceptionally keen. He adds 6 inch to the range of any missile weapon he is using."
             },
             "Weapons Expert": {
                 "source": "Core Rules",
                 "category": "Shooting Ability",
                 "name": "Weapons Expert",
-                "description": "The warrior has been trained to use some of the more unusual weapons of the known world. He may use any missile weapon he comes across, not just the weapons available from his warband’s list."
+                "description": "The warrior has been trained to use some of the more unusual weapons of the known world. He may use any missile weapon he comes across, not just the weapons available from his warband\u00e2\u20ac\u2122s list."
             },
             "Nimble": {
                 "source": "Core Rules",
@@ -585,8 +593,10 @@
                 "name": "Knife Fighter",
                 "description": "The warrior is an unrivalled expert at using throwing knives and throwing stars. He can throw a maximum of three of these missiles in his shooting phase and may divide his shots between any targets within range as he wishes. Note that this skill cannot be combined with the Quick Shot skill."
             }
-        },
-        "Academic Ability": {
+        }
+    },
+    "Academic Ability": {
+        "Core Rules": {
             "Battle Tongue": {
                 "source": "Core Rules",
                 "category": "Academic Ability",
@@ -629,8 +639,10 @@
                 "name": "Warrior Wizard",
                 "description": "This skill may only be taken by spellcasters. The mental powers of the wizard allow him to wear armour while casting spells."
             }
-        },
-        "Strength Ability": {
+        }
+    },
+    "Strength Ability": {
+        "Core Rules": {
             "Mighty Blow": {
                 "source": "Core Rules",
                 "category": "Strength Ability",
@@ -641,7 +653,7 @@
                 "source": "Core Rules",
                 "category": "Strength Ability",
                 "name": "Pit Fighter",
-                "description": "The warrior has learned how to fight in enclosed spaces from his time in the dangerous fighting pits of the Empire. He is an expert at fighting in confined areas and adds +1 to his WS and +1 to his Attacks if he is fighting inside buildings or ruins. It’s a good idea to define which bits of your terrain collection count as ‘buildings or ruins’ at the start of a battle to avoid confusion later."
+                "description": "The warrior has learned how to fight in enclosed spaces from his time in the dangerous fighting pits of the Empire. He is an expert at fighting in confined areas and adds +1 to his WS and +1 to his Attacks if he is fighting inside buildings or ruins. It\u00e2\u20ac\u2122s a good idea to define which bits of your terrain collection count as \u00e2\u20ac\u02dcbuildings or ruins\u00e2\u20ac\u2122 at the start of a battle to avoid confusion later."
             },
             "Resilient": {
                 "source": "Core Rules",
@@ -667,8 +679,10 @@
                 "name": "Unstoppable Charge",
                 "description": "When he charges, the warrior is almost impossible to halt. He adds +1 to his Weapon Skill when charging."
             }
-        },
-        "Speed Ability": {
+        }
+    },
+    "Speed Ability": {
+        "Core Rules": {
             "Leap": {
                 "source": "Core Rules",
                 "category": "Speed Ability",
@@ -691,7 +705,7 @@
                 "source": "Core Rules",
                 "category": "Speed Ability",
                 "name": "Lightning Reflexes",
-                "description": "If the warrior is charged he will ‘strike first’ against those that charged that turn. As the charger(s) will also normally ‘strike first’ (for charging), the order of attack between the charger(s) and the warrior with this skill will be determined by comparing Initiative values."
+                "description": "If the warrior is charged he will \u00e2\u20ac\u02dcstrike first\u00e2\u20ac\u2122 against those that charged that turn. As the charger(s) will also normally \u00e2\u20ac\u02dcstrike first\u00e2\u20ac\u2122 (for charging), the order of attack between the charger(s) and the warrior with this skill will be determined by comparing Initiative values."
             },
             "Jump Up": {
                 "source": "Core Rules",
@@ -711,109 +725,113 @@
                 "name": "Scale Sheer Surfaces",
                 "description": "A warrior with this skill can scale even the highest wall or fence with ease. He can climb up or down a height equal to twice his normal Movement, and does not need to make Initiative tests when doing so."
             }
-        },
-        "Sisters of Sigmar Ability": {
-            "Sign of Sigmar": {
-                "source": "Core Rules",
-                "category": "Sisters of Sigmar Ability",
-                "name": "Sign of Sigmar",
-                "description": "The Sister is favoured by the great god Sigmar. Possessed or Undead opponents lose their first attack against the Priestess in the first round of hand-to-hand combat (down to a minimum of 1)."
-            },
-            "Protection of Sigmar": {
-                "source": "Core Rules",
-                "category": "Sisters of Sigmar Ability",
-                "name": "Protection of Sigmar",
-                "description": "The Sister has been blessed by the High Matriarch. Any spell which would affect her is nullified on a D6 roll of 4+. Note that if the spell is nullified it will not affect any other models either."
-            },
-            "Bitter Determination": {
-                "source": "Core Rules",
-                "category": "Sisters of Sigmar Ability",
-                "name": "Bitter Determination",
-                "description": "Only the Matriarch may have this skill, which allows her to re-roll any failed Rout tests."
-            },
-            "Righteous Fury": {
-                "source": "Core Rules",
-                "category": "Sisters of Sigmar Ability",
-                "name": "Righteous Fury",
-                "description": "The Sister feels cold fury and utter contempt towards any evil that pollutes the soil of the holy Empire with its presence. The model hates all Skaven, Undead or Possessed warbands and all models in them."
-            },
-            "Absolute Faith": {
-                "source": "Core Rules",
-                "category": "Sisters of Sigmar Ability",
-                "name": "Absolute Faith",
-                "description": "The Sister puts her faith in Sigmar, and faces dangers unflinchingly. She may re-roll any Fear tests and does not have to test if she is fighting alone against several opponents."
-            }
-        },
-        "Skaven Ability": {
-            "Black Hunger": {
-                "source": "Core Rules",
-                "category": "Skaven Ability",
-                "name": "Black Hunger",
-                "description": "The Skaven can draw upon the dreaded Black Hunger, the fighting frenzy which gives him unnatural strength and speed but can ravage him from inside. The Skaven Hero may declare at the beginning of his turn that he is using this skill. The Hero may add +1 attack and +D3 inch to the total move to his profile for the duration of his own turn but will suffer D3 S3 hits with no armour save possible at the end of the turn."
-            },
-            "Tail Fighting": {
-                "source": "Core Rules",
-                "category": "Skaven Ability",
-                "name": "Tail Fighting",
-                "description": "The Skaven may wield a shield, knife or a sword with its tail. The model gains an extra attack with the appropriate weapon or a +1 bonus to its armour save."
-            },
-            "Wall Runner": {
-                "source": "Core Rules",
-                "category": "Skaven Ability",
-                "name": "Wall Runner",
-                "description": "wall runner The Skaven does not need to take an Initiative test when climbing up walls and other sheer surfaces."
-            },
-            "Infiltration": {
-                "source": "Core Rules",
-                "category": "Skaven Ability",
-                "name": "Infiltration",
-                "description": "A Skaven with this skill is always placed on the battlefield after the opposing warband and can be placed anywhere on the table as long as it is out of sight of the opposing warband and more than 12 inch away from any enemy model. If both players have models which infiltrate, roll a D6 for each, and the lowest roll sets up first."
-            },
-            "Art of Silent Death": {
-                "source": "Core Rules",
-                "category": "Skaven Ability",
-                "name": "Art of Silent Death",
-                "description": "The Skaven has patiently mastered the deadly art of open-hand fighting, as taught by the mystics of Cathay in the temples of the far East. In hand-to-hand combat, the Skaven can fight with his bare paws without any penalties and counts as having two weapons (ie, +1 attack). In addition, a Skaven Hero with this skill will cause a critical hit on a To Wound roll of 5-6 instead of just 6. This skill may be used in conjunction with the Eshin Fighting Claws (+2 Attacks instead of +1)."
-            }
         }
     },
-    "Broheim": {
-        "High Elven Ability": {
-            "High Elven Magician": {
-                "source": "Broheim",
-                "category": "High Elven Ability",
-                "name": "High Elven Magician",
-                "description": "This character is able to use High Elven magic."
+    "Warband Specific Ability": {
+        "Core Rules": {
+            "Sisters of Sigmar Ability": {
+                "Sign of Sigmar": {
+                    "source": "Core Rules",
+                    "category": "Sisters of Sigmar Ability",
+                    "name": "Sign of Sigmar",
+                    "description": "The Sister is favoured by the great god Sigmar. Possessed or Undead opponents lose their first attack against the Priestess in the first round of hand-to-hand combat (down to a minimum of 1)."
+                },
+                "Protection of Sigmar": {
+                    "source": "Core Rules",
+                    "category": "Sisters of Sigmar Ability",
+                    "name": "Protection of Sigmar",
+                    "description": "The Sister has been blessed by the High Matriarch. Any spell which would affect her is nullified on a D6 roll of 4+. Note that if the spell is nullified it will not affect any other models either."
+                },
+                "Bitter Determination": {
+                    "source": "Core Rules",
+                    "category": "Sisters of Sigmar Ability",
+                    "name": "Bitter Determination",
+                    "description": "Only the Matriarch may have this skill, which allows her to re-roll any failed Rout tests."
+                },
+                "Righteous Fury": {
+                    "source": "Core Rules",
+                    "category": "Sisters of Sigmar Ability",
+                    "name": "Righteous Fury",
+                    "description": "The Sister feels cold fury and utter contempt towards any evil that pollutes the soil of the holy Empire with its presence. The model hates all Skaven, Undead or Possessed warbands and all models in them."
+                },
+                "Absolute Faith": {
+                    "source": "Core Rules",
+                    "category": "Sisters of Sigmar Ability",
+                    "name": "Absolute Faith",
+                    "description": "The Sister puts her faith in Sigmar, and faces dangers unflinchingly. She may re-roll any Fear tests and does not have to test if she is fighting alone against several opponents."
+                }
             },
-            "Dispel": {
-                "source": "Broheim",
-                "category": "High Elven Ability",
-                "name": "Dispel",
-                "description": "A Loremaster's knowledge of magic goes far beyond that of any other race. When an enemy spellcaster successfully casts a spell the Loremaster may attempt to dispel it. If the Loremaster rolls greater then his opponent's casting roll for the spell then it is dispelled. Only the Loremaster may have this skill."
-            },
-            "Stand and Fire": {
-                "source": "Broheim",
-                "category": "High Elven Ability",
-                "name": "Stand and Fire",
-                "description": "If the Elf passes a leadership test he may choose to stand and fire at a charging opponent. The Elf suffers a \u20131 penalty to hit and may only fire once, at a single opponent. If his opponent is knocked down or stunned, place him halfway between the Elf and where he started from (or in view if he was out of sight)."
-            },
-            "Miniath": {
-                "source": "Broheim",
-                "category": "High Elven Ability",
-                "name": "Miniath",
-                "description": "The Elf has been trained in the martial art of the White Tower known as Miniath, allowing him to parry with any weapon. If he has a weapon that he can parry with he gains an additional parry attempt."
-            },
-            "Unerring Strike": {
-                "source": "Broheim",
-                "category": "High Elven Ability",
-                "name": "Unerring Strike",
-                "description": "The Elf is an expert at delivering deadly accurate blows. He may re-roll any failed to wound rolls."
-            },
-            "Fey Quickness": {
-                "source": "Broheim",
-                "category": "High Elven Ability",
-                "name": "Fey Quickness",
-                "description": "Few can ever hope to match an Elf's inhuman quickness and agility. An Elf with Fey Quickness can avoid melee or missile attacks on a roll of 6. If the Elf also has Step Aside or Dodge this will increase to a 4+ in the relevant area. For example, an Elf with Fey Quickness and Step Aside avoids melee attacks on a 4+ and missile attacks on a 6."
+            "Skaven Ability": {
+                "Black Hunger": {
+                    "source": "Core Rules",
+                    "category": "Skaven Ability",
+                    "name": "Black Hunger",
+                    "description": "The Skaven can draw upon the dreaded Black Hunger, the fighting frenzy which gives him unnatural strength and speed but can ravage him from inside. The Skaven Hero may declare at the beginning of his turn that he is using this skill. The Hero may add +1 attack and +D3 inch to the total move to his profile for the duration of his own turn but will suffer D3 S3 hits with no armour save possible at the end of the turn."
+                },
+                "Tail Fighting": {
+                    "source": "Core Rules",
+                    "category": "Skaven Ability",
+                    "name": "Tail Fighting",
+                    "description": "The Skaven may wield a shield, knife or a sword with its tail. The model gains an extra attack with the appropriate weapon or a +1 bonus to its armour save."
+                },
+                "Wall Runner": {
+                    "source": "Core Rules",
+                    "category": "Skaven Ability",
+                    "name": "Wall Runner",
+                    "description": "wall runner The Skaven does not need to take an Initiative test when climbing up walls and other sheer surfaces."
+                },
+                "Infiltration": {
+                    "source": "Core Rules",
+                    "category": "Skaven Ability",
+                    "name": "Infiltration",
+                    "description": "A Skaven with this skill is always placed on the battlefield after the opposing warband and can be placed anywhere on the table as long as it is out of sight of the opposing warband and more than 12 inch away from any enemy model. If both players have models which infiltrate, roll a D6 for each, and the lowest roll sets up first."
+                },
+                "Art of Silent Death": {
+                    "source": "Core Rules",
+                    "category": "Skaven Ability",
+                    "name": "Art of Silent Death",
+                    "description": "The Skaven has patiently mastered the deadly art of open-hand fighting, as taught by the mystics of Cathay in the temples of the far East. In hand-to-hand combat, the Skaven can fight with his bare paws without any penalties and counts as having two weapons (ie, +1 attack). In addition, a Skaven Hero with this skill will cause a critical hit on a To Wound roll of 5-6 instead of just 6. This skill may be used in conjunction with the Eshin Fighting Claws (+2 Attacks instead of +1)."
+                }
+            }
+        },
+        "Broheim": {
+            "High Elves Abilities": {
+                "High Elven Magician": {
+                    "source": "Broheim",
+                    "category": "High Elven Ability",
+                    "name": "High Elven Magician",
+                    "description": "This character is able to use High Elven magic."
+                },
+                "Dispel": {
+                    "source": "Broheim",
+                    "category": "High Elven Ability",
+                    "name": "Dispel",
+                    "description": "A Loremaster's knowledge of magic goes far beyond that of any other race. When an enemy spellcaster successfully casts a spell the Loremaster may attempt to dispel it. If the Loremaster rolls greater then his opponent's casting roll for the spell then it is dispelled. Only the Loremaster may have this skill."
+                },
+                "Stand and Fire": {
+                    "source": "Broheim",
+                    "category": "High Elven Ability",
+                    "name": "Stand and Fire",
+                    "description": "If the Elf passes a leadership test he may choose to stand and fire at a charging opponent. The Elf suffers a \u20131 penalty to hit and may only fire once, at a single opponent. If his opponent is knocked down or stunned, place him halfway between the Elf and where he started from (or in view if he was out of sight)."
+                },
+                "Miniath": {
+                    "source": "Broheim",
+                    "category": "High Elven Ability",
+                    "name": "Miniath",
+                    "description": "The Elf has been trained in the martial art of the White Tower known as Miniath, allowing him to parry with any weapon. If he has a weapon that he can parry with he gains an additional parry attempt."
+                },
+                "Unerring Strike": {
+                    "source": "Broheim",
+                    "category": "High Elven Ability",
+                    "name": "Unerring Strike",
+                    "description": "The Elf is an expert at delivering deadly accurate blows. He may re-roll any failed to wound rolls."
+                },
+                "Fey Quickness": {
+                    "source": "Broheim",
+                    "category": "High Elven Ability",
+                    "name": "Fey Quickness",
+                    "description": "Few can ever hope to match an Elf's inhuman quickness and agility. An Elf with Fey Quickness can avoid melee or missile attacks on a roll of 6. If the Elf also has Step Aside or Dodge this will increase to a 4+ in the relevant area. For example, an Elf with Fey Quickness and Step Aside avoids melee attacks on a 4+ and missile attacks on a 6."
+                }
             }
         }
     }

@@ -105,23 +105,23 @@ def add_itemref(source, category, subcategory, distance, skill, abilitylist, mag
     # open ref json
     datadict = load_reference(filename)
 
-    # First check if source already exists
-    if source in datadict:
+    # First check if category already exists
+    if category in datadict:
         pass
     else:
-        datadict[source] = {}
+        datadict[category] = {}
 
-    # Second check if category already exists
-    if category in datadict[source]:
+    # Second check if source already exists
+    if source in datadict[category]:
         pass
     else:
-        datadict[source][category] = {}
+        datadict[category][source] = {}
 
     skilldict = {}
     skilldict = Skill.from_list(skill)
 
     # Add data
-    datadict[source][category][subcategory]={
+    datadict[category][source][subcategory]={
         'source': source,
         'category': category,
         'subcategory': subcategory,
@@ -142,20 +142,20 @@ def add_abilityref(source, category, name, description):
     # open ref json
     datadict = load_reference(filename)
 
-    # First check if source already exists
-    if source in datadict:
+    # First check if category already exists
+    if category in datadict:
         pass
     else:
-        datadict[source] = {}
+        datadict[category] = {}
 
-    # Second check if category already exists
-    if category in datadict[source]:
+    # Second check if source already exists
+    if source in datadict[category]:
         pass
     else:
-        datadict[source][category] = {}
+        datadict[category][source] = {}
 
     # Add data
-    datadict[source][category][name]={
+    datadict[category][source][name]={
         'source': source,
         'category': category,
         'name': name,

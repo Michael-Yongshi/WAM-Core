@@ -20,42 +20,49 @@ from source.methods_engine import (
     load_reference,
 )
 
-# for every character in character-ref add impact: 0 skill
-datadict = load_reference("characters")
-for key1 in datadict:
-    for key2 in datadict[key1]:
-        for key3 in datadict[key1][key2]:
-            for key4 in datadict[key1][key2][key3]:
-                characterdict = datadict[key1][key2][key3][key4]
-                # print(characterdict) # check for correct dict
-                impactdict = {'impact': 0}
-                characterdict['skill'].update(impactdict)
-                # print(characterdict) # check if change is processed ok
-    #             break # breaks so we only get the first result for debugging
-    #         break
-    #     break
-    # break
-# save_reference(datadict, "characters")
+def add_impact_character():
+    # for every character in character-ref add impact: 0 skill
+    datadict = load_reference("characters")
+    for key1 in datadict:
+        for key2 in datadict[key1]:
+            for key3 in datadict[key1][key2]:
+                for key4 in datadict[key1][key2][key3]:
+                    characterdict = datadict[key1][key2][key3][key4]
+                    # print(characterdict) # check for correct dict
+                    impactdict = {'impact': 0}
+                    characterdict['skill'].update(impactdict)
+                    # print(characterdict) # check if change is processed ok
+        #             break # breaks so we only get the first result for debugging
+        #         break
+        #     break
+        # break
+    # save_reference(datadict, "characters")
 
-# for every item in items-ref add impact: 0 skill except for missile items
-datadict = load_reference("items")
-for key1 in datadict:
-    for key2 in datadict[key1]:
-        for key3 in datadict[key1][key2]:
-            itemdict = datadict[key1][key2][key3]
-            # print(itemdict) # check for correct dict
-            if key2 == "Missile Weapon":
-                impact = itemdict['skill']['strength']
-                impactdict = {'impact': impact}
-                strengthdict = {'strength': 0}
-                itemdict['skill'].update(strengthdict)
-                itemdict['skill'].update(impactdict)
+def add_impact_item():
+    # for every item in items-ref add impact: 0 skill except for missile items
+    datadict = load_reference("items")
+    for key1 in datadict:
+        for key2 in datadict[key1]:
+            for key3 in datadict[key1][key2]:
+                itemdict = datadict[key1][key2][key3]
+                # print(itemdict) # check for correct dict
+                if key2 == "Missile Weapon":
+                    impact = itemdict['skill']['strength']
+                    impactdict = {'impact': impact}
+                    strengthdict = {'strength': 0}
+                    itemdict['skill'].update(strengthdict)
+                    itemdict['skill'].update(impactdict)
+                    # print(itemdict) # check if change is processed ok
+                else:
+                    impactdict = {'impact': 0}
+                    itemdict['skill'].update(impactdict)
                 # print(itemdict) # check if change is processed ok
-            else:
-                impactdict = {'impact': 0}
-                itemdict['skill'].update(impactdict)
-            # print(itemdict) # check if change is processed ok
-    #         break # breaks so we only get the first result for debugging
-    #     break
-    # break
-save_reference(datadict, "items")
+        #         break # breaks so we only get the first result for debugging
+        #     break
+        # break
+    save_reference(datadict, "items")
+
+
+if __name__ == '__main__':
+    # add_impact_character()
+    # add_impact_item()

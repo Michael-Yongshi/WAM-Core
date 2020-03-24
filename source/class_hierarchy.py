@@ -520,8 +520,8 @@ class Character(object):
         current_advance = 0
         # For every event in eventlist, for every advance event check the number and compare with the previously highest advance number found
         for event in self.eventlist:
-            if event.category[:-1] == "Advance ":
-                advance = int(event.category[-1:])
+            if event.category[:8] == "Advance ":
+                advance = int(event.category[8:])
                 if advance > current_advance:
                     current_advance = advance
                     
@@ -562,7 +562,7 @@ class Character(object):
         new_advance = 0
         for key in expdict:
             if self.experience >= expdict[key]:
-                new_advance = int(key[-1:])
+                new_advance = int(key[8:])
 
         return new_advance
 

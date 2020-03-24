@@ -196,7 +196,7 @@ class Item(object):
         datadict = load_reference("items")
 
         # get specific data
-        itemdict = datadict[source][category][subcategory]
+        itemdict = datadict[category][source][subcategory]
 
         # create object based on the reference data
         dataobject = Item.from_refdict(datadict = itemdict)
@@ -348,7 +348,7 @@ class Ability(object):
         datadict = load_reference("abilities")
 
         # get specific data
-        abilitydict = datadict[source][category][name]
+        abilitydict = datadict[category][source][name]
 
         # create object based on the data
         dataobject = Ability.from_dict(abilitydict)

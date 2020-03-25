@@ -259,6 +259,8 @@ def test_ReiklandWarband():
         unprocessed_advances[0].set_advance_event(Skill.create_skill_empty(), "Being Awesome")
         print(f"level 1: {unprocessed_advances[0].description}")
         
+    print(f"current advance should be 1 - {hero.get_current_advance()}")
+    
     # add another 7 exp making the hero level 3
     hero.add_experience(5) # should become level 3
 

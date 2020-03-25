@@ -558,7 +558,7 @@ class Character(object):
     def get_advance_events(self):
         eventlist = []
         for event in self.eventlist:
-            if event.description[:8] == "Advance ":
+            if event.category[:8] == "Advance ":
                 eventlist += [event]
 
         return eventlist
@@ -570,9 +570,11 @@ class Character(object):
         current_advance = 0
 
         # For every event in eventlist, for every advance event check the number and compare with the previously highest advance number found
+        print(f"get current advance start")
         for event in self.get_advance_events():
+            print(f"event check")
             advance = int(event.category[8:])
-
+            print(f"advance {advance} found")
             if advance > current_advance:
                 current_advance = advance
                     

@@ -513,94 +513,6 @@ class Character(object):
         )
         return dataobject
 
-    def get_advance(self):
-        """Get advance level of this character"""
-
-        advance = 0
-        current_advance = 0
-        # For every event in eventlist, for every advance event check the number and compare with the previously highest advance number found
-        for event in self.eventlist:
-            if event.category[:8] == "Advance ":
-                advance = int(event.category[8:])
-                if advance > current_advance:
-                    current_advance = advance
-                    
-        return current_advance
-
-    def get_nextadvance(self):
-
-        nextadvance = self.get_advance() + 1
-        return nextadvance
-
-    def get_xpneeded(self):
-        """Get experience needed for next advance"""
-
-        # load exp database
-        datadict = load_reference("experience_table")
-        if self.ishero == True:
-            expdict = datadict["Hero"]
-        else:
-            expdict = datadict["Squad"]
-
-        # check when new advance is reached
-        nextadvance = self.get_nextadvance()
-        xpneeded = expdict["Advance " + str(nextadvance)]
-
-        return xpneeded
-
-    def check_new_advance(self):
-        """based on characters experience, check if new advance is warranted and return the new advance level"""
-
-        # load exp database
-        datadict = load_reference("experience_table")
-        if self.ishero == True:
-            expdict = datadict["Hero"]
-        else:
-            expdict = datadict["Squad"]
-
-        # check with reference what maximum advance is reached with this characters experience
-        new_advance = 0
-        for key in expdict:
-            if self.experience >= expdict[key]:
-                new_advance = int(key[8:])
-
-        return new_advance
-
-    def show_advance_notification(self):
-        if len(self.check_advance_events()) != 0:
-            notification = f"Process new advances ({len(self.check_advance_events())})"
-        else:
-            notification = f""
-
-        return notification
-
-    def create_advance_events(self, current_advance, new_advance):
-        # Create empty new events based on new experience
-        if current_advance == new_advance:
-            print("New advance is same as the current advance, not creating any events!")
-        
-        new_events = []
-        while new_advance > current_advance:
-            current_advance += 1
-            newevent = Event.create_event(
-                datetime=datetime.datetime.now(), 
-                category="Advance " + str(current_advance), 
-                description=f"Character reaches advance {current_advance}, TBD", 
-                skill=Skill.create_skill_empty()
-                )
-            new_events.append(newevent)
-
-        # Return the new events
-        return new_events
-
-    def check_advance_events(self):
-        eventlist = []
-        for event in self.eventlist:
-            if event.description[-3:] == "TBD":
-                eventlist += [event]
-
-        return eventlist
-
     def add_experience(self, change_experience):
         # check for new level up events. check what advance is reached with new experience, compare it to the advance of current experience. add then all the advances in between. Technically (i.e. going from 0 to 4 experience) one can
         # immediately jump 2 advancements. in that case new advance 2 minus current advance 0 means you plus the current advance and add an event until advance 2 is reached, so advance 0 + 1, still lower, advance 0 + 2, is equal now, so stop hereafter
@@ -621,6 +533,118 @@ class Character(object):
             for event in new_events:
                 self.eventlist.append(event)
                 print(f"created new advance event: {event.category}")
+
+    def create_advance_events(self, current_advance, new_advance):
+        # Create empty new events based on new experience
+        if current_advance == new_advance:
+            print("New advance is same as the current advance, not creating any events!")
+        
+        new_events = []
+        while new_advance > current_advance:
+            current_advance += 1
+            newevent = Event.create_event(
+                datetime=datetime.datetime.now(), 
+                category="Advance " + str(current_advance), 
+                description=f"Character reaches advance {current_advance}, TBD", 
+                skill=Skill.create_skill_empty()
+                )
+            new_events.append(newevent)
+
+        # Return the new events
+        return new_events
+
+
+    def get_tbd_advance_events(self):
+        eventlist = []
+        for event in self.eventlist:
+            if event.description[-3:] == "TBD":
+                eventlist += [event]
+
+        return eventlist
+
+    def get_advance_events(self):
+        eventlist = []
+        for event in self.eventlist:
+            if event.description[:8] == "Advance ":
+                eventlist += [event]
+
+        return eventlist
+
+    def get_current_advance(self):
+        """Get advance level of this character"""
+
+        advance = 0
+        current_advance = 0
+
+        # For every event in eventlist, for every advance event check the number and compare with the previously highest advance number found
+        for event in self.get_advance_events():
+            advance = int(event.category[8:])
+            if advance > current_advance:
+                current_advance = advance
+                    
+        return current_advance
+
+    def get_next_advance(self):
+
+        next_advance = self.get_advance() + 1
+        return next_advance
+
+    def get_xp_ref(self):
+
+        # load exp database
+        datadict = load_reference("experience_table")
+        if self.ishero == True:
+            expdict = datadict["Hero"]
+        else:
+            expdict = datadict["Squad"]
+
+        return expdict
+
+    def get_xpneeded(self):
+        """Get experience needed for next advance"""
+
+        # load exp database
+        expdict = self.get_xp_ref()
+
+        # check when new advance is reached
+        next_advance = self.get_next_advance()
+        xpneeded = expdict["Advance " + str(next_advance)]
+
+        return xpneeded
+
+    def get_new_advance(self):
+        """based on characters experience, check if new advance is warranted and return the new advance level"""
+
+        # load exp database
+        expdict = self.get_xp_ref()
+
+        # check with reference what maximum advance is reached with this characters experience
+        new_advance = 0
+        for key in expdict:
+            if self.experience >= expdict[key]:
+                new_advance = int(key[8:])
+
+        return new_advance
+
+    def get_advance_process(self):
+
+        processes = load_reference("processes")
+        advance_processes = processes["Core Rules"]["Advancement"]
+
+        if self.ishero == True:
+            process = advance_processes["Heroes"]["description"]
+        else:
+            process = advance_processes["Squads"]["description"]
+
+        return process
+
+    def get_levelup_notification(self):
+        if len(self.get_tbd_advance_events()) != 0:
+            notification = f"Process new advances ({len(self.get_tbd_advance_events())})"
+        else:
+            notification = f""
+
+        return notification
 
     def get_historydict(self):
         datadict = {}

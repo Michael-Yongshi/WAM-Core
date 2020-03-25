@@ -485,7 +485,7 @@ class Character(object):
         current_advance = dataobject.get_current_advance()
         print(f"current advance is {current_advance}")
 
-        new_advance = dataobject.check_new_advance()
+        new_advance = dataobject.get_new_advance()
         print(f"new advance is {new_advance}")
 
         events = dataobject.create_advance_events(current_advance = current_advance, new_advance = new_advance)
@@ -525,7 +525,7 @@ class Character(object):
         self.experience += change_experience
 
         # check if a new advance has been reached
-        new_advance = self.check_new_advance()
+        new_advance = self.get_new_advance()
 
         # If new advances has been reached, create empty advance events and add them to the characters event list
         if new_advance > current_advance:

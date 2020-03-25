@@ -57,7 +57,7 @@ def test_ReiklandWarband():
 
     # Adding abilities to heroes
     hero1.abilitylist = [
-        Ability.create_ability(source = "Core Rules", category = "Injury", name = "Hardened")
+        Ability.create_ability(source = "Core Rules", main = "Generic Ability", category = "Injury", name = "Hardened")
         ]
     print("hero1 ability succesfull")
 
@@ -252,18 +252,20 @@ def test_ReiklandWarband():
     # should become level 1 with getting 2 exp
     hero.add_experience(2) 
     # check open advances and first one set new ability
-    unprocessed_advances = hero.check_advance_events()
+    unprocessed_advances = hero.get_tbd_advance_events()
     if len(unprocessed_advances) == 0:
         print("No unprocessed advances")
     else:
         unprocessed_advances[0].set_advance_event(Skill.create_skill_empty(), "Being Awesome")
         print(f"level 1: {unprocessed_advances[0].description}")
         
+    print(f"current advance should be 1 - {hero.get_current_advance()}")
+    
     # add another 7 exp making the hero level 3
     hero.add_experience(5) # should become level 3
 
     # Check if the expected 2 advances pop up
-    unprocessed_advances = hero.check_advance_events()
+    unprocessed_advances = hero.get_tbd_advance_events()
     if len(unprocessed_advances) != 2:
         print(f"incorrect total advances, expected 2 but got {len(unprocessed_advances)}")
     else:
@@ -280,10 +282,10 @@ def test_ReiklandWarband():
 
 
     print("")
-    print("current advance: " + str(hero.get_advance()))
-    print("Next advance: " + str(hero.get_nextadvance()))
+    print("current advance: " + str(hero.get_current_advance()))
+    print("Next advance: " + str(hero.get_next_advance()))
     print("XP needed for next advance: " + str(hero.get_xpneeded()))
-    print("Check if new advance is reached: " + str(hero.check_new_advance()))
+    print("Check if new advance is reached: " + str(hero.get_new_advance()))
     print(hero.get_historystring())    
 
     save_warband(wbid.to_dict())

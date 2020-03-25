@@ -519,8 +519,7 @@ class Character(object):
         print(f"changing experience with: {change_experience}")
 
         # If new advances has been reached, create empty advance events and add them to the characters event list
-        self.eventlist.append(self.create_advance_events())
-        print(f"there are {len(get_tbd_advance_events())} empty advance events")
+        self.eventlist += self.create_advance_events()
 
     def create_advance_events(self):
         # Create empty new events based on new experience
@@ -541,13 +540,15 @@ class Character(object):
                 skill=Skill.create_skill_empty()
                 )
             print(f"New empty advance event created: {current_advance}")
-            new_events.append(newevent)
+            new_events += [newevent]
 
         # Return the new events
         return new_events
 
     def get_tbd_advance_events(self):
         eventlist = []
+        print(f"{self.eventlist}")
+
         for event in self.eventlist:
             if event.description[-3:] == "TBD":
                 eventlist += [event]

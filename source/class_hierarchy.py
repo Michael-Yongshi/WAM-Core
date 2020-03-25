@@ -511,12 +511,9 @@ class Character(object):
         return dataobject
 
     def add_experience(self, change_experience):
-        # check for new level up events. check what advance is reached with new experience, compare it to the advance of current experience. add then all the advances in between. Technically (i.e. going from 0 to 4 experience) one can
-        # immediately jump 2 advancements. in that case new advance 2 minus current advance 0 means you plus the current advance and add an event until advance 2 is reached, so advance 0 + 1, still lower, advance 0 + 2, is equal now, so stop hereafter
 
         # add the new experience
         self.experience += change_experience
-        print(f"changing experience with: {change_experience}")
 
         # If new advances has been reached, create empty advance events and add them to the characters event list
         self.eventlist += self.create_advance_events()
@@ -527,9 +524,6 @@ class Character(object):
         current_advance = self.get_current_advance()
         new_advance = self.get_new_advance()
 
-        if current_advance == new_advance:
-            print("New advance is same as the current advance, not creating any events!")
-        
         new_events = []
         while new_advance > current_advance:
             current_advance += 1
@@ -539,7 +533,6 @@ class Character(object):
                 description=f"Character reaches advance {current_advance}, TBD", 
                 skill=Skill.create_skill_empty()
                 )
-            print(f"New empty advance event created: {current_advance}")
             new_events += [newevent]
 
         # Return the new events
@@ -547,7 +540,6 @@ class Character(object):
 
     def get_tbd_advance_events(self):
         eventlist = []
-        print(f"{self.eventlist}")
 
         for event in self.eventlist:
             if event.description[-3:] == "TBD":
@@ -570,11 +562,8 @@ class Character(object):
         current_advance = 0
 
         # For every event in eventlist, for every advance event check the number and compare with the previously highest advance number found
-        print(f"get current advance start")
         for event in self.get_advance_events():
-            print(f"event check")
             advance = int(event.category[8:])
-            print(f"advance {advance} found")
             if advance > current_advance:
                 current_advance = advance
                     

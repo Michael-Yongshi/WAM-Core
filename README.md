@@ -154,7 +154,7 @@ https://stackoverflow.com/questions/34869625/how-to-read-or-write-smart-card
 Downlaod SD Formatter and Etcher flasher to format and flash SD drives
 
 https://www.reddit.com/r/ethereum/comments/fo1p2b/ethereum_on_arm_nethermind_and_hyperledger_besu/
-
+https://www.mycryptopedia.com/how-to-run-an-ethereum-node-on-a-raspberry-pi/
 
 Install Raspbian instructions (download raspbian light for terminal version; also preferred for less problems with flashing):
 https://www.raspberrypi.org/documentation/installation/installing-images/README.md

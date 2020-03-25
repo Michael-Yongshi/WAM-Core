@@ -538,6 +538,72 @@ class Character(object):
         # Return the new events
         return new_events
 
+    def set_event_ability(self, event, new_ability):
+
+        self.abilitylist.append(new_ability)
+        result = f"The character gained the ability of {new_ability.name}"
+        event.description = event.description[:-4] + result
+
+        return result
+
+    def set_event_magic(self, event, new_magic):
+        
+        self.magiclist.append(new_magic)
+        result = f"The character is able to use new magic {new_magic.name}"
+        
+        event.description = event.description[:-4] + result
+
+        return result
+
+    def set_event_roll7(self, event, choice):
+        
+        if choice == "Weapon Skill":
+            event.skill.weapon = 1
+            result = f"Character gained +1 to their weapon skill characteristic!"
+
+        if choice == "Ballistic Skill":
+            event.skill.ballistic = 1
+            result = f"Character gained +1 to their ballistic skill characteristic!"
+
+        event.description = event.description[:-4] + result
+
+        return result
+
+    def set_event_characteristic(self, event, roll1, roll2):
+
+        if roll1 == 6:
+            if roll2 <= 3:
+                event.skill.strength = 1
+                result = f"Character gained +1 to their strength characteristic!"
+
+            if roll2 >= 4:
+                event.skill.actions = 1
+                result = f"Character gained +1 to their attack characteristic!"
+
+        if roll1 == 8:
+
+            if roll2 <= 3:
+                event.skill.initiative = 1
+                result = f"Character gained +1 to their initiative characteristic!"
+
+            if roll2 >= 4:
+                event.skill.leadership = 1
+                result = f"Character gained +1 to their leadership characteristic!"
+
+        if roll1 == 9:
+
+            if roll2 <= 3:
+                event.skill.wounds = 1
+                result = f"Character gained +1 to their wounds characteristic!"
+
+            if roll2 >= 4:
+                event.skill.toughness = 1
+                result = f"Character gained +1 to their toughness characteristic!"
+
+        event.description = event.description[:-4] + result
+
+        return result
+
     def get_tbd_advance_events(self):
         eventlist = []
 

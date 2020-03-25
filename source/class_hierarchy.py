@@ -482,14 +482,11 @@ class Character(object):
 
         dataobject.name = name
 
-        current_advance = dataobject.get_current_advance()
-        print(f"current advance is {current_advance}")
+        print(f"current advance is {dataobject.get_current_advance()}")
+        print(f"new advance is {dataobject.get_new_advance()}")
 
-        new_advance = dataobject.get_new_advance()
-        print(f"new advance is {new_advance}")
-
-        events = dataobject.create_advance_events(current_advance = current_advance, new_advance = new_advance)
-        dataobject.eventlist += events
+        # Create advance level for this new character
+        dataobject.eventlist += dataobject.create_advance_events()
         print(dataobject.eventlist)
 
         for event in dataobject.eventlist:
@@ -517,25 +514,20 @@ class Character(object):
         # check for new level up events. check what advance is reached with new experience, compare it to the advance of current experience. add then all the advances in between. Technically (i.e. going from 0 to 4 experience) one can
         # immediately jump 2 advancements. in that case new advance 2 minus current advance 0 means you plus the current advance and add an event until advance 2 is reached, so advance 0 + 1, still lower, advance 0 + 2, is equal now, so stop hereafter
 
-        print(f"changing experience with: {change_experience}")
-        current_experience = self.experience
-        current_advance = self.get_current_advance()
-
         # add the new experience
         self.experience += change_experience
-
-        # check if a new advance has been reached
-        new_advance = self.get_new_advance()
+        print(f"changing experience with: {change_experience}")
 
         # If new advances has been reached, create empty advance events and add them to the characters event list
-        if new_advance > current_advance:
-            new_events = self.create_advance_events(current_advance, new_advance)
-            for event in new_events:
-                self.eventlist.append(event)
-                print(f"created new advance event: {event.category}")
+        self.eventlist.append(self.create_advance_events())
+        print(f"there are {len(get_tbd_advance_events())} empty advance events")
 
-    def create_advance_events(self, current_advance, new_advance):
+    def create_advance_events(self):
         # Create empty new events based on new experience
+
+        current_advance = self.get_current_advance()
+        new_advance = self.get_new_advance()
+
         if current_advance == new_advance:
             print("New advance is same as the current advance, not creating any events!")
         
@@ -548,11 +540,11 @@ class Character(object):
                 description=f"Character reaches advance {current_advance}, TBD", 
                 skill=Skill.create_skill_empty()
                 )
+            print(f"New empty advance event created: {current_advance}")
             new_events.append(newevent)
 
         # Return the new events
         return new_events
-
 
     def get_tbd_advance_events(self):
         eventlist = []
@@ -579,6 +571,7 @@ class Character(object):
         # For every event in eventlist, for every advance event check the number and compare with the previously highest advance number found
         for event in self.get_advance_events():
             advance = int(event.category[8:])
+
             if advance > current_advance:
                 current_advance = advance
                     

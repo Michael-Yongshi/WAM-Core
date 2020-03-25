@@ -153,6 +153,9 @@ https://stackoverflow.com/questions/34869625/how-to-read-or-write-smart-card
 ### Ethereum node with Raspbian and DappNode
 Downlaod SD Formatter and Etcher flasher to format and flash SD drives
 
+https://www.reddit.com/r/ethereum/comments/fo1p2b/ethereum_on_arm_nethermind_and_hyperledger_besu/
+
+
 Install Raspbian instructions (download raspbian light for terminal version; also preferred for less problems with flashing):
 https://www.raspberrypi.org/documentation/installation/installing-images/README.md
 

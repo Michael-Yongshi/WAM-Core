@@ -482,7 +482,7 @@ class Character(object):
 
         dataobject.name = name
 
-        current_advance = dataobject.get_advance()
+        current_advance = dataobject.get_current_advance()
         print(f"current advance is {current_advance}")
 
         new_advance = dataobject.check_new_advance()
@@ -519,7 +519,7 @@ class Character(object):
 
         print(f"changing experience with: {change_experience}")
         current_experience = self.experience
-        current_advance = self.get_advance()
+        current_advance = self.get_current_advance()
 
         # add the new experience
         self.experience += change_experience
@@ -586,7 +586,7 @@ class Character(object):
 
     def get_next_advance(self):
 
-        next_advance = self.get_advance() + 1
+        next_advance = self.get_current_advance() + 1
         return next_advance
 
     def get_xp_ref(self):

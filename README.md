@@ -33,7 +33,9 @@ set some git configurations first
 ```
 git config --global user.email "" 
 git config --global user.name ""
-git config --global submodule.recurse true
+# git config --global submodule.recurse true
+git submodule init
+git submodule update
 ```
 
 Remove deleted branches of local vs code instance

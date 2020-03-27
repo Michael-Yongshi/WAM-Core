@@ -29,13 +29,11 @@ set git url in the pop up
 
 set git credentials by entering credentials in popup
 
-set git name with 
+set some git configurations first
 ```
-git config --global user.email ""
-```
-set git email with 
-```
+git config --global user.email "" 
 git config --global user.name ""
+git config --global submodule.recurse true
 ```
 
 Remove deleted branches of local vs code instance

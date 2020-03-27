@@ -36,7 +36,8 @@ sudo apt install git # scm for windows
 install python
 ```
 sudo add-apt-repository ppa:deadsnakes/ppa
-sudo install python3.6.8
+sudo apt install python3.6.8
+sudo apt install python3-pip
 ```
 install vscode - python extension
 

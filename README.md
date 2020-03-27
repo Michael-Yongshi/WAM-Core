@@ -17,8 +17,8 @@ The rest of these instructions will get you a copy of the project up and running
 ### Python, IDE & Git
 
 ```
-install vscode
-install git scm
+sudo apt install vscode
+sudo apt install git # scm for windows
 install python
 install vscode - python extension
 ```

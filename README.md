@@ -15,21 +15,36 @@ An application in order to create, update, view and save your warband details fo
 The rest of these instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Python, IDE & Git
+windows install
+vs code website
+git-scm website
+python website
 
+ubuntu
+upgrade and update apt
+```
+sudo apt upgrade
+sudo apt update
+sudo apt-get upgrade
+sudo apt-get update
+```
+vscode and git
 ```
 sudo apt install vscode
 sudo apt install git # scm for windows
-install python
-install vscode - python extension
 ```
+install python
+```
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo install python3.6.8
+```
+install vscode - python extension
 
-set git repository by entering "git clone"
-
+set git repository by entering ctrl + shift + p then "git clone"
 set git url in the pop up
-
 set git credentials by entering credentials in popup
 
-set some git configurations first
+set some git configurations afterwards
 ```
 git config --global user.email "" 
 git config --global user.name ""

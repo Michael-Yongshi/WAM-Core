@@ -542,6 +542,28 @@ class Character(object):
         )
         return dataobject
 
+    def buy_item(self, wbid, item):
+        """Basically adds the new item to this hero in return for gold"""
+
+        if item.price > wbid.treasury.gold:
+            message = "Lack of funds!"
+        else:
+            self.itemlist.append(item)
+            wbid.treasury.gold -= item.price
+            message = ""
+        
+        return message
+
+    def sell_item(self, wbid, itemsubcategory):
+        """Basically removes the heroes item in return for gold"""
+
+        for i in self.itemlist:
+            if i.subcategory == itemsubcategory:
+                index = self.itemlist.index(i)
+                item = self.itemlist.pop(index)
+                wbid.treasury.gold += item.price
+                break
+
     def add_experience(self, change_experience):
 
         # add the new experience
@@ -826,28 +848,6 @@ class Hero(Character):
         else:
             dataobject = Character.create_character(name, race, source, warband, category)
             return dataobject
-
-    def buy_item(self, wbid, item):
-        """Basically adds the new item to this hero in return for gold"""
-
-        if item.price > wbid.treasury.gold:
-            message = "Lack of funds!"
-        else:
-            self.itemlist.append(item)
-            wbid.treasury.gold -= item.price
-            message = ""
-        
-        return message
-
-    def sell_item(self, wbid, itemsubcategory):
-        """Basically removes the heroes item in return for gold"""
-
-        for i in self.itemlist:
-            if i.subcategory == itemsubcategory:
-                index = self.itemlist.index(i)
-                item = self.itemlist.pop(index)
-                wbid.treasury.gold += item.price
-                break
 
 class Henchman(Character):
     @staticmethod

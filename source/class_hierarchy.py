@@ -839,7 +839,7 @@ class Hero(Character):
         
         return message
 
-    def sell_item(self, wbid, itemsubcategory)
+    def sell_item(self, wbid, itemsubcategory):
         """Basically removes the heroes item in return for gold"""
 
         for i in self.itemlist:

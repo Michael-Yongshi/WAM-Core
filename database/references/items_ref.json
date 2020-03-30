@@ -2071,7 +2071,7 @@
                 "abilitylist": [],
                 "magiclist": [],
                 "price": 40,
-                "description": "The warrior gains +1 Movement."
+                "description": "The warrior has legs with hoofs, giving him a gain of +1 Movement."
             },
             "Tentacle": {
                 "source": "Core Rules",
@@ -2214,7 +2214,7 @@
                 "abilitylist": [],
                 "magiclist": [],
                 "price": 40,
-                "description": "The warrior gains +1 Movement."
+                "description": "The mutant may use any single-handed weapon in the extra arm, giving him +1 attack when fighting in hand-to-hand combat. Alternatively, he may carry a shield or a buckler in the extra arm. If a Possessed chooses to do this, he gains an extra attack but still cannot carry a weapon."
             },
             "Hideous": {
                 "source": "Core Rules",
@@ -2244,7 +2244,7 @@
                 ],
                 "magiclist": [],
                 "price": 40,
-                "description": "The warrior gains +1 Movement."
+                "description": "The mutant causes fear. See the Psychology section for details."
             }
         }
     },

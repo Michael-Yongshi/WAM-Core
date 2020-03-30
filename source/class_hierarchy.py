@@ -1,5 +1,4 @@
 import copy
-import datetime
 
 from .methods_engine import (
     load_reference,
@@ -286,16 +285,49 @@ class Squad(object):
             for _ in range(0, 0 - deltasize):
                 self.henchmanlist.pop(-1)
 
-    def equip_squad(self, source, category, subcategory):
-        """Basically runs a create item method for every henchman in this squad"""
+    def buy_item(self, wbid, item):
+        """Basically adds the new item to every henchman in this squad in return for gold"""
+
+        totalcost = item.price * self.get_totalhenchman()
+
+        if totalcost > wbid.treasury.gold:
+            message = "Lack of funds!"
+        else:
+            for henchman in self.henchmanlist:
+                henchman.itemlist.append(item)
+                wbid.treasury.gold -= item.price
+            message = ""
+        
+        return message
+
+    def sell_item(self, wbid, itemsubcategory):
+        """Basically removes the item from every henchman in this squad in return for gold"""
 
         for henchman in self.henchmanlist:
-            newitem = Item.create_item(
-                source = source,
-                category = category,
-                subcategory = subcategory,
-                )
-            henchman.itemlist.append(newitem)
+            for i in henchman.itemlist:
+                if i.subcategory == itemsubcategory:
+                    index = henchman.itemlist.index(i)
+                    item = henchman.itemlist.pop(index)
+                    wbid.treasury.gold += item.price
+                    break
+
+    def add_experience(self, change_experience):
+        
+        for henchman in self.henchmanlist:
+                
+            # add the new experience
+            henchman.experience += change_experience
+
+            # If new advances has been reached, create empty advance events and add them to the characters event list
+            henchman.eventlist += henchman.create_advance_events()
+
+    def set_event_characteristic(self, roll1, roll2):
+
+        for henchman in self.henchmanlist:
+            event = henchman.get_tbd_advance_events()[0]
+            message = henchman.set_event_characteristic(event, roll1, roll2)
+
+        return message
 
     def get_totalhenchman(self):
         henchmanlist = self.henchmanlist if self.henchmanlist else []
@@ -310,7 +342,6 @@ class Squad(object):
 
         return squadprice
 
-     
 class Character(object):
     def __init__(self, name, race, source, warband, category, ishero, skill, abilitylist=[], magiclist=[], itemlist=[], eventlist=[], experience=0, price=0, maxcount=0, description=None):
         self.name = name
@@ -510,6 +541,28 @@ class Character(object):
         )
         return dataobject
 
+    def buy_item(self, wbid, item):
+        """Basically adds the new item to this hero in return for gold"""
+
+        if item.price > wbid.treasury.gold:
+            message = "Lack of funds!"
+        else:
+            self.itemlist.append(item)
+            wbid.treasury.gold -= item.price
+            message = ""
+        
+        return message
+
+    def sell_item(self, wbid, itemsubcategory):
+        """Basically removes the heroes item in return for gold"""
+
+        for i in self.itemlist:
+            if i.subcategory == itemsubcategory:
+                index = self.itemlist.index(i)
+                item = self.itemlist.pop(index)
+                wbid.treasury.gold += item.price
+                break
+
     def add_experience(self, change_experience):
 
         # add the new experience
@@ -528,7 +581,6 @@ class Character(object):
         while new_advance > current_advance:
             current_advance += 1
             newevent = Event.create_event(
-                datetime=datetime.datetime.now(), 
                 category="Advance " + str(current_advance), 
                 description=f"Character reaches advance {current_advance}, TBD", 
                 skill=Skill.create_skill_empty()

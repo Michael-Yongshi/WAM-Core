@@ -156,7 +156,8 @@ Copy the contracts folder in whole, or just the files we are using (retaining th
 - contracts/introspection/ERC165.sol
 - contracts/math/SafeMath.sol
 
-### NFC through pyscard
+### NFC
+#### connecting with Pyscard
 Can only be used with version 3.6.8 of python (as of moment of writing). Thus we have to switch for this application to this python version in order to use this NFC library.
 Downloaded pyscard executable for windows from https://sourceforge.net/projects/pyscard/
 tutorial: https://pyscard.sourceforge.io/user-guide.html
@@ -164,7 +165,25 @@ other info:
 https://stackoverflow.com/questions/56423316/i-can-not-understand-my-symptoms-python-is-using-pyscard
 https://github.com/GPII/linux-rfid-user-listener/blob/master/scriptor.1p
 https://khanhicetea.com/post/reading-nfc-card-id-on-ubuntu/#Source-code
+
+#### encoding with ndeflib
+encoding and decoding messages from NDEF format (nfc data exchange format)
+```
+pip3 install --user ndeflib
+```
+
+https://pypi.org/project/ndeflib/
+https://ndeflib.readthedocs.io/en/latest/ndef.html
+
+tabs:
+https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Nfc
+https://stackoverflow.com/questions/56288102/which-apdu-to-use-to-read-write-records-on-mifare-ultralight-nfc-tag
+https://gist.github.com/im-infamou5/4681713
+http://nfc-tools.org/index.php/Libnfc:APDU_example
+https://stackoverflow.com/questions/47820902/cannot-send-large-apdu-commands-with-libnfc-using-nfc-initiator-transceive-bytes
+https://stackoverflow.com/search?q=nfc+read+command+apdu
 https://stackoverflow.com/questions/34869625/how-to-read-or-write-smart-card
+https://stackoverflow.com/questions/56261178/cant-read-card-with-nfc-rfid-reader-through-python
 
 ### Ethereum node with Raspbian and DappNode
 Downlaod SD Formatter and Etcher flasher to format and flash SD drives

@@ -55,54 +55,8 @@ class NFCconnection(object):
             cardservice = cardservice,
         )
 
-    def read_card(self):
+    def read_card(self, op_type):
     
-        # op_type determines what kind of card to be selected???
-        # MF card?
-        # op_type = [
-        #     0x00, # CLS ?
-        #     0xA4, # INS ?
-        #     0x00, # P1 field?
-        #     0x00, # P2 field?
-        #     0x02, # Number of bytes to read
-        #     0x3F, # File id part 1
-        #     0x01, # file id part 2
-        #     ]
-
-        # valid, but dont know what it does
-        # op_type = [
-        #     0xFF,
-        #     0x82,
-        #     0x00,
-        #     0x00,
-        #     0x05,
-        # ]
-
-        # should result in getting uid of card but response is empty (in tutorial SELECT)
-        op_type = [
-            0xFF, 
-            0xCA, 
-            0x00, 
-            0x00,
-            0x00,
-            ]
-
-        # read data
-        # op_type = [
-        #     0x00,
-        #     0xB0,
-        #     0x00,
-        #     0x00,
-        # ]
-
-        # # write data
-        # op_type = [
-        #     0x00,
-        #     0xD0,
-        #     0x00,
-        #     0x00,
-        # ]
-
         # in order to log the details of the op_type variable we translate the bytes to hex so they become human readable
         op_typehex = []
         for i in op_type:
@@ -119,26 +73,28 @@ class NFCconnection(object):
         print(f"op_type: {op_type}")
 
         # use the following details (in tutorial DF_TELECOM)
-        op_details = [0x05, 0x00, 0x00, 0x00, 0x00, 0x00]
+        # op_details = [0x05, 0x00, 0x00, 0x00, 0x00, 0x00]
 
         # in order to log the details of the op_details variable we translate the bytes to hex so they become human readable
-        op_detailshex = []
-        for i in op_details:
-            hexstring = hex(i)
-            hexstring12 = hexstring[0] + hexstring[1]
-            if len(hexstring) == 3:
-                hexstring34 = hexstring[2].upper() + "0"
-            else:
-                hexstring34 = hexstring[2].upper() + hexstring[3].upper()
-            hexstring = hexstring12 + hexstring34
-            op_detailshex += [hexstring]
+        # op_detailshex = []
+        # for i in op_details:
+        #     hexstring = hex(i)
+        #     hexstring12 = hexstring[0] + hexstring[1]
+        #     if len(hexstring) == 3:
+        #         hexstring34 = hexstring[2].upper() + "0"
+        #     else:
+        #         hexstring34 = hexstring[2].upper() + hexstring[3].upper()
+        #     hexstring = hexstring12 + hexstring34
+        #     op_detailshex += [hexstring]
 
-        print(f"op_details hex: {op_detailshex}")
-        print(f"op_details: {op_details}")
+        # print(f"op_details hex: {op_detailshex}")
+        # print(f"op_details: {op_details}")
 
-        apdu = op_type + op_details
+        apdu = op_type # + op_details
         print(f"sending {toHexString(apdu)}")
 
         # response, sw1, sw2 = cardservice.connection.transmit( apdu, CardConnection.T1_protocol )
-        response, sw1, sw2 = self.cardservice.connection.transmit( apdu )
+        response, sw1, sw2 = self.cardservice.connection.transmit(apdu)
         print(f"response: {response} status words: {sw1} {sw2}")
+
+        return response

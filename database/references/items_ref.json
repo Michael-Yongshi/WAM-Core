@@ -1995,6 +1995,259 @@
             }
         }
     },
+    "Mutations": {
+        "Core Rules": {
+            "Daemon Soul": {
+                "source": "Core Rules",
+                "category": "Mutations",
+                "subcategory": "Daemon Soul",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Magic Resistance"
+                    }
+                ],
+                "magiclist": [],
+                "price": 20,
+                "description": "A Daemon lives within the mutant’s soul. This gives him a 4+ save against the effects of spells or prayers."
+            },
+            "Great Claw": {
+                "source": "Core Rules",
+                "category": "Mutations",
+                "subcategory": "Great Claw",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 1,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 1,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [],
+                "magiclist": [],
+                "price": 50,
+                "description": "One of the mutant’s arms ends in a great, crab-like claw. He may carry no weapons in this arm, but gains an extra attack in hand-to-hand combat with a +1 Strength bonus."
+            },
+            "Cloven Hoofs": {
+                "source": "Core Rules",
+                "category": "Mutations",
+                "subcategory": "Cloven Hoofs",
+                "distance": 0,
+                "skill": {
+                    "movement": 1,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [],
+                "magiclist": [],
+                "price": 40,
+                "description": "The warrior gains +1 Movement."
+            },
+            "Tentacle": {
+                "source": "Core Rules",
+                "category": "Mutations",
+                "subcategory": "Tentacle",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Grappling"
+                    }
+                ],
+                "magiclist": [],
+                "price": 35,
+                "description": "One of the mutant’s arms ends in a tentacle. He may grapple his opponent in close combat to reduce his attacks by -1, down to a minimum of 1. The mutant may decide which attack his opponent loses."
+            },
+            "Blackblood": {
+                "source": "Core Rules",
+                "category": "Mutations",
+                "subcategory": "Blackblood",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Corrosive"
+                    }
+                ],
+                "magiclist": [],
+                "price": 30,
+                "description": "If the model loses a wound in close combat, anyone in base contact with the model suffers a Strength 3 hit (no critical hits) from the spurting corrosive blood."
+            },
+            "Spines": {
+                "source": "Core Rules",
+                "category": "Mutations",
+                "subcategory": "Spines",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Spiked"
+                    }
+                ],
+                "magiclist": [],
+                "price": 35,
+                "description": "Any model in base contact with the mutant suffers an automatic Strength 1 hit at the beginning of each close combat phase. Spines will never cause critical hits."
+            },
+            "Scorpion Tail": {
+                "source": "Core Rules",
+                "category": "Mutations",
+                "subcategory": "Scorpion Tail",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Poisonous"
+                    }
+                ],
+                "magiclist": [],
+                "price": 40,
+                "description": "The mutant has a long barbed tail with a venomed tip, allowing him to make an extra Strength 5 attack in each hand-to-hand combat phase. If the model hit by the tail is immune to poison, the Strength of the hit is reduced to 2."
+            },
+            "Extra Arm": {
+                "source": "Core Rules",
+                "category": "Mutations",
+                "subcategory": "Extra Arm",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 1,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [],
+                "magiclist": [],
+                "price": 40,
+                "description": "The warrior gains +1 Movement."
+            },
+            "Hideous": {
+                "source": "Core Rules",
+                "category": "Mutations",
+                "subcategory": "Hideous",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Character Ability",
+                        "name": "Cause Fear"
+                    }
+                ],
+                "magiclist": [],
+                "price": 40,
+                "description": "The warrior gains +1 Movement."
+            }
+        }
+    },
     "Other": {
         "Core Rules": {
             "Mordheim Map": {

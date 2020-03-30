@@ -490,6 +490,41 @@
                     "category": "Item Ability",
                     "name": "Garlic Smell",
                     "description": "A Vampire must pass a Leadership test or it will be unable to charge a model carrying a clove of garlic."
+                },
+                "Magic Resistance": {
+                    "source": "Core Rules",
+                    "main": "Generic Ability",
+                    "category": "Item Ability",
+                    "name": "Magic Resistance",
+                    "description": "This character is less susceptible to magic than normal, giving him a 4+ save against the effects of spells and prayers."
+                },
+                "Grappling": {
+                    "source": "Core Rules",
+                    "main": "Generic Ability",
+                    "category": "Item Ability",
+                    "name": "Grappling",
+                    "description": "This character is excellent in grappling opponents and reduce their attacks by 1 to a minimum of 1. The character can decide which attack is lost."
+                },
+                "Corrosive": {
+                    "source": "Core Rules",
+                    "main": "Generic Ability",
+                    "category": "Item Ability",
+                    "name": "Corrosive",
+                    "description": "This character biology is corrosive to other characters. Whenever this character is wounded, all characters in base contact will receive a 3 strength hit (no criticals)."
+                },
+                "Spiked": {
+                    "source": "Core Rules",
+                    "main": "Generic Ability",
+                    "category": "Item Ability",
+                    "name": "Spiked",
+                    "description": "The character is protected by spikes. Any model in base contact with the mutant will receive a 1 strength hit every turn (no criticals)."
+                },
+                "Poisonous": {
+                    "source": "Core Rules",
+                    "main": "Generic Ability",
+                    "category": "Item Ability",
+                    "name": "Poisonous",
+                    "description": "The character deals poisonous damage with a 5 strength hit. Characters that are immune to poison receive only 2 strength hit."
                 }
             }
         },

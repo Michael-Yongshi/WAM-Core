@@ -1,5 +1,4 @@
 import copy
-import datetime
 
 from .methods_engine import (
     load_reference,
@@ -582,7 +581,6 @@ class Character(object):
         while new_advance > current_advance:
             current_advance += 1
             newevent = Event.create_event(
-                datetime=datetime.datetime.now(), 
                 category="Advance " + str(current_advance), 
                 description=f"Character reaches advance {current_advance}, TBD", 
                 skill=Skill.create_skill_empty()

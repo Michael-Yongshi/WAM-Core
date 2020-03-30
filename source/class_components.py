@@ -1,4 +1,6 @@
 
+import datetime
+
 from .methods_engine import (
     load_reference,
 )
@@ -460,12 +462,12 @@ class Event(object):
         return datastring
 
     @staticmethod
-    def create_event(datetime, category, skill, description):
+    def create_event(category, skill, description):
 
         # create object based on the given parameters
         dataobject = Event(
             uniquehash = hash(str(datetime) + str(category) + str(description)),
-            datetime = str(datetime),
+            datetime = str(datetime.datetime.now()),
             category = category,
             skill = skill,
             description = description,

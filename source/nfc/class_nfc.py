@@ -12,79 +12,18 @@ class NFCmethods(object):
     def __init__(self):
         super().__init__()
 
-    @staticmethod
-    def get_handshake():
-        #ACS ACR122U NFC Reader
-        #Suprisingly, to get data from the tag, it is a handshake protocol
-        #You send it a command to get data back
-        #This command below is based on the "API Driver Manual of ACR122U NFC Contactless Smart Card Reader"
-        
-        handshake = [0xFF, 0xCA, 0x00, 0x00, 0x00] #handshake cmd needed to initiate data transfer
-        return handshake
 
     @staticmethod
-    def get_application_method(atrhex):
-        # also known as RID or Registered App Provider Identifier
-        application_method = "Unknown"
-
-        application_methods = {
-            "A000000306": "PC/SC Workgroup"
-        }
-
-        # 9th position, pythons first position is 0, so 9-1=8
-        application_method_string = ""
-        for i in range(7, 12):
-            atri = format(atrhex[i], '#04x')[2:]
-            atri = atri.upper()
-            if len(atri) == 1:
-                atri = "0" + atri
-            application_method_string += atri
-
-        # print(f"application_method_string: {application_method_string}")
-
-        for key in application_methods:
-            if key == application_method_string:
-                application_method = application_methods[key]
-                break
+    def parse_string_from_codes(datacodes):
         
-        if application_method == "Unknown":
-            application_method += f" - RID code: {application_method_string}"
+        datahexstring = ""
 
-        return application_method
+        for i in datacodes:
+            i_hexstring = format(i, '#04x')[2:]
+            i_upper = i_hexstring.upper()
+            datahexstring += i_upper
 
-    @staticmethod
-    def get_card_type(atrhex):
-
-        card_type = "Unknown"
-
-        card_types = {
-            "0001": "Mifare 1K",
-            "0002": "Mifare 4k",
-            "0003": "Mifare Ultralight",
-            "0026": "Mifare Mini",
-            "F004": "Topaz and Jewel",
-            "F011": "Felica 212k",
-            "F012": "Felica 424k",
-        }
-
-        # 14th position, pythons first position is 0, so 14-1=13
-        card_type_string = ""
-        for i in range(13, 15):
-            atri = format(atrhex[i], '#04x')[2:]
-            atri = atri.upper()
-            if len(atri) == 1:
-                atri = "0" + atri
-            card_type_string += atri
-
-        for key in card_types:
-            if key == card_type_string:
-                card_type = card_types[key]
-                break
-        
-        if card_type == "Unknown":
-            card_type += f" - card name code: {card_type_string}"
-
-        return card_type
+        return datahexstring
 
     @staticmethod
     def stringParser(data_in):
@@ -116,6 +55,122 @@ class NFCmethods(object):
 
         return data_out
 
+    @staticmethod
+    def get_card_block_length(atr):
+        # the block length
+        length = "Unknown"
+
+        # 
+        atrhex = toHexString(atr)
+        length_string = atrhex[18:20]
+        # "OC" apparantly means 12 bytes of config data
+        # print(f"length_string: {length_string}")
+     
+        if length == "Unknown":
+            length += f" - length code: {length_string}"
+
+        return length
+
+    @staticmethod
+    def get_card_rid(atr):
+        # also known as RID or Registered App Provider Identifier
+        rid = "Unknown"
+
+        rids = {
+            "A0 00 00 03 06": "PC/SC Workgroup",
+        }
+
+        # 9th position, pythons first position is 0, so 9-1=8
+        atrhex = toHexString(atr)
+        rid_string = atrhex[21:35]
+
+        # print(f"rid_string: {rid_string}")
+
+        for key in rids:
+            if key == rid_string:
+                rid = f"{rids[key]} (code: {key})"
+                break
+        
+        if rid == "Unknown":
+            rid += f" - RID code: {rid_string}"
+
+        return rid
+
+    @staticmethod
+    def get_card_standard(atr):
+        # the iso standard that is followed
+        standard = "Unknown"
+
+        standards = {
+            "03": "ISO14443A, Part3", # standard format
+        }
+
+        # 
+        atrhex = toHexString(atr)
+        standard_string = atrhex[36:38]
+
+        # print(f"standard_string: {standard_string}")
+
+        for key in standards:
+            if key == standard_string:
+                standard = f"{standards[key]} (code: {key})"
+                break
+        
+        if standard == "Unknown":
+            standard += f" - standard code: {standard_string}"
+
+        return standard
+
+    @staticmethod
+    def get_card_type(atr):
+
+        card_type = "Unknown"
+
+        card_types = {
+            "00 01": "Mifare 1K",
+            "00 02": "Mifare 4k",
+            "00 03": "Mifare Ultralight",
+            "00 26": "Mifare Mini",
+            "F0 04": "Topaz and Jewel",
+            "F0 11": "Felica 212k",
+            "F0 12": "Felica 424k",
+        }
+
+        atrhex = toHexString(atr)
+        card_type_string = atrhex[39:44]
+
+        for key in card_types:
+            if key == card_type_string:
+                card_type = f"{card_types[key]} (code: {key})"
+                break
+        
+        if card_type == "Unknown":
+            card_type += f" - card name code: {card_type_string}"
+
+        return card_type
+
+    @staticmethod
+    def get_card_rfu(atr):
+        # something to do with clock frequencies, are often left at 0 to set default setting.
+        rfu = "Unknown"
+
+        rfus = {
+            "00 00 00 00": "Default setting",
+        }
+
+        atrhex = toHexString(atr)
+        rfu_string = atrhex[45:56]
+
+        for key in rfus:
+            if key == rfu_string:
+                rfu = f"{rfus[key]} (code: {key})"
+                break
+        
+        if rfu == "Unknown":
+            rfu += f" - card name code: {rfu_string}"
+
+        return rfu
+
 class NFCconnection(object):
     def __init__(self, cardservice):
         super().__init__()
@@ -129,10 +184,11 @@ class NFCconnection(object):
 
         print("Waiting for card")
         cardservice = cardrequest.waitforcard()
-        print("Card connected")
-
+        print("Card found")
         # connecting to card
         cardservice.connection.connect()
+        print("Connection established")
+        print("")
 
         reader = cardservice.connection.getReader()
         print(f"connected to reader: {reader}")
@@ -140,19 +196,19 @@ class NFCconnection(object):
         print(f"connected to card (in bytes): {str(atr)}")
         atrhex = toHexString(atr)
         print(f"connected to card (in hex): {str(atrhex)}")
+        print("")
 
         # get some info out of ATR:
-        rid = NFCmethods.get_application_method(atr)
-        print(f"application method RID: {rid}")
+        length = NFCmethods.get_card_block_length(atr)
+        print(f"byte 7 // config data length: {length}")
+        rid = NFCmethods.get_card_rid(atr)
+        print(f"bytes 8 - 12 // rid: {rid}")
+        standard = NFCmethods.get_card_standard(atr)
+        print(f"byte 13 // standard: {standard}")
         card_type = NFCmethods.get_card_type(atr)
-        print(f"cardtype: {card_type}")
-
-        response, sw1, sw2 = cardservice.connection.transmit(NFCmethods.get_handshake())
-        print(f"response: {response} status words: {sw1} {sw2}")
-        if sw1 == 144:
-            print(f"Handshake with card succesfull!")
-        else:
-            print(f"Handshake failed!")
+        print(f"bytes 14 - 15 // cardtype: {card_type}")
+        rfu = NFCmethods.get_card_rfu(atr)
+        print(f"bytes 16 - 19 // rfu: {rfu}")
 
         return NFCconnection(
             cardservice = cardservice,
@@ -201,8 +257,30 @@ class NFCconnection(object):
             cardservice = cardservice,
         )
 
+    def get_handshake(self):
+        #ACS ACR122U NFC Reader
+        #Suprisingly, to get data from the tag, it is a handshake protocol
+        #You send it a command to get data back
+        #This command below is based on the "API Driver Manual of ACR122U NFC Contactless Smart Card Reader"
+        
+        # it basically returns the UID of the card
+        handshake = [0xFF, 0xCA, 0x00, 0x00, 0x00] #handshake cmd needed to initiate data transfer
+
+        response, sw1, sw2 = self.cardservice.connection.transmit(handshake)
+
+        return response
+
     def read_card(self):
         
+        # get handshake first
+        response, sw1, sw2 = self.get_handshake()
+        responsehex = toHexString(response)
+        print(f"response: {response}, in hex: {responsehex}, status words: {sw1} {sw2}")
+        if sw1 == 144:
+            print(f"Handshake with card succesfull!")
+        else:
+            print(f"Handshake failed!")
+
         data = ""
         page = 1
         while page > 0 and page < 10:
@@ -218,15 +296,6 @@ class NFCconnection(object):
         return data
 
     def read_page(self, page):
-
-        # Establish handshake with card
-        response, sw1, sw2 = self.cardservice.connection.transmit(NFCmethods.get_handshake())
-        readdata = NFCmethods.stringParser(response)
-        # print(f"response: {response}, parsed: {readdata}, status words: {sw1} {sw2}")
-        # if sw1 == 144:
-            # print(f"Handshake with card succesfull!")
-        # else:
-            # print(f"Handshake failed!")
 
         #Read command [FF, B0, 00, page, #bytes]
         print(f"trying to retrieve page {page}")

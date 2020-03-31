@@ -14,11 +14,6 @@ if __name__ == '__main__':
     nfc_connect_any = NFCconnection.initialize_any()
     print("")
 
-    test = [85, 203, 230, 191]
-    testresult = NFCmethods.stringParser(test)
-    print(f"testing {test} resulted in {testresult}")
-    print("")
-
     readdata = nfc_connect_any.read_page(1)
     print("")
 

@@ -6,14 +6,160 @@ from smartcard.CardType import ATRCardType, AnyCardType
 from smartcard.CardRequest import CardRequest
 from smartcard.CardConnection import CardConnection
 from smartcard.util import toHexString, toBytes
+from smartcard.System import readers
+
+class NFCmethods(object):
+    def __init__(self):
+        super().__init__()
+
+    @staticmethod
+    def get_handshake():
+        #ACS ACR122U NFC Reader
+        #Suprisingly, to get data from the tag, it is a handshake protocol
+        #You send it a command to get data back
+        #This command below is based on the "API Driver Manual of ACR122U NFC Contactless Smart Card Reader"
+        
+        handshake = [0xFF, 0xCA, 0x00, 0x00, 0x00] #handshake cmd needed to initiate data transfer
+        return handshake
+
+    @staticmethod
+    def get_application_method(atrhex):
+        # also known as RID or Registered App Provider Identifier
+        application_method = "Unknown"
+
+        application_methods = {
+            "A000000306": "PC/SC Workgroup"
+        }
+
+        # 9th position, pythons first position is 0, so 9-1=8
+        application_method_string = ""
+        for i in range(7, 12):
+            atri = format(atrhex[i], '#04x')[2:]
+            atri = atri.upper()
+            if len(atri) == 1:
+                atri = "0" + atri
+            application_method_string += atri
+
+        # print(f"application_method_string: {application_method_string}")
+
+        for key in application_methods:
+            if key == application_method_string:
+                application_method = application_methods[key]
+                break
+        
+        if application_method == "Unknown":
+            application_method += f" - RID code: {application_method_string}"
+
+        return application_method
+
+    @staticmethod
+    def get_card_type(atrhex):
+
+        card_type = "Unknown"
+
+        card_types = {
+            "0001": "Mifare 1K",
+            "0002": "Mifare 4k",
+            "0003": "Mifare Ultralight",
+            "0026": "Mifare Mini",
+            "F004": "Topaz and Jewel",
+            "F011": "Felica 212k",
+            "F012": "Felica 424k",
+        }
+
+        # 14th position, pythons first position is 0, so 14-1=13
+        card_type_string = ""
+        for i in range(13, 15):
+            atri = format(atrhex[i], '#04x')[2:]
+            atri = atri.upper()
+            if len(atri) == 1:
+                atri = "0" + atri
+            card_type_string += atri
+
+        for key in card_types:
+            if key == card_type_string:
+                card_type = card_types[key]
+                break
+        
+        if card_type == "Unknown":
+            card_type += f" - card name code: {card_type_string}"
+
+        return card_type
+
+    @staticmethod
+    def stringParser(data_in):
+        """--------------String Parser--------------"""
+        # #([85, 203, 230, 191], 144, 0) -> [85, 203, 230, 191]
+        # if isinstance(data_in, tuple):
+        #     temp = data_in[0]
+        #     code = data_in[1]
+        # #[85, 203, 230, 191] -> [85, 203, 230, 191]
+        # else:
+        #     temp = data_in
+        #     code = 0
+
+        temp = data_in
+
+        # print(f"data_in = {data_in}")
+        data_out = ""
+
+        #[85, 203, 230, 191] -> bfe6cb55 (int to hex reversed)
+        for val in reversed(temp): # 85
+            # print(f"val = {val}")
+            formatval = format(val, '#04x')[2:] # bf
+            # print(f"formatted = {formatval}")
+            data_out += formatval # bfe6cb55
+            # print(f"data_out = {data_out}")
+
+        data_out = data_out.upper() #bfe6cb55 -> BFE6CB55
+        # print(f"data_out_upper = {data_out}")
+
+        return data_out
 
 class NFCconnection(object):
     def __init__(self, cardservice):
         super().__init__()
         self.cardservice = cardservice
-       
+
     @staticmethod
-    def initialize(atr, atrhex):
+    def initialize_any():
+
+        cardtype = AnyCardType() # for accepting any type of card
+        cardrequest = CardRequest( timeout=1, cardType=cardtype )
+
+        print("Waiting for card")
+        cardservice = cardrequest.waitforcard()
+        print("Card connected")
+
+        # connecting to card
+        cardservice.connection.connect()
+
+        reader = cardservice.connection.getReader()
+        print(f"connected to reader: {reader}")
+        atr = cardservice.connection.getATR()
+        print(f"connected to card (in bytes): {str(atr)}")
+        atrhex = toHexString(atr)
+        print(f"connected to card (in hex): {str(atrhex)}")
+
+        # get some info out of ATR:
+        rid = NFCmethods.get_application_method(atr)
+        print(f"application method RID: {rid}")
+        card_type = NFCmethods.get_card_type(atr)
+        print(f"cardtype: {card_type}")
+
+        response, sw1, sw2 = cardservice.connection.transmit(NFCmethods.get_handshake())
+        print(f"response: {response} status words: {sw1} {sw2}")
+        if sw1 == 144:
+            print(f"Handshake with card succesfull!")
+        else:
+            print(f"Handshake failed!")
+
+        return NFCconnection(
+            cardservice = cardservice,
+        )
+
+    @staticmethod
+    def initialize_specific(atr, atrhex):
 
         # data for the card based on the received ATR (using nfc tools)
         mycardatr = atr
@@ -34,8 +180,8 @@ class NFCconnection(object):
         print('T1  supported: ', atr.isT1Supported())
         print('T15 supported: ', atr.isT15Supported())
 
-        # cardtype = AnyCardType() # for accepting any type of card
-        cardtype = ATRCardType(mycardbytes)
+        cardtype = AnyCardType() # for accepting any type of card
+        # cardtype = ATRCardType(mycardbytes) # for accepting a specific type of card
         cardrequest = CardRequest( timeout=1, cardType=cardtype )
 
         print("Waiting for card")
@@ -55,7 +201,43 @@ class NFCconnection(object):
             cardservice = cardservice,
         )
 
-    def read_card(self, op_type):
+    def read_card(self):
+        
+        data = ""
+        page = 1
+        while page > 0 and page < 10:
+            try:
+                readdata = self.read_page(page)
+                print(f"retrieving page {page} resulted in {readdata}")
+                data += readdata
+                page += 1
+            except:
+                page = 0
+
+        print(f"data of whole card is: {data}")
+        return data
+
+    def read_page(self, page):
+
+        # Establish handshake with card
+        response, sw1, sw2 = self.cardservice.connection.transmit(NFCmethods.get_handshake())
+        readdata = NFCmethods.stringParser(response)
+        # print(f"response: {response}, parsed: {readdata}, status words: {sw1} {sw2}")
+        # if sw1 == 144:
+            # print(f"Handshake with card succesfull!")
+        # else:
+            # print(f"Handshake failed!")
+
+        #Read command [FF, B0, 00, page, #bytes]
+        print(f"trying to retrieve page {page}")
+        response, sw1, sw2 = self.cardservice.connection.transmit([0xFF, 0xB0, 0x00, page, 0x04])
+        print(f"response: {response} status words: {sw1} {sw2}")
+
+        readdata = NFCmethods.stringParser(response)
+
+        return readdata
+
+    def read_card_depreciated(self, op_type):
     
         ISOAPDU=  {
             'ERASE BINARY':'0E',

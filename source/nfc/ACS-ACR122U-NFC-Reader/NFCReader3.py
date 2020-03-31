@@ -1,17 +1,32 @@
+#################################
+# Code imported from https://github.com/StevenTso/ACS-ACR122U-NFC-Reader
+# Original code is duplicated here: source/nfc/ACS-ACR122U-NFC-Reader/NFCReader.py
+# Below code has following changes:
+# - transformed to python 3 syntax
+# - manual commands added to a method
+# --def handshake() 
+# --def getreaders())
+#################################
+
 #! /usr/bin/env python
 import re, argparse
-from smartcard.System import readers
 import datetime, sys
+
+from smartcard.System import readers
 
 #ACS ACR122U NFC Reader
 #Suprisingly, to get data from the tag, it is a handshake protocol
 #You send it a command to get data back
 #This command below is based on the "API Driver Manual of ACR122U NFC Contactless Smart Card Reader"
-COMMAND = [0xFF, 0xCA, 0x00, 0x00, 0x00] #handshake cmd needed to initiate data transfer
+def handshake():
+    COMMAND = [0xFF, 0xCA, 0x00, 0x00, 0x00] #handshake cmd needed to initiate data transfer
+    return COMMAND
 
-# get all the available readers
-r = readers()
-print (f"Available readers: {r}")
+def getreaders():
+    # get all the available readers
+    r = readers()
+    print (f"Available readers: {r}")
+    return r
 
 def stringParser(dataCurr):
 #--------------String Parser--------------#
@@ -87,6 +102,9 @@ def writeTag(page, value):
             break
 
 if __name__ == "__main__":
+    r = getreaders()
+    COMMAND = handshake()
+
     parser = argparse.ArgumentParser(description='Read / write NFC tags')
     usingreader_group = parser.add_argument_group('usingreader')
     usingreader_group.add_argument('--usingreader', nargs=1, metavar='READER_ID', help='Reader to use [0-X], default is 0')

@@ -177,6 +177,9 @@ https://khanhicetea.com/post/reading-nfc-card-id-on-ubuntu/#Source-code
 #### Using ARC connect library on top of pyscard
 https://github.com/StevenTso/ACS-ACR122U-NFC-Reader
 
+https://flomio.com/forums/topic/list-of-apdu-codes/
+https://www.eftlab.com/knowledge-base/complete-list-of-apdu-responses/
+
 
 #### sending commands with libnfc
 

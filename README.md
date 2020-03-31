@@ -41,6 +41,7 @@ sudo apt install python3-pip
 ```
 install vscode - python extension
 
+#### Git
 set git repository by entering ctrl + shift + p then "git clone"
 set git url in the pop up
 set git credentials by entering credentials in popup
@@ -49,12 +50,19 @@ set some git configurations afterwards
 ```
 git config --global user.email "39827427+Michael-Yongshi@users.noreply.github.com" 
 git config --global user.name "Michael-Yongshi"
-# git config --global submodule.recurse true
+```
+
+to initialize a submodule when done cloning this repo (do everytime you clone this repo)
+```
 git submodule init
 git submodule update
 ```
+to add a new git submodule while developing (do once)
+```
+git submodule add <git url to repo> <directory\filename> # on windows for folder structure we use a backslash
+```
 
-Remove deleted branches of local vs code instance
+Remove deleted branches on github locally after merging branches
 ```
 git fetch --prune
 ```
@@ -165,6 +173,29 @@ other info:
 https://stackoverflow.com/questions/56423316/i-can-not-understand-my-symptoms-python-is-using-pyscard
 https://github.com/GPII/linux-rfid-user-listener/blob/master/scriptor.1p
 https://khanhicetea.com/post/reading-nfc-card-id-on-ubuntu/#Source-code
+
+#### Using ARC connect library on top of pyscard
+https://github.com/StevenTso/ACS-ACR122U-NFC-Reader
+
+```
+pip3 install --user git+https://github.com/StevenTso/ACS-ACR122U-NFC-Reader
+```
+
+
+#### sending commands with libnfc
+
+#### rfidiot.py
+https://github.com/AdamLaurie/RFIDIOt/blob/master/rfidiot/RFIDIOt.py
+
+#### connecting with nfcpy, uses libnfc
+https://nfcpy.readthedocs.io/en/latest/topics/get-started.html
+
+download libusb
+https://libusb.info/
+
+```
+pip3 install --user nfcpy
+```
 
 #### encoding with ndeflib
 encoding and decoding messages from NDEF format (nfc data exchange format)

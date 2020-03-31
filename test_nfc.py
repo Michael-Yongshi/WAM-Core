@@ -41,3 +41,5 @@ if __name__ == '__main__':
         print(record)
 
     outmessage = TextRecord("Hello World")
+
+

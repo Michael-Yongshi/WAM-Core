@@ -47,8 +47,8 @@ set git credentials by entering credentials in popup
 
 set some git configurations afterwards
 ```
-git config --global user.email "" 
-git config --global user.name ""
+git config --global user.email "39827427+Michael-Yongshi@users.noreply.github.com" 
+git config --global user.name "Michael-Yongshi"
 # git config --global submodule.recurse true
 git submodule init
 git submodule update

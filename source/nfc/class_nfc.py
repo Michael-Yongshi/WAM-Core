@@ -267,19 +267,19 @@ class NFCconnection(object):
         handshake = [0xFF, 0xCA, 0x00, 0x00, 0x00] #handshake cmd needed to initiate data transfer
 
         response, sw1, sw2 = self.cardservice.connection.transmit(handshake)
+        if sw1 == 144:
+            print(f"Handshake with card succesfull!")
+        else:
+            print(f"Handshake failed!")
 
         return response
 
     def read_card(self):
         
         # get handshake first
-        response, sw1, sw2 = self.get_handshake()
+        response = self.get_handshake()
         responsehex = toHexString(response)
-        print(f"response: {response}, in hex: {responsehex}, status words: {sw1} {sw2}")
-        if sw1 == 144:
-            print(f"Handshake with card succesfull!")
-        else:
-            print(f"Handshake failed!")
+        print(f"UID of card is: {response}")
 
         data = ""
         page = 1
@@ -302,9 +302,7 @@ class NFCconnection(object):
         response, sw1, sw2 = self.cardservice.connection.transmit([0xFF, 0xB0, 0x00, page, 0x04])
         print(f"response: {response} status words: {sw1} {sw2}")
 
-        readdata = NFCmethods.stringParser(response)
-
-        return readdata
+        return response
 
     def read_card_depreciated(self, op_type):
     

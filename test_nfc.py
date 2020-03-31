@@ -17,8 +17,8 @@ if __name__ == '__main__':
     readdata = nfc_connect_any.read_page(1)
     print("")
 
-    data = nfc_connect_any.read_card
-    print("")
+    data = nfc_connect_any.read_card()
+
 
 
 

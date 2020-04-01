@@ -4,7 +4,7 @@ from ndef import (
     TextRecord,
 )
 
-from source.nfc.class_nfc import (
+from lib.python_nfc_lib.class_nfc import (
     NFCmethods,
     NFCconnection,
 )

@@ -4,24 +4,45 @@ from ndef import (
     TextRecord,
 )
 
+from smartcard.util import toHexString, toBytes
+
 from lib.python_nfc_lib.class_nfc import (
     NFCmethods,
     NFCconnection,
 )
 
+def test_formatting():
+    startbytes = [85, 203, 230, 191]
+    print(f"Converting {startbytes} to hex and back to bytes")
+    bytes_to_hex = NFCmethods.bytes_to_hex(startbytes)
+    print(f"bytes to hex: {bytes_to_hex}")
+    hex_to_bytes = NFCmethods.hex_to_bytes(bytes_to_hex)
+    print(f"hex to bytes: {hex_to_bytes}")
+    print("")
+
+    starthex = [0xBF, 0xE6, 0xCB, 0x55]
+    starthexliteral = "[0xBF, 0xE6, 0xCB, 0x55]"
+    print(f"Converting {starthexliteral} to bytes and back to hex")
+    hex_to_bytes = NFCmethods.hex_to_bytes(starthex)
+    print(f"hex to bytes: {hex_to_bytes}")
+    bytes_to_hex = NFCmethods.bytes_to_hex(hex_to_bytes)
+    print(f"bytes to hex: {bytes_to_hex}")
+    print("")
+
 if __name__ == '__main__':
 
-    nfc_connect_any = NFCconnection.initialize_any()
+    NFCmethods.set_apdu_table()
+
+    # test_formatting()
+
+    test_connect_any = NFCconnection.initialize_any()
     print("")
-
-    readdata = nfc_connect_any.read_page(1)
+    test_connect_any.get_card_uid()
     print("")
-
-    data = nfc_connect_any.read_card()
-
+    response = test_connect_any.get_card_page(1, 16)
 
 
-
+    # data = test_connect_any.get_card_data()
 
 
 
@@ -32,7 +53,11 @@ if __name__ == '__main__':
 
 
 
-        # atr = "3B:8F:80:01:80:4F:0C:A0:00:00:03:06:03:00:01:00:00:00:00:6A"
+
+
+
+
+    # atr = "3B:8F:80:01:80:4F:0C:A0:00:00:03:06:03:00:01:00:00:00:00:6A"
     # atrhex = [0x3B, 0x8F, 0x80, 0x01, 0x80, 0x4F, 0x0C, 0xA0, 0x00, 0x00, 0x03, 0x06, 0x03, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x6A]
     
     # # operations

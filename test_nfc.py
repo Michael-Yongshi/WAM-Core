@@ -40,7 +40,7 @@ if __name__ == '__main__':
     print("")
     test_connect_any.get_card_uid()
     print("")
-    response = test_connect_any.get_card_data(4)
+    response = test_connect_any.get_card_data(4) # nfc cards returns an array of hexadecimals of 4 byte size (00 - FF; 0 - 255)
     print("")
     message = NDEFinterpreter.decode_message(response)
 

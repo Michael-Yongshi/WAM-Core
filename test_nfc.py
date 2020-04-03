@@ -8,6 +8,7 @@ from smartcard.util import toHexString, toBytes
 
 from lib.python_nfc_lib.class_nfc import (
     NFCmethods,
+    NDEFinterpreter,
     NFCconnection,
 )
 
@@ -39,7 +40,9 @@ if __name__ == '__main__':
     print("")
     test_connect_any.get_card_uid()
     print("")
-    response = test_connect_any.get_card_page(1, 16)
+    response = test_connect_any.get_card_data(4)
+    print("")
+    message = NDEFinterpreter.decode_message(response)
 
 
     # data = test_connect_any.get_card_data()

@@ -1,13 +1,6 @@
-from ndef import (
-    message_decoder,
-    message_encoder,
-    TextRecord,
-)
-
-from smartcard.util import toHexString, toBytes
 
 from lib.python_nfc_lib.class_nfc import (
-    NFCmethods,
+    NFCreference,
     NDEFinterpreter,
     NFCconnection,
 )
@@ -38,15 +31,11 @@ def test_formatting():
 
 if __name__ == '__main__':
 
-    NFCmethods.set_apdu_table()
-
-    # test_formatting()
-
     test_connect_any = NFCconnection.initialize_any()
     print("")
     test_connect_any.get_card_uid()
     print("")
-    response = test_connect_any.get_card_data(4) # nfc cards return an array of hexadecimals of 4 byte size (00 - FF; 0 - 255)
+    response = test_connect_any.get_card_data() # nfc cards return an array of hexadecimals of 4 byte size (00 - FF; 0 - 255)
     print("")
     message = NDEFinterpreter.decode_message(response)
 
@@ -55,4 +44,4 @@ if __name__ == '__main__':
     for i in uid:
         uidhex += [ConvertingNumbers.int_to_hex(i)]
     
-    print(f"uidhex = {uidhex}")
+    print(f"uid = {uid}, uidhex = {uidhex}")

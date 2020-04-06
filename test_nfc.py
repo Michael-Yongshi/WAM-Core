@@ -31,12 +31,21 @@ def test_formatting():
 
 if __name__ == '__main__':
 
+    # test connection
     test_connect_any = NFCconnection.initialize_any()
     print("")
+
+    # get some info out of ATR:
+    atr_info = test_connect_any.get_atr_info()
+    print(f"ATR information is: {atr_info}")
+    print("")
+
     test_connect_any.get_card_uid()
     print("")
+
     response = test_connect_any.get_card_data() # nfc cards return an array of hexadecimals of 4 byte size (00 - FF; 0 - 255)
     print("")
+
     message = NDEFinterpreter.decode_message(response)
 
     uid = [52, 3, 120, 210, 10, 107, 116, 101]

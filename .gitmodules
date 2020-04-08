@@ -1,3 +1,6 @@
 [submodule "wam_library_nfc"]
 	path = lib/wam_library_nfc
 	url = https://github.com/Michael-Yongshi/WAM-Library-NFC.git
+[submodule "wam_library_eth"]
+	path = lib/wam_library_eth
+	url = https://github.com/Michael-Yongshi/WAM-Library-ETH.git

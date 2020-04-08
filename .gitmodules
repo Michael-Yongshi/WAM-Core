@@ -1,0 +1,3 @@
+[submodule "python_nfc_lib"]
+	path = lib/python_nfc_lib
+	url = https://github.com/Michael-Yongshi/Python_NFC_Lib.git

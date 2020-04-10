@@ -27,17 +27,17 @@ if __name__ == '__main__':
     print(f"ATR information is: {atr_info}")
     print("")
 
-    test_connect_any.identify_card()
-    print("")
+    # test_connect_any.identify_card()
+    # print("")
 
-    response = test_connect_any.read_card() # nfc cards return an array of hexadecimals of 4 byte size (00 - FF; 0 - 255)
-    print("")
+    # response = test_connect_any.read_card() # nfc cards return an array of hexadecimals of 4 byte size (00 - FF; 0 - 255)
+    # print("")
 
-    message = NDEFinterpreter.decode_message(response)
+    # message = NDEFinterpreter.decode_message(response)
 
-    uid = [52, 3, 120, 210, 10, 107, 116, 101]
-    uidhex = []
-    for i in uid:
-        uidhex += [ConvertingNumbers.int_to_hex(i)]
+    # uid = [52, 3, 120, 210, 10, 107, 116, 101]
+    # uidhex = []
+    # for i in uid:
+    #     uidhex += [ConvertingNumbers.int_to_hex(i)]
     
-    print(f"uid = {uid}, uidhex = {uidhex}")
+    # print(f"uid = {uid}, uidhex = {uidhex}")

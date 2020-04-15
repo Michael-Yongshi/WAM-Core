@@ -14,12 +14,6 @@ from lib.py_library_nfc.source.class_conversions import (
 def test_connect_any():
     connect = NFCconnection.initialize_any()
 
-    # get some info out of ATR:
-    atr_info = connect.get_atr_info()
-    print(f"ATR information is: {atr_info}")
-
-    connect.identify_card()
-
     return connect
 
 def test_connect_specific():

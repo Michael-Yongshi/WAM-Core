@@ -37,9 +37,15 @@ def test_read(connect):
 
     return response
 
+def test_write(connect, message):
+
+    result = connect.write_card(message)
+    print(result)
+
 if __name__ == '__main__':
 
     connect = test_connect_any()
     # connect = test_connect_specific()
 
     read = test_read(connect)
+    test_write(connect, "HelloWorld")

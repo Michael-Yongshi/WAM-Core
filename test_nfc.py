@@ -12,35 +12,55 @@ from lib.py_library_nfc.source.class_conversions import (
     EncodingCharacter,
 )
 
+def test_connect_any():
+    connect = NFCconnection.initialize_any()
+
+    # get some info out of ATR:
+    atr_info = connect.get_atr_info()
+    print(f"ATR information is: {atr_info}")
+
+    connect.identify_card()
+
+    response = connect.read_card() # nfc cards return an array of hexadecimals of 4 byte size (00 - FF; 0 - 255)
+
+    return response
+
+def test_connect_specific():
+
+    atr = [59, 143, 128, 1, 128, 79, 12, 160, 0, 0, 3, 6, 3, 0, 3, 0, 0, 0, 0, 104]
+    connect = NFCconnection.initialize_specific(atr)
+
+    # get some info out of ATR:
+    atr_info = connect.get_atr_info()
+    print(f"ATR information is: {atr_info}")
+
+    connect.identify_card()
+
+    response = connect.read_card()
+
+    return response
+
+def test_decode(response):
+
+    response_payload = 0
+    message = 0
+    print(message)
+
+    return message
+
+def ndef_test():
+
+    response = 0
+    response_payload = bytearray.fromhex("9101085402656e48656c6c6f5101085402656e576f726c64")
+
+    message = NDEFcoding.decode_message(response_payload)
+    print(f"returned message: {message}")
+
+    return message
 
 if __name__ == '__main__':
 
-    # test connection
-    test_connect_any = NFCconnection.initialize_any()
-    print("")
+    response = test_connect_any()
+    # response = test_connect_specific()
 
-    # test connection
-    # test_connect_any = NFCconnection.initialize_specific([59, 143, 128, 1, 128, 79, 12, 160, 0, 0, 3, 6, 3, 0, 3, 0, 0, 0, 0, 104])
-    # print("")
-
-    ################### Time-out during card request
-    # get some info out of ATR:
-    # atr_info = test_connect_any.get_atr_info()
-    # print(f"ATR information is: {atr_info}")
-    # print("")
-    ###################
-
-    # test_connect_any.identify_card()
-    # print("")
-
-    response = test_connect_any.read_card() # nfc cards return an array of hexadecimals of 4 byte size (00 - FF; 0 - 255)
-    print("")
-
-    # message = NDEFinterpreter.decode_message(response)
-
-    # uid = [52, 3, 120, 210, 10, 107, 116, 101]
-    # uidhex = []
-    # for i in uid:
-    #     uidhex += [ConvertingNumbers.int_to_hex(i)]
-    
-    # print(f"uid = {uid}, uidhex = {uidhex}")
+    message_ndef = ndef_test()

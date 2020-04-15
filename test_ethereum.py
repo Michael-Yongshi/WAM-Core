@@ -73,7 +73,7 @@ if __name__ == '__main__':
     wallet_private_key = "0xad5bb5684dbfb337040fb31d76c7b6118e0bb4fed23e940451a43746f93ebb09"
 
     # Contract functions
-    abipath = os.path.join("lib", "wam_library_eth", "source")
+    abipath = os.path.join("lib", "py_library_eth", "source")
     abi = {"path": abipath, "file": "methods_eth_abi"}
 
     # # Known Contract

@@ -1,7 +1,8 @@
 
 from lib.py_library_nfc.source.class_nfc import (
+    NDEFcoding,
     NFCreference,
-    NDEFinterpreter,
+    NFCdecoder,
     NFCconnection,
 )
 
@@ -22,16 +23,18 @@ if __name__ == '__main__':
     # test_connect_any = NFCconnection.initialize_specific([59, 143, 128, 1, 128, 79, 12, 160, 0, 0, 3, 6, 3, 0, 3, 0, 0, 0, 0, 104])
     # print("")
 
+    ################### Time-out during card request
     # get some info out of ATR:
-    atr_info = test_connect_any.get_atr_info()
-    print(f"ATR information is: {atr_info}")
-    print("")
+    # atr_info = test_connect_any.get_atr_info()
+    # print(f"ATR information is: {atr_info}")
+    # print("")
+    ###################
 
     # test_connect_any.identify_card()
     # print("")
 
-    # response = test_connect_any.read_card() # nfc cards return an array of hexadecimals of 4 byte size (00 - FF; 0 - 255)
-    # print("")
+    response = test_connect_any.read_card() # nfc cards return an array of hexadecimals of 4 byte size (00 - FF; 0 - 255)
+    print("")
 
     # message = NDEFinterpreter.decode_message(response)
 

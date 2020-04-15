@@ -1,6 +1,6 @@
 import os
 
-from lib.wam_library_eth.source.class_web3 import (
+from lib.py_library_eth.source.class_web3 import (
     Web3Connection,
 )
 

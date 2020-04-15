@@ -1,11 +1,11 @@
 
-from lib.wam_library_nfc.source.class_nfc import (
+from lib.py_library_nfc.source.class_nfc import (
     NFCreference,
     NDEFinterpreter,
     NFCconnection,
 )
 
-from lib.wam_library_nfc.source.class_conversions import (
+from lib.py_library_nfc.source.class_conversions import (
     ConvertingNumbers,
     DecodingCharacter,
     EncodingCharacter,

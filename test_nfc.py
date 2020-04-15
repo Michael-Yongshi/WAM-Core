@@ -2,7 +2,6 @@
 from lib.py_library_nfc.source.class_nfc import (
     NDEFcoding,
     NFCreference,
-    NFCdecoder,
     NFCconnection,
 )
 
@@ -21,9 +20,7 @@ def test_connect_any():
 
     connect.identify_card()
 
-    response = connect.read_card() # nfc cards return an array of hexadecimals of 4 byte size (00 - FF; 0 - 255)
-
-    return response
+    return connect
 
 def test_connect_specific():
 
@@ -40,27 +37,15 @@ def test_connect_specific():
 
     return response
 
-def test_decode(response):
+def test_read(connect):
 
-    response_payload = 0
-    message = 0
-    print(message)
+    response = connect.read_card()
 
-    return message
-
-def ndef_test():
-
-    response = 0
-    response_payload = bytearray.fromhex("9101085402656e48656c6c6f5101085402656e576f726c64")
-
-    message = NDEFcoding.decode_message(response_payload)
-    print(f"returned message: {message}")
-
-    return message
+    return response
 
 if __name__ == '__main__':
 
-    response = test_connect_any()
-    # response = test_connect_specific()
+    connect = test_connect_any()
+    # connect = test_connect_specific()
 
-    message_ndef = ndef_test()
+    read = test_read(connect)

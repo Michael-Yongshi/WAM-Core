@@ -2,7 +2,7 @@
 
 An application in order to create, update, view and save your warband details for use in the Mordheim Warhammer world. Using this application there is no need anymore for manually calculating skills or looking up your warbands details, including references to all item, spells, abilities, etc. that are ingame and the rules governing engagements.
 
-Uses WAM-Library-NFC as a submodule https://github.com/Michael-Yongshi/WAM-Library-NFC.git
+No libraries are used actively
 
 ## Roadmap
 - Adding calculation tables for use in battles, like hit tables, wound tables and injury tables

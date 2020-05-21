@@ -5,10 +5,6 @@ An application in order to create, update, view and save your warband details fo
 No libraries are used actively
 
 ## Roadmap
-- Adding calculation tables for use in battles, like hit tables, wound tables and injury tables
-- Adding your own warband rules, items, abilities, etc. for use in more custom made games.
-- Adding decorative events to warbands, characters and items, to individualize and decorate the achievements or special happening, including who you fought, who killed that huge rat ogre, etc.
-- Add Killteam rules and mechanics
 
 ## Getting Started
 

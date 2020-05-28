@@ -2,6 +2,14 @@
 
 An application in order to create, update, view and save your warband details for use in the Mordheim Warhammer world. Using this application there is no need anymore for manually calculating skills or looking up your warbands details, including references to all item, spells, abilities, etc. that are ingame and the rules governing engagements.
 
+## Implementations
+### Win10 and Ubuntu (64 bit only):
+https://github.com/Michael-Yongshi/WAM-Desktop
+
+### Android:
+https://github.com/Michael-Yongshi/WAM-Android
+
+## Submodules and libraries
 No libraries are used actively
 
 ## Roadmap

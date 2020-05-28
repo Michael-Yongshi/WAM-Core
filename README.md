@@ -6,7 +6,7 @@ An application in order to create, update, view and save your warband details fo
 ### Win10 and Ubuntu (64 bit only):
 https://github.com/Michael-Yongshi/WAM-Desktop
 
-### Android:
+### Android (In progress):
 https://github.com/Michael-Yongshi/WAM-Android
 
 ## Submodules and libraries

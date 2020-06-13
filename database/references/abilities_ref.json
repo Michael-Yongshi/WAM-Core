@@ -253,11 +253,11 @@
                     "name": "Unwieldy",
                     "description": "A model armed with this weapon may only use a shield or a buckler in his other hand. He may not use a second weapon, because it requires all his skill to wield it."
                 },
-                "Difficult to use": {
+                "Difficult to Use": {
                     "source": "Core Rules",
                     "main": "Generic Ability",
                     "category": "Item Ability",
-                    "name": "Difficult to use",
+                    "name": "Difficult to Use",
                     "description": "A model armed with this weapon may only use a shield in his other hand. He may not use a not use a second weapon or buckler, because it requires all his skill to wield it."
                 },
                 "Cumbersome": {

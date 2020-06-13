@@ -377,7 +377,7 @@
                 ],
                 "magiclist": [],
                 "price": 10,
-                "description": "The halberd\u2019s heavy blade is mounted upon a sturdy shaft of oak or steel and has a point like a spear and a cutting edge like an axe. Since it can be used to chop as well as thrust, it is an adaptable weapon, but is difficult to use inside buildings."
+                "description": "Another weapon unique to the Sisterhood is the steel whip, made from barbed steel chains."
             },
             "Great Sword": {
                 "source": "Core Rules",
@@ -684,7 +684,7 @@
                         "source": "Core Rules",
                         "main": "Generic Ability",
                         "category": "Item Ability",
-                        "name": "Venomous"
+                        "name": "Venomous / Black Lotus"
                     },
                     {
                         "source": "Core Rules",
@@ -958,7 +958,7 @@
                         "source": "Core Rules",
                         "main": "Generic Ability",
                         "category": "Item Ability",
-                        "name": "Poison"
+                        "name": "Poisonous"
                     },
                     {
                         "source": "Core Rules",
@@ -1104,14 +1104,14 @@
                     "movement": 0,
                     "weapon": 0,
                     "ballistic": 0,
-                    "strength": 4,
+                    "strength": 0,
                     "toughness": 0,
                     "wounds": 0,
                     "initiative": 0,
                     "actions": 0,
                     "leadership": 0,
                     "armoursave": 0,
-                    "impact": 0
+                    "impact": 4
                 },
                 "abilitylist": [
                     {
@@ -1152,14 +1152,14 @@
                     "movement": 0,
                     "weapon": 0,
                     "ballistic": 0,
-                    "strength": 4,
+                    "strength": 0,
                     "toughness": 0,
                     "wounds": 0,
                     "initiative": 0,
                     "actions": 0,
                     "leadership": 0,
                     "armoursave": 0,
-                    "impact": 0
+                    "impact": 4
                 },
                 "abilitylist": [
                     {
@@ -1200,14 +1200,14 @@
                     "movement": 0,
                     "weapon": 0,
                     "ballistic": 0,
-                    "strength": 3,
+                    "strength": 0,
                     "toughness": 0,
                     "wounds": 0,
                     "initiative": 0,
                     "actions": 0,
                     "leadership": 0,
                     "armoursave": 0,
-                    "impact": 0
+                    "impact": 3
                 },
                 "abilitylist": [
                     {
@@ -1230,14 +1230,14 @@
                     "movement": 0,
                     "weapon": 0,
                     "ballistic": 0,
-                    "strength": 4,
+                    "strength": 0,
                     "toughness": 0,
                     "wounds": 0,
                     "initiative": 0,
                     "actions": 0,
                     "leadership": 0,
                     "armoursave": 0,
-                    "impact": 0
+                    "impact": 4
                 },
                 "abilitylist": [
                     {
@@ -1284,14 +1284,14 @@
                     "movement": 0,
                     "weapon": 0,
                     "ballistic": 0,
-                    "strength": 4,
+                    "strength": 0,
                     "toughness": 0,
                     "wounds": 0,
                     "initiative": 0,
                     "actions": 0,
                     "leadership": 0,
                     "armoursave": 0,
-                    "impact": 0
+                    "impact": 4
                 },
                 "abilitylist": [
                     {
@@ -1332,14 +1332,14 @@
                     "movement": 0,
                     "weapon": 0,
                     "ballistic": 0,
-                    "strength": 4,
+                    "strength": 0,
                     "toughness": 0,
                     "wounds": 0,
                     "initiative": 0,
                     "actions": 0,
                     "leadership": 0,
                     "armoursave": 0,
-                    "impact": 0
+                    "impact": 4
                 },
                 "abilitylist": [
                     {
@@ -1380,14 +1380,14 @@
                     "movement": 0,
                     "weapon": 0,
                     "ballistic": 0,
-                    "strength": 5,
+                    "strength": 0,
                     "toughness": 0,
                     "wounds": 0,
                     "initiative": 0,
                     "actions": 0,
                     "leadership": 0,
                     "armoursave": 0,
-                    "impact": 0
+                    "impact": 5
                 },
                 "abilitylist": [
                     {
@@ -1428,14 +1428,14 @@
                     "movement": 0,
                     "weapon": 0,
                     "ballistic": 0,
-                    "strength": 5,
+                    "strength": 0,
                     "toughness": 0,
                     "wounds": 0,
                     "initiative": 0,
                     "actions": 0,
                     "leadership": 0,
                     "armoursave": 0,
-                    "impact": 0
+                    "impact": 5
                 },
                 "abilitylist": [
                     {
@@ -1470,14 +1470,14 @@
                     "movement": 0,
                     "weapon": 0,
                     "ballistic": 0,
-                    "strength": 4,
+                    "strength": 0,
                     "toughness": 0,
                     "wounds": 0,
                     "initiative": 0,
                     "actions": 0,
                     "leadership": 0,
                     "armoursave": 0,
-                    "impact": 0
+                    "impact": 4
                 },
                 "abilitylist": [
                     {

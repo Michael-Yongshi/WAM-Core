@@ -195,14 +195,20 @@ class Item(object):
 
     @staticmethod
     def create_item(source, category, subcategory):
-        # open reference data json file
-        datadict = load_reference("items")
+        try:
 
-        # get specific data
-        itemdict = datadict[category][source][subcategory]
+            # open reference data json file
+            datadict = load_reference("items")
 
-        # create object based on the reference data
-        dataobject = Item.from_refdict(datadict = itemdict)
+            # get specific data
+            itemdict = datadict[category][source][subcategory]
+
+            # create object based on the reference data
+            dataobject = Item.from_refdict(datadict = itemdict)
+
+        except:
+            dataobject = None
+            print(f"Couldn't add item")
 
         return dataobject
 

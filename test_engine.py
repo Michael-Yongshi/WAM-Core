@@ -4,7 +4,6 @@ from source.methods_engine import (
     save_warband,
     load_warband,
     show_warbands,
-    load_reference,
     )
 
 from source.class_hierarchy import (

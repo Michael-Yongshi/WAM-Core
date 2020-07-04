@@ -358,6 +358,20 @@
                     "name": "Venomous / Black Lotus",
                     "description": "The venom of this weapon will enter the blood of the victim and ravage his organs and muscles. This weapon counts as being permanently coated in Black Lotus (see the Equipment section). No additional poison may be applied to this weapon."
                 },
+                "Dark Venom": {
+                    "source": "Core Rules",
+                    "main": "Generic Ability",
+                    "category": "Item Ability",
+                    "name": "Dark Venom",
+                    "description": "Any hit caused by a weapon coated with Dark Venom counts as having +1 Strength, so, for example, if a warrior with Strength 3 wielding a poisoned sword hits an opponent, he will cause a Strength 4 hit instead. Armor saving throws are modified to take into account the increased Strength of the attack."
+                },
+                "Crimson Shade": {
+                    "source": "Core Rules",
+                    "main": "Generic Ability",
+                    "category": "Item Ability",
+                    "name": "Crimson Shade",
+                    "description": "A model using Crimson Shade has his Initiative increased by +D3 points, and Movement and Strength by +1 (this effect lasts for one game). Crimson Shade has no effect on Undead such as Vampires and Zombies, or the Possessed."
+                },
                 "Stationary Fire": {
                     "source": "Core Rules",
                     "main": "Generic Ability",

@@ -53,13 +53,13 @@ def test_all_items():
             for subcategory in datadict[category][source]:
                 # get item data
                 itemdict = datadict[category][source][subcategory]
-
+                print(itemdict["subcategory"])
                 # create python object
                 dataobject = Item.from_refdict(datadict = itemdict)
                 hero1.itemlist = [
                     dataobject
                     ]
-                print(hero1.itemlist[0].subcategory)
+                
 
 if __name__ == "__main__":
     # test_all_warbands()

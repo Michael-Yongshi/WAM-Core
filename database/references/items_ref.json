@@ -793,7 +793,7 @@
                         "source": "Core Rules",
                         "main": "Generic Ability",
                         "category": "Item Ability",
-                        "name": "Stationary Fire x2"
+                        "name": "Stationary Fire X2"
                     }
                 ],
                 "magiclist": [],
@@ -1831,7 +1831,7 @@
                         "source": "Core Rules",
                         "main": "Generic Ability",
                         "category": "Item Ability",
-                        "name": "Black Lotus",
+                        "name": "Venomous / Black Lotus",
                         "description": "A weapon coated with the sap of the Black Lotus will wound its target automatically if you roll a 6 to hit. Note that you can still roll a dice for every wound inflicted in this way. If you roll a 6, you will inflict a critical hit with that roll. If you do not roll a 6, you will cause a normal wound. Take armor saves as normal."
                     }
                 ],
@@ -1848,7 +1848,7 @@
                     "movement": 0,
                     "weapon": 0,
                     "ballistic": 0,
-                    "strength": 0,
+                    "strength": 1,
                     "toughness": 0,
                     "wounds": 0,
                     "initiative": 0,
@@ -1876,10 +1876,10 @@
                 "subcategory": "Crimson Shade",
                 "distance": 0,
                 "skill": {
-                    "movement": 0,
+                    "movement": 1,
                     "weapon": 0,
                     "ballistic": 0,
-                    "strength": 0,
+                    "strength": 1,
                     "toughness": 0,
                     "wounds": 0,
                     "initiative": 0,
@@ -1901,7 +1901,7 @@
                         "main": "Generic Ability",
                         "category": "Item Ability",
                         "name": "Side Effects",
-                        "description": "After the battle, roll 2D6. On a roll of 2-3, the model becomes addicted and you must try to buy him a new batch of Crimson Shade before every battle from now on. If you fail to buy any, he will leave your warband. On a roll of 12 the model\u2019s Initiative is increased permanently by +1."
+                        "description": "After the battle, roll 2D6. On a roll of 2-3, the model becomes addicted and you must try to buy him a new batch of Crimson Shade before every battle from now on. If you fail to buy any, he will leave your warband. On a roll of 12 the model's Initiative is increased permanently by +1."
                     }
                 ],
                 "magiclist": [],

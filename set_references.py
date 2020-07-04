@@ -3305,7 +3305,7 @@ if __name__ == "__main__":
         name= "The Anger of the Earth"
     )
 
-    # save hero experience table
+    # save experience table
 
     expdict = {
         "Hero": {

@@ -765,6 +765,10 @@ class Character(object):
         
         return datastring
 
+    def get_item_costs(self):
+        for item in self.itemlist:
+            charprice += item.price
+            
     def get_price(self):
         charprice = self.price
         for item in self.itemlist:

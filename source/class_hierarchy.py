@@ -270,6 +270,11 @@ class Squad(object):
                 
         return dataobject
 
+    def add_new_henchman(self):
+        newhenchman = copy.deepcopy(self.henchmanlist[0])
+        newhenchman.name = self.name + str(self.henchmanlist.__len__() + 1)
+        self.henchmanlist.append(newhenchman)
+
     def change_henchman_count(self, deltasize):
         if deltasize > 0:
             i = self.get_totalhenchman()

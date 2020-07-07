@@ -348,7 +348,7 @@ class Squad(object):
         return squadprice
 
 class Character(object):
-    def __init__(self, name, race, source, warband, category, ishero, skill, abilitylist=[], magiclist=[], itemlist=[], eventlist=[], experience=0, price=0, maxcount=0, description=None):
+    def __init__(self, name, race, source, warband, category, ishero, skill, abilitylist=[], magiclist=[], itemlist=[], eventlist=[], experience=0, price=0, maxcount=0, description=None, unique_id=None):
         self.name = name
         self.race = race
         self.source = source
@@ -364,6 +364,7 @@ class Character(object):
         self.price = price
         self.maxcount = maxcount
         self.description = description
+        self.unique_id = unique_id
     
     def to_dict(self):  
 
@@ -403,7 +404,8 @@ class Character(object):
             'experience': self.experience,
             'price': self.price,
             'maxcount': self.maxcount,
-            'description': self.description
+            'description': self.description,
+            'unique_id': self.unique_id,
         }
         return datadict
 
@@ -446,9 +448,15 @@ class Character(object):
             experience = datadict["experience"],
             price = datadict["price"],
             maxcount = datadict["maxcount"],
-            description = datadict["description"]        
+            description = datadict["description"],
             )
         
+        # optional fields (later additions)
+        try:
+            dataobject.unique_id = datadict["unique_id"]
+        except:
+            dataobject.unique_id = None
+
         return dataobject
     
     @staticmethod
@@ -504,9 +512,15 @@ class Character(object):
             experience = datadict["experience"],
             price = datadict["price"],
             maxcount = datadict["maxcount"],
-            description = datadict["description"]        
+            description = datadict["description"],    
             )
         
+        # optional fields (later additions)
+        try:
+            dataobject.unique_id = datadict["unique_id"]
+        except:
+            dataobject.unique_id = None
+
         return dataobject
 
     @staticmethod

@@ -39,12 +39,13 @@ def load_json(path, filename):
 
     # check if directory already exists, if not create it
     if not os.path.exists(path):
-        os.makedirs(path)
+        print(f"cant find path {path}")
 
-    complete_path = os.path.join(path, filename + ".json")
+    else:
+        complete_path = os.path.join(path, filename + ".json")
 
-    # open save file and return the datadict
-    with open(complete_path, 'r') as infile:
-        datadict = json.load(infile)
+        # open save file and return the datadict
+        with open(complete_path, 'r') as infile:
+            datadict = json.load(infile)
     
     return datadict

@@ -1,0 +1,33 @@
+{
+    "Hero": {
+        "Advance 0": 0,
+        "Advance 1": 2,
+        "Advance 2": 4,
+        "Advance 3": 6,
+        "Advance 4": 8,
+        "Advance 5": 11,
+        "Advance 6": 14,
+        "Advance 7": 17,
+        "Advance 8": 20,
+        "Advance 9": 24,
+        "Advance 10": 28,
+        "Advance 11": 32,
+        "Advance 12": 36,
+        "Advance 13": 41,
+        "Advance 14": 46,
+        "Advance 15": 51,
+        "Advance 16": 57,
+        "Advance 17": 63,
+        "Advance 18": 69,
+        "Advance 19": 76,
+        "Advance 20": 83,
+        "Advance 21": 90
+    },
+    "Squad": {
+        "Advance 0": 0,
+        "Advance 1": 2,
+        "Advance 2": 5,
+        "Advance 3": 9,
+        "Advance 4": 14
+    }
+}

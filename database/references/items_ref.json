@@ -1,0 +1,2458 @@
+{
+    "Melee Weapon": {
+        "Core Rules": {
+            "Starting Dagger": {
+                "source": "Core Rules",
+                "category": "Melee Weapon",
+                "subcategory": "Starting Dagger",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Cloth is Armour"
+                    }
+                ],
+                "magiclist": [],
+                "price": 0,
+                "description": "Daggers and knives are extremely common, and men are allowed to carry them in enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has died with a dagger in his back."
+            },
+            "Extra Dagger": {
+                "source": "Core Rules",
+                "category": "Melee Weapon",
+                "subcategory": "Extra Dagger",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Cloth is Armour"
+                    }
+                ],
+                "magiclist": [],
+                "price": 2,
+                "description": "A extra dagger. For units that want to dual wield daggers."
+            },
+            "Club": {
+                "source": "Core Rules",
+                "category": "Melee Weapon",
+                "subcategory": "Club",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Concussion"
+                    }
+                ],
+                "magiclist": [],
+                "price": 3,
+                "description": "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious."
+            },
+            "Mace": {
+                "source": "Core Rules",
+                "category": "Melee Weapon",
+                "subcategory": "Mace",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Concussion"
+                    }
+                ],
+                "magiclist": [],
+                "price": 3,
+                "description": "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious."
+            },
+            "Hammer": {
+                "source": "Core Rules",
+                "category": "Melee Weapon",
+                "subcategory": "Hammer",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Concussion"
+                    }
+                ],
+                "magiclist": [],
+                "price": 3,
+                "description": "Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range from primitive wooden clubs to elaborately forged Dwarf hammers made from the finest steel. A blow from a mace can easily crush a skull or knock a man unconscious."
+            },
+            "Axe": {
+                "source": "Core Rules",
+                "category": "Melee Weapon",
+                "subcategory": "Axe",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Cutting Edge"
+                    }
+                ],
+                "magiclist": [],
+                "price": 5,
+                "description": "The axe is the traditional weapon of Empire woodsmen, and is also used as a weapon in poorer rural areas. Axes have a heavy blade and, if swung by a strong man, can cause a lot of damage. The blade of an axe can easily cut through armor, though it requires considerable strength from the wielder. Of all the warriors in the Old World, Dwarfs are the most adept at making axes. Their axes are invaluable to the warriors of the Old World and are some of the most sought after weapons."
+            },
+            "Sword": {
+                "source": "Core Rules",
+                "category": "Melee Weapon",
+                "subcategory": "Sword",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Parry"
+                    }
+                ],
+                "magiclist": [],
+                "price": 10,
+                "description": "The sword is often referred to as the \u2018king of weapons\u2019. The most common sword available, the broadsword of the Empire, is a masterpiece by the standards of any smith: four full feet of gleaming steel, double-edged and razor-sharp. Swords are much more effective weapons than crude clubs and axes, though learning to use a sword is a long and difficult process. It takes years to truly master this weapon \u2013 most warriors in Mordheim die long before they get this far!"
+            },
+            "Spear": {
+                "source": "Core Rules",
+                "category": "Melee Weapon",
+                "subcategory": "Spear",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "First Strike"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Unwieldy"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Cavalry Charge Bonus"
+                    }
+                ],
+                "magiclist": [],
+                "price": 10,
+                "description": "Spears range from sharpened sticks used by Goblins to the impressive cavalry spears typical of the Elves."
+            },
+            "Pike": {
+                "source": "Core Rules",
+                "category": "Melee Weapon",
+                "subcategory": "Pike",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 1,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Two Handed"
+                    }
+                ],
+                "magiclist": [],
+                "price": 10,
+                "description": "A pike is generally a spear when it is (or must be) wielded with two hands in combat, giving it both better control in combat as extra trusting power."
+            },
+            "Polearm": {
+                "source": "Core Rules",
+                "category": "Melee Weapon",
+                "subcategory": "Polearm",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 1,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Two Handed"
+                    }
+                ],
+                "magiclist": [],
+                "price": 10,
+                "description": "A pole weapon or pole arm is a close combat weapon in which the main fighting part of the weapon is fitted to the end of a long shaft, typically of wood. These are typically used in two hands in order to create extra leverage in a striking motion."
+            },
+            "Halberd": {
+                "source": "Core Rules",
+                "category": "Melee Weapon",
+                "subcategory": "Halberd",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 1,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Two Handed"
+                    }
+                ],
+                "magiclist": [],
+                "price": 10,
+                "description": "The halberds heavy blade is mounted upon a sturdy shaft of oak or steel and has a point like a spear and a cutting edge like an axe. Since it can be used to chop as well as thrust, it is an adaptable weapon, but is difficult to use inside buildings."
+            },
+            "Steel Whip": {
+                "source": "Core Rules",
+                "category": "Melee Weapon",
+                "subcategory": "Steel Whip",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Cannot be Parried"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Whipcrack"
+                    }
+                ],
+                "magiclist": [],
+                "price": 10,
+                "description": "Another weapon unique to the Sisterhood is the steel whip, made from barbed steel chains."
+            },
+            "Great Sword": {
+                "source": "Core Rules",
+                "category": "Melee Weapon",
+                "subcategory": "Great Sword",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 2,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Two Handed"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Last Strike"
+                    }
+                ],
+                "magiclist": [],
+                "price": 15,
+                "description": "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively."
+            },
+            "Great Axe": {
+                "source": "Core Rules",
+                "category": "Melee Weapon",
+                "subcategory": "Great Axe",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 2,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Two Handed"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Last Strike"
+                    }
+                ],
+                "magiclist": [],
+                "price": 15,
+                "description": "A blow from a double-handed axe or sword can cut a foe in half and break armor apart. It takes a long time to learn how to use these weapons and even then only extremely strong men are able to wield them effectively."
+            },
+            "Flail": {
+                "source": "Core Rules",
+                "category": "Melee Weapon",
+                "subcategory": "Flail",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 2,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Two Handed"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Heavy"
+                    }
+                ],
+                "magiclist": [],
+                "price": 15,
+                "description": "The flail is a heavy weapon wielded with both hands. It normally consists of heavy weights, often spiked, attached to a pole or handle by means of heavy chains. Flails drain the user\u2019s stamina quickly, but are awesomely destructive in the hands of a skilled (or unhinged) warrior."
+            },
+            "Morning Star": {
+                "source": "Core Rules",
+                "category": "Melee Weapon",
+                "subcategory": "Morning Star",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 1,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Difficult to Use"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Heavy"
+                    }
+                ],
+                "magiclist": [],
+                "price": 15,
+                "description": "The flail is a heavy weapon wielded with both hands. It normally consists of heavy weights, often spiked, attached to a pole or handle by means of heavy chains. Flails drain the user\u2019s stamina quickly, but are awesomely destructive in the hands of a skilled (or unhinged) warrior."
+            },
+            "Sigmarite Warhammer": {
+                "source": "Core Rules",
+                "category": "Melee Weapon",
+                "subcategory": "Sigmarite Warhammer",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 1,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Concussion"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Holy Weapon"
+                    }
+                ],
+                "magiclist": [],
+                "price": 15,
+                "description": "One of the traditional weapons of the Sisterhood, the Warhammer echoes Ghal-Maraz, the great hammer of Sigmar himself. Only the matriarch herself and sister superiors may carry two Sigmarite Warhammers."
+            },
+            "Fighting Claws": {
+                "source": "Core Rules",
+                "category": "Melee Weapon",
+                "subcategory": "Fighting Claws",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Pair"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Climb"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Parry"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Parry"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Cumbersome"
+                    }
+                ],
+                "magiclist": [],
+                "price": 35,
+                "description": "The martial arts practiced by Clan Eshin employ many unusual weapons. The most famous of these are the Eshin Fighting Claws: sharp metal blades attached to the paws of a Skaven warrior. It takes a real expert to use them effectively, but an adept of Clan Eshin is a fearsome opponent when armed this way."
+            },
+            "Lance": {
+                "source": "Core Rules",
+                "category": "Melee Weapon",
+                "subcategory": "Lance",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 2,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Cavalry Weapon"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Cavalry Charge Bonus"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Cavalry Charge Bonus"
+                    }
+                ],
+                "magiclist": [],
+                "price": 40,
+                "description": "Lances are long, heavy spears used by mounted shock troops to rip through armor and fling their foes to the ground. They are the chosen weapons of Knights Templar and other wealthy warriors. To use a lance requires great skill and strength, and only the richest warriors ride the heavy warhorses needed to wield these mighty weapons effectively."
+            },
+            "Weeping Blades": {
+                "source": "Core Rules",
+                "category": "Melee Weapon",
+                "subcategory": "Weeping Blades",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Pair"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Venomous / Black Lotus"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Parry"
+                    }
+                ],
+                "magiclist": [],
+                "price": 50,
+                "description": "The adepts of Clan Eshin use weapons called Weeping Blades, murderous swords constructed with a small amount of warpstone in their structure. A Weeping Blade constantly sweats a deadly corrosive venom."
+            }
+        },
+        "Broheim": {
+            "Mage Wand": {
+                "source": "Broheim",
+                "category": "Melee Weapon",
+                "subcategory": "Mage Wand",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 1,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Concussion",
+                        "description": "Hammers and other bludgeoning weapons are excellent to use for striking your enemy senseless. When using a hammer, club or mace, a roll of 2-4 is treated as stunned when rolling to see the extent of a model\u2019s injuries."
+                    }
+                ],
+                "magiclist": [],
+                "price": 20,
+                "description": "A Mage Staff used one handed."
+            },
+            "Mage Quarter Staff": {
+                "source": "Broheim",
+                "category": "Melee Weapon",
+                "subcategory": "Mage Quarter Staff",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 1,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Concussion"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Two Handed"
+                    }
+                ],
+                "magiclist": [],
+                "price": 20,
+                "description": "A Mage Staff used two handed."
+            }
+        }
+    },  
+    "Missile Weapon": {
+        "Core Rules": {
+            "Sling": {
+                "source": "Core Rules",
+                "category": "Missile Weapon",
+                "subcategory": "Sling",
+                "distance": 18,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 3
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Stationary Fire X2"
+                    }
+                ],
+                "magiclist": [],
+                "price": 2,
+                "description": "Slings are rarely used, mainly because they are no more powerful than bows and have a shorter range. A sling is little more than a looped strip of cloth or leather into which a stone is placed. The sling is whirled about the slinger\u2019s head and the sling stone is then released towards the target. While this weapon is looked down upon by most archers, a skilled slinger can slay a man from a considerable distance, and the ammunition is easy to find: rocks are everywhere and free!"
+            },
+            "Short Bow": {
+                "source": "Core Rules",
+                "category": "Missile Weapon",
+                "subcategory": "Short Bow",
+                "distance": 16,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 3
+                },
+                "abilitylist": [],
+                "magiclist": [],
+                "price": 5,
+                "description": "Short bows are small, short-ranged bows that are cheap and require little strength to use. Some cavalry carry a shortened bow which is easier to shoot from horseback than a larger bow. Halflings also use short bows, as they lack the strength and height required to use a long bow."
+            },
+            "Bow": {
+                "source": "Core Rules",
+                "category": "Missile Weapon",
+                "subcategory": "Bow",
+                "distance": 24,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 3
+                },
+                "abilitylist": [],
+                "magiclist": [],
+                "price": 10,
+                "description": "The bow is carried by most races and used extensively in warfare. It is a compact yet powerful weapon, that is cheap to make and easy to maintain."
+            },
+            "Long Bow": {
+                "source": "Core Rules",
+                "category": "Missile Weapon",
+                "subcategory": "Long Bow",
+                "distance": 30,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 3
+                },
+                "abilitylist": [],
+                "magiclist": [],
+                "price": 15,
+                "description": "A long bow is made of alternating layers of either yew or elm. A skilled archer can hit a chosen leaf on a tree from three hundred paces with this weapon. The long bow is favored by experienced archers due to its great reach and accuracy."
+            },
+            "Trowing Knives": {
+                "source": "Core Rules",
+                "category": "Missile Weapon",
+                "subcategory": "Trowing Knives",
+                "distance": 6,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Thrown Weapon"
+                    }
+                ],
+                "magiclist": [],
+                "price": 15,
+                "description": "Throwing stars are used mainly by the assassins of the sinister House of Shadows, or by street thugs who specialize in ambushing the unwary. A perfectly balanced knife thrown from behind has ended the life of many a noble and merchant in Mordheim. Throwing knives are not suitable for close combat, as their balance makes them unwieldy in close quarters."
+            },
+            "Trowing Stars": {
+                "source": "Core Rules",
+                "category": "Missile Weapon",
+                "subcategory": "Trowing Stars",
+                "distance": 6,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Thrown Weapon"
+                    }
+                ],
+                "magiclist": [],
+                "price": 15,
+                "description": "Throwing stars are used mainly by the assassins of the sinister House of Shadows, or by street thugs who specialize in ambushing the unwary. A perfectly balanced knife thrown from behind has ended the life of many a noble and merchant in Mordheim. Throwing knives are not suitable for close combat, as their balance makes them unwieldy in close quarters."
+            },
+            "Blowpipe": {
+                "source": "Core Rules",
+                "category": "Missile Weapon",
+                "subcategory": "Blowpipe",
+                "distance": 8,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 1
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Cloth is Armour"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Poisonous"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Stealthy"
+                    }
+                ],
+                "magiclist": [],
+                "price": 25,
+                "description": "The blowpipe is a short hollow tube which can be used to shoot poisoned darts. While the darts by themselves are too small to cause significant damage, the poison used by the Skaven can cause searing agony and eventual death. The other advantage of a blowpipe is that it is silent, and a well-hidden shooter can fire the darts undetected."
+            },
+            "Crossbow": {
+                "source": "Core Rules",
+                "category": "Missile Weapon",
+                "subcategory": "Crossbow",
+                "distance": 30,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 4
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Stationary Fire"
+                    }
+                ],
+                "magiclist": [],
+                "price": 25,
+                "description": "A crossbow consists of a short, strong bow-stave mounted on a wooden or steel stock. The crossbows of the Empire are made of steel and often include a winding mechanism to draw back the string. It takes a long time to prepare a crossbow, but a bolt fired from one has a tremendous range and can penetrate armor easily. Crossbows take much longer than other bows to make, so they are expensive and relatively rare weapons. Still, they are the preferred weapon of many in Mordheim because of their power and long range."
+            },
+            "Elf Bow": {
+                "source": "Core Rules",
+                "category": "Missile Weapon",
+                "subcategory": "Elf Bow",
+                "distance": 36,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 3
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Armour Piercing"
+                    }
+                ],
+                "magiclist": [],
+                "price": 35,
+                "description": "Elven bows are the finest missile weapons of their kind. Constructed from Ithilmar or wood from the Elf forests, with strings woven from the hair of Elf maidens, Elven bows are far superior to any missile weapons made by other races. In the hands of an Elven archer, the Elf bow is a truly potent weapon, its long range and penetrating power making it far superior to any bow made by humans."
+            },
+            "Crossbow Pistol": {
+                "source": "Core Rules",
+                "category": "Missile Weapon",
+                "subcategory": "Crossbow Pistol",
+                "distance": 10,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 4
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Fire before Melee"
+                    }
+                ],
+                "magiclist": [],
+                "price": 35,
+                "description": "Crossbow pistols are masterpieces made by expert weapon-smiths. They are miniature crossbows with all the power and accuracy of the real thing. As these weapons may be easily concealed, they are the favored weapon of assassins."
+            },
+            "Repeater Crossbow": {
+                "source": "Core Rules",
+                "category": "Missile Weapon",
+                "subcategory": "Repeater Crossbow",
+                "distance": 24,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 3
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Fire Twice"
+                    }
+                ],
+                "magiclist": [],
+                "price": 40,
+                "description": "Repeater crossbows are extremely complex devices, expensive to acquire and difficult to make. While this makes them rare, they certainly have their uses: they can rain a deadly hail of bolts on enemies, and a warrior using one may move quite fast and still fire his weapon."
+            }
+        }
+    },
+    "Blackpowder Weapon": {
+        "Core Rules": {
+            "Pistol": {
+                "source": "Core Rules",
+                "category": "Blackpowder Weapon",
+                "subcategory": "Pistol",
+                "distance": 6,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 4
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Prepare Shot"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Armour Piercing"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Armour Piercing"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Fire during Melee"
+                    }
+                ],
+                "magiclist": [],
+                "price": 15,
+                "description": "A pistol is a small, simple Blackpowder weapon fired by a spring mechanism. Most pistols are expensive, unreliable, and poorly constructed."
+            },
+            "Pistol Brace": {
+                "source": "Core Rules",
+                "category": "Blackpowder Weapon",
+                "subcategory": "Pistol Brace",
+                "distance": 6,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 4
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Armour Piercing"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Armour Piercing"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Fire during Melee"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Fire during Melee"
+                    }
+                ],
+                "magiclist": [],
+                "price": 30,
+                "description": "Set of two pistols. A pistol is a small, simple Blackpowder weapon fired by a spring mechanism. Most pistols are expensive, unreliable, and poorly constructed."
+            },
+            "Blunderbuss": {
+                "source": "Core Rules",
+                "category": "Blackpowder Weapon",
+                "subcategory": "Blunderbuss",
+                "distance": 16,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 3
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Blunderbuss Shot"
+                    }
+                ],
+                "magiclist": [],
+                "price": 30,
+                "description": "A blunderbuss is a primitive Blackpowder weapon, which fires a hail of lead balls, rusty bolts, bent nails, and other assorted scrap metal. It is a powerful, if erratic, weapon and takes such a long time to load that most warriors discard it after the first shot."
+            },
+            "Dueling Pistol": {
+                "source": "Core Rules",
+                "category": "Blackpowder Weapon",
+                "subcategory": "Dueling Pistol",
+                "distance": 10,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 4
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Accurate"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Prepare Shot"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Armour Piercing"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Armour Piercing"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Fire during Melee"
+                    }
+                ],
+                "magiclist": [],
+                "price": 30,
+                "description": "A dueling pistol is a work of art, and a gunsmith labors long and hard to produce a single example. They are often carried by Imperial nobles to solve disputes over love and honor, and many a noble has died at dawn in a duel over some grievance. Dueling pistols are prohibitively expensive weapons and common warriors rarely have them. Even if they do manage to steal or buy one, the ammunition is prohibitively expensive. Some of the wealthiest warriors in Mordheim carry dueling pistols as status symbols, commanding great respect, admiration and envy."
+            },
+            "Dueling Pistol Brace": {
+                "source": "Core Rules",
+                "category": "Blackpowder Weapon",
+                "subcategory": "Dueling Pistol Brace",
+                "distance": 10,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 4
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Armour Piercing"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Armour Piercing"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Fire during Melee"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Fire during Melee"
+                    }
+                ],
+                "magiclist": [],
+                "price": 30,
+                "description": "A set of two dueling pistols. A dueling pistol is a work of art, and a gunsmith labors long and hard to produce a single example. They are often carried by Imperial nobles to solve disputes over love and honor, and many a noble has died at dawn in a duel over some grievance. Dueling pistols are prohibitively expensive weapons and common warriors rarely have them. Even if they do manage to steal or buy one, the ammunition is prohibitively expensive. Some of the wealthiest warriors in Mordheim carry dueling pistols as status symbols, commanding great respect, admiration and envy."
+            },
+            "Handgun": {
+                "source": "Core Rules",
+                "category": "Blackpowder Weapon",
+                "subcategory": "Handgun",
+                "distance": 24,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 4
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Stationary Fire"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Prepare Shot"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Armour Piercing"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Armour Piercing"
+                    }
+                ],
+                "magiclist": [],
+                "price": 35,
+                "description": "A handgun is a simple firearm. The quality of construction varies ranging from the crude wooden \u2018hakbuts\u2019 of the artillery school of Nuln, to the more sophisticated Dwarf firearms that have levers and springs which hold the burning match, and triggers which release the firing mechanism and fire the gun. Handguns are not terribly reliable weapons: the gun barrel occasionally tends to explode violently or the powder fails to ignite. But the weapon has a great range and tremendous penetrating power, making a mockery of even the thickest armor. In Mordheim, handguns are rare and expensive, but a warband which can boast such a weapon will command respect from all its rivals."
+            },
+            "Warplock Pistol": {
+                "source": "Core Rules",
+                "category": "Blackpowder Weapon",
+                "subcategory": "Warplock Pistol",
+                "distance": 8,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 5
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Prepare Shot"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Armour Piercing"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Armour Piercing"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Armour Piercing"
+                    }
+                ],
+                "magiclist": [],
+                "price": 35,
+                "description": "Warplock pistols are terrifying weapons, testimony to the mad genius of Clan Skryre engineers. Warplock pistols shoot ammunition made of magically treated warpstone and wounds caused by Warplock pistols are horrible to behold and often cause infections."
+            },
+            "Warplock Pistol Brace": {
+                "source": "Core Rules",
+                "category": "Blackpowder Weapon",
+                "subcategory": "Warplock Pistol Brace",
+                "distance": 8,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 5
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Armour Piercing"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Armour Piercing"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Armour Piercing"
+                    }
+                ],
+                "magiclist": [],
+                "price": 35,
+                "description": "A set of two warplock pistols. Warplock pistols are terrifying weapons, testimony to the mad genius of Clan Skryre engineers. Warplock pistols shoot ammunition made of magically treated warpstone and wounds caused by Warplock pistols are horrible to behold and often cause infections."
+            },
+            "Hochland Long Hunting Rifle": {
+                "source": "Core Rules",
+                "category": "Blackpowder Weapon",
+                "subcategory": "Hochland Long Hunting Rifle",
+                "distance": 48,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 4
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Stationary Fire"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Prepare Shot"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Pick Target"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Armour Piercing"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Armour Piercing"
+                    }
+                ],
+                "magiclist": [],
+                "price": 200,
+                "description": "Hochland is a province famed for its hunters, and the preferred weapon of its nobility when they go hunting is a long-ranged rifle. They are extremely rare and precious weapons, and only the most experienced weapon smiths are capable of manufacturing them."
+            }
+        }
+    },
+    "Armour & Protection": {
+        "Core Rules": {
+            "Light Armour": {
+                "source": "Core Rules",
+                "category": "Armour & Protection",
+                "subcategory": "Light Armour",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 1,
+                    "impact": 0
+                },
+                "abilitylist": [],
+                "magiclist": [],
+                "price": 20,
+                "description": "Light armor encompasses a wide variety of materials from hardened leather tunics to chain shirts forged from steel. It does not offer complete protection against arrows or swords, but it is better than having nothing at all. Light armor does not inhibit movement."
+            },
+            "Heavy Armour": {
+                "source": "Core Rules",
+                "category": "Armour & Protection",
+                "subcategory": "Heavy Armour",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 2,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Encumbered 1 of 2"
+                    }
+                ],
+                "magiclist": [],
+                "price": 50,
+                "description": "Typical heavy armor is made from metal links and is called chain mail. Forging chain mail is a laborious and time consuming process, as the blacksmith must put together hundreds, sometimes thousands, of metal links. This makes chain mail expensive, but this type of armor provides excellent protection for anyone who can afford it. There are other types of heavy armor as well, of which the best known are the steel breastplates and greaves worn by the foot knights of the Templar orders."
+            },
+            "Cathayan Silk Clothes": {
+                "source": "Core Rules",
+                "category": "Armour & Protection",
+                "subcategory": "Cathayan Silk Clothes",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Rally!"
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Brittle"
+                    }
+                ],
+                "magiclist": [],
+                "price": 50,
+                "description": "Some rich warband leaders like to flaunt their wealth and purchase clothes made out of silk from distant Cathay. This silk is the most expensive fabric in the known world, and wearing such clothes is a sure way to attract attention \u2013 especially thieves and assassins!"
+            },
+            "Ithilmar Armour": {
+                "source": "Core Rules",
+                "category": "Armour & Protection",
+                "subcategory": "Ithilmar Armour",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 2,
+                    "impact": 0
+                },
+                "abilitylist": [],
+                "magiclist": [],
+                "price": 90,
+                "description": "Ithilmar is a silvery metal which is as light as silk and stronger than steel. Elves are experts at fashioning weapons and armor from Ithilmar, and the Elven kingdom of Caledor is the only place in the world where this metal can be found."
+            },
+            "Elven Cloak": {
+                "source": "Core Rules",
+                "category": "Armour & Protection",
+                "subcategory": "Elven Cloak",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Camouflage"
+                    }
+                ],
+                "magiclist": [],
+                "price": 100,
+                "description": "Made from the hair of Elven maidens and interwoven with living tree leaves, an Elven cloak is a wonder to behold. A warrior wearing such a cloak will blend into the shadows, making it very difficult to shoot at them with missile weapons. Elven cloaks rarely come up for sale, but are sometimes recovered from dead warriors or offered by Elves as rewards to men who have served them in some way. A warrior aiming a missile weapon at a warrior wearing an Elven cloak suffers -1 on his to hit roll. Being from Ulthuan, Shadow Warriors (A02 60) have access to items that are rarely seen by other races."
+            },
+            "Gromril Armour": {
+                "source": "Core Rules",
+                "category": "Armour & Protection",
+                "subcategory": "Gromril Armour",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 2,
+                    "impact": 0
+                },
+                "abilitylist": [],
+                "magiclist": [],
+                "price": 150,
+                "description": "Gromril is the rarest and strongest metal known of in the Old World. Only a very few Dwarf smiths know the secret of forging Gromril, and a suit of armor made from it fetches a huge price."
+            },
+            "Helmet": {
+                "source": "Core Rules",
+                "category": "Armour & Protection",
+                "subcategory": "Helmet",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Hardhead"
+                    }
+                ],
+                "magiclist": [],
+                "price": 10,
+                "description": "From the shining steel helmets of Bretonnian knights to the leather caps of the Skaven, all sensible warriors try to protect the most vulnerable part of their body \u2013 their head. Even the most vain fighters still use a helmet, as it can be festooned with plumes, horns and other decorations. Helmets come in varying shapes and sizes, but their basic function remains the same."
+            },
+            "Buckler": {
+                "source": "Core Rules",
+                "category": "Armour & Protection",
+                "subcategory": "Buckler",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Parry"
+                    }
+                ],
+                "magiclist": [],
+                "price": 5,
+                "description": "Bucklers are small, round shields designed for parrying or deflecting blows. They are usually made of steel for they need to be tremendously durable to survive the brutal blows of hand-to-hand combat. Using a buckler requires great skill, but a nimble warrior can protect himself from blows which would otherwise cripple him."
+            },
+            "Shield": {
+                "source": "Core Rules",
+                "category": "Armour & Protection",
+                "subcategory": "Shield",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 1,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Encumbered 2 of 2"
+                    }
+                ],
+                "magiclist": [],
+                "price": 5,
+                "description": "There are two types of shield common to the warriors of Mordheim: the first is made of wood, occasionally reinforced with metal plates. This basic type of shield, although strong, does tend to splinter, but this can sometimes save the user\u2019s life as his enemy\u2019s weapon can get trapped allowing him to strike back whilst his enemy struggles to free his weapon. Metal shields are heavy and cumbersome, but last much longer and can take a battering. A typical Empire shield is either round or triangular, and carries the emblem of the province or city of its owner."
+            }
+        }
+    },
+    "Consumables": {
+        "Core Rules": {
+            "Garlic": {
+                "source": "Core Rules",
+                "category": "Consumables",
+                "subcategory": "Garlic",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Garlic Smell"
+                    }
+                ],
+                "magiclist": [],
+                "price": 10,
+                "description": "May not be bought by Undead. Garlic is a common herb grown in most gardens of the Empire. It is said to ward off Vampires and other denizens of the dark. Garlic lasts for the duration of one battle only, whether it is used or not."
+            },
+            "Black Lotus": {
+                "source": "Core Rules",
+                "category": "Consumables",
+                "subcategory": "Black Lotus",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Venomous / Black Lotus",
+                        "description": "A weapon coated with the sap of the Black Lotus will wound its target automatically if you roll a 6 to hit. Note that you can still roll a dice for every wound inflicted in this way. If you roll a 6, you will inflict a critical hit with that roll. If you do not roll a 6, you will cause a normal wound. Take armor saves as normal."
+                    }
+                ],
+                "magiclist": [],
+                "price": 10,
+                "description": "Not available to Witch Hunters, Warrior-Priests or Sisters of Sigmar. The use of poison is almost universally abhorred, but in the ruthless and brutal battles fought in Mordheim, desperate warbands often resort to the use of envenomed blades. Poison may not be used with Blackpowder weapons. When you buy a vial of poison, there is always only enough to last the duration of one battle. You can only poison a single weapon with one vial of poison. In the deepest forests of the Southlands grows a plant that is extremely poisonous. It is known as Black Lotus and is much sought after by alchemists, assassins, wizards of the Western Coast and bored wives."
+            },
+            "Dark Venom": {
+                "source": "Core Rules",
+                "category": "Consumables",
+                "subcategory": "Dark Venom",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 1,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Dark Venom",
+                        "description": "Any hit caused by a weapon coated with Dark Venom counts as having +1 Strength, so, for example, if a warrior with Strength 3 wielding a poisoned sword hits an opponent, he will cause a Strength 4 hit instead. Armor saving throws are modified to take into account the increased Strength of the attack."
+                    }
+                ],
+                "magiclist": [],
+                "price": 30,
+                "description": "Not available to Witch Hunters, Warrior-Priests, or Sisters of Sigmar The use of poison is almost universally abhorred, but in the ruthless and brutal battles fought in Mordheim, desperate warbands often resort to the use of envenomed blades. Poison may not be used with Blackpowder weapons. When you buy a vial of poison, there is always only enough to last the duration of one battle. You can only poison a single weapon with one vial of poison. This is a poison extracted from Heldrakes, gigantic sea serpents that plague the Western Ocean and the coast of Naggaroth. The slightest wound infected by Dark Venom causes excruciating pain, incapacitating the bravest of men."
+            },
+            "Crimson Shade": {
+                "source": "Core Rules",
+                "category": "Consumables",
+                "subcategory": "Crimson Shade",
+                "distance": 0,
+                "skill": {
+                    "movement": 1,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 1,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Crimson Shade",
+                        "description": "A model using Crimson Shade has his Initiative increased by +D3 points, and Movement and Strength by +1 (this effect lasts for one game). Crimson Shade has no effect on Undead such as Vampires and Zombies, or the Possessed."
+                    },
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Side Effects",
+                        "description": "After the battle, roll 2D6. On a roll of 2-3, the model becomes addicted and you must try to buy him a new batch of Crimson Shade before every battle from now on. If you fail to buy any, he will leave your warband. On a roll of 12 the model's Initiative is increased permanently by +1."
+                    }
+                ],
+                "magiclist": [],
+                "price": 35,
+                "description": "The use of poison is almost universally abhorred, but in the ruthless and brutal battles fought in Mordheim, desperate warbands often resort to the use of envenomed blades. Poison may not be used with Blackpowder weapons. When you buy a vial of poison, there is always only enough to last the duration of one battle. You can only poison a single weapon with one vial of poison. Crimson Shade is the name given by Old Worlders to the leaves of the blood oak of Estalia. It is an extremely addictive drug, but grants its users inhuman quickness and strength."
+            },
+            "Blessed Water": {
+                "source": "Core Rules",
+                "category": "Consumables",
+                "subcategory": "Blessed Water",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [],
+                "magiclist": [],
+                "price": 10,
+                "description": "The priests of Ulric, Sigmar, Morr and Manann hold great power over evil. Pure water from a clear fountain, blessed by one of these priests, is said to burn things of darkness and evil. A vial of blessed water contains enough liquid for just one use, and has a thrown range of twice the thrower\u2019s Strength in inches. Roll to hit using the model\u2019s BS. No modifiers for range or moving apply. Blessed water causes 1 wound on Undead, Daemon or Possessed models automatically. There is no armor save. Undead or Possessed models may not use blessed water."
+            },
+            "Bugman`s Ale": {
+                "source": "Core Rules",
+                "category": "Consumables",
+                "subcategory": "Bugman`s Ale",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Fearless",
+                        "description": "A warband that drinks Bugman`s Ale before a battle will be immune to Fear for the whole of the battle."
+                    }
+                ],
+                "magiclist": [],
+                "price": 50,
+                "description": "Of all the Dwarf brewmasters, Josef Bugman is the most famous. His ale is known throughout the Old World, and widely regarded as the best. A warband that drinks a barrel of Bugman\u2019s before a battle will be immune to fear for the whole of the battle. Elves may not drink Bugman\u2019s ale as they are far too delicate to cope with its effects. There is only enough ale to supply the warband for one battle."
+            },
+            "Elven Wine": {
+                "source": "Core Rules",
+                "category": "Consumables",
+                "subcategory": "Elven Wine",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Fearless",
+                        "description": "An elven warband that drinks Elven Wine before a battle will be immune to Fear for the whole of the battle."
+                    }
+                ],
+                "magiclist": [],
+                "price": 50,
+                "description": "High Elven wines are well known to be the best in the world, and some are even rumored to have magical qualities. A fine Elven Wine can cast out doubt and fear and leave a general feeling of wellbeing in a warrior."
+            }
+        }
+    },
+    "Mutations": {
+        "Core Rules": {
+            "Daemon Soul": {
+                "source": "Core Rules",
+                "category": "Mutations",
+                "subcategory": "Daemon Soul",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Magic Resistance"
+                    }
+                ],
+                "magiclist": [],
+                "price": 20,
+                "description": "A Daemon lives within the mutant’s soul. This gives him a 4+ save against the effects of spells or prayers."
+            },
+            "Great Claw": {
+                "source": "Core Rules",
+                "category": "Mutations",
+                "subcategory": "Great Claw",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 1,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 1,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [],
+                "magiclist": [],
+                "price": 50,
+                "description": "One of the mutant’s arms ends in a great, crab-like claw. He may carry no weapons in this arm, but gains an extra attack in hand-to-hand combat with a +1 Strength bonus."
+            },
+            "Cloven Hoofs": {
+                "source": "Core Rules",
+                "category": "Mutations",
+                "subcategory": "Cloven Hoofs",
+                "distance": 0,
+                "skill": {
+                    "movement": 1,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [],
+                "magiclist": [],
+                "price": 40,
+                "description": "The warrior has legs with hoofs, giving him a gain of +1 Movement."
+            },
+            "Tentacle": {
+                "source": "Core Rules",
+                "category": "Mutations",
+                "subcategory": "Tentacle",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Grappling"
+                    }
+                ],
+                "magiclist": [],
+                "price": 35,
+                "description": "One of the mutant’s arms ends in a tentacle. He may grapple his opponent in close combat to reduce his attacks by -1, down to a minimum of 1. The mutant may decide which attack his opponent loses."
+            },
+            "Blackblood": {
+                "source": "Core Rules",
+                "category": "Mutations",
+                "subcategory": "Blackblood",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Corrosive"
+                    }
+                ],
+                "magiclist": [],
+                "price": 30,
+                "description": "If the model loses a wound in close combat, anyone in base contact with the model suffers a Strength 3 hit (no critical hits) from the spurting corrosive blood."
+            },
+            "Spines": {
+                "source": "Core Rules",
+                "category": "Mutations",
+                "subcategory": "Spines",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Spiked"
+                    }
+                ],
+                "magiclist": [],
+                "price": 35,
+                "description": "Any model in base contact with the mutant suffers an automatic Strength 1 hit at the beginning of each close combat phase. Spines will never cause critical hits."
+            },
+            "Scorpion Tail": {
+                "source": "Core Rules",
+                "category": "Mutations",
+                "subcategory": "Scorpion Tail",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Poisonous"
+                    }
+                ],
+                "magiclist": [],
+                "price": 40,
+                "description": "The mutant has a long barbed tail with a venomed tip, allowing him to make an extra Strength 5 attack in each hand-to-hand combat phase. If the model hit by the tail is immune to poison, the Strength of the hit is reduced to 2."
+            },
+            "Extra Arm": {
+                "source": "Core Rules",
+                "category": "Mutations",
+                "subcategory": "Extra Arm",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 1,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [],
+                "magiclist": [],
+                "price": 40,
+                "description": "The mutant may use any single-handed weapon in the extra arm, giving him +1 attack when fighting in hand-to-hand combat. Alternatively, he may carry a shield or a buckler in the extra arm. If a Possessed chooses to do this, he gains an extra attack but still cannot carry a weapon."
+            },
+            "Hideous": {
+                "source": "Core Rules",
+                "category": "Mutations",
+                "subcategory": "Hideous",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Character Ability",
+                        "name": "Cause Fear"
+                    }
+                ],
+                "magiclist": [],
+                "price": 40,
+                "description": "The mutant causes fear. See the Psychology section for details."
+            }
+        }
+    },
+    "Other": {
+        "Core Rules": {
+            "Mordheim Map": {
+                "source": "Core Rules",
+                "category": "Other",
+                "subcategory": "Mordheim Map",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [],
+                "magiclist": [],
+                "price": 20,
+                "description": "Temporary item, When you buy a map, roll a D6. Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
+            },
+            "Fake Mordheim Map": {
+                "source": "Core Rules",
+                "category": "Other",
+                "subcategory": "Fake Mordheim Map",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Fake Mordheim Map",
+                        "description": "The map is a fake, and is completely worthless. It leads you on a fool\u2019s errand. Your opponent may automatically choose the next scenario you play."
+                    }
+                ],
+                "magiclist": [],
+                "price": 20,
+                "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
+            },
+            "Vague Mordheim Map": {
+                "source": "Core Rules",
+                "category": "Other",
+                "subcategory": "Vague Mordheim Map",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Vague Mordheim Map",
+                        "description": "Though crude, the map is generally accurate (well\u2026 parts of it are\u2026 perhaps!). You may re-roll any one dice during the next exploration phase if you wish but you must accept the result of the second roll."
+                    }
+                ],
+                "magiclist": [],
+                "price": 20,
+                "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
+            },
+            "Catacomb Mordheim Map": {
+                "source": "Core Rules",
+                "category": "Other",
+                "subcategory": "Catacomb Mordheim Map",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Catacomb Mordheim Map",
+                        "description": "The map shows a way through the catacombs into the city. You may automatically choose the scenario next time you fight a battle."
+                    }
+                ],
+                "magiclist": [],
+                "price": 20,
+                "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
+            },
+            "Accurate Mordheim Map": {
+                "source": "Core Rules",
+                "category": "Other",
+                "subcategory": "Accurate Mordheim Map",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Accurate Mordheim Map",
+                        "description": "The map is recently made and very detailed. You may re-roll up to three dice during the next exploration phase if you wish. You must accept the result of the second roll."
+                    }
+                ],
+                "magiclist": [],
+                "price": 20,
+                "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
+            },
+            "Master Mordheim Map": {
+                "source": "Core Rules",
+                "category": "Other",
+                "subcategory": "Master Mordheim Map",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [
+                    {
+                        "source": "Core Rules",
+                        "main": "Generic Ability",
+                        "category": "Item Ability",
+                        "name": "Master Mordheim Map",
+                        "description": "This is one of the twelve master maps of Mordheim made for Count von Steinhardt of Ostermark. From now on you may always re-roll one dice when rolling on the Exploration chart as long as the Hero who possesses this map was not taken out of action in the battle."
+                    }
+                ],
+                "magiclist": [],
+                "price": 20,
+                "description": "Some survivors of the cataclysm still remain in the many settlements around Mordheim, and make a living by preparing maps of the city from memory. Many of these maps are faked, and even real ones are often crude and inaccurate. A map can help a warband find their way through the confusing maze of streets and into areas with rich buildings to loot."
+            }
+        },
+        "Broheim": {
+            "Wyrdbreaker": {
+                "source": "Broheim",
+                "category": "Other",
+                "subcategory": "Wyrdbreaker",
+                "distance": 0,
+                "skill": {
+                    "movement": 0,
+                    "weapon": 0,
+                    "ballistic": 0,
+                    "strength": 0,
+                    "toughness": 0,
+                    "wounds": 0,
+                    "initiative": 0,
+                    "actions": 0,
+                    "leadership": 0,
+                    "armoursave": 0,
+                    "impact": 0
+                },
+                "abilitylist": [],
+                "magiclist": [],
+                "price": 0,
+                "description": "An item given by the loremaster council for warbands of high elves to nullify the chaos magic in wyrdstones and turn it into regular gems. This provides High Elf warbands with the necessary income to sustain themselves."
+            }
+        }
+    }
+}

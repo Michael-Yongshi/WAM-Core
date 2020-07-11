@@ -1,0 +1,306 @@
+{
+    "Core Rules": {
+        "Prayers of Sigmar": {
+            "The Hammer of Sigmar": {
+                "source": "Core Rules",
+                "category": "Prayers of Sigmar",
+                "name": "The Hammer of Sigmar",
+                "group": "Prayers",
+                "difficulty": 7,
+                "description": "<i>This weapon of the faithful glows with a golden light, imbued as it is with the righteous power of Sigmar.</i><br/><br/>The wielder gains +2 Strength in hand-to-hand combat and all hits he inflicts cause double damage (eg, 2 wounds instead of 1). The Priest must test each shooting phase he wants to use the Hammer."
+            },
+            "Hearts of Steel": {
+                "source": "Core Rules",
+                "category": "Prayers of Sigmar",
+                "name": "Hearts of Steel",
+                "group": "Prayers",
+                "difficulty": 8,
+                "description": "<i>As the three words of power are spoken, waves of glory surround the servant of Sigmar. The faithful are heartened by the warrior god\u2019s presence.</i><br/><br/>Any allied warriors within 8 inch of the warrior become immune to Fear and All Alone tests. In addition, the whole warband gains +1 to any Rout tests they have to make. The effects of this spell last until the caster is knocked down, stunned or put out of action. If cast again the effects are not cumulative, ie, the maximum bonus to Rout tests remains +1."
+            },
+            "Soulfire": {
+                "source": "Core Rules",
+                "category": "Prayers of Sigmar",
+                "name": "Soulfire",
+                "group": "Prayers",
+                "difficulty": 9,
+                "description": "<i>The wrath of Sigmar comes to earth. Purifying flames surround the Priest and wipe out those who resist the righteous fury of the God-Emperor!</i><br/><br/>All enemy models within 4 inch of the servant of Sigmar suffer a Strength 3 hit. No armour saves are allowed. The servants of darkness and Chaos are especially susceptible to Sigmar\u2019s holy power. Undead and Possessed models in range suffer a Strength 5 hit instead."
+            },
+            "Shield of Faith": {
+                "source": "Core Rules",
+                "category": "Prayers of Sigmar",
+                "name": "Shield of Faith",
+                "group": "Prayers",
+                "difficulty": 6,
+                "description": "<i>A shield of pure white light appears in front of the Priest. As long as his faith remains strong the shield will protect him.</i><br/><br/>The Priest is immune to all spells. Roll at the beginning of each turn in the recovery phase. On a roll of 1 or 2 the shield disappears."
+            },
+            "Healing Hand": {
+                "source": "Core Rules",
+                "category": "Prayers of Sigmar",
+                "name": "Healing Hand",
+                "group": "Prayers",
+                "difficulty": 5,
+                "description": "<i>Laying hands upon a wounded comrade, the servant of Sigmar calls upon his Lord to heal the warrior\u2019s wounds.</i><br/><br/>Any one model within 2 inch of the Priest (including himself) may be healed. The warrior is restored to his full quota of Wounds. In addition, if any friendly models within 2 inch are stunned or knocked down, they immediately come to their senses, stand up, and continue fighting as normal."
+            },
+            "Armour of Righteousness": {
+                "source": "Core Rules",
+                "category": "Prayers of Sigmar",
+                "name": "Armour of Righteousness",
+                "group": "Prayers",
+                "difficulty": 9,
+                "description": "<i>Impenetrable armour covers the Priest and the fiery image of a twin-tailed comet burns above his head.</i><br/><br/>The Priest has an armour save of 2+ which replaces his normal armour save. In addition, he causes fear in his enemies and is therefore immune to fear himself. The power of the Armour of Righteousness lasts until the beginning of the Priest\u2019s next Shooting phase."
+            }
+        },
+        "Necromancy": {
+            "Lifestealer": {
+                "source": "Core Rules",
+                "category": "Necromancy",
+                "name": "Lifestealer",
+                "group": "Spells",
+                "difficulty": 10,
+                "description": "<i>The Necromancer sucks out the very essence of life from his victim, stealing its vigour for himself.</i><br/><br/>You may choose a single model within 6 inch. The target suffers a wound (no save allowed) and the Necromancer gains an extra wound for the duration of the battle. This may take the Necromancer\u2019s Wounds above his original maximum value. This spell will not affect the Possessed or any Undead models."
+            },
+            "Re-animation": {
+                "source": "Core Rules",
+                "category": "Necromancy",
+                "name": "Re-animation",
+                "group": "Spells",
+                "difficulty": 5,
+                "description": "<i>At the spoken command of the Necromancer, the dead rise to fight again.</i><br/><br/>One Zombie that went out of action during the last hand-to-hand combat or Shooting phase immediately returns to the battle. Place the model within 6 inch of the Necromancer. The model cannot be placed straight into hand-to-hand combat with an enemy model."
+            },
+            "Death Vision": {
+                "source": "Core Rules",
+                "category": "Necromancy",
+                "name": "Death Vision",
+                "group": "Spells",
+                "difficulty": 6,
+                "description": "<i>The Necromancer calls on the power of Necromancy to reveal the moment of his enemies\u2019 death.</i><br/><br/>The Necromancer causes fear in his enemies for the duration of the battle."
+            },
+            "Spell of Doom": {
+                "source": "Core Rules",
+                "category": "Necromancy",
+                "name": "Spell of Doom",
+                "group": "Spells",
+                "difficulty": 9,
+                "description": "<i>The Necromancer whispers to the sleeping dead to rise up from the ground and seize his enemies.</i><br/><br/>Choose one enemy model within 12 inch. The model must immediately roll equal to or less than his Strength on a D6 or the dead emerging from the earth will rend him with supernatural power. If he fails, you may roll on the Injury table to see what happens to the unfortunate warrior."
+            },
+            "Call of Vanhel": {
+                "source": "Core Rules",
+                "category": "Necromancy",
+                "name": "Call of Vanhel",
+                "group": "Spells",
+                "difficulty": 6,
+                "description": "<i>The Necromancer summons the world of the dead to invigorate his Undead servants.</i><br/><br/>A single Zombie or Dire Wolf within 6 inch of the Necromancer may immediately move again up to its maximum Movement distance (ie, 9 inch in the case of Dire Wolves). If this moves them into base contact with an enemy model, they count as charging."
+            },
+            "Spell of Awakening": {
+                "source": "Core Rules",
+                "category": "Necromancy",
+                "name": "Spell of Awakening",
+                "group": "Spells",
+                "difficulty": 0,
+                "description": "<i>The Necromancer calls the soul of a slain Hero back to his body and enslaves him with corrupt magic.</i><br/><br/>If an enemy Hero is killed (ie, your opponent rolls 11-16 on the Serious Injury chart after the battle) then the Necromancer may raise him to fight as a Zombie in his servitude. The dead Hero retains his characteristics and all his weapons and armour but may not use any other equipment or skills. He may no longer run, counts as a Henchman group on his own, and may not gain additional experience. This spell always succeeds (rules for Henchmen and experience are described later). The new Zombie follows all the normal Zombie rules (immune to poison, causes fear) except for retaining his profile, weapons and armour."
+            }
+        },
+        "Chaos Rituals": {
+            "Vision of Torment": {
+                "source": "Core Rules",
+                "category": "Chaos Rituals",
+                "name": "Vision of Torment",
+                "group": "Spells",
+                "difficulty": 10,
+                "description": "<i>The Chaos Mage summons horrible visions of the realm of Chaos, causing his enemy to recoil in utter horror.</i><br/><br/>This spell has a range of 6 inch and must be cast on the closest enemy model. If the Chaos Mage is in hand-to-hand combat, he must choose his target from those in base contact with him. The affected model is immediately stunned. If the model cannot be stunned it is knocked down instead."
+            },
+            "Eye of God": {
+                "source": "Core Rules",
+                "category": "Chaos Rituals",
+                "name": "Eye of God",
+                "group": "Spells",
+                "difficulty": 7,
+                "description": "<i>The Chaos Mage implores the Dark gods to grant a boon to their servant.</i><br/><br/>You may use the Eye of God successfully only once per battle. Choose any single model within 6 inch, friend or foe. Roll a D6 to see what happens to the affected model.<br/><br/>D6     Result<br/>1      The wrath of the gods descends upon the target. The model is taken out of action immediately. He does not have to roll on the Serious Injury chart after the battle though.<br/>2-5    The model gains +1 to any one of his characteristics during this battle (chosen by the player who cast the spell).<br/>6      The model gains +1 to all of its characteristics for the duration of the battle.<br/>"
+            },
+            "Dark Blood": {
+                "source": "Core Rules",
+                "category": "Chaos Rituals",
+                "name": "Dark Blood",
+                "group": "Spells",
+                "difficulty": 8,
+                "description": "<i>The Chaos Mage cuts his palm and his blood spurts out, burning flesh and armour.</i><br/><br/>This attack has a range of 8 inch and causes D3 S5 hits. It hits the first model in its path. After using this spell the Chaos Mage must roll on the Injury table for himself to see how dangerous the wound is, though treat the out of action result as stunned instead."
+            },
+            "Lure of Chaos": {
+                "source": "Core Rules",
+                "category": "Chaos Rituals",
+                "name": "Lure of Chaos",
+                "group": "Spells",
+                "difficulty": 9,
+                "description": "<i>The Chaos Mage calls upon the taint of chaos which exists in the inner soul of all living beings.</i><br/><br/>The spell has a range of 12 inch and must be cast on the closest enemy model. Roll a D6 and add the Chaos Mage\u2019s Leadership to the score. Then roll a D6 and add the target\u2019s Leadership to the score. If the Chaos Mage beats his opponent\u2019s score he gains control of the model until the model passes a Leadership test in his own recovery phase. The model may not commit suicide, but can attack models on his own side, and will not fight warriors from the Chaos Mage\u2019s warband. If he was engaged in hand-to-hand combat with any warriors of the Chaos Mage\u2019s warband, they will immediately move 1 inch apart."
+            },
+            "Wings of Darkness": {
+                "source": "Core Rules",
+                "category": "Chaos Rituals",
+                "name": "Wings of Darkness",
+                "group": "Spells",
+                "difficulty": 7,
+                "description": "<i>The Chaos Mage is lifted from the ground by two shadowy Daemons and carried wherever he wants to go.</i><br/><br/>The Chaos Mage may immediately move anywhere within 12 inch, including into base contact with an enemy, in which case he counts as charging. If he engages a fleeing enemy, in the close combat phase he will score one automatic hit and then his opponent will flee again (if he survives)."
+            },
+            "Word of Pain": {
+                "source": "Core Rules",
+                "category": "Chaos Rituals",
+                "name": "Word of Pain",
+                "group": "Spells",
+                "difficulty": 7,
+                "description": "<i>Speaking the forbidden name of his dark god, the Chaos Mage causes indescribable pain to all who hear it.</i><br/><br/>All models within 3 inch of the Chaos Mage, friend or foe, suffer one S3 hit. No armour saves are allowed."
+            }
+        },
+        "Lesser Magic": {
+            "Fires of U'Zhul": {
+                "source": "Core Rules",
+                "category": "Lesser Magic",
+                "name": "Fires of U'Zhul",
+                "group": "Spells",
+                "difficulty": 7,
+                "description": "<i>The wizard summons a fiery ball of flames and hurls it upon his enemies.</i><br/><br/>The fireball has a range of 18 inch and causes one Strength 4 hit. It strikes the first model in its path. Armour saves are taken as normal (ie, with -1 modifier)."
+            },
+            "Flight of Zimmeran": {
+                "source": "Core Rules",
+                "category": "Lesser Magic",
+                "name": "Flight of Zimmeran",
+                "group": "Spells",
+                "difficulty": 7,
+                "description": "<i>Calling upon the power of the winds of magic, the wizard walks on air.</i><br/><br/>The wizard may immediately move anywhere within 12 inch, including into base contact with an enemy, in which case he counts as charging. If he engages a fleeing enemy in the close combat phase he will score 1 automatic hit and then his opponent will flee again (if he survives)."
+            },
+            "Dread of Aramar": {
+                "source": "Core Rules",
+                "category": "Lesser Magic",
+                "name": "Dread of Aramar",
+                "group": "Spells",
+                "difficulty": 7,
+                "description": "<i>The wizard places a sense of mind-numbing fear into the minds of his opponents.</i><br/><br/>A single model within 12 inch of the wizard must pass a Leadership test or flee 2D6 inch directly away from him. If he flees, he must test at the start of each of his own movement phases and will continue to flee until he passes a test. Note that this spell does not affect Undead or any model immune to fear."
+            },
+            "Silver Arrows of Arha": {
+                "source": "Core Rules",
+                "category": "Lesser Magic",
+                "name": "Silver Arrows of Arha",
+                "group": "Spells",
+                "difficulty": 7,
+                "description": "<i>Silvery arrows appear from thin air and circle around the wizard, shooting out to strike his foes.</i><br/><br/>Unlike other spells, this cannot be cast whilst in hand-to-hand combat. The spell summons D6+2 arrows which the wizard can use to shoot against one enemy model. The arrows have a range of 24 inch. Use the wizard\u2019s own Ballistic Skill to determine whether he hits or not, but ignore movement, range and cover penalties. The arrows cause one S3 hit each."
+            },
+            "Luck of Shemtek": {
+                "source": "Core Rules",
+                "category": "Lesser Magic",
+                "name": "Luck of Shemtek",
+                "group": "Spells",
+                "difficulty": 6,
+                "description": "<i>The wizard summons the fickle power of magic to manipulate chance.</i><br/><br/>The wizard may re-roll all his failed dice rolls, though the second results stand. The effect lasts until the beginning of his own next turn."
+            },
+            "Sword of Rezhebel": {
+                "source": "Core Rules",
+                "category": "Lesser Magic",
+                "name": "Sword of Rezhebel",
+                "group": "Spells",
+                "difficulty": 8,
+                "description": "<i>A flaming sword appears in the hand of the wizard, promising red ruin to all who stand in his way.</i><br/><br/>The sword gives the wizard +1 Attack, +2 Strength and +2 Weapon Skill. Take a Leadership test at the beginning of each of the wizard\u2019s own turns. If the test fails, the sword disappears."
+            }
+        },
+        "Magic of the Horned Rat": {
+            "Warpfire": {
+                "source": "Core Rules",
+                "category": "Magic of the Horned Rat",
+                "name": "Warpfire",
+                "group": "Spells",
+                "difficulty": 8,
+                "description": "<i>A green flame leaps from the outstretched paw of the Sorcerer and burns its victims with indescribable agony.</i><br/><br/>The spell has a range of 8 inch, hitting the first model in its path. The spell causes D3 Strength 4 hits on its target, and one Strength 3 hit on each model within 2 inch of the target."
+            },
+            "Children of the Horned Rat": {
+                "source": "Core Rules",
+                "category": "Magic of the Horned Rat",
+                "name": "Children of the Horned Rat",
+                "group": "Spells",
+                "difficulty": 0,
+                "description": "<i>The Sorcerer raises his paws and calls upon the Father of the Skaven to send forth his servants.</i><br/><br/>This spell must be used before the game, and may only be used once. When cast, the spell summons D3 Giant Rats, which are placed within 6 inch of the Sorcerer. The Sorcerer may cast this spell successfully only once per battle, and the rats disappear after the battle. They do not count towards the maximum size of the Skaven warband."
+            },
+            "Gnawdoom": {
+                "source": "Core Rules",
+                "category": "Magic of the Horned Rat",
+                "name": "Gnawdoom",
+                "group": "Spells",
+                "difficulty": 7,
+                "description": "<i>The target is attacked by rats and soon is covered from head to foot in small, bleeding wounds.</i><br/><br/>The Gnawdoom causes 2D6 Strength 1 hits on a single model within 8 inch of the caster."
+            },
+            "Black Fury": {
+                "source": "Core Rules",
+                "category": "Magic of the Horned Rat",
+                "name": "Black Fury",
+                "group": "Spells",
+                "difficulty": 8,
+                "description": "<i>With a chittering incantation the Sorcerer turns into a monstrous rat-like creature, which attacks with an insane fury.</i><br/><br/>The Sorcerer may immediately charge any enemy model within 12 inch (ignoring any terrain and interposing models) and gains 2 extra Attacks and +1 Strength during this turn\u2019s hand-to-hand combat phase only."
+            },
+            "Eye of the Warp": {
+                "source": "Core Rules",
+                "category": "Magic of the Horned Rat",
+                "name": "Eye of the Warp",
+                "group": "Spells",
+                "difficulty": 8,
+                "description": "<i>Gaze into the eye of the warp and despair!</i><br/><br/>All standing models in base contact with the Sorcerer must take an immediate Leadership test. If they fail, they each suffer a Strength 3 hit and must run 2D6 inch directly away from the Sorcerer, exactly as if they had lost their nerve when fighting against more than one opponent."
+            },
+            "Sorcerer's Curse": {
+                "source": "Core Rules",
+                "category": "Magic of the Horned Rat",
+                "name": "Sorcerer's Curse",
+                "group": "Spells",
+                "difficulty": 6,
+                "description": "<i>The Sorcerer points a claw towards one of his enemies and curses him in the name of the Horned One.</i><br/><br/>The spell has a range of 12 inch and affects a single model within range. The target must re-roll any successful armour saves and to hit rolls during the Skaven hand-to-hand phase and his own next shooting and hand-to-hand combat phases."
+            }
+        }
+    },
+    "Broheim": {
+        "High Elven Magic": {
+            "Word of Power": {
+                "source": "Broheim",
+                "category": "High Elven Magic",
+                "name": "Word of Power",
+                "group": "Spells",
+                "difficulty": 8,
+                "description": "<i>The Elven Mage utters the True Name of Asuryan, the lord of the Elf gods. Shaken by his awesome power, the enemies of the Elves become weak and ineffective.</i><br/><br/>Any enemies within 8 inch of the Mage suffer a -3 Weaponskill penalty, down to a minimum of one. Lasts until the beginning of the next High Elf turn."
+            },
+            "Fiery Wrath": {
+                "source": "Broheim",
+                "category": "High Elven Magic",
+                "name": "Fiery Wrath",
+                "group": "Spells",
+                "difficulty": 8,
+                "description": "<i>With one delicate movement the Elven Mage traces an intricate Sigil of Flame in the air.</i><br/><br/>Range 12 inch. May be cast on any model within range. The target is hit with Strength 4. Any models within 3 inch of the target model suffer a Strength 3 hit on a D6 roll of 4+. Take armour saves as normal."
+            },
+            "The Phoenix Crown": {
+                "source": "Broheim",
+                "category": "High Elven Magic",
+                "name": "The Phoenix Crown",
+                "group": "Spells",
+                "difficulty": 9,
+                "description": "<i>A crown of white flames appears above the head of the Elf Mage, enveloping him within a glorious array of flames.</i><br/><br/>The Elf Mage has an armour save of 2+ that replaces his normal armour save. In addition, he gains a +2 to his Weaponskill and a +1 to his Strength. Roll at the beginning of each turn in the recovery phase. On a D6 roll of 1 or 2 the Phoenix Crown disappears."
+            },
+            "Roar of the Dragon": {
+                "source": "Broheim",
+                "category": "High Elven Magic",
+                "name": "Roar of the Dragon",
+                "group": "Spells",
+                "difficulty": 8,
+                "description": "<i>A shadow of a wrathful Dragon strikes out from the outstretched hand of the mage, and speeds forward roaring its anger.</i><br/><br/>The roar of the Dragon has a range of 12 inch and it is absolutely straight. Any model in its path must roll equal or under its Strength or be Knocked Down. If the spell hits a building it stops."
+            },
+            "The Anger of the Earth": {
+                "source": "Broheim",
+                "category": "High Elven Magic",
+                "name": "The Anger of the Earth",
+                "group": "Spells",
+                "difficulty": 10,
+                "description": "<i>At the command of the Elven Mage, the very earth raises up against the enemies of the Elves.</i><br/><br/>Draw a 12 inch direct line from the mage in any direction. The line is 1 inch wide and absolutely straight. Any model in its path suffers a single S5 hit."
+            },
+            "The Light of Glory": {
+                "source": "Broheim",
+                "category": "High Elven Magic",
+                "name": "The Light of Glory",
+                "group": "Spells",
+                "difficulty": 8,
+                "description": "<i>A radiant white light emerges from the mage`s hand, banishing all fear and doubt in his comrades.</i><br/><br/>Any friendly models within 8 inch of the Elven mage are immune to psychology and will never break from combat. This spell lasts until the mage suffers a wound. If the mage suffers a wound then the enchanted Elves become startled and uneasy. All models with 8 inch must take a Leadership test. If any fail, they are treated as if they had failed an All Alone test."
+            }
+        }
+    }
+}

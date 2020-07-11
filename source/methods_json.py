@@ -48,4 +48,4 @@ def load_json(path, filename):
         with open(complete_path, 'r') as infile:
             datadict = json.load(infile)
     
-    return datadict
+        return datadict

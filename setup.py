@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="WAM-Core",
-    version="0.3.5",
+    version="0.3.6",
     author="Michael-Yongshi",
     author_email="4registration@outlook.com",
     description="WAM-Core package",

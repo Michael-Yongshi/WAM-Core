@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="WAM-Core",
-    version="0.3.4",
+    version="0.3.5",
     author="Michael-Yongshi",
     author_email="4registration@outlook.com",
     description="WAM-Core package",
@@ -15,14 +15,14 @@ setuptools.setup(
     url="https://github.com/Michael-Yongshi/WAM-Core",
     packages=setuptools.find_packages(),
     data_files=[
-        (os.path.join('wamcore'), [
-            os.path.join('wamcore', 'abilities_ref.json'),
-            os.path.join('wamcore', 'characters_ref.json'),
-            os.path.join('wamcore', 'experience_table_ref.json'),
-            os.path.join('wamcore', 'items_ref.json'),
-            os.path.join('wamcore', 'magic_ref.json'),
-            os.path.join('wamcore', 'processes_ref.json'),
-            os.path.join('wamcore', 'warbands_ref.json'),
+        (os.path.join('wamcore', 'database'), [
+            os.path.join('wamcore', 'database', 'abilities_ref.json'),
+            os.path.join('wamcore', 'database', 'characters_ref.json'),
+            os.path.join('wamcore', 'database', 'experience_table_ref.json'),
+            os.path.join('wamcore', 'database', 'items_ref.json'),
+            os.path.join('wamcore', 'database', 'magic_ref.json'),
+            os.path.join('wamcore', 'database', 'processes_ref.json'),
+            os.path.join('wamcore', 'database', 'warbands_ref.json'),
             ])
         ],
     include_package_data=True,

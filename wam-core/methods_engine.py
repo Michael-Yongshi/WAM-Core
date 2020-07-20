@@ -57,7 +57,7 @@ def save_reference(datadict, filename):
     """Save reference data to the fixed location within the application directory"""
 
     # set the paths to the applications database reference files
-    path = os.path.join(os.path.dirname(__file__), "..", "database", "references")
+    path = os.path.join(os.path.dirname(__file__), "database")
 
     # set the reference filename to be loaded
     filename = filename + "_ref"
@@ -69,7 +69,7 @@ def load_reference(reference):
     """Load reference data from the fixed location within the application directory"""
 
     # set the paths to the applications database reference files
-    path = path = os.path.join(os.path.dirname(__file__), "..", "database", "references")
+    path = path = os.path.join(os.path.dirname(__file__), "database")
 
     # set the reference filename to be loaded
     filename = reference + "_ref"

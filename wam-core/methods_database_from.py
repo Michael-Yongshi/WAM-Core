@@ -98,7 +98,6 @@ def get_abilityref(source, main, category, name):
     else:
         print(f"Main: {main} does not exist")
 
-
 def get_magicref(source, category, name):
 
     filename = "magic"

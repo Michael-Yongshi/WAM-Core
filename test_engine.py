@@ -1,12 +1,12 @@
 import datetime
 
-from source.methods_engine import (
+from wamcore.methods_engine import (
     save_warband,
     load_warband,
     show_warbands,
     )
 
-from source.class_hierarchy import (
+from wamcore.class_hierarchy import (
     Warband,
     Squad,
     Character,
@@ -14,7 +14,7 @@ from source.class_hierarchy import (
     Henchman,
     )
 
-from source.class_components import (
+from wamcore.class_components import (
     Rule,
     Treasury,
     Item,
@@ -95,6 +95,7 @@ def test_ReiklandWarband():
     squad1.buy_item(
         wbid = wbid, 
         item = Item(
+            name = "Spear",
             subcategory = "Spear", 
             category = "Melee Weapon", 
             source = "Core Rules"
@@ -105,6 +106,7 @@ def test_ReiklandWarband():
     squad2.buy_item(
         wbid = wbid, 
         item = Item(
+            name = "Spear",
             subcategory = "Great Sword", 
             category = "Melee Weapon", 
             source = "Core Rules"

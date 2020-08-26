@@ -1,3 +1,5 @@
+import os
+
 from wamcore.methods_database_from_copy import (
     get_warbandref,
     get_characterref,
@@ -6,14 +8,11 @@ from wamcore.methods_database_from_copy import (
     get_magicref,
 )
 
-from wamcore.database.database import (
+from sqlitemanager.database import (
     Database,
     Table,
     Record,
 )
-
-database_path = """E:\\Git\\WAM-Core\\wamcore\\database"""
-database_filename = "wam_core_database"
 
 def magic_table(db):
 
@@ -453,7 +452,9 @@ def experience_table(db):
 
 if __name__ == "__main__":
 
-    
+    database_path = os.path.join(__file__, "..")
+    database_filename = "database"
+
     db = Database(path=database_path, filename=database_filename)
     
     magic_table(db)

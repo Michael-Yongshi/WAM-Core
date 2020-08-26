@@ -452,7 +452,7 @@ def experience_table(db):
 
 if __name__ == "__main__":
 
-    database_path = os.path.join(__file__, "..")
+    database_path = os.path.join(os.path.dirname(__file__))
     database_filename = "database"
 
     db = Database(path=database_path, filename=database_filename)

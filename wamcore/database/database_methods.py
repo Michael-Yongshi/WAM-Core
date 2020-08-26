@@ -8,7 +8,7 @@ from sqlitemanager.database import (
 def get_database_records(tablename):
 
     # connect_to_database
-    database_path = os.path.join("..", __file__)
+    database_path = os.path.join(os.path.dirname(__file__))
     database_filename = "database"
 
     database = Database(filename=database_filename, path=database_path)

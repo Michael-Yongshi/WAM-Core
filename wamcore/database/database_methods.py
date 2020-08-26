@@ -12,6 +12,8 @@ def get_database_records(tablename):
     database_filename = "database"
 
     database = Database(filename=database_filename, path=database_path)
+    print(f"tables {database.get_tables()}")
+
     table = database.get_table(tablename=tablename)
     records = table.readAllRecords()
 

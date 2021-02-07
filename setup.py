@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="WAM-Core",
-    version="0.3.8",
+    version="0.4.22",
     author="Michael-Yongshi",
     author_email="4registration@outlook.com",
     description="WAM-Core package",
@@ -23,6 +23,7 @@ setuptools.setup(
             os.path.join('wamcore', 'database', 'magic_ref.json'),
             os.path.join('wamcore', 'database', 'processes_ref.json'),
             os.path.join('wamcore', 'database', 'warbands_ref.json'),
+            os.path.join('wamcore', 'database', 'database.sqlite')
             ])
         ],
     include_package_data=True,

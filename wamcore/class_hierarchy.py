@@ -1,7 +1,11 @@
 import copy
+import json
 
 from .methods_engine import (
     load_reference,
+    load_crossreference,
+    print_record,
+    print_records,
 )
 
 from .methods_database_from import(
@@ -21,7 +25,6 @@ from .class_components import (
     Magic,
     Event,
     )
-
 
 class Warband(object):
     def __init__(self, name, race, source, warband, description=None, treasury=None, rulelist=[], itemlist=[], herolist=[], squadlist=[]):
@@ -79,24 +82,50 @@ class Warband(object):
     @staticmethod
     def from_database(primarykey):
 
-        table = load_reference("warbands")
-        for record in table:
+        warbandtable = load_reference("warbands")
+        for record in warbandtable:
             if record.primarykey == primarykey:
                 warband_record = record
                 break
         
+        # Create Treasury object from startgold variable
+        treasury = Treasury(
+            gold = warband_record.recorddict["startgold"],
+        )
+
+        # Create list of rules
+        rulelist = []
+        rule_records = warband_record.recorddict["rules"]
+        rule_json = json.loads(rule_records) # rules are still stored as json strings
+        print(rule_json)
+
+        for ruledict in rule_json:
+            rulelist += [Rule.from_dict(ruledict)]
+
+        # Create list of items
+        itemxrecords = load_crossreference(
+            source_table="warbands",
+            target_table="items",
+            key=primarykey,
+            )
+        print_records(itemxrecords)
+
+        itemlist = []
+        for itemxrecord in itemxrecords:
+            itemlist += [Item.from_database(itemxrecord.recorddict["items_id"])]
+
         # set the dictionary values to a python object
         dataobject = Warband(
             name = "My Warband",
-            race = warband_record.get_column_value("race"),
-            source = warband_record.get_column_value("source"),
-            warband = warband_record.get_column_value("name"),
-            description = warband_record.get_column_value("description"),
-            treasury = "treasury",
-            rulelist = "rulelist",
-            itemlist = "itemlist",
-            herolist = "herolist",
-            squadlist = "squadlist",
+            race = warband_record.recorddict["race"],
+            source = warband_record.recorddict["source"],
+            warband = warband_record.recorddict["base"],
+            description = warband_record.recorddict["description"],
+            treasury = treasury,
+            rulelist = rulelist,
+            itemlist = itemlist,
+            herolist = [],
+            squadlist = [],
             )
         
         return dataobject

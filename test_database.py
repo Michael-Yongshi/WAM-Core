@@ -30,14 +30,20 @@ from wamcore.class_components import (
 def test_all_warbands():
 
     table = load_reference("warbands")
+    for record in table:
+        print(record.recorddict["base"])
 
     for record in table:
         warband = Warband.from_database(primarykey=record.primarykey)
+
         print(warband.race)
         print(warband.source)
         print(warband.warband)
-        print(warband.description)
-        
+        # print(warband.description)
+        print(warband.treasury.gold)
+        print(warband.rulelist)
+        print("done")
+
 def test_all_items():
 
     # test warband

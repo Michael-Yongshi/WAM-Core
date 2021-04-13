@@ -117,6 +117,31 @@ class Item(object):
         return datadict
 
     @staticmethod
+    def from_database(primarykey):
+
+        itemtable = load_reference("items")
+        for record in itemtable:
+            if record.primarykey == primarykey:
+                item_record = record
+                break
+
+        # set the database values to a python object
+        dataobject = Item(
+            name = "My Item",
+            subcategory = item_record.get_column_value("subcategory"),
+            source = "source",
+            category = "category",
+            distance = "distance",
+            skill = "skill",
+            abilitylist = "abilitylist",
+            magiclist = "magiclist",
+            price = "price",
+            description = "description"
+            )
+        
+        return dataobject
+
+    @staticmethod
     def from_dict(datadict):
         
         # recursively set some nested dictionaries to a python object

@@ -67,11 +67,7 @@ def save_reference(datadict, filename):
     # run the json command to save the file as a json file
     save_json(datadict, path, filename)
 
-def load_reference(reference):
-    """
-    Load reference data from the database
-    """
-
+def get_database_handler():
     # TODO: try / except if database is missing for some reason
     
     # set up database handler
@@ -81,11 +77,37 @@ def load_reference(reference):
     current_dir = os.path.dirname(os.path.realpath(__file__))
     database_path = os.path.join(current_dir, "database")
     handler.database_open(filename="database", path=database_path)
+
+    return handler
+
+def load_reference(table):
+    """
+    Load table data from the database
+    """
+
+    # get handler
+    handler = get_database_handler()
     
-    # set the reference to be loaded
-    table = handler.database.tables["warbands"].records
+    # set the table to be loaded
+    table = handler.database.tables[table].records
 
     return table
+
+def load_crossreference(source_table, target_table, key):
+
+    # get handler
+    handler = get_database_handler()
+
+    # reading crossreferences
+    records = handler.crossref_read_record(
+        tablename1=source_table,
+        tablename2=target_table,
+        primarykey=key,
+    )
+    # print(f"Looking up records of {target_table} based on key {key} of {source_table}")
+    # print_records(records)
+
+    return records
 
 def print_records(records):
     for record in records:

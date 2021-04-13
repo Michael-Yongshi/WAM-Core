@@ -1,11 +1,13 @@
-from source.methods_engine import (
+from wamcore.methods_engine import (
+    print_record,
+    print_records,
     save_warband,
     load_warband,
     show_warbands,
     load_reference,
     )
 
-from source.class_hierarchy import (
+from wamcore.class_hierarchy import (
     Warband,
     Squad,
     Character,
@@ -13,7 +15,7 @@ from source.class_hierarchy import (
     Henchman,
     )
 
-from source.class_components import (
+from wamcore.class_components import (
     Rule,
     Treasury,
     Item,
@@ -24,6 +26,14 @@ from source.class_components import (
     )
 
 # test items
+
+def test_all_warbands():
+
+    table = load_reference("warbands")
+
+    for record in table:
+        warband = Warband.from_database(primarykey=record.primarykey)
+
 
 def test_all_items():
 
@@ -54,15 +64,16 @@ def test_all_items():
                 # get item data
                 itemdict = datadict[category][source][subcategory]
                 print(itemdict["subcategory"])
+                
                 # create python object
                 dataobject = Item.from_refdict(datadict = itemdict)
                 hero1.itemlist = [
                     dataobject
                     ]
-                
 
 if __name__ == "__main__":
-    # test_all_warbands()
-    test_all_items()
+
+    test_all_warbands()
+    # test_all_items()
     # test_all_abilities()
     # test_all_magic()

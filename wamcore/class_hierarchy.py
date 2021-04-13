@@ -77,6 +77,31 @@ class Warband(object):
         return datadict
     
     @staticmethod
+    def from_database(primarykey):
+
+        table = load_reference("warbands")
+        for record in table:
+            if record.primarykey == primarykey:
+                warband_record = record
+                break
+        
+        # set the dictionary values to a python object
+        dataobject = Warband(
+            name = "My Warband",
+            race = warband_record.get_column_value("race"),
+            source = warband_record.get_column_value("source"),
+            warband = warband_record.get_column_value("name"),
+            description = warband_record.get_column_value("description"),
+            treasury = "treasury",
+            rulelist = "rulelist",
+            itemlist = "itemlist",
+            herolist = "herolist",
+            squadlist = "squadlist",
+            )
+        
+        return dataobject
+
+    @staticmethod
     def from_dict(datadict):
         """ Create an object, and all nested objects, out of a warband dictionary in order to enable updates to that data."""
         

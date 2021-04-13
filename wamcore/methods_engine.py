@@ -6,14 +6,7 @@ from .methods_json import (
     load_json,
 )
 
-from .database.abilities_ref import get_abilities_ref
-from .database.characters_ref import get_characters_ref
-from .database.experience_table_ref import get_experience_table_ref
-from .database.characters_ref import get_characters_ref
-from .database.items_ref import get_items_ref
-from .database.magic_ref import get_magic_ref
-from .database.processes_ref import get_processes_ref
-from .database.warbands_ref import get_warbands_ref
+from sqlitemanager.handler import SQLiteHandler
 
 def get_localpath():
     """set the paths to the users documents folder"""
@@ -75,35 +68,28 @@ def save_reference(datadict, filename):
     save_json(datadict, path, filename)
 
 def load_reference(reference):
-    """Load reference data from the fixed location within the application directory"""
+    """
+    Load reference data from the database
+    """
 
-    # # set the paths to the applications database reference files
-    # path = path = os.path.join(os.path.dirname(__file__), "database")
-
-    # # set the reference filename to be loaded
-    # filename = reference + "_ref"
-
-    # # load the file
-    # datadict = load_json(path, filename)
-
-    # # return the reference dictionary
-    # return datadict
-
-    if reference == "abilities":
-        datadict = get_abilities_ref()
-    elif reference == "characters":
-        datadict = get_characters_ref()
-    elif reference == "experience_table":
-        datadict = get_experience_table_ref()
-    elif reference == "items":
-        datadict = get_items_ref()
-    elif reference == "magic":
-        datadict = get_magic_ref()
-    elif reference == "processes":
-        datadict = get_processes_ref()
-    elif reference == "warbands":
-        datadict = get_warbands_ref()
-    else:
-        datadict = None
+    # TODO: try / except if database is missing for some reason
     
-    return datadict
+    # set up database handler
+    handler = SQLiteHandler()
+
+    # set the path to the database
+    current_dir = os.path.dirname(os.path.realpath(__file__))
+    database_path = os.path.join(current_dir, "database")
+    handler.database_open(filename="database", path=database_path)
+    
+    # set the reference to be loaded
+    table = handler.database.tables["warbands"].records
+
+    return table
+
+def print_records(records):
+    for record in records:
+        print_record(record)
+
+def print_record(record):
+    print(f"primarykey: {record.primarykey}, recordpairs: {record.recordpairs}")

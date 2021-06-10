@@ -1,7 +1,11 @@
 import copy
+import json
 
 from .methods_engine import (
     load_reference,
+    load_crossreference,
+    print_record,
+    print_records,
 )
 
 from .methods_database_from import(
@@ -22,19 +26,72 @@ from .class_components import (
     Event,
     )
 
-
 class Warband(object):
-    def __init__(self, name, race, source, warband, description=None, treasury=None, rulelist=[], itemlist=[], herolist=[], squadlist=[]):
+    def __init__(self, database_id, warband, race, name, source=None, description=None, treasury=None, rulelist=[], itemlist=[], herolist=[], squadlist=[]):
+
         self.name = name
+        self.database_id = database_id
+        self.warband = warband
         self.race = race
         self.source = source
-        self.warband = warband
         self.description = description
         self.treasury = treasury if treasury else Treasury()
         self.rulelist = rulelist
         self.itemlist = itemlist
         self.herolist = herolist
         self.squadlist = squadlist
+
+    @staticmethod
+    def from_database(primarykey):
+
+        table = load_reference("warbands")
+        for record in table:
+            if record.primarykey == primarykey:
+                warband_record = record
+                break
+        
+        # Create Treasury object from startgold variable
+        treasury = Treasury(
+            gold = warband_record.recorddict["startgold"],
+        )
+
+        # Create list of rules
+        rulelist = []
+        rule_records = warband_record.recorddict["rules"]
+        rule_json = json.loads(rule_records) # rules are still stored as json strings
+        # print(rule_json)
+
+        for ruledict in rule_json:
+            rulelist += [Rule.from_dict(ruledict)]
+
+        # Create list of items
+        wb_item_records = load_crossreference(
+            source_table="warbands",
+            target_table="items",
+            key=primarykey,
+            )
+        # print_records(wb_item_records)
+
+        itemlist = []
+        for wb_item_record in wb_item_records:
+            itemlist += [Item.from_database(wb_item_record.recorddict["items_id"])]
+
+        # set the dictionary values to a python object
+        dataobject = Warband(
+            name = "My Warband",
+            database_id = warband_record.primarykey,
+            warband = warband_record.recorddict["base"],
+            race = warband_record.recorddict["race"],
+            source = warband_record.recorddict["source"],
+            description = warband_record.recorddict["description"],
+            treasury = treasury,
+            rulelist = rulelist,
+            itemlist = itemlist,
+            herolist = [],
+            squadlist = [],
+            )
+        
+        return dataobject
 
     def to_dict(self):
         """ Create a dictionary string of a Warband object, including all nested objects, that can be saved to a JSON file for storage."""
@@ -183,6 +240,24 @@ class Warband(object):
         )
         return template_wb
 
+    def get_characters(self):
+        """
+        retrieves the list of characters that are available for this warband
+        """
+
+        # Create list of characters
+        records = load_crossreference(
+            source_table="warbands",
+            target_table="characters",
+            key=self.database_id,
+            )
+        
+        character_list = []
+        for record in records:
+            character_list.append(record.recorddict["characters_id"])
+
+        return character_list
+
     def get_price(self):
         """ -- Can this be deleted? -- Get the worth of your warband"""
         
@@ -217,6 +292,21 @@ class Squad(object):
     def __init__(self, name, henchmanlist=[]):
         self.name = name
         self.henchmanlist = henchmanlist
+
+    @staticmethod
+    def from_database(primarykey, name="My Squad"):
+        """Create a new squad from a database record"""
+        
+        dataobject = Squad(
+            name = name,
+            henchmanlist = []
+            )
+
+        # add a single henchman to the squad
+        newhenchman = Henchman.from_database(primarykey=primarykey)
+        dataobject.henchmanlist.append(newhenchman)
+                
+        return dataobject
 
     def to_dict(self):  
 
@@ -348,7 +438,9 @@ class Squad(object):
         return squadprice
 
 class Character(object):
-    def __init__(self, name, race, source, warband, category, ishero, skill, abilitylist=[], magiclist=[], itemlist=[], eventlist=[], experience=0, price=0, maxcount=0, description=None, unique_id=None):
+    def __init__(self, name, race, source, warband, category, ishero, skill, database_id=None, abilitylist=[], magiclist=[], itemlist=[], eventlist=[], experience=0, price=0, maxcount=0, description=None, unique_id=None):
+
+        self.database_id = database_id
         self.name = name
         self.race = race
         self.source = source
@@ -365,7 +457,77 @@ class Character(object):
         self.maxcount = maxcount
         self.description = description
         self.unique_id = unique_id
-    
+
+    @staticmethod
+    def from_database(primarykey):
+
+        table = load_reference("characters")
+        for record in table:
+            if record.primarykey == primarykey:
+                char_record = record
+                break
+
+        # recursively set a dictionary to some nested objects
+        skill = Skill.from_database_record(char_record)
+
+        # find the reference dictionaries of a set of values to a list of python objects
+        # Create list of abilities
+        char_ability_records = load_crossreference(
+            source_table="characters",
+            target_table="abilities",
+            key=primarykey,
+            )
+
+        abilitylist = []
+        for char_ability_record in char_ability_records:
+            abilitylist += [Ability.from_database(char_ability_record.recorddict["abilities_id"])]
+
+        # Create list of magics
+        char_magic_records = load_crossreference(
+            source_table="characters",
+            target_table="magics",
+            key=primarykey,
+            )
+
+        magiclist = []
+        for char_magic_record in char_magic_records:
+            magiclist += [Magic.from_database(char_magic_record.recorddict["magics_id"])]
+        
+        # Create list of items
+        char_item_records = load_crossreference(
+            source_table="characters",
+            target_table="items",
+            key=primarykey,
+            )
+
+        itemlist = []
+        for char_item_record in char_item_records:
+            itemlist += [Item.from_database(char_item_record.recorddict["items_id"])]
+
+        eventlist = []
+
+        # set the dictionary values to a python object
+        dataobject = Character(
+            database_id = primarykey,
+            name = "",
+            race = char_record.recorddict["race"],
+            source = char_record.recorddict["source"],
+            warband = char_record.recorddict["warband"],
+            category = char_record.recorddict["name"],
+            ishero = char_record.recorddict["ishero"],
+            skill = skill,
+            abilitylist = abilitylist,
+            magiclist = magiclist,
+            itemlist = itemlist,
+            eventlist = eventlist,
+            experience = char_record.recorddict["experience"],
+            price = char_record.recorddict["price"],
+            maxcount = char_record.recorddict["maxcount"],
+            description = char_record.recorddict["description"],
+            )
+
+        return dataobject
+
     def to_dict(self):  
 
         # recursively set some nested objects to a dictionary
@@ -862,6 +1024,21 @@ class Character(object):
         return totalmagiclist
 
 class Hero(Character):
+
+    @staticmethod
+    def from_database(primarykey, name="My Hero"):
+
+        # set the record to a python object
+        dataobject = Character.from_database(primarykey = primarykey)
+        dataobject.name == name
+        
+        if dataobject.ishero == 0:
+            print("Henchmen can't be added outside a squad")
+
+            return
+
+        return dataobject
+
     @staticmethod
     def create_character(name, race, source, warband, category):
         # open reference data json file
@@ -874,6 +1051,21 @@ class Hero(Character):
             return dataobject
 
 class Henchman(Character):
+
+    @staticmethod
+    def from_database(primarykey, name="My Henchman"):
+
+        # set the record to a python object
+        dataobject = Character.from_database(primarykey = primarykey)
+        dataobject.name == name
+        
+        if dataobject.ishero == 1:
+            print("Heroes can't be added to a squad")
+
+            return
+
+        return dataobject
+
     @staticmethod
     def create_character(name, race, source, warband, category):
         # open reference data json file

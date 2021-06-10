@@ -3,6 +3,7 @@ import datetime
 
 from .methods_engine import (
     load_reference,
+    load_crossreference,
 )
 
 from .methods_database_from import(
@@ -74,7 +75,7 @@ class Treasury(object):
         return dataobject
 
 class Item(object):
-    def __init__(self, name, source, category, subcategory, distance=0, skill=None, abilitylist=[], magiclist=[], price=0, description=None):
+    def __init__(self, name, source, category, subcategory, database_id= None, distance=0, skill=None, abilitylist=[], magiclist=[], price=0, description=None):
         self.name = name
         self.source = source
         self.category = category
@@ -115,6 +116,56 @@ class Item(object):
             'description': self.description
         }
         return datadict
+
+    @staticmethod
+    def from_database(primarykey):
+
+        table = load_reference("items")
+        for record in table:
+            if record.primarykey == primarykey:
+                item_record = record
+                break
+
+        skill = Skill.from_database_record(item_record)
+
+        # find the reference dictionaries of a set of values to a list of python objects
+        # Create list of abilities
+        item_ability_records = load_crossreference(
+            source_table="items",
+            target_table="abilities",
+            key=primarykey,
+            )
+
+        abilitylist = []
+        for item_ability_record in item_ability_records:
+            abilitylist += [Ability.from_database(item_ability_record.recorddict["abilities_id"])]
+
+        # Create list of magics
+        item_magic_records = load_crossreference(
+            source_table="items",
+            target_table="magics",
+            key=primarykey,
+            )
+
+        magiclist = []
+        for item_magic_record in item_magic_records:
+            magiclist += [Magic.from_database(item_magic_record.recorddict["magics_id"])]
+
+        # set the database values to a python object
+        dataobject = Item(
+            name = "My Item",
+            subcategory = item_record.recorddict["subcategory"],
+            source = item_record.recorddict["source"],
+            category = item_record.recorddict["category"],
+            distance = item_record.recorddict["distance"],
+            skill = skill,
+            abilitylist = abilitylist,
+            magiclist = magiclist,
+            price = item_record.recorddict["price"],
+            description = item_record.recorddict["description"],
+            )
+        
+        return dataobject
 
     @staticmethod
     def from_dict(datadict):
@@ -266,6 +317,29 @@ class Skill(object):
 
         return dataobject
 
+    @staticmethod
+    def from_database_record(record):
+
+        try:
+            # set the record values to a python object
+            dataobject = Skill(
+                movement = record.recorddict["movement"],
+                weapon = record.recorddict["weapon"],
+                ballistic = record.recorddict["ballistic"],
+                strength = record.recorddict["strength"],
+                impact = record.recorddict["impact"],
+                toughness = record.recorddict["toughness"],
+                wounds = record.recorddict["wounds"],
+                initiative = record.recorddict["initiative"],
+                actions = record.recorddict["actions"],
+                leadership = record.recorddict["leadership"],
+                armoursave = record.recorddict["armoursave"],
+                )
+        except:
+            print(f"Record {record} doesnt contain all needed skills!")
+
+        return dataobject
+
     def to_list(self):
 
         # set the object values to a list
@@ -320,7 +394,7 @@ class Skill(object):
 
 class Ability(object):
     """Default object to assign ablities as a basis for character and item abilities"""
-    def __init__(self, source, main, category, name, description=""):
+    def __init__(self, source, main, category, name, database_id=None, description=""):
         self.source = source
         self.main = main
         self.category = category
@@ -355,6 +429,26 @@ class Ability(object):
         return dataobject
 
     @staticmethod
+    def from_database(primarykey):
+
+        table = load_reference("abilities")
+        for record in table:
+            if record.primarykey == primarykey:
+                ability_record = record
+                break
+
+        # set the record to a python object
+        dataobject = Ability(
+            source = ability_record.recorddict["source"],
+            main = ability_record.recorddict["maincategory"],
+            category = ability_record.recorddict["category"],
+            name = ability_record.recorddict["name"],
+            description = ability_record.recorddict["description"],
+            )
+
+        return dataobject
+
+    @staticmethod
     def create_ability(source, main, category, name):
         # open reference data json file
         datadict = load_reference("abilities")
@@ -369,7 +463,7 @@ class Ability(object):
 
 class Magic(object):
     """Default object to assign ablities as a basis for character and item abilities"""
-    def __init__(self, source, category, name, group, difficulty, description=""):
+    def __init__(self, source, category, name, group, difficulty, database_id=None, description=""):
         self.source = source
         self.category = category
         self.name = name
@@ -402,6 +496,27 @@ class Magic(object):
             group = datadict["group"],
             difficulty = datadict["difficulty"],
             description = datadict["description"],
+            )
+
+        return dataobject
+
+    @staticmethod
+    def from_database(primarykey):
+
+        table = load_reference("magics")
+        for record in table:
+            if record.primarykey == primarykey:
+                magic_record = record
+                break
+
+        # set the record to a python object
+        dataobject = Magic(
+            source = magic_record.recorddict["source"],
+            category = magic_record.recorddict["category"],
+            name = magic_record.recorddict["name"],
+            group = magic_record.recorddict["grouping"],
+            difficulty = magic_record.recorddict["difficulty"],
+            description = magic_record.recorddict["description"],
             )
 
         return dataobject

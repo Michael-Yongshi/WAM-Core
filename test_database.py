@@ -5,6 +5,7 @@ from wamcore.methods_engine import (
     load_warband,
     show_warbands,
     load_reference,
+    load_crossreference,
     )
 
 from wamcore.class_hierarchy import (
@@ -29,60 +30,111 @@ from wamcore.class_components import (
 
 def test_all_warbands():
 
-    table = load_reference("warbands")
-    for record in table:
-        print(record.recorddict["base"])
+    try:
+        wbtable = load_reference("warbands")
+        chartable = load_reference("characters")
+        wb_chartable = load_reference("CROSSREF_warbands_characters")
+        
+        for wb_record in wbtable:
 
-    for record in table:
-        warband = Warband.from_database(primarykey=record.primarykey)
+            wb_id = wb_record.primarykey
+            print(wb_record.recorddict["base"])
 
-        print(warband.race)
-        print(warband.source)
-        print(warband.warband)
-        # print(warband.description)
-        print(warband.treasury.gold)
-        print(warband.rulelist)
-        print("done")
+            warband = Warband.from_database(primarykey=wb_id)
+
+            print(warband.race)
+            print(warband.source)
+            print(warband.warband)
+            # print(warband.description)
+            print(warband.treasury.gold)
+            print(warband.rulelist)
+            print(warband.itemlist)
+            print("done")
+
+            # Create list of characters
+            wb_char_records = load_crossreference(
+                source_table="warbands",
+                target_table="characters",
+                key=wb_id,
+                )
+            print_records(wb_char_records)
+
+            for wb_char_record in wb_char_records:
+                char_id = wb_char_record.recorddict["characters_id"]
+                newchar = Character.from_database(char_id)
+
+                if newchar.ishero == 1:
+                    newhero = Hero.from_database(primarykey=char_id)
+                    warband.herolist.append(newhero)
+
+                else:
+                    newsquad = Squad.from_database(primarykey=char_id)
+                    warband.squadlist.append(newsquad)
+
+            print(warband.herolist)
+            print(warband.squadlist)
+    
+    except:
+        print("Testing all warbands failed")
 
 def test_all_items():
 
-    # test warband
-    wbid = Warband.create_warband(
-        name = "Test Reikland",
-        race = "Human",
-        source = "Core Rules",
-        warband =  "Reikland",
-        )
-   
-    # test unit
-    hero1 = Hero.create_character(
-        name = "Anado", 
-        race = "Human", 
-        source = "Core Rules",
-        warband = "Reikland",
-        category = "Mercenary Captain",
-        )
+    try:
+        #load reference of all items
+        table = load_reference("items")
 
-    #load reference of all items
-    datadict = load_reference("items")
+        # loop over all items
+        items = []
+        for record in table:
 
-    # loop over all items
-    for category in datadict:
-        for source in datadict[category]:
-            for subcategory in datadict[category][source]:
-                # get item data
-                itemdict = datadict[category][source][subcategory]
-                print(itemdict["subcategory"])
-                
-                # create python object
-                dataobject = Item.from_refdict(datadict = itemdict)
-                hero1.itemlist = [
-                    dataobject
-                    ]
+            dataobject = Item.from_database(record.primarykey)
+            items.append(dataobject)
+
+        print(items)
+
+    except:
+        print("Testing all items failed")
+
+def test_all_abilities():
+
+    try:
+        # load reference of all abilities
+        table = load_reference("abilities")
+
+        # loop over all abilities
+        abilities = []
+        for record in table:
+
+            dataobject = Ability.from_database(record.primarykey)
+            abilities.append(dataobject)
+
+        print(abilities)
+
+    except:
+        print("Testing all abilities failed")
+
+def test_all_magics():
+
+    try:
+
+        # load reference of all magics
+        table = load_reference("magics")
+
+        # loop over all magics
+        magics = []
+        for record in table:
+
+            dataobject = Magic.from_database(record.primarykey)
+            magics.append(dataobject)
+
+        print(magics)
+
+    except:
+        print("Testing all magics failed")
 
 if __name__ == "__main__":
 
     test_all_warbands()
-    # test_all_items()
-    # test_all_abilities()
-    # test_all_magic()
+    test_all_items()
+    test_all_abilities()
+    test_all_magics()

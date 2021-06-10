@@ -3,6 +3,7 @@ import datetime
 
 from .methods_engine import (
     load_reference,
+    load_crossreference,
 )
 
 from .methods_database_from import(
@@ -74,7 +75,7 @@ class Treasury(object):
         return dataobject
 
 class Item(object):
-    def __init__(self, name, source, category, subcategory, distance=0, skill=None, abilitylist=[], magiclist=[], price=0, description=None):
+    def __init__(self, name, source, category, subcategory, database_id= None, distance=0, skill=None, abilitylist=[], magiclist=[], price=0, description=None):
         self.name = name
         self.source = source
         self.category = category
@@ -125,18 +126,43 @@ class Item(object):
                 item_record = record
                 break
 
+        skill = Skill.from_database_record(item_record)
+
+        # find the reference dictionaries of a set of values to a list of python objects
+        # Create list of abilities
+        item_ability_records = load_crossreference(
+            source_table="items",
+            target_table="abilities",
+            key=primarykey,
+            )
+
+        abilitylist = []
+        for item_ability_record in item_ability_records:
+            abilitylist += [Ability.from_database(item_ability_record.recorddict["abilities_id"])]
+
+        # Create list of magics
+        item_magic_records = load_crossreference(
+            source_table="items",
+            target_table="magics",
+            key=primarykey,
+            )
+
+        magiclist = []
+        for item_magic_record in item_magic_records:
+            magiclist += [Magic.from_database(item_magic_record.recorddict["magics_id"])]
+
         # set the database values to a python object
         dataobject = Item(
             name = "My Item",
             subcategory = item_record.recorddict["subcategory"],
-            source = "source",
-            category = "category",
-            distance = "distance",
-            skill = "skill",
-            abilitylist = "abilitylist",
-            magiclist = "magiclist",
-            price = "price",
-            description = "description"
+            source = item_record.recorddict["source"],
+            category = item_record.recorddict["category"],
+            distance = item_record.recorddict["distance"],
+            skill = skill,
+            abilitylist = abilitylist,
+            magiclist = magiclist,
+            price = item_record.recorddict["price"],
+            description = item_record.recorddict["description"],
             )
         
         return dataobject
@@ -368,7 +394,7 @@ class Skill(object):
 
 class Ability(object):
     """Default object to assign ablities as a basis for character and item abilities"""
-    def __init__(self, source, main, category, name, description=""):
+    def __init__(self, source, main, category, name, database_id=None, description=""):
         self.source = source
         self.main = main
         self.category = category
@@ -437,7 +463,7 @@ class Ability(object):
 
 class Magic(object):
     """Default object to assign ablities as a basis for character and item abilities"""
-    def __init__(self, source, category, name, group, difficulty, description=""):
+    def __init__(self, source, category, name, group, difficulty, database_id=None, description=""):
         self.source = source
         self.category = category
         self.name = name

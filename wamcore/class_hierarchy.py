@@ -27,11 +27,13 @@ from .class_components import (
     )
 
 class Warband(object):
-    def __init__(self, name, race, source, warband, description=None, treasury=None, rulelist=[], itemlist=[], herolist=[], squadlist=[]):
+    def __init__(self, database_id, warband, race, name, source=None, description=None, treasury=None, rulelist=[], itemlist=[], herolist=[], squadlist=[]):
+
         self.name = name
+        self.database_id = database_id
+        self.warband = warband
         self.race = race
         self.source = source
-        self.warband = warband
         self.description = description
         self.treasury = treasury if treasury else Treasury()
         self.rulelist = rulelist
@@ -57,7 +59,7 @@ class Warband(object):
         rulelist = []
         rule_records = warband_record.recorddict["rules"]
         rule_json = json.loads(rule_records) # rules are still stored as json strings
-        print(rule_json)
+        # print(rule_json)
 
         for ruledict in rule_json:
             rulelist += [Rule.from_dict(ruledict)]
@@ -68,7 +70,7 @@ class Warband(object):
             target_table="items",
             key=primarykey,
             )
-        print_records(wb_item_records)
+        # print_records(wb_item_records)
 
         itemlist = []
         for wb_item_record in wb_item_records:
@@ -77,9 +79,10 @@ class Warband(object):
         # set the dictionary values to a python object
         dataobject = Warband(
             name = "My Warband",
+            database_id = warband_record.primarykey,
+            warband = warband_record.recorddict["base"],
             race = warband_record.recorddict["race"],
             source = warband_record.recorddict["source"],
-            warband = warband_record.recorddict["base"],
             description = warband_record.recorddict["description"],
             treasury = treasury,
             rulelist = rulelist,
@@ -236,6 +239,24 @@ class Warband(object):
             warband="",
         )
         return template_wb
+
+    def get_characters(self):
+        """
+        retrieves the list of characters that are available for this warband
+        """
+
+        # Create list of characters
+        records = load_crossreference(
+            source_table="warbands",
+            target_table="characters",
+            key=self.database_id,
+            )
+        
+        character_list = []
+        for record in records:
+            character_list.append(record.recorddict["characters_id"])
+
+        return character_list
 
     def get_price(self):
         """ -- Can this be deleted? -- Get the worth of your warband"""
@@ -417,7 +438,9 @@ class Squad(object):
         return squadprice
 
 class Character(object):
-    def __init__(self, name, race, source, warband, category, ishero, skill, abilitylist=[], magiclist=[], itemlist=[], eventlist=[], experience=0, price=0, maxcount=0, description=None, unique_id=None):
+    def __init__(self, name, race, source, warband, category, ishero, skill, database_id=None, abilitylist=[], magiclist=[], itemlist=[], eventlist=[], experience=0, price=0, maxcount=0, description=None, unique_id=None):
+
+        self.database_id = database_id
         self.name = name
         self.race = race
         self.source = source
@@ -485,6 +508,7 @@ class Character(object):
 
         # set the dictionary values to a python object
         dataobject = Character(
+            database_id = primarykey,
             name = "",
             race = char_record.recorddict["race"],
             source = char_record.recorddict["source"],
@@ -499,7 +523,7 @@ class Character(object):
             experience = char_record.recorddict["experience"],
             price = char_record.recorddict["price"],
             maxcount = char_record.recorddict["maxcount"],
-            description = char_record.recorddict["description"],    
+            description = char_record.recorddict["description"],
             )
 
         return dataobject

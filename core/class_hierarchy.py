@@ -27,7 +27,7 @@ from .class_components import (
     )
 
 class Warband(object):
-    def __init__(self, database_id, warband, race, name, source=None, description=None, treasury=None, rulelist=[], itemlist=[], herolist=[], squadlist=[]):
+    def __init__(self, warband, race, name, source=None, database_id=None, description=None, treasury=None, rulelist=[], itemlist=[], herolist=[], squadlist=[]):
 
         self.name = name
         self.database_id = database_id

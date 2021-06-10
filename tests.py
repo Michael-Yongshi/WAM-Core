@@ -36,15 +36,14 @@ def test_all_warbands():
 
             character_list = warband.get_characters()
 
-            for char_id in character_list:
-                newchar = Character.from_database(char_id)
+            for character in character_list:
 
-                if newchar.ishero == 1:
-                    newhero = Hero.from_database(primarykey=char_id)
+                if character.ishero == True:
+                    newhero = Hero.from_database(primarykey=character.database_id)
                     warband.herolist.append(newhero)
 
                 else:
-                    newsquad = Squad.from_database(primarykey=char_id)
+                    newsquad = Squad.from_database(primarykey=character.database_id)
                     warband.squadlist.append(newsquad)
 
             pass
@@ -138,10 +137,10 @@ def test_add_character(name,race,source,warband,ishero,skilldict,experience,pric
 if __name__ == "__main__":
 
     # # get from database
-    # test_all_warbands()
-    # test_all_items()
-    # test_all_abilities()
-    # test_all_magics()
+    test_all_warbands()
+    test_all_items()
+    test_all_abilities()
+    test_all_magics()
 
     # add to database
     test_add_character(

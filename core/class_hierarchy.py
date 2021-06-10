@@ -251,10 +251,11 @@ class Warband(object):
             target_table="characters",
             key=self.database_id,
             )
-        
+
         character_list = []
         for record in records:
-            character_list.append(record.recorddict["characters_id"])
+            character = Character.from_database(primarykey=record.primarykey)
+            character_list.append(character)
 
         return character_list
 

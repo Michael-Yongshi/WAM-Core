@@ -119,8 +119,8 @@ class Item(object):
     @staticmethod
     def from_database(primarykey):
 
-        itemtable = load_reference("items")
-        for record in itemtable:
+        table = load_reference("items")
+        for record in table:
             if record.primarykey == primarykey:
                 item_record = record
                 break
@@ -128,7 +128,7 @@ class Item(object):
         # set the database values to a python object
         dataobject = Item(
             name = "My Item",
-            subcategory = item_record.get_column_value("subcategory"),
+            subcategory = item_record.recorddict["subcategory"],
             source = "source",
             category = "category",
             distance = "distance",
@@ -291,6 +291,29 @@ class Skill(object):
 
         return dataobject
 
+    @staticmethod
+    def from_database_record(record):
+
+        try:
+            # set the record values to a python object
+            dataobject = Skill(
+                movement = record.recorddict["movement"],
+                weapon = record.recorddict["weapon"],
+                ballistic = record.recorddict["ballistic"],
+                strength = record.recorddict["strength"],
+                impact = record.recorddict["impact"],
+                toughness = record.recorddict["toughness"],
+                wounds = record.recorddict["wounds"],
+                initiative = record.recorddict["initiative"],
+                actions = record.recorddict["actions"],
+                leadership = record.recorddict["leadership"],
+                armoursave = record.recorddict["armoursave"],
+                )
+        except:
+            print(f"Record {record} doesnt contain all needed skills!")
+
+        return dataobject
+
     def to_list(self):
 
         # set the object values to a list
@@ -380,6 +403,26 @@ class Ability(object):
         return dataobject
 
     @staticmethod
+    def from_database(primarykey):
+
+        table = load_reference("abilities")
+        for record in table:
+            if record.primarykey == primarykey:
+                ability_record = record
+                break
+
+        # set the record to a python object
+        dataobject = Ability(
+            source = ability_record.recorddict["source"],
+            main = ability_record.recorddict["maincategory"],
+            category = ability_record.recorddict["category"],
+            name = ability_record.recorddict["name"],
+            description = ability_record.recorddict["description"],
+            )
+
+        return dataobject
+
+    @staticmethod
     def create_ability(source, main, category, name):
         # open reference data json file
         datadict = load_reference("abilities")
@@ -427,6 +470,27 @@ class Magic(object):
             group = datadict["group"],
             difficulty = datadict["difficulty"],
             description = datadict["description"],
+            )
+
+        return dataobject
+
+    @staticmethod
+    def from_database(primarykey):
+
+        table = load_reference("magics")
+        for record in table:
+            if record.primarykey == primarykey:
+                magic_record = record
+                break
+
+        # set the record to a python object
+        dataobject = Magic(
+            source = magic_record.recorddict["source"],
+            category = magic_record.recorddict["category"],
+            name = magic_record.recorddict["name"],
+            group = magic_record.recorddict["grouping"],
+            difficulty = magic_record.recorddict["difficulty"],
+            description = magic_record.recorddict["description"],
             )
 
         return dataobject

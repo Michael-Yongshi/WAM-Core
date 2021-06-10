@@ -39,6 +39,57 @@ class Warband(object):
         self.herolist = herolist
         self.squadlist = squadlist
 
+    @staticmethod
+    def from_database(primarykey):
+
+        table = load_reference("warbands")
+        for record in table:
+            if record.primarykey == primarykey:
+                warband_record = record
+                break
+        
+        # Create Treasury object from startgold variable
+        treasury = Treasury(
+            gold = warband_record.recorddict["startgold"],
+        )
+
+        # Create list of rules
+        rulelist = []
+        rule_records = warband_record.recorddict["rules"]
+        rule_json = json.loads(rule_records) # rules are still stored as json strings
+        print(rule_json)
+
+        for ruledict in rule_json:
+            rulelist += [Rule.from_dict(ruledict)]
+
+        # Create list of items
+        wb_item_records = load_crossreference(
+            source_table="warbands",
+            target_table="items",
+            key=primarykey,
+            )
+        print_records(wb_item_records)
+
+        itemlist = []
+        for wb_item_record in wb_item_records:
+            itemlist += [Item.from_database(wb_item_record.recorddict["items_id"])]
+
+        # set the dictionary values to a python object
+        dataobject = Warband(
+            name = "My Warband",
+            race = warband_record.recorddict["race"],
+            source = warband_record.recorddict["source"],
+            warband = warband_record.recorddict["base"],
+            description = warband_record.recorddict["description"],
+            treasury = treasury,
+            rulelist = rulelist,
+            itemlist = itemlist,
+            herolist = [],
+            squadlist = [],
+            )
+        
+        return dataobject
+
     def to_dict(self):
         """ Create a dictionary string of a Warband object, including all nested objects, that can be saved to a JSON file for storage."""
 
@@ -79,57 +130,6 @@ class Warband(object):
 
         return datadict
     
-    @staticmethod
-    def from_database(primarykey):
-
-        warbandtable = load_reference("warbands")
-        for record in warbandtable:
-            if record.primarykey == primarykey:
-                warband_record = record
-                break
-        
-        # Create Treasury object from startgold variable
-        treasury = Treasury(
-            gold = warband_record.recorddict["startgold"],
-        )
-
-        # Create list of rules
-        rulelist = []
-        rule_records = warband_record.recorddict["rules"]
-        rule_json = json.loads(rule_records) # rules are still stored as json strings
-        print(rule_json)
-
-        for ruledict in rule_json:
-            rulelist += [Rule.from_dict(ruledict)]
-
-        # Create list of items
-        itemxrecords = load_crossreference(
-            source_table="warbands",
-            target_table="items",
-            key=primarykey,
-            )
-        print_records(itemxrecords)
-
-        itemlist = []
-        for itemxrecord in itemxrecords:
-            itemlist += [Item.from_database(itemxrecord.recorddict["items_id"])]
-
-        # set the dictionary values to a python object
-        dataobject = Warband(
-            name = "My Warband",
-            race = warband_record.recorddict["race"],
-            source = warband_record.recorddict["source"],
-            warband = warband_record.recorddict["base"],
-            description = warband_record.recorddict["description"],
-            treasury = treasury,
-            rulelist = rulelist,
-            itemlist = itemlist,
-            herolist = [],
-            squadlist = [],
-            )
-        
-        return dataobject
-
     @staticmethod
     def from_dict(datadict):
         """ Create an object, and all nested objects, out of a warband dictionary in order to enable updates to that data."""
@@ -271,6 +271,21 @@ class Squad(object):
     def __init__(self, name, henchmanlist=[]):
         self.name = name
         self.henchmanlist = henchmanlist
+
+    @staticmethod
+    def from_database(primarykey, name="My Squad"):
+        """Create a new squad from a database record"""
+        
+        dataobject = Squad(
+            name = name,
+            henchmanlist = []
+            )
+
+        # add a single henchman to the squad
+        newhenchman = Henchman.from_database(primarykey=primarykey)
+        dataobject.henchmanlist.append(newhenchman)
+                
+        return dataobject
 
     def to_dict(self):  
 
@@ -419,7 +434,76 @@ class Character(object):
         self.maxcount = maxcount
         self.description = description
         self.unique_id = unique_id
-    
+
+    @staticmethod
+    def from_database(primarykey):
+
+        table = load_reference("characters")
+        for record in table:
+            if record.primarykey == primarykey:
+                char_record = record
+                break
+
+        # recursively set a dictionary to some nested objects
+        skill = Skill.from_database_record(char_record)
+
+        # find the reference dictionaries of a set of values to a list of python objects
+        # Create list of abilities
+        char_ability_records = load_crossreference(
+            source_table="characters",
+            target_table="abilities",
+            key=primarykey,
+            )
+
+        abilitylist = []
+        for char_ability_record in char_ability_records:
+            abilitylist += [Ability.from_database(char_ability_record.recorddict["abilities_id"])]
+
+        # Create list of magics
+        char_magic_records = load_crossreference(
+            source_table="characters",
+            target_table="magics",
+            key=primarykey,
+            )
+
+        magiclist = []
+        for char_magic_record in char_magic_records:
+            magiclist += [Magic.from_database(char_magic_record.recorddict["magics_id"])]
+        
+        # Create list of items
+        char_item_records = load_crossreference(
+            source_table="characters",
+            target_table="items",
+            key=primarykey,
+            )
+
+        itemlist = []
+        for char_item_record in char_item_records:
+            itemlist += [Item.from_database(char_item_record.recorddict["items_id"])]
+
+        eventlist = []
+
+        # set the dictionary values to a python object
+        dataobject = Character(
+            name = "",
+            race = char_record.recorddict["race"],
+            source = char_record.recorddict["source"],
+            warband = char_record.recorddict["warband"],
+            category = char_record.recorddict["name"],
+            ishero = char_record.recorddict["ishero"],
+            skill = skill,
+            abilitylist = abilitylist,
+            magiclist = magiclist,
+            itemlist = itemlist,
+            eventlist = eventlist,
+            experience = char_record.recorddict["experience"],
+            price = char_record.recorddict["price"],
+            maxcount = char_record.recorddict["maxcount"],
+            description = char_record.recorddict["description"],    
+            )
+
+        return dataobject
+
     def to_dict(self):  
 
         # recursively set some nested objects to a dictionary
@@ -916,6 +1000,21 @@ class Character(object):
         return totalmagiclist
 
 class Hero(Character):
+
+    @staticmethod
+    def from_database(primarykey, name="My Hero"):
+
+        # set the record to a python object
+        dataobject = Character.from_database(primarykey = primarykey)
+        dataobject.name == name
+        
+        if dataobject.ishero == 0:
+            print("Henchmen can't be added outside a squad")
+
+            return
+
+        return dataobject
+
     @staticmethod
     def create_character(name, race, source, warband, category):
         # open reference data json file
@@ -928,6 +1027,21 @@ class Hero(Character):
             return dataobject
 
 class Henchman(Character):
+
+    @staticmethod
+    def from_database(primarykey, name="My Henchman"):
+
+        # set the record to a python object
+        dataobject = Character.from_database(primarykey = primarykey)
+        dataobject.name == name
+        
+        if dataobject.ishero == 1:
+            print("Heroes can't be added to a squad")
+
+            return
+
+        return dataobject
+
     @staticmethod
     def create_character(name, race, source, warband, category):
         # open reference data json file

@@ -1,4 +1,4 @@
-from wamcore.methods_engine import (
+from core.methods_engine import (
     print_record,
     print_records,
     save_warband,
@@ -8,14 +8,14 @@ from wamcore.methods_engine import (
     load_crossreference,
     )
 
-from wamcore.class_hierarchy import (
+from core.class_hierarchy import (
     Warband,
     Squad,
     Character,
     Hero,
     )
 
-from wamcore.class_components import (
+from core.class_components import (
     Skill,
     Item,
     Ability,

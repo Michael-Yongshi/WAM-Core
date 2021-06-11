@@ -527,6 +527,19 @@ class Character(object):
             description = char_record.recorddict["description"],
             )
 
+        print(f"current advance is {dataobject.get_current_advance()}")
+        print(f"new advance is {dataobject.get_new_advance()}")
+
+        # Create advance level for this new character
+        dataobject.eventlist += dataobject.create_advance_events()
+        print(dataobject.eventlist)
+
+        for event in dataobject.eventlist:
+            if event.description[-3:] == "TBD":
+                currentdesc = event.description[:-4]
+                newdesc = " this character started with this advancement"
+                event.description = f"{currentdesc}{newdesc}"
+
         return dataobject
 
     def to_dict(self):  
@@ -877,13 +890,17 @@ class Character(object):
     def get_xp_ref(self):
 
         # load exp database
-        datadict = load_reference("experience_table")
-        if self.ishero == True:
-            expdict = datadict["Hero"]
-        else:
-            expdict = datadict["Squad"]
+        table = load_reference("advances")
 
-        return expdict
+        ishero = 1 if self.ishero == True else 0
+
+        advances = {}
+        for record in table:
+            if record.recorddict["ishero"] == ishero:
+                advdict = {record.recorddict["advance"]:record.recorddict["experience"]}
+                advances.update(advdict)
+
+        return advances
 
     def get_xpneeded(self):
         """Get experience needed for next advance"""

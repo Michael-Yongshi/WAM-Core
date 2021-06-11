@@ -295,18 +295,28 @@ class Squad(object):
         self.henchmanlist = henchmanlist
 
     @staticmethod
-    def from_database(primarykey, name="My Squad"):
+    def from_database(primarykey, name=""):
         """Create a new squad from a database record"""
         
+        # Create a henchman
+        newhenchman = Henchman.from_database(primarykey=primarykey)
+
+        # correct the name if not give to the henchmans category
+        if name == "":
+            name = newhenchman.category
+
+        # Create the squad
         dataobject = Squad(
             name = name,
             henchmanlist = []
             )
 
-        # add a single henchman to the squad
-        newhenchman = Henchman.from_database(primarykey=primarykey)
+        # add henchman name
+        newhenchman.name = f"{name} 1"
+
+        # Add the henchman to the squad
         dataobject.henchmanlist.append(newhenchman)
-                
+
         return dataobject
 
     def to_dict(self):  
@@ -362,9 +372,12 @@ class Squad(object):
         return dataobject
 
     def add_new_henchman(self):
-        newhenchman = copy.deepcopy(self.henchmanlist[0])
-        newhenchman.name = self.name + str(self.henchmanlist.__len__() + 1)
-        self.henchmanlist.append(newhenchman)
+        if self.get_totalhenchman != 0:
+            newhenchman = copy.deepcopy(self.henchmanlist[0])
+            newhenchman.name = self.name + str(self.henchmanlist.__len__() + 1)
+            self.henchmanlist.append(newhenchman)
+        else:
+            print("Squad cannot be empty! Please create a new squad!")
 
     def change_henchman_count(self, deltasize):
         if deltasize > 0:
@@ -510,7 +523,7 @@ class Character(object):
         # set the dictionary values to a python object
         dataobject = Character(
             database_id = primarykey,
-            name = "",
+            name = "My Character",
             race = char_record.recorddict["race"],
             source = char_record.recorddict["source"],
             warband = char_record.recorddict["warband"],
@@ -1044,11 +1057,11 @@ class Character(object):
 class Hero(Character):
 
     @staticmethod
-    def from_database(primarykey, name="My Hero"):
+    def from_database(primarykey):
 
         # set the record to a python object
         dataobject = Character.from_database(primarykey = primarykey)
-        dataobject.name == name
+        dataobject.name == "My Hero"
         
         if dataobject.ishero == 0:
             print("Henchmen can't be added outside a squad")
@@ -1071,11 +1084,11 @@ class Hero(Character):
 class Henchman(Character):
 
     @staticmethod
-    def from_database(primarykey, name="My Henchman"):
+    def from_database(primarykey):
 
         # set the record to a python object
         dataobject = Character.from_database(primarykey = primarykey)
-        dataobject.name == name
+        dataobject.name == "My Henchman"
         
         if dataobject.ishero == 1:
             print("Heroes can't be added to a squad")

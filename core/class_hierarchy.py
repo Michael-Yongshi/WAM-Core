@@ -245,17 +245,28 @@ class Warband(object):
         retrieves the list of characters that are available for this warband
         """
 
-        # Create list of characters
-        records = load_crossreference(
-            source_table="warbands",
-            target_table="characters",
-            key=self.database_id,
-            )
+        records = load_reference("characters")
 
-        character_list = []
-        for record in records:
-            character = Character.from_database(primarykey=record.primarykey)
-            character_list.append(character)
+        if self.database_id != None:
+
+            # Create list of characters
+            crossrecords = load_crossreference(
+                source_table="warbands",
+                target_table="characters",
+                key=self.database_id,
+                )
+
+            char_ids = []
+            for crossrecord in crossrecords:
+                char_ids += [crossrecord.recorddict["characters_id"]]
+
+            character_list = []
+            for record in records:
+                if record.primarykey in char_ids:
+                    character_list += [record]
+
+        else:
+            character_list = records
 
         return character_list
 

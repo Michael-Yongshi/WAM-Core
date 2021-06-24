@@ -1,4 +1,5 @@
 import os
+import datetime
 
 from .methods_json import (
     save_json,
@@ -16,17 +17,31 @@ def get_localpath():
 
     return path
 
-def save_warband(datadict):
-    """Save warband to a save file"""
+def save_warband(datadict, filename="", filepath="", add_timestamp=False):
+    """
+    Save warband to a save file
+    if filename is empty the warband name is used
+    if filepath is empty the default wam location is used under the users documents
+    a timestamp can be given to the file
+    """
+
+    current_datetime = datetime.datetime.now()
 
     # Folderpath
-    path = get_localpath()
+    filepath = get_localpath() if filepath == "" else filepath
 
-    # set the filename to the warbands name
-    filename = datadict["name"]
+    # set the filename to the warbands name unless a specific name is given
+    if filename == "":
+        filename = datadict["name"]
+    else:
+        filename
+
+    # add a timestamp if deemed necessary
+    if add_timestamp==True:
+        filename += current_datetime.now().strptime()
 
     # run the json command to save the file as a json file
-    save_json(datadict, path, filename)
+    save_json(datadict, filepath, filename)
 
 def show_warbands():
     """Show all the warband save files"""

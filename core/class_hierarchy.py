@@ -7,15 +7,6 @@ from .methods_engine import (
     print_record,
     print_records,
 )
-
-from .methods_database_from import(
-    get_abilityref,
-    get_characterref,
-    get_itemref,
-    get_magicref,
-    get_warbandref,
-)
-
 from .class_components import (
     Rule,
     Treasury,
@@ -43,6 +34,9 @@ class Warband(object):
 
     @staticmethod
     def from_database(primarykey):
+        """
+        create a new warband from a record in the database
+        """
 
         table = load_reference("warbands")
         for record in table:
@@ -94,7 +88,9 @@ class Warband(object):
         return dataobject
 
     def to_dict(self):
-        """ Create a dictionary string of a Warband object, including all nested objects, that can be saved to a JSON file for storage."""
+        """
+        Create a dictionary string of an existing Warband object, including all nested objects, that can be saved to a JSON file for storage.
+        """
 
         # recursively set some nested objects to a dictionary
         treasury = self.treasury.to_dict()
@@ -135,7 +131,9 @@ class Warband(object):
     
     @staticmethod
     def from_dict(datadict):
-        """ Create an object, and all nested objects, out of a warband dictionary in order to enable updates to that data."""
+        """
+        create a warband object from a an existing warband saved as a dict in a json file
+        """
         
         # recursively set a dictionary to some nested objects
         treasury = Treasury.from_dict(datadict["treasury"])
@@ -177,8 +175,12 @@ class Warband(object):
 
     @staticmethod
     def from_refdict(datadict):
-        """ Create an object, and all nested objects, out of a warband dictionary in order to enable updates to that data."""
-        
+        """
+        depreciated
+        """
+
+        return
+
         # recursively set a dictionary to some nested objects
         treasury=Treasury(
             gold = datadict["start_gold"],
@@ -218,7 +220,9 @@ class Warband(object):
 
     @staticmethod
     def create_warband(name, race, source, warband):
-        """Create a new warband based on the given parameters"""
+        """
+        depreciated
+        """
         
         # open reference data json file
         datadict = load_reference("warbands")
@@ -307,7 +311,9 @@ class Squad(object):
 
     @staticmethod
     def from_database(primarykey, name=""):
-        """Create a new squad from a database record"""
+        """
+        create a new squad from a record in the database
+        """
         
         # Create a henchman
         newhenchman = Henchman.from_database(primarykey=primarykey)
@@ -331,6 +337,9 @@ class Squad(object):
         return dataobject
 
     def to_dict(self):  
+        """
+        Create a dictionary string of an existing Squad object, including all nested objects, that can be saved to a JSON file for storage.
+        """
 
         # recursively set a list of objects to a list of dictionaries
         henchmanlist=[] 
@@ -347,6 +356,9 @@ class Squad(object):
 
     @staticmethod
     def from_dict(datadict):
+        """
+        create a squad object from a an existing warband saved as a dict in a json file
+        """
 
         # find the reference dictionaries of a set of values to a list of python objects
         henchmanlist = []
@@ -363,8 +375,12 @@ class Squad(object):
 
     @staticmethod
     def create_squad(race, source, warband, category, name, number=1):
-        """Create a new squad with the given parameters and creates the amount of henchman determined by the number parameter"""
-        
+        """
+        depreciated
+        """
+
+        return
+
         dataobject = Squad(
             name = name,
             henchmanlist = []
@@ -485,6 +501,9 @@ class Character(object):
 
     @staticmethod
     def from_database(primarykey):
+        """
+        create a new Character object from a record in the database
+        """
 
         table = load_reference("characters")
         for record in table:
@@ -567,6 +586,9 @@ class Character(object):
         return dataobject
 
     def to_dict(self):  
+        """
+        Create a dictionary string of an existing Character object, including all nested objects, that can be saved to a JSON file for storage.
+        """
 
         # recursively set some nested objects to a dictionary
         skill = self.skill.to_dict()
@@ -611,6 +633,9 @@ class Character(object):
 
     @staticmethod
     def from_dict(datadict):
+        """
+        create a Character object from a an existing warband saved as a dict in a json file
+        """
 
         # recursively set a dictionary to some nested objects
         skill = Skill.from_dict(datadict["skill"])
@@ -661,7 +686,12 @@ class Character(object):
     
     @staticmethod
     def from_refdict(datadict):
-        
+        """
+        depreciated
+        """
+
+        return
+
         # recursively set a dictionary to some nested objects
         skill = Skill.from_dict(datadict["skill"])
 
@@ -725,6 +755,12 @@ class Character(object):
 
     @staticmethod
     def create_character(name, race, source, warband, category):
+        """
+        depreciated
+        """
+
+        return
+
         # open reference data json file
         datadict = load_reference("characters")
         chardict = datadict[race][source][warband][category]
@@ -1069,6 +1105,9 @@ class Hero(Character):
 
     @staticmethod
     def from_database(primarykey):
+        """
+        create a new Hero Character object from a record in the database
+        """
 
         # set the record to a python object
         dataobject = Character.from_database(primarykey = primarykey)
@@ -1096,6 +1135,9 @@ class Henchman(Character):
 
     @staticmethod
     def from_database(primarykey):
+        """
+        create a new Henchman Character object from a record in the database
+        """
 
         # set the record to a python object
         dataobject = Character.from_database(primarykey = primarykey)

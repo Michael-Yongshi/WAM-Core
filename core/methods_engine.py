@@ -17,7 +17,7 @@ def get_localpath():
 
     return path
 
-def save_warband(datadict, filename="", filepath="", add_timestamp=False):
+def save_warband(warband, filename="", filepath="", add_timestamp=False):
     """
     Save warband to a save file
     if filename is empty the warband name is used
@@ -25,10 +25,11 @@ def save_warband(datadict, filename="", filepath="", add_timestamp=False):
     a timestamp can be given to the file
     """
 
-    current_datetime = datetime.datetime.now()
-
     # Folderpath
     filepath = get_localpath() if filepath == "" else filepath
+
+    # transform warband object to dict for saving to json
+    datadict = warband.to_dict()
 
     # set the filename to the warbands name unless a specific name is given
     if filename == "":
@@ -38,7 +39,10 @@ def save_warband(datadict, filename="", filepath="", add_timestamp=False):
 
     # add a timestamp if deemed necessary
     if add_timestamp==True:
-        filename += current_datetime.now().strptime()
+
+        timestamp = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")	
+        filename += f"-{timestamp}"
+    print(f"filename: {filename}")
 
     # run the json command to save the file as a json file
     save_json(datadict, filepath, filename)
@@ -70,18 +74,6 @@ def load_warband(wbname):
     # return the warband dictionary
     return datadict
 
-def save_reference(datadict, filename):
-    """Save reference data to the fixed location within the application directory"""
-
-    # set the paths to the applications database reference files
-    path = os.path.join(os.path.dirname(__file__), "database")
-
-    # set the reference filename to be loaded
-    filename = filename + "_ref"
-
-    # run the json command to save the file as a json file
-    save_json(datadict, path, filename)
-
 def get_database_handler():
     # TODO: try / except if database is missing for some reason
     
@@ -94,19 +86,6 @@ def get_database_handler():
     handler.database_open(filename="database", path=database_path)
 
     return handler
-
-def load_reference(table):
-    """
-    Load table data from the database
-    """
-
-    # get handler
-    handler = get_database_handler()
-    
-    # set the table to be loaded
-    table = handler.database.tables[table].records
-
-    return table
 
 def load_crossreference(source_table, target_table, key):
 
@@ -130,3 +109,29 @@ def print_records(records):
 
 def print_record(record):
     print(f"primarykey: {record.primarykey}, recordpairs: {record.recordpairs}")
+
+
+# def save_reference(datadict, filename):
+#     """Save reference data to the fixed location within the application directory"""
+
+#     # set the paths to the applications database reference files
+#     path = os.path.join(os.path.dirname(__file__), "database")
+
+#     # set the reference filename to be loaded
+#     filename = filename + "_ref"
+
+#     # run the json command to save the file as a json file
+#     save_json(datadict, path, filename)
+
+def load_reference(table):
+    """
+    Load table data from the database
+    """
+
+    # get handler
+    handler = get_database_handler()
+    
+    # set the table to be loaded
+    table = handler.database.tables[table].records
+
+    return table

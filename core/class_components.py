@@ -6,14 +6,6 @@ from .methods_engine import (
     load_crossreference,
 )
 
-from .methods_database_from import(
-    get_abilityref,
-    get_characterref,
-    get_itemref,
-    get_magicref,
-    get_warbandref,
-)
-
 # Contains several component classes that are used in different places:
 # Inventory
 # Items
@@ -29,6 +21,9 @@ class Rule(object):
         self.description = description
 
     def to_dict(self):  
+        """
+        Create a dictionary string of an existing Rule object that can be saved to a JSON file for storage.
+        """
 
         # set the object values to a dictionary
         datadict = {
@@ -40,7 +35,10 @@ class Rule(object):
     
     @staticmethod
     def from_dict(datadict):
-        
+        """
+        create a Rule object from a an existing warband saved as a dict in a json file
+        """
+
         # set the dictionary values to a python object
         dataobject = Rule(
             name = datadict["name"],
@@ -55,7 +53,10 @@ class Treasury(object):
         self.wyrd = wyrd
 
     def to_dict(self):  
-        
+        """
+        Create a dictionary string of an existing Treasury object that can be saved to a JSON file for storage.
+        """
+
         # set the object values to a dictionary
         datadict = {
             'gold': self.gold,
@@ -65,6 +66,9 @@ class Treasury(object):
 
     @staticmethod
     def from_dict(datadict):
+        """
+        create a Treasury object from a an existing warband saved as a dict in a json file
+        """
 
         # set the dictionary values to a python object
         dataobject = Treasury(
@@ -87,38 +91,11 @@ class Item(object):
         self.price = price
         self.description = description
 
-    def to_dict(self):
-
-        # recursively set some nested objects to a dictionary
-        skill = self.skill.to_dict()
-        
-        # recursively set a list of objects to a list of dictionaries
-        abilitylist=[]
-        for ability in self.abilitylist:
-            abilitylist += [ability.to_dict()]
-              
-        magiclist=[]
-        for magic in self.magiclist:
-            magiclist += [magic.to_dict()]
-
-        # set the object values to a dictionary
-        datadict = {
-            # 'key': str(self),
-            'name': self.name,
-            'source': self.source,
-            'category': self.category,
-            'subcategory': self.subcategory,
-            'distance': self.distance,
-            'skill': skill,
-            'abilitylist': abilitylist,
-            'magiclist': magiclist,
-            'price': self.price,
-            'description': self.description
-        }
-        return datadict
-
     @staticmethod
     def from_database(primarykey):
+        """
+        create a new Item object from a record in the database
+        """
 
         table = load_reference("items")
         for record in table:
@@ -167,9 +144,45 @@ class Item(object):
         
         return dataobject
 
+    def to_dict(self):
+        """
+        Create a dictionary string of an existing Item object that can be saved to a JSON file for storage.
+        """
+
+        # recursively set some nested objects to a dictionary
+        skill = self.skill.to_dict()
+        
+        # recursively set a list of objects to a list of dictionaries
+        abilitylist=[]
+        for ability in self.abilitylist:
+            abilitylist += [ability.to_dict()]
+              
+        magiclist=[]
+        for magic in self.magiclist:
+            magiclist += [magic.to_dict()]
+
+        # set the object values to a dictionary
+        datadict = {
+            # 'key': str(self),
+            'name': self.name,
+            'source': self.source,
+            'category': self.category,
+            'subcategory': self.subcategory,
+            'distance': self.distance,
+            'skill': skill,
+            'abilitylist': abilitylist,
+            'magiclist': magiclist,
+            'price': self.price,
+            'description': self.description
+        }
+        return datadict
+
     @staticmethod
     def from_dict(datadict):
-        
+        """
+        create an Item object from a an existing warband saved as a dict in a json file
+        """
+
         # recursively set some nested dictionaries to a python object
         skill = Skill.from_dict(datadict["skill"])
 
@@ -202,6 +215,11 @@ class Item(object):
 
     @staticmethod
     def from_refdict(datadict):
+        """
+        depreciated
+        """
+
+        return
 
         # recursively set a dictionary to some nested objects
         skill = Skill.from_dict(datadict["skill"])
@@ -246,6 +264,12 @@ class Item(object):
 
     @staticmethod
     def create_item(source, category, subcategory):
+        """
+        depreciated
+        """
+
+        return
+
         try:
 
             # open reference data json file
@@ -277,8 +301,37 @@ class Skill(object):
         self.actions = actions
         self.leadership = leadership
         self.armoursave = armoursave
-    
+
+    @staticmethod
+    def from_database_record(record):
+        """
+        create a new Skill object from a record in the database
+        """
+
+        try:
+            # set the record values to a python object
+            dataobject = Skill(
+                movement = record.recorddict["movement"],
+                weapon = record.recorddict["weapon"],
+                ballistic = record.recorddict["ballistic"],
+                strength = record.recorddict["strength"],
+                impact = record.recorddict["impact"],
+                toughness = record.recorddict["toughness"],
+                wounds = record.recorddict["wounds"],
+                initiative = record.recorddict["initiative"],
+                actions = record.recorddict["actions"],
+                leadership = record.recorddict["leadership"],
+                armoursave = record.recorddict["armoursave"],
+                )
+        except:
+            print(f"Record {record} doesnt contain all needed skills!")
+
+        return dataobject
+
     def to_dict(self):  
+        """
+        Create a dictionary string of an existing Skill object that can be saved to a JSON file for storage.
+        """
 
         # set the object values to a dictionary
         datadict = {
@@ -299,6 +352,9 @@ class Skill(object):
 
     @staticmethod
     def from_dict(datadict):
+        """
+        create a Skill object from a an existing warband saved as a dict in a json file
+        """
 
         # set the dictionary values to a python object
         dataobject = Skill(
@@ -314,29 +370,6 @@ class Skill(object):
             leadership = datadict["leadership"],
             armoursave = datadict["armoursave"],
             )
-
-        return dataobject
-
-    @staticmethod
-    def from_database_record(record):
-
-        try:
-            # set the record values to a python object
-            dataobject = Skill(
-                movement = record.recorddict["movement"],
-                weapon = record.recorddict["weapon"],
-                ballistic = record.recorddict["ballistic"],
-                strength = record.recorddict["strength"],
-                impact = record.recorddict["impact"],
-                toughness = record.recorddict["toughness"],
-                wounds = record.recorddict["wounds"],
-                initiative = record.recorddict["initiative"],
-                actions = record.recorddict["actions"],
-                leadership = record.recorddict["leadership"],
-                armoursave = record.recorddict["armoursave"],
-                )
-        except:
-            print(f"Record {record} doesnt contain all needed skills!")
 
         return dataobject
 
@@ -401,35 +434,11 @@ class Ability(object):
         self.name = name
         self.description = description
 
-    def to_dict(self):  
-        
-        # set the object values to a dictionary
-        datadict = {
-            'source': self.source,
-            'main': self.main,
-            'category': self.category,
-            'name': self.name,
-            'description': self.description
-        }
-
-        return datadict
-    
-    @staticmethod
-    def from_dict(datadict):
-
-        # set the dictionary values to a python object
-        dataobject = Ability(
-            source = datadict["source"],
-            main = datadict["main"],
-            category = datadict["category"],
-            name = datadict["name"],
-            description = datadict["description"],
-            )
-
-        return dataobject
-
     @staticmethod
     def from_database(primarykey):
+        """
+        create a new Ability object from a record in the database
+        """
 
         table = load_reference("abilities")
         for record in table:
@@ -448,8 +457,47 @@ class Ability(object):
 
         return dataobject
 
+    def to_dict(self):  
+        """
+        Create a dictionary string of an existing Ability object that can be saved to a JSON file for storage.
+        """
+
+        # set the object values to a dictionary
+        datadict = {
+            'source': self.source,
+            'main': self.main,
+            'category': self.category,
+            'name': self.name,
+            'description': self.description
+        }
+
+        return datadict
+    
+    @staticmethod
+    def from_dict(datadict):
+        """
+        create an Ability object from a an existing warband saved as a dict in a json file
+        """
+
+        # set the dictionary values to a python object
+        dataobject = Ability(
+            source = datadict["source"],
+            main = datadict["main"],
+            category = datadict["category"],
+            name = datadict["name"],
+            description = datadict["description"],
+            )
+
+        return dataobject
+
     @staticmethod
     def create_ability(source, main, category, name):
+        """
+        depreciated
+        """
+
+        return
+
         # open reference data json file
         datadict = load_reference("abilities")
 
@@ -462,7 +510,7 @@ class Ability(object):
         return dataobject
 
 class Magic(object):
-    """Default object to assign ablities as a basis for character and item abilities"""
+    """Default object to assign magic as a basis for character and item abilities"""
     def __init__(self, source, category, name, group, difficulty, database_id=None, description=""):
         self.source = source
         self.category = category
@@ -471,37 +519,11 @@ class Magic(object):
         self.difficulty = difficulty
         self.description = description
 
-    def to_dict(self):  
-
-        # set the object values to a dictionary
-        datadict = {
-            'source': self.source,
-            'category': self.category,
-            'name': self.name,
-            'group': self.group,
-            'difficulty': self.difficulty,
-            'description': self.description
-        }
-
-        return datadict
-
-    @staticmethod
-    def from_dict(datadict):
-        
-        # set the dictionary values to a python object
-        dataobject = Magic(
-            source = datadict["source"],
-            category = datadict["category"],
-            name = datadict["name"],
-            group = datadict["group"],
-            difficulty = datadict["difficulty"],
-            description = datadict["description"],
-            )
-
-        return dataobject
-
     @staticmethod
     def from_database(primarykey):
+        """
+        create a new Ability object from a record in the database
+        """
 
         table = load_reference("magics")
         for record in table:
@@ -521,16 +543,38 @@ class Magic(object):
 
         return dataobject
 
+    def to_dict(self):  
+        """
+        Create a dictionary string of an existing Magic object that can be saved to a JSON file for storage.
+        """
+
+        # set the object values to a dictionary
+        datadict = {
+            'source': self.source,
+            'category': self.category,
+            'name': self.name,
+            'group': self.group,
+            'difficulty': self.difficulty,
+            'description': self.description
+        }
+
+        return datadict
+
     @staticmethod
-    def create_magic(source, category, name):
-        # open reference data json file
-        datadict = load_reference("magic")
+    def from_dict(datadict):
+        """
+        create a Magic object from a an existing warband saved as a dict in a json file
+        """
 
-        # get specific data
-        magicdict = datadict[source][category][name]
-
-        # create object based on the data
-        dataobject = Magic.from_dict(magicdict)
+        # set the dictionary values to a python object
+        dataobject = Magic(
+            source = datadict["source"],
+            category = datadict["category"],
+            name = datadict["name"],
+            group = datadict["group"],
+            difficulty = datadict["difficulty"],
+            description = datadict["description"],
+            )
 
         return dataobject
 
@@ -544,6 +588,9 @@ class Event(object):
         self.description = description
 
     def to_dict(self):  
+        """
+        Create a dictionary string of an existing Event object that can be saved to a JSON file for storage.
+        """
 
         # recursively set some nested objects to a dictionary
         skill = self.skill.to_dict()
@@ -561,7 +608,10 @@ class Event(object):
 
     @staticmethod
     def from_dict(datadict):
-        
+        """
+        create an Event object from a an existing warband saved as a dict in a json file
+        """
+
         # recursively set some nested dictionaries to a python object
         skill = Skill.from_dict(datadict["skill"])
 

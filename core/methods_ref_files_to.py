@@ -21,7 +21,6 @@ def create_ref_files():
         # call save reference function
         save_reference(datadict, filename)
 
-
 def add_warbandref(race, source, warband, rulelist, itemlist, start_gold, description):
 
     filename = "warbands"

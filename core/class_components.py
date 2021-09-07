@@ -78,6 +78,144 @@ class Treasury(object):
         
         return dataobject
 
+class Skill(object):
+    """Default object to assign skill values as a basis for character and item skill values"""
+    def __init__(self, movement=0, weapon=0, ballistic=0, strength=0, impact=0, toughness=0, wounds=0, initiative=0, actions=0, leadership=0, armoursave=0):
+        self.movement = movement
+        self.weapon = weapon
+        self.ballistic = ballistic
+        self.strength = strength
+        self.impact = impact
+        self.toughness = toughness
+        self.wounds = wounds
+        self.initiative = initiative
+        self.actions = actions
+        self.leadership = leadership
+        self.armoursave = armoursave
+
+    @staticmethod
+    def from_database_record(record):
+        """
+        create a new Skill object from a record in the database
+        """
+
+        try:
+            # set the record values to a python object
+            dataobject = Skill(
+                movement = record.recorddict["movement"],
+                weapon = record.recorddict["weapon"],
+                ballistic = record.recorddict["ballistic"],
+                strength = record.recorddict["strength"],
+                impact = record.recorddict["impact"],
+                toughness = record.recorddict["toughness"],
+                wounds = record.recorddict["wounds"],
+                initiative = record.recorddict["initiative"],
+                actions = record.recorddict["actions"],
+                leadership = record.recorddict["leadership"],
+                armoursave = record.recorddict["armoursave"],
+                )
+        except:
+            print(f"Record {record} doesnt contain all needed skills!")
+
+        return dataobject
+
+    def to_dict(self):  
+        """
+        Create a dictionary string of an existing Skill object that can be saved to a JSON file for storage.
+        """
+
+        # set the object values to a dictionary
+        datadict = {
+            'movement': self.movement,
+            'weapon': self.weapon,
+            'ballistic': self.ballistic,
+            'strength': self.strength,
+            'impact': self.impact,
+            'toughness': self.toughness,
+            'wounds': self.wounds,
+            'initiative': self.initiative,
+            'actions': self.actions,
+            'leadership': self.leadership,
+            'armoursave': self.armoursave,
+        }
+
+        return datadict
+
+    @staticmethod
+    def from_dict(datadict):
+        """
+        create a Skill object from a an existing warband saved as a dict in a json file
+        """
+
+        # set the dictionary values to a python object
+        dataobject = Skill(
+            movement = datadict["movement"],
+            weapon = datadict["weapon"],
+            ballistic = datadict["ballistic"],
+            strength = datadict["strength"],
+            impact = datadict["impact"],
+            toughness = datadict["toughness"],
+            wounds = datadict["wounds"],
+            initiative = datadict["initiative"],
+            actions = datadict["actions"],
+            leadership = datadict["leadership"],
+            armoursave = datadict["armoursave"],
+            )
+
+        return dataobject
+
+    def to_list(self):
+
+        # set the object values to a list
+        datalist = []
+        datalist.append(self.movement),
+        datalist.append(self.weapon),
+        datalist.append(self.ballistic),
+        datalist.append(self.strength),
+        datalist.append(self.impact),
+        datalist.append(self.toughness),
+        datalist.append(self.wounds),
+        datalist.append(self.initiative),
+        datalist.append(self.actions),
+        datalist.append(self.leadership),
+        datalist.append(self.armoursave),
+        
+        return datalist
+
+    @staticmethod
+    def from_list(datalist):
+
+        # set the list values to a python object
+        dataobject = Skill(
+            movement = datalist[0],
+            weapon = datalist[1],
+            ballistic = datalist[2],
+            strength = datalist[3],
+            impact = datalist[4],
+            toughness = datalist[5],
+            wounds = datalist[6],
+            initiative = datalist[7],
+            actions = datalist[8],
+            leadership = datalist[9],
+            armoursave = datalist[10],
+            )
+
+        return dataobject
+
+    def to_string(self):
+
+        # convert the python object to a string of values
+        datastring = f"mo: {self.movement}, we: {self.weapon}, ba: {self.ballistic}, st: {self.strength}, im: {self.impact}, to: {self.toughness}, wo: {self.wounds}, in: {self.initiative}, ac: {self.actions}, le: {self.leadership}, as: {self.armoursave}"
+        
+        return datastring
+    
+    @staticmethod
+    def create_skill_empty():
+        
+        dataobject = Skill(0,0,0,0,0,0,0,0,0,0,0,)
+
+        return dataobject
+
 class Item(object):
     def __init__(self, name, source, category, subcategory, database_id= None, distance=0, skill=None, abilitylist=[], magiclist=[], price=0, description=None):
         self.name = name
@@ -284,144 +422,6 @@ class Item(object):
         except:
             dataobject = None
             print(f"Couldn't add item")
-
-        return dataobject
-
-class Skill(object):
-    """Default object to assign skill values as a basis for character and item skill values"""
-    def __init__(self, movement=0, weapon=0, ballistic=0, strength=0, impact=0, toughness=0, wounds=0, initiative=0, actions=0, leadership=0, armoursave=0):
-        self.movement = movement
-        self.weapon = weapon
-        self.ballistic = ballistic
-        self.strength = strength
-        self.impact = impact
-        self.toughness = toughness
-        self.wounds = wounds
-        self.initiative = initiative
-        self.actions = actions
-        self.leadership = leadership
-        self.armoursave = armoursave
-
-    @staticmethod
-    def from_database_record(record):
-        """
-        create a new Skill object from a record in the database
-        """
-
-        try:
-            # set the record values to a python object
-            dataobject = Skill(
-                movement = record.recorddict["movement"],
-                weapon = record.recorddict["weapon"],
-                ballistic = record.recorddict["ballistic"],
-                strength = record.recorddict["strength"],
-                impact = record.recorddict["impact"],
-                toughness = record.recorddict["toughness"],
-                wounds = record.recorddict["wounds"],
-                initiative = record.recorddict["initiative"],
-                actions = record.recorddict["actions"],
-                leadership = record.recorddict["leadership"],
-                armoursave = record.recorddict["armoursave"],
-                )
-        except:
-            print(f"Record {record} doesnt contain all needed skills!")
-
-        return dataobject
-
-    def to_dict(self):  
-        """
-        Create a dictionary string of an existing Skill object that can be saved to a JSON file for storage.
-        """
-
-        # set the object values to a dictionary
-        datadict = {
-            'movement': self.movement,
-            'weapon': self.weapon,
-            'ballistic': self.ballistic,
-            'strength': self.strength,
-            'impact': self.impact,
-            'toughness': self.toughness,
-            'wounds': self.wounds,
-            'initiative': self.initiative,
-            'actions': self.actions,
-            'leadership': self.leadership,
-            'armoursave': self.armoursave,
-        }
-
-        return datadict
-
-    @staticmethod
-    def from_dict(datadict):
-        """
-        create a Skill object from a an existing warband saved as a dict in a json file
-        """
-
-        # set the dictionary values to a python object
-        dataobject = Skill(
-            movement = datadict["movement"],
-            weapon = datadict["weapon"],
-            ballistic = datadict["ballistic"],
-            strength = datadict["strength"],
-            impact = datadict["impact"],
-            toughness = datadict["toughness"],
-            wounds = datadict["wounds"],
-            initiative = datadict["initiative"],
-            actions = datadict["actions"],
-            leadership = datadict["leadership"],
-            armoursave = datadict["armoursave"],
-            )
-
-        return dataobject
-
-    def to_list(self):
-
-        # set the object values to a list
-        datalist = []
-        datalist.append(self.movement),
-        datalist.append(self.weapon),
-        datalist.append(self.ballistic),
-        datalist.append(self.strength),
-        datalist.append(self.impact),
-        datalist.append(self.toughness),
-        datalist.append(self.wounds),
-        datalist.append(self.initiative),
-        datalist.append(self.actions),
-        datalist.append(self.leadership),
-        datalist.append(self.armoursave),
-        
-        return datalist
-
-    @staticmethod
-    def from_list(datalist):
-
-        # set the list values to a python object
-        dataobject = Skill(
-            movement = datalist[0],
-            weapon = datalist[1],
-            ballistic = datalist[2],
-            strength = datalist[3],
-            impact = datalist[4],
-            toughness = datalist[5],
-            wounds = datalist[6],
-            initiative = datalist[7],
-            actions = datalist[8],
-            leadership = datalist[9],
-            armoursave = datalist[10],
-            )
-
-        return dataobject
-
-    def to_string(self):
-
-        # convert the python object to a string of values
-        datastring = f"mo: {self.movement}, we: {self.weapon}, ba: {self.ballistic}, st: {self.strength}, im: {self.impact}, to: {self.toughness}, wo: {self.wounds}, in: {self.initiative}, ac: {self.actions}, le: {self.leadership}, as: {self.armoursave}"
-        
-        return datastring
-    
-    @staticmethod
-    def create_skill_empty():
-        
-        dataobject = Skill(0,0,0,0,0,0,0,0,0,0,0,)
 
         return dataobject
 

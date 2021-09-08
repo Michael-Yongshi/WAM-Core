@@ -990,8 +990,8 @@ class Character(object):
 
     def get_advance_process(self):
 
-        processes = load_strings("processes")
-        advance_processes = processes["Core Rules"]["Advancement"]
+        strings = load_strings()
+        advance_processes = strings["Core Rules"]["Advancement"]
 
         if self.ishero == True:
             process = advance_processes["Heroes"]["description"]

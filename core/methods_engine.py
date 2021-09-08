@@ -143,7 +143,7 @@ def load_strings():
     strings_path = os.path.join(current_dir, "database")
 
     datadict = load_json(path=strings_path, filename="strings.json")
-        
+
     return datadict
 
 def load_reference(table):

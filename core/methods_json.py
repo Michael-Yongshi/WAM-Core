@@ -35,7 +35,7 @@ def show_json(path):
     return filelist
 
 def load_json(path, filename):
-    """Load files to the documents folder"""
+    """Load json files and return a dictionary"""
 
     # check if directory already exists, if not create it
     if not os.path.exists(path):

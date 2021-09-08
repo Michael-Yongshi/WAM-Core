@@ -4,9 +4,9 @@ import json
 from .methods_engine import (
     load_reference,
     load_crossreference,
-    print_record,
-    print_records,
-)
+    load_strings,
+    )
+
 from .class_components import (
     Rule,
     Treasury,
@@ -990,7 +990,7 @@ class Character(object):
 
     def get_advance_process(self):
 
-        processes = load_reference("processes")
+        processes = load_strings("processes")
         advance_processes = processes["Core Rules"]["Advancement"]
 
         if self.ishero == True:

@@ -123,6 +123,29 @@ def print_record(record):
 #     # run the json command to save the file as a json file
 #     save_json(datadict, path, filename)
 
+
+def load_strings():
+    """Load reference data from the fixed location within the application directory"""
+
+    # # set the paths to the applications database reference files
+    # path = path = os.path.join(os.path.dirname(__file__), "database")
+
+    # # set the reference filename to be loaded
+    # filename = reference + "_ref"
+
+    # # load the file
+    # datadict = load_json(path, filename)
+
+    # # return the reference dictionary
+    # return datadict
+
+    current_dir = os.path.dirname(os.path.realpath(__file__))
+    strings_path = os.path.join(current_dir, "database")
+
+    datadict = load_json(path=strings_path, filename="strings.json")
+        
+    return datadict
+
 def load_reference(table):
     """
     Load table data from the database

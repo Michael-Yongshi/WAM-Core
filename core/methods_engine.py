@@ -142,7 +142,7 @@ def load_strings():
     current_dir = os.path.dirname(os.path.realpath(__file__))
     strings_path = os.path.join(current_dir, "database")
 
-    datadict = load_json(path=strings_path, filename="strings.json")
+    datadict = load_json(path=strings_path, filename="strings")
 
     return datadict
 

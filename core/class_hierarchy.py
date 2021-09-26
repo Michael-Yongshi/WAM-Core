@@ -314,27 +314,24 @@ class Squad(object):
         """
         create a new squad from a record in the database
         """
-        
-        # Create a henchman
-        newhenchman = Henchman.from_database(primarykey=primarykey)
-
-        # correct the name if not give to the henchmans category
-        if name == "":
-            name = newhenchman.category
 
         # Create the squad
-        dataobject = Squad(
+        squad = Squad(
             name = name,
             henchmanlist = []
             )
 
+        # Create a henchman
+        newhenchman = Character.create_henchman(primarykey=primarykey, squad = squad)
+
+        # set name to henchmans category if empty
+        if name == "":
+            name = newhenchman.category
+
         # add henchman name
         newhenchman.name = f"{name} 1"
 
-        # Add the henchman to the squad
-        dataobject.henchmanlist.append(newhenchman)
-
-        return dataobject
+        return squad
 
     def to_dict(self):  
         """
@@ -399,14 +396,27 @@ class Squad(object):
         return dataobject
 
     def add_new_henchman(self):
-        if self.get_totalhenchman != 0:
-            newhenchman = copy.deepcopy(self.henchmanlist[0])
-            newhenchman.name = self.name + str(self.henchmanlist.__len__() + 1)
-            self.henchmanlist.append(newhenchman)
-        else:
-            print("Squad cannot be empty! Please create a new squad!")
+        """
+        Add another henchman to this squad
+        """
+
+        # create a deep copy in order to get copies of all items, magics and abilities
+        newhenchman = copy.deepcopy(self.henchmanlist[0])
+
+        # set the squad back to this squad, as with a deepcopy the referenced squad is deepcopied as well 
+        # (which means the henchman will reference to a new copy of the squad)
+        newhenchman.squad = self
+
+        # add the henchman to this squads henchmanlist
+        self.henchmanlist.append(newhenchman)
+
+        # set a new name for the henchman
+        newhenchman.name = self.name + str(self.henchmanlist.__len__())
 
     def change_henchman_count(self, deltasize):
+        # depreciated
+        return
+
         if deltasize > 0:
             i = self.get_totalhenchman()
             
@@ -421,31 +431,61 @@ class Squad(object):
             for _ in range(0, 0 - deltasize):
                 self.henchmanlist.pop(-1)
 
+    def give_item(self, item):
+        """
+        adds the new item to every henchman in this squad
+        """
+
+        for henchman in self.henchmanlist:
+            henchman.itemlist.append(item)
+
     def buy_item(self, wbid, item):
-        """Basically adds the new item to every henchman in this squad in return for gold"""
+        """
+        adds the new item to every henchman in this squad for the listed cost
+        """
 
         totalcost = item.price * self.get_totalhenchman()
 
         if totalcost > wbid.treasury.gold:
-            message = "Lack of funds!"
-        else:
-            for henchman in self.henchmanlist:
-                henchman.itemlist.append(item)
-                wbid.treasury.gold -= item.price
-            message = ""
-        
-        return message
+            return "Lack of funds!"
 
-    def sell_item(self, wbid, itemsubcategory):
-        """Basically removes the item from every henchman in this squad in return for gold"""
+        else:
+            self.give_item(item)
+            wbid.treasury.gold -= totalcost
+
+            return "Added!"
+
+    def remove_item(self, item):
+        """
+        Removes an item from this unit
+        """
 
         for henchman in self.henchmanlist:
             for i in henchman.itemlist:
-                if i.subcategory == itemsubcategory:
+                if i == item:
                     index = henchman.itemlist.index(i)
                     item = henchman.itemlist.pop(index)
-                    wbid.treasury.gold += item.price
                     break
+
+    def undo_item(self, wbid, item):
+        """
+        Removes an item from this unit and refund full price
+        """
+
+        fullrefund = item.price * self.get_totalhenchman()
+        wbid.treasury.gold += fullrefund
+
+        self.remove_item(item)
+
+    def sell_item(self, wbid, item):
+        """
+        Removes an item from this unit and refund half price
+        """
+
+        halfrefund = item.price / 2 * self.get_totalhenchman()
+        wbid.treasury.gold += halfrefund
+
+        self.remove_item(item)
 
     def add_experience(self, change_experience):
         
@@ -479,8 +519,9 @@ class Squad(object):
         return squadprice
 
 class Character(object):
-    def __init__(self, name, race, source, warband, category, ishero, skill, database_id=None, abilitylist=[], magiclist=[], itemlist=[], eventlist=[], experience=0, price=0, maxcount=0, description=None, unique_id=None):
+    def __init__(self, name, race, source, warband, category, ishero, skill, squad=None, database_id=None, abilitylist=[], magiclist=[], itemlist=[], eventlist=[], experience=0, price=0, maxcount=0, description=None, unique_id=None):
 
+        self.squad = squad
         self.database_id = database_id
         self.name = name
         self.race = race
@@ -511,7 +552,7 @@ class Character(object):
                 char_record = record
                 break
 
-        # recursively set a dictionary to some nested objects
+        # transform skill values to a Skill object
         skill = Skill.from_database_record(char_record)
 
         # find the reference dictionaries of a set of values to a list of python objects
@@ -570,12 +611,12 @@ class Character(object):
             description = char_record.recorddict["description"],
             )
 
-        print(f"current advance is {dataobject.get_current_advance()}")
-        print(f"new advance is {dataobject.get_new_advance()}")
+        # print(f"current advance is {dataobject.get_current_advance()}")
+        # print(f"new advance is {dataobject.get_new_advance()}")
 
         # Create advance level for this new character
         dataobject.eventlist += dataobject.create_advance_events()
-        print(dataobject.eventlist)
+        # print(dataobject.eventlist)
 
         for event in dataobject.eventlist:
             if event.description[-3:] == "TBD":
@@ -683,7 +724,7 @@ class Character(object):
             dataobject.unique_id = None
 
         return dataobject
-    
+
     @staticmethod
     def from_refdict(datadict):
         """
@@ -754,6 +795,47 @@ class Character(object):
         return dataobject
 
     @staticmethod
+    def create_hero(primarykey):
+        """
+        create a new Hero Character
+        """
+
+        # set the record to a python object
+        dataobject = Character.from_database(primarykey = primarykey)
+        dataobject.name == "My Hero"
+        
+        if dataobject.ishero == 0:
+            print("Henchmen can't be added outside a squad")
+
+            return
+
+        return dataobject
+
+    @staticmethod
+    def create_henchman(primarykey, squad):
+        """
+        create a new henchman character and adds it to the new squad
+        """
+
+        # set the record to a python object
+        dataobject = Character.from_database(primarykey = primarykey)
+        if dataobject.ishero == 1:
+            # prevent heroes to be added to a squad
+            print("Heroes can't be added to a squad")
+
+            return
+
+        dataobject.name = "My Henchman"
+
+        # add reference of the squad to the henchman
+        dataobject.squad = squad
+
+        # add reference to the henchman to the squad
+        squad.henchmanlist.append(dataobject)
+
+        return dataobject
+
+    @staticmethod
     def create_character(name, race, source, warband, category):
         """
         depreciated
@@ -796,27 +878,82 @@ class Character(object):
         )
         return dataobject
 
-    def buy_item(self, wbid, item):
-        """Basically adds the new item to this hero in return for gold"""
+    def give_item(self, item):
+        """
+        Adds an item to this unit
+        """
 
-        if item.price > wbid.treasury.gold:
-            message = "Lack of funds!"
+        if self.ishero == 0:
+            # if unit is a henchman, delegate to squad method
+            self.squad.give_item(item)
+
         else:
-            self.itemlist.append(item)
-            wbid.treasury.gold -= item.price
-            message = ""
-        
-        return message
+            # if unit is hero
+            self.itemlist.append(item) 
 
-    def sell_item(self, wbid, itemsubcategory):
-        """Basically removes the heroes item in return for gold"""
+    def buy_item(self, wbid, item):
+        """
+        Adds an item to this unit in return for gold
+        """
 
-        for i in self.itemlist:
-            if i.subcategory == itemsubcategory:
-                index = self.itemlist.index(i)
-                item = self.itemlist.pop(index)
-                wbid.treasury.gold += item.price
-                break
+        if self.ishero == 0:
+            # if unit is a henchman, delegate to squad method
+            message = self.squad.buy_item(wbid, item)
+            return message
+
+        else:
+            # if unit is hero
+            if item.price > wbid.treasury.gold:
+                return "Lack of funds!"
+            else:
+                wbid.treasury.gold -= item.price
+                self.give_item(item)
+                return "Added!"
+
+    def remove_item(self, item):
+        """
+        Removes an item from this unit
+        """
+
+        if self.ishero == 0:
+            # if unit is a henchman, delegate to squad method
+            self.squad.remove_item(item)
+
+        else:
+            # if unit is hero
+            for i in self.itemlist:
+                if i == item:
+                    index = self.itemlist.index(i)
+                    item = self.itemlist.pop(index)
+                    break
+
+    def undo_item(self, wbid, item):
+        """
+        Removes an item from this unit and refund full price
+        """
+
+        if self.ishero == 0:
+            # if unit is a henchman, delegate to squad method
+            self.squad.undo_item(wbid, item)
+
+        else:
+            # if unit is hero
+            wbid.treasury.gold += item.price
+            self.remove_item(item)
+
+    def sell_item(self, wbid, item):
+        """
+        Removes an item from this unit and refund half price
+        """
+
+        if self.ishero == 0:
+            # if unit is a henchman, delegate to squad method
+            self.squad.sell_item(wbid, item)
+
+        else:
+            # if unit is hero
+            wbid.treasury.gold += item.price / 2
+            self.remove_item(item)
 
     def add_experience(self, change_experience):
 
@@ -1100,63 +1237,3 @@ class Character(object):
             totalmagiclist += [magic]
         
         return totalmagiclist
-
-class Hero(Character):
-
-    @staticmethod
-    def from_database(primarykey):
-        """
-        create a new Hero Character object from a record in the database
-        """
-
-        # set the record to a python object
-        dataobject = Character.from_database(primarykey = primarykey)
-        dataobject.name == "My Hero"
-        
-        if dataobject.ishero == 0:
-            print("Henchmen can't be added outside a squad")
-
-            return
-
-        return dataobject
-
-    @staticmethod
-    def create_character(name, race, source, warband, category):
-        # open reference data json file
-        datadict = load_reference("characters")
-
-        if datadict[race][source][warband][category]["ishero"] == False:
-            print("Henchmen can't be added outside a squad")
-        else:
-            dataobject = Character.create_character(name, race, source, warband, category)
-            return dataobject
-
-class Henchman(Character):
-
-    @staticmethod
-    def from_database(primarykey):
-        """
-        create a new Henchman Character object from a record in the database
-        """
-
-        # set the record to a python object
-        dataobject = Character.from_database(primarykey = primarykey)
-        dataobject.name == "My Henchman"
-        
-        if dataobject.ishero == 1:
-            print("Heroes can't be added to a squad")
-
-            return
-
-        return dataobject
-
-    @staticmethod
-    def create_character(name, race, source, warband, category):
-        # open reference data json file
-        datadict = load_reference("characters")
-
-        if datadict[race][source][warband][category]["ishero"] == True:
-            print("Heroes can't be added to a squad")
-        else:
-            dataobject = Character.create_character(name, race, source, warband, category)
-            return dataobject
